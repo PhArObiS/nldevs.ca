@@ -69,7 +69,7 @@ const AboutContent = () => {
         className="w-full h-full flex justify-center items-center"
       >
         <Image
-          src="/gitwhite.png"
+          src="/UnderConstruction.png"
           alt="work icons"
           height={350}
           width={350}
