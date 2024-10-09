@@ -16,13 +16,13 @@ const AboutContent = () => {
       initial="hidden"
       animate="visible"
       className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
-      id="about-me" // Add the id attribute here
+      id="about-me"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
-          style={{ borderRadius: 0 }} // Set border-radius to 0 for a rectangular shape
+          style={{ borderRadius: 0 }}
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
@@ -45,6 +45,7 @@ const AboutContent = () => {
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-300 my-5 max-w-[800px]"
+          style={{ textAlign: "justify" }}
         >
           <p className="mb-4">
             I am a dynamic Full Stack Software Developer with a diverse skill set spanning website, mobile, software, and game development. My technical expertise includes C++, C#, TypeScript, and JavaScript, with a solid command of frameworks like React, Node.js, and Three.js. I'm a fast learner, constantly adapting to new technologies and methodologies, and thrive on creating scalable, efficient, and user-centric solutions that address real-world challenges. Collaboration is at the core of my work, and I excel at working closely with clients or tasks to deliver impactful results.
