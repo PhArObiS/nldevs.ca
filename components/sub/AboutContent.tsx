@@ -47,7 +47,11 @@ const AboutContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-300 my-5 max-w-[800px]"
         >
-          I am a Full Stack junior Software developer with with knowledge in Website, Mobile, and Software development. I have knowledge in C++, C#, TypeScript and JavaScript, and in frameworks like React, Node.js, and Three.js. I am a quick learner and collaborate well with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. 3d animation is also something I enjoy and can do, using Maya, 3d Max and the awesome Unreal Engine. Gaming and 3d animation are my hobbies, and I am always looking for new ways to improve my skills and learn new things. I am also a team player and enjoy working with others to achieve a common goal and always looking for new opportunities to grow and improve my skills as a developer and 3d animator. Lately, I have been focussed on C++ and game development using the Unreal Engine.
+          I am a versatile Full Stack Junior Software Developer with expertise in website, mobile, software, and game development. I have strong skills in C++, C#, TypeScript, and JavaScript, along with experience in frameworks such as React, Node.js, and Three.js. I am a fast learner, able to quickly adapt to new technologies and methodologies, and excel at collaborating with clients to deliver scalable, efficient, and user-friendly solutions that address real-world challenges.
+
+          In addition to development, I have a passion for 3D animation, proficient in tools like Maya, 3ds Max, and Unreal Engine. I thrive in team environments and enjoy working closely with others to achieve common goals. I'm always eager to expand my skill set and embrace new opportunities for growth.
+
+          Over the past year, I've focused extensively on C++ and game development using Unreal Engine, and I’m actively seeking opportunities to pursue my passion for game development within the gaming industry.
 
         </motion.p>
         <motion.a
