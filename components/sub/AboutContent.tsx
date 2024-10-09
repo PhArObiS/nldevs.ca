@@ -48,9 +48,9 @@ const AboutContent = () => {
           className="text-lg text-gray-300 my-5 max-w-[800px]"
         >
           I am a dynamic Full Stack Software Developer with a diverse skill set spanning website, mobile, software, and game development. My technical expertise includes C++, C#, TypeScript, and JavaScript, with a solid command of frameworks like React, Node.js, and Three.js. I'm a fast learner, constantly adapting to new technologies and methodologies, and thrive on creating scalable, efficient, and user-centric solutions that address real-world challenges. Collaboration is at the core of my work, and I excel at working closely with clients or tasks to deliver impactful results.
-
+          <br></br>
           In addition to my development skills, I have a deep-rooted passion for 3D animation, with proficiency in industry-standard tools such as Maya, 3ds Max, blender and Unreal Engine. I find fulfillment in working within team-driven environments, where collective success and growth are paramount. I actively seek opportunities to challenge myself, evolve my skillset, and drive innovation in every project.
-
+          <br></br>
           For over two years now, I have been intensively focused on mastering C# and C++, specifically within game development using Unity and Unreal Engine. I am now eagerly pursuing new opportunities to realize my lifelong ambition of making a meaningful impact in the game development industry.
 
         </motion.p>
