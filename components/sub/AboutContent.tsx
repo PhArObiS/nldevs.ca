@@ -47,11 +47,11 @@ const AboutContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-300 my-5 max-w-[800px]"
         >
-          I am a versatile Full Stack Junior Software Developer with expertise in website, mobile, software, and game development. I have strong skills in C++, C#, TypeScript, and JavaScript, along with experience in frameworks such as React, Node.js, and Three.js. I am a fast learner, able to quickly adapt to new technologies and methodologies, and excel at collaborating with clients to deliver scalable, efficient, and user-friendly solutions that address real-world challenges.
+          I am a dynamic Full Stack Software Developer with a diverse skill set spanning website, mobile, software, and game development. My technical expertise includes C++, C#, TypeScript, and JavaScript, with a solid command of frameworks like React, Node.js, and Three.js. I'm a fast learner, constantly adapting to new technologies and methodologies, and thrive on creating scalable, efficient, and user-centric solutions that address real-world challenges. Collaboration is at the core of my work, and I excel at working closely with clients or tasks to deliver impactful results.
 
-          In addition to development, I have a passion for 3D animation, proficient in tools like Maya, 3ds Max, and Unreal Engine. I thrive in team environments and enjoy working closely with others to achieve common goals. I'm always eager to expand my skill set and embrace new opportunities for growth.
+          In addition to my development skills, I have a deep-rooted passion for 3D animation, with proficiency in industry-standard tools such as Maya, 3ds Max, blender and Unreal Engine. I find fulfillment in working within team-driven environments, where collective success and growth are paramount. I actively seek opportunities to challenge myself, evolve my skillset, and drive innovation in every project.
 
-          Over the past year, I've focused extensively on C++ and game development using Unreal Engine, and I’m actively seeking opportunities to pursue my passion for game development within the gaming industry.
+          For over two years now, I have been intensively focused on mastering C# and C++, specifically within game development using Unity and Unreal Engine. I am now eagerly pursuing new opportunities to realize my lifelong ambition of making a meaningful impact in the game development industry.
 
         </motion.p>
         <motion.a
