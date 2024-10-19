@@ -58,7 +58,7 @@ const AboutContent = () => {
       {/* Image section */}
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="relative w-[50vw] h-auto max-w-[300px] lg:max-w-[400px] lg:ml-8 mt-8 lg:mt-0"
+        className="relative w-[70vw] h-auto max-w-[400px] lg:max-w-[600px] mx-auto lg:ml-8 mt-8 lg:mt-0" // Increased left margin for larger screens
       >
         <div className="relative w-full h-0 pb-[100%]">
           <Image
