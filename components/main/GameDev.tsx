@@ -5,7 +5,7 @@ const GameDev = () => {
   return (
     <div className="flex flex-col items-center justify-center py-20" id="GameDev">
       <h1 className="text-[40px] font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-      FORTNITE UEFN CREATORS
+      FORTNITE CREATIVE UEFN
       </h1>
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         <GameDevCard

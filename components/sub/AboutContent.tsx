@@ -28,7 +28,7 @@ const AboutContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            FORTNITE UEFN CREATORS
+            FORTNITE CREATIVE UEFN
           </h1>
         </motion.div>
 
@@ -47,7 +47,7 @@ const AboutContent = () => {
           style={{ textAlign: "justify" }}
         >
           <p className="mb-6">
-            We are a passionate Fortnite UEFN creators team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. From designing unique maps and crafting immersive gameplay mechanics to integrating dynamic visual effects, we push the boundaries of what&apos;s possible within the Fortnite creative space.
+            We are a passionate Fortnite creative UEFN team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. From designing unique maps and crafting immersive gameplay mechanics to integrating dynamic visual effects, we push the boundaries of what&apos;s possible within the Fortnite creative space.
           </p>
           <p className="mb-6">
             Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us.
@@ -62,7 +62,7 @@ const AboutContent = () => {
       >
         <div className="relative w-full h-0 pb-[100%]">
           <Image
-            src="/FortniteUEFNCreatorsLogo.png"
+            src="/FortniteCreativeUEFNLogo.png"
             alt="FortniteUEFNCreators icon"
             fill
             className="object-contain transition-all duration-300 ease-in-out"

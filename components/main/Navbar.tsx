@@ -21,7 +21,7 @@ const Navbar = () => {
           />
 
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            NL DEVS
+            NLDEVS
           </span>
         </a>
 
@@ -31,10 +31,10 @@ const Navbar = () => {
               FORTNITE
             </a>
             <a href="" className="cursor-pointer">
-              UEFN
+              CREATIVE
             </a>
             <a href="" className="cursor-pointer">
-              CREATORS
+              UEFN
             </a>
           </div>
         </div>
