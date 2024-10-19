@@ -90,7 +90,7 @@ const AboutContent = () => {
         className="w-full h-full flex justify-center items-center"
       >
         <Image
-          src="/UnderConstruction.png"
+          src="/UEFN.png"
           alt="work icons"
           height={350}
           width={350}
