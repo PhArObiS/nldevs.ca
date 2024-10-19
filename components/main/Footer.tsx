@@ -9,13 +9,13 @@ type SocialLinkProps = {
 };
 
 const socialLinks: SocialLinkProps[] = [
-  { icon: <FaYoutube />, text: "YouTube", href: "https://youtube.com/@neely79" },
-  { icon: <RxGithubLogo />, text: "Github", href: "https://github.com" },
+  // { icon: <FaYoutube />, text: "YouTube", href: "https://youtube.com/@neely79" },
+  // { icon: <RxGithubLogo />, text: "Github", href: "https://github.com" },
 ];
 
 const aboutLinks: SocialLinkProps[] = [
-  { icon: <RxDiscordLogo />, text: "LinkedIn", href: "https://linkedin.com" },
-  { text: "neil.lopes.79@gmail.com" },
+  // { icon: <RxDiscordLogo />, text: "LinkedIn", href: "https://linkedin.com" }
+  // { text: "neil.lopes.79@gmail.com" },
 ];
 
 const SocialLink: React.FC<SocialLinkProps> = ({ icon, text, href }) => (
@@ -47,8 +47,8 @@ const Section: React.FC<SectionProps> = ({ title, links }) => (
 const Footer: React.FC = () => (
   <footer className="w-full bg-transparent text-gray-200 shadow-lg p-6">
     <div className="flex flex-wrap justify-around w-full max-w-4xl m-auto">
-      <Section title="Community" links={socialLinks} />
-      <Section title="About" links={aboutLinks} />
+      {/* <Section title="Community" links={socialLinks} />
+      <Section title="About" links={aboutLinks} /> */}
     </div>
     <div className="text-center text-sm text-gray-400 mt-6">
       &copy; NetCube 2024 Inc. All rights reserved.

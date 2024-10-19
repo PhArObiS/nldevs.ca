@@ -84,10 +84,10 @@ export const Socials = [
     name: "Gmail",
     src: "/gmail.png",
   },
-  {
-    name: "GitHub",
-    src: "/gitwhite.png",
-  },
+  // {
+  //   name: "GitHub",
+  //   src: "/gitwhite.png",
+  // },
   // {
   //   name: "Discord",
   //   src: "/discord.svg",
