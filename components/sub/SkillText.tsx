@@ -15,14 +15,14 @@ const SkillText = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-          FORTNITE CREATIVE UEFN
+          FORTNITE CREATIVE
           </h1>
         </motion.div> 
         <motion.div
         variants={slideInFromLeft(0.5)}
         className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
         >
-            Gaming with modern technologies
+            Unreal Engine Game Development
         </motion.div>
         {/* <motion.div
         variants={slideInFromRight(0.5)}
