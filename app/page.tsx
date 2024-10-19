@@ -15,7 +15,7 @@ export default function Home() {
         {/* <Projects /> */}
         {/* <GameDev /> */}
         {/* <UnrealEngines /> */}
-        {/* <Skills /> */}
+        <Skills />
         {/* <ContactForm /> */}
         <Footer />
         

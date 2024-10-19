@@ -13,33 +13,33 @@ interface Props {
 }
 
 const SkillDataProvider = ({ src, width, height, index} : Props) => {
-    const {ref, inView} = useInView({
-        triggerOnce: true
-    })
+//     const {ref, inView} = useInView({
+//         triggerOnce: true
+//     })
 
-    const imageVariants = {
-        hidden: {opacity: 0},
-        visible: {opacity: 1}
-    }
+//     const imageVariants = {
+//         hidden: {opacity: 0},
+//         visible: {opacity: 1}
+//     }
 
-    const GameDevDelay = 0.3
-  return (
-  <motion.div
-  ref={ref}
-  initial="hidden"
-  variants={imageVariants}
-  animate={inView ? "visible" : "hidden"}
-  custom={index}
-  transition={{delay: index * GameDevDelay}}
-  >
-    <Image
-src={src}
-width={width}
-height={height}
-alt='skill image'
-    />
-  </motion.div>
-  )
+//     const GameDevDelay = 0.3
+//   return (
+//   <motion.div
+//   ref={ref}
+//   initial="hidden"
+//   variants={imageVariants}
+//   animate={inView ? "visible" : "hidden"}
+//   custom={index}
+//   transition={{delay: index * GameDevDelay}}
+//   >
+//     <Image
+// src={src}
+// width={width}
+// height={height}
+// alt='skill image'
+//     />
+//   </motion.div>
+//   )
 }
 
 export default SkillDataProvider
