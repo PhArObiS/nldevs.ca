@@ -1,43 +1,59 @@
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
-import {
-  RxDiscordLogo,
-  RxGithubLogo,
-} from "react-icons/rx";
+import { RxDiscordLogo, RxGithubLogo } from "react-icons/rx";
 
-const SocialLink = ({ icon, text }) => (
-  <p className="flex flex-row items-center my-[15px] cursor-pointer">
-    {icon}
-    <span className="text-[15px] ml-[6px] font-mono text-gray-400">{text}</span>
-  </p>
+type SocialLinkProps = {
+  icon?: React.ReactNode;
+  text: string;
+  href?: string;
+};
+
+const socialLinks: SocialLinkProps[] = [
+  { icon: <FaYoutube />, text: "YouTube", href: "https://youtube.com/@neely79" },
+  { icon: <RxGithubLogo />, text: "Github", href: "https://github.com" },
+];
+
+const aboutLinks: SocialLinkProps[] = [
+  { icon: <RxDiscordLogo />, text: "LinkedIn", href: "https://linkedin.com" },
+  { text: "neil.lopes.79@gmail.com" },
+];
+
+const SocialLink: React.FC<SocialLinkProps> = ({ icon, text, href }) => (
+  <a
+    href={href || "#"}
+    className="flex items-center my-3 text-gray-400 hover:text-white cursor-pointer"
+    target={href ? "_blank" : "_self"}
+    rel="noopener noreferrer"
+  >
+    {icon && <span className="mr-2">{icon}</span>}
+    <span className="text-sm font-mono">{text}</span>
+  </a>
 );
 
-const Footer = () => {
-  return (
-    <footer className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px]">
-      <div className="w-full flex flex-col items-center justify-center m-auto">
-        <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-
-          <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-            <h2 className="font-bold text-[16px]">Community</h2>
-            <SocialLink icon={<FaYoutube />} text="Youtube" />
-            <SocialLink icon={<RxGithubLogo />} text="Github" />
-          </div>
-
-          <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-            <h2 className="font-bold text-[16px]">About</h2>
-            <SocialLink icon={<RxDiscordLogo />} text="Linkedin" />
-            <SocialLink text="neil.lopes.79@gmail.com" />
-          </div>
-
-        </div>
-
-        <div className="mb-[20px] text-[15px] text-center font-mono text-gray-400">
-          &copy; NetCube 2024 Inc. All rights reserved
-        </div>
-      </div>
-    </footer>
-  );
+type SectionProps = {
+  title: string;
+  links: SocialLinkProps[];
 };
+
+const Section: React.FC<SectionProps> = ({ title, links }) => (
+  <div className="min-w-[200px] flex flex-col items-center">
+    <h2 className="font-bold text-lg mb-2">{title}</h2>
+    {links.map((link, index) => (
+      <SocialLink key={index} {...link} />
+    ))}
+  </div>
+);
+
+const Footer: React.FC = () => (
+  <footer className="w-full bg-transparent text-gray-200 shadow-lg p-6">
+    <div className="flex flex-wrap justify-around w-full max-w-4xl m-auto">
+      <Section title="Community" links={socialLinks} />
+      <Section title="About" links={aboutLinks} />
+    </div>
+    <div className="text-center text-sm text-gray-400 mt-6">
+      &copy; NetCube 2024 Inc. All rights reserved.
+    </div>
+  </footer>
+);
 
 export default Footer;

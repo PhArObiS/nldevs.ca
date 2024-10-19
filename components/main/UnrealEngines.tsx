@@ -9,7 +9,7 @@ const UnrealEngines = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         
-      <UnrealEngineCard
+        <UnrealEngineCard
           src="/UnrealEngineObstacle.png"
           title="Obstacle Assault"
           description="Obstacle Assault using UE5 | Udemy course"

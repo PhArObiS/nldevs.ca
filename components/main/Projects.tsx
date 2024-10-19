@@ -10,34 +10,34 @@ const Projects = () => {
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         <ProjectCard
           src="/ProjectPHP.png"
-          title="Kids game in PHP"
+          title="Kids Game"
           description="Made a little game in PHP for kids."
         />
         <ProjectCard
           src="/ProjectAndroid.png" 
-          title="Delivery management app in Android"
+          title="Delivery Management"
           description="Made a delivery app in Android"
         />
         <ProjectCard
           src="/ProjectAngular.png"
-          title="Student management app in Angular"
+          title="Student Management"
           description="Made a student management app in Angular."
         />
         <ProjectCard
           src="/ProjectCinema.png"
-          title="Cinema management app in Java"
+          title="Cinema Management"
           description="Made a cinema ticket reservation."
         />
         <ProjectCard
           src="/ProjectQTwidgets.png"
-          title="QT Widget in C++"
+          title="ToolTips"
           description="Made a Tool Tips in C++ using QT widgets."
         />
-        <ProjectCard
-          src="/AnimationShooterUE5.png"
-          title="Animation in Unreal Engine"
-          description="Animation tree for Shooter game."
-        />
+        {/* <ProjectCard
+          src="/GameDevhooterUE5.png"
+          title="GameDev in Unreal Engine"
+          description="GameDev tree for Shooter game."
+        /> */}
       </div>
     </div>
   );

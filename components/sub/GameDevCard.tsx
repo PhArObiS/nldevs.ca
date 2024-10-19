@@ -7,7 +7,7 @@ interface Props {
   description: string;
 }
 
-const AnimationCard = ({ src, title, description }: Props) => {
+const GameDevCard = ({ src, title, description }: Props) => {
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
       <Image
@@ -26,4 +26,4 @@ const AnimationCard = ({ src, title, description }: Props) => {
   );
 };
 
-export default AnimationCard;
+export default GameDevCard;

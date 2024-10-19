@@ -1,7 +1,7 @@
 import Image from "next/image";
 import About from "@/components/main/About";
 import Projects from "@/components/main/Projects";
-import Animations from "@/components/main/Animations";
+import GameDev from "@/components/main/GameDev";
 import UnrealEngines from "@/components/main/UnrealEngines";
 import Skills from "@/components/main/Skills";
 // import ContactForm from "@/components/main/ContactForum";
@@ -12,10 +12,10 @@ export default function Home() {
     <main className="h-full w-full">
       <div className="flex flex-col gap-10">
         <About />
-        <Projects />
-        <Animations />
-        <UnrealEngines />
-        <Skills />
+        {/* <Projects /> */}
+        {/* <GameDev /> */}
+        {/* <UnrealEngines /> */}
+        {/* <Skills /> */}
         {/* <ContactForm /> */}
         <Footer />
         
