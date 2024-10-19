@@ -34,7 +34,7 @@ const Navbar = () => {
               UEFN
             </a>
             <a href="" className="cursor-pointer">
-              GAMES
+              CREATORS
             </a>
           </div>
         </div>
