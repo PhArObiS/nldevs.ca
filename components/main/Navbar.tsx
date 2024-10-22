@@ -22,7 +22,7 @@ const Navbar = () => {
 
           {/* Adjusted navbar section */}
           <div className="flex flex-row items-center justify-between w-full max-w-[500px] h-full md:mr-20">
-            <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] text-gray-200 ml-[15px]"> {/* Added left margin ml-[15px] */}
+            <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] text-gray-200 ml-[15px]">
               <a href="" className="cursor-pointer">
                 Fortnite
               </a>
@@ -35,16 +35,31 @@ const Navbar = () => {
             </div>
           </div>
 
-
+          {/* Social Icons with Links */}
           <div className="flex flex-row gap-2">
             {Socials.map((social) => (
-              <Image
-                src={social.src}
-                alt={social.name}
+              <a
                 key={social.name}
-                width={24}
-                height={24}
-              />
+                href={
+                  social.name === "Discord"
+                    ? "https://discord.gg/XKVAcyNfHs"
+                    : social.name === "Youtube"
+                    ? "https://youtube.com/@nlgaming"
+                    : social.name === "Gmail"
+                    ? "mailto:nldevsmtl@gmail.com"
+                    : "#"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={social.src}
+                  alt={social.name}
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </a>
             ))}
           </div>
         </div>
