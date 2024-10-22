@@ -2,10 +2,8 @@ import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
 import {
-  Backend_skill,
-  Frontend_skill,
-  Full_stack,
-  Other_skill,
+  UnrealEngine_skill,
+  UEFN_skill,
 } from "@/constants";
 
 const Skills = () => {
@@ -30,14 +28,12 @@ const Skills = () => {
     >
       <SkillText />
 
-      {renderSkillSet(Frontend_skill)}
-      {renderSkillSet(Backend_skill)}
-      {renderSkillSet(Full_stack)}
-      {renderSkillSet(Other_skill)}
+      {renderSkillSet(UnrealEngine_skill)}
+      {renderSkillSet(UEFN_skill)}
 
-      {/* <div className="w-full h-full absolute">
+      <div className="w-full h-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
+          {/* <video
             className="w-full h-auto"
             preload="false"
             playsInline
@@ -45,9 +41,9 @@ const Skills = () => {
             muted
             autoPlay
             src="/cards-video.webm"
-          />
+          /> */}
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

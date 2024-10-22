@@ -8,15 +8,15 @@ type SocialLinkProps = {
   href?: string;
 };
 
-const socialLinks: SocialLinkProps[] = [
+// const socialLinks: SocialLinkProps[] = [
   // { icon: <FaYoutube />, text: "YouTube", href: "https://youtube.com/@neely79" },
   // { icon: <RxGithubLogo />, text: "Github", href: "https://github.com" },
-];
+// ];
 
-const aboutLinks: SocialLinkProps[] = [
+// const aboutLinks: SocialLinkProps[] = [
   // { icon: <RxDiscordLogo />, text: "LinkedIn", href: "https://linkedin.com" }
   // { text: "neil.lopes.79@gmail.com" },
-];
+// ];
 
 const SocialLink: React.FC<SocialLinkProps> = ({ icon, text, href }) => (
   <a

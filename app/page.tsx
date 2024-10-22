@@ -3,7 +3,7 @@ import About from "@/components/main/About";
 // import FortniteMaps from "@/components/main/FortniteMaps";
 // import FortniteResources from "@/components/main/FortniteResources";
 // import UnrealEngines from "@/components/main/UnrealEngines";
-// import Skills from "@/components/main/Skills";
+import Skills from "@/components/main/Skills";
 // import ContactForm from "@/components/main/ContactForum";
 import Footer from "@/components/main/Footer";
 
