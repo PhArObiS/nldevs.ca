@@ -51,7 +51,7 @@ const Footer: React.FC = () => (
       <Section title="About" links={aboutLinks} /> */}
     </div>
     <div className="text-center text-sm text-gray-400 mt-6">
-      &copy; NLDevs 2024 Inc. All rights reserved.
+      &copy; NLDEVS 2024
     </div>
   </footer>
 );

@@ -24,13 +24,13 @@ const Navbar = () => {
           <div className="flex flex-row items-center justify-between w-full max-w-[500px] h-full md:mr-20">
             <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] text-gray-200 ml-[15px]"> {/* Added left margin ml-[15px] */}
               <a href="" className="cursor-pointer">
-                FORTNITE
+                Fortnite
               </a>
               <a href="" className="cursor-pointer">
-                CREATIVE
+                Creative
               </a>
               <a href="" className="cursor-pointer">
-                UEFN
+                Team
               </a>
             </div>
           </div>
