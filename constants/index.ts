@@ -17,8 +17,24 @@ export const Socials = [
     src: "/youtube-svgrepo-com.svg",
   },
   {
+    name: "Facebook",
+    src: "/facebook.svg", // Add the appropriate path for Facebook icon
+  },
+  {
+    name: "Instagram",
+    src: "/instagram.svg", // Add the appropriate path for Instagram icon
+  },
+  {
     name: "Gmail",
     src: "/gmail.png",
+  },
+  {
+    name: "TikTok",
+    src: "/tiktok-icon-white-1-logo-svgrepo-com.svg", // Add the appropriate path for TikTok icon
+  },
+  {
+    name: "Twitter",
+    src: "/twitter-svgrepo-com.svg", // Add the appropriate path for TikTok icon
   },
 ];
 

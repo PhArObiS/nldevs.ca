@@ -47,21 +47,29 @@ const Navbar = () => {
                     ? "https://youtube.com/@nlgaming"
                     : social.name === "Gmail"
                     ? "mailto:nldevsmtl@gmail.com"
+                    : social.name === "Instagram"
+                    ? "https://www.instagram.com/nldevs/"
+                    : social.name === "Facebook"
+                    ? "https://www.facebook.com/profile.php?id=100069258844412&sk=about"
+                    : social.name === "TikTok"
+                    ? "https://www.tiktok.com/@nldevs"
+                    : social.name === "Twitter"
+                    ? "https://x.com/NLDEVSMTL"  // Add the Twitter URL
                     : "#"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={social.src}
-                  alt={social.name}
-                  width={24}
-                  height={24}
-                  className="cursor-pointer"
-                />
-              </a>
-            ))}
-          </div>
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={social.src}
+                    alt={social.name}
+                    width={24}
+                    height={24}
+                    className="cursor-pointer"
+                  />
+                </a>
+              ))}
+            </div>
         </div>
       </div>
     </div>
