@@ -25,10 +25,6 @@ export const Socials = [
     src: "/instagram.svg", // Add the appropriate path for Instagram icon
   },
   {
-    name: "Gmail",
-    src: "/gmail.png",
-  },
-  {
     name: "TikTok",
     src: "/tiktok-icon-white-1-logo-svgrepo-com.svg", // Add the appropriate path for TikTok icon
   },
@@ -39,6 +35,10 @@ export const Socials = [
   {
     name: "Fortnite",
     src: "/epic-games-svgrepo-com.svg", // Add the appropriate path for TikTok icon
+  },
+  {
+    name: "Gmail",
+    src: "/gmail.png",
   },
 ];
 
