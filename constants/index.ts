@@ -36,6 +36,10 @@ export const Socials = [
     name: "Twitter",
     src: "/twitter-svgrepo-com.svg", // Add the appropriate path for TikTok icon
   },
+  {
+    name: "Fortnite",
+    src: "/epic-games-svgrepo-com.svg", // Add the appropriate path for TikTok icon
+  },
 ];
 
 export const UnrealEngine_skill = [
