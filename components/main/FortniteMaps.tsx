@@ -9,33 +9,33 @@ const FortniteMaps = () => {
       </h1>
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg"
-          title="Mega Room"
+          src="/MEGA_RAMP_SURVIVAL_TMNT.jpg"
+          title="MEGA RAMP SURVIVAL 🌆🐢 TMNT"
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg" 
-          title="Fortkea"
+          src="/TMNT_CITY.jpg" 
+          title="TMNT CITY 🌆 GUN GAME ONE SHOT 🎯"
           description="6 Best Fortnite Creative Maps"
         />
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg"
-          title="Space Station Escape"
+          src="/RED_VS _BLUE_SQUID_MINIGAME.jpg"
+          title="RED VS BLUE 🔴🔵 SQUID MINIGAME 🦑"
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg"
-          title="The Floor is Lava Zone Wars"
+          src="/TILTED_SQUID_ROYALE_99 BOTS.jpg"
+          title="TILTED SQUID ROYALE 🏆 99 BOTS"
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg"
-          title="Mega World Bossfight"
+          src="/WINTERFEST_DEMON_HUNTERS_GUNGAME.jpg"
+          title="❄️ WINTERFEST DEMON HUNTERS 👿 GUNGAME"
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/FortniteCreativeImage.jpg"
-          title="Crazy Cards"
+          src="/RED_VS_BLUE_PLAYERS_VS_GUARDS.jpg"
+          title="RED VS BLUE 🔴🔵 PLAYERS VS GUARDS 🦑"
           description="6 Best Fortnite Creative Maps."
         />
       </div>
