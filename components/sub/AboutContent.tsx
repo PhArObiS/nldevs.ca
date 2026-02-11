@@ -58,12 +58,12 @@ const AboutContent = () => {
             </span>
 
             <a
-              href="https://communities.epicgames.com/community/S7TU/nldevs"
+              href="https://www.fortnite.com/@nldevs"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-blue-400 hover:text-blue-300 underline transition duration-300"
             >
-              @NLDEVS
+              @nldevs on Fortnite
             </a>
           </p>
         </motion.div>
