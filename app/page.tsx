@@ -12,7 +12,7 @@ export default function Home() {
     <main className="h-full w-full">
       <div className="flex flex-col gap-10">
         <About />
-        {/* { <FortniteMaps /> } */}
+        { <FortniteMaps /> }
         {/* <FortniteResources /> */}
         {/* <UnrealEngines /> */}
         {/* <Skills /> */}
