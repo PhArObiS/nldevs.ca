@@ -36,7 +36,7 @@ const FortniteMaps = () => {
         <FortniteMapsCard
           src="/RedVsBluePlayersVsGuards.jpeg"
           title="RED VS BLUE 🔴🔵 PLAYERS VS GUARDS 🦑"
-          description="6https://www.fortnite.com/@nldevs/6263-5571-9595"
+          description="https://www.fortnite.com/@nldevs/6263-5571-9595"
         />
       </div>
     </div>

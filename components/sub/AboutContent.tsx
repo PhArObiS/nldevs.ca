@@ -51,6 +51,8 @@ const AboutContent = () => {
           </p>
           <p className="mb-6">
             Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us.
+
+            https://www.fortnite.com/@nldevs
           </p>
         </motion.div>
       </div>
