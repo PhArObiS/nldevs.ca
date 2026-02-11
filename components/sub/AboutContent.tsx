@@ -28,7 +28,7 @@ const AboutContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            FORTNITE CREATIVE TEAM
+            OUR FAVORITE FORTNITE MAPS
           </h1>
         </motion.div>
 
@@ -37,7 +37,7 @@ const AboutContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <span>Welcome,</span>
+          {/* <span>Welcome,</span> */}
         </motion.div>
 
         {/* Third section - Paragraphs */}
@@ -51,6 +51,10 @@ const AboutContent = () => {
           </p>
           <p className="mb-6">
             Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us. Please like and favorite creator and make sure to check out our community for the latest updates and new creations!
+          </p>
+          <p className="mb-6">
+            Make sure to follow our creator page and check out our community for the latest updates and new creations!
+            Below are our favorite fortnite maps.
           </p>
           <p className="mt-6">
             <span className="font-semibold block mb-2">
