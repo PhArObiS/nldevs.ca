@@ -7,8 +7,8 @@ import Navbar from "@/components/main/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FORTNITE CREATIVE TEAM",
-  description: "We are a passionate Fortnite Creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe."
+  title: "FAVORITE FORTNITE MAPS",
+  description: "These are our favorite fortnite maps. We are a passionate Fortnite Creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe."
 };
 
 export default function RootLayout({
