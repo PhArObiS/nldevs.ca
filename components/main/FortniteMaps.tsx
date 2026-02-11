@@ -9,7 +9,7 @@ const FortniteMaps = () => {
       </h1>
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         <FortniteMapsCard
-          src="/MEGA_RAMP_SURVIVAL_TMNT.jpg"
+          src="/MegaRampSurvival.jpeg"
           title="MEGA RAMP SURVIVAL 🌆🐢 TMNT"
           description="6 Best Fortnite Creative Maps."
         />
