@@ -53,14 +53,25 @@ const AboutContent = () => {
             Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us.
           </p>
           <p className="mt-6">
-            <span className="font-semibold">Join our community!</span>{" "}
+            <span className="font-semibold">NLDEVS Creator Profile</span>{" "}
             <a
               href="https://www.fortnite.com/@nldevs"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 underline transition duration-300"
             >
-              https://www.fortnite.com/@nldevs
+              NLDEVS Creator Profile
+            </a>
+          </p>
+          <p className="mt-6">
+            <span className="font-semibold">Join our community!</span>{" "}
+            <a
+              href="https://communities.epicgames.com/community/S7TU/nldevs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline transition duration-300"
+            >
+              NLDEVS Community
             </a>
           </p>
         </motion.div>
