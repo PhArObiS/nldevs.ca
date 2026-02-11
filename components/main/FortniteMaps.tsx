@@ -19,12 +19,12 @@ const FortniteMaps = () => {
           description="6 Best Fortnite Creative Maps"
         />
         <FortniteMapsCard
-          src="/RED_VS _BLUE_SQUID_MINIGAME.jpg"
+          src="/RedVsBlueSquidMinigame.jpg"
           title="RED VS BLUE 🔴🔵 SQUID MINIGAME 🦑"
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/TILTED_SQUID_ROYALE_99 BOTS.jpg"
+          src="/TiltedSquidRoyale99Bots.jpeg"
           title="TILTED SQUID ROYALE 🏆 99 BOTS"
           description="6 Best Fortnite Creative Maps."
         />
@@ -34,7 +34,7 @@ const FortniteMaps = () => {
           description="6 Best Fortnite Creative Maps."
         />
         <FortniteMapsCard
-          src="/RED_VS_BLUE_PLAYERS_VS_GUARDS.jpg"
+          src="/RedVsBluePlayersVsGuards.jpeg"
           title="RED VS BLUE 🔴🔵 PLAYERS VS GUARDS 🦑"
           description="6 Best Fortnite Creative Maps."
         />
