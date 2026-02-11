@@ -29,7 +29,7 @@ const FortniteMaps = () => {
           description="https://www.fortnite.com/@nldevs/1116-7765-9076"
         />
         <FortniteMapsCard
-          src="/WinterfestDemonHuntersGunGame.jpeg.jpg"
+          src="/WinterfestDemonHuntersGunGame.jpeg"
           title="❄️ WINTERFEST DEMON HUNTERS 👿 GUNGAME"
           description="https://www.fortnite.com/@nldevs/6101-7751-8665"
         />
