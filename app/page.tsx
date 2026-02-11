@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import About from "@/components/main/About";
-// import FortniteMaps from "@/components/main/FortniteMaps";
+import FortniteMaps from "@/components/main/FortniteMaps";
 // import FortniteResources from "@/components/main/FortniteResources";
 // import UnrealEngines from "@/components/main/UnrealEngines";
 import Skills from "@/components/main/Skills";
@@ -12,7 +12,7 @@ export default function Home() {
     <main className="h-full w-full">
       <div className="flex flex-col gap-10">
         <About />
-        {/* <FortniteMaps /> */}
+        {/* { <FortniteMaps /> } */}
         {/* <FortniteResources /> */}
         {/* <UnrealEngines /> */}
         {/* <Skills /> */}
