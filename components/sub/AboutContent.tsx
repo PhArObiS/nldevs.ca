@@ -50,28 +50,20 @@ const AboutContent = () => {
             We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. From designing unique maps and crafting immersive gameplay mechanics to integrating dynamic visual effects, we push the boundaries of what&apos;s possible within the Fortnite creative space.
           </p>
           <p className="mb-6">
-            Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us.
+            Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us. Please like and favorite creator and make sure to check out our community for the latest updates and new creations!
           </p>
           <p className="mt-6">
-            <span className="font-semibold">NLDEVS Creator Profile</span>{" "}
-            <a
-              href="https://www.fortnite.com/@nldevs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline transition duration-300"
-            >
-              NLDEVS Creator Profile
-            </a>
-          </p>
-          <p className="mt-6">
-            <span className="font-semibold">Join our community!</span>{" "}
+            <span className="font-semibold block mb-2">
+              Join our Community:
+            </span>
+
             <a
               href="https://communities.epicgames.com/community/S7TU/nldevs"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline transition duration-300"
+              className="block text-blue-400 hover:text-blue-300 underline transition duration-300"
             >
-              NLDEVS Community
+              @NLDEVS
             </a>
           </p>
         </motion.div>
