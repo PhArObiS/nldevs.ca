@@ -27,3 +27,4 @@ const FortniteResourcesCard = ({ src, title, description }: Props) => {
 };
 
 export default FortniteResourcesCard;
+
