@@ -11,17 +11,17 @@ const FortniteMaps = () => {
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         <FortniteMapsCard
           src="/MegaRampSurvival.jpeg"
-          title="MEGA RAMP SURVIVAL 🌆🐢 TMNT"
+          title="TMNT MEGA RAMP SURVIVAL 🌆🐢"
           description="0556-7584-6565"
         />
         <FortniteMapsCard
           src="/CityTMNT.jpeg" 
-          title="TMNT CITY 🌆 GUN GAME ONE SHOT 🎯"
+          title="TMNT CITY 🌆"
           description="1383-6989-3967"
         />
         <FortniteMapsCard
           src="/RedVsBlueSquidMinigame.jpg"
-          title="RED VS BLUE 🔴🔵 SQUID MINIGAME 🦑"
+          title="RvB 🔴🔵 SQUID MINIGAME 🦑"
           description="2720-5344-3341"
         />
         <FortniteMapsCard
@@ -31,12 +31,12 @@ const FortniteMaps = () => {
         />
         <FortniteMapsCard
           src="/WinterfestDemonHuntersGunGame.jpeg"
-          title="❄️ WINTERFEST DEMON HUNTERS 👿 GUNGAME"
+          title="❄️ WINTERFEST DEMON HUNTERS 👿"
           description="6101-7751-8665"
         />
         <FortniteMapsCard
           src="/RedVsBluePlayersVsGuards.jpeg"
-          title="RED VS BLUE 🔴🔵 PLAYERS VS GUARDS 🦑"
+          title="RvB 🔴🔵 PLAYERS VS GUARDS 🦑"
           description="6263-5571-9595"
         />
       </div>
