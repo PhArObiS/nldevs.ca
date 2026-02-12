@@ -28,6 +28,7 @@ export default function Home() {
         <section>
           <h2 className="sr-only">Featured Fortnite Maps</h2>
           <FortniteMaps />
+          
         </section>
 
         <Footer />
