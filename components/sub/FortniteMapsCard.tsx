@@ -16,8 +16,7 @@ const FortniteMapsCard = ({ src, title, description, url }: Props) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block focus:outline-none"
-      aria-label={`Open ${title}`}
+      className="block relative z-10"
     >
       <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer">
         <Image
@@ -27,7 +26,6 @@ const FortniteMapsCard = ({ src, title, description, url }: Props) => {
           height={1000}
           className="w-full object-contain"
         />
-
         <div className="relative p-4">
           <h1 className="text-2xl font-semibold text-white">{title}</h1>
           <p className="mt-2 text-gray-300">{description}</p>
@@ -39,6 +37,7 @@ const FortniteMapsCard = ({ src, title, description, url }: Props) => {
 };
 
 export default FortniteMapsCard;
+
 
 // import Image from "next/image";
 // import React from "react";
