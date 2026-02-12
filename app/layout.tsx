@@ -7,7 +7,7 @@ import Navbar from "@/components/main/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nldevs.ca/"), 
+  metadataBase: new URL("https://www.nldevs.ca/"),
   title: {
     default: "Favorite Fortnite Maps | NLDevs",
     template: "%s | NLDevs",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Favorite Fortnite maps created by NLDevs. Discover UEFN experiences, map codes, and gameplay highlights.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.nldevs.ca/",
   },
   robots: {
     index: true,
@@ -30,11 +30,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "/",
+    url: "https://www.nldevs.ca/",
     title: "Favorite Fortnite Maps | NLDevs",
     description:
       "Favorite Fortnite maps created by NLDevs — UEFN experiences, map codes, and highlights.",
     siteName: "NLDevs",
+    images: [
+      {
+        url: "https://www.nldevs.ca/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Favorite Fortnite Maps by NLDevs",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
