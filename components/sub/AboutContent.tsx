@@ -50,10 +50,7 @@ const AboutContent = () => {
             We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. From designing unique maps and crafting immersive gameplay mechanics to integrating dynamic visual effects, we push the boundaries of what&apos;s possible within the Fortnite creative space.
           </p>
           <p className="mb-6">
-            Whether you&apos;re looking for custom maps, game modes, or specialized effects, our team combines technical expertise with artistic vision to deliver top-tier content that stands out. Join us on this creative journey and explore the limitless potential of UEFN with us.
-          </p>
-          <p className="mb-6">
-            Make sure to follow our creator page and check out our community for the latest updates and new creations!
+            Join us on this creative journey and explore the limitless potential of UEFN with us. Make sure to follow our creator page and check out our community for the latest updates and new creations!
             Below are our favorite fortnite maps.
           </p>
           <p className="mt-6">
