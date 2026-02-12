@@ -7,13 +7,13 @@ import Navbar from "@/components/main/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nldevs.ca/"), // change this
+  metadataBase: new URL("https://www.nldevs.ca/"), 
   title: {
     default: "Favorite Fortnite Maps | NLDevs",
     template: "%s | NLDevs",
   },
   description:
-    "Favorite Fortnite maps curated by NLDevs. Discover UEFN experiences, map codes, and gameplay highlights.",
+    "Favorite Fortnite maps created by NLDevs. Discover UEFN experiences, map codes, and gameplay highlights.",
   alternates: {
     canonical: "/",
   },
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Favorite Fortnite Maps | NLDevs",
     description:
-      "Favorite Fortnite maps curated by NLDevs — UEFN experiences, map codes, and highlights.",
+      "Favorite Fortnite maps created by NLDevs — UEFN experiences, map codes, and highlights.",
     siteName: "NLDevs",
   },
   twitter: {
     card: "summary_large_image",
     title: "Favorite Fortnite Maps | NLDevs",
     description:
-      "Favorite Fortnite maps curated by NLDevs — UEFN experiences, map codes, and highlights.",
+      "Favorite Fortnite maps created by NLDevs — UEFN experiences, map codes, and highlights.",
   },
 };
 
