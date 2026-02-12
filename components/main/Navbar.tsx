@@ -42,9 +42,9 @@ const Navbar = () => {
                 key={social.name}
                 href={
                   social.name === "Discord"
-                    ? "https://discord.gg/XKVAcyNfHs"
+                    ? "https://discord.gg/V2MEqa69"
                     : social.name === "Youtube"
-                    ? "https://youtube.com/@nlgaming"
+                    ? "https://www.youtube.com/@nldevs"
                     : social.name === "Gmail"
                     ? "mailto:nldevsmtl@gmail.com"
                     : social.name === "Instagram"
@@ -56,7 +56,7 @@ const Navbar = () => {
                     : social.name === "Twitter"
                     ? "https://x.com/nldevsmtl" 
                     : social.name === "Fortnite"
-                    ? "https://www.fortnite.com/@nldevelopment"  // Add the Twitter URL
+                    ? "https://www.fortnite.com/@nldevs"  
                     : "#"
                   }
                   target="_blank"
