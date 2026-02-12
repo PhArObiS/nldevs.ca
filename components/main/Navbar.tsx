@@ -41,22 +41,22 @@ const Navbar = () => {
               <a
                 key={social.name}
                 href={
-                  social.name === "Discord"
+                  social.name === "Fortnite"
+                    ? "https://www.fortnite.com/@nldevs"
+                    : social.name === "Discord"
                     ? "https://discord.gg/V2MEqa69"
                     : social.name === "Youtube"
                     ? "https://www.youtube.com/@nldevs"
                     : social.name === "Gmail"
                     ? "mailto:nldevsmtl@gmail.com"
-                    : social.name === "Instagram"
-                    ? "https://www.instagram.com/nldevs/"
                     : social.name === "Facebook"
                     ? "https://www.facebook.com/profile.php?id=100069258844412&sk=about"
+                    : social.name === "Instagram"
+                    ? "https://www.instagram.com/nldevs/"
                     : social.name === "TikTok"
                     ? "https://www.tiktok.com/@nldevs"
                     : social.name === "Twitter"
                     ? "https://x.com/nldevsmtl" 
-                    : social.name === "Fortnite"
-                    ? "https://www.fortnite.com/@nldevs"  
                     : "#"
                   }
                   target="_blank"

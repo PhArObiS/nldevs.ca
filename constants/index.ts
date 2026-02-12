@@ -9,6 +9,10 @@ export const Skill_data = [
 
 export const Socials = [
   {
+    name: "Fortnite",
+    src: "/epic-games-svgrepo-com.svg",
+  },
+  {
     name: "Discord",
     src: "/discord.svg",
   },
@@ -17,28 +21,24 @@ export const Socials = [
     src: "/youtube-svgrepo-com.svg",
   },
   {
+    name: "Gmail",
+    src: "/gmail.png",
+  },
+  {
     name: "Facebook",
-    src: "/facebook.svg", // Add the appropriate path for Facebook icon
+    src: "/facebook.svg",
   },
   {
     name: "Instagram",
-    src: "/instagram.svg", // Add the appropriate path for Instagram icon
+    src: "/instagram.svg",
   },
   {
     name: "TikTok",
-    src: "/tiktok-icon-white-1-logo-svgrepo-com.svg", // Add the appropriate path for TikTok icon
+    src: "/tiktok-icon-white-1-logo-svgrepo-com.svg",
   },
   {
     name: "Twitter",
-    src: "/twitter-svgrepo-com.svg", // Add the appropriate path for TikTok icon
-  },
-  {
-    name: "Fortnite",
-    src: "/epic-games-svgrepo-com.svg", // Add the appropriate path for TikTok icon
-  },
-  {
-    name: "Gmail",
-    src: "/gmail.png",
+    src: "/twitter-svgrepo-com.svg",
   },
 ];
 
