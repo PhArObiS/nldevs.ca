@@ -1,6 +1,7 @@
 import About from "@/components/main/About";
 import FortniteMaps from "@/components/main/FortniteMaps";
 import Footer from "@/components/main/Footer";
+import BestFortniteXpMapsPage from "@/components/main/best-fortnite-xp-maps/BestFortniteXpMapsPage";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <section>
           <h2 className="sr-only">Featured Fortnite Maps</h2>
           <FortniteMaps />
+          <BestFortniteXpMapsPage />
           
         </section>
 
