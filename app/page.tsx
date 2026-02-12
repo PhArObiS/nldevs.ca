@@ -1,12 +1,12 @@
+
+import Link from "next/link";
 import About from "@/components/main/About";
 import FortniteMaps from "@/components/main/FortniteMaps";
 import Footer from "@/components/main/Footer";
-import BestFortniteXpMapsPage from "@/components/main/best-fortnite-xp-maps/BestFortniteXpMapsPage";
 
 export default function Home() {
   return (
     <main className="h-full w-full">
-
       {/* PRIMARY SEO HEADER */}
       <section className="text-center py-12 px-6">
         <h1 className="text-4xl font-bold text-white">
@@ -23,14 +23,28 @@ export default function Home() {
 
       {/* PAGE CONTENT */}
       <div className="flex flex-col gap-10">
-
         <About />
 
         <section>
           <h2 className="sr-only">Featured Fortnite Maps</h2>
           <FortniteMaps />
-          <BestFortniteXpMapsPage />
-          
+        </section>
+
+        {/* NEW: XP Maps teaser + internal link */}
+        <section className="text-center px-6 pb-10">
+          <h2 className="text-2xl font-semibold text-white">
+            Looking for XP Maps?
+          </h2>
+          <p className="mt-3 max-w-3xl mx-auto text-gray-300">
+            Browse our best Fortnite XP maps and map codes to level up efficiently.
+          </p>
+
+          <Link
+            href="/best-fortnite-xp-maps"
+            className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200"
+          >
+            View Best Fortnite XP Maps →
+          </Link>
         </section>
 
         <Footer />
