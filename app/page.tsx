@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import About from "@/components/main/About";
 import FortniteMaps from "@/components/main/FortniteMaps";
@@ -7,10 +6,31 @@ import Footer from "@/components/main/Footer";
 export default function Home() {
   return (
     <main className="h-full w-full">
+
+      {/* ✅ SEO SCHEMA — HOMEPAGE */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Favorite Fortnite Maps & Map Codes",
+            description:
+              "Curated list of Fortnite maps and map codes built with UEFN by NLDevs.",
+            url: "https://www.nldevs.ca/",
+            isPartOf: {
+              "@type": "WebSite",
+              name: "NLDevs",
+              url: "https://www.nldevs.ca/",
+            },
+          }),
+        }}
+      />
+
       {/* PRIMARY SEO HEADER */}
       <section className="text-center py-12 px-6">
         <h1 className="text-4xl font-bold text-white">
-          Favorite Fortnite Maps
+          Favorite Fortnite Maps & Map Codes
         </h1>
 
         <p className="mt-4 max-w-3xl mx-auto text-gray-300">
@@ -23,18 +43,38 @@ export default function Home() {
 
       {/* PAGE CONTENT */}
       <div className="flex flex-col gap-10">
+
+        {/* ABOUT SECTION */}
         <About />
 
-        <section>
-          <h2 className="sr-only">Featured Fortnite Maps</h2>
+        {/* FEATURED MAPS SECTION */}
+        <section id="featured-fortnite-maps" aria-label="Featured Fortnite Maps">
+          <h2 className="text-3xl text-white text-center">
+            Featured Fortnite Maps
+          </h2>
+
+          <p className="mt-3 text-center">
+            <Link
+              href="/maps"
+              className="text-cyan-300 underline hover:text-cyan-200"
+            >
+              Browse all maps →
+            </Link>
+          </p>
+
           <FortniteMaps />
         </section>
 
-        {/* NEW: XP Maps teaser + internal link */}
-        <section className="text-center px-6 pb-10">
+        {/* XP MAPS SECTION */}
+        <section
+          id="xp-maps"
+          aria-label="Fortnite XP Maps"
+          className="text-center px-6 pb-10"
+        >
           <h2 className="text-2xl font-semibold text-white">
             Looking for XP Maps?
           </h2>
+
           <p className="mt-3 max-w-3xl mx-auto text-gray-300">
             Browse our best Fortnite XP maps and map codes to level up efficiently.
           </p>
@@ -68,7 +108,7 @@ export default function Home() {
 //     <main className="h-full w-full">
 //       <div className="flex flex-col gap-10">
 //         <About />
-//         { <FortniteMaps /> }
+//         { best-fortnite-xp-maps }
 //         {/* <FortniteResources /> */}
 //         {/* <UnrealEngines /> */}
 //         {/* <Skills /> */}
