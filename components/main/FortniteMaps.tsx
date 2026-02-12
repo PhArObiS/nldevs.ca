@@ -54,7 +54,7 @@ const FortniteMaps = () => {
     "@type": "ItemList",
     name: "Favorite Fortnite Maps",
     description:
-      "A created list of favorite Fortnite maps created by NLDevs with map codes and highlights.",
+      "A curated list of favorite Fortnite maps created by NLDevs with map codes and highlights.",
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     numberOfItems: maps.length,
     itemListElement: maps.map((m, i) => ({
