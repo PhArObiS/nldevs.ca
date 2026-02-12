@@ -12,32 +12,32 @@ const FortniteMaps = () => {
         <FortniteMapsCard
           src="/MegaRampSurvival.jpeg"
           title="MEGA RAMP SURVIVAL 🌆🐢 TMNT"
-          description="https://www.fortnite.com/@nldevs/0556-7584-6565"
+          description="0556-7584-6565"
         />
         <FortniteMapsCard
           src="/CityTMNT.jpeg" 
           title="TMNT CITY 🌆 GUN GAME ONE SHOT 🎯"
-          description="https://www.fortnite.com/@nldevs/1383-6989-3967"
+          description="1383-6989-3967"
         />
         <FortniteMapsCard
           src="/RedVsBlueSquidMinigame.jpg"
           title="RED VS BLUE 🔴🔵 SQUID MINIGAME 🦑"
-          description="https://www.fortnite.com/@nldevs/2720-5344-3341"
+          description="2720-5344-3341"
         />
         <FortniteMapsCard
           src="/TiltedSquidRoyale99Bots.jpeg"
           title="TILTED SQUID ROYALE 🏆 99 BOTS"
-          description="https://www.fortnite.com/@nldevs/1116-7765-9076"
+          description="1116-7765-9076"
         />
         <FortniteMapsCard
           src="/WinterfestDemonHuntersGunGame.jpeg"
           title="❄️ WINTERFEST DEMON HUNTERS 👿 GUNGAME"
-          description="https://www.fortnite.com/@nldevs/6101-7751-8665"
+          description="6101-7751-8665"
         />
         <FortniteMapsCard
           src="/RedVsBluePlayersVsGuards.jpeg"
           title="RED VS BLUE 🔴🔵 PLAYERS VS GUARDS 🦑"
-          description="https://www.fortnite.com/@nldevs/6263-5571-9595"
+          description="6263-5571-9595"
         />
       </div>
     </div>
