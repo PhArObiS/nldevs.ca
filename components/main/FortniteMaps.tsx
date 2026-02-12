@@ -28,6 +28,7 @@ const FortniteMaps = () => {
           src="/TiltedSquidRoyale99Bots.jpeg"
           title="TILTED SQUID ROYALE 🏆"
           description="1116-7765-9076"
+          
         />
         <FortniteMapsCard
           src="/WinterfestDemonHuntersGunGame.jpeg"
