@@ -29,7 +29,7 @@ const FortniteMapsCard = ({ src, title, description, url }: Props) => {
         <div className="relative p-4">
           <h1 className="text-2xl font-semibold text-white">{title}</h1>
           <p className="mt-2 text-gray-300">{description}</p>
-          <p className="mt-2 text-cyan-300 underline">Open map page</p>
+          <p className="mt-2 text-cyan-300 underline">{url}</p>
         </div>
       </div>
     </a>
