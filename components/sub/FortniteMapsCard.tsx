@@ -6,28 +6,77 @@ interface Props {
   src: string;
   title: string;
   description: string;
+  mode?: string;
 }
 
-const FortniteMapsCard = ({ src, title, description }: Props) => {
+const FortniteMapsCard = ({ src, title, description, mode }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+    <article className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+
       <Image
         src={src}
-        alt={title}
+        alt={`${title} Fortnite map gameplay preview`}
         width={1000}
         height={1000}
         className="w-full object-contain"
       />
 
       <div className="relative p-4">
-        <h1 className="text-2xl font-semibold text-white">{title}</h1>
-        <p className="mt-2 text-gray-300">{description}</p>
+
+        {/* Title */}
+        <h3 className="text-2xl font-semibold text-white">
+          {title}
+        </h3>
+
+        {/* Map Code */}
+        <p className="mt-2 text-gray-300">
+          <span className="font-semibold text-white">Map Code:</span>{" "}
+          {description}
+        </p>
+
+        {/* Mode */}
+        {mode && (
+          <p className="text-gray-400 text-sm mt-1">
+            Mode: {mode}
+          </p>
+        )}
+
       </div>
-    </div>
+    </article>
   );
 };
 
 export default FortniteMapsCard;
+
+// import Image from "next/image";
+// import React from "react";
+
+// interface Props {
+//   src: string;
+//   title: string;
+//   description: string;
+// }
+
+// const FortniteMapsCard = ({ src, title, description }: Props) => {
+//   return (
+//     <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+//       <Image
+//         src={src}
+//         alt={title}
+//         width={1000}
+//         height={1000}
+//         className="w-full object-contain"
+//       />
+
+//       <div className="relative p-4">
+//         <h1 className="text-2xl font-semibold text-white">{title}</h1>
+//         <p className="mt-2 text-gray-300">{description}</p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default FortniteMapsCard;
 
 
 // import Image from "next/image";
