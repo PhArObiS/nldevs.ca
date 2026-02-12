@@ -15,7 +15,7 @@ const FortniteMaps = () => {
 
       <p className="text-gray-300 max-w-3xl text-center px-6 mb-10">
         Browse our favorite Fortnite maps and jump in fast using the map codes.
-        Each map includes a quick overview so you know what to expect before you play.
+        {/* Each map includes a quick overview so you know what to expect before you play. */}
       </p>
 
       <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
