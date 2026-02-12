@@ -31,12 +31,12 @@ const FortniteMaps = () => {
         />
         <FortniteMapsCard
           src="/WinterfestDemonHuntersGunGame.jpeg"
-          title="❄️ WINTERFEST DEMON HUNTERS 👿"
+          title="❄️ WINTERFEST DEMON HUNTERS"
           description="6101-7751-8665"
         />
         <FortniteMapsCard
           src="/RedVsBluePlayersVsGuards.jpeg"
-          title="RvB 🔴🔵 PLAYERS VS GUARDS 🦑"
+          title="RvB 🔴🔵 PLAYERS VS GUARDS"
           description="6263-5571-9595"
         />
       </div>
