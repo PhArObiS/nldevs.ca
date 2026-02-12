@@ -47,7 +47,7 @@ const AboutContent = () => {
           style={{ textAlign: "justify" }}
         >
           <p className="mb-6">
-            Welcome to nldevs. We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. 
+            Welcome to nldevs.ca! We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. 
           </p>
           <p className="mb-6">
             Join us on this creative journey and explore the limitless potential of UEFN with us. Make sure to follow our creator page and check out our community for the latest updates and new creations!
