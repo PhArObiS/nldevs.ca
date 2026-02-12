@@ -51,15 +51,7 @@ const Footer: React.FC = () => (
       <Section title="About" links={aboutLinks} /> */}
     </div>
     <div className="text-center text-sm text-gray-400 mt-6">
-      <a
-              href="https://www.fortnite.com/@nldevs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-blue-400 hover:text-blue-300 underline transition duration-300"
-            >
-              &copy; NLDEVS 2026
-            </a>
-      
+      &copy; NLDEVS 2026
     </div>
   </footer>
 );
