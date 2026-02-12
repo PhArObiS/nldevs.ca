@@ -24,18 +24,18 @@ export const Socials = [
     name: "Gmail",
     src: "/gmail.png",
   },
-  {
-    name: "Facebook",
-    src: "/facebook.svg",
-  },
-  {
-    name: "Instagram",
-    src: "/instagram.svg",
-  },
-  {
-    name: "TikTok",
-    src: "/tiktok-icon-white-1-logo-svgrepo-com.svg",
-  },
+  // {
+  //   name: "Facebook",
+  //   src: "/facebook.svg",
+  // },
+  // {
+  //   name: "Instagram",
+  //   src: "/instagram.svg",
+  // },
+  // {
+  //   name: "TikTok",
+  //   src: "/tiktok-icon-white-1-logo-svgrepo-com.svg",
+  // },
   {
     name: "X",
     src: "/close-svgrepo-com.svg",
