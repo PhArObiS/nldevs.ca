@@ -38,7 +38,7 @@ export const Socials = [
   },
   {
     name: "X",
-    src: "/cross-close-svgrepo-com.svg",
+    src: "/close-svgrepo-com.svg",
   },
 ];
 
