@@ -55,7 +55,7 @@ const Navbar = () => {
                     ? "https://www.instagram.com/nldevs/"
                     : social.name === "TikTok"
                     ? "https://www.tiktok.com/@nldevs"
-                    : social.name === "Twitter"
+                    : social.name === "X"
                     ? "https://x.com/nldevsmtl" 
                     : "#"
                   }

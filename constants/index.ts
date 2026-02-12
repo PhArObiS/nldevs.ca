@@ -37,8 +37,8 @@ export const Socials = [
     src: "/tiktok-icon-white-1-logo-svgrepo-com.svg",
   },
   {
-    name: "Twitter",
-    src: "/twitter-svgrepo-com.svg",
+    name: "X",
+    src: "/close-x-svgrepo-com.svg",
   },
 ];
 
