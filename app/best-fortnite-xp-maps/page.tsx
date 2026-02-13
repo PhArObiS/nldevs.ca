@@ -1,6 +1,6 @@
-
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 const SITE_URL = "https://www.nldevs.ca";
 
@@ -29,16 +29,55 @@ export const metadata: Metadata = {
 const xpMaps: {
   title: string;
   code: string;
+  image?: string; // ✅ add image
   type: "AFK" | "Active" | "Mixed";
   notes: string;
 }[] = [
-  { title: "TMNT Mega Ramp Survival", code: "0556-7584-6565", type: "Active", notes: "Good XP from survival rounds." },
-  { title: "Winterfest Demon Hunters", code: "6101-7751-8665", type: "Mixed", notes: "Combat XP and repeatable loops." },
-  // {} Add more XP-specific maps here
+  {
+    title: "TMNT Mega Ramp Survival",
+    code: "0556-7584-6565",
+    image: "/MegaRampSurvival.jpeg",
+    type: "Active",
+    notes: "Good XP from survival rounds.",
+  },
+  {
+    title: "Winterfest Demon Hunters",
+    code: "6101-7751-8665",
+    image: "/WinterfestDemonHuntersGunGame.jpeg",
+    type: "Mixed",
+    notes: "Combat XP and repeatable loops.",
+  },
+  {
+    title: "RvB Players vs Guards",
+    code: "6263-5571-9595",
+    image: "/RedVsBluePlayersVsGuards.jpeg",
+    type: "Mixed",
+    notes: "Team-based XP loops; good for longer sessions.",
+  },
+  {
+    title: "TMNT City",
+    code: "1383-6989-3967",
+    image: "/CityTMNT.jpeg",
+    type: "Active",
+    notes: "Good XP from exploration + combat routes.",
+  },
+  {
+    title: "RvB Squid Minigame",
+    code: "2720-5344-3341",
+    image: "/RedVsBlueSquidMinigame.jpg",
+    type: "Active",
+    notes: "Fast rounds; good XP when you keep playing objectives.",
+  },
+  {
+    title: "Tilted Squid Royale (99 Bots)",
+    code: "1116-7765-9076",
+    image: "/TiltedSquidRoyale99Bots.jpeg",
+    type: "AFK",
+    notes: "Mostly AFK-style XP while bots keep the match moving.",
+  },
 ];
 
 export default function BestFortniteXpMapsPage() {
-  // ✅ Page-level schema
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -66,6 +105,8 @@ export default function BestFortniteXpMapsPage() {
           genre: `XP Map (${m.type})`,
           description: `Fortnite XP map code: ${m.code}. ${m.notes}`,
           url: `${SITE_URL}/best-fortnite-xp-maps#${m.code.replaceAll("-", "")}`,
+          // ✅ include image in schema (only if provided)
+          ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
             name: "NLDevs",
@@ -96,7 +137,6 @@ export default function BestFortniteXpMapsPage() {
         </p>
       </header>
 
-      {/* Quick navigation */}
       <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
         <p className="font-semibold text-white">On this page</p>
         <ul className="mt-2 list-disc list-inside">
@@ -118,7 +158,6 @@ export default function BestFortniteXpMapsPage() {
         </ul>
       </nav>
 
-      {/* XP Map list */}
       <section id="xp-map-codes" className="mt-10">
         <h2 className="text-2xl font-semibold">XP Map Codes</h2>
         <p className="mt-2 text-gray-300">
@@ -131,9 +170,7 @@ export default function BestFortniteXpMapsPage() {
             <p className="text-white font-semibold">No XP maps listed yet.</p>
             <p className="mt-2">
               Add entries to the <code className="text-gray-200">xpMaps</code> array in{" "}
-              <code className="text-gray-200">
-                app/best-fortnite-xp-maps/page.tsx
-              </code>{" "}
+              <code className="text-gray-200">app/best-fortnite-xp-maps/page.tsx</code>{" "}
               and they’ll automatically appear here (and in schema).
             </p>
           </div>
@@ -143,21 +180,39 @@ export default function BestFortniteXpMapsPage() {
               <article
                 key={m.code}
                 id={m.code.replaceAll("-", "")}
-                className="rounded-lg border border-[#2A0E61] p-5"
+                className="rounded-lg border border-[#2A0E61] overflow-hidden"
               >
-                <h3 className="text-xl font-semibold">{m.title}</h3>
-                <p className="mt-2 text-gray-300">
-                  <span className="font-semibold text-white">Map Code:</span> {m.code}
-                </p>
-                <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
-                <p className="mt-3 text-gray-300">{m.notes}</p>
+                {/* ✅ Image header (only if provided) */}
+                {m.image ? (
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={m.image}
+                      alt={m.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
+                ) : null}
+
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{m.title}</h3>
+
+                  <p className="mt-2 text-gray-300">
+                    <span className="font-semibold text-white">Map Code:</span> {m.code}
+                  </p>
+
+                  <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
+
+                  <p className="mt-3 text-gray-300">{m.notes}</p>
+                </div>
               </article>
             ))}
           </div>
         )}
       </section>
 
-      {/* How-to section (SEO + usefulness) */}
       <section id="how-to-use-xp-maps" className="mt-12">
         <h2 className="text-2xl font-semibold">How to use Fortnite XP maps</h2>
         <ol className="mt-4 list-decimal list-inside text-gray-300 space-y-2">
@@ -168,7 +223,6 @@ export default function BestFortniteXpMapsPage() {
         </ol>
       </section>
 
-      {/* Disclaimer (safe wording) */}
       <section id="disclaimer" className="mt-12">
         <h2 className="text-2xl font-semibold">Notes & disclaimer</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
