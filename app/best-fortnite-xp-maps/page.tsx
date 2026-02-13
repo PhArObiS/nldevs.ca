@@ -26,8 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ✅ Start with an empty list if you don't have XP maps yet.
-// Add entries later without changing page structure.
 const xpMaps: {
   title: string;
   code: string;
@@ -35,7 +33,10 @@ const xpMaps: {
   notes: string;
 }[] = [
   // Example (remove if you want):
-  // { title: "Example XP Map", code: "1234-5678-9012", type: "Active", notes: "Fast rounds and consistent XP." },
+  { title: "Example XP Map", code: "1234-5678-9012", type: "Active", notes: "Fast rounds and consistent XP." },
+  { title: "TMNT Mega Ramp Survival", code: "0556-7584-6565", type: "Active", notes: "Good XP from survival rounds." },
+  { title: "Winterfest Demon Hunters", code: "6101-7751-8665", type: "Mixed", notes: "Combat XP and repeatable loops." },
+
 ];
 
 export default function BestFortniteXpMapsPage() {
