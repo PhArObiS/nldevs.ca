@@ -15,7 +15,7 @@ const AboutContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center px-20 mt-6 w-full z-[20]"
       id="about-us"
     >
       {/* Content section */}
