@@ -60,14 +60,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
-        <StarsCanvas />
+        {/* Background — must not capture clicks */}
+        <div className="pointer-events-none fixed inset-0 -z-10">
+          <StarsCanvas />
+        </div>
+
         <Navbar />
 
         {/* Offset for fixed navbar */}
         <div className="pt-[85px]">
           {children}
         </div>
-
       </body>
     </html>
   );
