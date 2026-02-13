@@ -26,13 +26,15 @@ const Navbar = () => {
 
         {/* Internal nav (SEO + crawl paths) */}
         <nav className="hidden md:flex items-center gap-8 text-gray-200">
-          <Link href="/maps" className="hover:text-white">
-            Maps
+          <Link href="/" className="hover:text-white">
+            Home
           </Link>
+
           <Link href="/best-fortnite-xp-maps" className="hover:text-white">
             XP Maps
           </Link>
         </nav>
+
 
         {/* Social Icons */}
         <div className="flex flex-row gap-2">
