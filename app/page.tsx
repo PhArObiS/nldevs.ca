@@ -53,14 +53,14 @@ export default function Home() {
             Featured Fortnite Maps
           </h2>
 
-          <p className="mt-3 text-center">
+          {/* <p className="mt-3 text-center">
             <Link
               href="/maps"
               className="text-cyan-300 underline hover:text-cyan-200"
             >
               Browse all maps →
             </Link>
-          </p>
+          </p> */}
 
           <FortniteMaps />
         </section>
