@@ -72,6 +72,9 @@ const FortniteMaps = () => {
           name: "NLDevs",
           url: "https://www.nldevs.ca",
         },
+
+
+
         // Optional: add this later when you create dedicated pages
         // url: `https://www.nldevs.ca/maps/${m.slug}`,
       },
