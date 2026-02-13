@@ -5,7 +5,7 @@ import Image from "next/image";
 const SITE_URL = "https://www.nldevs.ca";
 
 export const metadata: Metadata = {
-  title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDevs",
+  title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
   description:
     "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDevs with quick summaries and updated picks.",
   alternates: {
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${SITE_URL}/best-fortnite-xp-maps`,
-    title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDevs",
+    title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
     description:
       "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDevs.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDevs",
+    title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
     description:
       "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDevs.",
   },
@@ -38,7 +38,7 @@ const xpMaps: {
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
     type: "Active",
-    notes: "Good XP from survival rounds.",
+    notes: "Good XP.",
   },
   {
     title: "Winterfest Demon Hunters",
@@ -72,8 +72,8 @@ const xpMaps: {
     title: "Tilted Squid Royale (99 Bots)",
     code: "1116-7765-9076",
     image: "/TiltedSquidRoyale99Bots.jpeg",
-    type: "AFK",
-    notes: "Mostly AFK-style XP while bots keep the match moving.",
+    type: "Mixed",
+    notes: "Good XP from exploration + combat routes.",
   },
 ];
 
