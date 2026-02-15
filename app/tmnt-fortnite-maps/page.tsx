@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 const SITE_URL = "https://www.nldevs.ca";
 
 export const metadata: Metadata = {
   title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
   description:
-    "Play the best TMNT Fortnite maps by NLDevs. Includes map codes for TMNT Mega Ramp Survival and TMNT City, built with UEFN.",
+    "Browse TMNT Fortnite maps and map codes by NLDevs, including TMNT Mega Ramp Survival and TMNT City — built with UEFN.",
   alternates: {
     canonical: `${SITE_URL}/tmnt-fortnite-maps`,
   },
@@ -15,30 +16,40 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/tmnt-fortnite-maps`,
     title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
     description:
-      "Browse TMNT Fortnite maps and map codes by NLDevs, including TMNT Mega Ramp Survival and TMNT City.",
+      "TMNT Fortnite maps and map codes by NLDevs — TMNT Mega Ramp Survival and TMNT City.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
     description:
-      "Browse TMNT Fortnite maps and map codes by NLDevs, including TMNT Mega Ramp Survival and TMNT City.",
+      "TMNT Fortnite maps and map codes by NLDevs — TMNT Mega Ramp Survival and TMNT City.",
   },
 };
 
-const tmntMaps = [
+const tmntMaps: {
+  title: string;
+  code: string;
+  image?: string;
+  type: "Survival" | "Adventure" | "Gun Game" | "PvP" | "Experience";
+  notes: string;
+  // Optional: only use if you actually create these pages
+  detailsHref?: string;
+}[] = [
   {
     title: "TMNT Mega Ramp Survival",
     code: "0556-7584-6565",
-    href: "/tmnt-mega-ramp-survival",
-    description:
-      "High-speed Mega Ramp survival chaos with TMNT vibes. Dodge obstacles and survive the run.",
+    image: "/MegaRampSurvival.jpeg",
+    type: "Survival",
+    notes: "High-speed Mega Ramp survival with TMNT theme. Dodge chaos and survive the run.",
+    // detailsHref: "/tmnt-mega-ramp-survival",
   },
   {
     title: "TMNT City",
     code: "1383-6989-3967",
-    href: "/tmnt-city",
-    description:
-      "Explore a TMNT-themed city experience built in UEFN. Great for vibe, fights, and roleplay.",
+    image: "/CityTMNT.jpeg",
+    type: "Experience",
+    notes: "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends.",
+    // detailsHref: "/tmnt-city",
   },
 ];
 
@@ -48,7 +59,7 @@ export default function TMNTFortniteMapsPage() {
     "@type": "CollectionPage",
     name: "Best TMNT Fortnite Maps & Map Codes",
     description:
-      "A curated collection of Teenage Mutant Ninja Turtles (TMNT) Fortnite maps and map codes by NLDevs.",
+      "A curated list of Teenage Mutant Ninja Turtles (TMNT) Fortnite maps and map codes built with UEFN by NLDevs.",
     url: `${SITE_URL}/tmnt-fortnite-maps`,
     isPartOf: {
       "@type": "WebSite",
@@ -58,6 +69,7 @@ export default function TMNTFortniteMapsPage() {
     mainEntity: {
       "@type": "ItemList",
       name: "TMNT Fortnite Maps",
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
       numberOfItems: tmntMaps.length,
       itemListElement: tmntMaps.map((m, i) => ({
         "@type": "ListItem",
@@ -66,8 +78,10 @@ export default function TMNTFortniteMapsPage() {
           "@type": "VideoGame",
           name: m.title,
           gamePlatform: "Fortnite",
-          description: `${m.description} Map code: ${m.code}.`,
-          url: `${SITE_URL}${m.href}`,
+          genre: `TMNT Fortnite Map (${m.type})`,
+          description: `Fortnite map code: ${m.code}. ${m.notes}`,
+          url: `${SITE_URL}/tmnt-fortnite-maps#${m.code.replaceAll("-", "")}`,
+          ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
             name: "NLDevs",
@@ -79,7 +93,7 @@ export default function TMNTFortniteMapsPage() {
   };
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12 text-white">
+    <main className="px-6 py-12 text-white max-w-5xl mx-auto">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -92,29 +106,87 @@ export default function TMNTFortniteMapsPage() {
       <header className="mt-6">
         <h1 className="text-4xl font-bold">Best TMNT Fortnite Maps & Map Codes</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">
-          Browse our Teenage Mutant Ninja Turtles (TMNT) themed Fortnite maps built with
-          Unreal Editor for Fortnite (UEFN). Each map includes a code and a quick overview.
+          Here are our TMNT-themed Fortnite maps built with Unreal Editor for Fortnite (UEFN).
+          Each entry includes a map code, quick description, and gameplay type.
         </p>
       </header>
 
-      <section className="mt-10 grid gap-6 md:grid-cols-2" aria-label="TMNT Fortnite maps list">
-        {tmntMaps.map((m) => (
-          <article key={m.title} className="rounded-lg border border-[#2A0E61] p-6">
-            <h2 className="text-2xl font-semibold">{m.title}</h2>
-            <p className="mt-2 text-gray-300">{m.description}</p>
+      <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
+        <p className="font-semibold text-white">On this page</p>
+        <ul className="mt-2 list-disc list-inside">
+          <li>
+            <a className="underline hover:text-white" href="#tmnt-map-codes">
+              TMNT Map Codes
+            </a>
+          </li>
+          <li>
+            <a className="underline hover:text-white" href="#how-to-play">
+              How to play
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-            <p className="mt-4 text-gray-300">
-              <span className="font-semibold text-white">Map Code:</span>{" "}
-              <span className="text-cyan-300">{m.code}</span>
-            </p>
+      <section id="tmnt-map-codes" className="mt-10">
+        <h2 className="text-2xl font-semibold">TMNT Map Codes</h2>
+        <p className="mt-2 text-gray-300">
+          Use these codes in Fortnite Discover to play our TMNT experiences.
+        </p>
 
-            <div className="mt-6 flex items-center gap-4">
-              <Link href={m.href} className="text-cyan-300 underline hover:text-cyan-200">
-                View map details →
-              </Link>
-            </div>
-          </article>
-        ))}
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          {tmntMaps.map((m) => (
+            <article
+              key={m.code}
+              id={m.code.replaceAll("-", "")}
+              className="rounded-lg border border-[#2A0E61] overflow-hidden"
+            >
+              {m.image ? (
+                <div className="relative w-full h-48">
+                  <Image
+                    src={m.image}
+                    alt={`${m.title} thumbnail`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority={false}
+                  />
+                </div>
+              ) : null}
+
+              <div className="p-5">
+                <h3 className="text-xl font-semibold">{m.title}</h3>
+
+                <p className="mt-2 text-gray-300">
+                  <span className="font-semibold text-white">Map Code:</span> {m.code}
+                </p>
+
+                <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
+
+                <p className="mt-3 text-gray-300">{m.notes}</p>
+
+                {/* Optional details link (only enable when pages exist) */}
+                {m.detailsHref ? (
+                  <Link
+                    href={m.detailsHref}
+                    className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200"
+                  >
+                    View details →
+                  </Link>
+                ) : null}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="how-to-play" className="mt-12">
+        <h2 className="text-2xl font-semibold">How to play TMNT Fortnite maps</h2>
+        <ol className="mt-4 list-decimal list-inside text-gray-300 space-y-2">
+          <li>Open Fortnite → Search / Discover.</li>
+          <li>Enter the map code exactly (####-####-####).</li>
+          <li>Join the island and follow the in-game objectives.</li>
+          <li>Favorite the map to find it faster next time.</li>
+        </ol>
       </section>
     </main>
   );
