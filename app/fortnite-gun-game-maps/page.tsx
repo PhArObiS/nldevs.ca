@@ -50,13 +50,13 @@ const gunGameMaps: {
     mode: "FFA Gun Game",
     notes: "Holiday demon-hunting gun game with repeatable combat XP and weapon rotations.",
   },
-  {
-    title: "Insane Octo Gun Game",
-    code: "0000-0000-0000",
-    image: "/InsaneOctoGunGame.jpeg",
-    mode: "Gun Game",
-    notes: "High-speed gun game chaos. Replace code + image when ready.",
-  },
+//   {
+//     title: "Insane Octo Gun Game",
+//     code: "0000-0000-0000",
+//     image: "/InsaneOctoGunGame.jpeg",
+//     mode: "Gun Game",
+//     notes: "High-speed gun game chaos. Replace code + image when ready.",
+//   },
 ];
 
 export default function FortniteGunGameMapsPage() {
