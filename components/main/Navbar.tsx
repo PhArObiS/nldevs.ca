@@ -23,26 +23,33 @@ const Navbar = () => {
         </Link>
 
         {/* Internal nav (SEO + crawl paths) */}
-        <nav className="hidden md:flex items-center gap-8 text-gray-200">
-          <Link href="/" className="hover:text-white">
+        <nav
+          className="hidden md:flex items-center gap-8 text-gray-200"
+          aria-label="Primary navigation"
+        >
+          <Link href="/" className="hover:text-white transition-colors">
             Home
           </Link>
 
-          <Link href="/best-fortnite-xp-maps" className="hover:text-white">
+          <Link href="/best-fortnite-xp-maps" className="hover:text-white transition-colors">
             XP Maps
           </Link>
 
-          <Link href="/tmnt-fortnite-maps" className="hover:text-white">
+          <Link href="/tmnt-fortnite-maps" className="hover:text-white transition-colors">
             TMNT
           </Link>
 
-          <Link href="/fortnite-gun-game-maps" className="hover:text-white">
+          <Link href="/fortnite-gun-game-maps" className="hover:text-white transition-colors">
             Gun Games
+          </Link>
+
+          <Link href="/squid-game-fortnite-maps" className="hover:text-white transition-colors">
+            Squid Game
           </Link>
         </nav>
 
         {/* Social Icons */}
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 items-center">
           {Socials.map((social) => {
             const href =
               social.name === "Fortnite"
@@ -67,8 +74,10 @@ const Navbar = () => {
                 key={social.name}
                 href={href}
                 aria-label={social.name}
+                title={social.name}
                 target={isExternal ? "_blank" : undefined}
                 rel={isExternal ? "noopener noreferrer" : undefined}
+                className="inline-flex"
               >
                 <Image
                   src={social.src}
