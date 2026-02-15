@@ -7,11 +7,12 @@ import React, { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/best-fortnite-xp-maps", label: "XP Maps" },
   { href: "/tmnt-fortnite-maps", label: "TMNT" },
-  { href: "/fortnite-gun-game-maps", label: "Gun Games" },
   { href: "/squid-game-fortnite-maps", label: "Squid Game" },
+  { href: "/fortnite-gun-game-maps", label: "Gun Games" },
+  { href: "/best-fortnite-xp-maps", label: "XP Maps" },
 ];
+
 
 function getSocialHref(name: string) {
   return name === "Fortnite"
@@ -128,11 +129,13 @@ export default function Navbar() {
             <button
               type="button"
               className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#2A0E61] bg-[#0300145e] px-3 py-2 text-gray-200 hover:text-white transition-colors"
-              aria-label={open ? "Close menu" : "Open menu"}
-              // aria-expanded={open}
+              aria-label="Toggle menu"
+              // aria-expanded={open} // Optional: add this later for better accessibility when you implement focus trap
+
               aria-controls="mobile-menu"
-              onClick={() => setOpen((v) => !v)}
+              onClick={() => setOpen(v => !v)}
             >
+
               {/* Icon */}
               <span className="relative block w-5 h-4" aria-hidden="true">
                 <span
