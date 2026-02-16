@@ -16,11 +16,11 @@ export default function Home() {
             "@type": "CollectionPage",
             name: "Favorite Fortnite Maps & Map Codes",
             description:
-              "Curated list of Fortnite maps and map codes built with UEFN by NLDevs.",
+              "Curated list of Fortnite maps and map codes built with UEFN by NLDEVS.",
             url: "https://www.nldevs.ca/",
             isPartOf: {
               "@type": "WebSite",
-              name: "NLDevs",
+              name: "NLDEVS",
               url: "https://www.nldevs.ca/",
               
             },

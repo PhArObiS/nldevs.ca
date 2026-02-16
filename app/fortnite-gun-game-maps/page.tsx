@@ -6,24 +6,24 @@ const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
-  title: "Best Fortnite Gun Game Maps & Map Codes | NLDevs",
+  title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
   description:
-    "Browse the best Fortnite Gun Game maps and map codes curated by NLDevs. Fast-paced weapon progression, PvP arenas, and replayable rounds.",
+    "Browse the best Fortnite Gun Game maps and map codes curated by NLDEVS. Fast-paced weapon progression, PvP arenas, and replayable rounds.",
   alternates: {
     canonical: `${SITE_URL}/fortnite-gun-game-maps`,
   },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/fortnite-gun-game-maps`,
-    title: "Best Fortnite Gun Game Maps & Map Codes | NLDevs",
+    title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
     description:
-      "Fortnite Gun Game maps and map codes curated by NLDevs — weapon progression PvP maps built for replayability.",
+      "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Fortnite Gun Game Maps & Map Codes | NLDevs",
+    title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
     description:
-      "Fortnite Gun Game maps and map codes curated by NLDevs — weapon progression PvP maps built for replayability.",
+      "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability.",
   },
 };
 
@@ -58,11 +58,11 @@ export default function FortniteGunGameMapsPage() {
     "@type": "CollectionPage",
     name: "Best Fortnite Gun Game Maps & Map Codes",
     description:
-      "A curated list of Fortnite Gun Game maps and map codes. Fast-paced weapon progression PvP maps curated by NLDevs.",
+      "A curated list of Fortnite Gun Game maps and map codes. Fast-paced weapon progression PvP maps curated by NLDEVS.",
     url: `${SITE_URL}/fortnite-gun-game-maps`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     about: [
@@ -91,7 +91,7 @@ export default function FortniteGunGameMapsPage() {
           ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
-            name: "NLDevs",
+            name: "NLDEVS",
             url: SITE_URL,
           },
         },

@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nldevs.ca/"),
   title: {
-    default: "Favorite Fortnite Maps | NLDevs",
-    template: "%s | NLDevs",
+    default: "Favorite Fortnite Maps | NLDEVS",
+    template: "%s | NLDEVS",
   },
   description:
-    "Favorite Fortnite maps created by NLDevs. Discover UEFN experiences, map codes, and gameplay highlights.",
+    "Favorite Fortnite maps created by NLDEVS. Discover UEFN experiences, map codes, and gameplay highlights.",
   alternates: { canonical: "https://www.nldevs.ca/" },
   robots: {
     index: true,
@@ -30,24 +30,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.nldevs.ca/",
-    title: "Favorite Fortnite Maps | NLDevs",
+    title: "Favorite Fortnite Maps | NLDEVS",
     description:
-      "Favorite Fortnite maps created by NLDevs — UEFN experiences, map codes, and highlights.",
-    siteName: "NLDevs",
+      "Favorite Fortnite maps created by NLDEVS — UEFN experiences, map codes, and highlights.",
+    siteName: "NLDEVS",
     images: [
       {
         url: "https://www.nldevs.ca/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Favorite Fortnite Maps by NLDevs",
+        alt: "Favorite Fortnite Maps by NLDEVS",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Favorite Fortnite Maps | NLDevs",
+    title: "Favorite Fortnite Maps | NLDEVS",
     description:
-      "Favorite Fortnite maps created by NLDevs — UEFN experiences, map codes, and highlights.",
+      "Favorite Fortnite maps created by NLDEVS — UEFN experiences, map codes, and highlights.",
   },
 };
 

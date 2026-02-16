@@ -6,24 +6,24 @@ const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
-  title: "Best Squid Game Fortnite Maps & Map Codes | NLDevs",
+  title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
   description:
-    "Browse Squid Game Fortnite maps and map codes curated by NLDevs, including Red vs Blue Squid Minigame and Tilted Squid Royale (99 Bots).",
+    "Browse Squid Game Fortnite maps and map codes curated by NLDEVS, including Red vs Blue Squid Minigame and Tilted Squid Royale (99 Bots).",
   alternates: {
     canonical: `${SITE_URL}/squid-game-fortnite-maps`,
   },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/squid-game-fortnite-maps`,
-    title: "Best Squid Game Fortnite Maps & Map Codes | NLDevs",
+    title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game inspired Fortnite maps and map codes curated by NLDevs — minigames, challenges, and battle royales.",
+      "Squid Game inspired Fortnite maps and map codes curated by NLDEVS — minigames, challenges, and battle royales.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Squid Game Fortnite Maps & Map Codes | NLDevs",
+    title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game inspired Fortnite maps and map codes curated by NLDevs — minigames, challenges, and battle royales.",
+      "Squid Game inspired Fortnite maps and map codes curated by NLDEVS — minigames, challenges, and battle royales.",
   },
 };
 
@@ -63,7 +63,7 @@ export default function SquidGameFortniteMapsPage() {
     url: `${SITE_URL}/squid-game-fortnite-maps`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     about: [
@@ -90,7 +90,7 @@ export default function SquidGameFortniteMapsPage() {
           ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
-            name: "NLDevs",
+            name: "NLDEVS",
             url: SITE_URL,
           },
         },

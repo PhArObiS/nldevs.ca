@@ -65,14 +65,14 @@ export default function Navbar() {
           >
             <Image
               src="/NavLogo.png"
-              alt="NLDevs Fortnite maps logo"
+              alt="NLDEVS Fortnite maps logo"
               width={40}
               height={40}
               className="cursor-pointer hover:animate-slowspin"
               priority
             />
             <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-              NLDevs.
+              NLDEVS.
             </span>
           </Link>
 
@@ -184,7 +184,7 @@ export default function Navbar() {
 
               {/* Mobile socials */}
               <div className="mt-2 border-t border-white/10 pt-3 px-3 pb-2">
-                <p className="text-sm text-gray-400 mb-2">Follow NLDevs</p>
+                <p className="text-sm text-gray-400 mb-2">Follow NLDEVS</p>
                 <div className="flex flex-row gap-3 items-center">
                   {Socials.map((social) => {
                     const href = getSocialHref(social.name);

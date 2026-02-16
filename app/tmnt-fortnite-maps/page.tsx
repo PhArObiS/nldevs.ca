@@ -6,24 +6,24 @@ const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
-  title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
+  title: "Best TMNT Fortnite Maps & Map Codes | NLDEVS",
   description:
-    "Browse TMNT Fortnite maps and map codes by NLDevs, including TMNT Mega Ramp Survival and TMNT City — built with UEFN.",
+    "Browse TMNT Fortnite maps and map codes by NLDEVS, including TMNT Mega Ramp Survival and TMNT City — built with UEFN.",
   alternates: {
     canonical: `${SITE_URL}/tmnt-fortnite-maps`,
   },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/tmnt-fortnite-maps`,
-    title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
+    title: "Best TMNT Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "TMNT Fortnite maps and map codes by NLDevs — TMNT Mega Ramp Survival and TMNT City.",
+      "TMNT Fortnite maps and map codes by NLDEVS — TMNT Mega Ramp Survival and TMNT City.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best TMNT Fortnite Maps & Map Codes | NLDevs",
+    title: "Best TMNT Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "TMNT Fortnite maps and map codes by NLDevs — TMNT Mega Ramp Survival and TMNT City.",
+      "TMNT Fortnite maps and map codes by NLDEVS — TMNT Mega Ramp Survival and TMNT City.",
   },
 };
 
@@ -59,11 +59,11 @@ export default function TMNTFortniteMapsPage() {
     "@type": "CollectionPage",
     name: "Best TMNT Fortnite Maps & Map Codes",
     description:
-      "A curated list of Teenage Mutant Ninja Turtles (TMNT) Fortnite maps and map codes built with UEFN by NLDevs.",
+      "A curated list of Teenage Mutant Ninja Turtles (TMNT) Fortnite maps and map codes built with UEFN by NLDEVS.",
     url: `${SITE_URL}/tmnt-fortnite-maps`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     about: [
@@ -92,7 +92,7 @@ export default function TMNTFortniteMapsPage() {
           ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
-            name: "NLDevs",
+            name: "NLDEVS",
             url: SITE_URL,
           },
         },

@@ -54,7 +54,7 @@ const FortniteMaps = () => {
     "@type": "ItemList",
     name: "Favorite Fortnite Maps",
     description:
-      "A curated list of favorite Fortnite maps created by NLDevs with map codes and highlights.",
+      "A curated list of favorite Fortnite maps created by NLDEVS with map codes and highlights.",
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     numberOfItems: maps.length,
     itemListElement: maps.map((m, i) => ({
@@ -69,7 +69,7 @@ const FortniteMaps = () => {
         image: `https://www.nldevs.ca${m.image}`,
         publisher: {
           "@type": "Organization",
-          name: "NLDevs",
+          name: "NLDEVS",
           url: "https://www.nldevs.ca",
         },
 
