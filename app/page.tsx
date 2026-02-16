@@ -1,9 +1,9 @@
-
 import Link from "next/link";
 import Script from "next/script";
 import About from "@/components/main/About";
 import FortniteMaps from "@/components/main/FortniteMaps";
 import Footer from "@/components/main/Footer";
+import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
 
 const SITE_URL = "https://www.nldevs.ca";
 
@@ -53,6 +53,10 @@ const featuredMaps = [
 ];
 
 export default function Home() {
+  /* ===============================
+     PAGE STRUCTURED DATA (SEO)
+  =============================== */
+
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -69,8 +73,6 @@ export default function Home() {
       "@type": "Organization",
       name: "NLDevs",
       url: SITE_URL,
-      // Optional: add logo if you have a stable absolute URL
-      // logo: `${SITE_URL}/NavLogo.png`,
     },
     mainEntity: {
       "@type": "ItemList",
@@ -98,7 +100,10 @@ export default function Home() {
     },
   };
 
-  // OPTIONAL but strong: small FAQ for long-tail queries
+  /* ===============================
+     FAQ SCHEMA (LONG-TAIL SEO)
+  =============================== */
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -116,7 +121,7 @@ export default function Home() {
         name: "What are the best Fortnite XP maps?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "XP maps vary by update and calibration. We keep a curated list of efficient XP maps on our Best Fortnite XP Maps page.",
+          text: "XP maps vary by update and calibration. We maintain a curated list of efficient XP maps on our Best Fortnite XP Maps page.",
         },
       },
       {
@@ -132,15 +137,19 @@ export default function Home() {
 
   return (
     <main className="h-full w-full">
-      {/* ✅ JSON-LD (preferred in Next.js) */}
+      {/* JSON-LD SCHEMA */}
       <Script id="homepage-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </Script>
+
       <Script id="homepage-faq-schema" type="application/ld+json">
         {JSON.stringify(faqSchema)}
       </Script>
 
-      {/* PRIMARY SEO HEADER */}
+      {/* ===============================
+         HERO / PRIMARY SEO HEADER
+      =============================== */}
+
       <section className="text-center py-12 px-6">
         <h1 className="text-4xl font-bold text-white">
           Favorite Fortnite Maps &amp; Map Codes
@@ -153,7 +162,7 @@ export default function Home() {
           and fun gameplay.
         </p>
 
-        {/* ✅ Internal crawl hub (helps Google + users) */}
+        {/* INTERNAL SEO HUB */}
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
             href="/tmnt-fortnite-maps"
@@ -161,18 +170,21 @@ export default function Home() {
           >
             TMNT Maps
           </Link>
+
           <Link
             href="/squid-game-fortnite-maps"
             className="rounded-full border border-[#2A0E61] px-4 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
           >
             Squid Game Maps
           </Link>
+
           <Link
             href="/fortnite-gun-game-maps"
             className="rounded-full border border-[#2A0E61] px-4 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
           >
             Gun Game Maps
           </Link>
+
           <Link
             href="/best-fortnite-xp-maps"
             className="rounded-full border border-[#2A0E61] px-4 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
@@ -182,16 +194,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PAGE CONTENT */}
+      {/* ===============================
+         PAGE CONTENT
+      =============================== */}
+
       <div className="flex flex-col gap-10">
-        {/* ABOUT SECTION */}
+        {/* ABOUT */}
         <section id="about" aria-label="About NLDevs">
           <About />
         </section>
 
-        {/* FEATURED MAPS SECTION */}
+        {/* WHY PLAY (SEO TRUST SECTION) */}
+        <WhyPlayOurMaps />
+
+        {/* FEATURED MAPS */}
         <section id="featured-fortnite-maps" aria-label="Featured Fortnite Maps">
-          <h2 className="text-3xl text-white text-center">Featured Fortnite Maps</h2>
+          <h2 className="text-3xl text-white text-center">
+            Featured Fortnite Maps
+          </h2>
+
+          {/* Extra crawl links near content */}
+          <p className="mt-2 text-center text-gray-300">
+            Browse by category:{" "}
+            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/tmnt-fortnite-maps">
+              TMNT
+            </Link>{" "}
+            ·{" "}
+            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/squid-game-fortnite-maps">
+              Squid Game
+            </Link>{" "}
+            ·{" "}
+            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/fortnite-gun-game-maps">
+              Gun Games
+            </Link>{" "}
+            ·{" "}
+            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/best-fortnite-xp-maps">
+              XP Maps
+            </Link>
+          </p>
 
           <p className="mt-3 text-center">
             <a
@@ -204,7 +244,7 @@ export default function Home() {
             </a>
           </p>
 
-          {/* Optional: anchor targets for schema URLs */}
+          {/* Hidden anchors for schema URLs */}
           <div className="sr-only">
             {featuredMaps.map((m) => (
               <span key={m.code} id={m.code.replaceAll("-", "")}>
@@ -216,9 +256,15 @@ export default function Home() {
           <FortniteMaps />
         </section>
 
-        {/* XP MAPS SECTION */}
-        <section id="xp-maps" aria-label="Fortnite XP Maps" className="text-center px-6 pb-10">
-          <h2 className="text-2xl font-semibold text-white">Looking for XP Maps?</h2>
+        {/* XP CTA */}
+        <section
+          id="xp-maps"
+          aria-label="Fortnite XP Maps"
+          className="text-center px-6 pb-10"
+        >
+          <h2 className="text-2xl font-semibold text-white">
+            Looking for XP Maps?
+          </h2>
 
           <p className="mt-3 max-w-3xl mx-auto text-gray-300">
             Browse our best Fortnite XP maps and map codes to level up efficiently.
@@ -232,28 +278,41 @@ export default function Home() {
           </Link>
         </section>
 
-        {/* Small FAQ content (matches schema; adds real on-page text) */}
-        <section id="faq" aria-label="Frequently asked questions" className="px-6 pb-10 max-w-5xl mx-auto w-full">
+        {/* FAQ CONTENT */}
+        <section
+          id="faq"
+          aria-label="Frequently asked questions"
+          className="px-6 pb-10 max-w-5xl mx-auto w-full"
+        >
           <h2 className="text-2xl font-semibold text-white">FAQ</h2>
+
           <div className="mt-4 grid gap-4">
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">How do I play a Fortnite map code?</h3>
+              <h3 className="font-semibold text-white">
+                How do I play a Fortnite map code?
+              </h3>
               <p className="mt-2 text-gray-300">
                 Open Fortnite → Search/Discover, enter the map code (####-####-####), then join the island.
               </p>
             </div>
+
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">What are the best Fortnite XP maps?</h3>
+              <h3 className="font-semibold text-white">
+                What are the best Fortnite XP maps?
+              </h3>
               <p className="mt-2 text-gray-300">
-                XP maps can change with updates and calibration. We keep a curated list on our{" "}
+                XP maps can change with updates and calibration. We maintain a curated list on our{" "}
                 <Link href="/best-fortnite-xp-maps" className="underline text-cyan-300 hover:text-cyan-200">
                   Best Fortnite XP Maps
                 </Link>{" "}
                 page.
               </p>
             </div>
+
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">Are these maps made with UEFN?</h3>
+              <h3 className="font-semibold text-white">
+                Are these maps made with UEFN?
+              </h3>
               <p className="mt-2 text-gray-300">
                 Yes — our maps are built with Unreal Editor for Fortnite (UEFN) with a focus on replayability.
               </p>
