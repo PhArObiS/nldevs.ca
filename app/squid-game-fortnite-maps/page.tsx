@@ -88,10 +88,7 @@ export default function SquidGameFortniteMapsPage() {
           gamePlatform: "Fortnite",
           genre: `Squid Game Map (${m.type})`,
           description: `Fortnite map code: ${m.code}. ${m.notes}`,
-          url: `${SITE_URL}/squid-game-fortnite-maps#${m.code.replaceAll(
-            "-",
-            ""
-          )}`,
+          url: `${SITE_URL}/squid-game-fortnite-maps#${m.code.replaceAll("-", "")}`,
           ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
@@ -143,7 +140,7 @@ export default function SquidGameFortniteMapsPage() {
   };
 
   return (
-    <main className="px-6 py-12 text-white max-w-5xl mx-auto">
+    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
       {/* ✅ JSON-LD (next/script with required id) */}
       <Script id="squid-collection-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
@@ -152,9 +149,14 @@ export default function SquidGameFortniteMapsPage() {
         {JSON.stringify(faqSchema)}
       </Script>
 
-      <Link href="/" className="text-gray-300 underline">
-        ← Back to Favorite Fortnite Maps
-      </Link>
+      {/* ✅ Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="text-sm flex flex-wrap gap-2 text-gray-300">
+        <Link href="/" className="underline hover:text-white">
+          Home
+        </Link>
+        <span className="text-gray-500">/</span>
+        <span className="text-gray-200">Squid Game Maps</span>
+      </nav>
 
       <header className="mt-6">
         <h1 className="text-4xl font-bold">
@@ -225,48 +227,59 @@ export default function SquidGameFortniteMapsPage() {
         </p>
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {squidMaps.map((m) => (
-            <article
-              key={m.code}
-              id={m.code.replaceAll("-", "")}
-              className="rounded-lg border border-[#2A0E61] overflow-hidden"
-            >
-              {m.image ? (
-                <div className="relative w-full h-48">
-                  <Image
-                    src={m.image}
-                    alt={`${m.title} thumbnail`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    priority={false}
-                  />
-                </div>
-              ) : null}
-
-              <div className="p-5">
-                <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                <p className="mt-2 text-gray-300">
-                  <span className="font-semibold text-white">Map Code:</span>{" "}
-                  {m.code}
-                </p>
-
-                <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
-
-                <p className="mt-3 text-gray-300">{m.notes}</p>
-
-                {m.detailsHref ? (
-                  <Link
-                    href={m.detailsHref}
-                    className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200"
-                  >
-                    View details →
-                  </Link>
+          {squidMaps.map((m) => {
+            const CardInner = (
+              <>
+                {m.image ? (
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={m.image}
+                      alt={`${m.title} thumbnail`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
                 ) : null}
-              </div>
-            </article>
-          ))}
+
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{m.title}</h3>
+
+                  <p className="mt-2 text-gray-300">
+                    <span className="font-semibold text-white">Map Code:</span>{" "}
+                    {m.code}
+                  </p>
+
+                  <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
+
+                  <p className="mt-3 text-gray-300">{m.notes}</p>
+
+                  {m.detailsHref ? (
+                    <span className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200">
+                      View details →
+                    </span>
+                  ) : null}
+                </div>
+              </>
+            );
+
+            return (
+              <article
+                key={m.code}
+                id={m.code.replaceAll("-", "")}
+                className="rounded-lg border border-[#2A0E61] overflow-hidden hover:border-cyan-400 transition"
+              >
+                {m.detailsHref ? (
+                  <Link href={m.detailsHref} className="block">
+                    {CardInner}
+                  </Link>
+                ) : (
+                  CardInner
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -371,6 +384,13 @@ export default function SquidGameFortniteMapsPage() {
           This page is not affiliated with Netflix or the Squid Game brand.
         </p>
       </section>
+
+      {/* Optional UX: Back to top */}
+      <div className="mt-12">
+        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
+          Back to top ↑
+        </a>
+      </div>
     </main>
   );
 }
