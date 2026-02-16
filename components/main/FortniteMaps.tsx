@@ -87,22 +87,20 @@ const FortniteMaps = () => {
       id="fortnitemaps"
       aria-label="Favorite Fortnite Maps list"
     >
-      {/* ✅ JSON-LD script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
-      <h2 className="text-[34px] md:text-[40px] font-mono font-semibold text-white py-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-white py-10">
         Favorite Fortnite Maps (Map Codes)
       </h2>
 
       <p className="text-gray-300 max-w-3xl text-center px-6 mb-10">
         Browse our favorite Fortnite maps and jump in fast using the map codes.
-        {/* Each map includes a quick overview so you know what to expect before you play. */}
       </p>
 
-      <div className="font-mono h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
+      <div className="h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
         {maps.map((m) => (
           <FortniteMapsCard
             key={m.code}
@@ -114,6 +112,7 @@ const FortniteMaps = () => {
         ))}
       </div>
     </section>
+
   );
 };
 
