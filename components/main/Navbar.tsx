@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { href: "/best-fortnite-xp-maps", label: "XP Maps" },
 ];
 
-
 function getSocialHref(name: string) {
   return name === "Fortnite"
     ? "https://www.fortnite.com/@nldevs"
@@ -41,7 +40,7 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  // Prevent background scroll when menu open (mobile)
+  // Prevent background scroll when menu open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -57,6 +56,7 @@ export default function Navbar() {
     <>
       <header className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
         <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
+          
           {/* Logo */}
           <Link
             href="/"
@@ -76,9 +76,9 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop nav — ✅ OPTION A ADDED HERE */}
           <nav
-            className="hidden md:flex items-center gap-8 text-gray-200"
+            className="hidden md:flex items-center gap-8 text-gray-200 px-4 md:px-0"
             aria-label="Primary navigation"
           >
             {NAV_LINKS.map((l) => (
@@ -94,6 +94,7 @@ export default function Navbar() {
 
           {/* Right side: socials + mobile hamburger */}
           <div className="flex flex-row gap-3 items-center">
+
             {/* Socials */}
             <div className="hidden sm:flex flex-row gap-2 items-center">
               {Socials.map((social) => {
@@ -130,13 +131,9 @@ export default function Navbar() {
               type="button"
               className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#2A0E61] bg-[#0300145e] px-3 py-2 text-gray-200 hover:text-white transition-colors"
               aria-label="Toggle menu"
-              // aria-expanded={open} // Optional: add this later for better accessibility when you implement focus trap
-
               aria-controls="mobile-menu"
-              onClick={() => setOpen(v => !v)}
+              onClick={() => setOpen((v) => !v)}
             >
-
-              {/* Icon */}
               <span className="relative block w-5 h-4" aria-hidden="true">
                 <span
                   className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
@@ -158,7 +155,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu panel (slide-down) */}
+        {/* Mobile menu */}
         <div
           id="mobile-menu"
           ref={panelRef}
@@ -221,7 +218,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Overlay (tap to close) */}
+      {/* Overlay */}
       {open ? (
         <div
           className="fixed inset-0 z-40 md:hidden bg-black/40"
