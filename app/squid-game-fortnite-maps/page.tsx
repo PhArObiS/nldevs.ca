@@ -51,7 +51,7 @@ const squidMaps: {
     type: "Battle Royale",
     notes:
       "Squid-inspired Tilted battle royale with bots — great for practice and quick wins.",
-    // detailsHref: "/tilted-squid-royale-99-bots",
+    detailsHref: "/tilted-squid-royale-99-bots",
   },
 ];
 
