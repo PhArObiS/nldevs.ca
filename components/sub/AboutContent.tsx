@@ -46,7 +46,10 @@ const AboutContent = () => {
             NLDEVS Fortnite Creative Team
           </h2>
           <p className="text-lg text-gray-300">
-            UEFN creators building replayable maps, gun games, and themed experiences.
+            <p className="text-lg text-gray-300">
+              UEFN creators building replayable Fortnite maps, map codes, gun games, and themed experiences.
+            </p>
+
           </p>
         </motion.div>
 
@@ -73,10 +76,11 @@ const AboutContent = () => {
 
           <p className="mb-6">
             Join us on this creative journey and make sure to follow our creator page and check out our community for the latest updates and new creations!
-            Below are our favorite fortnite maps.
+            Below are our favorite Fortnite maps.
           </p>
 
           {/* ⭐ ADD YOUR INTERNAL LINKS HERE */}
+          <p className="mt-6 text-sm text-gray-400">Browse by category:</p>
           <div className="mt-4 flex flex-wrap gap-4">
             <Link className="text-cyan-300 underline hover:text-cyan-200" href="/tmnt-fortnite-maps">
               TMNT Maps
@@ -122,8 +126,10 @@ const AboutContent = () => {
             src="/FortniteCreativeTeamLogo.png"
             alt="NLDEVS Fortnite Creative Team logo"
             fill
+            sizes="(max-width: 1024px) 70vw, 600px"
             className="object-contain transition-all duration-300 ease-in-out"
           />
+
         </div>
       </motion.div>
     </motion.div>
