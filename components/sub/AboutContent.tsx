@@ -57,43 +57,34 @@ const AboutContent = () => {
         {/* Third section - Paragraphs */}
         <motion.section
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-300 my-5 max-w-[800px]"
-          style={{ textAlign: "justify" }}
+          className="text-lg text-gray-300 my-5 max-w-[800px] text-left"
         >
           <h3 className="text-xl font-semibold text-white mb-4">
             Welcome to NLDEVS
           </h3>
 
           <p className="mb-6">
-            We are a passionate Fortnite creative team specializing in Unreal Editor for Fortnite (UEFN).
-            Our mission is to build innovative, replayable, and visually engaging Fortnite experiences.
+            We are a Fortnite creative team specializing in Unreal Editor for Fortnite (UEFN),
+            building innovative, replayable gameplay experiences focused on fun, competition,
+            and progression.
           </p>
 
           <p className="mb-6">
-            Explore our latest creations and discover new gameplay experiences built for fun,
-            competition, and progression.
+            Follow our creator page and explore our latest Fortnite maps below.
           </p>
 
-          <p className="mb-6">
-            Join us on this creative journey and make sure to follow our creator page and check out our community for the latest updates and new creations!
-            Below are our favorite Fortnite maps.
-          </p>
-
-          {/* ⭐ ADD YOUR INTERNAL LINKS HERE */}
           <p className="mt-6 text-sm text-gray-400">Browse by category:</p>
+
           <div className="mt-4 flex flex-wrap gap-4">
             <Link className="text-cyan-300 underline hover:text-cyan-200" href="/tmnt-fortnite-maps">
               TMNT Maps
             </Link>
-
             <Link className="text-cyan-300 underline hover:text-cyan-200" href="/squid-game-fortnite-maps">
               Squid Game Maps
             </Link>
-
             <Link className="text-cyan-300 underline hover:text-cyan-200" href="/fortnite-gun-game-maps">
               Gun Game Maps
             </Link>
-
             <Link className="text-cyan-300 underline hover:text-cyan-200" href="/best-fortnite-xp-maps">
               XP Maps
             </Link>
@@ -114,6 +105,7 @@ const AboutContent = () => {
             </a>
           </p>
         </motion.section>
+
       </div>
 
       {/* Image section */}
