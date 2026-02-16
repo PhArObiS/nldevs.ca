@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
@@ -14,9 +15,7 @@ export const metadata: Metadata = {
   },
   description:
     "Favorite Fortnite maps created by NLDevs. Discover UEFN experiences, map codes, and gameplay highlights.",
-  alternates: {
-    canonical: "https://www.nldevs.ca/",
-  },
+  alternates: { canonical: "https://www.nldevs.ca/" },
   robots: {
     index: true,
     follow: true,
@@ -59,7 +58,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
+      <body
+        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+      >
+        {/* ✅ Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2ZT17ZYFDX');
+          `}
+        </Script>
+
         {/* Background — must not capture clicks */}
         <div className="pointer-events-none fixed inset-0 -z-10">
           <StarsCanvas />
@@ -68,9 +83,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* Offset for fixed navbar */}
-        <div className="pt-[85px]">
-          {children}
-        </div>
+        <div className="pt-[85px]">{children}</div>
       </body>
     </html>
   );

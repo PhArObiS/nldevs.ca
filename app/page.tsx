@@ -22,6 +22,7 @@ export default function Home() {
               "@type": "WebSite",
               name: "NLDevs",
               url: "https://www.nldevs.ca/",
+              
             },
           }),
         }}
@@ -120,3 +121,5 @@ export default function Home() {
 //     </main>
 //   );
 // }
+
+
