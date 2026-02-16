@@ -5,21 +5,21 @@ import Script from "next/script";
 
 const SITE_URL = "https://www.nldevs.ca";
 const MAP = {
-  title: "RvB Squid Minigame",
-  code: "2720-5344-3341",
-  image: "/RedVsBlueSquidMinigame.jpg",
-  url: `${SITE_URL}/rvb-squid-minigame`,
+  title: "Tilted Squid Royale (99 Bots)",
+  code: "1116-7765-9076",
+  image: "/TiltedSquidRoyale99Bots.jpeg",
+  url: `${SITE_URL}/tilted-squid-royale-99-bots`,
 };
 
 export const metadata: Metadata = {
-  title: `RvB Squid Minigame Map Code (${MAP.code}) | NLDEVS`,
-  description: `Play RvB Squid Minigame in Fortnite. Map code ${MAP.code}. Fast rounds, team chaos, and replayable minigames.`,
+  title: `${MAP.title} Map Code (${MAP.code}) | NLDEVS`,
+  description: `Play ${MAP.title} in Fortnite. Map code ${MAP.code}. Squid-inspired Tilted battle royale with bots — great for practice and quick wins.`,
   alternates: { canonical: MAP.url },
   openGraph: {
     type: "website",
     url: MAP.url,
-    title: `RvB Squid Minigame Map Code (${MAP.code}) | NLDEVS`,
-    description: `Play RvB Squid Minigame in Fortnite. Map code ${MAP.code}.`,
+    title: `${MAP.title} Map Code (${MAP.code}) | NLDEVS`,
+    description: `Play ${MAP.title} in Fortnite. Map code ${MAP.code}.`,
     images: [{ url: `${SITE_URL}${MAP.image}` }],
   },
 };
@@ -30,16 +30,17 @@ export default function Page() {
     "@type": "VideoGame",
     name: MAP.title,
     gamePlatform: "Fortnite",
-    genre: "Red vs Blue / Minigames",
+    genre: "Battle Royale / Bots",
     url: MAP.url,
     image: `${SITE_URL}${MAP.image}`,
-    description: "Squid-style minigames with Red vs Blue chaos and fast rounds.",
+    description:
+      "Squid-inspired Tilted battle royale with bots — great for practice, quick wins, and replayable rounds.",
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
   };
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="rvb-squid-schema" type="application/ld+json">
+      <Script id="tilted-squid-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
 
@@ -76,32 +77,34 @@ export default function Page() {
 
       <h2 className="text-2xl text-white mt-12">Gameplay Description</h2>
       <p className="mt-3">
-        RvB Squid Minigame is a fast-paced Red vs Blue experience inspired by Squid-style
-        challenges. It’s built for quick rounds, constant action, and “run it back” replayability.
+        Tilted Squid Royale (99 Bots) is a Squid-inspired battle royale set around a Tilted-style
+        environment, designed for fast matches and consistent action. The bot-filled lobby makes it
+        great for warming up aim, learning routes, and getting quick wins.
       </p>
 
       <h2 className="text-2xl text-white mt-12">How to Play</h2>
       <ul className="list-disc ml-6 mt-3 space-y-2">
-        <li>Enter map code {MAP.code} in Discover</li>
-        <li>Join a team</li>
-        <li>Play through fast minigame rounds</li>
-        <li>Win rounds with teamwork + eliminations</li>
+        <li>Open Fortnite → Discover</li>
+        <li>Enter map code {MAP.code}</li>
+        <li>Drop in, loot fast, and rotate early</li>
+        <li>Use the bots to practice fights and positioning</li>
       </ul>
 
       <h2 className="text-2xl text-white mt-12">Why It’s Fun</h2>
       <ul className="list-disc ml-6 mt-3 space-y-2">
-        <li>Short rounds = high replay value</li>
-        <li>Red vs Blue chaos with friends</li>
-        <li>Competitive and easy to understand</li>
+        <li>Great practice environment (bots + quick fights)</li>
+        <li>Fast “one more match” pacing</li>
+        <li>Good for squads or solo warmups</li>
+        <li>Tilted-style nostalgia with a Squid vibe</li>
       </ul>
 
       <h2 className="text-2xl text-white mt-12">Similar Maps</h2>
       <div className="flex flex-wrap gap-4 mt-3">
         <Link
-          href="/fortnite-gun-game-maps"
+          href="/rvb-squid-minigame"
           className="underline text-cyan-300 hover:text-cyan-200"
         >
-          Fortnite Gun Game Maps →
+          RvB Squid Minigame →
         </Link>
         <Link
           href="/squid-game-fortnite-maps"
@@ -109,19 +112,38 @@ export default function Page() {
         >
           Squid Game Maps →
         </Link>
+        <Link
+          href="/fortnite-gun-game-maps"
+          className="underline text-cyan-300 hover:text-cyan-200"
+        >
+          Fortnite Gun Game Maps →
+        </Link>
       </div>
 
       <h2 className="text-2xl text-white mt-12">FAQ</h2>
       <div className="mt-4 space-y-4">
         <div className="rounded-lg border border-[#2A0E61] p-4">
-          <h3 className="font-semibold text-white">Is this a Squid Game map?</h3>
-          <p className="mt-2">It’s Squid-style inspired minigames with a Red vs Blue format.</p>
+          <h3 className="font-semibold text-white">Is this a real Squid Game map?</h3>
+          <p className="mt-2">
+            It’s Squid-style inspired (elimination / high-stakes vibe), not official Netflix content.
+          </p>
         </div>
         <div className="rounded-lg border border-[#2A0E61] p-4">
-          <h3 className="font-semibold text-white">Can I play with friends?</h3>
-          <p className="mt-2">Yes — it’s best with squads/parties.</p>
+          <h3 className="font-semibold text-white">Why bots?</h3>
+          <p className="mt-2">
+            Bots make it ideal for practice, warmups, and quick matches without long queues.
+          </p>
         </div>
       </div>
+
+      {/* Optional note (legal clarity) */}
+      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
+        <p className="text-white font-semibold">Note</p>
+        <p className="mt-2">
+          “Squid” is used here to describe gameplay style and inspiration. This page is not affiliated
+          with Netflix or the Squid Game brand.
+        </p>
+      </section>
     </main>
   );
 }
