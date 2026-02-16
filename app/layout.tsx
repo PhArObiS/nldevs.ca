@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -15,6 +16,14 @@ export const metadata: Metadata = {
   },
   description:
     "Favorite Fortnite maps created by NLDEVS. Discover UEFN experiences, map codes, and gameplay highlights.",
+
+  // ✅ AdSense verification meta tag (THIS is what you want)
+  verification: {
+    other: {
+      "google-adsense-account": "ca-pub-4592429005404942",
+    },
+  },
+
   alternates: { canonical: "https://www.nldevs.ca/" },
   robots: {
     index: true,
@@ -58,21 +67,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* ✅ HEAD SCRIPTS */}
-      <head>
-        {/* ⭐ Google AdSense (site-wide) */}
+      <body
+        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+      >
+        {/* ✅ AdSense site-wide script (do NOT wrap in <head>) */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592429005404942"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-      </head>
 
-      <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
-      >
-        {/* ⭐ Google Analytics (gtag.js) */}
+        {/* ✅ Google Analytics (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX"
           strategy="afterInteractive"
@@ -99,6 +105,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 // import type { Metadata } from "next";
