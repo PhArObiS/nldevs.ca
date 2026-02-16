@@ -58,10 +58,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* ✅ HEAD SCRIPTS */}
+      <head>
+        {/* ⭐ Google AdSense (site-wide) */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592429005404942"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
-        {/* ✅ Google tag (gtag.js) */}
+        {/* ⭐ Google Analytics (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX"
           strategy="afterInteractive"
