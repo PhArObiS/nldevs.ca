@@ -48,6 +48,20 @@ export default function Page() {
         {JSON.stringify(schema)}
       </Script>
 
+      {/* ✅ Back links / breadcrumb */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap gap-3 text-sm">
+        <Link href="/" className="text-gray-300 underline hover:text-white">
+          ← Back to Home
+        </Link>
+        <span className="text-gray-500">/</span>
+        <Link
+          href="/tmnt-fortnite-maps"
+          className="text-gray-300 underline hover:text-white"
+        >
+          Back to TMNT Maps
+        </Link>
+      </nav>
+
       <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
 
       <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">

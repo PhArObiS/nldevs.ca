@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 
 const SITE_URL = "https://www.nldevs.ca";
+
 const MAP = {
   title: "TMNT City",
   code: "1383-6989-3967",
@@ -44,6 +45,22 @@ export default function Page() {
         {JSON.stringify(schema)}
       </Script>
 
+      {/* ✅ Breadcrumb navigation */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap gap-3 text-sm">
+        <Link href="/" className="text-gray-300 underline hover:text-white">
+          ← Back to Home
+        </Link>
+
+        <span className="text-gray-500">/</span>
+
+        <Link
+          href="/tmnt-fortnite-maps"
+          className="text-gray-300 underline hover:text-white"
+        >
+          Back to TMNT Maps
+        </Link>
+      </nav>
+
       <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
 
       <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
@@ -63,8 +80,9 @@ export default function Page() {
 
       <h2 className="text-2xl text-white mt-12">Gameplay Description</h2>
       <p className="mt-3">
-        TMNT City is an immersive city-style TMNT experience built in UEFN. Explore,
-        fight, and hang out with friends in a themed environment designed for repeat visits.
+        TMNT City is an immersive city-style TMNT experience built in UEFN.
+        Explore, fight, and hang out with friends in a themed environment
+        designed for repeat visits.
       </p>
 
       <h2 className="text-2xl text-white mt-12">How to Play</h2>
@@ -84,10 +102,17 @@ export default function Page() {
 
       <h2 className="text-2xl text-white mt-12">Similar Maps</h2>
       <div className="flex flex-wrap gap-4 mt-3">
-        <Link href="/tmnt-mega-ramp-survival" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link
+          href="/tmnt-mega-ramp-survival"
+          className="underline text-cyan-300 hover:text-cyan-200"
+        >
           TMNT Mega Ramp Survival →
         </Link>
-        <Link href="/fortnite-gun-game-maps" className="underline text-cyan-300 hover:text-cyan-200">
+
+        <Link
+          href="/fortnite-gun-game-maps"
+          className="underline text-cyan-300 hover:text-cyan-200"
+        >
           Fortnite Gun Game Maps →
         </Link>
       </div>
@@ -96,10 +121,15 @@ export default function Page() {
       <div className="mt-4 space-y-4">
         <div className="rounded-lg border border-[#2A0E61] p-4">
           <h3 className="font-semibold text-white">Is TMNT City a gun game?</h3>
-          <p className="mt-2">It’s more of an experience/exploration map with action elements.</p>
+          <p className="mt-2">
+            It’s more of an experience/exploration map with action elements.
+          </p>
         </div>
+
         <div className="rounded-lg border border-[#2A0E61] p-4">
-          <h3 className="font-semibold text-white">How do I find it in Fortnite?</h3>
+          <h3 className="font-semibold text-white">
+            How do I find it in Fortnite?
+          </h3>
           <p className="mt-2">Discover → enter {MAP.code}.</p>
         </div>
       </div>
