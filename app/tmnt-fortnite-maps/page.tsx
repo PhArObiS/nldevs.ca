@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
@@ -40,16 +41,18 @@ const tmntMaps: {
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
     type: "Survival",
-    notes: "High-speed Mega Ramp survival with TMNT theme. Dodge chaos and survive the run.",
-    // detailsHref: "/tmnt-mega-ramp-survival",
+    notes:
+      "High-speed Mega Ramp survival with TMNT theme. Dodge chaos and survive the run.",
+    detailsHref: "/tmnt-mega-ramp-survival",
   },
   {
     title: "TMNT City",
     code: "1383-6989-3967",
     image: "/CityTMNT.jpeg",
     type: "Experience",
-    notes: "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends.",
-    // detailsHref: "/tmnt-city",
+    notes:
+      "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends.",
+    detailsHref: "/tmnt-city",
   },
 ];
 
@@ -141,22 +144,20 @@ export default function TMNTFortniteMapsPage() {
 
   return (
     <main className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* JSON-LD: CollectionPage + FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* ✅ JSON-LD (use next/script with id) */}
+      <Script id="tmnt-collection-schema" type="application/ld+json">
+        {JSON.stringify(pageSchema)}
+      </Script>
+      <Script id="tmnt-faq-schema" type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </Script>
 
       <Link href="/" className="text-gray-300 underline">
         ← Back to Favorite Fortnite Maps
       </Link>
 
       <header className="mt-6">
-        <h1 className="text-4xl font-bold">Best TMNT Fortnite Maps & Map Codes</h1>
+        <h1 className="text-4xl font-bold">Best TMNT Fortnite Maps &amp; Map Codes</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">
           Here are our TMNT-themed Fortnite maps built with Unreal Editor for Fortnite (UEFN).
           Each entry includes a map code, quick description, and gameplay type.
@@ -164,7 +165,6 @@ export default function TMNTFortniteMapsPage() {
         <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
       </header>
 
-      {/* What is it? (SEO + intent match) */}
       <section id="what-are-tmnt-maps" className="mt-10">
         <h2 className="text-2xl font-semibold">What are TMNT Fortnite maps?</h2>
         <div className="mt-3 text-gray-300 space-y-4">
@@ -263,7 +263,6 @@ export default function TMNTFortniteMapsPage() {
         </div>
       </section>
 
-      {/* Tips (SEO + engagement) */}
       <section id="tips" className="mt-12">
         <h2 className="text-2xl font-semibold">Tips for TMNT Fortnite maps</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
@@ -275,9 +274,7 @@ export default function TMNTFortniteMapsPage() {
             For Mega Ramp survival, focus on staying centered and reacting early to hazards — small
             corrections beat big turns at high speed.
           </li>
-          <li>
-            Favorite the map after playing so it’s easier to return after updates or new versions.
-          </li>
+          <li>Favorite the map after playing so it’s easier to return after updates.</li>
           <li>
             If you’re looking for PvP, choose TMNT experiences that include combat zones or weapon
             progression modes.
@@ -295,7 +292,6 @@ export default function TMNTFortniteMapsPage() {
         </ol>
       </section>
 
-      {/* FAQ (content + schema already included above) */}
       <section id="faq" className="mt-12">
         <h2 className="text-2xl font-semibold">FAQ</h2>
 
@@ -335,7 +331,6 @@ export default function TMNTFortniteMapsPage() {
         </div>
       </section>
 
-      {/* Related internal links (crawl paths) */}
       <section id="related" className="mt-12">
         <h2 className="text-2xl font-semibold">Related pages</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
