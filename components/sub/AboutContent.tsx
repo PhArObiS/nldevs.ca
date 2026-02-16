@@ -54,7 +54,7 @@ const AboutContent = () => {
             Welcome to NLDEVS
           </p>
           <p className="mb-6">
-            We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe. 
+            We are a passionate Fortnite creative team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive experiences to the Fortnite universe. 
           </p>
           <p className="mb-6">
             Join us on this creative journey and make sure to follow our creator page and check out our community for the latest updates and new creations!
