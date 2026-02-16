@@ -8,7 +8,7 @@ const LAST_UPDATED = "February 2026";
 export const metadata: Metadata = {
   title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
   description:
-    "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDevs with quick summaries and updated picks.",
+    "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDEVS with quick summaries and updated picks.",
   alternates: {
     canonical: `${SITE_URL}/best-fortnite-xp-maps`,
   },
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/best-fortnite-xp-maps`,
     title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
     description:
-      "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDevs.",
+      "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
     description:
-      "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDevs.",
+      "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS.",
   },
 };
 
@@ -94,7 +94,7 @@ export default function BestFortniteXpMapsPage() {
     url: `${SITE_URL}/best-fortnite-xp-maps`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     about: [
@@ -123,7 +123,7 @@ export default function BestFortniteXpMapsPage() {
           ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
           publisher: {
             "@type": "Organization",
-            name: "NLDevs",
+            name: "NLDEVS",
             url: SITE_URL,
           },
         },
