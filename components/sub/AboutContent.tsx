@@ -43,7 +43,7 @@ const AboutContent = () => {
           className="flex flex-col gap-4 mt-6 max-w-[700px]"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            NLDevs Fortnite Creative Team
+            NLDEVS Fortnite Creative Team
           </h2>
           <p className="text-lg text-gray-300">
             UEFN creators building replayable maps, gun games, and themed experiences.
@@ -58,7 +58,7 @@ const AboutContent = () => {
           style={{ textAlign: "justify" }}
         >
           <h3 className="text-xl font-semibold text-white mb-4">
-            Welcome to NLDevs
+            Welcome to NLDEVS
           </h3>
 
           <p className="mb-6">
