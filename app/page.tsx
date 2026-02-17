@@ -190,8 +190,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-white">NLDEVS — UEFN Game Studio</h1>
 
         <p className="mt-4 max-w-3xl mx-auto text-gray-300">
-          We build Fortnite experiences with Unreal Editor for Fortnite (UEFN). Play our 6 published
-          games — TMNT, Squid Game, Gun Game, XP-style maps, and more — designed for replayability,
+          We build Fortnite experiences with Unreal Editor for Fortnite (UEFN). TMNT, Squid Game, Gun Game, XP-style maps, and more — designed for replayability,
           fast rounds, and squad fun.
         </p>
 
