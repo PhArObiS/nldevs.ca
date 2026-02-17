@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
@@ -141,7 +142,6 @@ export default function SquidGameFortniteMapsPage() {
 
   return (
     <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* ✅ JSON-LD (next/script with required id) */}
       <Script id="squid-collection-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </Script>
@@ -149,14 +149,13 @@ export default function SquidGameFortniteMapsPage() {
         {JSON.stringify(faqSchema)}
       </Script>
 
-      {/* ✅ Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-sm flex flex-wrap gap-2 text-gray-300">
-        <Link href="/" className="underline hover:text-white">
-          Home
-        </Link>
-        <span className="text-gray-500">/</span>
-        <span className="text-gray-200">Squid Game Maps</span>
-      </nav>
+      {/* ✅ Breadcrumbs (consistent) */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Squid Game Maps" },
+        ]}
+      />
 
       <header className="mt-6">
         <h1 className="text-4xl font-bold">
@@ -385,7 +384,6 @@ export default function SquidGameFortniteMapsPage() {
         </p>
       </section>
 
-      {/* Optional UX: Back to top */}
       <div className="mt-12">
         <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
           Back to top ↑

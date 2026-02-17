@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
@@ -143,8 +144,7 @@ export default function TMNTFortniteMapsPage() {
   };
 
   return (
-    <main className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* ✅ JSON-LD (use next/script with id) */}
+    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
       <Script id="tmnt-collection-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </Script>
@@ -152,14 +152,13 @@ export default function TMNTFortniteMapsPage() {
         {JSON.stringify(faqSchema)}
       </Script>
 
-      {/* ✅ Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-sm flex flex-wrap gap-2 text-gray-300">
-        <Link href="/" className="underline hover:text-white">
-          Home
-        </Link>
-        <span className="text-gray-500">/</span>
-        <span className="text-gray-200">TMNT Maps</span>
-      </nav>
+      {/* ✅ Breadcrumbs (consistent) */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "TMNT Maps" },
+        ]}
+      />
 
       <header className="mt-6">
         <h1 className="text-4xl font-bold">Best TMNT Fortnite Maps &amp; Map Codes</h1>
@@ -282,19 +281,12 @@ export default function TMNTFortniteMapsPage() {
       <section id="tips" className="mt-12">
         <h2 className="text-2xl font-semibold">Tips for TMNT Fortnite maps</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
+          <li>Play with friends — survival runs and city maps are more fun with a party.</li>
           <li>
-            Play with friends: survival runs and city experiences are more fun with a party (and you
-            can re-queue faster).
-          </li>
-          <li>
-            For Mega Ramp survival, focus on staying centered and reacting early to hazards — small
-            corrections beat big turns at high speed.
+            Mega Ramp tip: stay centered and make small corrections early instead of big turns late.
           </li>
           <li>Favorite the map after playing so it’s easier to return after updates.</li>
-          <li>
-            If you’re looking for PvP, choose TMNT experiences that include combat zones or weapon
-            progression modes.
-          </li>
+          <li>If you want PvP, head into combat zones or gun game modes when available.</li>
         </ul>
       </section>
 
@@ -315,33 +307,25 @@ export default function TMNTFortniteMapsPage() {
           <div>
             <h3 className="text-white font-semibold">How do I enter a Fortnite map code?</h3>
             <p className="mt-2">
-              Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then
-              select the result to play.
+              Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play.
             </p>
           </div>
-
           <div>
             <h3 className="text-white font-semibold">Are these TMNT Fortnite maps official?</h3>
             <p className="mt-2">
-              These are community-created Fortnite experiences built with UEFN. This page is not
-              affiliated with Nickelodeon or the TMNT brand.
+              These are community-created Fortnite experiences built with UEFN. This page is not affiliated with Nickelodeon or the TMNT brand.
             </p>
           </div>
-
           <div>
             <h3 className="text-white font-semibold">What is TMNT Mega Ramp Survival?</h3>
             <p className="mt-2">
-              TMNT Mega Ramp Survival is a fast-paced survival experience focused on dodging hazards
-              and staying alive as chaos increases on a mega ramp.
+              A fast-paced survival experience focused on dodging hazards and staying alive as chaos increases on a mega ramp.
             </p>
           </div>
-
           <div>
             <h3 className="text-white font-semibold">Is TMNT City a gun game map?</h3>
             <p className="mt-2">
-              TMNT City is primarily a TMNT-themed city experience. Depending on the island’s
-              current version, it may include combat areas or game modes, but it’s designed as an
-              overall experience map.
+              TMNT City is primarily a TMNT-themed city experience. Depending on the island’s current version, it may include combat areas or game modes.
             </p>
           </div>
         </div>
@@ -368,7 +352,6 @@ export default function TMNTFortniteMapsPage() {
         </ul>
       </section>
 
-      {/* Optional UX: Back to top */}
       <div className="mt-12">
         <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
           Back to top ↑
