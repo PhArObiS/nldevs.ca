@@ -24,18 +24,22 @@ const SQUID_SUBLINKS = [
   { href: "/tilted-squid-royale-99-bots", label: "Tilted Squid Royale (99 Bots)" },
 ];
 
+const FEATURED_SUBLINKS = [
+  { href: "/winterfest-demon-hunters", label: "Winterfest Demon Hunters" },
+];
+
 function getSocialHref(name: string) {
   return name === "Fortnite"
     ? "https://www.fortnite.com/@nldevs"
     : name === "Discord"
-      ? "https://discord.gg/V2MEqa69"
-      : name === "Youtube"
-        ? "https://www.youtube.com/@nldevs"
-        : name === "Gmail"
-          ? "mailto:nldevsmtl@gmail.com"
-          : name === "X"
-            ? "https://x.com/nldevsmtl"
-            : "#";
+    ? "https://discord.gg/V2MEqa69"
+    : name === "Youtube"
+    ? "https://www.youtube.com/@nldevs"
+    : name === "Gmail"
+    ? "mailto:nldevsmtl@gmail.com"
+    : name === "X"
+    ? "https://x.com/nldevsmtl"
+    : "#";
 }
 
 function isActive(pathname: string, href: string) {
@@ -45,8 +49,18 @@ function isActive(pathname: string, href: string) {
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
+
+  function closeMenu() {
+    setOpen(false);
+  }
+
+  // ✅ Close on route change (prevents sticky mobile menu)
+  useEffect(() => {
+    closeMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   // Close on ESC
   useEffect(() => {
@@ -65,9 +79,20 @@ export default function Navbar() {
     };
   }, [open]);
 
-  function closeMenu() {
-    setOpen(false);
-  }
+  // ✅ Optional: click outside panel to close (works even without overlay)
+  useEffect(() => {
+    if (!open) return;
+
+    function onPointerDown(e: PointerEvent) {
+      const panel = panelRef.current;
+      if (!panel) return;
+      const target = e.target as Node;
+      if (!panel.contains(target)) setOpen(false);
+    }
+
+    window.addEventListener("pointerdown", onPointerDown);
+    return () => window.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
 
   return (
     <>
@@ -80,6 +105,7 @@ export default function Navbar() {
               href="/"
               className="h-auto w-auto flex flex-row items-center"
               onClick={closeMenu}
+              aria-label="NLDEVS Home"
             >
               <Image
                 src="/NavLogo.png"
@@ -102,8 +128,10 @@ export default function Navbar() {
               {/* Home */}
               <Link
                 href="/"
-                className={`hover:text-white transition-colors ${isActive(pathname, "/") ? "text-white" : ""
-                  }`}
+                aria-current={isActive(pathname, "/") ? "page" : undefined}
+                className={`hover:text-white transition-colors ${
+                  isActive(pathname, "/") ? "text-white" : ""
+                }`}
               >
                 Home
               </Link>
@@ -112,16 +140,24 @@ export default function Navbar() {
               <div className="relative group">
                 <Link
                   href="/tmnt-fortnite-maps"
-                  className={`hover:text-white transition-colors ${isActive(pathname, "/tmnt-fortnite-maps") ||
-                      TMNT_SUBLINKS.some((s) => isActive(pathname, s.href))
+                  aria-current={
+                    isActive(pathname, "/tmnt-fortnite-maps") ||
+                    TMNT_SUBLINKS.some((s) => isActive(pathname, s.href))
+                      ? "page"
+                      : undefined
+                  }
+                  className={`hover:text-white transition-colors ${
+                    isActive(pathname, "/tmnt-fortnite-maps") ||
+                    TMNT_SUBLINKS.some((s) => isActive(pathname, s.href))
                       ? "text-white"
                       : ""
-                    }`}
+                  }`}
                 >
                   TMNT
                 </Link>
 
-                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 transition absolute left-0 top-full mt-3 w-72 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
+                {/* ✅ Opens on hover OR keyboard focus */}
+                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 transition absolute left-0 top-full mt-3 w-72 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
                   <div className="p-2">
                     <Link
                       href="/tmnt-fortnite-maps"
@@ -147,16 +183,23 @@ export default function Navbar() {
               <div className="relative group">
                 <Link
                   href="/squid-game-fortnite-maps"
-                  className={`hover:text-white transition-colors ${isActive(pathname, "/squid-game-fortnite-maps") ||
-                      SQUID_SUBLINKS.some((s) => isActive(pathname, s.href))
+                  aria-current={
+                    isActive(pathname, "/squid-game-fortnite-maps") ||
+                    SQUID_SUBLINKS.some((s) => isActive(pathname, s.href))
+                      ? "page"
+                      : undefined
+                  }
+                  className={`hover:text-white transition-colors ${
+                    isActive(pathname, "/squid-game-fortnite-maps") ||
+                    SQUID_SUBLINKS.some((s) => isActive(pathname, s.href))
                       ? "text-white"
                       : ""
-                    }`}
+                  }`}
                 >
                   Squid Game
                 </Link>
 
-                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 transition absolute left-0 top-full mt-3 w-80 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
+                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 transition absolute left-0 top-full mt-3 w-80 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
                   <div className="p-2">
                     <Link
                       href="/squid-game-fortnite-maps"
@@ -181,15 +224,20 @@ export default function Navbar() {
               {/* Other top-level */}
               <Link
                 href="/fortnite-gun-game-maps"
-                className={`hover:text-white transition-colors ${isActive(pathname, "/fortnite-gun-game-maps") ? "text-white" : ""
-                  }`}
+                aria-current={isActive(pathname, "/fortnite-gun-game-maps") ? "page" : undefined}
+                className={`hover:text-white transition-colors ${
+                  isActive(pathname, "/fortnite-gun-game-maps") ? "text-white" : ""
+                }`}
               >
                 Gun Games
               </Link>
+
               <Link
                 href="/best-fortnite-xp-maps"
-                className={`hover:text-white transition-colors ${isActive(pathname, "/best-fortnite-xp-maps") ? "text-white" : ""
-                  }`}
+                aria-current={isActive(pathname, "/best-fortnite-xp-maps") ? "page" : undefined}
+                className={`hover:text-white transition-colors ${
+                  isActive(pathname, "/best-fortnite-xp-maps") ? "text-white" : ""
+                }`}
               >
                 XP Maps
               </Link>
@@ -232,22 +280,26 @@ export default function Navbar() {
               <button
                 type="button"
                 className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#2A0E61] bg-[#0300145e] px-3 py-2 text-gray-200 hover:text-white transition-colors"
-                aria-label="Toggle menu"
+                aria-label={open ? "Close menu" : "Open menu"}
                 aria-controls="mobile-menu"
+                // aria-expanded={open}
                 onClick={() => setOpen((v) => !v)}
               >
                 <span className="relative block w-5 h-4" aria-hidden="true">
                   <span
-                    className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${open ? "translate-y-[7px] rotate-45" : ""
-                      }`}
+                    className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
+                      open ? "translate-y-[7px] rotate-45" : ""
+                    }`}
                   />
                   <span
-                    className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"
-                      }`}
+                    className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${
+                      open ? "opacity-0" : "opacity-100"
+                    }`}
                   />
                   <span
-                    className={`absolute left-0 bottom-0 h-[2px] w-full bg-current transition-transform duration-200 ${open ? "-translate-y-[7px] -rotate-45" : ""
-                      }`}
+                    className={`absolute left-0 bottom-0 h-[2px] w-full bg-current transition-transform duration-200 ${
+                      open ? "-translate-y-[7px] -rotate-45" : ""
+                    }`}
                   />
                 </span>
               </button>
@@ -255,7 +307,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ✅ OPTION A (Mobile scroll tabs) */}
+        {/* Mobile scroll tabs */}
         <nav aria-label="Mobile quick navigation" className="md:hidden border-t border-white/10">
           <div className="px-4 py-2 overflow-x-auto whitespace-nowrap">
             <div className="flex items-center gap-2">
@@ -264,8 +316,10 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={closeMenu}
-                  className={`shrink-0 rounded-full border border-[#2A0E61] bg-[#0300145e] px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5 transition ${isActive(pathname, l.href) ? "text-white border-cyan-400" : ""
-                    }`}
+                  aria-current={isActive(pathname, l.href) ? "page" : undefined}
+                  className={`shrink-0 rounded-full border border-[#2A0E61] bg-[#0300145e] px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5 transition ${
+                    isActive(pathname, l.href) ? "text-white border-cyan-400" : ""
+                  }`}
                 >
                   {l.label}
                 </Link>
@@ -274,12 +328,13 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Mobile menu (dropdown panel) */}
+        {/* Mobile menu panel */}
         <div
           id="mobile-menu"
           ref={panelRef}
-          className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${open ? "max-h-[520px]" : "max-h-0"
-            }`}
+          className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
+            open ? "max-h-[560px]" : "max-h-0"
+          }`}
         >
           <div className="mx-4 mb-4 mt-3 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md">
             <nav className="p-3" aria-label="Mobile menu">
@@ -288,7 +343,10 @@ export default function Navbar() {
                   <li key={l.href}>
                     <Link
                       href={l.href}
-                      className="block rounded-lg px-3 py-3 text-gray-200 hover:text-white hover:bg-white/5 transition"
+                      aria-current={isActive(pathname, l.href) ? "page" : undefined}
+                      className={`block rounded-lg px-3 py-3 text-gray-200 hover:text-white hover:bg-white/5 transition ${
+                        isActive(pathname, l.href) ? "text-white bg-white/5" : ""
+                      }`}
                       onClick={closeMenu}
                     >
                       {l.label}
@@ -296,7 +354,6 @@ export default function Navbar() {
                   </li>
                 ))}
 
-                {/* Optional: add detail links in mobile menu */}
                 <li className="mt-2 border-t border-white/10 pt-2">
                   <p className="px-3 py-2 text-xs uppercase tracking-wide text-gray-400">
                     TMNT Details
@@ -305,7 +362,9 @@ export default function Navbar() {
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
+                      className={`block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition ${
+                        isActive(pathname, s.href) ? "text-white bg-white/5" : ""
+                      }`}
                       onClick={closeMenu}
                     >
                       {s.label}
@@ -321,7 +380,27 @@ export default function Navbar() {
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
+                      className={`block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition ${
+                        isActive(pathname, s.href) ? "text-white bg-white/5" : ""
+                      }`}
+                      onClick={closeMenu}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </li>
+
+                <li className="mt-2 border-t border-white/10 pt-2">
+                  <p className="px-3 py-2 text-xs uppercase tracking-wide text-gray-400">
+                    Featured
+                  </p>
+                  {FEATURED_SUBLINKS.map((s) => (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className={`block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition ${
+                        isActive(pathname, s.href) ? "text-white bg-white/5" : ""
+                      }`}
                       onClick={closeMenu}
                     >
                       {s.label}

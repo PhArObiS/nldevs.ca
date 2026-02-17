@@ -52,7 +52,7 @@ const gunGameMaps: {
     mode: "FFA Gun Game",
     notes:
       "Holiday demon-hunting gun game with repeatable combat loops and weapon rotations.",
-    // detailsHref: "/winterfest-demon-hunters", // add later if you make it
+    detailsHref: "/winterfest-demon-hunters",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function FortniteGunGameMapsPage() {
 
   return (
     <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* ✅ JSON-LD (next/script with required id) */}
+      {/* ✅ JSON-LD */}
       <Script id="gungame-collection-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </Script>
@@ -165,31 +165,34 @@ export default function FortniteGunGameMapsPage() {
       </nav>
 
       <header className="mt-6">
-        <h1 className="text-4xl font-bold">Best Fortnite Gun Game Maps &amp; Map Codes</h1>
+        <h1 className="text-4xl font-bold">
+          Best Fortnite Gun Game Maps &amp; Map Codes
+        </h1>
         <p className="mt-4 text-gray-300 max-w-3xl">
-          Gun Game maps are fast-paced weapon progression modes where eliminations upgrade your loadout.
-          Here are curated Gun Game islands with map codes, images, and quick notes.
+          Gun Game maps are fast-paced weapon progression modes where eliminations
+          upgrade your loadout. Here are curated Gun Game islands with map codes,
+          images, and quick notes.
         </p>
-        <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
+        <p className="mt-3 text-sm text-gray-400">
+          Last updated: {LAST_UPDATED}
+        </p>
       </header>
 
-      {/* What is it? */}
       <section id="what-is-gun-game" className="mt-10">
         <h2 className="text-2xl font-semibold">What is a Fortnite Gun Game map?</h2>
         <div className="mt-3 text-gray-300 space-y-4">
           <p>
-            Fortnite Gun Game is a weapon progression PvP mode built for quick, replayable rounds.
-            Players start with a weapon and upgrade after each elimination. The goal is to finish the
-            weapon list before everyone else.
+            Fortnite Gun Game is a weapon progression PvP mode built for quick,
+            replayable rounds. Players start with a weapon and upgrade after each
+            elimination. The goal is to finish the weapon list before everyone else.
           </p>
           <p>
-            Great Gun Game maps have clear spawns, strong flow, and balanced weapon rotations so every
-            match stays competitive.
+            Great Gun Game maps have clear spawns, strong flow, and balanced weapon
+            rotations so every match stays competitive.
           </p>
         </div>
       </section>
 
-      {/* On this page */}
       <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
         <p className="font-semibold text-white">On this page</p>
         <ul className="mt-2 list-disc list-inside">
@@ -249,7 +252,8 @@ export default function FortniteGunGameMapsPage() {
                   <h3 className="text-xl font-semibold">{m.title}</h3>
 
                   <p className="mt-2 text-gray-300">
-                    <span className="font-semibold text-white">Map Code:</span> {m.code}
+                    <span className="font-semibold text-white">Map Code:</span>{" "}
+                    {m.code}
                   </p>
 
                   <p className="mt-1 text-gray-400 text-sm">Mode: {m.mode}</p>
@@ -260,7 +264,11 @@ export default function FortniteGunGameMapsPage() {
                     <span className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200">
                       View details →
                     </span>
-                  ) : null}
+                  ) : (
+                    <span className="inline-block mt-4 text-gray-500 text-sm">
+                      Details page coming soon
+                    </span>
+                  )}
                 </div>
               </>
             );
@@ -306,7 +314,6 @@ export default function FortniteGunGameMapsPage() {
 
       <section id="faq" className="mt-12">
         <h2 className="text-2xl font-semibold">FAQ</h2>
-
         <div className="mt-4 space-y-4 text-gray-300">
           <div className="rounded-lg border border-[#2A0E61] p-4">
             <h3 className="font-semibold text-white">What is a Fortnite Gun Game map?</h3>
@@ -323,6 +330,14 @@ export default function FortniteGunGameMapsPage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
+        <p className="text-white font-semibold">Note</p>
+        <p className="mt-2">
+          XP availability can change with Fortnite updates and calibration. This page focuses on normal,
+          repeatable gameplay loops—not exploits.
+        </p>
       </section>
 
       <section id="related" className="mt-12">

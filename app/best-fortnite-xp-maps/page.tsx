@@ -52,7 +52,7 @@ const xpMaps: {
     type: "Mixed",
     notes:
       "Combat-focused loops with repeatable rounds. Works well for players who want XP while fighting instead of pure AFK.",
-    // detailsHref: "/winterfest-demon-hunters", // add later if you make it
+    detailsHref: "/winterfest-demon-hunters",
   },
   {
     title: "RvB Players vs Guards",
@@ -61,7 +61,7 @@ const xpMaps: {
     type: "Mixed",
     notes:
       "Team-based objectives and longer sessions. Good if you want steady XP while playing PvP-style rounds and rotating fights.",
-    // detailsHref: "/rvb-players-vs-guards", // add later if you make it
+    // detailsHref: "/rvb-players-vs-guards",
   },
   {
     title: "TMNT City",
@@ -180,7 +180,7 @@ export default function BestFortniteXpMapsPage() {
 
   return (
     <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* ✅ JSON-LD (next/script with required id) */}
+      {/* ✅ JSON-LD */}
       <Script id="xp-collection-schema" type="application/ld+json">
         {JSON.stringify(pageSchema)}
       </Script>
@@ -201,31 +201,36 @@ export default function BestFortniteXpMapsPage() {
       </nav>
 
       <header className="mt-6">
-        <h1 className="text-4xl font-bold">Best Fortnite XP Maps &amp; Map Codes</h1>
+        <h1 className="text-4xl font-bold">
+          Best Fortnite XP Maps &amp; Map Codes
+        </h1>
         <p className="mt-4 text-gray-300 max-w-3xl">
-          Looking to level up fast? Here are curated Fortnite XP maps with map codes and quick notes.
-          We focus on efficient, repeatable XP routes so you can pick a map that matches your playstyle.
+          Looking to level up fast? Here are curated Fortnite XP maps with map
+          codes and quick notes. We focus on efficient, repeatable XP routes so
+          you can pick a map that matches your playstyle.
         </p>
-        <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
+        <p className="mt-3 text-sm text-gray-400">
+          Last updated: {LAST_UPDATED}
+        </p>
       </header>
 
-      {/* What is it? */}
       <section id="what-are-xp-maps" className="mt-10">
         <h2 className="text-2xl font-semibold">What are Fortnite XP maps?</h2>
         <div className="mt-3 text-gray-300 space-y-4">
           <p>
-            Fortnite XP maps are community-made islands designed around repeatable gameplay loops that
-            can award XP depending on calibration and updates. Some are active (you’re always moving),
-            some are mixed, and some are “AFK-ish” depending on the island’s current version.
+            Fortnite XP maps are community-made islands designed around
+            repeatable gameplay loops that may award XP depending on calibration
+            and updates. Some are active (you’re always moving), some are mixed,
+            and some are AFK-ish depending on the island’s current version.
           </p>
           <p>
-            XP rates can change after Fortnite patches or island revisions, so it’s smart to rotate a
-            few maps and mix active objectives with normal play.
+            XP rates can change after Fortnite patches or island revisions, so
+            it’s smart to rotate a few maps and mix active objectives with
+            normal play.
           </p>
         </div>
       </section>
 
-      {/* On this page */}
       <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
         <p className="font-semibold text-white">On this page</p>
         <ul className="mt-2 list-disc list-inside">
@@ -260,8 +265,8 @@ export default function BestFortniteXpMapsPage() {
       <section id="xp-map-codes" className="mt-10">
         <h2 className="text-2xl font-semibold">XP Map Codes</h2>
         <p className="mt-2 text-gray-300">
-          Each entry includes a map code, type (AFK / Active / Mixed), and a quick note.
-          Some entries link to full detail pages.
+          Each entry includes a map code, type (AFK / Active / Mixed), and a
+          quick note. Some entries link to full detail pages.
         </p>
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -285,7 +290,8 @@ export default function BestFortniteXpMapsPage() {
                   <h3 className="text-xl font-semibold">{m.title}</h3>
 
                   <p className="mt-2 text-gray-300">
-                    <span className="font-semibold text-white">Map Code:</span> {m.code}
+                    <span className="font-semibold text-white">Map Code:</span>{" "}
+                    {m.code}
                   </p>
 
                   <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
@@ -296,7 +302,11 @@ export default function BestFortniteXpMapsPage() {
                     <span className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200">
                       View details →
                     </span>
-                  ) : null}
+                  ) : (
+                    <span className="inline-block mt-4 text-gray-500 text-sm">
+                      Details page coming soon
+                    </span>
+                  )}
                 </div>
               </>
             );
@@ -325,50 +335,59 @@ export default function BestFortniteXpMapsPage() {
         <ol className="mt-4 list-decimal list-inside text-gray-300 space-y-2">
           <li>Open Fortnite → Search / Discover.</li>
           <li>Enter the map code exactly as shown (####-####-####).</li>
-          <li>Join the map and follow in-map objectives (active routes are usually more consistent).</li>
-          <li>Rotate maps if XP slows down and avoid repeating the exact same loop nonstop.</li>
+          <li>Join the map and follow in-map objectives.</li>
+          <li>Rotate maps if XP slows down.</li>
         </ol>
       </section>
 
       <section id="tips" className="mt-12">
-        <h2 className="text-2xl font-semibold">Tips to maximize XP efficiently</h2>
+        <h2 className="text-2xl font-semibold">Tips to maximize XP</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>Rotate 2–4 maps: it helps when calibration or diminishing returns kick in.</li>
-          <li>Prefer Active/Mixed maps for steady playtime XP and repeatable objectives.</li>
-          <li>Favorite maps you enjoy so you can return fast after updates.</li>
-          <li>If a map feels “dry,” switch islands instead of forcing it.</li>
+          <li>Rotate 2–4 maps to reduce diminishing returns.</li>
+          <li>Prefer Active/Mixed maps for steady playtime loops.</li>
+          <li>Favorite maps you enjoy so you can return quickly after updates.</li>
+          <li>If XP feels “dry,” switch islands instead of forcing it.</li>
         </ul>
       </section>
 
       <section id="faq" className="mt-12">
         <h2 className="text-2xl font-semibold">FAQ</h2>
-
         <div className="mt-4 space-y-4 text-gray-300">
           <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">How do I enter a Fortnite XP map code?</h3>
+            <h3 className="font-semibold text-white">
+              How do I enter a Fortnite XP map code?
+            </h3>
             <p className="mt-2">
-              Open Fortnite → Search/Discover → enter the code (####-####-####) → select the island.
+              Open Fortnite → Search/Discover → enter the code → select the
+              island.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Do Fortnite XP maps still work?</h3>
+            <h3 className="font-semibold text-white">
+              Do Fortnite XP maps still work?
+            </h3>
             <p className="mt-2">
-              Some do, depending on calibration and updates. XP rates can change after patches or revisions.
+              Some do, depending on calibration and updates. XP rates can change
+              after patches or revisions.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Why did my XP slow down or stop?</h3>
+            <h3 className="font-semibold text-white">
+              Why did my XP slow down or stop?
+            </h3>
             <p className="mt-2">
-              Calibration changes, daily limits, or island revisions can affect XP. Rotate maps and switch to active objectives.
+              Calibration changes, daily limits, or island revisions can affect
+              XP. Rotate maps and switch to active objectives.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2A0E61] p-4">
             <h3 className="font-semibold text-white">Are XP maps allowed?</h3>
             <p className="mt-2">
-              We focus on normal gameplay loops and legitimate leveling. Avoid exploit/hack methods.
+              We focus on normal gameplay loops and legitimate leveling. Avoid
+              exploit/hack methods.
             </p>
           </div>
         </div>
@@ -377,8 +396,8 @@ export default function BestFortniteXpMapsPage() {
       <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
         <p className="text-white font-semibold">Note</p>
         <p className="mt-2">
-          XP availability can change with Fortnite updates and calibration. This page focuses on normal,
-          repeatable gameplay loops—not exploits.
+          XP availability can change with Fortnite updates and calibration. This
+          page focuses on normal, repeatable gameplay loops—not exploits.
         </p>
       </section>
 
