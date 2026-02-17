@@ -1,20 +1,47 @@
-import React from 'react'
-import AboutContent from '../sub/AboutContent';
+
+import React from "react";
+import AboutContent from "../sub/AboutContent";
 
 const About = () => {
   return (
-    <div className="relative flex flex-col h-full w-full">
-        {/* <video
-            autoPlay
-            muted
-            loop
-            className="rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover"
-            >
-                <source src="/blackhole.webm" type="video/webm" />
-            </video> */}
-            <AboutContent />
-    </div>
+    <section className="relative flex flex-col h-full w-full" aria-label="About NLDEVS">
+      {/*
+      <video
+        autoPlay
+        muted
+        loop
+        className="rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover"
+      >
+        <source src="/blackhole.webm" type="video/webm" />
+      </video>
+      */}
+
+      <AboutContent />
+    </section>
   );
 };
 
 export default About;
+
+
+// import React from 'react'
+// import AboutContent from '../sub/AboutContent';
+
+// const About = () => {
+//   return (
+//     <div className="relative flex flex-col h-full w-full">
+//         {/* <video
+//             autoPlay
+//             muted
+//             loop
+//             className="rotate-180 absolute top-[-340px] left-0 z-[1] w-full h-full object-cover"
+//             >
+//                 <source src="/blackhole.webm" type="video/webm" />
+//             </video> */}
+//             <AboutContent />
+//     </div>
+//   );
+// };
+
+// export default About;
+
