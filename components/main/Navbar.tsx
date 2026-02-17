@@ -282,7 +282,7 @@ export default function Navbar() {
                 className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#2A0E61] bg-[#0300145e] px-3 py-2 text-gray-200 hover:text-white transition-colors"
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-controls="mobile-menu"
-                // aria-expanded={open}
+                aria-expanded="true"
                 onClick={() => setOpen((v) => !v)}
               >
                 <span className="relative block w-5 h-4" aria-hidden="true">
