@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
 const MAP = {
@@ -49,22 +50,15 @@ export default function Page() {
         {JSON.stringify(schema)}
       </Script>
 
-      {/* ✅ Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="text-sm flex flex-wrap gap-2 text-gray-300">
-        <Link href="/" className="underline hover:text-white">
-          Home
-        </Link>
-        <span className="text-gray-500">/</span>
-        <Link href="/fortnite-gun-game-maps" className="underline hover:text-white">
-          Gun Game Maps
-        </Link>
-        <span className="text-gray-500">/</span>
-        <Link href="/best-fortnite-xp-maps" className="underline hover:text-white">
-          XP Maps
-        </Link>
-        <span className="text-gray-500">/</span>
-        <span className="text-gray-200">{MAP.title}</span>
-      </nav>
+      {/* ✅ Breadcrumbs (consistent structure) */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Gun Game Maps", href: "/fortnite-gun-game-maps" },
+          { label: "XP Maps", href: "/best-fortnite-xp-maps" },
+          { label: MAP.title },
+        ]}
+      />
 
       <header className="mt-6">
         <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>

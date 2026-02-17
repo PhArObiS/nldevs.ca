@@ -9,7 +9,7 @@ import Navbar from "@/components/main/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nldevs.ca/"),
+  metadataBase: new URL("https://www.nldevs.ca"),
   title: {
     default: "Favorite Fortnite Maps | NLDEVS",
     template: "%s | NLDEVS",
