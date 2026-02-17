@@ -7,13 +7,21 @@ import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
 
 const SITE_URL = "https://www.nldevs.ca";
 
-const featuredMaps = [
+const featuredMaps: {
+  title: string;
+  code: string;
+  image: string;
+  category: string;
+  notes: string;
+  detailsHref?: string; // ✅ optional detail page
+}[] = [
   {
     title: "TMNT Mega Ramp Survival",
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
     category: "TMNT / Survival",
     notes: "High-speed ramp survival with TMNT vibes and replayable runs.",
+    detailsHref: "/tmnt-mega-ramp-survival",
   },
   {
     title: "TMNT City",
@@ -21,6 +29,7 @@ const featuredMaps = [
     image: "/CityTMNT.jpeg",
     category: "TMNT / Experience",
     notes: "Explore a TMNT-themed city experience built in UEFN.",
+    detailsHref: "/tmnt-city",
   },
   {
     title: "RvB Squid Minigame",
@@ -28,6 +37,7 @@ const featuredMaps = [
     image: "/RedVsBlueSquidMinigame.jpg",
     category: "Squid Game / RvB",
     notes: "Squid-style minigames with fast rounds and team chaos.",
+    detailsHref: "/rvb-squid-minigame",
   },
   {
     title: "Tilted Squid Royale (99 Bots)",
@@ -35,6 +45,7 @@ const featuredMaps = [
     image: "/TiltedSquidRoyale99Bots.jpeg",
     category: "Squid Game / Battle Royale",
     notes: "Tilted battle royale with bots — great for practice and quick wins.",
+    detailsHref: "/tilted-squid-royale-99-bots",
   },
   {
     title: "Winterfest Demon Hunters",
@@ -42,6 +53,7 @@ const featuredMaps = [
     image: "/WinterfestDemonHuntersGunGame.jpeg",
     category: "Gun Game / FFA",
     notes: "Holiday demon-hunting gun game with weapon rotations and repeat loops.",
+    detailsHref: "/winterfest-demon-hunters",
   },
   {
     title: "RvB Players vs Guards",
@@ -49,6 +61,7 @@ const featuredMaps = [
     image: "/RedVsBluePlayersVsGuards.jpeg",
     category: "RvB / PvP",
     notes: "Team-based action with guards — good for longer sessions.",
+    // detailsHref: "/rvb-players-vs-guards", // add later when page exists
   },
 ];
 
@@ -60,23 +73,23 @@ export default function Home() {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Favorite Fortnite Maps & Map Codes",
+    name: "NLDEVS — UEFN Game Studio (Fortnite Experiences & Map Codes)",
     description:
-      "Curated list of Fortnite maps and map codes built with Unreal Editor for Fortnite (UEFN) by NLDevs.",
+      "NLDEVS is a UEFN game studio building Fortnite experiences. Explore our 6 published games and get island codes, screenshots, and gameplay notes.",
     url: `${SITE_URL}/`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "NLDevs",
+      name: "NLDEVS",
       url: SITE_URL,
     },
     mainEntity: {
       "@type": "ItemList",
-      name: "Featured Fortnite Maps",
+      name: "NLDEVS Featured Fortnite Experiences",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
       numberOfItems: featuredMaps.length,
       itemListElement: featuredMaps.map((m, i) => ({
@@ -87,17 +100,36 @@ export default function Home() {
           name: m.title,
           gamePlatform: "Fortnite",
           genre: m.category,
-          description: `Fortnite map code: ${m.code}. ${m.notes}`,
-          url: `${SITE_URL}/#${m.code.replaceAll("-", "")}`,
+          description: `Fortnite island code: ${m.code}. ${m.notes}`,
+          url: m.detailsHref
+            ? `${SITE_URL}${m.detailsHref}`
+            : `${SITE_URL}/#${m.code.replaceAll("-", "")}`,
           image: `${SITE_URL}${m.image}`,
           publisher: {
             "@type": "Organization",
-            name: "NLDevs",
+            name: "NLDEVS",
             url: SITE_URL,
           },
         },
       })),
     },
+  };
+
+  /* ===============================
+     ORGANIZATION SCHEMA (ENTITY SEO)
+  =============================== */
+
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "NLDEVS",
+    url: SITE_URL,
+    sameAs: [
+      "https://www.fortnite.com/@nldevs",
+      "https://www.youtube.com/@nldevs",
+      "https://x.com/nldevsmtl",
+      "https://discord.gg/V2MEqa69",
+    ],
   };
 
   /* ===============================
@@ -110,10 +142,10 @@ export default function Home() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How do I play a Fortnite map code?",
+        name: "How do I play a Fortnite island code?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Open Fortnite → Search/Discover, enter the map code (####-####-####), then join the island.",
+          text: "Open Fortnite → Search/Discover, enter the island code (####-####-####), then join the island.",
         },
       },
       {
@@ -129,7 +161,7 @@ export default function Home() {
         name: "Are these maps made with UEFN?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — our maps are built with Unreal Editor for Fortnite (UEFN) with a focus on replayability and fun gameplay loops.",
+          text: "Yes — our games are built with Unreal Editor for Fortnite (UEFN) with a focus on replayability and fun gameplay loops.",
         },
       },
     ],
@@ -142,6 +174,10 @@ export default function Home() {
         {JSON.stringify(pageSchema)}
       </Script>
 
+      <Script id="nldevs-org-schema" type="application/ld+json">
+        {JSON.stringify(orgSchema)}
+      </Script>
+
       <Script id="homepage-faq-schema" type="application/ld+json">
         {JSON.stringify(faqSchema)}
       </Script>
@@ -151,15 +187,25 @@ export default function Home() {
       =============================== */}
 
       <section className="text-center py-12 px-6">
-        <h1 className="text-4xl font-bold text-white">
-          Favorite Fortnite Maps &amp; Map Codes
-        </h1>
+        <h1 className="text-4xl font-bold text-white">NLDEVS — UEFN Game Studio</h1>
 
         <p className="mt-4 max-w-3xl mx-auto text-gray-300">
-          Discover our favorite Fortnite maps built with Unreal Editor for Fortnite (UEFN).
-          We showcase top-rated experiences including Gun Game modes, adventure maps,
-          survival challenges, and unique custom creations designed for replayability
-          and fun gameplay.
+          We build Fortnite experiences with Unreal Editor for Fortnite (UEFN). Play our 6 published
+          games — TMNT, Squid Game, Gun Game, XP-style maps, and more — designed for replayability,
+          fast rounds, and squad fun.
+        </p>
+
+        <p className="mt-3 text-sm text-gray-400">
+          Map codes included below. Follow us on{" "}
+          <a
+            href="https://www.fortnite.com/@nldevs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            Fortnite.com
+          </a>
+          .
         </p>
 
         {/* INTERNAL SEO HUB */}
@@ -194,13 +240,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ✅ Keyword capture without stealing H1 */}
+      <section className="px-6">
+        <h2 className="text-3xl font-semibold text-white text-center">
+          Fortnite Map Codes &amp; Featured Games by NLDEVS
+        </h2>
+      </section>
+
       {/* ===============================
          PAGE CONTENT
       =============================== */}
 
       <div className="flex flex-col gap-10">
         {/* ABOUT */}
-        <section id="about" aria-label="About NLDevs">
+        <section id="about" aria-label="About NLDEVS">
           <About />
         </section>
 
@@ -208,27 +261,39 @@ export default function Home() {
         <WhyPlayOurMaps />
 
         {/* FEATURED MAPS */}
-        <section id="featured-fortnite-maps" aria-label="Featured Fortnite Maps">
+        <section id="featured-fortnite-maps" aria-label="Featured NLDEVS Games">
           <h2 className="text-3xl text-white text-center">
-            Featured Fortnite Maps
+            Featured NLDEVS Games (Fortnite Island Codes)
           </h2>
 
           {/* Extra crawl links near content */}
           <p className="mt-2 text-center text-gray-300">
             Browse by category:{" "}
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/tmnt-fortnite-maps">
+            <Link
+              className="text-cyan-300 underline hover:text-cyan-200"
+              href="/tmnt-fortnite-maps"
+            >
               TMNT
             </Link>{" "}
             ·{" "}
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/squid-game-fortnite-maps">
+            <Link
+              className="text-cyan-300 underline hover:text-cyan-200"
+              href="/squid-game-fortnite-maps"
+            >
               Squid Game
             </Link>{" "}
             ·{" "}
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/fortnite-gun-game-maps">
+            <Link
+              className="text-cyan-300 underline hover:text-cyan-200"
+              href="/fortnite-gun-game-maps"
+            >
               Gun Games
             </Link>{" "}
             ·{" "}
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/best-fortnite-xp-maps">
+            <Link
+              className="text-cyan-300 underline hover:text-cyan-200"
+              href="/best-fortnite-xp-maps"
+            >
               XP Maps
             </Link>
           </p>
@@ -262,12 +327,10 @@ export default function Home() {
           aria-label="Fortnite XP Maps"
           className="text-center px-6 pb-10"
         >
-          <h2 className="text-2xl font-semibold text-white">
-            Looking for XP Maps?
-          </h2>
+          <h2 className="text-2xl font-semibold text-white">Looking for XP Maps?</h2>
 
           <p className="mt-3 max-w-3xl mx-auto text-gray-300">
-            Browse our best Fortnite XP maps and map codes to level up efficiently.
+            Browse our best Fortnite XP maps and island codes to level up efficiently.
           </p>
 
           <Link
@@ -288,21 +351,21 @@ export default function Home() {
 
           <div className="mt-4 grid gap-4">
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">
-                How do I play a Fortnite map code?
-              </h3>
+              <h3 className="font-semibold text-white">How do I play a Fortnite island code?</h3>
               <p className="mt-2 text-gray-300">
-                Open Fortnite → Search/Discover, enter the map code (####-####-####), then join the island.
+                Open Fortnite → Search/Discover, enter the island code (####-####-####), then join
+                the island.
               </p>
             </div>
 
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">
-                What are the best Fortnite XP maps?
-              </h3>
+              <h3 className="font-semibold text-white">What are the best Fortnite XP maps?</h3>
               <p className="mt-2 text-gray-300">
                 XP maps can change with updates and calibration. We maintain a curated list on our{" "}
-                <Link href="/best-fortnite-xp-maps" className="underline text-cyan-300 hover:text-cyan-200">
+                <Link
+                  href="/best-fortnite-xp-maps"
+                  className="underline text-cyan-300 hover:text-cyan-200"
+                >
                   Best Fortnite XP Maps
                 </Link>{" "}
                 page.
@@ -310,11 +373,10 @@ export default function Home() {
             </div>
 
             <div className="rounded-lg border border-[#2A0E61] p-4">
-              <h3 className="font-semibold text-white">
-                Are these maps made with UEFN?
-              </h3>
+              <h3 className="font-semibold text-white">Are these games made with UEFN?</h3>
               <p className="mt-2 text-gray-300">
-                Yes — our maps are built with Unreal Editor for Fortnite (UEFN) with a focus on replayability.
+                Yes — our games are built with Unreal Editor for Fortnite (UEFN) with a focus on
+                replayability.
               </p>
             </div>
           </div>

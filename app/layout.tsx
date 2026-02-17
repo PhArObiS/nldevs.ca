@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -8,23 +7,40 @@ import Navbar from "@/components/main/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://www.nldevs.ca";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nldevs.ca"),
+  metadataBase: new URL(SITE_URL),
+
   title: {
-    default: "Favorite Fortnite Maps | NLDEVS",
+    default: "NLDEVS — UEFN Game Studio",
     template: "%s | NLDEVS",
   },
-  description:
-    "Favorite Fortnite maps created by NLDEVS. Discover UEFN experiences, map codes, and gameplay highlights.",
 
-  // ✅ AdSense verification meta tag (THIS is what you want)
+  description:
+    "NLDEVS is a UEFN game studio building Fortnite experiences. Explore our games, island codes, screenshots, and gameplay highlights.",
+
+  keywords: [
+    "NLDEVS",
+    "UEFN",
+    "Fortnite maps",
+    "Fortnite island codes",
+    "Fortnite experiences",
+    "Gun Game maps",
+    "XP maps",
+    "TMNT Fortnite maps",
+    "Squid Game Fortnite maps",
+  ],
+
+  // ✅ AdSense verification meta tag
   verification: {
     other: {
       "google-adsense-account": "ca-pub-4592429005404942",
     },
   },
 
-  alternates: { canonical: "https://www.nldevs.ca/" },
+  alternates: { canonical: "/" },
+
   robots: {
     index: true,
     follow: true,
@@ -36,27 +52,30 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
   openGraph: {
     type: "website",
-    url: "https://www.nldevs.ca/",
-    title: "Favorite Fortnite Maps | NLDEVS",
+    url: SITE_URL,
+    title: "NLDEVS — UEFN Game Studio",
     description:
-      "Favorite Fortnite maps created by NLDEVS — UEFN experiences, map codes, and highlights.",
+      "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
     siteName: "NLDEVS",
     images: [
       {
-        url: "https://www.nldevs.ca/og-image.jpg",
+        url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Favorite Fortnite Maps by NLDEVS",
+        alt: "NLDEVS — UEFN Game Studio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Favorite Fortnite Maps | NLDEVS",
+    title: "NLDEVS — UEFN Game Studio",
     description:
-      "Favorite Fortnite maps created by NLDEVS — UEFN experiences, map codes, and highlights.",
+      "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
+    images: [`${SITE_URL}/og-image.jpg`],
   },
 };
 
@@ -65,12 +84,50 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // ✅ Global JSON-LD (best place: layout)
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "NLDEVS",
+    url: SITE_URL,
+    description: "UEFN game studio building Fortnite experiences.",
+    sameAs: [
+      "https://www.fortnite.com/@nldevs",
+      "https://www.youtube.com/@nldevs",
+      "https://x.com/nldevsmtl",
+      "https://discord.gg/V2MEqa69",
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "NLDEVS",
+    url: SITE_URL,
+    publisher: {
+      "@type": "Organization",
+      name: "NLDEVS",
+      url: SITE_URL,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
-      >
-        {/* ✅ AdSense site-wide script (do NOT wrap in <head>) */}
+      <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
+        {/* ✅ Global structured data */}
+        <Script id="nldevs-org-schema" type="application/ld+json">
+          {JSON.stringify(orgSchema)}
+        </Script>
+        <Script id="nldevs-website-schema" type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </Script>
+
+        {/* ✅ AdSense site-wide script */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592429005404942"
@@ -79,10 +136,7 @@ export default function RootLayout({
         />
 
         {/* ✅ Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX"
-          strategy="afterInteractive"
-        />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -105,7 +159,6 @@ export default function RootLayout({
     </html>
   );
 }
-
 
 
 // import type { Metadata } from "next";
