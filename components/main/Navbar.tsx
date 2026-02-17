@@ -4,6 +4,7 @@ import { Socials } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -13,21 +14,37 @@ const NAV_LINKS = [
   { href: "/best-fortnite-xp-maps", label: "XP Maps" },
 ];
 
+const TMNT_SUBLINKS = [
+  { href: "/tmnt-mega-ramp-survival", label: "Mega Ramp Survival" },
+  { href: "/tmnt-city", label: "TMNT City" },
+];
+
+const SQUID_SUBLINKS = [
+  { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
+  { href: "/tilted-squid-royale-99-bots", label: "Tilted Squid Royale (99 Bots)" },
+];
+
 function getSocialHref(name: string) {
   return name === "Fortnite"
     ? "https://www.fortnite.com/@nldevs"
     : name === "Discord"
-    ? "https://discord.gg/V2MEqa69"
-    : name === "Youtube"
-    ? "https://www.youtube.com/@nldevs"
-    : name === "Gmail"
-    ? "mailto:nldevsmtl@gmail.com"
-    : name === "X"
-    ? "https://x.com/nldevsmtl"
-    : "#";
+      ? "https://discord.gg/V2MEqa69"
+      : name === "Youtube"
+        ? "https://www.youtube.com/@nldevs"
+        : name === "Gmail"
+          ? "mailto:nldevsmtl@gmail.com"
+          : name === "X"
+            ? "https://x.com/nldevsmtl"
+            : "#";
+}
+
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href + "/");
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState<boolean>(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
 
@@ -82,15 +99,100 @@ export default function Navbar() {
               className="hidden md:flex items-center gap-8 text-gray-200"
               aria-label="Primary navigation"
             >
-              {NAV_LINKS.map((l) => (
+              {/* Home */}
+              <Link
+                href="/"
+                className={`hover:text-white transition-colors ${isActive(pathname, "/") ? "text-white" : ""
+                  }`}
+              >
+                Home
+              </Link>
+
+              {/* TMNT dropdown */}
+              <div className="relative group">
                 <Link
-                  key={l.href}
-                  href={l.href}
-                  className="hover:text-white transition-colors"
+                  href="/tmnt-fortnite-maps"
+                  className={`hover:text-white transition-colors ${isActive(pathname, "/tmnt-fortnite-maps") ||
+                      TMNT_SUBLINKS.some((s) => isActive(pathname, s.href))
+                      ? "text-white"
+                      : ""
+                    }`}
                 >
-                  {l.label}
+                  TMNT
                 </Link>
-              ))}
+
+                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 transition absolute left-0 top-full mt-3 w-72 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
+                  <div className="p-2">
+                    <Link
+                      href="/tmnt-fortnite-maps"
+                      className="block rounded-lg px-3 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5"
+                    >
+                      TMNT Hub
+                    </Link>
+                    <div className="h-px bg-white/10 my-2" />
+                    {TMNT_SUBLINKS.map((s) => (
+                      <Link
+                        key={s.href}
+                        href={s.href}
+                        className="block rounded-lg px-3 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5"
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Squid dropdown */}
+              <div className="relative group">
+                <Link
+                  href="/squid-game-fortnite-maps"
+                  className={`hover:text-white transition-colors ${isActive(pathname, "/squid-game-fortnite-maps") ||
+                      SQUID_SUBLINKS.some((s) => isActive(pathname, s.href))
+                      ? "text-white"
+                      : ""
+                    }`}
+                >
+                  Squid Game
+                </Link>
+
+                <div className="pointer-events-none opacity-0 translate-y-1 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0 transition absolute left-0 top-full mt-3 w-80 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md shadow-lg">
+                  <div className="p-2">
+                    <Link
+                      href="/squid-game-fortnite-maps"
+                      className="block rounded-lg px-3 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5"
+                    >
+                      Squid Hub
+                    </Link>
+                    <div className="h-px bg-white/10 my-2" />
+                    {SQUID_SUBLINKS.map((s) => (
+                      <Link
+                        key={s.href}
+                        href={s.href}
+                        className="block rounded-lg px-3 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5"
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Other top-level */}
+              <Link
+                href="/fortnite-gun-game-maps"
+                className={`hover:text-white transition-colors ${isActive(pathname, "/fortnite-gun-game-maps") ? "text-white" : ""
+                  }`}
+              >
+                Gun Games
+              </Link>
+              <Link
+                href="/best-fortnite-xp-maps"
+                className={`hover:text-white transition-colors ${isActive(pathname, "/best-fortnite-xp-maps") ? "text-white" : ""
+                  }`}
+              >
+                XP Maps
+              </Link>
             </nav>
 
             {/* Right side: socials + mobile hamburger */}
@@ -136,19 +238,16 @@ export default function Navbar() {
               >
                 <span className="relative block w-5 h-4" aria-hidden="true">
                   <span
-                    className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                      open ? "translate-y-[7px] rotate-45" : ""
-                    }`}
+                    className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${open ? "translate-y-[7px] rotate-45" : ""
+                      }`}
                   />
                   <span
-                    className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${
-                      open ? "opacity-0" : "opacity-100"
-                    }`}
+                    className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"
+                      }`}
                   />
                   <span
-                    className={`absolute left-0 bottom-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                      open ? "-translate-y-[7px] -rotate-45" : ""
-                    }`}
+                    className={`absolute left-0 bottom-0 h-[2px] w-full bg-current transition-transform duration-200 ${open ? "-translate-y-[7px] -rotate-45" : ""
+                      }`}
                   />
                 </span>
               </button>
@@ -157,11 +256,7 @@ export default function Navbar() {
         </div>
 
         {/* ✅ OPTION A (Mobile scroll tabs) */}
-        <nav
-          aria-label="Mobile quick navigation"
-          className="md:hidden border-t border-white/10"
-        >
-          {/* The px-4 here is what fixes “stuck to edges” */}
+        <nav aria-label="Mobile quick navigation" className="md:hidden border-t border-white/10">
           <div className="px-4 py-2 overflow-x-auto whitespace-nowrap">
             <div className="flex items-center gap-2">
               {NAV_LINKS.map((l) => (
@@ -169,7 +264,8 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={closeMenu}
-                  className="shrink-0 rounded-full border border-[#2A0E61] bg-[#0300145e] px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5 transition"
+                  className={`shrink-0 rounded-full border border-[#2A0E61] bg-[#0300145e] px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-white/5 transition ${isActive(pathname, l.href) ? "text-white border-cyan-400" : ""
+                    }`}
                 >
                   {l.label}
                 </Link>
@@ -182,9 +278,8 @@ export default function Navbar() {
         <div
           id="mobile-menu"
           ref={panelRef}
-          className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
-            open ? "max-h-[420px]" : "max-h-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${open ? "max-h-[520px]" : "max-h-0"
+            }`}
         >
           <div className="mx-4 mb-4 mt-3 rounded-xl border border-[#2A0E61] bg-[#030014cc] backdrop-blur-md">
             <nav className="p-3" aria-label="Mobile menu">
@@ -200,10 +295,43 @@ export default function Navbar() {
                     </Link>
                   </li>
                 ))}
+
+                {/* Optional: add detail links in mobile menu */}
+                <li className="mt-2 border-t border-white/10 pt-2">
+                  <p className="px-3 py-2 text-xs uppercase tracking-wide text-gray-400">
+                    TMNT Details
+                  </p>
+                  {TMNT_SUBLINKS.map((s) => (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className="block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
+                      onClick={closeMenu}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </li>
+
+                <li className="mt-2 border-t border-white/10 pt-2">
+                  <p className="px-3 py-2 text-xs uppercase tracking-wide text-gray-400">
+                    Squid Details
+                  </p>
+                  {SQUID_SUBLINKS.map((s) => (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className="block rounded-lg px-3 py-2 text-gray-200 hover:text-white hover:bg-white/5 transition"
+                      onClick={closeMenu}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </li>
               </ul>
 
               {/* Mobile socials */}
-              <div className="mt-2 border-t border-white/10 pt-3 px-3 pb-2">
+              <div className="mt-3 border-t border-white/10 pt-3 px-3 pb-2">
                 <p className="text-sm text-gray-400 mb-2">Follow NLDEVS</p>
                 <div className="flex flex-row gap-3 items-center">
                   {Socials.map((social) => {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 const SITE_URL = "https://www.nldevs.ca";
 const LAST_UPDATED = "February 2026";
@@ -40,15 +41,18 @@ const gunGameMaps: {
     code: "1383-6989-3967",
     image: "/CityTMNT.jpeg",
     mode: "Gun Game",
-    notes: "TMNT-themed combat loops with fast weapon progression and replayable rounds.",
-    // detailsHref: "/tmnt-city",
+    notes:
+      "TMNT-themed combat loops with fast weapon progression and replayable rounds.",
+    detailsHref: "/tmnt-city",
   },
   {
     title: "Winterfest Demon Hunters — Gun Game",
     code: "6101-7751-8665",
     image: "/WinterfestDemonHuntersGunGame.jpeg",
     mode: "FFA Gun Game",
-    notes: "Holiday demon-hunting gun game with repeatable combat loops and weapon rotations.",
+    notes:
+      "Holiday demon-hunting gun game with repeatable combat loops and weapon rotations.",
+    // detailsHref: "/winterfest-demon-hunters", // add later if you make it
   },
 ];
 
@@ -139,47 +143,53 @@ export default function FortniteGunGameMapsPage() {
   };
 
   return (
-    <main className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* JSON-LD: CollectionPage + FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
+      {/* ✅ JSON-LD (next/script with required id) */}
+      <Script id="gungame-collection-schema" type="application/ld+json">
+        {JSON.stringify(pageSchema)}
+      </Script>
+      <Script id="gungame-faq-schema" type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </Script>
 
-      <Link href="/" className="text-gray-300 underline">
-        ← Back to Favorite Fortnite Maps
-      </Link>
+      {/* ✅ Breadcrumbs */}
+      <nav
+        aria-label="Breadcrumb"
+        className="text-sm flex flex-wrap gap-2 text-gray-300"
+      >
+        <Link href="/" className="underline hover:text-white">
+          Home
+        </Link>
+        <span className="text-gray-500">/</span>
+        <span className="text-gray-200">Gun Game Maps</span>
+      </nav>
 
       <header className="mt-6">
-        <h1 className="text-4xl font-bold">Best Fortnite Gun Game Maps & Map Codes</h1>
+        <h1 className="text-4xl font-bold">Best Fortnite Gun Game Maps &amp; Map Codes</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">
-          Gun Game maps are fast-paced weapon progression modes where eliminations upgrade your
-          loadout. Here are curated Gun Game islands with map codes, images, and quick notes.
+          Gun Game maps are fast-paced weapon progression modes where eliminations upgrade your loadout.
+          Here are curated Gun Game islands with map codes, images, and quick notes.
         </p>
         <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
       </header>
 
-      {/* What is it? (SEO + intent match) */}
+      {/* What is it? */}
       <section id="what-is-gun-game" className="mt-10">
         <h2 className="text-2xl font-semibold">What is a Fortnite Gun Game map?</h2>
         <div className="mt-3 text-gray-300 space-y-4">
           <p>
-            Fortnite Gun Game is a weapon progression mode built for quick, replayable PvP rounds.
-            Players start with a weapon and gain an upgrade after each elimination. The goal is to
-            climb the weapon list faster than everyone else.
+            Fortnite Gun Game is a weapon progression PvP mode built for quick, replayable rounds.
+            Players start with a weapon and upgrade after each elimination. The goal is to finish the
+            weapon list before everyone else.
           </p>
           <p>
-            You’ll commonly see free-for-all (FFA) Gun Game, team variants, and themed arenas. The
-            best Gun Game maps have tight spawns, clear sightlines, and balanced weapon rotations so
-            every match stays competitive.
+            Great Gun Game maps have clear spawns, strong flow, and balanced weapon rotations so every
+            match stays competitive.
           </p>
         </div>
       </section>
 
+      {/* On this page */}
       <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
         <p className="font-semibold text-white">On this page</p>
         <ul className="mt-2 list-disc list-inside">
@@ -215,72 +225,72 @@ export default function FortniteGunGameMapsPage() {
         <h2 className="text-2xl font-semibold">Gun Game Map Codes</h2>
         <p className="mt-2 text-gray-300">
           Each entry includes a map code, the Gun Game style, and a quick description.
+          Some entries link to full detail pages.
         </p>
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {gunGameMaps.map((m) => (
-            <article
-              key={m.code}
-              id={m.code.replaceAll("-", "")}
-              className="rounded-lg border border-[#2A0E61] overflow-hidden"
-            >
-              {m.image ? (
-                <div className="relative w-full h-48">
-                  <Image
-                    src={m.image}
-                    alt={`${m.title} thumbnail`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                    priority={false}
-                  />
-                </div>
-              ) : null}
-
-              <div className="p-5">
-                <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                <p className="mt-2 text-gray-300">
-                  <span className="font-semibold text-white">Map Code:</span> {m.code}
-                </p>
-
-                <p className="mt-1 text-gray-400 text-sm">Mode: {m.mode}</p>
-
-                <p className="mt-3 text-gray-300">{m.notes}</p>
-
-                {m.detailsHref ? (
-                  <Link
-                    href={m.detailsHref}
-                    className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200"
-                  >
-                    View details →
-                  </Link>
+          {gunGameMaps.map((m) => {
+            const CardInner = (
+              <>
+                {m.image ? (
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={m.image}
+                      alt={`${m.title} thumbnail`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
                 ) : null}
-              </div>
-            </article>
-          ))}
+
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{m.title}</h3>
+
+                  <p className="mt-2 text-gray-300">
+                    <span className="font-semibold text-white">Map Code:</span> {m.code}
+                  </p>
+
+                  <p className="mt-1 text-gray-400 text-sm">Mode: {m.mode}</p>
+
+                  <p className="mt-3 text-gray-300">{m.notes}</p>
+
+                  {m.detailsHref ? (
+                    <span className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200">
+                      View details →
+                    </span>
+                  ) : null}
+                </div>
+              </>
+            );
+
+            return (
+              <article
+                key={m.code}
+                id={m.code.replaceAll("-", "")}
+                className="rounded-lg border border-[#2A0E61] overflow-hidden hover:border-cyan-400 transition"
+              >
+                {m.detailsHref ? (
+                  <Link href={m.detailsHref} className="block">
+                    {CardInner}
+                  </Link>
+                ) : (
+                  CardInner
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      {/* Tips (SEO + engagement) */}
       <section id="tips" className="mt-12">
         <h2 className="text-2xl font-semibold">Tips to win Gun Game rounds</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            Play corners and reset fights: Gun Game rewards smart re-peeks more than nonstop
-            sprinting.
-          </li>
-          <li>
-            Learn spawn flow: once you know where players reappear, you can chain eliminations and
-            climb faster.
-          </li>
-          <li>
-            Prioritize mid-range consistency: most weapon lists punish missed shots more than “big”
-            plays.
-          </li>
-          <li>
-            In FFA, avoid long chases—rotate to the next fight to keep your upgrades rolling.
-          </li>
+          <li>Learn spawn flow and rotate fights instead of chasing one player forever.</li>
+          <li>Hold angles and re-peek smart—Gun Game rewards consistency.</li>
+          <li>Mid-range accuracy usually matters more than flashy plays.</li>
+          <li>In FFA, keep moving to the next fight to keep upgrades rolling.</li>
         </ul>
       </section>
 
@@ -290,53 +300,31 @@ export default function FortniteGunGameMapsPage() {
           <li>Open Fortnite → Search / Discover.</li>
           <li>Enter the map code (####-####-####).</li>
           <li>Get eliminations to upgrade weapons.</li>
-          <li>First player to finish the weapon list wins (rules vary by map).</li>
+          <li>Finish the weapon list first (rules vary by map).</li>
         </ol>
       </section>
 
-      {/* FAQ (content + schema already included above) */}
       <section id="faq" className="mt-12">
         <h2 className="text-2xl font-semibold">FAQ</h2>
 
-        <div className="mt-4 space-y-6 text-gray-300">
-          <div>
-            <h3 className="text-white font-semibold">What is a Fortnite Gun Game map?</h3>
+        <div className="mt-4 space-y-4 text-gray-300">
+          <div className="rounded-lg border border-[#2A0E61] p-4">
+            <h3 className="font-semibold text-white">What is a Fortnite Gun Game map?</h3>
             <p className="mt-2">
-              Gun Game is a weapon progression mode. You start with a weapon and each elimination
-              upgrades you to the next weapon. The first player (or team) to finish the weapon list
-              wins.
+              Gun Game is a weapon progression mode. Each elimination upgrades you to the next weapon.
+              First player (or team) to finish the weapon list wins.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold">How do I enter a Fortnite map code?</h3>
+          <div className="rounded-lg border border-[#2A0E61] p-4">
+            <h3 className="font-semibold text-white">Do Gun Game maps give XP?</h3>
             <p className="mt-2">
-              Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then
-              select the result to play.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold">
-              What is the difference between FFA and Team Gun Game?
-            </h3>
-            <p className="mt-2">
-              FFA (free-for-all) is everyone vs everyone. Team Gun Game groups players into teams
-              and team eliminations may contribute to weapon progression depending on the map rules.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold">Do Gun Game maps give XP?</h3>
-            <p className="mt-2">
-              Some islands may grant XP depending on Fortnite calibration and map settings. XP rates
-              can change after updates or revisions.
+              Some islands may grant XP depending on calibration and map settings. XP can change after updates.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Related internal links (crawl paths) */}
       <section id="related" className="mt-12">
         <h2 className="text-2xl font-semibold">Related pages</h2>
         <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
@@ -357,6 +345,12 @@ export default function FortniteGunGameMapsPage() {
           </li>
         </ul>
       </section>
+
+      <div className="mt-12">
+        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
+          Back to top ↑
+        </a>
+      </div>
     </main>
   );
 }
