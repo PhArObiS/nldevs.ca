@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 import "./globals.css";
+import StarsCanvas from "@/components/main/StarBackground";
+import Navbar from "@/components/main/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const SITE_URL = "https://www.nldevs.ca";
-
-// ✅ Client-only components (prevents static generation timeouts)
-const StarsCanvas = dynamic(() => import("@/components/main/StarBackground"), {
-  ssr: false,
-  loading: () => null,
-});
-
-const Navbar = dynamic(() => import("@/components/main/Navbar"), {
-  ssr: false,
-  loading: () => null,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -42,14 +32,14 @@ export const metadata: Metadata = {
     "Squid Game Fortnite maps",
   ],
 
+  // ✅ AdSense verification meta tag
   verification: {
     other: {
       "google-adsense-account": "ca-pub-4592429005404942",
     },
   },
 
-  // ✅ Better: explicit canonical
-  alternates: { canonical: SITE_URL },
+  alternates: { canonical: "/" },
 
   robots: {
     index: true,
@@ -89,7 +79,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // ✅ Global JSON-LD (best place: layout)
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -114,8 +109,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       name: "NLDEVS",
       url: SITE_URL,
     },
-    // ⚠️ Only keep SearchAction if you REALLY have /search
-    // If you don't, remove this block.
     potentialAction: {
       "@type": "SearchAction",
       target: `${SITE_URL}/search?q={search_term_string}`,
@@ -142,11 +135,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="afterInteractive"
         />
 
-        {/* ✅ Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX"
-          strategy="afterInteractive"
-        />
+        {/* ✅ Google Analytics (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2ZT17ZYFDX" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -156,13 +146,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        {/* Background */}
+        {/* Background — must not capture clicks */}
         <div className="pointer-events-none fixed inset-0 -z-10">
           <StarsCanvas />
         </div>
 
         <Navbar />
 
+        {/* Offset for fixed navbar */}
         <div className="pt-[85px]">{children}</div>
       </body>
     </html>

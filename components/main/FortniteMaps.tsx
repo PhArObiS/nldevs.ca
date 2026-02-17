@@ -1,7 +1,6 @@
+
 import React from "react";
 import FortniteMapsCard from "../sub/FortniteMapsCard";
-
-const SITE_URL = "https://www.nldevs.ca";
 
 const maps = [
   {
@@ -49,12 +48,13 @@ const maps = [
 ];
 
 const FortniteMaps = () => {
+  // ✅ JSON-LD: ItemList of maps
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "NLDEVS Fortnite Maps",
+    name: "Favorite Fortnite Maps",
     description:
-      "A curated list of Fortnite maps created by NLDEVS with map codes and gameplay highlights.",
+      "A curated list of favorite Fortnite maps created by NLDEVS with map codes and highlights.",
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     numberOfItems: maps.length,
     itemListElement: maps.map((m, i) => ({
@@ -66,13 +66,17 @@ const FortniteMaps = () => {
         gamePlatform: "Fortnite",
         genre: m.mode,
         description: `Fortnite map code: ${m.code}. Mode: ${m.mode}.`,
-        image: `${SITE_URL}${m.image}`,
-        url: `${SITE_URL}/${m.slug}`,
+        image: `https://www.nldevs.ca${m.image}`,
         publisher: {
           "@type": "Organization",
           name: "NLDEVS",
-          url: SITE_URL,
+          url: "https://www.nldevs.ca",
         },
+
+
+
+        // Optional: add this later when you create dedicated pages
+        // url: `https://www.nldevs.ca/maps/${m.slug}`,
       },
     })),
   };
@@ -81,7 +85,7 @@ const FortniteMaps = () => {
     <section
       className="flex flex-col items-center justify-center py-20"
       id="fortnitemaps"
-      aria-label="NLDEVS Fortnite Maps list"
+      aria-label="Favorite Fortnite Maps list"
     >
       <script
         type="application/ld+json"
@@ -89,11 +93,11 @@ const FortniteMaps = () => {
       />
 
       <h2 className="text-3xl md:text-4xl font-bold text-white py-10">
-        NLDEVS Maps (Map Codes)
+        Favorite Fortnite Maps (Map Codes)
       </h2>
 
       <p className="text-gray-300 max-w-3xl text-center px-6 mb-10">
-        Explore our current lineup (6 maps). Click a card for details or copy the code to jump in fast.
+        Browse our favorite Fortnite maps and jump in fast using the map codes.
       </p>
 
       <div className="h-full w-full lg:grid lg:grid-cols-3 lg:gap-10 px-10">
@@ -102,13 +106,13 @@ const FortniteMaps = () => {
             key={m.code}
             src={m.image}
             title={m.title}
-            code={m.code}
+            description={m.code}
             mode={m.mode}
-            href={`/${m.slug}`}
           />
         ))}
       </div>
     </section>
+
   );
 };
 
