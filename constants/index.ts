@@ -23,7 +23,7 @@ export const Socials = [
   },
   {
     name: "X",
-    src: "/twitter-svgrepo-com.svg",
+    src: "/x-logo.svg",
     href: SOCIAL_LINKS.x,
   },
 ] as const;
