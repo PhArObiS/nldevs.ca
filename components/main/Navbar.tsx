@@ -84,6 +84,12 @@ function openClientLogin() {
   window.dispatchEvent(new Event("nldevs:open-client-login"));
 }
 
+function logoutClient() {
+  window.localStorage.removeItem(CLIENT_PROFILE_STORAGE_KEY);
+  window.sessionStorage.removeItem("nldevs-client-login-dismissed");
+  window.dispatchEvent(new Event("nldevs:client-logout"));
+}
+
 const CLIENT_PROFILE_STORAGE_KEY = "nldevs-client-profile";
 
 type ClientProfileSummary = {
@@ -141,10 +147,15 @@ export default function Navbar() {
       setClientProfile(getStoredClientProfile());
     }
 
+    function onClientLogout() {
+      setClientProfile(null);
+    }
+
     window.addEventListener(
       "nldevs:client-login-updated",
       onClientLoginUpdated
     );
+    window.addEventListener("nldevs:client-logout", onClientLogout);
     window.addEventListener("storage", onStorage);
 
     return () => {
@@ -152,6 +163,7 @@ export default function Navbar() {
         "nldevs:client-login-updated",
         onClientLoginUpdated
       );
+      window.removeEventListener("nldevs:client-logout", onClientLogout);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
@@ -288,17 +300,29 @@ export default function Navbar() {
 
             {/* Right side: socials + mobile hamburger */}
             <div className="flex flex-row items-center gap-3">
-              <button
-                type="button"
-                onClick={openClientLogin}
-                className={`clip-corner-sm hidden border px-3 py-2 text-sm font-semibold transition lg:inline-flex ${
-                  clientProfile
-                    ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
-                    : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
-                }`}
-              >
-                {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
-              </button>
+              <div className="hidden items-center gap-2 lg:flex">
+                <button
+                  type="button"
+                  onClick={openClientLogin}
+                  className={`clip-corner-sm border px-3 py-2 text-sm font-semibold transition ${
+                    clientProfile
+                      ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
+                      : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                  }`}
+                >
+                  {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                </button>
+
+                {clientProfile && (
+                  <button
+                    type="button"
+                    onClick={logoutClient}
+                    className="clip-corner-sm border border-edge-bright bg-ink-800/70 px-3 py-2 text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
+                  >
+                    Logout
+                  </button>
+                )}
+              </div>
 
               <div className="hidden flex-row items-center gap-1.5 sm:flex">
                 {Socials.map((social) => {
@@ -451,6 +475,19 @@ export default function Navbar() {
                   >
                     {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
                   </button>
+
+                  {clientProfile && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        logoutClient();
+                        closeMenu();
+                      }}
+                      className="clip-corner-sm mx-3 mb-2 w-[calc(100%-1.5rem)] border border-edge-bright bg-ink-800/70 px-3 py-2.5 text-left text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
+                    >
+                      Logout
+                    </button>
+                  )}
 
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
                     Featured
