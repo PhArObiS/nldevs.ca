@@ -18,6 +18,11 @@ type ClientProfile = {
   imageType?: string;
   imageData?: string;
   imagePurpose?: string;
+  developerInterest: boolean;
+  developerRole?: string;
+  developerPortfolio?: string;
+  developerSkills?: string;
+  developerAvailability?: string;
   contactConsent: boolean;
   savedAt: string;
 };
@@ -48,6 +53,25 @@ const FAVORITE_MAPS = [
 
 const IMAGE_PURPOSES = ["Screenshot", "Bug", "Map idea", "Fan art", "Other"];
 
+const DEVELOPER_ROLES = [
+  "UEFN / Verse developer",
+  "Unreal Engine developer",
+  "3D artist",
+  "Level designer",
+  "Gameplay designer",
+  "UI / web developer",
+  "QA tester",
+  "Other",
+];
+
+const DEVELOPER_AVAILABILITY = [
+  "Open now",
+  "Open soon",
+  "Part-time",
+  "Contract / freelance",
+  "Future opportunities",
+];
+
 function readImageFile(file: File) {
   return new Promise<string>((resolve, reject) => {
     const reader = new FileReader();
@@ -71,6 +95,11 @@ export default function ClientLoginModal() {
   const [message, setMessage] = useState("");
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePurpose, setImagePurpose] = useState("");
+  const [developerInterest, setDeveloperInterest] = useState(false);
+  const [developerRole, setDeveloperRole] = useState("");
+  const [developerPortfolio, setDeveloperPortfolio] = useState("");
+  const [developerSkills, setDeveloperSkills] = useState("");
+  const [developerAvailability, setDeveloperAvailability] = useState("");
   const [contactConsent, setContactConsent] = useState(false);
   const [saved, setSaved] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -91,6 +120,11 @@ export default function ClientLoginModal() {
         setFavoriteMap(profile.favoriteMap ?? "");
         setMessage(profile.message ?? "");
         setImagePurpose(profile.imagePurpose ?? "");
+        setDeveloperInterest(profile.developerInterest ?? false);
+        setDeveloperRole(profile.developerRole ?? "");
+        setDeveloperPortfolio(profile.developerPortfolio ?? "");
+        setDeveloperSkills(profile.developerSkills ?? "");
+        setDeveloperAvailability(profile.developerAvailability ?? "");
         setContactConsent(profile.contactConsent ?? false);
       } catch {
         window.localStorage.removeItem(STORAGE_KEY);
@@ -146,6 +180,11 @@ export default function ClientLoginModal() {
         imageType: imageFile?.type,
         imageData,
         imagePurpose: imagePurpose || undefined,
+        developerInterest,
+        developerRole: developerRole || undefined,
+        developerPortfolio: developerPortfolio.trim() || undefined,
+        developerSkills: developerSkills.trim() || undefined,
+        developerAvailability: developerAvailability || undefined,
         contactConsent,
         savedAt: new Date().toISOString(),
       };
@@ -209,7 +248,7 @@ export default function ClientLoginModal() {
             priority
           />
           <div>
-            <p className="eyebrow">Player Access</p>
+            <p className="eyebrow">Member Access</p>
             <h2 id="client-login-title" className="mt-1 text-2xl font-black text-white">
               {saved ? "Logged in" : "Join NLDEVS"}
             </h2>
@@ -420,6 +459,110 @@ export default function ClientLoginModal() {
             />
             <span>NLDEVS can contact me about maps, updates, or playtests.</span>
           </label>
+
+          <details className="border border-edge bg-ink-800/40 p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
+              Developer opportunities
+            </summary>
+
+            <div className="mt-4 space-y-3 sm:space-y-4">
+              <label className="flex items-start gap-3 border border-edge bg-ink-800/60 p-3 text-sm text-gray-300">
+                <input
+                  type="checkbox"
+                  checked={developerInterest}
+                  onChange={(event) => setDeveloperInterest(event.target.checked)}
+                  className="mt-1 h-4 w-4 accent-neon-cyan"
+                />
+                <span>I&apos;m a developer or creator interested in future work with NLDEVS.</span>
+              </label>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="client-developer-role"
+                    className="text-sm font-semibold text-gray-200"
+                  >
+                    Role <span className="text-gray-500">optional</span>
+                  </label>
+                  <select
+                    id="client-developer-role"
+                    name="developerRole"
+                    value={developerRole}
+                    onChange={(event) => setDeveloperRole(event.target.value)}
+                    className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
+                  >
+                    <option value="">Choose role</option>
+                    {DEVELOPER_ROLES.map((role) => (
+                      <option key={role} value={role}>
+                        {role}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="client-developer-availability"
+                    className="text-sm font-semibold text-gray-200"
+                  >
+                    Availability <span className="text-gray-500">optional</span>
+                  </label>
+                  <select
+                    id="client-developer-availability"
+                    name="developerAvailability"
+                    value={developerAvailability}
+                    onChange={(event) => setDeveloperAvailability(event.target.value)}
+                    className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
+                  >
+                    <option value="">Choose availability</option>
+                    {DEVELOPER_AVAILABILITY.map((availability) => (
+                      <option key={availability} value={availability}>
+                        {availability}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="client-developer-portfolio"
+                  className="text-sm font-semibold text-gray-200"
+                >
+                  Portfolio / profile <span className="text-gray-500">optional</span>
+                </label>
+                <input
+                  id="client-developer-portfolio"
+                  name="developerPortfolio"
+                  type="url"
+                  inputMode="url"
+                  value={developerPortfolio}
+                  onChange={(event) => setDeveloperPortfolio(event.target.value)}
+                  className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
+                  placeholder="Website, ArtStation, GitHub, Fortnite page"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="client-developer-skills"
+                  className="text-sm font-semibold text-gray-200"
+                >
+                  Skills / tools <span className="text-gray-500">optional</span>
+                </label>
+                <textarea
+                  id="client-developer-skills"
+                  name="developerSkills"
+                  value={developerSkills}
+                  onChange={(event) => setDeveloperSkills(event.target.value)}
+                  maxLength={500}
+                  rows={2}
+                  className="mt-2 w-full resize-none border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
+                  placeholder="UEFN, Verse, Blender, Unreal, level design, QA..."
+                />
+              </div>
+            </div>
+          </details>
             </div>
           </details>
 

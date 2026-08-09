@@ -68,7 +68,8 @@ Table Editor -> player_leads
 
 You should see name, email, optional Fortnite name, source path, browser user
 agent, optional Discord name, avatar style, favorite map, message, uploaded
-image details, contact consent, and created timestamp.
+image details, developer interest details, contact consent, and created
+timestamp.
 
 Images are stored as small data URLs in the `image_data` column. The form limits
 uploads to 1.5 MB. For larger galleries or many screenshots, move images to

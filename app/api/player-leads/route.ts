@@ -12,6 +12,11 @@ type PlayerLeadInput = {
   imageType?: unknown;
   imageData?: unknown;
   imagePurpose?: unknown;
+  developerInterest?: unknown;
+  developerRole?: unknown;
+  developerPortfolio?: unknown;
+  developerSkills?: unknown;
+  developerAvailability?: unknown;
   contactConsent?: unknown;
 };
 
@@ -123,6 +128,11 @@ export async function POST(request: NextRequest) {
   const imageName = cleanText(body.imageName, 180);
   const imageType = cleanText(body.imageType, 40);
   const imagePurpose = cleanText(body.imagePurpose, 80);
+  const developerInterest = body.developerInterest === true;
+  const developerRole = cleanText(body.developerRole, 120);
+  const developerPortfolio = cleanText(body.developerPortfolio, 240);
+  const developerSkills = cleanText(body.developerSkills, 500);
+  const developerAvailability = cleanText(body.developerAvailability, 120);
   const contactConsent = body.contactConsent === true;
   const imageData = typeof body.imageData === "string" ? body.imageData : "";
 
@@ -179,6 +189,11 @@ export async function POST(request: NextRequest) {
         image_type: imageData ? imageType || null : null,
         image_data: imageData || null,
         image_purpose: imageData ? imagePurpose || null : null,
+        developer_interest: developerInterest,
+        developer_role: developerRole || null,
+        developer_portfolio: developerPortfolio || null,
+        developer_skills: developerSkills || null,
+        developer_availability: developerAvailability || null,
         contact_consent: contactConsent,
         source_path: request.headers.get("referer") ?? null,
         user_agent: request.headers.get("user-agent") ?? null,

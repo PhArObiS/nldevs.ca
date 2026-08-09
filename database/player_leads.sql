@@ -13,6 +13,11 @@ create table if not exists public.player_leads (
   image_type text,
   image_data text,
   image_purpose text,
+  developer_interest boolean not null default false,
+  developer_role text,
+  developer_portfolio text,
+  developer_skills text,
+  developer_availability text,
   contact_consent boolean not null default false,
   source_path text,
   user_agent text,
@@ -28,6 +33,11 @@ alter table public.player_leads
   add column if not exists image_type text,
   add column if not exists image_data text,
   add column if not exists image_purpose text,
+  add column if not exists developer_interest boolean not null default false,
+  add column if not exists developer_role text,
+  add column if not exists developer_portfolio text,
+  add column if not exists developer_skills text,
+  add column if not exists developer_availability text,
   add column if not exists contact_consent boolean not null default false;
 
 create index if not exists player_leads_created_at_idx
