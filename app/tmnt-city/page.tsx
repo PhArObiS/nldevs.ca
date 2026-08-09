@@ -85,7 +85,7 @@ export default function Page() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400 md:text-left">
+        <p className="text-center leading-relaxed text-gray-400">
           TMNT City is an immersive city-style TMNT experience built in UEFN.
           Explore, fight, and hang out with friends in a themed environment
           designed for repeat visits.

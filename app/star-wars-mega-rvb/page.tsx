@@ -111,7 +111,7 @@ export default function StarWarsMegaRvbPage() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400 md:text-left">
+        <p className="text-center leading-relaxed text-gray-400">
           Star Wars Mega RvB is built for fast PvP sessions with a red team
           versus blue team setup, Star Wars weapons, custom weapon unlocks, and
           ranking progression. Jump in, fight, complete achievements, and push
@@ -129,7 +129,7 @@ export default function StarWarsMegaRvbPage() {
       </ContentSection>
 
       <ContentSection title="Why play" accent="Mega RvB">
-        <div className="space-y-4 text-center leading-relaxed text-gray-400 md:text-left">
+        <div className="space-y-4 text-center leading-relaxed text-gray-400">
           <p>
             Star Wars Mega RvB is built for players searching for a Star Wars
             Red vs Blue Fortnite map with immediate action. The focus is simple:

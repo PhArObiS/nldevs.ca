@@ -143,7 +143,7 @@ export default function TMNTFortniteMapsPage() {
       />
 
       <ContentSection title="What are" accent="TMNT Fortnite maps?">
-        <div className="space-y-4 text-center leading-relaxed text-gray-400 md:text-left">
+        <div className="space-y-4 text-center leading-relaxed text-gray-400">
           <p>
             TMNT Fortnite maps are community-made islands inspired by Teenage
             Mutant Ninja Turtles themes — city exploration, survival runs, combat

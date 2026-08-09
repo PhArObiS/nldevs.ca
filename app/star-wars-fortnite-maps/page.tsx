@@ -221,7 +221,7 @@ export default function StarWarsFortniteMapsPage() {
         />
       </ContentSection>
 
-      <p className="mt-16 text-center text-sm text-gray-500 md:text-left">
+      <p className="mt-16 text-center text-sm text-gray-500">
         Community-created Fortnite experiences built with UEFN. Not affiliated
         with Lucasfilm, Disney, or Epic Games.
       </p>

@@ -141,7 +141,7 @@ export default function StarWarsTycoonSidekickLegendsPage() {
       </ContentSection>
 
       <ContentSection title="Island code" accent="status">
-        <div className="space-y-4 text-center leading-relaxed text-gray-400 md:text-left">
+        <div className="space-y-4 text-center leading-relaxed text-gray-400">
           <p>
             Star Wars Tycoon Sidekick Legends is coming soon. The announced
             island code is {MAP.code}; once the map is approved and live, players
@@ -165,7 +165,7 @@ export default function StarWarsTycoonSidekickLegendsPage() {
       </ContentSection>
 
       <ContentSection title="Why it's" accent="new">
-        <p className="text-center leading-relaxed text-gray-400 md:text-left">
+        <p className="text-center leading-relaxed text-gray-400">
           Sidekick Legends is the next NLDEVS Star Wars Tycoon launch, built for
           players who want long-term tycoon progression instead of quick one-round
           matches. Automatic saves, rebirths, workers, sections, and upgrades give the map a

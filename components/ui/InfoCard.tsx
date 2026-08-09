@@ -11,7 +11,7 @@ export function InfoCard({
   children: ReactNode;
 }) {
   return (
-    <div className="clip-corner border border-edge/70 bg-ink-800/50 p-6 text-center transition-colors duration-300 hover:border-neon-cyan/50 md:text-left">
+    <div className="clip-corner border border-edge/70 bg-ink-800/50 p-6 text-center transition-colors duration-300 hover:border-neon-cyan/50">
       <h3 className="font-bold text-white">{heading}</h3>
       <p className="mt-2.5 leading-relaxed text-gray-400">{children}</p>
     </div>
@@ -35,14 +35,14 @@ export function FaqList({
   );
 }
 
-/** Row of pill links — "similar maps", "related pages". Centres on phones. */
+/** Row of pill links for "similar maps" and "related pages". */
 export function PillLinks({
   links,
 }: {
   links: { href: string; label: string }[];
 }) {
   return (
-    <div className="flex flex-wrap justify-center gap-2.5 md:justify-start">
+    <div className="flex flex-wrap justify-center gap-2.5">
       {links.map((l) => (
         <Link
           key={l.href}
@@ -59,7 +59,7 @@ export function PillLinks({
 /** "Back to top" affordance at the foot of an inner page. */
 export function BackToTop() {
   return (
-    <div className="mt-16 flex justify-center md:justify-start">
+    <div className="mt-16 flex justify-center">
       <a
         href="#top"
         className="text-sm text-gray-500 transition hover:text-neon-cyan"

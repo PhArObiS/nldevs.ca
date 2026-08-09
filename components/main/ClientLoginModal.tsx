@@ -184,28 +184,28 @@ export default function ClientLoginModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-center justify-center bg-black/75 px-4 py-6 backdrop-blur-md"
+      className="fixed inset-0 z-[80] flex items-start justify-center bg-black/75 px-3 py-3 backdrop-blur-md sm:items-center sm:px-4 sm:py-6"
       role="dialog"
       aria-modal="true"
       aria-labelledby="client-login-title"
     >
-      <div className="clip-corner relative max-h-[calc(100vh-3rem)] w-full max-w-xl overflow-y-auto border border-neon-cyan/40 bg-ink/95 p-6 shadow-[0_0_48px_rgba(34,211,238,0.18)]">
+      <div className="clip-corner relative max-h-[calc(100dvh-1.5rem)] w-full max-w-[22rem] overflow-y-auto border border-neon-cyan/40 bg-ink/95 p-4 shadow-[0_0_48px_rgba(34,211,238,0.18)] sm:max-h-[calc(100vh-3rem)] sm:max-w-xl sm:p-6">
         <button
           type="button"
           onClick={closeForSession}
-          className="clip-corner-sm absolute right-4 top-4 border border-edge-bright bg-ink-800/80 px-3 py-1.5 text-sm font-semibold text-gray-300 transition hover:border-neon-cyan hover:text-white"
+          className="clip-corner-sm absolute right-3 top-3 min-h-10 border border-edge-bright bg-ink-800/90 px-3 text-sm font-semibold text-gray-300 transition hover:border-neon-cyan hover:text-white sm:right-4 sm:top-4"
           aria-label="Close client login"
         >
           Skip
         </button>
 
-        <div className="flex items-center gap-3 pr-16">
+        <div className="flex items-center gap-2.5 pr-16 sm:gap-3">
           <Image
             src="/NavLogo.png"
             alt=""
             aria-hidden="true"
-            width={42}
-            height={42}
+            width={36}
+            height={36}
             priority
           />
           <div>
@@ -222,7 +222,7 @@ export default function ClientLoginModal() {
           </p>
         )}
 
-        <form className="mt-6 space-y-4" onSubmit={onSubmit}>
+        <form className="mt-5 space-y-3 sm:mt-6 sm:space-y-4" onSubmit={onSubmit}>
           <div>
             <label htmlFor="client-name" className="text-sm font-semibold text-gray-200">
               Name
@@ -236,7 +236,7 @@ export default function ClientLoginModal() {
               onChange={(event) => setName(event.target.value)}
               required
               minLength={2}
-              className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+              className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
               placeholder="Your name"
             />
           </div>
@@ -253,11 +253,17 @@ export default function ClientLoginModal() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
-              className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+              className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
               placeholder="you@example.com"
             />
           </div>
 
+          <details className="border border-edge bg-ink-800/40 p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
+              Optional player info
+            </summary>
+
+            <div className="mt-4 space-y-3 sm:space-y-4">
           <div>
             <label
               htmlFor="client-fortnite-name"
@@ -272,7 +278,7 @@ export default function ClientLoginModal() {
               autoComplete="nickname"
               value={fortniteName}
               onChange={(event) => setFortniteName(event.target.value)}
-              className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+              className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
               placeholder="Epic / Fortnite name"
             />
           </div>
@@ -292,7 +298,7 @@ export default function ClientLoginModal() {
                 autoComplete="username"
                 value={discordName}
                 onChange={(event) => setDiscordName(event.target.value)}
-                className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+                className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
                 placeholder="Discord username"
               />
             </div>
@@ -309,7 +315,7 @@ export default function ClientLoginModal() {
                 name="avatarStyle"
                 value={avatarStyle}
                 onChange={(event) => setAvatarStyle(event.target.value)}
-                className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition focus:border-neon-cyan"
+                className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
               >
                 <option value="">Choose avatar style</option>
                 {AVATAR_OPTIONS.map((option) => (
@@ -333,7 +339,7 @@ export default function ClientLoginModal() {
               name="favoriteMap"
               value={favoriteMap}
               onChange={(event) => setFavoriteMap(event.target.value)}
-              className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition focus:border-neon-cyan"
+              className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
             >
               <option value="">Choose a map</option>
               {FAVORITE_MAPS.map((map) => (
@@ -358,7 +364,7 @@ export default function ClientLoginModal() {
                 type="file"
                 accept="image/png,image/jpeg,image/webp,image/gif"
                 onChange={(event) => setImageFile(event.target.files?.[0] ?? null)}
-                className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-sm text-gray-300 outline-none transition file:mr-3 file:border-0 file:bg-neon-cyan file:px-3 file:py-1.5 file:font-bold file:text-ink focus:border-neon-cyan"
+                className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-sm text-gray-300 outline-none transition file:mr-3 file:border-0 file:bg-neon-cyan file:px-3 file:py-1.5 file:font-bold file:text-ink focus:border-neon-cyan sm:px-4 sm:py-3"
               />
             </div>
 
@@ -374,7 +380,7 @@ export default function ClientLoginModal() {
                 name="imagePurpose"
                 value={imagePurpose}
                 onChange={(event) => setImagePurpose(event.target.value)}
-                className="mt-2 w-full border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition focus:border-neon-cyan"
+                className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
               >
                 <option value="">Choose type</option>
                 {IMAGE_PURPOSES.map((purpose) => (
@@ -399,8 +405,8 @@ export default function ClientLoginModal() {
               value={message}
               onChange={(event) => setMessage(event.target.value)}
               maxLength={600}
-              rows={3}
-              className="mt-2 w-full resize-none border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+              rows={2}
+              className="mt-2 w-full resize-none border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
               placeholder="Ideas, feedback, playtest interest, or anything you want to send."
             />
           </div>
@@ -414,6 +420,8 @@ export default function ClientLoginModal() {
             />
             <span>NLDEVS can contact me about maps, updates, or playtests.</span>
           </label>
+            </div>
+          </details>
 
           <button
             type="submit"

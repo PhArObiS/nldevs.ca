@@ -41,7 +41,7 @@ export default function IslandCode({
         aria-hidden="true"
       />
 
-      <div className="relative flex flex-col items-center gap-5 text-center md:flex-row md:justify-between md:text-left">
+      <div className="relative flex flex-col items-center justify-center gap-5 text-center md:flex-row">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
             Island code
