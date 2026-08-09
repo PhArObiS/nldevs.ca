@@ -36,7 +36,7 @@ const gunGameMaps = [
   {
     title: "TMNT City — Gun Game",
     code: "1383-6989-3967",
-    image: "/CityTMNT.jpeg",
+    image: "/CityTMNT.jpg",
     mode: "Gun Game",
     notes:
       "TMNT-themed combat loops with fast weapon progression and replayable rounds.",

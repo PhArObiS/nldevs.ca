@@ -13,21 +13,21 @@ const LAST_UPDATED = "February 2026";
 export const metadata: Metadata = {
   title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
   description:
-    "Browse Squid Game-style Fortnite maps and map codes by NLDEVS — minigames, Red vs Blue chaos, and battle royale variants built with UEFN.",
+    "Browse Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 Bots Squid Royale Boss, Sidekick Siege 99 Bots, and RvB Squid Minigame.",
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     type: "website",
     url: `${SITE_URL}${PAGE_PATH}`,
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
+      "Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue chaos.",
     images: [{ url: `${SITE_URL}/RedVsBlueSquidMinigame.jpg` }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
+      "Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue chaos.",
     images: [`${SITE_URL}/RedVsBlueSquidMinigame.jpg`],
   },
 };
@@ -36,7 +36,7 @@ const squidMaps: {
   title: string;
   code: string;
   image: string;
-  type: "Minigame" | "RvB" | "Battle Royale" | "Challenge";
+  type: "Minigame" | "RvB" | "Challenge" | "99 Bots" | "Sidekicks";
   notes: string;
   detailsHref?: string;
 }[] = [
@@ -49,13 +49,22 @@ const squidMaps: {
     detailsHref: "/rvb-squid-minigame",
   },
   {
-    title: "Tilted Squid Royale 🏆 (99 Bots)",
-    code: "1116-7765-9076",
-    image: "/TiltedSquidRoyale99Bots.jpeg",
-    type: "Battle Royale",
+    title: "99 Bots Squid Royale Boss",
+    code: "0596-3765-4845",
+    image: "/99 Bots Squid Royale Boss.jpg",
+    type: "99 Bots",
     notes:
-      "Squid-inspired Tilted battle royale with bots — great for practice and quick wins.",
-    detailsHref: "/tilted-squid-royale-99-bots",
+      "Open-world PvE 99 bots survival with boss battles, new weapons, wildlife riding, ranks, leaderboards, and saved stats.",
+    detailsHref: "/99-bots-squid-royale-boss",
+  },
+  {
+    title: "Sidekick Siege 99 Bots",
+    code: "5577-7953-8449",
+    image: "/Squid99BotsSidekicks.jpg",
+    type: "Sidekicks",
+    notes:
+      "Sidekick-focused 99 bots survival with boss battles, PvE action, saved loadouts, ranks, leaderboards, and up to 5 players.",
+    detailsHref: "/sidekick-siege-99-bots",
   },
 ];
 
@@ -84,7 +93,7 @@ export default function SquidGameFortniteMapsPage() {
     "@type": "CollectionPage",
     name: "Best Squid Game Fortnite Maps & Map Codes",
     description:
-      "A curated list of Squid Game-style Fortnite maps and map codes built with UEFN by NLDEVS.",
+      "A curated list of Squid Game-style Fortnite maps and map codes built with UEFN by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue maps.",
     url: `${SITE_URL}${PAGE_PATH}`,
     isPartOf: { "@type": "WebSite", name: "NLDEVS", url: SITE_URL },
     mainEntity: {
@@ -129,7 +138,7 @@ export default function SquidGameFortniteMapsPage() {
         eyebrow="Elimination rounds"
         title="Best Squid Game"
         accent="Fortnite maps"
-        description="Squid-style minigames, Red vs Blue chaos, and battle royale variants built with UEFN. Each entry includes an island code and gameplay type."
+        description="Squid-style minigames, 99 bots survival, sidekicks, boss battles, and Red vs Blue chaos built with UEFN. Each entry includes an island code and gameplay type."
         lastUpdated={LAST_UPDATED}
       />
 
@@ -147,7 +156,8 @@ export default function SquidGameFortniteMapsPage() {
           </p>
           <p>
             Popular Squid-style modes include Red Light Green Light, survival
-            rounds, objective minigames, and battle royale variants. Map
+            rounds, objective minigames, 99 bots survival, boss battles, and
+            party challenges. Map
             availability and XP can change over time depending on updates and
             island revisions.
           </p>

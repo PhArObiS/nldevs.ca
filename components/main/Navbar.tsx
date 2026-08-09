@@ -15,7 +15,21 @@ type NavItem = {
 
 const NAV: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/star-wars-fortnite-maps", label: "Star Wars" },
+  {
+    href: "/star-wars-fortnite-maps",
+    label: "Star Wars",
+    children: [
+      {
+        href: "/star-wars-tycoon-sidekick-legends",
+        label: "Star Wars Tycoon",
+      },
+      { href: "/star-wars-mega-rvb", label: "Mega RvB" },
+      {
+        href: "/star-wars-tilted-99-bots-royale",
+        label: "Tilted 99 Bots Royale",
+      },
+    ],
+  },
   {
     href: "/tmnt-fortnite-maps",
     label: "TMNT",
@@ -29,7 +43,8 @@ const NAV: NavItem[] = [
     label: "Squid Game",
     children: [
       { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
-      { href: "/tilted-squid-royale-99-bots", label: "Tilted Squid Royale (99 Bots)" },
+      { href: "/99-bots-squid-royale-boss", label: "99 Bots Squid Royale Boss" },
+      { href: "/sidekick-siege-99-bots", label: "Sidekick Siege 99 Bots" },
     ],
   },
   { href: "/fortnite-gun-game-maps", label: "Gun Games" },
@@ -37,6 +52,10 @@ const NAV: NavItem[] = [
 ];
 
 const FEATURED_SUBLINKS = [
+  {
+    href: "/star-wars-tycoon-sidekick-legends",
+    label: "Star Wars Tycoon Sidekick Legends",
+  },
   { href: "/winterfest-demon-hunters", label: "Winterfest Demon Hunters" },
 ];
 

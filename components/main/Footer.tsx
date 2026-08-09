@@ -18,8 +18,15 @@ const footerNav = [
   {
     heading: "Featured",
     links: [
+      {
+        href: "/star-wars-tycoon-sidekick-legends",
+        label: "Star Wars Tycoon Sidekick Legends",
+      },
+      { href: "/star-wars-mega-rvb", label: "Star Wars Mega RvB" },
       { href: "/tmnt-mega-ramp-survival", label: "TMNT Mega Ramp Survival" },
       { href: "/tmnt-city", label: "TMNT City" },
+      { href: "/99-bots-squid-royale-boss", label: "99 Bots Squid Royale Boss" },
+      { href: "/sidekick-siege-99-bots", label: "Sidekick Siege 99 Bots" },
       { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
       { href: "/winterfest-demon-hunters", label: "Winterfest Demon Hunters" },
     ],

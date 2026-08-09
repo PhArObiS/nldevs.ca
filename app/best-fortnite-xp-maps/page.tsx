@@ -62,7 +62,7 @@ const xpMaps = [
   {
     title: "TMNT City",
     code: "1383-6989-3967",
-    image: "/CityTMNT.jpeg",
+    image: "/CityTMNT.jpg",
     type: "Active",
     notes: "Exploration and combat routes with consistent XP loops.",
     detailsHref: "/tmnt-city",
@@ -74,14 +74,6 @@ const xpMaps = [
     type: "Active",
     notes: "Fast rounds and objective-based play.",
     detailsHref: "/rvb-squid-minigame",
-  },
-  {
-    title: "Tilted Squid Royale (99 Bots)",
-    code: "1116-7765-9076",
-    image: "/TiltedSquidRoyale99Bots.jpeg",
-    type: "Mixed",
-    notes: "Battle royale vs bots with repeatable matches.",
-    detailsHref: "/tilted-squid-royale-99-bots",
   },
 ];
 

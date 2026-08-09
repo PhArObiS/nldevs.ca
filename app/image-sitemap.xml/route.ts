@@ -6,6 +6,23 @@ const ENTRIES = [
     images: [{ loc: SITE_LOGO_URL, title: "NLDEVS logo" }],
   },
   {
+    page: "/star-wars-fortnite-maps",
+    images: [
+      {
+        loc: `${SITE_URL}/StarWarsRvB.jpg`,
+        title: "Star Wars Mega RvB Fortnite map",
+      },
+      {
+        loc: `${SITE_URL}/TycoonSidekicks.jpg`,
+        title: "Star Wars Tycoon Sidekick Legends Fortnite map",
+      },
+      {
+        loc: `${SITE_URL}/StarWarsTilted99BotsRoyale.jpg`,
+        title: "Star Wars Tilted 99 Bots Royale Fortnite map",
+      },
+    ],
+  },
+  {
     page: "/tmnt-fortnite-maps",
     images: [
       {
@@ -13,7 +30,7 @@ const ENTRIES = [
         title: "TMNT Mega Ramp Survival Fortnite map",
       },
       {
-        loc: `${SITE_URL}/CityTMNT.jpeg`,
+        loc: `${SITE_URL}/CityTMNT.jpg`,
         title: "TMNT City Fortnite map",
       },
     ],
@@ -26,8 +43,12 @@ const ENTRIES = [
         title: "RvB Squid Minigame Fortnite map",
       },
       {
-        loc: `${SITE_URL}/TiltedSquidRoyale99Bots.jpeg`,
-        title: "Tilted Squid Royale 99 Bots Fortnite map",
+        loc: `${SITE_URL}/99 Bots Squid Royale Boss.jpg`,
+        title: "99 Bots Squid Royale Boss Fortnite map",
+      },
+      {
+        loc: `${SITE_URL}/Squid99BotsSidekicks.jpg`,
+        title: "Sidekick Siege 99 Bots Fortnite map",
       },
     ],
   },
@@ -39,7 +60,7 @@ const ENTRIES = [
         title: "Winterfest Demon Hunters Fortnite gun game map",
       },
       {
-        loc: `${SITE_URL}/CityTMNT.jpeg`,
+        loc: `${SITE_URL}/CityTMNT.jpg`,
         title: "TMNT City Fortnite gun game map",
       },
     ],
@@ -58,6 +79,33 @@ const ENTRIES = [
     ],
   },
   {
+    page: "/star-wars-tycoon-sidekick-legends",
+    images: [
+      {
+        loc: `${SITE_URL}/TycoonSidekicks.jpg`,
+        title: "Star Wars Tycoon Sidekick Legends Fortnite island code",
+      },
+    ],
+  },
+  {
+    page: "/star-wars-mega-rvb",
+    images: [
+      {
+        loc: `${SITE_URL}/StarWarsRvB.jpg`,
+        title: "Star Wars Mega RvB Fortnite island code",
+      },
+    ],
+  },
+  {
+    page: "/star-wars-tilted-99-bots-royale",
+    images: [
+      {
+        loc: `${SITE_URL}/StarWarsTilted99BotsRoyale.jpg`,
+        title: "Star Wars Tilted 99 Bots Royale Fortnite island code",
+      },
+    ],
+  },
+  {
     page: "/tmnt-mega-ramp-survival",
     images: [
       {
@@ -70,7 +118,7 @@ const ENTRIES = [
     page: "/tmnt-city",
     images: [
       {
-        loc: `${SITE_URL}/CityTMNT.jpeg`,
+        loc: `${SITE_URL}/CityTMNT.jpg`,
         title: "TMNT City Fortnite island code",
       },
     ],
@@ -85,11 +133,20 @@ const ENTRIES = [
     ],
   },
   {
-    page: "/tilted-squid-royale-99-bots",
+    page: "/99-bots-squid-royale-boss",
     images: [
       {
-        loc: `${SITE_URL}/TiltedSquidRoyale99Bots.jpeg`,
-        title: "Tilted Squid Royale 99 Bots Fortnite island code",
+        loc: `${SITE_URL}/99 Bots Squid Royale Boss.jpg`,
+        title: "99 Bots Squid Royale Boss Fortnite island code",
+      },
+    ],
+  },
+  {
+    page: "/sidekick-siege-99-bots",
+    images: [
+      {
+        loc: `${SITE_URL}/Squid99BotsSidekicks.jpg`,
+        title: "Sidekick Siege 99 Bots Fortnite island code",
       },
     ],
   },

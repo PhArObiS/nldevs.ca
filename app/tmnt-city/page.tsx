@@ -8,7 +8,7 @@ import { SITE_URL } from "@/constants/site";
 const MAP = {
   title: "TMNT City",
   code: "1383-6989-3967",
-  image: "/CityTMNT.jpeg",
+  image: "/CityTMNT.jpg",
   url: `${SITE_URL}/tmnt-city`,
 };
 

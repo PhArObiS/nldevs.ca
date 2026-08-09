@@ -110,6 +110,37 @@
     }
   }
 
+  .floating-logo {
+    animation: logo-float 24s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  @keyframes logo-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(-12deg) scale(0.9);
+    }
+    25% {
+      transform: translate3d(var(--float-x1), var(--float-y1), 0)
+        rotate(var(--float-r1)) scale(1.05);
+    }
+    55% {
+      transform: translate3d(var(--float-x2), var(--float-y2), 0)
+        rotate(var(--float-r2)) scale(0.96);
+    }
+    80% {
+      transform: translate3d(calc(var(--float-x1) * -0.45), calc(var(--float-y2) * 0.55), 0)
+        rotate(var(--float-r3)) scale(1.02);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .floating-logo {
+      animation: none;
+    }
+  }
+
   /* Small uppercase label above a heading. */
   .eyebrow {
     font-size: 0.72rem;

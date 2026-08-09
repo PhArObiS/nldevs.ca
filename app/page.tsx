@@ -19,6 +19,15 @@ const featuredMaps: {
   detailsHref?: string;
 }[] = [
   {
+    title: "Star Wars Tycoon Sidekick Legends",
+    code: "3205-2388-4588",
+    image: "/TycoonSidekicks.jpg",
+    category: "COMING SOON / Star Wars Tycoon",
+    notes:
+      "Coming soon: Star Wars Tycoon launch with Sidekick and Hero unlocks, new sections, workers, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+    detailsHref: "/star-wars-tycoon-sidekick-legends",
+  },
+  {
     title: "TMNT Mega Ramp Survival",
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
@@ -29,7 +38,7 @@ const featuredMaps: {
   {
     title: "TMNT City",
     code: "1383-6989-3967",
-    image: "/CityTMNT.jpeg",
+    image: "/CityTMNT.jpg",
     category: "TMNT / Experience",
     notes: "Explore a TMNT-themed city experience built in UEFN.",
     detailsHref: "/tmnt-city",
@@ -43,12 +52,22 @@ const featuredMaps: {
     detailsHref: "/rvb-squid-minigame",
   },
   {
-    title: "Tilted Squid Royale (99 Bots)",
-    code: "1116-7765-9076",
-    image: "/TiltedSquidRoyale99Bots.jpeg",
-    category: "Squid Game / Battle Royale",
-    notes: "Tilted battle royale with bots — great for practice and quick wins.",
-    detailsHref: "/tilted-squid-royale-99-bots",
+    title: "99 Bots Squid Royale Boss",
+    code: "0596-3765-4845",
+    image: "/99 Bots Squid Royale Boss.jpg",
+    category: "Squid Game / 99 Bots",
+    notes:
+      "Open-world PvE survival with 99 bots, boss battles, new weapons, wildlife riding, ranks, leaderboards, and saved stats.",
+    detailsHref: "/99-bots-squid-royale-boss",
+  },
+  {
+    title: "Sidekick Siege 99 Bots",
+    code: "5577-7953-8449",
+    image: "/Squid99BotsSidekicks.jpg",
+    category: "Squid Game / Sidekicks",
+    notes:
+      "Sidekick-focused 99-bot survival with boss battles, PvE action, saved loadouts, ranks, leaderboards, and up to 5 players.",
+    detailsHref: "/sidekick-siege-99-bots",
   },
   {
     title: "Winterfest Demon Hunters",
@@ -94,6 +113,25 @@ const faqs: { q: string; a: ReactNode; plain: string }[] = [
       "XP maps vary by update and calibration. We maintain a curated list of efficient XP maps on our Best Fortnite XP Maps page.",
   },
   {
+    q: "What is the newest NLDEVS Fortnite map?",
+    a: (
+      <>
+        Our upcoming featured launch is{" "}
+        <Link
+          href="/star-wars-tycoon-sidekick-legends"
+          className="text-neon-cyan underline underline-offset-2 hover:text-white"
+        >
+          Star Wars Tycoon Sidekick Legends
+        </Link>
+        , a coming soon Star Wars Tycoon map with Sidekick and Hero unlocks, new sections,
+        workers, rebirth leaderboard climbing, auto-saving progress, and up to 4
+        players.
+      </>
+    ),
+    plain:
+      "Our upcoming featured launch is Star Wars Tycoon Sidekick Legends, a coming soon Star Wars Tycoon map with Sidekick and Hero unlocks, new sections, workers, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+  },
+  {
     q: "Are these maps made with UEFN?",
     a: "Yes — our games are built with Unreal Editor for Fortnite (UEFN) with a focus on replayability and fun gameplay loops.",
     plain:
@@ -113,7 +151,7 @@ export default function Home() {
     "@type": "CollectionPage",
     name: "NLDEVS — UEFN Game Studio (Fortnite Experiences & Map Codes)",
     description:
-      "NLDEVS is a UEFN game studio building Fortnite experiences. Explore our 6 published games and get island codes, screenshots, and gameplay notes.",
+      "NLDEVS is a UEFN game studio building Fortnite experiences. Explore our published games and get island codes, screenshots, and gameplay notes.",
     url: `${SITE_URL}/`,
     image: SITE_LOGO_URL,
     primaryImageOfPage: {
@@ -181,7 +219,7 @@ export default function Home() {
             eyebrow="Island codes"
             title="Featured"
             accent="NLDEVS games"
-            description="Six live experiences. Tap a card for the full details, or copy the code and jump straight in."
+            description="Explore live experiences and new launches. Tap a card for the full details, or copy the code and jump straight in."
           />
         </Reveal>
 

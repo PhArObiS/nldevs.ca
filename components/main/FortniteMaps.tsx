@@ -4,6 +4,13 @@ import { RevealGroup, RevealItem } from "../ui/Reveal";
 
 const maps = [
   {
+    title: "Star Wars Tycoon Sidekick Legends",
+    code: "3205-2388-4588",
+    image: "/TycoonSidekicks.jpg",
+    mode: "Coming Soon",
+    slug: "star-wars-tycoon-sidekick-legends",
+  },
+  {
     title: "TMNT Mega Ramp Survival",
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
@@ -13,7 +20,7 @@ const maps = [
   {
     title: "TMNT City",
     code: "1383-6989-3967",
-    image: "/CityTMNT.jpeg",
+    image: "/CityTMNT.jpg",
     mode: "Adventure",
     slug: "tmnt-city",
   },
@@ -25,11 +32,18 @@ const maps = [
     slug: "rvb-squid-minigame",
   },
   {
-    title: "Tilted Squid Royale (99 Bots)",
-    code: "1116-7765-9076",
-    image: "/TiltedSquidRoyale99Bots.jpeg",
-    mode: "Battle Royale",
-    slug: "tilted-squid-royale-99-bots",
+    title: "99 Bots Squid Royale Boss",
+    code: "0596-3765-4845",
+    image: "/99 Bots Squid Royale Boss.jpg",
+    mode: "99 Bots",
+    slug: "99-bots-squid-royale-boss",
+  },
+  {
+    title: "Sidekick Siege 99 Bots",
+    code: "5577-7953-8449",
+    image: "/Squid99BotsSidekicks.jpg",
+    mode: "Sidekicks",
+    slug: "sidekick-siege-99-bots",
   },
   {
     title: "Winterfest Demon Hunters",

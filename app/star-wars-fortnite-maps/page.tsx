@@ -1,24 +1,9 @@
-/**
- * DEMO PAGE — placeholder content.
- *
- * Built to the same structure as the other hub pages so it is ready to fill in,
- * but nothing here is real yet. Before this goes live:
- *
- *   1. Replace the entries in `starWarsMaps` with real titles, island codes,
- *      and screenshots (drop the images in /public).
- *   2. Delete the <PlaceholderNotice /> block below.
- *   3. Remove `robots: { index: false }` from the metadata export.
- *   4. Add "/star-wars-fortnite-maps" to HUB_ROUTES in app/sitemap.ts.
- *
- * Until then the page is noindex and absent from the sitemap on purpose —
- * placeholder island codes indexed by Google would send players to nothing.
- */
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import FortniteMapsCard from "@/components/sub/FortniteMapsCard";
 import PageHeader from "@/components/ui/PageHeader";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
-import { BackToTop, PillLinks } from "@/components/ui/InfoCard";
+import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SITE_URL } from "@/constants/site";
 
@@ -28,16 +13,34 @@ const LAST_UPDATED = "August 2026";
 export const metadata: Metadata = {
   title: "Star Wars Fortnite Maps & Island Codes | NLDEVS",
   description:
-    "Star Wars themed Fortnite maps and island codes built with UEFN by NLDEVS.",
+    "Browse Star Wars Fortnite maps and island codes by NLDEVS, including Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB, and Star Wars Tilted 99 Bots Royale.",
+  keywords: [
+    "Star Wars Fortnite maps",
+    "Star Wars Fortnite map codes",
+    "Star Wars island codes",
+    "Star Wars Tycoon Sidekick Legends",
+    "Star Wars Mega RvB",
+    "Star Wars Tilted 99 Bots Royale",
+    "Star Wars Tycoon",
+    "Fortnite Star Wars tycoon",
+    "Star Wars Tycoon map code",
+    "UEFN Star Wars maps",
+  ],
   alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  // Placeholder content — do not index until the real maps are in.
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     url: `${SITE_URL}${PAGE_PATH}`,
     title: "Star Wars Fortnite Maps & Island Codes | NLDEVS",
     description:
-      "Star Wars themed Fortnite maps and island codes built with UEFN by NLDEVS.",
+      "Star Wars Fortnite maps and island codes by NLDEVS — tycoon, Red vs Blue, and bot royale experiences.",
+    images: [{ url: `${SITE_URL}/StarWarsRvB.jpg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Star Wars Fortnite Maps & Island Codes | NLDEVS",
+    description:
+      "Star Wars Fortnite maps and island codes by NLDEVS — tycoon, Red vs Blue, and bot royale experiences.",
+    images: [`${SITE_URL}/StarWarsRvB.jpg`],
   },
 };
 
@@ -45,49 +48,57 @@ const starWarsMaps: {
   title: string;
   code: string;
   image: string;
-  type: "Survival" | "Adventure" | "Gun Game" | "PvP" | "Experience";
+  type: string;
   notes: string;
   detailsHref?: string;
 }[] = [
   {
-    title: "Placeholder — Star Wars Map One",
-    code: "0000-0000-0000",
-    // Demo art: reusing an existing screenshot until real captures exist.
-    image: "/MegaRampSurvival.jpeg",
-    type: "Survival",
+    title: "Star Wars Tycoon Sidekick Legends",
+    code: "3205-2388-4588",
+    image: "/TycoonSidekicks.jpg",
+    type: "Coming Soon / Tycoon",
     notes:
-      "Placeholder entry. Swap in the real title, island code, and screenshot.",
+      "Coming soon: Star Wars Tycoon with Sidekick and Hero unlocks, new sections and upgrades, workers that boost production, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+    detailsHref: "/star-wars-tycoon-sidekick-legends",
   },
   {
-    title: "Placeholder — Star Wars Map Two",
-    code: "0000-0000-0000",
-    image: "/CityTMNT.jpeg",
-    type: "Experience",
+    title: "Star Wars Mega RvB",
+    code: "7323-8876-4862",
+    image: "/StarWarsRvB.jpg",
+    type: "Team Deathmatch",
     notes:
-      "Placeholder entry. Swap in the real title, island code, and screenshot.",
+      "Red vs Blue PvP with Star Wars weapons, custom weapons, vehicles, achievements, music, and ranking up to Unreal.",
+    detailsHref: "/star-wars-mega-rvb",
   },
   {
-    title: "Placeholder — Star Wars Map Three",
-    code: "0000-0000-0000",
-    image: "/WinterfestDemonHuntersGunGame.jpeg",
-    type: "Gun Game",
+    title: "Star Wars Tilted 99 Bots Royale",
+    code: "1116-7765-9076",
+    image: "/StarWarsTilted99BotsRoyale.jpg",
+    type: "Bot Royale",
     notes:
-      "Placeholder entry. Swap in the real title, island code, and screenshot.",
+      "Open-world PvE survival with 99 bots, boss battles, unlockable heroes, saved stats and loadouts, and Star Wars-themed Tilted action.",
+    detailsHref: "/star-wars-tilted-99-bots-royale",
   },
 ];
 
-function PlaceholderNotice() {
-  return (
-    <div className="clip-corner mt-8 border border-amber-500/40 bg-amber-500/10 p-5 text-center md:text-left">
-      <p className="text-sm leading-relaxed text-amber-200">
-        <span className="font-semibold">Demo page.</span> The maps below are
-        placeholders with fake island codes, and the page is set to{" "}
-        <code className="font-mono">noindex</code> so search engines skip it. See
-        the comment at the top of this file for the go-live checklist.
-      </p>
-    </div>
-  );
-}
+const faqs = [
+  {
+    q: "What are the best Star Wars Fortnite maps by NLDEVS?",
+    a: "NLDEVS currently features Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB, and Star Wars Tilted 99 Bots Royale.",
+  },
+  {
+    q: "What is the Star Wars Tycoon Sidekick Legends island code?",
+    a: "Star Wars Tycoon Sidekick Legends is coming soon. The announced island code is 3205-2388-4588.",
+  },
+  {
+    q: "Which Star Wars Fortnite map is best for PvP?",
+    a: "Star Wars Mega RvB is the best fit for PvP because it is a Red vs Blue team deathmatch map with Star Wars weapons, custom weapons, vehicles, achievements, and ranking.",
+  },
+  {
+    q: "Which Star Wars Fortnite map has bots?",
+    a: "Star Wars Tilted 99 Bots Royale is the bot-focused Star Wars map, with 99-bot royale survival, boss battles, unlockable heroes, saved stats, and saved loadouts.",
+  },
+];
 
 export default function StarWarsFortniteMapsPage() {
   const pageSchema = {
@@ -95,9 +106,17 @@ export default function StarWarsFortniteMapsPage() {
     "@type": "CollectionPage",
     name: "Star Wars Fortnite Maps & Island Codes",
     description:
-      "Star Wars themed Fortnite maps and island codes built with UEFN by NLDEVS.",
+      "A curated list of Star Wars Fortnite maps and island codes built with UEFN by NLDEVS.",
     url: `${SITE_URL}${PAGE_PATH}`,
     isPartOf: { "@type": "WebSite", name: "NLDEVS", url: SITE_URL },
+    about: [
+      "Star Wars Fortnite maps",
+      "Star Wars island codes",
+      "Fortnite tycoon maps",
+      "Fortnite Red vs Blue maps",
+      "Fortnite 99 bots royale maps",
+      "UEFN Star Wars islands",
+    ],
     mainEntity: {
       "@type": "ItemList",
       name: "Star Wars Fortnite Maps",
@@ -112,7 +131,9 @@ export default function StarWarsFortniteMapsPage() {
           gamePlatform: "Fortnite",
           genre: `Star Wars Fortnite Map (${m.type})`,
           description: `Fortnite island code: ${m.code}. ${m.notes}`,
-          url: `${SITE_URL}${PAGE_PATH}#${m.code.replaceAll("-", "")}`,
+          url: m.detailsHref
+            ? `${SITE_URL}${m.detailsHref}`
+            : `${SITE_URL}${PAGE_PATH}#${m.code.replaceAll("-", "")}`,
           image: `${SITE_URL}${m.image}`,
           publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
         },
@@ -120,20 +141,29 @@ export default function StarWarsFortniteMapsPage() {
     },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main id="top" className="mx-auto w-full max-w-6xl px-6 py-14">
       <JsonLd id="starwars-collection-schema" data={pageSchema} />
+      <JsonLd id="starwars-faq-schema" data={faqSchema} />
 
       <PageHeader
         crumbs={[{ label: "Home", href: "/" }, { label: "Star Wars Maps" }]}
         eyebrow="A galaxy far, far away"
         title="Star Wars"
         accent="Fortnite maps"
-        description="Star Wars themed Fortnite experiences built with Unreal Editor for Fortnite. Each entry includes an island code and gameplay type."
+        description="Star Wars Fortnite experiences built with Unreal Editor for Fortnite. Explore tycoon progression, Red vs Blue PvP, bot royale survival, and island codes."
         lastUpdated={LAST_UPDATED}
-      >
-        <PlaceholderNotice />
-      </PageHeader>
+      />
 
       <ContentSection title="Star Wars map" accent="codes">
         <RevealGroup
@@ -165,6 +195,19 @@ export default function StarWarsFortniteMapsPage() {
           <li>Join the island and follow the in-game objectives.</li>
           <li>Favorite the map to find it faster next time.</li>
         </CenteredList>
+      </ContentSection>
+
+      <ContentSection title="What you'll" accent="find">
+        <CenteredList>
+          <li>Star Wars Tycoon progression with saves, rebirths, and rewards.</li>
+          <li>Red vs Blue team deathmatch with Star Wars weapons and vehicles.</li>
+          <li>99-bot royale survival with heroes, bosses, and saved loadouts.</li>
+          <li>UEFN-built experiences designed for repeat sessions with friends.</li>
+        </CenteredList>
+      </ContentSection>
+
+      <ContentSection title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
       </ContentSection>
 
       <ContentSection title="Related" accent="pages">

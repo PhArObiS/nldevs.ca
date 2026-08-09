@@ -7,6 +7,7 @@ import { SITE_URL } from "@/constants/site";
  * to crawlers as a 404.
  */
 const HUB_ROUTES = [
+  "/star-wars-fortnite-maps",
   "/tmnt-fortnite-maps",
   "/squid-game-fortnite-maps",
   "/fortnite-gun-game-maps",
@@ -14,10 +15,14 @@ const HUB_ROUTES = [
 ];
 
 const MAP_ROUTES = [
+  "/star-wars-tycoon-sidekick-legends",
+  "/star-wars-mega-rvb",
+  "/star-wars-tilted-99-bots-royale",
   "/tmnt-mega-ramp-survival",
   "/tmnt-city",
   "/rvb-squid-minigame",
-  "/tilted-squid-royale-99-bots",
+  "/99-bots-squid-royale-boss",
+  "/sidekick-siege-99-bots",
   "/winterfest-demon-hunters",
 ];
 
