@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `RvB Squid Minigame Map Code (${MAP.code}) | NLDEVS`,
     description: `Play RvB Squid Minigame in Fortnite. Map code ${MAP.code}.`,
+    images: [`${SITE_URL}${MAP.image}`],
   },
 };
 

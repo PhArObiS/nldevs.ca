@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import Breadcrumbs from "@/components/main/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/constants/site";
 
 type Crumb = { href?: string; label: string };
 
@@ -30,8 +32,24 @@ export default function PageHeader({
   lastUpdated,
   children,
 }: Props) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.label,
+      ...(crumb.href ? { item: `${SITE_URL}${crumb.href}` } : {}),
+    })),
+  };
+
   return (
     <header className="relative">
+      <JsonLd
+        id={`breadcrumb-schema-${crumbs.map((c) => c.label).join("-").toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+        data={breadcrumbSchema}
+      />
+
       {/* Neon glow behind the title */}
       <div
         className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full opacity-60 blur-3xl md:left-0 md:translate-x-0"

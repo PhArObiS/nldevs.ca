@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Winterfest Demon Hunters Map Code (${MAP.code}) | NLDEVS`,
     description: `Play Winterfest Demon Hunters in Fortnite. Map code ${MAP.code}.`,
+    images: [`${SITE_URL}${MAP.image}`],
   },
 };
 

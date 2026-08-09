@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${MAP.title} Map Code (${MAP.code}) | NLDEVS`,
     description: `Play ${MAP.title} in Fortnite. Map code ${MAP.code}.`,
+    images: [`${SITE_URL}${MAP.image}`],
   },
 };
 

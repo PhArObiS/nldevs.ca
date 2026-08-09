@@ -15,6 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: "NLDEVS",
+  category: "gaming",
 
   title: {
     default: "NLDEVS — UEFN Game Studio",
@@ -93,6 +95,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "NLDEVS",
+    alternateName: "NLDEVS UEFN Game Studio",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -102,6 +105,7 @@ export default function RootLayout({
     },
     image: SITE_LOGO_URL,
     description: "UEFN game studio building Fortnite experiences.",
+    email: "nldevsmtl@gmail.com",
     sameAs: SAME_AS,
   };
 
@@ -114,11 +118,6 @@ export default function RootLayout({
       "@type": "Organization",
       name: "NLDEVS",
       url: SITE_URL,
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
     },
   };
 

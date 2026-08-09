@@ -21,12 +21,14 @@ export const metadata: Metadata = {
     title: "Best TMNT Fortnite Maps & Map Codes | NLDEVS",
     description:
       "TMNT Fortnite maps and map codes by NLDEVS — TMNT Mega Ramp Survival and TMNT City.",
+    images: [{ url: `${SITE_URL}/MegaRampSurvival.jpeg` }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best TMNT Fortnite Maps & Map Codes | NLDEVS",
     description:
       "TMNT Fortnite maps and map codes by NLDEVS — TMNT Mega Ramp Survival and TMNT City.",
+    images: [`${SITE_URL}/MegaRampSurvival.jpeg`],
   },
 };
 

@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
     description:
       "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability.",
+    images: [{ url: `${SITE_URL}/WinterfestDemonHuntersGunGame.jpeg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
+    description:
+      "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability.",
+    images: [`${SITE_URL}/WinterfestDemonHuntersGunGame.jpeg`],
   },
 };
 

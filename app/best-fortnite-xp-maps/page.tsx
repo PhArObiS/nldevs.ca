@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDEVS",
     description:
       "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS.",
+    images: [{ url: `${SITE_URL}/MegaRampSurvival.jpeg` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDEVS",
+    description:
+      "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS.",
+    images: [`${SITE_URL}/MegaRampSurvival.jpeg`],
   },
 };
 

@@ -21,12 +21,14 @@ export const metadata: Metadata = {
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
       "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
+    images: [{ url: `${SITE_URL}/RedVsBlueSquidMinigame.jpg` }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
       "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
+    images: [`${SITE_URL}/RedVsBlueSquidMinigame.jpg`],
   },
 };
 
