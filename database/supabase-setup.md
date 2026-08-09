@@ -68,8 +68,8 @@ Table Editor -> player_leads
 
 You should see name, email, optional Fortnite name, source path, browser user
 agent, optional Discord name, avatar style, favorite map, message, uploaded
-image details, developer interest details, contact consent, and created
-timestamp.
+image details, developer interest details, contact consent, age/guardian
+attestation, and created timestamp.
 
 Returning-member login checks the latest row for that email. New-member signup
 updates an existing email profile instead of creating duplicate rows.
@@ -95,7 +95,9 @@ Add these environment variables locally and on the server:
 RESEND_API_KEY=your-resend-api-key
 WELCOME_EMAIL_FROM=NLDEVS <hello@nldevs.ca>
 WELCOME_EMAIL_REPLY_TO=nldevsmtl@gmail.com
+NEW_MEMBER_NOTIFY_EMAIL=nldevsmtl@gmail.com
 ```
 
 `WELCOME_EMAIL_FROM` must be an address/domain verified in Resend. If these
 variables are missing, the signup still saves normally and the email is skipped.
+`NEW_MEMBER_NOTIFY_EMAIL` receives a short email when a brand-new member joins.

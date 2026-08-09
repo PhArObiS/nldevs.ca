@@ -19,6 +19,7 @@ type PlayerLeadInput = {
   developerSkills?: unknown;
   developerAvailability?: unknown;
   contactConsent?: unknown;
+  ageAttestation?: unknown;
   website?: unknown;
 };
 
@@ -41,6 +42,7 @@ type LeadRow = {
   developer_skills: string | null;
   developer_availability: string | null;
   contact_consent: boolean | null;
+  age_attestation: boolean | null;
   created_at: string;
 };
 
@@ -147,6 +149,7 @@ function toClientProfile(row: LeadRow) {
     developerSkills: row.developer_skills ?? undefined,
     developerAvailability: row.developer_availability ?? undefined,
     contactConsent: row.contact_consent ?? false,
+    ageAttestation: row.age_attestation ?? false,
     savedAt: row.created_at,
   };
 }
@@ -179,6 +182,7 @@ async function findMemberByEmail({
     "developer_skills",
     "developer_availability",
     "contact_consent",
+    "age_attestation",
     "created_at",
   ].join(",");
 
@@ -291,6 +295,85 @@ async function sendWelcomeEmail({
   return { skipped: false };
 }
 
+async function sendOwnerNewMemberEmail({
+  profile,
+  sourcePath,
+}: {
+  profile: {
+    name: string;
+    email: string;
+    fortniteName: string;
+    discordName: string;
+    favoriteMap: string;
+    developerInterest: boolean;
+    developerRole: string;
+    developerPortfolio: string;
+    contactConsent: boolean;
+  };
+  sourcePath: string | null;
+}) {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const from = process.env.WELCOME_EMAIL_FROM;
+  const notifyEmail =
+    process.env.NEW_MEMBER_NOTIFY_EMAIL ||
+    process.env.WELCOME_EMAIL_REPLY_TO ||
+    "nldevsmtl@gmail.com";
+
+  if (!resendApiKey || !from || PLACEHOLDER_KEYS.has(resendApiKey)) {
+    return { skipped: true };
+  }
+
+  const rows = [
+    ["Name", profile.name],
+    ["Email", profile.email],
+    ["Fortnite", profile.fortniteName || "-"],
+    ["Discord", profile.discordName || "-"],
+    ["Favorite map", profile.favoriteMap || "-"],
+    ["Developer interest", profile.developerInterest ? "Yes" : "No"],
+    ["Developer role", profile.developerRole || "-"],
+    ["Portfolio", profile.developerPortfolio || "-"],
+    ["Contact consent", profile.contactConsent ? "Yes" : "No"],
+    ["Source", sourcePath || "-"],
+  ];
+
+  const text = rows.map(([label, value]) => `${label}: ${value}`).join("\n");
+  const html = `
+    <h2>New NLDEVS member</h2>
+    <table>
+      <tbody>
+        ${rows
+          .map(
+            ([label, value]) =>
+              `<tr><td><strong>${escapeHtml(label)}</strong></td><td>${escapeHtml(value)}</td></tr>`
+          )
+          .join("")}
+      </tbody>
+    </table>
+  `;
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [notifyEmail],
+      subject: `New NLDEVS member: ${profile.name}`,
+      text,
+      html,
+      reply_to: profile.email,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+
+  return { skipped: false };
+}
+
 export async function POST(request: NextRequest) {
   let body: PlayerLeadInput;
 
@@ -373,10 +456,21 @@ export async function POST(request: NextRequest) {
   const developerSkills = cleanText(body.developerSkills, 500);
   const developerAvailability = cleanText(body.developerAvailability, 120);
   const contactConsent = body.contactConsent === true;
+  const ageAttestation = body.ageAttestation === true;
   const imageData = typeof body.imageData === "string" ? body.imageData : "";
 
   if (name.length < 2) {
     return NextResponse.json({ error: "Name is required." }, { status: 400 });
+  }
+
+  if (!ageAttestation) {
+    return NextResponse.json(
+      {
+        error:
+          "Please confirm you are 13 or older and have parent/guardian permission if under 18.",
+      },
+      { status: 400 }
+    );
   }
 
   if (imageData) {
@@ -432,6 +526,7 @@ export async function POST(request: NextRequest) {
     developer_skills: developerSkills || null,
     developer_availability: developerAvailability || null,
     contact_consent: contactConsent,
+    age_attestation: ageAttestation,
     source_path: request.headers.get("referer") ?? null,
     user_agent: request.headers.get("user-agent") ?? null,
   };
@@ -483,6 +578,25 @@ export async function POST(request: NextRequest) {
       await sendWelcomeEmail({ name, email, contactConsent });
     } catch (error) {
       console.error("Welcome email failed", error);
+    }
+
+    try {
+      await sendOwnerNewMemberEmail({
+        profile: {
+          name,
+          email,
+          fortniteName,
+          discordName,
+          favoriteMap,
+          developerInterest,
+          developerRole,
+          developerPortfolio,
+          contactConsent,
+        },
+        sourcePath: request.headers.get("referer"),
+      });
+    } catch (error) {
+      console.error("New member notification failed", error);
     }
   }
 

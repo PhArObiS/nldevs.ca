@@ -24,6 +24,7 @@ type ClientProfile = {
   developerSkills?: string;
   developerAvailability?: string;
   contactConsent: boolean;
+  ageAttestation: boolean;
   savedAt: string;
 };
 
@@ -103,6 +104,7 @@ export default function ClientLoginModal() {
   const [developerSkills, setDeveloperSkills] = useState("");
   const [developerAvailability, setDeveloperAvailability] = useState("");
   const [contactConsent, setContactConsent] = useState(false);
+  const [ageAttestation, setAgeAttestation] = useState(false);
   const [website, setWebsite] = useState("");
   const [saved, setSaved] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -168,6 +170,7 @@ export default function ClientLoginModal() {
     setDeveloperSkills(profile.developerSkills ?? "");
     setDeveloperAvailability(profile.developerAvailability ?? "");
     setContactConsent(profile.contactConsent ?? false);
+    setAgeAttestation(profile.ageAttestation ?? false);
   }
 
   function saveProfile(profile: ClientProfile) {
@@ -266,6 +269,7 @@ export default function ClientLoginModal() {
         developerSkills: developerSkills.trim() || undefined,
         developerAvailability: developerAvailability || undefined,
         contactConsent,
+        ageAttestation,
         savedAt: new Date().toISOString(),
       };
 
@@ -631,6 +635,20 @@ export default function ClientLoginModal() {
               className="mt-1 h-4 w-4 accent-neon-cyan"
             />
             <span>NLDEVS can contact me about maps, updates, or playtests.</span>
+          </label>
+
+          <label className="flex items-start gap-3 border border-edge bg-ink-800/60 p-3 text-sm text-gray-300">
+            <input
+              type="checkbox"
+              checked={ageAttestation}
+              onChange={(event) => setAgeAttestation(event.target.checked)}
+              required
+              className="mt-1 h-4 w-4 accent-neon-cyan"
+            />
+            <span>
+              I am 13 or older. If I am under 18, I have permission from a
+              parent or guardian to share this information with NLDEVS.
+            </span>
           </label>
             </div>
           </details>
