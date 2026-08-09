@@ -1,23 +1,28 @@
-// components/main/WhyPlayOurMaps.tsx
 import React from "react";
 import Link from "next/link";
+import SectionHeading from "../ui/SectionHeading";
+import { Reveal, RevealGroup, RevealItem } from "../ui/Reveal";
 
 const reasons = [
   {
-    title: "Highly replayable game modes",
-    desc: "Our islands are built around repeatable gameplay loops—Gun Games, survival runs, and fast minigames designed to stay fun after the first match.",
+    num: "01",
+    title: "Highly replayable modes",
+    desc: "Islands built around repeatable loops — gun games, survival runs, and fast minigames that stay fun after the first match.",
   },
   {
+    num: "02",
     title: "Optimized UEFN performance",
-    desc: "Built with Unreal Editor for Fortnite (UEFN) using clean layouts and optimization for smooth gameplay sessions.",
+    desc: "Clean layouts and deliberate optimization so sessions stay smooth on every platform.",
   },
   {
-    title: "Clear goals and progression systems",
-    desc: "Simple objectives and structured progression keep players engaged and playing longer.",
+    num: "03",
+    title: "Clear goals and progression",
+    desc: "Simple objectives and structured progression that keep players engaged and playing longer.",
   },
   {
-    title: "Unique themed Fortnite experiences",
-    desc: "TMNT maps, Squid-style minigames, and distinct gameplay themes with strong visual identity.",
+    num: "04",
+    title: "Distinct themed worlds",
+    desc: "Star Wars, TMNT, Squid-style minigames — each with its own strong visual identity.",
   },
 ];
 
@@ -25,75 +30,46 @@ export default function WhyPlayOurMaps() {
   return (
     <section
       id="why-play"
-      aria-label="Why play our Fortnite maps"
-      className="px-6 py-12 max-w-6xl mx-auto"
+      aria-labelledby="why-play-title"
+      className="mx-auto w-full max-w-6xl px-6 py-20"
     >
-      <div className="rounded-2xl border border-[#2A0E61] bg-[#03001466] backdrop-blur-md p-6 md:p-10">
-        <header>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Why play our Fortnite maps?
-          </h2>
+      <Reveal>
+        <SectionHeading
+          id="why-play-title"
+          eyebrow="Why NLDEVS"
+          title="Maps built to be"
+          accent="played twice"
+          description="We focus on replayability, clear objectives, and gameplay loops that hold up. If you like gun games, survival runs, and themed minigames, you'll fit right in."
+        />
+      </Reveal>
 
-          <p className="mt-4 text-gray-300 max-w-3xl">
-            NLDEVS builds Fortnite experiences with UEFN that focus on replayability,
-            clear objectives, and fun game loops. If you like Gun Games, survival runs,
-            and themed minigames, you’ll fit right in.
-          </p>
-        </header>
+      <RevealGroup className="mt-14 grid gap-5 md:grid-cols-2">
+        {reasons.map((r) => (
+          <RevealItem key={r.title} className="h-full">
+            <div className="clip-corner group h-full border border-edge/70 bg-ink-800/50 p-7 transition-colors duration-300 hover:border-neon-cyan/50">
+              <span
+                className="font-mono text-sm font-bold text-neon-violet/70"
+                aria-hidden="true"
+              >
+                {r.num}
+              </span>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {reasons.map((r) => (
-            <div
-              key={r.title}
-              className="rounded-xl border border-white/10 bg-white/5 p-5"
-            >
-              <h3 className="text-xl font-semibold text-white">{r.title}</h3>
-              <p className="mt-2 text-gray-300">{r.desc}</p>
+              <h3 className="mt-3 text-xl font-bold text-white">{r.title}</h3>
+              <p className="mt-3 leading-relaxed text-gray-400">{r.desc}</p>
             </div>
-          ))}
-        </div>
+          </RevealItem>
+        ))}
+      </RevealGroup>
 
-        {/* Strong CTA to push users deeper into the homepage content */}
-        <div className="mt-10">
-          <Link
-            href="#featured-fortnite-maps"
-            className="inline-block rounded-lg bg-cyan-500 px-6 py-3 text-white font-semibold hover:bg-cyan-400 transition"
-          >
-            Explore Featured Maps →
-          </Link>
-        </div>
+      <Reveal className="mt-12 flex flex-wrap items-center gap-4">
+        <Link href="#featured-fortnite-maps" className="btn-neon clip-corner-sm">
+          Explore featured maps
+        </Link>
 
-        {/* Internal category links (crawl hub) */}
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/tmnt-fortnite-maps"
-            className="text-cyan-300 underline hover:text-cyan-200"
-          >
-            TMNT Maps →
-          </Link>
-
-          <Link
-            href="/squid-game-fortnite-maps"
-            className="text-cyan-300 underline hover:text-cyan-200"
-          >
-            Squid Game Maps →
-          </Link>
-
-          <Link
-            href="/fortnite-gun-game-maps"
-            className="text-cyan-300 underline hover:text-cyan-200"
-          >
-            Gun Game Maps →
-          </Link>
-
-          <Link
-            href="/best-fortnite-xp-maps"
-            className="text-cyan-300 underline hover:text-cyan-200"
-          >
-            XP Maps →
-          </Link>
-        </div>
-      </div>
+        <Link href="/best-fortnite-xp-maps" className="btn-ghost clip-corner-sm">
+          Best XP maps
+        </Link>
+      </Reveal>
     </section>
   );
 }

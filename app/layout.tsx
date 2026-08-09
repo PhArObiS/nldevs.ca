@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
+import { SAME_AS, SITE_URL } from "@/constants/site";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const SITE_URL = "https://www.nldevs.ca";
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -60,14 +64,7 @@ export const metadata: Metadata = {
     description:
       "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
     siteName: "NLDEVS",
-    images: [
-      {
-        url: `${SITE_URL}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NLDEVS — UEFN Game Studio",
-      },
-    ],
+    // Image comes from app/opengraph-image.tsx (generated at build time)
   },
 
   twitter: {
@@ -75,7 +72,6 @@ export const metadata: Metadata = {
     title: "NLDEVS — UEFN Game Studio",
     description:
       "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
-    images: [`${SITE_URL}/og-image.jpg`],
   },
 };
 
@@ -91,12 +87,7 @@ export default function RootLayout({
     name: "NLDEVS",
     url: SITE_URL,
     description: "UEFN game studio building Fortnite experiences.",
-    sameAs: [
-      "https://www.fortnite.com/@nldevs",
-      "https://www.youtube.com/@nldevs",
-      "https://x.com/nldevsmtl",
-      "https://discord.gg/V2MEqa69",
-    ],
+    sameAs: SAME_AS,
   };
 
   const websiteSchema = {
@@ -118,14 +109,22 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
+      <head>
+        {/*
+          Scroll-reveal elements are rendered at opacity 0 and animated in by
+          framer-motion. With JS unavailable that animation never runs, so this
+          forces them visible. Inline styles need !important to override.
+        */}
+        <noscript>
+          <style>{`.js-reveal{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
+      <body
+        className={`${inter.className} bg-ink text-gray-200 overflow-x-hidden antialiased`}
+      >
         {/* ✅ Global structured data */}
-        <Script id="nldevs-org-schema" type="application/ld+json">
-          {JSON.stringify(orgSchema)}
-        </Script>
-        <Script id="nldevs-website-schema" type="application/ld+json">
-          {JSON.stringify(websiteSchema)}
-        </Script>
+        <JsonLd id="nldevs-org-schema" data={orgSchema} />
+        <JsonLd id="nldevs-website-schema" data={websiteSchema} />
 
         {/* ✅ AdSense site-wide script */}
         <Script
@@ -146,48 +145,17 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Background — must not capture clicks */}
-        <div className="pointer-events-none fixed inset-0 -z-10">
-          <StarsCanvas />
-        </div>
+        {/* Background — StarsCanvas provides its own fixed, click-through wrapper */}
+        <StarsCanvas />
 
         <Navbar />
 
-        {/* Offset for fixed navbar */}
-        <div className="pt-[85px]">{children}</div>
+        {/*
+          Offset for the fixed header. It is 65px on desktop; on mobile the
+          quick-nav tab strip adds another ~52px underneath it.
+        */}
+        <div className="pt-[117px] md:pt-[65px]">{children}</div>
       </body>
     </html>
   );
 }
-
-
-// import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
-// import "./globals.css";
-// import StarsCanvas from "@/components/main/StarBackground";
-// import Navbar from "@/components/main/Navbar";
-
-// const inter = Inter({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "nldevs.ca\ | Favorite Fortnite Maps",
-//   description: "These are our favorite fortnite maps. We are a passionate team of game developers and creative minds specializing in Unreal Editor for Fortnite (UEFN). Our mission is to bring innovative, interactive, and visually stunning experiences to the Fortnite universe."
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
-//       // <body className={"${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden"}
-//       >
-//         <StarsCanvas />
-//         <Navbar />
-//         {children}
-//         </body>
-//     </html>
-//   )
-// }

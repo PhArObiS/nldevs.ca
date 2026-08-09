@@ -1,87 +1,229 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Header Styles */
-html {
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    /* Canvas */
+    --ink: #030014;
+    --ink-800: #070028;
+    --ink-700: #0c0136;
+
+    /* Structure */
+    --edge: #2a0e61;
+    --edge-bright: #3f1a8f;
+
+    /* Neon accents */
+    --neon-cyan: #22d3ee;
+    --neon-violet: #8b5cf6;
+    --neon-magenta: #e935c1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--neon-cyan);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.3);
+    color: #fff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
-/* Code Styles */
-.code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  background-color: #1a1a1a;
-  padding: 10px;
-  color: #ffffff;
+@layer utilities {
+  /* Horizontal scrollers (mobile nav strip) without a visible track. */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
 }
 
+@layer components {
+  /* ---- Neon type ------------------------------------------------------- */
 
-.cursive {
-  font-family: "Cedarville Cursive", cursive;
-}
-.Welcome-text {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.4)
-  ),
-    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
-  background-blend-mode: normal, screen;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  /* Static gradient fill for headings. */
+  .neon-text {
+    background: linear-gradient(
+      92deg,
+      var(--neon-cyan) 0%,
+      var(--neon-violet) 48%,
+      var(--neon-magenta) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
 
-.Welcome-box {
-  isolation: isolate;
-  overflow: hidden;
-  align-items: center;
-  display: flex;
-  position: relative;
-  width: -moz-max-content;
-  width: max-content;
-  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-  border-radius: 32px;
-  box-shadow: inset 0 -7px 11px #a48fff1f;
-}
+  /* Same fill, slowly drifting. Used sparingly — hero headline only. */
+  .neon-text-animated {
+    background: linear-gradient(
+      92deg,
+      var(--neon-cyan) 0%,
+      var(--neon-violet) 35%,
+      var(--neon-magenta) 60%,
+      var(--neon-cyan) 100%
+    );
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: neon-drift 9s ease-in-out infinite;
+  }
 
+  @keyframes neon-drift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 
+  /* Small uppercase label above a heading. */
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--neon-cyan);
+  }
 
-.button-primary {
-  background: linear-gradient(
-      180deg,
-      rgba(60, 8, 126, 0) 0%,
-      rgba(60, 8, 126, 0.32) 100%
-    ),
-    rgba(113, 47, 255, 0.12);
-  box-shadow: inset 0 0 12px #bf97ff3d;
-}
-.button-primary:hover {
-  background: linear-gradient(
-      180deg,
-      rgba(60, 8, 126, 0) 0%,
-      rgba(60, 8, 126, 0.42) 100%
-    ),
-    rgba(113, 47, 255, 0.24);
-  box-shadow: inset 0 0 12px #bf97ff70;
-}
+  /* ---- Angular shapes -------------------------------------------------- */
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
+  /* Clipped corners — the core "gaming UI" motif. */
+  .clip-corner {
+    clip-path: polygon(
+      14px 0,
+      100% 0,
+      100% calc(100% - 14px),
+      calc(100% - 14px) 100%,
+      0 100%,
+      0 14px
+    );
+  }
 
-.scale-down {
-  transform: scale(0.9);
-}
+  .clip-corner-sm {
+    clip-path: polygon(
+      8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      0 100%,
+      0 8px
+    );
+  }
 
-  
-  
+  /* ---- Surfaces -------------------------------------------------------- */
+
+  .glass {
+    background: rgba(7, 0, 40, 0.55);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Faint blueprint grid, fading out toward the bottom. */
+  .grid-backdrop {
+    background-image: linear-gradient(
+        rgba(139, 92, 246, 0.07) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+  }
+
+  /* ---- Buttons --------------------------------------------------------- */
+
+  .btn-neon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-weight: 600;
+    color: #04010f;
+    background: linear-gradient(
+      92deg,
+      var(--neon-cyan) 0%,
+      var(--neon-violet) 100%
+    );
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.25s ease, filter 0.25s ease;
+    box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+  }
+
+  .btn-neon:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 10px 34px -8px rgba(34, 211, 238, 0.65);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    border: 1px solid var(--edge-bright);
+    background: rgba(7, 0, 40, 0.5);
+    transition: border-color 0.25s ease, color 0.25s ease,
+      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+  }
+
+  .btn-ghost:hover {
+    color: #fff;
+    border-color: var(--neon-cyan);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -12px rgba(34, 211, 238, 0.5);
+  }
+
+  /* Left neon rule used on section headings. */
+  .rule-neon::before {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    margin-bottom: 0.9rem;
+    background: linear-gradient(
+      90deg,
+      var(--neon-cyan),
+      var(--neon-magenta)
+    );
+  }
+}

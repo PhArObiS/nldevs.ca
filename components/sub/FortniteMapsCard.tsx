@@ -1,245 +1,127 @@
+"use client";
 
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 interface Props {
   src: string;
   title: string;
-  description: string;
+  /** Fortnite island code, e.g. "0556-7584-6565" */
+  code: string;
   mode?: string;
+  /** When provided, the whole card becomes a link to the detail page. */
+  href?: string;
+  /** Cards above the fold should render eagerly for a better LCP. */
+  priority?: boolean;
 }
 
-const FortniteMapsCard = ({ src, title, description, mode }: Props) => {
-  return (
-    <article className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+const FortniteMapsCard = ({ src, title, code, mode, href, priority }: Props) => {
+  const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-      <Image
-        src={src}
-        alt={`${title} Fortnite map gameplay preview`}
-        width={1000}
-        height={1000}
-        className="w-full object-contain"
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const copyCode = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // Clipboard can be blocked (insecure origin, permissions). The code is
+      // visible on the card either way, so fail quietly.
+    }
+  }, [code]);
+
+  return (
+    <article className="group relative">
+      {/* Neon edge that fades in on hover. Sits behind the card body. */}
+      <div
+        className="clip-corner absolute -inset-px bg-gradient-to-br from-neon-cyan via-neon-violet to-neon-magenta opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
+        aria-hidden="true"
       />
 
-      <div className="relative p-4">
+      <div className="clip-corner relative flex h-full flex-col bg-ink-800 transition-transform duration-300 group-hover:-translate-y-1">
+        {/* Fixed 16:9 frame keeps every card the same height regardless of
+            the source image's aspect ratio. */}
+        <div className="relative aspect-video w-full overflow-hidden bg-ink-700">
+          <Image
+            src={src}
+            alt={`${title} Fortnite map gameplay preview`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+            priority={priority}
+          />
 
-        {/* Title */}
-        <h3 className="text-2xl font-semibold text-white">
-          {title}
-        </h3>
+          {/* Darkens the top for badge legibility, base blends into the card */}
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-ink/75 via-transparent to-ink-800"
+            aria-hidden="true"
+          />
 
-        {/* Map Code */}
-        <p className="mt-2 text-gray-300">
-          <span className="font-semibold text-white">Map Code:</span>{" "}
-          {description}
-        </p>
+          {mode && (
+            <span className="clip-corner-sm absolute left-3 top-3 border border-neon-cyan/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-cyan backdrop-blur-sm">
+              {mode}
+            </span>
+          )}
+        </div>
 
-        {/* Mode */}
-        {mode && (
-          <p className="text-gray-400 text-sm mt-1">
-            Mode: {mode}
-          </p>
-        )}
+        <div className="flex flex-1 flex-col p-5">
+          <h3 className="text-lg font-bold leading-snug text-white">
+            {href ? (
+              // Stretched link: makes the entire card clickable without
+              // nesting the copy button inside an anchor.
+              <Link
+                href={href}
+                className="transition-colors after:absolute after:inset-0 group-hover:text-neon-cyan"
+              >
+                {title}
+              </Link>
+            ) : (
+              title
+            )}
+          </h3>
 
+          <div className="mt-auto pt-5">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-500">
+              Island code
+            </p>
+
+            <div className="mt-1.5 flex items-center justify-between gap-3">
+              <p className="font-mono text-base tracking-tight text-gray-200">
+                {code}
+              </p>
+
+              {/* z-10 lifts the button above the stretched-link overlay */}
+              <button
+                type="button"
+                onClick={copyCode}
+                aria-label={`Copy island code for ${title}`}
+                className={`clip-corner-sm relative z-10 shrink-0 border px-3 py-1.5 text-xs font-semibold transition ${
+                  copied
+                    ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan"
+                    : "border-edge-bright text-gray-300 hover:border-neon-cyan hover:text-white"
+                }`}
+              >
+                {copied ? "Copied" : "Copy"}
+              </button>
+            </div>
+          </div>
+
+          {/* Announce the copy result to assistive tech */}
+          <span aria-live="polite" className="sr-only">
+            {copied ? `Island code ${code} copied to clipboard` : ""}
+          </span>
+        </div>
       </div>
     </article>
   );
 };
 
 export default FortniteMapsCard;
-
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import React from "react";
-
-// interface Props {
-//   src: string;
-//   title: string;
-//   code: string;
-//   mode?: string;
-//   href?: string; // if provided, card becomes clickable
-// }
-
-// const FortniteMapsCard = ({ src, title, code, mode, href }: Props) => {
-//   const CardBody = (
-//     <article
-//       className={[
-//         "relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]",
-//         "transition-transform duration-300 hover:scale-[1.01] hover:shadow-xl hover:border-cyan-400",
-//         "focus-within:ring-2 focus-within:ring-cyan-400/60 focus-within:ring-offset-0",
-//       ].join(" ")}
-//     >
-//       <Image
-//         src={src}
-//         alt={`${title} Fortnite map gameplay preview`}
-//         width={1000}
-//         height={1000}
-//         className="w-full object-contain"
-//       />
-
-//       <div className="relative p-4">
-//         <h3 className="text-2xl font-semibold text-white">{title}</h3>
-
-//         <p className="mt-2 text-gray-300">
-//           <span className="font-semibold text-white">Map Code:</span> {code}
-//         </p>
-
-//         {mode ? (
-//           <p className="text-gray-400 text-sm mt-1">Mode: {mode}</p>
-//         ) : null}
-
-//         <div className="mt-4 flex items-center gap-3">
-//           <button
-//             type="button"
-//             className="text-sm text-cyan-300 underline hover:text-cyan-200"
-//             onClick={(e) => {
-//               e.preventDefault();
-//               navigator.clipboard.writeText(code);
-//             }}
-//           >
-//             Copy code
-//           </button>
-
-//           {href ? (
-//             <span className="text-sm text-gray-400">View details →</span>
-//           ) : null}
-//         </div>
-//       </div>
-//     </article>
-//   );
-
-//   // If href exists, wrap in Link for full-card clickability
-//   if (href) {
-//     return (
-//       <Link href={href} className="block" aria-label={`Open ${title} details page`}>
-//         {CardBody}
-//       </Link>
-//     );
-//   }
-
-//   return CardBody;
-// };
-
-// export default FortniteMapsCard;
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import React from "react";
-
-// interface Props {
-//   src: string;
-//   title: string;
-//   description: string;
-//   mode?: string;
-//   href?: string;
-// }
-
-// const FortniteMapsCard = ({ src, title, description, mode, href }: Props) => {
-//   const card = (
-//     <article className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] hover:border-cyan-400 hover:shadow-2xl hover:scale-[1.02] transition-all">
-//       <Image
-//         src={src}
-//         alt={`${title} Fortnite map gameplay preview`}
-//         width={1000}
-//         height={1000}
-//         loading="lazy"
-//         className="w-full object-contain"
-//       />
-
-//       <div className="relative p-4">
-//         <h3 className="text-2xl font-semibold text-white">{title}</h3>
-
-//         <button
-//           type="button"
-//           onClick={(e) => {
-//             e.stopPropagation();
-//             navigator.clipboard.writeText(description);
-//           }}
-//           className="mt-2 text-left text-gray-300 hover:text-cyan-300 transition-colors"
-//         >
-//           <span className="font-semibold text-white">Map Code:</span>{" "}
-//           {description} <span className="text-gray-500 text-sm">(click to copy)</span>
-//         </button>
-
-//         {mode && (
-//           <p className="text-gray-400 text-sm mt-1">Mode: {mode}</p>
-//         )}
-//       </div>
-//     </article>
-//   );
-
-//   return href ? <Link href={href}>{card}</Link> : card;
-// };
-
-// export default FortniteMapsCard;
-
-
-// import Image from "next/image";
-// import React from "react";
-
-// interface Props {
-//   src: string;
-//   title: string;
-//   description: string;
-// }
-
-// const FortniteMapsCard = ({ src, title, description }: Props) => {
-//   return (
-//     <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
-//       <Image
-//         src={src}
-//         alt={title}
-//         width={1000}
-//         height={1000}
-//         className="w-full object-contain"
-//       />
-
-//       <div className="relative p-4">
-//         <h1 className="text-2xl font-semibold text-white">{title}</h1>
-//         <p className="mt-2 text-gray-300">{description}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FortniteMapsCard;
-
-
-// import Image from "next/image";
-// import React from "react";
-
-// interface Props {
-//   src: string;
-//   title: string;
-//   description: string;
-//   url: string;
-// }
-
-// const FortniteMapsCard = ({ src, title, description, url }: Props) => {
-//   return (
-//     <a
-//       href={url}
-//       target="_blank"
-//       rel="noopener noreferrer"
-//       className="block relative z-10"
-//     >
-//       <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer">
-//         <Image
-//           src={src}
-//           alt={title}
-//           width={1000}
-//           height={1000}
-//           className="w-full object-contain"
-//         />
-//         <div className="relative p-4">
-//           <h1 className="text-2xl font-semibold text-white">{title}</h1>
-//           <p className="mt-2 text-gray-300">{description}</p>
-//           {/* <p className="mt-2 text-cyan-300 underline">Open map page</p> */}
-//         </div>
-//       </div>
-//     </a>
-//   );
-// };
-
-// export default FortniteMapsCard;
