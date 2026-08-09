@@ -73,3 +73,19 @@ image details, contact consent, and created timestamp.
 Images are stored as small data URLs in the `image_data` column. The form limits
 uploads to 1.5 MB. For larger galleries or many screenshots, move images to
 Supabase Storage and store the file URL in this table instead.
+
+## 6. Optional Welcome Email
+
+The API route can send a short thank-you email after a player joins. It uses
+Resend's HTTP API, so no extra package is required.
+
+Add these environment variables locally and on the server:
+
+```env
+RESEND_API_KEY=your-resend-api-key
+WELCOME_EMAIL_FROM=NLDEVS <hello@nldevs.ca>
+WELCOME_EMAIL_REPLY_TO=nldevsmtl@gmail.com
+```
+
+`WELCOME_EMAIL_FROM` must be an address/domain verified in Resend. If these
+variables are missing, the signup still saves normally and the email is skipped.

@@ -22,6 +22,7 @@ const PLACEHOLDER_KEYS = new Set([
   "your-service-role-key",
   "your-secret-key",
   "your_secret_key_here",
+  "your-resend-api-key",
 ]);
 
 function cleanText(value: unknown, maxLength: number) {
@@ -45,6 +46,62 @@ function getSupabaseHeaders(key: string) {
   }
 
   return headers;
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function getFirstName(name: string) {
+  return name.split(" ")[0] || "there";
+}
+
+async function sendWelcomeEmail({
+  name,
+  email,
+}: {
+  name: string;
+  email: string;
+}) {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const from = process.env.WELCOME_EMAIL_FROM;
+  const replyTo = process.env.WELCOME_EMAIL_REPLY_TO;
+
+  if (!resendApiKey || !from || PLACEHOLDER_KEYS.has(resendApiKey)) {
+    return { skipped: true };
+  }
+
+  const firstName = escapeHtml(getFirstName(name));
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [email],
+      subject: "Welcome to NLDEVS",
+      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. We appreciate you checking out our Fortnite maps and will keep you posted on new drops, playtests, and updates.\n\n- NLDEVS`,
+      html: `
+        <p>Hi ${firstName},</p>
+        <p>Thanks for joining NLDEVS. We appreciate you checking out our Fortnite maps and will keep you posted on new drops, playtests, and updates.</p>
+        <p>- NLDEVS</p>
+      `,
+      ...(replyTo ? { reply_to: replyTo } : {}),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+
+  return { skipped: false };
 }
 
 export async function POST(request: NextRequest) {
@@ -145,6 +202,12 @@ export async function POST(request: NextRequest) {
       { error: "Could not save player lead." },
       { status: 502 }
     );
+  }
+
+  try {
+    await sendWelcomeEmail({ name, email });
+  } catch (error) {
+    console.error("Welcome email failed", error);
   }
 
   return NextResponse.json({ ok: true });
