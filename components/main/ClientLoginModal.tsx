@@ -147,6 +147,12 @@ export default function ClientLoginModal() {
     setOpen(false);
   }
 
+  function openEditInfo() {
+    setError("");
+    setNotice("");
+    setShowNewMember(true);
+  }
+
   function applyProfile(profile: Partial<ClientProfile>) {
     setName(profile.name ?? "");
     setEmail(profile.email ?? "");
@@ -330,9 +336,18 @@ export default function ClientLoginModal() {
         </div>
 
         {saved && (
-          <p className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3 text-sm font-semibold text-neon-cyan">
-            You&apos;re logged in. Welcome to NLDEVS.
-          </p>
+          <div className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3">
+            <p className="text-sm font-semibold text-neon-cyan">
+              You&apos;re logged in. Welcome to NLDEVS.
+            </p>
+            <button
+              type="button"
+              onClick={openEditInfo}
+              className="clip-corner-sm mt-3 border border-neon-cyan/70 bg-ink-800/70 px-3 py-2 text-xs font-black uppercase tracking-wide text-neon-cyan transition hover:bg-neon-cyan hover:text-ink"
+            >
+              Edit Info
+            </button>
+          </div>
         )}
 
         {notice && (
@@ -403,7 +418,7 @@ export default function ClientLoginModal() {
           onToggle={(event) => setShowNewMember(event.currentTarget.open)}
         >
           <summary className="cursor-pointer text-sm font-black uppercase tracking-wide text-neon-cyan">
-            New Member
+            {saved ? "Edit Member Info" : "New Member"}
           </summary>
 
         <form className="mt-4 space-y-3 sm:space-y-4" onSubmit={onSignupSubmit}>
@@ -729,7 +744,7 @@ export default function ClientLoginModal() {
             disabled={submitting}
             className="clip-corner-sm w-full border border-neon-cyan bg-neon-cyan px-5 py-3 font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
           >
-            {saved ? "Logged in" : submitting ? "Saving" : "Continue"}
+            {submitting ? "Saving" : saved ? "Save changes" : "Join NLDEVS"}
           </button>
 
         </form>
