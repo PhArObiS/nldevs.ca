@@ -84,7 +84,19 @@ SUPABASE_STORAGE_BUCKET=player-lead-images
 
 Uploaded image paths are saved in the `image_url` column.
 
-## 6. Optional Welcome Email
+## 6. Optional Admin Leads Workflow
+
+The private admin page at `/admin/leads` lets you review leads, set a status,
+add tags, and keep private notes. Add this environment variable locally and on
+the server:
+
+```env
+ADMIN_ACCESS_TOKEN=choose-a-long-private-password
+```
+
+Do not share this token. The admin API will not load or update leads without it.
+
+## 7. Optional Welcome Email
 
 The API route can send a short thank-you email after a player joins. It uses
 Resend's HTTP API, so no extra package is required.

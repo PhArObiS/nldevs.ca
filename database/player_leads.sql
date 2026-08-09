@@ -22,6 +22,11 @@ create table if not exists public.player_leads (
   member_goals text,
   contact_consent boolean not null default false,
   age_attestation boolean not null default false,
+  admin_status text not null default 'new',
+  admin_tags text,
+  admin_notes text,
+  contacted_at timestamptz,
+  last_reviewed_at timestamptz,
   source_path text,
   user_agent text,
   created_at timestamptz not null default now()
@@ -44,13 +49,21 @@ alter table public.player_leads
   add column if not exists developer_availability text,
   add column if not exists member_goals text,
   add column if not exists contact_consent boolean not null default false,
-  add column if not exists age_attestation boolean not null default false;
+  add column if not exists age_attestation boolean not null default false,
+  add column if not exists admin_status text not null default 'new',
+  add column if not exists admin_tags text,
+  add column if not exists admin_notes text,
+  add column if not exists contacted_at timestamptz,
+  add column if not exists last_reviewed_at timestamptz;
 
 create index if not exists player_leads_created_at_idx
   on public.player_leads (created_at desc);
 
 create index if not exists player_leads_email_idx
   on public.player_leads (lower(email));
+
+create index if not exists player_leads_admin_status_idx
+  on public.player_leads (admin_status);
 
 grant insert, select, update on table public.player_leads to service_role;
 
