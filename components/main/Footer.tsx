@@ -107,6 +107,17 @@ const Footer: React.FC = () => (
       </div>
 
       <div className="mt-10 border-t border-white/5 pt-6 text-center text-sm text-gray-500">
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <Link href="/privacy" className="transition hover:text-white">
+            Privacy
+          </Link>
+          <a
+            href="mailto:nldevsmtl@gmail.com"
+            className="transition hover:text-white"
+          >
+            Contact
+          </a>
+        </div>
         <p>
           &copy; {new Date().getFullYear()} {SITE_NAME}. Not affiliated with Epic Games.
         </p>

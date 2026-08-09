@@ -392,6 +392,11 @@ export default function ClientLoginModal() {
           </div>
         </form>
 
+        <p className="mt-3 border border-edge/80 bg-ink-800/30 px-3 py-2 text-xs leading-relaxed text-gray-400">
+          We only use your info for NLDEVS updates, playtests, support, and
+          collaboration opportunities. We never sell your info.
+        </p>
+
         <details
           className="mt-3 border border-edge bg-ink-800/25 p-3"
           open={showNewMember}
