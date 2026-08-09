@@ -372,38 +372,54 @@ export default function Navbar() {
               </div>
 
               {/* Mobile hamburger */}
-              <button
-                ref={menuButtonRef}
-                type="button"
-                className={`clip-corner-sm inline-flex min-h-11 min-w-12 touch-manipulation items-center justify-center border px-3 py-2 transition md:hidden ${
+              <div
+                className={`clip-corner-sm inline-flex items-center border transition md:hidden ${
                   clientProfile
-                    ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan shadow-[0_0_22px_rgba(34,211,238,0.35)] hover:bg-neon-cyan hover:text-ink"
-                    : "border-edge-bright bg-ink-800/70 text-gray-200 hover:border-neon-cyan hover:text-white"
+                    ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan shadow-[0_0_22px_rgba(34,211,238,0.35)]"
+                    : "border-edge-bright bg-ink-800/70 text-gray-200"
                 }`}
-                aria-label={open ? "Close menu" : "Open menu"}
-                aria-controls="mobile-menu"
-                aria-expanded={open}
-                onPointerDown={handleMenuButtonPointerDown}
-                onClick={handleMenuButtonClick}
               >
-                <span className="relative block h-4 w-5" aria-hidden="true">
-                  <span
-                    className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                      open ? "translate-y-[7px] rotate-45" : ""
-                    }`}
-                  />
-                  <span
-                    className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${
-                      open ? "opacity-0" : "opacity-100"
-                    }`}
-                  />
-                  <span
-                    className={`absolute bottom-0 left-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                      open ? "-translate-y-[7px] -rotate-45" : ""
-                    }`}
-                  />
-                </span>
-              </button>
+                <button
+                  type="button"
+                  className="min-h-11 touch-manipulation px-2.5 text-xs font-bold uppercase tracking-wide text-current transition hover:text-white"
+                  aria-label={clientProfile ? "Open member menu" : "Open login menu"}
+                  aria-controls="mobile-menu"
+                  aria-expanded={open}
+                  onPointerDown={handleMenuButtonPointerDown}
+                  onClick={handleMenuButtonClick}
+                >
+                  {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                </button>
+
+                <button
+                  ref={menuButtonRef}
+                  type="button"
+                  className="inline-flex min-h-11 min-w-11 touch-manipulation items-center justify-center border-l border-current/25 px-3 py-2 text-current transition hover:bg-neon-cyan hover:text-ink"
+                  aria-label={open ? "Close menu" : "Open menu"}
+                  aria-controls="mobile-menu"
+                  aria-expanded={open}
+                  onPointerDown={handleMenuButtonPointerDown}
+                  onClick={handleMenuButtonClick}
+                >
+                  <span className="relative block h-4 w-5" aria-hidden="true">
+                    <span
+                      className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
+                        open ? "translate-y-[7px] rotate-45" : ""
+                      }`}
+                    />
+                    <span
+                      className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${
+                        open ? "opacity-0" : "opacity-100"
+                      }`}
+                    />
+                    <span
+                      className={`absolute bottom-0 left-0 h-[2px] w-full bg-current transition-transform duration-200 ${
+                        open ? "-translate-y-[7px] -rotate-45" : ""
+                      }`}
+                    />
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
