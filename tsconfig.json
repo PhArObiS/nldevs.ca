@@ -5,6 +5,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    // You develop on Windows (case-insensitive) and deploy to Linux
+    // (case-sensitive). Without this, `import "./Navbar"` for a file named
+    // `navbar.tsx` builds fine locally and fails only in production.
+    "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",

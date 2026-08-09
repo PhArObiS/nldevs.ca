@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Script from "next/script";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
 const MAP = {
   title: "TMNT City",
   code: "1383-6989-3967",
@@ -30,6 +30,17 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Is TMNT City a gun game?",
+    a: "It's more of an experience/exploration map with action elements.",
+  },
+  {
+    q: "How do I find it in Fortnite?",
+    a: `Discover → enter ${MAP.code}.`,
+  },
+];
+
 export default function Page() {
   const schema = {
     "@context": "https://schema.org",
@@ -44,111 +55,74 @@ export default function Page() {
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
   };
 
-  return (
-    <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="tmnt-city-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
 
-      {/* ✅ Breadcrumbs (consistent) */}
-      <Breadcrumbs
-        items={[
+  return (
+    <main id="top" className="mx-auto w-full max-w-5xl px-6 py-14">
+      <JsonLd id="tmnt-city-schema" data={schema} />
+      <JsonLd id="tmnt-city-faq-schema" data={faqSchema} />
+
+      <MapDetailHeader
+        crumbs={[
           { label: "Home", href: "/" },
           { label: "TMNT Maps", href: "/tmnt-fortnite-maps" },
           { label: MAP.title },
         ]}
+        eyebrow="TMNT / Experience"
+        title={MAP.title}
+        code={MAP.code}
+        image={MAP.image}
+        intro="An immersive city-style TMNT experience built in UEFN — explore, fight, and hang out with friends."
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
-
-        <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
-          <p className="text-xl">
-            <span className="font-semibold text-white">Map Code:</span> {MAP.code}
-          </p>
-        </div>
-      </header>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Screenshots</h2>
-        <Image
-          src={MAP.image}
-          alt={`${MAP.title} Fortnite map screenshot`}
-          width={1200}
-          height={700}
-          className="rounded-lg mt-4"
-        />
-      </section>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Gameplay Description</h2>
-        <p className="mt-3">
+      <ContentSection title="Gameplay" accent="description">
+        <p className="text-center leading-relaxed text-gray-400 md:text-left">
           TMNT City is an immersive city-style TMNT experience built in UEFN.
           Explore, fight, and hang out with friends in a themed environment
           designed for repeat visits.
         </p>
-      </section>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">How to Play</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
+      <ContentSection title="How to" accent="play">
+        <CenteredList ordered>
           <li>Enter map code {MAP.code} in Fortnite Discover</li>
           <li>Load in and explore the city</li>
           <li>Follow in-map objectives and activities</li>
           <li>Play with friends for the best vibe</li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Why It’s Fun</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
+      <ContentSection title="Why it's" accent="fun">
+        <CenteredList>
           <li>Strong TMNT atmosphere</li>
-          <li>Exploration + combat loops</li>
-          <li>Great “hangout” map for squads</li>
-        </ul>
-      </section>
+          <li>Exploration and combat loops</li>
+          <li>Great &ldquo;hangout&rdquo; map for squads</li>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Similar Maps</h2>
-        <div className="flex flex-wrap gap-4 mt-3">
-          <Link
-            href="/tmnt-mega-ramp-survival"
-            className="underline text-cyan-300 hover:text-cyan-200"
-          >
-            TMNT Mega Ramp Survival →
-          </Link>
+      <ContentSection title="Similar" accent="maps">
+        <PillLinks
+          links={[
+            { href: "/tmnt-mega-ramp-survival", label: "TMNT Mega Ramp Survival" },
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+            { href: "/tmnt-fortnite-maps", label: "All TMNT Maps" },
+          ]}
+        />
+      </ContentSection>
 
-          <Link
-            href="/fortnite-gun-game-maps"
-            className="underline text-cyan-300 hover:text-cyan-200"
-          >
-            Fortnite Gun Game Maps →
-          </Link>
-        </div>
-      </section>
+      <ContentSection title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">FAQ</h2>
-        <div className="mt-4 space-y-4">
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Is TMNT City a gun game?</h3>
-            <p className="mt-2">
-              It’s more of an experience/exploration map with action elements.
-            </p>
-          </div>
-
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">How do I find it in Fortnite?</h3>
-            <p className="mt-2">Discover → enter {MAP.code}.</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

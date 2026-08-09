@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Script from "next/script";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, FaqList, InfoCard, PillLinks } from "@/components/ui/InfoCard";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
 const MAP = {
   title: "Tilted Squid Royale (99 Bots)",
   code: "1116-7765-9076",
@@ -30,6 +30,17 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Is this a real Squid Game map?",
+    a: "It's Squid-style inspired (elimination / high-stakes vibe), not official Netflix content.",
+  },
+  {
+    q: "Why bots?",
+    a: "Bots make it ideal for practice, warmups, and quick matches without long queues.",
+  },
+];
+
 export default function Page() {
   const schema = {
     "@context": "https://schema.org",
@@ -40,109 +51,88 @@ export default function Page() {
     url: MAP.url,
     image: `${SITE_URL}${MAP.image}`,
     description:
-      "Squid-inspired Tilted battle royale with bots — great for practice, quick wins, and replayable rounds.",
+      "Squid-inspired Tilted battle royale with bots — great for practice and quick wins.",
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
   };
 
-  return (
-    <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="tilted-squid-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
 
-      {/* ✅ Breadcrumbs (consistent structure) */}
-      <Breadcrumbs
-        items={[
+  return (
+    <main id="top" className="mx-auto w-full max-w-5xl px-6 py-14">
+      <JsonLd id="tilted-squid-schema" data={schema} />
+      <JsonLd id="tilted-squid-faq-schema" data={faqSchema} />
+
+      <MapDetailHeader
+        crumbs={[
           { label: "Home", href: "/" },
           { label: "Squid Game Maps", href: "/squid-game-fortnite-maps" },
           { label: MAP.title },
         ]}
+        eyebrow="Squid Game / Battle Royale"
+        title={MAP.title}
+        code={MAP.code}
+        image={MAP.image}
+        intro="A Squid-inspired battle royale in a Tilted-style environment, built for fast matches and consistent action."
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
-      </header>
-
-      <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
-        <p className="text-xl">
-          <span className="font-semibold text-white">Map Code:</span> {MAP.code}
+      <ContentSection title="Gameplay" accent="description">
+        <p className="text-center leading-relaxed text-gray-400 md:text-left">
+          Tilted Squid Royale (99 Bots) is a Squid-inspired battle royale set
+          around a Tilted-style environment, designed for fast matches and
+          consistent action. The bot-filled lobby makes it great for warming up
+          aim, learning routes, and getting quick wins.
         </p>
-      </div>
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">Screenshots</h2>
-      <Image
-        src={MAP.image}
-        alt={`${MAP.title} Fortnite gameplay`}
-        width={1200}
-        height={700}
-        className="rounded-lg mt-4"
-      />
+      <ContentSection title="How to" accent="play">
+        <CenteredList ordered>
+          <li>Open Fortnite → Discover</li>
+          <li>Enter map code {MAP.code}</li>
+          <li>Drop in, loot fast, and rotate early</li>
+          <li>Use the bots to practice fights and positioning</li>
+        </CenteredList>
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">Gameplay Description</h2>
-      <p className="mt-3">
-        Tilted Squid Royale (99 Bots) is a Squid-inspired battle royale set around a Tilted-style
-        environment, designed for fast matches and consistent action. The bot-filled lobby makes it
-        great for warming up aim, learning routes, and getting quick wins.
-      </p>
+      <ContentSection title="Why it's" accent="fun">
+        <CenteredList>
+          <li>Great practice environment (bots and quick fights)</li>
+          <li>Fast &ldquo;one more match&rdquo; pacing</li>
+          <li>Good for squads or solo warmups</li>
+          <li>Tilted-style nostalgia with a Squid vibe</li>
+        </CenteredList>
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">How to Play</h2>
-      <ul className="list-disc ml-6 mt-3 space-y-2">
-        <li>Open Fortnite → Discover</li>
-        <li>Enter map code {MAP.code}</li>
-        <li>Drop in, loot fast, and rotate early</li>
-        <li>Use the bots to practice fights and positioning</li>
-      </ul>
+      <ContentSection title="Similar" accent="maps">
+        <PillLinks
+          links={[
+            { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
+            { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+          ]}
+        />
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">Why It’s Fun</h2>
-      <ul className="list-disc ml-6 mt-3 space-y-2">
-        <li>Great practice environment (bots + quick fights)</li>
-        <li>Fast “one more match” pacing</li>
-        <li>Good for squads or solo warmups</li>
-        <li>Tilted-style nostalgia with a Squid vibe</li>
-      </ul>
+      <ContentSection title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">Similar Maps</h2>
-      <div className="flex flex-wrap gap-4 mt-3">
-        <Link href="/rvb-squid-minigame" className="underline text-cyan-300 hover:text-cyan-200">
-          RvB Squid Minigame →
-        </Link>
-        <Link href="/squid-game-fortnite-maps" className="underline text-cyan-300 hover:text-cyan-200">
-          Squid Game Maps →
-        </Link>
-        <Link href="/fortnite-gun-game-maps" className="underline text-cyan-300 hover:text-cyan-200">
-          Fortnite Gun Game Maps →
-        </Link>
-      </div>
+      <ContentSection title="A quick" accent="note">
+        <InfoCard heading="On the Squid Game name">
+          &ldquo;Squid&rdquo; is used here to describe gameplay style and
+          inspiration. This page is not affiliated with Netflix or the Squid Game
+          brand.
+        </InfoCard>
+      </ContentSection>
 
-      <h2 className="text-2xl text-white mt-12">FAQ</h2>
-      <div className="mt-4 space-y-4">
-        <div className="rounded-lg border border-[#2A0E61] p-4">
-          <h3 className="font-semibold text-white">Is this a real Squid Game map?</h3>
-          <p className="mt-2">
-            It’s Squid-style inspired (elimination / high-stakes vibe), not official Netflix content.
-          </p>
-        </div>
-        <div className="rounded-lg border border-[#2A0E61] p-4">
-          <h3 className="font-semibold text-white">Why bots?</h3>
-          <p className="mt-2">
-            Bots make it ideal for practice, warmups, and quick matches without long queues.
-          </p>
-        </div>
-      </div>
-
-      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
-        <p className="text-white font-semibold">Note</p>
-        <p className="mt-2">
-          “Squid” is used here to describe gameplay style and inspiration. This page is not affiliated
-          with Netflix or the Squid Game brand.
-        </p>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

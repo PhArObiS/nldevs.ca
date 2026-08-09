@@ -1,0 +1,8 @@
+{
+  "hints": {
+    "axe/aria": "off",
+    "axe/name-role-value": "off",
+    "no-inline-styles": "off",
+    "compat-api/css": "off"
+  }
+}

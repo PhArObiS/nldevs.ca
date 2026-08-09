@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Script from "next/script";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
-
-const SITE_URL = "https://www.nldevs.ca";
+import JsonLd from "@/components/JsonLd";
+import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
+import { SITE_URL } from "@/constants/site";
 
 const MAP = {
   title: "RvB Squid Minigame",
@@ -31,6 +30,17 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "Is this a Squid Game map?",
+    a: "It's Squid-style inspired minigames with a Red vs Blue format.",
+  },
+  {
+    q: "Can I play with friends?",
+    a: "Yes — it's best with squads/parties.",
+  },
+];
+
 export default function Page() {
   const schema = {
     "@context": "https://schema.org",
@@ -44,116 +54,74 @@ export default function Page() {
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
   };
 
-  return (
-    <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="rvb-squid-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
 
-      {/* ✅ CONSISTENT BREADCRUMBS */}
-      <Breadcrumbs
-        items={[
+  return (
+    <main id="top" className="mx-auto w-full max-w-5xl px-6 py-14">
+      <JsonLd id="rvb-squid-schema" data={schema} />
+      <JsonLd id="rvb-squid-faq-schema" data={faqSchema} />
+
+      <MapDetailHeader
+        crumbs={[
           { label: "Home", href: "/" },
           { label: "Squid Game Maps", href: "/squid-game-fortnite-maps" },
           { label: MAP.title },
         ]}
+        eyebrow="Squid Game / RvB"
+        title={MAP.title}
+        code={MAP.code}
+        image={MAP.image}
+        intro="A fast-paced Red vs Blue experience inspired by Squid-style challenges — built for quick rounds and constant action."
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
-
-        <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
-          <p className="text-xl">
-            <span className="font-semibold text-white">Map Code:</span> {MAP.code}
-          </p>
-        </div>
-      </header>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Screenshots</h2>
-        <Image
-          src={MAP.image}
-          alt={`${MAP.title} Fortnite gameplay`}
-          width={1200}
-          height={700}
-          className="rounded-lg mt-4"
-        />
-      </section>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Gameplay Description</h2>
-        <p className="mt-3">
+      <ContentSection title="Gameplay" accent="description">
+        <p className="text-center leading-relaxed text-gray-400 md:text-left">
           RvB Squid Minigame is a fast-paced Red vs Blue experience inspired by
-          Squid-style challenges. It’s built for quick rounds, constant action,
-          and “run it back” replayability.
+          Squid-style challenges. It&apos;s built for quick rounds, constant
+          action, and &ldquo;run it back&rdquo; replayability.
         </p>
-      </section>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">How to Play</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
+      <ContentSection title="How to" accent="play">
+        <CenteredList ordered>
           <li>Enter map code {MAP.code} in Discover</li>
           <li>Join a team</li>
           <li>Play through fast minigame rounds</li>
-          <li>Win rounds with teamwork + eliminations</li>
-        </ul>
-      </section>
+          <li>Win rounds with teamwork and eliminations</li>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Why It’s Fun</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
-          <li>Short rounds = high replay value</li>
+      <ContentSection title="Why it's" accent="fun">
+        <CenteredList>
+          <li>Short rounds mean high replay value</li>
           <li>Red vs Blue chaos with friends</li>
           <li>Competitive and easy to understand</li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Similar Maps</h2>
-        <div className="flex flex-wrap gap-4 mt-3">
-          <Link
-            href="/squid-game-fortnite-maps"
-            className="underline text-cyan-300 hover:text-cyan-200"
-          >
-            Squid Game Maps →
-          </Link>
-          <Link
-            href="/best-fortnite-xp-maps"
-            className="underline text-cyan-300 hover:text-cyan-200"
-          >
-            Best Fortnite XP Maps →
-          </Link>
-          <Link
-            href="/fortnite-gun-game-maps"
-            className="underline text-cyan-300 hover:text-cyan-200"
-          >
-            Fortnite Gun Game Maps →
-          </Link>
-        </div>
-      </section>
+      <ContentSection title="Similar" accent="maps">
+        <PillLinks
+          links={[
+            { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+            { href: "/best-fortnite-xp-maps", label: "Best XP Maps" },
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+          ]}
+        />
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">FAQ</h2>
-        <div className="mt-4 space-y-4">
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Is this a Squid Game map?</h3>
-            <p className="mt-2">
-              It’s Squid-style inspired minigames with a Red vs Blue format.
-            </p>
-          </div>
+      <ContentSection title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
+      </ContentSection>
 
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Can I play with friends?</h3>
-            <p className="mt-2">Yes — it’s best with squads/parties.</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

@@ -1,61 +1,29 @@
-export const Skill_data = [
-  {
-    skill_name: "UnrealEngine",
-    Image: "/youtube-svgrepo-com.png",
-    width: 80,
-    height: 80,
-  },
-];
+import { SOCIAL_LINKS } from "./site";
 
 export const Socials = [
   {
     name: "Fortnite",
     src: "/epic-games-svgrepo-com.svg",
+    href: SOCIAL_LINKS.fortnite,
   },
   {
     name: "Discord",
     src: "/discord.svg",
+    href: SOCIAL_LINKS.discord,
   },
   {
-    name: "Youtube",
+    name: "YouTube",
     src: "/youtube-svgrepo-com.svg",
+    href: SOCIAL_LINKS.youtube,
   },
   {
-    name: "Gmail",
+    name: "Email",
     src: "/gmail.png",
+    href: SOCIAL_LINKS.email,
   },
-  // {
-  //   name: "Facebook",
-  //   src: "/facebook.svg",
-  // },
-  // {
-  //   name: "Instagram",
-  //   src: "/instagram.svg",
-  // },
-  // {
-  //   name: "TikTok",
-  //   src: "/tiktok-icon-white-1-logo-svgrepo-com.svg",
-  // },
   {
     name: "X",
-    src: "/close-svgrepo-com.svg",
+    src: "/twitter-svgrepo-com.svg",
+    href: SOCIAL_LINKS.x,
   },
-];
-
-export const UnrealEngine_skill = [
-  {
-    skill_name: "UnrealEngine",
-    Image: "/youtube-svgrepo-com.png",
-    width: 80,
-    height: 80,
-  },
-];
-
-export const UEFN_skill = [
-  {
-    skill_name: "UEFN",
-    Image: "/youtube-svgrepo-com.png",
-    width: 80,
-    height: 80,
-  },
-];
+] as const;

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Script from "next/script";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
 const MAP = {
   title: "TMNT Mega Ramp Survival",
   code: "0556-7584-6565",
@@ -30,6 +30,17 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "How do I play this map?",
+    a: `Enter the code ${MAP.code} in Fortnite Discover.`,
+  },
+  {
+    q: "Is it multiplayer?",
+    a: "Yes — it's fun solo or with a party.",
+  },
+];
+
 export default function Page() {
   const schema = {
     "@context": "https://schema.org",
@@ -41,112 +52,78 @@ export default function Page() {
     image: `${SITE_URL}${MAP.image}`,
     description:
       "High-speed ramp survival Fortnite experience built with UEFN by NLDEVS.",
-    publisher: {
-      "@type": "Organization",
-      name: "NLDEVS",
-      url: SITE_URL,
-    },
+    publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 
   return (
-    <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="tmnt-mega-ramp-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+    <main id="top" className="mx-auto w-full max-w-5xl px-6 py-14">
+      <JsonLd id="tmnt-mega-ramp-schema" data={schema} />
+      <JsonLd id="tmnt-mega-ramp-faq-schema" data={faqSchema} />
 
-      {/* ✅ Breadcrumbs (consistent) */}
-      <Breadcrumbs
-        items={[
+      <MapDetailHeader
+        crumbs={[
           { label: "Home", href: "/" },
           { label: "TMNT Maps", href: "/tmnt-fortnite-maps" },
           { label: MAP.title },
         ]}
+        eyebrow="TMNT / Survival"
+        title={MAP.title}
+        code={MAP.code}
+        image={MAP.image}
+        intro="A high-speed survival experience where players race up a massive ramp while avoiding hazards and surviving as long as possible."
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
-
-        <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
-          <p className="text-xl">
-            <span className="font-semibold text-white">Map Code:</span> {MAP.code}
-          </p>
-        </div>
-      </header>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Screenshots</h2>
-        <Image
-          src={MAP.image}
-          alt={`${MAP.title} Fortnite gameplay`}
-          width={1200}
-          height={700}
-          className="rounded-lg mt-4"
-          priority={false}
-        />
-      </section>
-
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Gameplay Description</h2>
-        <p className="mt-3">
-          TMNT Mega Ramp Survival is a high-speed survival experience where players
-          race up a massive ramp while avoiding hazards and surviving as long as possible.
+      <ContentSection title="Gameplay" accent="description">
+        <p className="text-center leading-relaxed text-gray-400 md:text-left">
+          TMNT Mega Ramp Survival is a high-speed survival experience where
+          players race up a massive ramp while avoiding hazards and surviving as
+          long as possible.
         </p>
-      </section>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">How to Play</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
+      <ContentSection title="How to" accent="play">
+        <CenteredList ordered>
           <li>Open Fortnite → Discover</li>
           <li>Enter map code {MAP.code}</li>
           <li>Join the island and start a run</li>
           <li>Survive longer to improve your score</li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Why It’s Fun</h2>
-        <ul className="list-disc ml-6 mt-3 space-y-2">
-          <li>Quick “one more run” replayability</li>
-          <li>High-speed movement + chaos</li>
+      <ContentSection title="Why it's" accent="fun">
+        <CenteredList>
+          <li>Quick &ldquo;one more run&rdquo; replayability</li>
+          <li>High-speed movement and chaos</li>
           <li>Great solo or with friends</li>
           <li>Strong TMNT theme</li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">Similar Maps</h2>
-        <div className="flex flex-wrap gap-4 mt-3">
-          <Link href="/tmnt-city" className="underline text-cyan-300 hover:text-cyan-200">
-            TMNT City →
-          </Link>
-          <Link href="/rvb-squid-minigame" className="underline text-cyan-300 hover:text-cyan-200">
-            RvB Squid Minigame →
-          </Link>
-          <Link href="/best-fortnite-xp-maps" className="underline text-cyan-300 hover:text-cyan-200">
-            Best Fortnite XP Maps →
-          </Link>
-        </div>
-      </section>
+      <ContentSection title="Similar" accent="maps">
+        <PillLinks
+          links={[
+            { href: "/tmnt-city", label: "TMNT City" },
+            { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
+            { href: "/best-fortnite-xp-maps", label: "Best XP Maps" },
+          ]}
+        />
+      </ContentSection>
 
-      <section className="mt-12">
-        <h2 className="text-2xl text-white">FAQ</h2>
-        <div className="mt-4 space-y-4">
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">How do I play this map?</h3>
-            <p className="mt-2">Enter the code {MAP.code} in Fortnite Discover.</p>
-          </div>
-          <div className="rounded-lg border border-[#2A0E61] p-4">
-            <h3 className="font-semibold text-white">Is it multiplayer?</h3>
-            <p className="mt-2">Yes — it’s fun solo or with a party.</p>
-          </div>
-        </div>
-      </section>
+      <ContentSection title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
+      </ContentSection>
 
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

@@ -3,116 +3,117 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
+import { SOCIAL_LINKS } from "@/constants/site";
+
+const categoryLinks = [
+  { href: "/star-wars-fortnite-maps", label: "Star Wars Maps" },
+  { href: "/tmnt-fortnite-maps", label: "TMNT Maps" },
+  { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+  { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+  { href: "/best-fortnite-xp-maps", label: "XP Maps" },
+];
 
 const AboutContent = () => {
   return (
-    <motion.section
-      initial="hidden"
-      animate="visible"
-      aria-labelledby="about-title"
-      className="flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 lg:px-20 mt-6 w-full z-[20]"
+    <section
       id="about-us"
+      aria-labelledby="about-title"
+      className="mx-auto w-full max-w-6xl px-6 py-20"
     >
-      {/* Content section */}
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-        {/* Welcome box */}
+      <div className="grid items-center gap-14 lg:grid-cols-2">
+        {/* Copy */}
         <motion.div
-          variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] inline-flex items-center"
-          style={{ borderRadius: 0 }}
+          variants={slideInFromLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="text-center md:text-left"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <p className="Welcome-text text-[13px]">NLDEVS — UEFN Game Studio</p>
-        </motion.div>
+          {/* The neon rule only reads correctly against a left edge */}
+          <p className="eyebrow md:rule-neon">About the studio</p>
 
-        {/* Headline + subcopy */}
-        <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-4 mt-6 max-w-[720px]"
-        >
-          <h2 id="about-title" className="text-4xl md:text-5xl font-bold text-white">
-            We build Fortnite experiences
+          <h2
+            id="about-title"
+            className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl"
+          >
+            A studio built around{" "}
+            <span className="neon-text">fun-first gameplay</span>
           </h2>
 
-          <p className="text-lg text-gray-300">
-            NLDEVS is a UEFN studio creating replayable Fortnite maps: gun games, themed adventures,
-            and progression-based experiences.
+          <p className="mt-6 text-lg leading-relaxed text-gray-300">
+            NLDEVS creates replayable Fortnite maps with Unreal Editor for
+            Fortnite — gun games, themed adventures, and progression-based
+            experiences.
           </p>
 
-          <p className="text-sm text-gray-400">
-            Currently shipping <span className="text-gray-200 font-semibold">6</span> live experiences.
+          <p className="mt-4 leading-relaxed text-gray-400">
+            We focus on clean flow and strong replay value, whether you&apos;re
+            grinding rounds, practicing aim, or just playing with friends.
           </p>
-        </motion.div>
-
-        {/* Body */}
-        <motion.div
-          variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-300 my-5 max-w-[800px] text-left"
-        >
-          <h3 className="text-xl font-semibold text-white mb-4">Welcome to NLDEVS</h3>
-
-          <p className="mb-6">
-            We build with Unreal Editor for Fortnite (UEFN), focusing on fun-first gameplay loops,
-            clean flow, and strong replay value—whether you’re grinding rounds, practicing aim, or
-            playing with friends.
-          </p>
-
-          <p className="mb-6">
-            Explore our maps below, or follow our creator page to keep up with new releases and updates.
-          </p>
-
-          <p className="mt-6 text-sm text-gray-400">Browse by category:</p>
-
-          <div className="mt-4 flex flex-wrap gap-4">
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/tmnt-fortnite-maps">
-              TMNT Maps
-            </Link>
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/squid-game-fortnite-maps">
-              Squid Game Maps
-            </Link>
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/fortnite-gun-game-maps">
-              Gun Game Maps
-            </Link>
-            <Link className="text-cyan-300 underline hover:text-cyan-200" href="/best-fortnite-xp-maps">
-              XP Maps
-            </Link>
-          </div>
 
           <div className="mt-8">
-            <span className="font-semibold block mb-2 text-white">Join our Community</span>
+            <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+              Browse by category
+            </p>
 
+            <div className="mt-4 flex flex-wrap justify-center gap-2.5 md:justify-start">
+              {categoryLinks.map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="clip-corner-sm border border-edge-bright/70 bg-ink-800/60 px-4 py-2 text-sm text-gray-300 transition hover:border-neon-cyan hover:text-white"
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10">
             <a
-              href="https://www.fortnite.com/@nldevs"
+              href={SOCIAL_LINKS.fortnite}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-blue-400 hover:text-blue-300 underline transition duration-300"
+              className="btn-neon clip-corner-sm"
             >
-              @nldevs on Fortnite →
+              @nldevs on Fortnite
             </a>
           </div>
         </motion.div>
-      </div>
 
-      {/* Image section */}
-      <motion.div
-        variants={slideInFromRight(0.8)}
-        className="relative w-[70vw] h-auto max-w-[400px] lg:max-w-[600px] mx-auto lg:ml-8 mt-8 lg:mt-0"
-      >
-        <div className="relative w-full h-0 pb-[100%]">
-          <Image
-            src="/FortniteCreativeTeamLogo.png"
-            alt="NLDEVS — UEFN Game Studio logo"
-            fill
-            sizes="(max-width: 1024px) 70vw, 600px"
-            className="object-contain transition-all duration-300 ease-in-out"
-            priority={false}
+        {/* Logo panel */}
+        <motion.div
+          variants={slideInFromRight(0.15)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="relative mx-auto w-full max-w-md lg:max-w-none"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 rounded-full opacity-70 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(139,92,246,0.22) 0%, rgba(3,0,20,0) 70%)",
+            }}
+            aria-hidden="true"
           />
-        </div>
-      </motion.div>
-    </motion.section>
+
+          <div className="clip-corner relative border border-edge/70 bg-ink-800/40 p-8">
+            <div className="relative aspect-square w-full">
+              <Image
+                src="/FortniteCreativeTeamLogo.png"
+                alt="NLDEVS — UEFN Game Studio logo"
+                fill
+                sizes="(max-width: 1024px) 90vw, 500px"
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
