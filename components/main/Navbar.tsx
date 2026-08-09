@@ -353,7 +353,11 @@ export default function Navbar() {
               {/* Mobile hamburger */}
               <button
                 type="button"
-                className="clip-corner-sm inline-flex items-center justify-center border border-edge-bright bg-ink-800/70 px-3 py-2 text-gray-200 transition hover:border-neon-cyan hover:text-white md:hidden"
+                className={`clip-corner-sm inline-flex items-center justify-center border px-3 py-2 transition md:hidden ${
+                  clientProfile
+                    ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan shadow-[0_0_22px_rgba(34,211,238,0.35)] hover:bg-neon-cyan hover:text-ink"
+                    : "border-edge-bright bg-ink-800/70 text-gray-200 hover:border-neon-cyan hover:text-white"
+                }`}
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-controls="mobile-menu"
                 aria-expanded={open}
@@ -388,34 +392,6 @@ export default function Navbar() {
         >
           <div className="scrollbar-none w-full max-w-full overflow-x-auto px-4 py-2">
             <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  openClientLogin();
-                  closeMenu();
-                }}
-                className={`clip-corner-sm shrink-0 border px-3.5 py-1.5 text-sm font-semibold transition ${
-                  clientProfile
-                    ? "border-neon-cyan bg-neon-cyan text-ink"
-                    : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
-                }`}
-              >
-                {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
-              </button>
-
-              {clientProfile && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    logoutClient();
-                    closeMenu();
-                  }}
-                  className="clip-corner-sm shrink-0 border border-edge-bright bg-ink-800/70 px-3.5 py-1.5 text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
-                >
-                  Logout
-                </button>
-              )}
-
               {NAV.map((item) => {
                 const active = isBranchActive(pathname, item);
 
