@@ -125,6 +125,24 @@ export default function Navbar() {
     setOpen(false);
   }
 
+  function toggleMenu() {
+    setOpen((current) => !current);
+  }
+
+  function handleMenuButtonPointerDown(
+    event: React.PointerEvent<HTMLButtonElement>
+  ) {
+    if (event.pointerType === "mouse") return;
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
+  }
+
+  function handleMenuButtonClick(event: React.MouseEvent<HTMLButtonElement>) {
+    event.stopPropagation();
+    toggleMenu();
+  }
+
   // Solidify the header once the page has moved, so the hero can sit under a
   // near-transparent bar without the nav becoming unreadable further down.
   useEffect(() => {
@@ -365,11 +383,8 @@ export default function Navbar() {
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-controls="mobile-menu"
                 aria-expanded={open}
-                onPointerDown={(event) => event.stopPropagation()}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setOpen((v) => !v);
-                }}
+                onPointerDown={handleMenuButtonPointerDown}
+                onClick={handleMenuButtonClick}
               >
                 <span className="relative block h-4 w-5" aria-hidden="true">
                   <span
