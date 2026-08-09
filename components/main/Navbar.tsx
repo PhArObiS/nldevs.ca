@@ -426,6 +426,36 @@ export default function Navbar() {
           <div className="clip-corner mx-4 mb-4 mt-3 border border-edge bg-ink/95 backdrop-blur-xl">
             <nav className="p-3" aria-label="Mobile menu">
               <ul className="flex flex-col">
+                <li className="mb-2 border-b border-white/10 pb-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      openClientLogin();
+                      closeMenu();
+                    }}
+                    className={`clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border px-3 py-2.5 text-left text-sm font-semibold transition ${
+                      clientProfile
+                        ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
+                        : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                    }`}
+                  >
+                    {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                  </button>
+
+                  {clientProfile && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        logoutClient();
+                        closeMenu();
+                      }}
+                      className="clip-corner-sm mx-3 mb-2 w-[calc(100%-1.5rem)] border border-edge-bright bg-ink-800/70 px-3 py-2.5 text-left text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
+                    >
+                      Logout
+                    </button>
+                  )}
+                </li>
+
                 {NAV.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -465,34 +495,6 @@ export default function Navbar() {
                 ))}
 
                 <li className="mt-2 border-t border-white/10 pt-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      openClientLogin();
-                      closeMenu();
-                    }}
-                    className={`clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border px-3 py-2.5 text-left text-sm font-semibold transition ${
-                      clientProfile
-                        ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
-                        : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
-                    }`}
-                  >
-                    {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
-                  </button>
-
-                  {clientProfile && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        logoutClient();
-                        closeMenu();
-                      }}
-                      className="clip-corner-sm mx-3 mb-2 w-[calc(100%-1.5rem)] border border-edge-bright bg-ink-800/70 px-3 py-2.5 text-left text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
-                    >
-                      Logout
-                    </button>
-                  )}
-
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
                     Featured
                   </p>
