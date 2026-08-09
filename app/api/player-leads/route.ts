@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  findBlockedLanguageFields,
+  hasBlockedLanguage,
+} from "@/utils/contentModeration";
 
 type PlayerLeadInput = {
   action?: unknown;
@@ -410,6 +414,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
   }
 
+  if (hasBlockedLanguage([email])) {
+    return NextResponse.json(
+      { error: "Please keep member info respectful and appropriate." },
+      { status: 400 }
+    );
+  }
+
   const supabaseUrl = process.env.SUPABASE_URL;
   const serviceRoleKey =
     process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.SUPABASE_SECRET_KEY;
@@ -465,6 +476,30 @@ export async function POST(request: NextRequest) {
   const contactConsent = body.contactConsent === true;
   const ageAttestation = body.ageAttestation === true;
   const imageData = typeof body.imageData === "string" ? body.imageData : "";
+
+  const blockedFields = findBlockedLanguageFields({
+    name,
+    email,
+    fortniteName,
+    discordName,
+    avatarStyle,
+    favoriteMap,
+    message,
+    imageName,
+    imagePurpose,
+    developerRole,
+    developerPortfolio,
+    developerSkills,
+    developerAvailability,
+    memberGoals,
+  });
+
+  if (blockedFields.length > 0) {
+    return NextResponse.json(
+      { error: "Please keep member info respectful and appropriate." },
+      { status: 400 }
+    );
+  }
 
   if (name.length < 2) {
     return NextResponse.json({ error: "Name is required." }, { status: 400 });

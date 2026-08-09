@@ -3,6 +3,10 @@
 import { FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
 import { SOCIAL_LINKS } from "@/constants/site";
+import {
+  findBlockedLanguageFields,
+  hasBlockedLanguage,
+} from "@/utils/contentModeration";
 
 const STORAGE_KEY = "nldevs-client-profile";
 const DISMISSED_KEY = "nldevs-client-login-dismissed";
@@ -219,6 +223,10 @@ export default function ClientLoginModal() {
     setLoggingIn(true);
 
     try {
+      if (hasBlockedLanguage([returningEmail])) {
+        throw new Error("Please keep member info respectful and appropriate.");
+      }
+
       const response = await fetch("/api/player-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -277,6 +285,27 @@ export default function ClientLoginModal() {
 
       if (imageFile && imageFile.size > MAX_IMAGE_BYTES) {
         throw new Error("Image must be 1.5 MB or smaller.");
+      }
+
+      const blockedFields = findBlockedLanguageFields({
+        name,
+        email,
+        fortniteName,
+        discordName,
+        avatarStyle,
+        favoriteMap,
+        message,
+        imageName: imageFile?.name,
+        imagePurpose,
+        developerRole,
+        developerPortfolio,
+        developerSkills,
+        developerAvailability,
+        memberGoals: memberGoals.join(", "),
+      });
+
+      if (blockedFields.length > 0) {
+        throw new Error("Please keep member info respectful and appropriate.");
       }
 
       const imageData = imageFile ? await readImageFile(imageFile) : undefined;
