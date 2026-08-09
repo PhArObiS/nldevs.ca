@@ -12,7 +12,7 @@ export const SOCIAL_LINKS = {
   fortnite: "https://www.fortnite.com/@nldevs",
   youtube: "https://www.youtube.com/@nldevs",
   x: "https://x.com/nldevsmtl",
-  discord: "https://discord.gg/V2MEqa69",
+  discord: "https://discord.gg/qArztMJyHF",
   email: "mailto:nldevsmtl@gmail.com",
 } as const;
 
