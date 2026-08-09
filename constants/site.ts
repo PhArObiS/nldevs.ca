@@ -5,6 +5,9 @@ export const SITE_URL = "https://www.nldevs.ca";
 
 export const SITE_NAME = "NLDEVS";
 
+export const SITE_LOGO_PATH = "/NavLogo.png";
+export const SITE_LOGO_URL = `${SITE_URL}${SITE_LOGO_PATH}`;
+
 export const SOCIAL_LINKS = {
   fortnite: "https://www.fortnite.com/@nldevs",
   youtube: "https://www.youtube.com/@nldevs",
