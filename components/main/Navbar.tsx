@@ -119,6 +119,7 @@ export default function Navbar() {
   const [clientProfile, setClientProfile] =
     useState<ClientProfileSummary | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const menuButtonRef = useRef<HTMLButtonElement | null>(null);
 
   function closeMenu() {
     setOpen(false);
@@ -196,8 +197,10 @@ export default function Navbar() {
 
     function onPointerDown(e: PointerEvent) {
       const panel = panelRef.current;
-      if (!panel) return;
-      if (!panel.contains(e.target as Node)) setOpen(false);
+      const menuButton = menuButtonRef.current;
+      const target = e.target as Node;
+      if (panel?.contains(target) || menuButton?.contains(target)) return;
+      setOpen(false);
     }
 
     window.addEventListener("pointerdown", onPointerDown);
@@ -352,8 +355,9 @@ export default function Navbar() {
 
               {/* Mobile hamburger */}
               <button
+                ref={menuButtonRef}
                 type="button"
-                className={`clip-corner-sm inline-flex items-center justify-center border px-3 py-2 transition md:hidden ${
+                className={`clip-corner-sm inline-flex min-h-11 min-w-12 touch-manipulation items-center justify-center border px-3 py-2 transition md:hidden ${
                   clientProfile
                     ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan shadow-[0_0_22px_rgba(34,211,238,0.35)] hover:bg-neon-cyan hover:text-ink"
                     : "border-edge-bright bg-ink-800/70 text-gray-200 hover:border-neon-cyan hover:text-white"
@@ -361,7 +365,11 @@ export default function Navbar() {
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-controls="mobile-menu"
                 aria-expanded={open}
-                onClick={() => setOpen((v) => !v)}
+                onPointerDown={(event) => event.stopPropagation()}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setOpen((v) => !v);
+                }}
               >
                 <span className="relative block h-4 w-5" aria-hidden="true">
                   <span
