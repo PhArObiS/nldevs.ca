@@ -20,11 +20,18 @@
   }
 
   html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
   }
 
   body {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -59,6 +66,7 @@
   /* Horizontal scrollers (mobile nav strip) without a visible track. */
   .scrollbar-none {
     -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
   }
   .scrollbar-none::-webkit-scrollbar {

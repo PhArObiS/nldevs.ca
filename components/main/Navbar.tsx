@@ -386,7 +386,7 @@ export default function Navbar() {
           aria-label="Mobile quick navigation"
           className="border-t border-white/5 md:hidden"
         >
-          <div className="scrollbar-none overflow-x-auto px-4 py-2">
+          <div className="scrollbar-none w-full max-w-full overflow-x-auto px-4 py-2">
             <div className="flex items-center gap-2">
               <button
                 type="button"
