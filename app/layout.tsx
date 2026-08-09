@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
+import ClientLoginModal from "@/components/main/ClientLoginModal";
 import { SAME_AS, SITE_LOGO_URL, SITE_URL } from "@/constants/site";
 
 const inter = Inter({
@@ -163,6 +164,7 @@ export default function RootLayout({
         <StarsCanvas />
 
         <Navbar />
+        <ClientLoginModal />
 
         {/*
           Offset for the fixed header. It is 65px on desktop; on mobile the

@@ -80,6 +80,10 @@ function isBranchActive(pathname: string, item: NavItem) {
   );
 }
 
+function openClientLogin() {
+  window.dispatchEvent(new Event("nldevs:open-client-login"));
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -233,6 +237,14 @@ export default function Navbar() {
 
             {/* Right side: socials + mobile hamburger */}
             <div className="flex flex-row items-center gap-3">
+              <button
+                type="button"
+                onClick={openClientLogin}
+                className="clip-corner-sm hidden border border-neon-cyan/50 bg-neon-cyan/10 px-3 py-2 text-sm font-semibold text-neon-cyan transition hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink lg:inline-flex"
+              >
+                Login
+              </button>
+
               <div className="hidden flex-row items-center gap-1.5 sm:flex">
                 {Socials.map((social) => {
                   const external = isExternalHref(social.href);
@@ -370,6 +382,17 @@ export default function Navbar() {
                 ))}
 
                 <li className="mt-2 border-t border-white/10 pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      openClientLogin();
+                      closeMenu();
+                    }}
+                    className="clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border border-neon-cyan/50 bg-neon-cyan/10 px-3 py-2.5 text-left text-sm font-semibold text-neon-cyan transition hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                  >
+                    Login
+                  </button>
+
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
                     Featured
                   </p>

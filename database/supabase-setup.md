@@ -1,0 +1,75 @@
+# Supabase Player Leads Setup
+
+This site saves popup entries through `app/api/player-leads/route.ts`.
+
+## 1. Create the Supabase Project
+
+Create a free Supabase project, then open the project dashboard.
+
+## 2. Create the Table
+
+Open SQL Editor and run:
+
+```sql
+-- database/player_leads.sql
+```
+
+Paste the contents of `database/player_leads.sql` into the editor and run it.
+
+The table is `public.player_leads`.
+
+The SQL also grants `insert` access to Supabase's `service_role`. This is
+required for newer Supabase projects where new tables are not automatically
+exposed through the REST/Data API.
+
+## 3. Add Environment Variables
+
+In local development, create `.env.local`:
+
+```env
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+Some newer Supabase projects may label the server key as:
+
+```env
+SUPABASE_SECRET_KEY=your-secret-key
+```
+
+The API route supports either key name.
+
+Your current `.env.local` must use the real key from:
+
+```txt
+Supabase Dashboard -> Project Settings -> API Keys
+```
+
+Do not leave `your_secret_key_here` in `.env.local`; the login popup will return
+`Player lead database is not configured` until the real server key is present.
+
+For production, add the same values in the hosting provider's environment
+variables.
+
+## 4. Security Notes
+
+- Never expose `SUPABASE_SERVICE_ROLE_KEY` or `SUPABASE_SECRET_KEY` in browser code.
+- Do not prefix the secret key with `NEXT_PUBLIC_`.
+- The table uses Row Level Security.
+- Submissions go through the server route, so visitors never receive the secret key.
+
+## 5. Test
+
+Start the site, submit the popup, then check Supabase Table Editor:
+
+```txt
+Table Editor -> player_leads
+```
+
+You should see name, email, optional Fortnite name, source path, browser user
+agent, optional Discord name, avatar style, favorite map, message, uploaded
+image details, contact consent, and created timestamp.
+
+Images are stored as small data URLs in the `image_data` column. The form limits
+uploads to 1.5 MB. For larger galleries or many screenshots, move images to
+Supabase Storage and store the file URL in this table instead.
