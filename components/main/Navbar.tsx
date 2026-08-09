@@ -1,6 +1,12 @@
 "use client";
 
 import { Socials } from "@/constants";
+import {
+  ArrowRightOnRectangleIcon,
+  Bars3Icon,
+  CheckCircleIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -381,13 +387,24 @@ export default function Navbar() {
               >
                 <button
                   type="button"
-                  className="min-h-11 touch-manipulation px-2.5 text-xs font-bold uppercase tracking-wide text-current transition hover:text-white"
+                  className="inline-flex min-h-11 touch-manipulation items-center gap-1.5 px-2.5 text-xs font-bold uppercase tracking-wide text-current transition hover:text-white"
                   aria-label={clientProfile ? "Open member menu" : "Open login menu"}
                   aria-controls="mobile-menu"
                   aria-expanded={open}
                   onPointerDown={handleMenuButtonPointerDown}
                   onClick={handleMenuButtonClick}
                 >
+                  {clientProfile ? (
+                    <CheckCircleIcon
+                      className="h-4 w-4 text-emerald-400"
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <ArrowRightOnRectangleIcon
+                      className="h-4 w-4 text-neon-cyan"
+                      aria-hidden="true"
+                    />
+                  )}
                   {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
                 </button>
 
@@ -401,23 +418,19 @@ export default function Navbar() {
                   onPointerDown={handleMenuButtonPointerDown}
                   onClick={handleMenuButtonClick}
                 >
-                  <span className="relative block h-4 w-5" aria-hidden="true">
-                    <span
-                      className={`absolute left-0 top-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                        open ? "translate-y-[7px] rotate-45" : ""
-                      }`}
+                  {open ? (
+                    <XMarkIcon
+                      className="h-6 w-6 text-red-400"
+                      strokeWidth={2.5}
+                      aria-hidden="true"
                     />
-                    <span
-                      className={`absolute left-0 top-[7px] h-[2px] w-full bg-current transition-opacity duration-200 ${
-                        open ? "opacity-0" : "opacity-100"
-                      }`}
+                  ) : (
+                    <Bars3Icon
+                      className="h-6 w-6"
+                      strokeWidth={2.5}
+                      aria-hidden="true"
                     />
-                    <span
-                      className={`absolute bottom-0 left-0 h-[2px] w-full bg-current transition-transform duration-200 ${
-                        open ? "-translate-y-[7px] -rotate-45" : ""
-                      }`}
-                    />
-                  </span>
+                  )}
                 </button>
               </div>
             </div>
