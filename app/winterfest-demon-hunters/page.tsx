@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
@@ -46,9 +46,7 @@ export default function Page() {
 
   return (
     <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="winterfest-demon-hunters-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+      <JsonLd id="winterfest-demon-hunters-schema" data={schema} />
 
       {/* ✅ Breadcrumbs (consistent structure) */}
       <Breadcrumbs
@@ -69,7 +67,7 @@ export default function Page() {
         </p>
       </header>
 
-      <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
+      <div className="mt-6 p-6 border border-edge rounded-lg">
         <p className="text-xl">
           <span className="font-semibold text-white">Map Code:</span> {MAP.code}
         </p>
@@ -117,40 +115,40 @@ export default function Page() {
 
       <h2 className="text-2xl text-white mt-12">Similar Maps</h2>
       <div className="flex flex-wrap gap-4 mt-3">
-        <Link href="/fortnite-gun-game-maps" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/fortnite-gun-game-maps" className="underline text-neon-cyan hover:text-white">
           Fortnite Gun Game Maps →
         </Link>
-        <Link href="/best-fortnite-xp-maps" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/best-fortnite-xp-maps" className="underline text-neon-cyan hover:text-white">
           Best Fortnite XP Maps →
         </Link>
-        <Link href="/tmnt-fortnite-maps" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/tmnt-fortnite-maps" className="underline text-neon-cyan hover:text-white">
           TMNT Fortnite Maps →
         </Link>
       </div>
 
       <h2 className="text-2xl text-white mt-12">FAQ</h2>
       <div className="mt-4 space-y-4">
-        <div className="rounded-lg border border-[#2A0E61] p-4">
+        <div className="rounded-lg border border-edge p-4">
           <h3 className="font-semibold text-white">Is this a Gun Game map?</h3>
           <p className="mt-2">
             It’s a combat-focused experience with repeatable rounds. Some versions play like a gun
             game/rotation loop—follow the in-map rules for the current build.
           </p>
         </div>
-        <div className="rounded-lg border border-[#2A0E61] p-4">
+        <div className="rounded-lg border border-edge p-4">
           <h3 className="font-semibold text-white">Does it give XP?</h3>
           <p className="mt-2">
             XP depends on Fortnite calibration and the island’s current settings. XP rates can change
             after updates or revisions.
           </p>
         </div>
-        <div className="rounded-lg border border-[#2A0E61] p-4">
+        <div className="rounded-lg border border-edge p-4">
           <h3 className="font-semibold text-white">Can I play with friends?</h3>
           <p className="mt-2">Yes—this one is best with squads/parties for faster rounds.</p>
         </div>
       </div>
 
-      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
+      <section className="mt-12 rounded-lg border border-edge p-5 text-gray-300">
         <p className="text-white font-semibold">Note</p>
         <p className="mt-2">
           XP availability can change with Fortnite updates and calibration. This page focuses on normal,

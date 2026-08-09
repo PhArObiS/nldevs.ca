@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
@@ -46,9 +46,7 @@ export default function Page() {
 
   return (
     <main id="top" className="max-w-5xl mx-auto px-6 py-12 text-gray-300">
-      <Script id="tilted-squid-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+      <JsonLd id="tilted-squid-schema" data={schema} />
 
       {/* ✅ Breadcrumbs (consistent structure) */}
       <Breadcrumbs
@@ -63,7 +61,7 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-white">{MAP.title}</h1>
       </header>
 
-      <div className="mt-6 p-6 border border-[#2A0E61] rounded-lg">
+      <div className="mt-6 p-6 border border-edge rounded-lg">
         <p className="text-xl">
           <span className="font-semibold text-white">Map Code:</span> {MAP.code}
         </p>
@@ -103,26 +101,26 @@ export default function Page() {
 
       <h2 className="text-2xl text-white mt-12">Similar Maps</h2>
       <div className="flex flex-wrap gap-4 mt-3">
-        <Link href="/rvb-squid-minigame" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/rvb-squid-minigame" className="underline text-neon-cyan hover:text-white">
           RvB Squid Minigame →
         </Link>
-        <Link href="/squid-game-fortnite-maps" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/squid-game-fortnite-maps" className="underline text-neon-cyan hover:text-white">
           Squid Game Maps →
         </Link>
-        <Link href="/fortnite-gun-game-maps" className="underline text-cyan-300 hover:text-cyan-200">
+        <Link href="/fortnite-gun-game-maps" className="underline text-neon-cyan hover:text-white">
           Fortnite Gun Game Maps →
         </Link>
       </div>
 
       <h2 className="text-2xl text-white mt-12">FAQ</h2>
       <div className="mt-4 space-y-4">
-        <div className="rounded-lg border border-[#2A0E61] p-4">
+        <div className="rounded-lg border border-edge p-4">
           <h3 className="font-semibold text-white">Is this a real Squid Game map?</h3>
           <p className="mt-2">
             It’s Squid-style inspired (elimination / high-stakes vibe), not official Netflix content.
           </p>
         </div>
-        <div className="rounded-lg border border-[#2A0E61] p-4">
+        <div className="rounded-lg border border-edge p-4">
           <h3 className="font-semibold text-white">Why bots?</h3>
           <p className="mt-2">
             Bots make it ideal for practice, warmups, and quick matches without long queues.
@@ -130,7 +128,7 @@ export default function Page() {
         </div>
       </div>
 
-      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
+      <section className="mt-12 rounded-lg border border-edge p-5 text-gray-300">
         <p className="text-white font-semibold">Note</p>
         <p className="mt-2">
           “Squid” is used here to describe gameplay style and inspiration. This page is not affiliated

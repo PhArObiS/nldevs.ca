@@ -1,6 +1,25 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
+/**
+ * Every route below must correspond to a real page in `app/`.
+ * Adding a page? Add it here too — anything listed but missing is served
+ * to crawlers as a 404.
+ */
+const HUB_ROUTES = [
+  "/tmnt-fortnite-maps",
+  "/squid-game-fortnite-maps",
+  "/fortnite-gun-game-maps",
+  "/best-fortnite-xp-maps",
+];
+
+const MAP_ROUTES = [
+  "/tmnt-mega-ramp-survival",
+  "/tmnt-city",
+  "/rvb-squid-minigame",
+  "/tilted-squid-royale-99-bots",
+  "/winterfest-demon-hunters",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -12,17 +31,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${SITE_URL}/maps`,
+    ...HUB_ROUTES.map((path) => ({
+      url: `${SITE_URL}${path}`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/best-fortnite-xp-maps`,
+    })),
+    ...MAP_ROUTES.map((path) => ({
+      url: `${SITE_URL}${path}`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }

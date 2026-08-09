@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
@@ -55,9 +55,7 @@ export default function FortniteGunGameMapsPage() {
   return (
     <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
       {/* ✅ JSON-LD */}
-      <Script id="gungame-schema" type="application/ld+json">
-        {JSON.stringify(pageSchema)}
-      </Script>
+      <JsonLd id="gungame-schema" data={pageSchema} />
 
       {/* ✅ GLOBAL BREADCRUMBS */}
       <Breadcrumbs
@@ -136,7 +134,7 @@ export default function FortniteGunGameMapsPage() {
                   <p className="mt-3 text-gray-300">{m.notes}</p>
 
                   {m.detailsHref ? (
-                    <span className="inline-block mt-4 text-cyan-300 underline">
+                    <span className="inline-block mt-4 text-neon-cyan underline">
                       View details →
                     </span>
                   ) : (
@@ -151,7 +149,7 @@ export default function FortniteGunGameMapsPage() {
             return (
               <article
                 key={m.code}
-                className="rounded-lg border border-[#2A0E61] overflow-hidden hover:border-cyan-400 transition"
+                className="rounded-lg border border-edge overflow-hidden hover:border-neon-cyan/60 transition"
               >
                 {m.detailsHref ? (
                   <Link href={m.detailsHref}>{Card}</Link>

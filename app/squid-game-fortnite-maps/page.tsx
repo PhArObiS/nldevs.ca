@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/main/Breadcrumbs";
 
 const SITE_URL = "https://www.nldevs.ca";
@@ -142,12 +142,8 @@ export default function SquidGameFortniteMapsPage() {
 
   return (
     <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
-      <Script id="squid-collection-schema" type="application/ld+json">
-        {JSON.stringify(pageSchema)}
-      </Script>
-      <Script id="squid-faq-schema" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
+      <JsonLd id="squid-collection-schema" data={pageSchema} />
+      <JsonLd id="squid-faq-schema" data={faqSchema} />
 
       {/* ✅ Breadcrumbs (consistent) */}
       <Breadcrumbs
@@ -187,7 +183,7 @@ export default function SquidGameFortniteMapsPage() {
         </div>
       </section>
 
-      <nav className="mt-8 rounded-lg border border-[#2A0E61] p-4 text-gray-200">
+      <nav className="mt-8 rounded-lg border border-edge p-4 text-gray-200">
         <p className="font-semibold text-white">On this page</p>
         <ul className="mt-2 list-disc list-inside">
           <li>
@@ -255,7 +251,7 @@ export default function SquidGameFortniteMapsPage() {
                   <p className="mt-3 text-gray-300">{m.notes}</p>
 
                   {m.detailsHref ? (
-                    <span className="inline-block mt-4 text-cyan-300 underline hover:text-cyan-200">
+                    <span className="inline-block mt-4 text-neon-cyan underline hover:text-white">
                       View details →
                     </span>
                   ) : null}
@@ -267,7 +263,7 @@ export default function SquidGameFortniteMapsPage() {
               <article
                 key={m.code}
                 id={m.code.replaceAll("-", "")}
-                className="rounded-lg border border-[#2A0E61] overflow-hidden hover:border-cyan-400 transition"
+                className="rounded-lg border border-edge overflow-hidden hover:border-neon-cyan/60 transition"
               >
                 {m.detailsHref ? (
                   <Link href={m.detailsHref} className="block">
@@ -376,7 +372,7 @@ export default function SquidGameFortniteMapsPage() {
         </ul>
       </section>
 
-      <section className="mt-12 rounded-lg border border-[#2A0E61] p-5 text-gray-300">
+      <section className="mt-12 rounded-lg border border-edge p-5 text-gray-300">
         <p className="text-white font-semibold">Note</p>
         <p className="mt-2">
           “Squid Game” is used here to describe gameplay style and inspiration.

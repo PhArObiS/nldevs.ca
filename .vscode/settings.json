@@ -1,0 +1,22 @@
+{
+  // The Microsoft Edge Tools extension runs webhint against source files as if
+  // they were rendered HTML/CSS. On a Next.js + Tailwind codebase that produces
+  // hints this project has deliberately decided against:
+  //
+  //   - axe/aria         : cannot evaluate JSX expressions, so it reports valid
+  //                        `aria-expanded={open}` as invalid. ESLint's
+  //                        jsx-a11y/aria-proptypes already covers this properly.
+  //   - no-inline-styles : app/opengraph-image.tsx runs on Satori, which has no
+  //                        CSS engine and accepts inline styles only.
+  //   - compat-api/css   : flags `scrollbar-gutter` as unsupported in Safari.
+  //                        It is a progressive enhancement; Safari uses overlay
+  //                        scrollbars, which don't shift layout anyway.
+  //
+  // .hintrc scopes these off for anything that does read webhint config.
+  // Accessibility and correctness are still enforced by `next lint` and `tsc`.
+  "vscode-edge-devtools.webhint": false,
+
+  // Use the TypeScript pinned in package.json rather than the newer one bundled
+  // with VS Code, so editor diagnostics match what `npm run build` actually runs.
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
