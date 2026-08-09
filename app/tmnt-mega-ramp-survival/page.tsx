@@ -114,8 +114,8 @@ export default function Page() {
         title={MAP.title}
         images={[
           { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival preview" },
-          { src: "/CityTMNT.jpg", alt: "TMNT City preview" },
-          { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters combat preview" },
+          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival gameplay screenshot placeholder" },
+          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival extra screenshot placeholder" },
         ]}
       />
 

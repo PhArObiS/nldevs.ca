@@ -114,8 +114,8 @@ export default function Page() {
         title={MAP.title}
         images={[
           { src: "/CityTMNT.jpg", alt: "TMNT City preview" },
-          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival preview" },
-          { src: "/RedVsBluePlayersVsGuards.jpeg", alt: "Red vs Blue Players vs Guards preview" },
+          { src: "/CityTMNT.jpg", alt: "TMNT City gameplay screenshot placeholder" },
+          { src: "/CityTMNT.jpg", alt: "TMNT City extra screenshot placeholder" },
         ]}
       />
 

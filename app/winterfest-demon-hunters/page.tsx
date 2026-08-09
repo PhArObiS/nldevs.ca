@@ -118,8 +118,8 @@ export default function Page() {
         title={MAP.title}
         images={[
           { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters preview" },
-          { src: "/RedVsBluePlayersVsGuards.jpeg", alt: "Red vs Blue Players vs Guards preview" },
-          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival preview" },
+          { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters gameplay screenshot placeholder" },
+          { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters extra screenshot placeholder" },
         ]}
       />
 

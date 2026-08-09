@@ -156,8 +156,8 @@ export default function Page() {
         title={MAP.title}
         images={[
           { src: "/Squid99BotsSidekicks.jpg", alt: "Sidekick Siege 99 Bots preview" },
-          { src: "/99 Bots Squid Royale Boss.jpg", alt: "99 Bots Squid Royale Boss preview" },
-          { src: "/RedVsBlueSquidMinigame.jpg", alt: "RvB Squid Minigame preview" },
+          { src: "/Squid99BotsSidekicks.jpg", alt: "Sidekick Siege 99 Bots gameplay screenshot placeholder" },
+          { src: "/Squid99BotsSidekicks.jpg", alt: "Sidekick Siege 99 Bots extra screenshot placeholder" },
         ]}
       />
 

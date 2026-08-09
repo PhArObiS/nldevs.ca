@@ -153,8 +153,8 @@ export default function StarWarsTycoonSidekickLegendsPage() {
         title={MAP.title}
         images={[
           { src: "/TycoonSidekicks.jpg", alt: "Star Wars Tycoon Sidekick Legends preview" },
-          { src: "/StarWarsRvB.jpg", alt: "Star Wars Mega RvB gameplay preview" },
-          { src: "/StarWarsTilted99BotsRoyale.jpg", alt: "Star Wars Tilted 99 Bots Royale preview" },
+          { src: "/TycoonSidekicks.jpg", alt: "Star Wars Tycoon Sidekick Legends gameplay screenshot placeholder" },
+          { src: "/TycoonSidekicks.jpg", alt: "Star Wars Tycoon Sidekick Legends extra screenshot placeholder" },
         ]}
       />
 

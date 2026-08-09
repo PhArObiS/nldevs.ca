@@ -141,8 +141,8 @@ export default function StarWarsMegaRvbPage() {
         title={MAP.title}
         images={[
           { src: "/StarWarsRvB.jpg", alt: "Star Wars Mega RvB gameplay preview" },
-          { src: "/StarWarsTilted99BotsRoyale.jpg", alt: "Star Wars Tilted 99 Bots Royale preview" },
-          { src: "/TycoonSidekicks.jpg", alt: "Star Wars Tycoon Sidekick Legends preview" },
+          { src: "/StarWarsRvB.jpg", alt: "Star Wars Mega RvB gameplay screenshot placeholder" },
+          { src: "/StarWarsRvB.jpg", alt: "Star Wars Mega RvB extra screenshot placeholder" },
         ]}
       />
 
