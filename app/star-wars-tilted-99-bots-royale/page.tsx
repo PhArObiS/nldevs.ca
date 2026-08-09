@@ -115,7 +115,7 @@ export default function StarWarsTilted99BotsRoyalePage() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400">
+        <p className="text-center leading-relaxed md:text-left text-gray-400">
           Star Wars Tilted 99 Bots Royale blends bot royale practice with
           Star Wars-themed open-world PvE survival. Drop in, fight through bots,
           unlock heroes, battle bosses, and keep your saved stats and loadouts
@@ -133,7 +133,7 @@ export default function StarWarsTilted99BotsRoyalePage() {
       </ContentSection>
 
       <ContentSection title="Why play" accent="99 Bots Royale">
-        <div className="space-y-4 text-center leading-relaxed text-gray-400">
+        <div className="space-y-4 text-center leading-relaxed md:text-left text-gray-400">
           <p>
             Star Wars Tilted 99 Bots Royale targets players looking for a
             Star Wars Fortnite map code with bot fights, survival pacing, and

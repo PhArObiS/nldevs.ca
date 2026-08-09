@@ -147,7 +147,7 @@ export default function SquidGameFortniteMapsPage() {
         title="What are"
         accent="Squid Game Fortnite maps?"
       >
-        <div className="space-y-4 text-center leading-relaxed text-gray-400">
+        <div className="space-y-4 text-center leading-relaxed md:text-left text-gray-400">
           <p>
             &ldquo;Squid Game&rdquo; Fortnite maps are community-made islands
             inspired by elimination-style minigames. You&apos;ll usually see fast

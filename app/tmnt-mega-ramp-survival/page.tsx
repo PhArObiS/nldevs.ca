@@ -85,7 +85,7 @@ export default function Page() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400">
+        <p className="text-center leading-relaxed md:text-left text-gray-400">
           TMNT Mega Ramp Survival is a high-speed survival experience where
           players race up a massive ramp while avoiding hazards and surviving as
           long as possible.

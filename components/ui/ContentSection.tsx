@@ -11,7 +11,7 @@ type Props = {
 };
 
 /**
- * A titled block on an inner page. Headings stay centered with PageHeader.
+ * A titled block on an inner page. Mobile stays centered; desktop is left-aligned.
  */
 export default function ContentSection({
   id,
@@ -24,7 +24,7 @@ export default function ContentSection({
     <Reveal as="section" className={`mt-16 ${className}`}>
       <h2
         id={id}
-        className="text-center text-2xl font-bold tracking-tight text-white md:text-3xl"
+        className="text-center text-2xl font-bold tracking-tight text-white md:text-left md:text-3xl"
       >
         {title}
         {accent && (
@@ -54,7 +54,7 @@ export function CenteredList({
   const List = ordered ? "ol" : "ul";
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center md:justify-start">
       <List
         className={`space-y-2.5 text-left leading-relaxed text-gray-400 ${
           ordered ? "list-decimal" : "list-disc"

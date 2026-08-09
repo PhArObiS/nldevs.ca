@@ -89,7 +89,7 @@ export default function Page() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400">
+        <p className="text-center leading-relaxed md:text-left text-gray-400">
           Jump into Winterfest Demon Hunters for fast-paced combat loops, weapon
           rotations, and replayable rounds. It&apos;s designed to keep the action
           moving — great for squads who want constant fights and quick re-queues.

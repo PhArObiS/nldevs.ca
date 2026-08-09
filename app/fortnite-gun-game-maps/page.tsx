@@ -75,7 +75,7 @@ export default function FortniteGunGameMapsPage() {
       />
 
       <ContentSection title="What is a Fortnite" accent="Gun Game map?">
-        <div className="space-y-4 text-center leading-relaxed text-gray-400">
+        <div className="space-y-4 text-center leading-relaxed md:text-left text-gray-400">
           <p>
             Fortnite Gun Game is a weapon progression PvP mode built for quick,
             replayable rounds. Players start with a weapon and upgrade after each

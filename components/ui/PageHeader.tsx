@@ -18,8 +18,7 @@ type Props = {
 
 /**
  * Standard header for every inner page: breadcrumbs, eyebrow, h1, blurb.
- *
- * Centered inner-page header used across map and category pages.
+ * Mobile stays centered; desktop returns to the left-aligned page style.
  */
 export default function PageHeader({
   crumbs,
@@ -59,11 +58,11 @@ export default function PageHeader({
       />
 
       <div className="relative">
-        <div className="flex justify-center">
+        <div className="flex justify-center md:justify-start">
           <Breadcrumbs items={crumbs} />
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center md:text-left">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
 
           <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
@@ -77,7 +76,7 @@ export default function PageHeader({
           </h1>
 
           {description && (
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-400">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-400 md:mx-0">
               {description}
             </p>
           )}

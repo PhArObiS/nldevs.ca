@@ -84,7 +84,7 @@ export default function Page() {
       />
 
       <ContentSection title="Gameplay" accent="description">
-        <p className="text-center leading-relaxed text-gray-400">
+        <p className="text-center leading-relaxed md:text-left text-gray-400">
           RvB Squid Minigame is a fast-paced Red vs Blue experience inspired by
           Squid-style challenges. It&apos;s built for quick rounds, constant
           action, and &ldquo;run it back&rdquo; replayability.
