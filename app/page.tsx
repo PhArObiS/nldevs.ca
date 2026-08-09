@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import AboutContent from "@/components/sub/AboutContent";
@@ -7,6 +6,7 @@ import FortniteMaps from "@/components/main/FortniteMaps";
 import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
 import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
+import GameplayVideo from "@/components/ui/GameplayVideo";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SITE_LOGO_URL, SITE_URL, SOCIAL_LINKS } from "@/constants/site";
@@ -155,6 +155,23 @@ const studioUpdates = [
   },
 ];
 
+const playerReactions = [
+  {
+    quote: "Fast rounds, clean chaos, and easy to run back with a squad.",
+    label: "Squad player",
+  },
+  {
+    quote: "The 99 bots maps feel active right away. No waiting around.",
+    label: "PvE fan",
+  },
+  {
+    quote: "Tycoon progression with saves is exactly the kind of map I come back to.",
+    label: "Progression player",
+  },
+];
+
+const FEATURED_GAMEPLAY_VIDEO_ID = "";
+
 export default function Home() {
   /* ===============================
      PAGE STRUCTURED DATA (SEO)
@@ -240,47 +257,14 @@ export default function Home() {
         </Reveal>
 
         <Reveal className="mt-12">
-          <div className="clip-corner relative overflow-hidden border border-edge/70 bg-ink-800">
-            <div className="relative aspect-video">
-              <Image
-                src="/TycoonSidekicks.jpg"
-                alt="Star Wars Tycoon Sidekick Legends gameplay preview"
-                fill
-                sizes="(max-width: 1024px) 100vw, 1024px"
-                className="object-cover"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent"
-                aria-hidden="true"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                <p className="eyebrow">Featured launch</p>
-                <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-white md:text-4xl">
-                  Star Wars Tycoon Sidekick Legends
-                </h3>
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-300 md:text-base">
-                  A coming soon tycoon experience with saved progress, heroes,
-                  sidekicks, workers, upgrades, and rebirth goals.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <Link
-                    href="/star-wars-tycoon-sidekick-legends"
-                    className="btn-neon clip-corner-sm"
-                  >
-                    View map
-                  </Link>
-                  <a
-                    href={SOCIAL_LINKS.youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-ghost clip-corner-sm"
-                  >
-                    Watch NLDEVS
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <GameplayVideo
+            title="Star Wars Tycoon Sidekick Legends"
+            description="A coming soon tycoon experience with saved progress, heroes, sidekicks, workers, upgrades, and rebirth goals."
+            poster="/TycoonSidekicks.jpg"
+            youtubeId={FEATURED_GAMEPLAY_VIDEO_ID || undefined}
+            ctaHref="/star-wars-tycoon-sidekick-legends"
+            ctaLabel="View map"
+          />
         </Reveal>
       </section>
 
@@ -313,14 +297,12 @@ export default function Home() {
                   No spam. No selling info. Delete anytime.
                 </p>
               </div>
-              <a
-                href={SOCIAL_LINKS.discord}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/playtest-squad"
                 className="btn-neon clip-corner-sm justify-self-start md:justify-self-end"
               >
-                Join Discord
-              </a>
+                Join the squad
+              </Link>
             </div>
           </div>
         </Reveal>
@@ -395,6 +377,38 @@ export default function Home() {
                   {update.text}
                 </p>
               </article>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </section>
+
+      {/* PLAYER REACTIONS */}
+      <section
+        id="player-reactions"
+        aria-labelledby="player-reactions-title"
+        className="mx-auto w-full max-w-6xl px-6 pb-20"
+      >
+        <Reveal>
+          <SectionHeading
+            id="player-reactions-title"
+            eyebrow="Player reactions"
+            title="Built for"
+            accent="squad energy"
+            description="Short, player-first feedback that matches what NLDEVS maps are designed to deliver."
+          />
+        </Reveal>
+
+        <RevealGroup className="mt-12 grid gap-4 md:grid-cols-3" stagger={0.08}>
+          {playerReactions.map((reaction) => (
+            <RevealItem key={reaction.quote}>
+              <figure className="clip-corner h-full border border-edge/70 bg-ink-800/50 p-6 transition-colors hover:border-neon-magenta/60">
+                <blockquote className="text-lg font-semibold leading-relaxed text-white">
+                  &ldquo;{reaction.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-4 text-[10px] font-black uppercase tracking-[0.18em] text-neon-cyan">
+                  {reaction.label}
+                </figcaption>
+              </figure>
             </RevealItem>
           ))}
         </RevealGroup>

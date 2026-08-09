@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import MapGallery from "@/components/ui/MapGallery";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
 import { SITE_URL } from "@/constants/site";
@@ -135,6 +136,15 @@ export default function StarWarsMegaRvbPage() {
           <li>Rank up to Unreal and compete with friends.</li>
         </CenteredList>
       </ContentSection>
+
+      <MapGallery
+        title={MAP.title}
+        images={[
+          { src: "/StarWarsRvB.jpg", alt: "Star Wars Mega RvB gameplay preview" },
+          { src: "/StarWarsTilted99BotsRoyale.jpg", alt: "Star Wars Tilted 99 Bots Royale preview" },
+          { src: "/TycoonSidekicks.jpg", alt: "Star Wars Tycoon Sidekick Legends preview" },
+        ]}
+      />
 
       <ContentSection title="Why play" accent="Mega RvB">
         <div className="space-y-4 text-center leading-relaxed md:text-left text-gray-400">

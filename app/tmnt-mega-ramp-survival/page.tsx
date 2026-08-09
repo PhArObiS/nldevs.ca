@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import MapGallery from "@/components/ui/MapGallery";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
 import { SITE_URL } from "@/constants/site";
@@ -108,6 +109,15 @@ export default function Page() {
           <li>Survive longer to improve your score</li>
         </CenteredList>
       </ContentSection>
+
+      <MapGallery
+        title={MAP.title}
+        images={[
+          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival preview" },
+          { src: "/CityTMNT.jpg", alt: "TMNT City preview" },
+          { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters combat preview" },
+        ]}
+      />
 
       <ContentSection title="Why it's" accent="fun">
         <CenteredList>

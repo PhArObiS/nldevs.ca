@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import MapGallery from "@/components/ui/MapGallery";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, InfoCard, PillLinks } from "@/components/ui/InfoCard";
 import { SITE_URL } from "@/constants/site";
@@ -149,6 +150,15 @@ export default function Page() {
           your stats saved across sessions.
         </InfoCard>
       </ContentSection>
+
+      <MapGallery
+        title={MAP.title}
+        images={[
+          { src: "/99 Bots Squid Royale Boss.jpg", alt: "99 Bots Squid Royale Boss preview" },
+          { src: "/Squid99BotsSidekicks.jpg", alt: "Sidekick Siege 99 Bots preview" },
+          { src: "/RedVsBlueSquidMinigame.jpg", alt: "RvB Squid Minigame preview" },
+        ]}
+      />
 
       <ContentSection title="Why play" accent="this map">
         <CenteredList>

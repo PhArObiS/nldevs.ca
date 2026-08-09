@@ -8,6 +8,8 @@ const maps = [
     code: "3205-2388-4588",
     image: "/TycoonSidekicks.jpg",
     mode: "Coming Soon",
+    status: "Testing",
+    updated: "August 2026",
     slug: "star-wars-tycoon-sidekick-legends",
   },
   {
@@ -15,6 +17,8 @@ const maps = [
     code: "0556-7584-6565",
     image: "/MegaRampSurvival.jpeg",
     mode: "Survival",
+    status: "Live",
+    updated: "August 2026",
     slug: "tmnt-mega-ramp-survival",
   },
   {
@@ -22,6 +26,8 @@ const maps = [
     code: "1383-6989-3967",
     image: "/CityTMNT.jpg",
     mode: "Adventure",
+    status: "Live",
+    updated: "August 2026",
     slug: "tmnt-city",
   },
   {
@@ -29,6 +35,8 @@ const maps = [
     code: "2720-5344-3341",
     image: "/RedVsBlueSquidMinigame.jpg",
     mode: "Minigames",
+    status: "Live",
+    updated: "August 2026",
     slug: "rvb-squid-minigame",
   },
   {
@@ -36,6 +44,8 @@ const maps = [
     code: "0596-3765-4845",
     image: "/99 Bots Squid Royale Boss.jpg",
     mode: "99 Bots",
+    status: "Live",
+    updated: "July 2026",
     slug: "99-bots-squid-royale-boss",
   },
   {
@@ -43,6 +53,8 @@ const maps = [
     code: "5577-7953-8449",
     image: "/Squid99BotsSidekicks.jpg",
     mode: "Sidekicks",
+    status: "Live",
+    updated: "August 2026",
     slug: "sidekick-siege-99-bots",
   },
   {
@@ -50,6 +62,8 @@ const maps = [
     code: "6101-7751-8665",
     image: "/WinterfestDemonHuntersGunGame.jpeg",
     mode: "Gun Game",
+    status: "Live",
+    updated: "August 2026",
     slug: "winterfest-demon-hunters",
   },
   {
@@ -57,6 +71,8 @@ const maps = [
     code: "6263-5571-9595",
     image: "/RedVsBluePlayersVsGuards.jpeg",
     mode: "Red vs Blue",
+    status: "Live",
+    updated: "August 2026",
     // No detail page yet — card renders without a link.
     slug: null,
   },
@@ -79,6 +95,8 @@ const FortniteMaps = () => {
             title={m.title}
             code={m.code}
             mode={m.mode}
+            status={m.status}
+            updated={m.updated}
             href={m.slug ? `/${m.slug}` : undefined}
             priority={i < 3}
           />

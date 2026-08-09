@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import MapGallery from "@/components/ui/MapGallery";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
 import { SITE_URL } from "@/constants/site";
@@ -107,6 +108,15 @@ export default function Page() {
           <li>Win rounds with teamwork and eliminations</li>
         </CenteredList>
       </ContentSection>
+
+      <MapGallery
+        title={MAP.title}
+        images={[
+          { src: "/RedVsBlueSquidMinigame.jpg", alt: "RvB Squid Minigame preview" },
+          { src: "/99 Bots Squid Royale Boss.jpg", alt: "99 Bots Squid Royale Boss preview" },
+          { src: "/Squid99BotsSidekicks.jpg", alt: "Sidekick Siege 99 Bots preview" },
+        ]}
+      />
 
       <ContentSection title="Why it's" accent="fun">
         <CenteredList>

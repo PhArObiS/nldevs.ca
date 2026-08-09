@@ -12,6 +12,8 @@ const HUB_ROUTES = [
   "/squid-game-fortnite-maps",
   "/fortnite-gun-game-maps",
   "/best-fortnite-xp-maps",
+  "/playtest-squad",
+  "/privacy",
 ];
 
 const MAP_ROUTES = [

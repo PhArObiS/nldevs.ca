@@ -16,6 +16,8 @@ interface Props {
   priority?: boolean;
   /** Optional blurb shown under the title (used by the hub pages). */
   notes?: string;
+  status?: string;
+  updated?: string;
 }
 
 const FortniteMapsCard = ({
@@ -26,6 +28,8 @@ const FortniteMapsCard = ({
   href,
   priority,
   notes,
+  status,
+  updated,
 }: Props) => {
   const [copied, setCopied] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -75,11 +79,18 @@ const FortniteMapsCard = ({
             aria-hidden="true"
           />
 
-          {mode && (
-            <span className="clip-corner-sm absolute left-3 top-3 border border-neon-cyan/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-cyan backdrop-blur-sm">
-              {mode}
-            </span>
-          )}
+          <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+            {mode && (
+              <span className="clip-corner-sm border border-neon-cyan/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-cyan backdrop-blur-sm">
+                {mode}
+              </span>
+            )}
+            {status && (
+              <span className="clip-corner-sm border border-neon-magenta/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-magenta backdrop-blur-sm">
+                {status}
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-1 flex-col p-5">
@@ -101,6 +112,12 @@ const FortniteMapsCard = ({
           {notes && (
             <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
               {notes}
+            </p>
+          )}
+
+          {updated && (
+            <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-500">
+              Updated {updated}
             </p>
           )}
 

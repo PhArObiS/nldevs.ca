@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
+import MapGallery from "@/components/ui/MapGallery";
 import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, InfoCard, PillLinks } from "@/components/ui/InfoCard";
 import { SITE_URL } from "@/constants/site";
@@ -112,6 +113,15 @@ export default function Page() {
           <li>Stay active in fights to maximize match flow (and XP, if available)</li>
         </CenteredList>
       </ContentSection>
+
+      <MapGallery
+        title={MAP.title}
+        images={[
+          { src: "/WinterfestDemonHuntersGunGame.jpeg", alt: "Winterfest Demon Hunters preview" },
+          { src: "/RedVsBluePlayersVsGuards.jpeg", alt: "Red vs Blue Players vs Guards preview" },
+          { src: "/MegaRampSurvival.jpeg", alt: "TMNT Mega Ramp Survival preview" },
+        ]}
+      />
 
       <ContentSection title="Why it's" accent="fun">
         <CenteredList>
