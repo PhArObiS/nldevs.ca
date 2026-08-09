@@ -419,8 +419,10 @@ export default function Navbar() {
         <div
           id="mobile-menu"
           ref={panelRef}
-          className={`overflow-hidden transition-[max-height] duration-300 md:hidden ${
-            open ? "max-h-[640px]" : "max-h-0"
+          className={`md:hidden ${
+            open
+              ? "max-h-[calc(100dvh-9rem)] overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch]"
+              : "max-h-0 overflow-hidden"
           }`}
         >
           <div className="clip-corner mx-4 mb-4 mt-3 border border-edge bg-ink/95 backdrop-blur-xl">
