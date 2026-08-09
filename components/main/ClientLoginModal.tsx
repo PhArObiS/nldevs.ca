@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
+import { SOCIAL_LINKS } from "@/constants/site";
 
 const STORAGE_KEY = "nldevs-client-profile";
 const DISMISSED_KEY = "nldevs-client-login-dismissed";
@@ -23,6 +24,7 @@ type ClientProfile = {
   developerPortfolio?: string;
   developerSkills?: string;
   developerAvailability?: string;
+  memberGoals?: string;
   contactConsent: boolean;
   ageAttestation: boolean;
   savedAt: string;
@@ -73,6 +75,15 @@ const DEVELOPER_AVAILABILITY = [
   "Future opportunities",
 ];
 
+const MEMBER_GOALS = [
+  "Map updates",
+  "Playtests",
+  "Bug reports",
+  "Collab / work",
+  "Creator support",
+  "Just browsing",
+];
+
 function readImageFile(file: File) {
   return new Promise<string>((resolve, reject) => {
     const reader = new FileReader();
@@ -103,6 +114,7 @@ export default function ClientLoginModal() {
   const [developerPortfolio, setDeveloperPortfolio] = useState("");
   const [developerSkills, setDeveloperSkills] = useState("");
   const [developerAvailability, setDeveloperAvailability] = useState("");
+  const [memberGoals, setMemberGoals] = useState<string[]>([]);
   const [contactConsent, setContactConsent] = useState(false);
   const [ageAttestation, setAgeAttestation] = useState(false);
   const [website, setWebsite] = useState("");
@@ -111,6 +123,7 @@ export default function ClientLoginModal() {
   const [loggingIn, setLoggingIn] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const [showDiscordCta, setShowDiscordCta] = useState(false);
 
   useEffect(() => {
     const storedProfile = window.localStorage.getItem(STORAGE_KEY);
@@ -152,6 +165,7 @@ export default function ClientLoginModal() {
   function openEditInfo() {
     setError("");
     setNotice("");
+    setShowDiscordCta(false);
     setShowNewMember(true);
   }
 
@@ -169,8 +183,22 @@ export default function ClientLoginModal() {
     setDeveloperPortfolio(profile.developerPortfolio ?? "");
     setDeveloperSkills(profile.developerSkills ?? "");
     setDeveloperAvailability(profile.developerAvailability ?? "");
+    setMemberGoals(
+      profile.memberGoals
+        ?.split(",")
+        .map((goal) => goal.trim())
+        .filter(Boolean) ?? []
+    );
     setContactConsent(profile.contactConsent ?? false);
     setAgeAttestation(profile.ageAttestation ?? false);
+  }
+
+  function toggleMemberGoal(goal: string) {
+    setMemberGoals((current) =>
+      current.includes(goal)
+        ? current.filter((item) => item !== goal)
+        : [...current, goal]
+    );
   }
 
   function saveProfile(profile: ClientProfile) {
@@ -187,6 +215,7 @@ export default function ClientLoginModal() {
     event.preventDefault();
     setError("");
     setNotice("");
+    setShowDiscordCta(false);
     setLoggingIn(true);
 
     try {
@@ -268,6 +297,7 @@ export default function ClientLoginModal() {
         developerPortfolio: developerPortfolio.trim() || undefined,
         developerSkills: developerSkills.trim() || undefined,
         developerAvailability: developerAvailability || undefined,
+        memberGoals: memberGoals.join(", "),
         contactConsent,
         ageAttestation,
         savedAt: new Date().toISOString(),
@@ -291,7 +321,8 @@ export default function ClientLoginModal() {
       const storedProfile = result.profile ?? profile;
       saveProfile(storedProfile);
       setReturningEmail(storedProfile.email);
-      window.setTimeout(() => setOpen(false), 900);
+      setShowDiscordCta(true);
+      setNotice(saved ? "Your member info is updated." : "You're in.");
     } catch (submitError) {
       setError(
         submitError instanceof Error
@@ -358,6 +389,26 @@ export default function ClientLoginModal() {
           <p className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3 text-sm font-semibold text-neon-cyan">
             {notice}
           </p>
+        )}
+
+        {showDiscordCta && (
+          <div className="mt-5 border border-neon-violet/60 bg-ink-800/60 px-4 py-4">
+            <p className="text-sm font-bold text-white">
+              Join the NLDEVS Playtest Squad
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-gray-400">
+              Get map drops, playtest calls, and quick updates directly in the
+              community.
+            </p>
+            <a
+              href={SOCIAL_LINKS.discord}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="clip-corner-sm mt-4 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
+            >
+              Join Discord
+            </a>
+          </div>
         )}
 
         <form
@@ -472,6 +523,28 @@ export default function ClientLoginModal() {
               className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
               placeholder="you@example.com"
             />
+          </div>
+
+          <div className="border border-edge bg-ink-800/40 p-3">
+            <p className="text-sm font-semibold text-gray-200">
+              What are you here for? <span className="text-gray-500">optional</span>
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              {MEMBER_GOALS.map((goal) => (
+                <label
+                  key={goal}
+                  className="flex items-center gap-2 border border-edge bg-ink-800/60 px-3 py-2 text-sm text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    checked={memberGoals.includes(goal)}
+                    onChange={() => toggleMemberGoal(goal)}
+                    className="h-4 w-4 accent-neon-cyan"
+                  />
+                  <span>{goal}</span>
+                </label>
+              ))}
+            </div>
           </div>
 
           <details className="border border-edge bg-ink-800/40 p-3">

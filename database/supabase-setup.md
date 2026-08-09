@@ -67,9 +67,9 @@ Table Editor -> player_leads
 ```
 
 You should see name, email, optional Fortnite name, source path, browser user
-agent, optional Discord name, avatar style, favorite map, message, uploaded
-image details, developer interest details, contact consent, age/guardian
-attestation, and created timestamp.
+agent, optional Discord name, profile style, favorite map, member goals,
+message, uploaded image details, developer interest details, contact consent,
+age/guardian attestation, and created timestamp.
 
 Returning-member login checks the latest row for that email. New-member signup
 updates an existing email profile instead of creating duplicate rows.

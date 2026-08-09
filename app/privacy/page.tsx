@@ -13,7 +13,7 @@ const sections = [
     title: "What We Collect",
     items: [
       "Name and email address when you join or check in as a member.",
-      "Optional player details such as Fortnite name, Discord username, favorite map, avatar preference, messages, and submitted images.",
+      "Optional player details such as Fortnite name, Discord username, favorite map, profile style, member goals, messages, and submitted images.",
       "Optional developer or creator details such as role, availability, portfolio link, and skills.",
       "A required confirmation that the member is 13 or older and has parent or guardian permission if under 18.",
       "Basic technical details such as source page and browser information to help us understand where signups come from and troubleshoot issues.",

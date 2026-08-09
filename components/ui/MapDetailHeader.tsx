@@ -13,6 +13,7 @@ type Props = {
   code: string;
   image: string;
   intro?: ReactNode;
+  stats?: { label: string; value: string }[];
 };
 
 /**
@@ -26,12 +27,33 @@ export default function MapDetailHeader({
   code,
   image,
   intro,
+  stats = [],
 }: Props) {
   return (
     <>
       <PageHeader crumbs={crumbs} eyebrow={eyebrow} title={title} description={intro}>
         <IslandCode code={code} title={title} />
       </PageHeader>
+
+      {stats.length > 0 && (
+        <Reveal className="mt-8">
+          <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {stats.map((stat) => (
+              <div
+                key={`${stat.label}-${stat.value}`}
+                className="clip-corner-sm border border-edge/70 bg-ink-800/60 px-4 py-3"
+              >
+                <dt className="text-[10px] font-black uppercase tracking-[0.18em] text-neon-cyan">
+                  {stat.label}
+                </dt>
+                <dd className="mt-1 text-sm font-semibold text-white">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
+      )}
 
       <Reveal className="mt-12">
         <div className="clip-corner relative aspect-video w-full overflow-hidden border border-edge/70 bg-ink-800">

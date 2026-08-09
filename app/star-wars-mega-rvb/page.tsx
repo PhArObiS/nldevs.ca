@@ -107,6 +107,14 @@ export default function StarWarsMegaRvbPage() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "Up to 20" },
+          { label: "Mode", value: "Red vs Blue PvP" },
+          { label: "Status", value: "Live" },
+          { label: "Progress", value: "Rank up" },
+          { label: "Best for", value: "Fast team fights" },
+          { label: "Difficulty", value: "Medium" },
+        ]}
         intro="A Star Wars Red vs Blue team deathmatch map with custom weapons, unlockable vehicles, achievements, music, and ranking."
       />
 

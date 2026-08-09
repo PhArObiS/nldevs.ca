@@ -123,6 +123,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "1-5" },
+          { label: "Mode", value: "99 Bots survival" },
+          { label: "Status", value: "Live" },
+          { label: "Progress", value: "Saved stats" },
+          { label: "Best for", value: "Boss battles" },
+          { label: "Difficulty", value: "Medium" },
+        ]}
         intro={`Welcome to Squid Royale. Enter Fortnite island code ${MAP.code} to play an open-world PvE 99 bots survival map with boss battles, ranks, leaderboards, saved stats, and new weapons.`}
       />
 

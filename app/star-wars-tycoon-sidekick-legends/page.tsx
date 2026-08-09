@@ -117,6 +117,14 @@ export default function StarWarsTycoonSidekickLegendsPage() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "1-4" },
+          { label: "Mode", value: "Tycoon progression" },
+          { label: "Status", value: "Coming soon" },
+          { label: "Progress", value: "Auto-save" },
+          { label: "Best for", value: "Squads + builders" },
+          { label: "Difficulty", value: "Casual grind" },
+        ]}
         intro={`Coming soon from NLDEVS: a new Star Wars Tycoon experience with announced island code ${MAP.code}, Sidekick and Hero unlocks, new tycoon sections, workers, Rebirth leaderboard climbing, automatic saves, and up to 4 players.`}
       />
 

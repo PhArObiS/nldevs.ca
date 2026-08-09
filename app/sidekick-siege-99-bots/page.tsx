@@ -124,6 +124,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "1-5" },
+          { label: "Mode", value: "Sidekick survival" },
+          { label: "Status", value: "Live" },
+          { label: "Progress", value: "Saved loadouts" },
+          { label: "Best for", value: "PvE squads" },
+          { label: "Difficulty", value: "Medium" },
+        ]}
         intro={`Welcome to 99 Bots: Sidekick Siege. Enter Fortnite island code ${MAP.code} to play a sidekick-focused PvE survival map with boss battles, ranks, leaderboards, saved stats, and up to 5 players.`}
       />
 

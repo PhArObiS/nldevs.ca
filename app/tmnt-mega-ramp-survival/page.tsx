@@ -81,6 +81,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "Solo / party" },
+          { label: "Mode", value: "Mega ramp survival" },
+          { label: "Status", value: "Live" },
+          { label: "Round length", value: "Quick runs" },
+          { label: "Best for", value: "Movement chaos" },
+          { label: "Difficulty", value: "Easy to jump in" },
+        ]}
         intro="A high-speed survival experience where players race up a massive ramp while avoiding hazards and surviving as long as possible."
       />
 

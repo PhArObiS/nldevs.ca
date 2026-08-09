@@ -81,6 +81,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "Solo / squads" },
+          { label: "Mode", value: "City experience" },
+          { label: "Status", value: "Live" },
+          { label: "Pace", value: "Explore + fight" },
+          { label: "Best for", value: "Hangout sessions" },
+          { label: "Difficulty", value: "Casual" },
+        ]}
         intro="An immersive city-style TMNT experience built in UEFN — explore, fight, and hang out with friends."
       />
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import AboutContent from "@/components/sub/AboutContent";
@@ -139,6 +140,21 @@ const faqs: { q: string; a: ReactNode; plain: string }[] = [
   },
 ];
 
+const studioUpdates = [
+  {
+    title: "Star Wars Tycoon in progress",
+    text: "Sidekick Legends is being prepared as a longer-term progression map with heroes, workers, rebirths, and saved progress.",
+  },
+  {
+    title: "Playtest Squad opening",
+    text: "Members can join the Discord to catch upcoming playtest calls, map drops, and quick patch notes.",
+  },
+  {
+    title: "More UEFN experiments",
+    text: "NLDEVS is testing new combat, bot-survival, city, and progression loops across current and future Fortnite islands.",
+  },
+];
+
 export default function Home() {
   /* ===============================
      PAGE STRUCTURED DATA (SEO)
@@ -207,6 +223,109 @@ export default function Home() {
 
       <WhyPlayOurMaps />
 
+      {/* GAMEPLAY SPOTLIGHT */}
+      <section
+        id="gameplay-spotlight"
+        aria-labelledby="gameplay-spotlight-title"
+        className="mx-auto w-full max-w-6xl px-6 py-20"
+      >
+        <Reveal>
+          <SectionHeading
+            id="gameplay-spotlight-title"
+            eyebrow="Gameplay spotlight"
+            title="Built for"
+            accent="Fortnite sessions"
+            description="Quick rounds, strong themes, squad-friendly loops, and map systems that give players a reason to come back."
+          />
+        </Reveal>
+
+        <Reveal className="mt-12">
+          <div className="clip-corner relative overflow-hidden border border-edge/70 bg-ink-800">
+            <div className="relative aspect-video">
+              <Image
+                src="/TycoonSidekicks.jpg"
+                alt="Star Wars Tycoon Sidekick Legends gameplay preview"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent"
+                aria-hidden="true"
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                <p className="eyebrow">Featured launch</p>
+                <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-white md:text-4xl">
+                  Star Wars Tycoon Sidekick Legends
+                </h3>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-300 md:text-base">
+                  A coming soon tycoon experience with saved progress, heroes,
+                  sidekicks, workers, upgrades, and rebirth goals.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    href="/star-wars-tycoon-sidekick-legends"
+                    className="btn-neon clip-corner-sm"
+                  >
+                    View map
+                  </Link>
+                  <a
+                    href={SOCIAL_LINKS.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-ghost clip-corner-sm"
+                  >
+                    Watch NLDEVS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* PLAYTEST CTA */}
+      <section
+        id="playtest-squad"
+        aria-labelledby="playtest-squad-title"
+        className="mx-auto w-full max-w-6xl px-6 pb-20"
+      >
+        <Reveal>
+          <div className="clip-corner relative overflow-hidden border border-neon-cyan/40 bg-ink-800/60 px-6 py-12 md:px-10">
+            <div
+              className="pointer-events-none absolute inset-0 grid-backdrop"
+              aria-hidden="true"
+            />
+            <div className="relative grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="eyebrow">Community</p>
+                <h2
+                  id="playtest-squad-title"
+                  className="mt-4 text-3xl font-black tracking-tight text-white md:text-4xl"
+                >
+                  Join the <span className="neon-text">NLDEVS Playtest Squad</span>
+                </h2>
+                <p className="mt-4 max-w-2xl leading-relaxed text-gray-400">
+                  Get map drops, playtest invites, Discord updates, and a closer
+                  look at what NLDEVS is building next.
+                </p>
+                <p className="mt-3 text-sm font-semibold text-gray-500">
+                  No spam. No selling info. Delete anytime.
+                </p>
+              </div>
+              <a
+                href={SOCIAL_LINKS.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-neon clip-corner-sm justify-self-start md:justify-self-end"
+              >
+                Join Discord
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* FEATURED MAPS */}
       <section
         id="featured-fortnite-maps"
@@ -244,6 +363,41 @@ export default function Home() {
             Browse all maps on Fortnite.com
           </a>
         </Reveal>
+      </section>
+
+      {/* STUDIO UPDATES */}
+      <section
+        id="studio-updates"
+        aria-labelledby="studio-updates-title"
+        className="mx-auto w-full max-w-6xl px-6 pb-20"
+      >
+        <Reveal>
+          <SectionHeading
+            id="studio-updates-title"
+            eyebrow="Studio updates"
+            title="What NLDEVS is"
+            accent="building"
+            description="A quick pulse on active maps, community testing, and upcoming UEFN work."
+          />
+        </Reveal>
+
+        <RevealGroup className="mt-12 grid gap-4 md:grid-cols-3" stagger={0.08}>
+          {studioUpdates.map((update) => (
+            <RevealItem key={update.title}>
+              <article className="clip-corner h-full border border-edge/70 bg-ink-800/50 p-6 transition-colors hover:border-neon-cyan/60">
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-neon-cyan">
+                  Update
+                </p>
+                <h3 className="mt-3 text-xl font-bold text-white">
+                  {update.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                  {update.text}
+                </p>
+              </article>
+            </RevealItem>
+          ))}
+        </RevealGroup>
       </section>
 
       {/* XP CTA */}

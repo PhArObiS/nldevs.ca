@@ -85,6 +85,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "Squad friendly" },
+          { label: "Mode", value: "Gun game combat" },
+          { label: "Status", value: "Live" },
+          { label: "Round length", value: "Fast loops" },
+          { label: "Best for", value: "Combat XP" },
+          { label: "Difficulty", value: "Easy / medium" },
+        ]}
         intro="A combat-focused experience built for repeatable rounds — action-first gameplay with steady session XP, depending on calibration."
       />
 

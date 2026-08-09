@@ -18,6 +18,7 @@ type PlayerLeadInput = {
   developerPortfolio?: unknown;
   developerSkills?: unknown;
   developerAvailability?: unknown;
+  memberGoals?: unknown;
   contactConsent?: unknown;
   ageAttestation?: unknown;
   website?: unknown;
@@ -41,6 +42,7 @@ type LeadRow = {
   developer_portfolio: string | null;
   developer_skills: string | null;
   developer_availability: string | null;
+  member_goals: string | null;
   contact_consent: boolean | null;
   age_attestation: boolean | null;
   created_at: string;
@@ -148,6 +150,7 @@ function toClientProfile(row: LeadRow) {
     developerPortfolio: row.developer_portfolio ?? undefined,
     developerSkills: row.developer_skills ?? undefined,
     developerAvailability: row.developer_availability ?? undefined,
+    memberGoals: row.member_goals ?? undefined,
     contactConsent: row.contact_consent ?? false,
     ageAttestation: row.age_attestation ?? false,
     savedAt: row.created_at,
@@ -181,6 +184,7 @@ async function findMemberByEmail({
     "developer_portfolio",
     "developer_skills",
     "developer_availability",
+    "member_goals",
     "contact_consent",
     "age_attestation",
     "created_at",
@@ -308,6 +312,7 @@ async function sendOwnerNewMemberEmail({
     developerInterest: boolean;
     developerRole: string;
     developerPortfolio: string;
+    memberGoals: string;
     contactConsent: boolean;
   };
   sourcePath: string | null;
@@ -332,6 +337,7 @@ async function sendOwnerNewMemberEmail({
     ["Developer interest", profile.developerInterest ? "Yes" : "No"],
     ["Developer role", profile.developerRole || "-"],
     ["Portfolio", profile.developerPortfolio || "-"],
+    ["Here for", profile.memberGoals || "-"],
     ["Contact consent", profile.contactConsent ? "Yes" : "No"],
     ["Source", sourcePath || "-"],
   ];
@@ -455,6 +461,7 @@ export async function POST(request: NextRequest) {
   const developerPortfolio = cleanText(body.developerPortfolio, 240);
   const developerSkills = cleanText(body.developerSkills, 500);
   const developerAvailability = cleanText(body.developerAvailability, 120);
+  const memberGoals = cleanText(body.memberGoals, 240);
   const contactConsent = body.contactConsent === true;
   const ageAttestation = body.ageAttestation === true;
   const imageData = typeof body.imageData === "string" ? body.imageData : "";
@@ -525,6 +532,7 @@ export async function POST(request: NextRequest) {
     developer_portfolio: developerPortfolio || null,
     developer_skills: developerSkills || null,
     developer_availability: developerAvailability || null,
+    member_goals: memberGoals || null,
     contact_consent: contactConsent,
     age_attestation: ageAttestation,
     source_path: request.headers.get("referer") ?? null,
@@ -591,6 +599,7 @@ export async function POST(request: NextRequest) {
           developerInterest,
           developerRole,
           developerPortfolio,
+          memberGoals,
           contactConsent,
         },
         sourcePath: request.headers.get("referer"),

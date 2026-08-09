@@ -19,6 +19,7 @@ create table if not exists public.player_leads (
   developer_portfolio text,
   developer_skills text,
   developer_availability text,
+  member_goals text,
   contact_consent boolean not null default false,
   age_attestation boolean not null default false,
   source_path text,
@@ -41,6 +42,7 @@ alter table public.player_leads
   add column if not exists developer_portfolio text,
   add column if not exists developer_skills text,
   add column if not exists developer_availability text,
+  add column if not exists member_goals text,
   add column if not exists contact_consent boolean not null default false,
   add column if not exists age_attestation boolean not null default false;
 

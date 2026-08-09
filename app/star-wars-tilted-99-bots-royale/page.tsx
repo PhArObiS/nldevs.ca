@@ -111,6 +111,14 @@ export default function StarWarsTilted99BotsRoyalePage() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "1-5" },
+          { label: "Mode", value: "99 Bots Royale" },
+          { label: "Status", value: "Live" },
+          { label: "Progress", value: "Saved stats" },
+          { label: "Best for", value: "PvE survival" },
+          { label: "Difficulty", value: "Medium" },
+        ]}
         intro="A Star Wars-themed 99-bot royale survival map with boss battles, unlockable heroes, saved stats, saved loadouts, and Tilted action."
       />
 

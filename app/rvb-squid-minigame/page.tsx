@@ -80,6 +80,14 @@ export default function Page() {
         title={MAP.title}
         code={MAP.code}
         image={MAP.image}
+        stats={[
+          { label: "Players", value: "Party friendly" },
+          { label: "Mode", value: "RvB minigames" },
+          { label: "Status", value: "Live" },
+          { label: "Round length", value: "Short rounds" },
+          { label: "Best for", value: "Quick replays" },
+          { label: "Difficulty", value: "Easy" },
+        ]}
         intro="A fast-paced Red vs Blue experience inspired by Squid-style challenges — built for quick rounds and constant action."
       />
 
