@@ -297,9 +297,7 @@ export default function Navbar() {
                     : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
                 }`}
               >
-                {clientProfile
-                  ? `Logged in: ${getFirstName(clientProfile.name)}`
-                  : "Login"}
+                {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
               </button>
 
               <div className="hidden flex-row items-center gap-1.5 sm:flex">
@@ -451,9 +449,7 @@ export default function Navbar() {
                         : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
                     }`}
                   >
-                    {clientProfile
-                      ? `Logged in: ${getFirstName(clientProfile.name)}`
-                      : "Login"}
+                    {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
                   </button>
 
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
