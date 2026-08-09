@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import FortniteMapsCard from "@/components/sub/FortniteMapsCard";
+import PageHeader from "@/components/ui/PageHeader";
+import ContentSection from "@/components/ui/ContentSection";
+import { BackToTop, PillLinks } from "@/components/ui/InfoCard";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
+const PAGE_PATH = "/best-fortnite-xp-maps";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
   title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDEVS",
   description:
     "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDEVS with quick summaries and updated picks.",
-  alternates: {
-    canonical: `${SITE_URL}/best-fortnite-xp-maps`,
-  },
+  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     type: "website",
-    url: `${SITE_URL}/best-fortnite-xp-maps`,
+    url: `${SITE_URL}${PAGE_PATH}`,
     title: "Best Fortnite XP Maps & Map Codes (Level Up Fast) | NLDEVS",
     description:
       "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS.",
@@ -55,7 +56,7 @@ const xpMaps = [
     code: "1383-6989-3967",
     image: "/CityTMNT.jpeg",
     type: "Active",
-    notes: "Exploration + combat routes with consistent XP loops.",
+    notes: "Exploration and combat routes with consistent XP loops.",
     detailsHref: "/tmnt-city",
   },
   {
@@ -81,123 +82,55 @@ export default function BestFortniteXpMapsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Best Fortnite XP Maps",
-    url: `${SITE_URL}/best-fortnite-xp-maps`,
+    url: `${SITE_URL}${PAGE_PATH}`,
   };
 
   return (
-    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
+    <main id="top" className="mx-auto w-full max-w-6xl px-6 py-14">
       <JsonLd id="xp-schema" data={pageSchema} />
 
-      {/* ✅ GLOBAL BREADCRUMBS */}
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "XP Maps" },
-        ]}
+      <PageHeader
+        crumbs={[{ label: "Home", href: "/" }, { label: "XP Maps" }]}
+        eyebrow="Level up faster"
+        title="Best Fortnite"
+        accent="XP maps"
+        description="Curated Fortnite XP maps with island codes and quick notes on how each one plays."
+        lastUpdated={LAST_UPDATED}
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold">
-          Best Fortnite XP Maps & Map Codes
-        </h1>
+      <ContentSection title="XP map" accent="codes">
+        <RevealGroup
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          stagger={0.07}
+        >
+          {xpMaps.map((m, i) => (
+            <RevealItem key={m.code} className="h-full">
+              <FortniteMapsCard
+                src={m.image}
+                title={m.title}
+                code={m.code}
+                mode={m.type}
+                notes={m.notes}
+                href={m.detailsHref}
+                priority={i < 3}
+              />
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </ContentSection>
 
-        <p className="mt-4 text-gray-300 max-w-3xl">
-          Looking to level up fast? Here are curated Fortnite XP maps with map
-          codes and quick notes.
-        </p>
+      <ContentSection title="Related" accent="pages">
+        <PillLinks
+          links={[
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+            { href: "/tmnt-fortnite-maps", label: "TMNT Maps" },
+            { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+            { href: "/star-wars-fortnite-maps", label: "Star Wars Maps" },
+          ]}
+        />
+      </ContentSection>
 
-        <p className="mt-3 text-sm text-gray-400">
-          Last updated: {LAST_UPDATED}
-        </p>
-      </header>
-
-      {/* XP MAP LIST */}
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold">XP Map Codes</h2>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {xpMaps.map((m) => {
-            const Card = (
-              <>
-                {m.image && (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={m.image}
-                      alt={m.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                  <p className="mt-2 text-gray-300">
-                    <span className="font-semibold text-white">Map Code:</span>{" "}
-                    {m.code}
-                  </p>
-
-                  <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
-                  <p className="mt-3 text-gray-300">{m.notes}</p>
-
-                  {m.detailsHref ? (
-                    <span className="inline-block mt-4 text-neon-cyan underline">
-                      View details →
-                    </span>
-                  ) : (
-                    <span className="inline-block mt-4 text-gray-500 text-sm">
-                      Details page coming soon
-                    </span>
-                  )}
-                </div>
-              </>
-            );
-
-            return (
-              <article
-                key={m.code}
-                className="rounded-lg border border-edge overflow-hidden hover:border-neon-cyan/60 transition"
-              >
-                {m.detailsHref ? (
-                  <Link href={m.detailsHref}>{Card}</Link>
-                ) : (
-                  Card
-                )}
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* RELATED */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold">Related pages</h2>
-
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            <Link href="/fortnite-gun-game-maps" className="underline">
-              Best Fortnite Gun Game Maps
-            </Link>
-          </li>
-          <li>
-            <Link href="/tmnt-fortnite-maps" className="underline">
-              Best TMNT Fortnite Maps
-            </Link>
-          </li>
-          <li>
-            <Link href="/squid-game-fortnite-maps" className="underline">
-              Best Squid Game Fortnite Maps
-            </Link>
-          </li>
-        </ul>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

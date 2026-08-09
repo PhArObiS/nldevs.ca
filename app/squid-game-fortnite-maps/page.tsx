@@ -1,38 +1,39 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import FortniteMapsCard from "@/components/sub/FortniteMapsCard";
+import PageHeader from "@/components/ui/PageHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
+const PAGE_PATH = "/squid-game-fortnite-maps";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
   title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
   description:
-    "Browse Squid Game Fortnite maps and map codes curated by NLDEVS, including Red vs Blue Squid Minigame and Tilted Squid Royale (99 Bots).",
-  alternates: {
-    canonical: `${SITE_URL}/squid-game-fortnite-maps`,
-  },
+    "Browse Squid Game-style Fortnite maps and map codes by NLDEVS — minigames, Red vs Blue chaos, and battle royale variants built with UEFN.",
+  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     type: "website",
-    url: `${SITE_URL}/squid-game-fortnite-maps`,
+    url: `${SITE_URL}${PAGE_PATH}`,
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game inspired Fortnite maps and map codes curated by NLDEVS — minigames, challenges, and battle royales.",
+      "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Squid Game Fortnite Maps & Map Codes | NLDEVS",
     description:
-      "Squid Game inspired Fortnite maps and map codes curated by NLDEVS — minigames, challenges, and battle royales.",
+      "Squid Game-style Fortnite maps and map codes by NLDEVS — minigames and battle royale variants.",
   },
 };
 
 const squidMaps: {
   title: string;
   code: string;
-  image?: string;
+  image: string;
   type: "Minigame" | "RvB" | "Battle Royale" | "Challenge";
   notes: string;
   detailsHref?: string;
@@ -56,25 +57,34 @@ const squidMaps: {
   },
 ];
 
+const faqs = [
+  {
+    q: "How do I enter a Fortnite map code?",
+    a: "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play.",
+  },
+  {
+    q: "Are Squid Game Fortnite maps official?",
+    a: "No. These are community-created Fortnite experiences inspired by Squid Game-style minigames and challenges, not official Netflix content.",
+  },
+  {
+    q: "Do Squid Game maps give XP?",
+    a: "Some islands may grant XP depending on Fortnite calibration and map settings. XP rates can change after updates or revisions.",
+  },
+  {
+    q: "What Squid Game maps are best to play with friends?",
+    a: "Minigame and elimination-style Squid maps are usually best with a full party. They're more fun when you can run rounds quickly and compete with friends.",
+  },
+];
+
 export default function SquidGameFortniteMapsPage() {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Best Squid Game Fortnite Maps & Map Codes",
     description:
-      "A curated list of Squid Game inspired Fortnite maps and map codes. Includes minigames and battle royale experiences.",
-    url: `${SITE_URL}/squid-game-fortnite-maps`,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "NLDEVS",
-      url: SITE_URL,
-    },
-    about: [
-      "Squid Game Fortnite maps",
-      "Fortnite map codes",
-      "Red Light Green Light style minigames",
-      "Elimination challenges",
-    ],
+      "A curated list of Squid Game-style Fortnite maps and map codes built with UEFN by NLDEVS.",
+    url: `${SITE_URL}${PAGE_PATH}`,
+    isPartOf: { "@type": "WebSite", name: "NLDEVS", url: SITE_URL },
     mainEntity: {
       "@type": "ItemList",
       name: "Squid Game Fortnite Maps",
@@ -87,15 +97,11 @@ export default function SquidGameFortniteMapsPage() {
           "@type": "VideoGame",
           name: m.title,
           gamePlatform: "Fortnite",
-          genre: `Squid Game Map (${m.type})`,
+          genre: `Squid Game Fortnite Map (${m.type})`,
           description: `Fortnite map code: ${m.code}. ${m.notes}`,
-          url: `${SITE_URL}/squid-game-fortnite-maps#${m.code.replaceAll("-", "")}`,
-          ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
-          publisher: {
-            "@type": "Organization",
-            name: "NLDEVS",
-            url: SITE_URL,
-          },
+          url: `${SITE_URL}${PAGE_PATH}#${m.code.replaceAll("-", "")}`,
+          image: `${SITE_URL}${m.image}`,
+          publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
         },
       })),
     },
@@ -104,75 +110,38 @@ export default function SquidGameFortniteMapsPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How do I enter a Fortnite map code?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Are Squid Game Fortnite maps official?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No. These are community-created Fortnite experiences inspired by Squid Game-style minigames and challenges, not official Netflix content.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do Squid Game maps give XP?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Some islands may grant XP depending on Fortnite calibration and map settings. XP rates can change after updates or revisions.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What Squid Game maps are best to play with friends?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Minigame and elimination-style Squid maps are usually best with a full party. They’re more fun when you can run rounds quickly and compete with friends.",
-        },
-      },
-    ],
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 
   return (
-    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
+    <main id="top" className="mx-auto w-full max-w-6xl px-6 py-14">
       <JsonLd id="squid-collection-schema" data={pageSchema} />
       <JsonLd id="squid-faq-schema" data={faqSchema} />
 
-      {/* ✅ Breadcrumbs (consistent) */}
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Squid Game Maps" },
-        ]}
+      <PageHeader
+        crumbs={[{ label: "Home", href: "/" }, { label: "Squid Game Maps" }]}
+        eyebrow="Elimination rounds"
+        title="Best Squid Game"
+        accent="Fortnite maps"
+        description="Squid-style minigames, Red vs Blue chaos, and battle royale variants built with UEFN. Each entry includes an island code and gameplay type."
+        lastUpdated={LAST_UPDATED}
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold">
-          Best Squid Game Fortnite Maps &amp; Map Codes
-        </h1>
-        <p className="mt-4 text-gray-300 max-w-3xl">
-          Looking for Squid Game style Fortnite experiences? Here are curated
-          Squid-inspired maps with map codes, images, and quick notes. We focus
-          on fun minigames, challenges, and replayable rounds.
-        </p>
-        <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
-      </header>
-
-      <section id="what-are-squid-maps" className="mt-10">
-        <h2 className="text-2xl font-semibold">What are Squid Game Fortnite maps?</h2>
-        <div className="mt-3 text-gray-300 space-y-4">
+      <ContentSection
+        id="what-are-squid-maps"
+        title="What are"
+        accent="Squid Game Fortnite maps?"
+      >
+        <div className="space-y-4 text-center leading-relaxed text-gray-400 md:text-left">
           <p>
-            “Squid Game” Fortnite maps are community-made islands inspired by
-            elimination-style minigames. You’ll usually see fast rounds,
-            high-stakes challenges, and chaotic competition — often designed for
-            playing with friends.
+            &ldquo;Squid Game&rdquo; Fortnite maps are community-made islands
+            inspired by elimination-style minigames. You&apos;ll usually see fast
+            rounds, high-stakes challenges, and chaotic competition — often
+            designed for playing with friends.
           </p>
           <p>
             Popular Squid-style modes include Red Light Green Light, survival
@@ -181,106 +150,33 @@ export default function SquidGameFortniteMapsPage() {
             island revisions.
           </p>
         </div>
-      </section>
+      </ContentSection>
 
-      <nav className="mt-8 rounded-lg border border-edge p-4 text-gray-200">
-        <p className="font-semibold text-white">On this page</p>
-        <ul className="mt-2 list-disc list-inside">
-          <li>
-            <a className="underline hover:text-white" href="#squid-map-codes">
-              Squid Game Map Codes
-            </a>
-          </li>
-          <li>
-            <a className="underline hover:text-white" href="#tips">
-              Tips for Squid maps
-            </a>
-          </li>
-          <li>
-            <a className="underline hover:text-white" href="#how-to-play">
-              How to play
-            </a>
-          </li>
-          <li>
-            <a className="underline hover:text-white" href="#faq">
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a className="underline hover:text-white" href="#related">
-              Related pages
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <ContentSection id="squid-map-codes" title="Squid Game map" accent="codes">
+        <RevealGroup
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+          stagger={0.07}
+        >
+          {squidMaps.map((m, i) => (
+            <RevealItem key={m.code} className="h-full">
+              <div id={m.code.replaceAll("-", "")} className="h-full">
+                <FortniteMapsCard
+                  src={m.image}
+                  title={m.title}
+                  code={m.code}
+                  mode={m.type}
+                  notes={m.notes}
+                  href={m.detailsHref}
+                  priority={i < 2}
+                />
+              </div>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </ContentSection>
 
-      <section id="squid-map-codes" className="mt-10">
-        <h2 className="text-2xl font-semibold">Squid Game Map Codes</h2>
-        <p className="mt-2 text-gray-300">
-          Enter these codes in Fortnite Discover to play. Each entry includes a
-          gameplay type and a quick description.
-        </p>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {squidMaps.map((m) => {
-            const CardInner = (
-              <>
-                {m.image ? (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={m.image}
-                      alt={`${m.title} thumbnail`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                      priority={false}
-                    />
-                  </div>
-                ) : null}
-
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                  <p className="mt-2 text-gray-300">
-                    <span className="font-semibold text-white">Map Code:</span>{" "}
-                    {m.code}
-                  </p>
-
-                  <p className="mt-1 text-gray-400 text-sm">Type: {m.type}</p>
-
-                  <p className="mt-3 text-gray-300">{m.notes}</p>
-
-                  {m.detailsHref ? (
-                    <span className="inline-block mt-4 text-neon-cyan underline hover:text-white">
-                      View details →
-                    </span>
-                  ) : null}
-                </div>
-              </>
-            );
-
-            return (
-              <article
-                key={m.code}
-                id={m.code.replaceAll("-", "")}
-                className="rounded-lg border border-edge overflow-hidden hover:border-neon-cyan/60 transition"
-              >
-                {m.detailsHref ? (
-                  <Link href={m.detailsHref} className="block">
-                    {CardInner}
-                  </Link>
-                ) : (
-                  CardInner
-                )}
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section id="tips" className="mt-12">
-        <h2 className="text-2xl font-semibold">Tips for Squid Game Fortnite maps</h2>
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
+      <ContentSection id="tips" title="Tips for" accent="Squid maps">
+        <CenteredList>
           <li>
             Play with friends: most Squid-style rounds are more fun with a full
             party and faster re-queues.
@@ -290,101 +186,41 @@ export default function SquidGameFortniteMapsPage() {
             mechanics before jumping into PvP rounds.
           </li>
           <li>
-            Rotate maps if XP slows down; calibration and diminishing returns
-            can vary by island and update cycle.
+            Rotate maps if XP slows down; calibration and diminishing returns can
+            vary by island and update cycle.
           </li>
           <li>
             Use voice chat or quick pings — coordination matters in elimination
             challenges and team rounds.
           </li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section id="how-to-play" className="mt-12">
-        <h2 className="text-2xl font-semibold">How to play Squid Game Fortnite maps</h2>
-        <ol className="mt-4 list-decimal list-inside text-gray-300 space-y-2">
+      <ContentSection id="how-to-play" title="How to" accent="play">
+        <CenteredList ordered>
           <li>Open Fortnite → Search / Discover.</li>
           <li>Enter a map code exactly (####-####-####).</li>
           <li>Join the map and follow the minigame rules (varies by island).</li>
           <li>Play with friends for the best Squid-style elimination rounds.</li>
-        </ol>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section id="faq" className="mt-12">
-        <h2 className="text-2xl font-semibold">FAQ</h2>
+      <ContentSection id="faq" title="Frequently" accent="asked">
+        <FaqList items={faqs.map((f) => ({ q: f.q, a: f.a }))} />
+      </ContentSection>
 
-        <div className="mt-4 space-y-6 text-gray-300">
-          <div>
-            <h3 className="text-white font-semibold">How do I enter a Fortnite map code?</h3>
-            <p className="mt-2">
-              Open Fortnite, go to Search/Discover, enter the island code
-              (####-####-####), then select the result to play.
-            </p>
-          </div>
+      <ContentSection id="related" title="Related" accent="pages">
+        <PillLinks
+          links={[
+            { href: "/best-fortnite-xp-maps", label: "XP Maps" },
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+            { href: "/tmnt-fortnite-maps", label: "TMNT Maps" },
+            { href: "/star-wars-fortnite-maps", label: "Star Wars Maps" },
+          ]}
+        />
+      </ContentSection>
 
-          <div>
-            <h3 className="text-white font-semibold">Are Squid Game Fortnite maps official?</h3>
-            <p className="mt-2">
-              No. These are community-created experiences inspired by Squid-style
-              minigames and challenges, not official Netflix content.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold">Do Squid Game maps give XP?</h3>
-            <p className="mt-2">
-              Some islands may grant XP depending on Fortnite calibration and map
-              settings. XP rates can change after updates or revisions.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold">
-              What Squid Game maps are best to play with friends?
-            </h3>
-            <p className="mt-2">
-              Minigame and elimination-style Squid maps are usually best with a
-              full party. They’re more fun when you can run rounds quickly and
-              compete with friends.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="related" className="mt-12">
-        <h2 className="text-2xl font-semibold">Related pages</h2>
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            <Link href="/best-fortnite-xp-maps" className="underline hover:text-white">
-              Best Fortnite XP Maps
-            </Link>
-          </li>
-          <li>
-            <Link href="/fortnite-gun-game-maps" className="underline hover:text-white">
-              Best Fortnite Gun Game Maps
-            </Link>
-          </li>
-          <li>
-            <Link href="/tmnt-fortnite-maps" className="underline hover:text-white">
-              Best TMNT Fortnite Maps
-            </Link>
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-12 rounded-lg border border-edge p-5 text-gray-300">
-        <p className="text-white font-semibold">Note</p>
-        <p className="mt-2">
-          “Squid Game” is used here to describe gameplay style and inspiration.
-          This page is not affiliated with Netflix or the Squid Game brand.
-        </p>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

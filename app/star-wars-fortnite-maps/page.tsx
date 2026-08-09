@@ -14,10 +14,12 @@
  * placeholder island codes indexed by Google would send players to nothing.
  */
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import FortniteMapsCard from "@/components/sub/FortniteMapsCard";
+import PageHeader from "@/components/ui/PageHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, PillLinks } from "@/components/ui/InfoCard";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SITE_URL } from "@/constants/site";
 
 const PAGE_PATH = "/star-wars-fortnite-maps";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
 const starWarsMaps: {
   title: string;
   code: string;
-  image?: string;
+  image: string;
   type: "Survival" | "Adventure" | "Gun Game" | "PvP" | "Experience";
   notes: string;
   detailsHref?: string;
@@ -76,12 +78,12 @@ const starWarsMaps: {
 
 function PlaceholderNotice() {
   return (
-    <div className="mt-6 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
-      <p className="text-sm text-amber-200">
+    <div className="clip-corner mt-8 border border-amber-500/40 bg-amber-500/10 p-5 text-center md:text-left">
+      <p className="text-sm leading-relaxed text-amber-200">
         <span className="font-semibold">Demo page.</span> The maps below are
         placeholders with fake island codes, and the page is set to{" "}
-        <code className="font-mono">noindex</code> so search engines skip it.
-        See the comment at the top of this file for the go-live checklist.
+        <code className="font-mono">noindex</code> so search engines skip it. See
+        the comment at the top of this file for the go-live checklist.
       </p>
     </div>
   );
@@ -95,11 +97,7 @@ export default function StarWarsFortniteMapsPage() {
     description:
       "Star Wars themed Fortnite maps and island codes built with UEFN by NLDEVS.",
     url: `${SITE_URL}${PAGE_PATH}`,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "NLDEVS",
-      url: SITE_URL,
-    },
+    isPartOf: { "@type": "WebSite", name: "NLDEVS", url: SITE_URL },
     mainEntity: {
       "@type": "ItemList",
       name: "Star Wars Fortnite Maps",
@@ -115,130 +113,77 @@ export default function StarWarsFortniteMapsPage() {
           genre: `Star Wars Fortnite Map (${m.type})`,
           description: `Fortnite island code: ${m.code}. ${m.notes}`,
           url: `${SITE_URL}${PAGE_PATH}#${m.code.replaceAll("-", "")}`,
-          ...(m.image ? { image: `${SITE_URL}${m.image}` } : {}),
-          publisher: {
-            "@type": "Organization",
-            name: "NLDEVS",
-            url: SITE_URL,
-          },
+          image: `${SITE_URL}${m.image}`,
+          publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
         },
       })),
     },
   };
 
   return (
-    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
+    <main id="top" className="mx-auto w-full max-w-6xl px-6 py-14">
       <JsonLd id="starwars-collection-schema" data={pageSchema} />
 
-      <Breadcrumbs
-        items={[{ label: "Home", href: "/" }, { label: "Star Wars Maps" }]}
-      />
-
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold">
-          Star Wars Fortnite Maps &amp; Island Codes
-        </h1>
-
-        <p className="mt-4 text-gray-300 max-w-3xl">
-          Star Wars themed Fortnite experiences built with Unreal Editor for
-          Fortnite (UEFN). Each entry includes an island code, a short
-          description, and the gameplay type.
-        </p>
-
-        <p className="mt-3 text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
-
+      <PageHeader
+        crumbs={[{ label: "Home", href: "/" }, { label: "Star Wars Maps" }]}
+        eyebrow="A galaxy far, far away"
+        title="Star Wars"
+        accent="Fortnite maps"
+        description="Star Wars themed Fortnite experiences built with Unreal Editor for Fortnite. Each entry includes an island code and gameplay type."
+        lastUpdated={LAST_UPDATED}
+      >
         <PlaceholderNotice />
-      </header>
+      </PageHeader>
 
-      <section id="star-wars-map-codes" className="mt-10">
-        <h2 className="text-2xl font-semibold">Star Wars Map Codes</h2>
-        <p className="mt-2 text-gray-300">
-          Use these codes in Fortnite Discover to play our Star Wars experiences.
-        </p>
-
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          {starWarsMaps.map((m) => (
-            <article
-              key={m.title}
-              id={m.code.replaceAll("-", "")}
-              className="overflow-hidden rounded-lg border border-edge transition hover:border-neon-cyan/60"
-            >
-              {m.image ? (
-                <div className="relative aspect-video w-full">
-                  <Image
-                    src={m.image}
-                    alt={`${m.title} thumbnail`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                </div>
-              ) : null}
-
-              <div className="p-5">
-                <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                <p className="mt-2 text-gray-300">
-                  <span className="font-semibold text-white">Map Code:</span>{" "}
-                  <span className="font-mono">{m.code}</span>
-                </p>
-
-                <p className="mt-1 text-sm text-gray-400">Type: {m.type}</p>
-
-                <p className="mt-3 text-gray-300">{m.notes}</p>
+      <ContentSection title="Star Wars map" accent="codes">
+        <RevealGroup
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          stagger={0.07}
+        >
+          {starWarsMaps.map((m, i) => (
+            <RevealItem key={m.title} className="h-full">
+              <div id={m.code.replaceAll("-", "")} className="h-full">
+                <FortniteMapsCard
+                  src={m.image}
+                  title={m.title}
+                  code={m.code}
+                  mode={m.type}
+                  notes={m.notes}
+                  href={m.detailsHref}
+                  priority={i < 3}
+                />
               </div>
-            </article>
+            </RevealItem>
           ))}
-        </div>
-      </section>
+        </RevealGroup>
+      </ContentSection>
 
-      <section id="how-to-play" className="mt-12">
-        <h2 className="text-2xl font-semibold">How to play</h2>
-        <ol className="mt-4 list-decimal list-inside text-gray-300 space-y-2">
+      <ContentSection title="How to" accent="play">
+        <CenteredList ordered>
           <li>Open Fortnite → Search / Discover.</li>
           <li>Enter the island code exactly (####-####-####).</li>
           <li>Join the island and follow the in-game objectives.</li>
           <li>Favorite the map to find it faster next time.</li>
-        </ol>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      <section id="related" className="mt-12">
-        <h2 className="text-2xl font-semibold">Related pages</h2>
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            <Link href="/tmnt-fortnite-maps" className="underline hover:text-white">
-              Best TMNT Fortnite Maps
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/squid-game-fortnite-maps"
-              className="underline hover:text-white"
-            >
-              Best Squid Game Fortnite Maps
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/fortnite-gun-game-maps"
-              className="underline hover:text-white"
-            >
-              Best Fortnite Gun Game Maps
-            </Link>
-          </li>
-        </ul>
-      </section>
+      <ContentSection title="Related" accent="pages">
+        <PillLinks
+          links={[
+            { href: "/tmnt-fortnite-maps", label: "TMNT Maps" },
+            { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+            { href: "/fortnite-gun-game-maps", label: "Gun Game Maps" },
+            { href: "/best-fortnite-xp-maps", label: "XP Maps" },
+          ]}
+        />
+      </ContentSection>
 
-      <p className="mt-12 text-sm text-gray-500">
+      <p className="mt-16 text-center text-sm text-gray-500 md:text-left">
         Community-created Fortnite experiences built with UEFN. Not affiliated
         with Lucasfilm, Disney, or Epic Games.
       </p>
 
-      <div className="mt-8">
-        <a href="#top" className="text-sm underline text-gray-400 hover:text-white">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

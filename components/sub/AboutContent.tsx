@@ -29,8 +29,10 @@ const AboutContent = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
+          className="text-center md:text-left"
         >
-          <p className="eyebrow rule-neon">About the studio</p>
+          {/* The neon rule only reads correctly against a left edge */}
+          <p className="eyebrow md:rule-neon">About the studio</p>
 
           <h2
             id="about-title"
@@ -56,7 +58,7 @@ const AboutContent = () => {
               Browse by category
             </p>
 
-            <div className="mt-4 flex flex-wrap gap-2.5">
+            <div className="mt-4 flex flex-wrap justify-center gap-2.5 md:justify-start">
               {categoryLinks.map((c) => (
                 <Link
                   key={c.href}

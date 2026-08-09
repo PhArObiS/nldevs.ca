@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import FortniteMapsCard from "@/components/sub/FortniteMapsCard";
+import PageHeader from "@/components/ui/PageHeader";
+import ContentSection, { CenteredList } from "@/components/ui/ContentSection";
+import { BackToTop, PillLinks } from "@/components/ui/InfoCard";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { SITE_URL } from "@/constants/site";
 
-const SITE_URL = "https://www.nldevs.ca";
+const PAGE_PATH = "/fortnite-gun-game-maps";
 const LAST_UPDATED = "February 2026";
 
 export const metadata: Metadata = {
   title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
   description:
     "Browse the best Fortnite Gun Game maps and map codes curated by NLDEVS. Fast-paced weapon progression, PvP arenas, and replayable rounds.",
-  alternates: {
-    canonical: `${SITE_URL}/fortnite-gun-game-maps`,
-  },
+  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     type: "website",
-    url: `${SITE_URL}/fortnite-gun-game-maps`,
+    url: `${SITE_URL}${PAGE_PATH}`,
     title: "Best Fortnite Gun Game Maps & Map Codes | NLDEVS",
     description:
       "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability.",
@@ -49,161 +50,79 @@ export default function FortniteGunGameMapsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Best Fortnite Gun Game Maps",
-    url: `${SITE_URL}/fortnite-gun-game-maps`,
+    url: `${SITE_URL}${PAGE_PATH}`,
   };
 
   return (
-    <main id="top" className="px-6 py-12 text-white max-w-5xl mx-auto">
-      {/* ✅ JSON-LD */}
+    <main id="top" className="mx-auto w-full max-w-6xl px-6 py-14">
       <JsonLd id="gungame-schema" data={pageSchema} />
 
-      {/* ✅ GLOBAL BREADCRUMBS */}
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Gun Game Maps" },
-        ]}
+      <PageHeader
+        crumbs={[{ label: "Home", href: "/" }, { label: "Gun Game Maps" }]}
+        eyebrow="Weapon progression"
+        title="Best Fortnite"
+        accent="Gun Game maps"
+        description="Fast-paced weapon progression modes where eliminations upgrade your loadout. Curated islands with codes and quick notes."
+        lastUpdated={LAST_UPDATED}
       />
 
-      <header className="mt-6">
-        <h1 className="text-4xl font-bold">
-          Best Fortnite Gun Game Maps & Map Codes
-        </h1>
-
-        <p className="mt-4 text-gray-300 max-w-3xl">
-          Gun Game maps are fast-paced weapon progression modes where
-          eliminations upgrade your loadout. Here are curated Gun Game islands
-          with map codes, images, and quick notes.
-        </p>
-
-        <p className="mt-3 text-sm text-gray-400">
-          Last updated: {LAST_UPDATED}
-        </p>
-      </header>
-
-      {/* WHAT IS GUN GAME */}
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold">
-          What is a Fortnite Gun Game map?
-        </h2>
-
-        <div className="mt-3 text-gray-300 space-y-4">
+      <ContentSection title="What is a Fortnite" accent="Gun Game map?">
+        <div className="space-y-4 text-center leading-relaxed text-gray-400 md:text-left">
           <p>
             Fortnite Gun Game is a weapon progression PvP mode built for quick,
-            replayable rounds. Players start with a weapon and upgrade after
-            each elimination.
+            replayable rounds. Players start with a weapon and upgrade after each
+            elimination.
           </p>
-
           <p>
-            The goal is to finish the weapon list before everyone else. Great
-            Gun Game maps have strong flow, balanced weapon rotations, and fast
+            The goal is to finish the weapon list before everyone else. Great Gun
+            Game maps have strong flow, balanced weapon rotations, and fast
             respawns.
           </p>
         </div>
-      </section>
+      </ContentSection>
 
-      {/* MAP LIST */}
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold">Gun Game Map Codes</h2>
+      <ContentSection title="Gun Game map" accent="codes">
+        <RevealGroup
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+          stagger={0.07}
+        >
+          {gunGameMaps.map((m, i) => (
+            <RevealItem key={m.code} className="h-full">
+              <FortniteMapsCard
+                src={m.image}
+                title={m.title}
+                code={m.code}
+                mode={m.mode}
+                notes={m.notes}
+                href={m.detailsHref}
+                priority={i < 2}
+              />
+            </RevealItem>
+          ))}
+        </RevealGroup>
+      </ContentSection>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {gunGameMaps.map((m) => {
-            const Card = (
-              <>
-                {m.image && (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={m.image}
-                      alt={m.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold">{m.title}</h3>
-
-                  <p className="mt-2 text-gray-300">
-                    <span className="font-semibold text-white">Map Code:</span>{" "}
-                    {m.code}
-                  </p>
-
-                  <p className="mt-1 text-gray-400 text-sm">Mode: {m.mode}</p>
-
-                  <p className="mt-3 text-gray-300">{m.notes}</p>
-
-                  {m.detailsHref ? (
-                    <span className="inline-block mt-4 text-neon-cyan underline">
-                      View details →
-                    </span>
-                  ) : (
-                    <span className="inline-block mt-4 text-gray-500 text-sm">
-                      Details page coming soon
-                    </span>
-                  )}
-                </div>
-              </>
-            );
-
-            return (
-              <article
-                key={m.code}
-                className="rounded-lg border border-edge overflow-hidden hover:border-neon-cyan/60 transition"
-              >
-                {m.detailsHref ? (
-                  <Link href={m.detailsHref}>{Card}</Link>
-                ) : (
-                  Card
-                )}
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* TIPS */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold">Tips to win Gun Game rounds</h2>
-
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
+      <ContentSection title="Tips to win" accent="Gun Game rounds">
+        <CenteredList>
           <li>Learn spawn flow and rotate fights.</li>
           <li>Hold angles and re-peek smart.</li>
           <li>Mid-range accuracy beats flashy plays.</li>
           <li>Keep moving to upgrade weapons faster.</li>
-        </ul>
-      </section>
+        </CenteredList>
+      </ContentSection>
 
-      {/* RELATED */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold">Related pages</h2>
+      <ContentSection title="Related" accent="pages">
+        <PillLinks
+          links={[
+            { href: "/best-fortnite-xp-maps", label: "XP Maps" },
+            { href: "/tmnt-fortnite-maps", label: "TMNT Maps" },
+            { href: "/squid-game-fortnite-maps", label: "Squid Game Maps" },
+            { href: "/star-wars-fortnite-maps", label: "Star Wars Maps" },
+          ]}
+        />
+      </ContentSection>
 
-        <ul className="mt-4 list-disc list-inside text-gray-300 space-y-2">
-          <li>
-            <Link href="/best-fortnite-xp-maps" className="underline">
-              Best Fortnite XP Maps
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/tmnt-fortnite-maps" className="underline">
-              Best TMNT Fortnite Maps
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/squid-game-fortnite-maps" className="underline">
-              Best Squid Game Fortnite Maps
-            </Link>
-          </li>
-        </ul>
-      </section>
-
-      <div className="mt-12">
-        <a href="#top" className="text-sm underline text-gray-400">
-          Back to top ↑
-        </a>
-      </div>
+      <BackToTop />
     </main>
   );
 }

@@ -46,7 +46,7 @@ export default function WhyPlayOurMaps() {
       <RevealGroup className="mt-14 grid gap-5 md:grid-cols-2">
         {reasons.map((r) => (
           <RevealItem key={r.title} className="h-full">
-            <div className="clip-corner group h-full border border-edge/70 bg-ink-800/50 p-7 transition-colors duration-300 hover:border-neon-cyan/50">
+            <div className="clip-corner group h-full border border-edge/70 bg-ink-800/50 p-7 text-center transition-colors duration-300 hover:border-neon-cyan/50 md:text-left">
               <span
                 className="font-mono text-sm font-bold text-neon-violet/70"
                 aria-hidden="true"
@@ -61,7 +61,7 @@ export default function WhyPlayOurMaps() {
         ))}
       </RevealGroup>
 
-      <Reveal className="mt-12 flex flex-wrap items-center gap-4">
+      <Reveal className="mt-12 flex flex-wrap items-center justify-center gap-4">
         <Link href="#featured-fortnite-maps" className="btn-neon clip-corner-sm">
           Explore featured maps
         </Link>

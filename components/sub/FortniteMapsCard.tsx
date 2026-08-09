@@ -14,9 +14,19 @@ interface Props {
   href?: string;
   /** Cards above the fold should render eagerly for a better LCP. */
   priority?: boolean;
+  /** Optional blurb shown under the title (used by the hub pages). */
+  notes?: string;
 }
 
-const FortniteMapsCard = ({ src, title, code, mode, href, priority }: Props) => {
+const FortniteMapsCard = ({
+  src,
+  title,
+  code,
+  mode,
+  href,
+  priority,
+  notes,
+}: Props) => {
   const [copied, setCopied] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -87,6 +97,12 @@ const FortniteMapsCard = ({ src, title, code, mode, href, priority }: Props) => 
               title
             )}
           </h3>
+
+          {notes && (
+            <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
+              {notes}
+            </p>
+          )}
 
           <div className="mt-auto pt-5">
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-500">
