@@ -77,10 +77,27 @@ export default function ClientLoginModal() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const hasProfile = window.localStorage.getItem(STORAGE_KEY);
+    const storedProfile = window.localStorage.getItem(STORAGE_KEY);
     const dismissed = window.sessionStorage.getItem(DISMISSED_KEY);
 
-    if (!hasProfile && !dismissed) {
+    if (storedProfile) {
+      try {
+        const profile = JSON.parse(storedProfile) as Partial<ClientProfile>;
+        setName(profile.name ?? "");
+        setEmail(profile.email ?? "");
+        setFortniteName(profile.fortniteName ?? "");
+        setDiscordName(profile.discordName ?? "");
+        setAvatarStyle(profile.avatarStyle ?? "");
+        setFavoriteMap(profile.favoriteMap ?? "");
+        setMessage(profile.message ?? "");
+        setImagePurpose(profile.imagePurpose ?? "");
+        setContactConsent(profile.contactConsent ?? false);
+      } catch {
+        window.localStorage.removeItem(STORAGE_KEY);
+      }
+    }
+
+    if (!storedProfile && !dismissed) {
       const timer = window.setTimeout(() => setOpen(true), 650);
       return () => window.clearTimeout(timer);
     }
@@ -145,8 +162,13 @@ export default function ClientLoginModal() {
 
       const { imageData: _imageData, ...storedProfile } = profile;
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(storedProfile));
+      window.dispatchEvent(
+        new CustomEvent("nldevs:client-login-updated", {
+          detail: storedProfile,
+        })
+      );
       setSaved(true);
-      window.setTimeout(() => setOpen(false), 700);
+      window.setTimeout(() => setOpen(false), 900);
     } catch (submitError) {
       setError(
         submitError instanceof Error
@@ -189,10 +211,16 @@ export default function ClientLoginModal() {
           <div>
             <p className="eyebrow">Player Access</p>
             <h2 id="client-login-title" className="mt-1 text-2xl font-black text-white">
-              Join NLDEVS
+              {saved ? "Logged in" : "Join NLDEVS"}
             </h2>
           </div>
         </div>
+
+        {saved && (
+          <p className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3 text-sm font-semibold text-neon-cyan">
+            You&apos;re logged in. Welcome to NLDEVS.
+          </p>
+        )}
 
         <form className="mt-6 space-y-4" onSubmit={onSubmit}>
           <div>
@@ -392,7 +420,7 @@ export default function ClientLoginModal() {
             disabled={submitting}
             className="clip-corner-sm w-full border border-neon-cyan bg-neon-cyan px-5 py-3 font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
           >
-            {saved ? "Saved" : submitting ? "Saving" : "Continue"}
+            {saved ? "Logged in" : submitting ? "Saving" : "Continue"}
           </button>
 
           {error && (

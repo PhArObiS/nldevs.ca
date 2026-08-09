@@ -84,10 +84,34 @@ function openClientLogin() {
   window.dispatchEvent(new Event("nldevs:open-client-login"));
 }
 
+const CLIENT_PROFILE_STORAGE_KEY = "nldevs-client-profile";
+
+type ClientProfileSummary = {
+  name?: string;
+  email?: string;
+};
+
+function getStoredClientProfile() {
+  try {
+    const value = window.localStorage.getItem(CLIENT_PROFILE_STORAGE_KEY);
+    if (!value) return null;
+    return JSON.parse(value) as ClientProfileSummary;
+  } catch {
+    window.localStorage.removeItem(CLIENT_PROFILE_STORAGE_KEY);
+    return null;
+  }
+}
+
+function getFirstName(name?: string) {
+  return name?.trim().split(/\s+/)[0] || "Player";
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [clientProfile, setClientProfile] =
+    useState<ClientProfileSummary | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
 
   function closeMenu() {
@@ -103,6 +127,33 @@ export default function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setClientProfile(getStoredClientProfile());
+
+    function onClientLoginUpdated(event: Event) {
+      const customEvent = event as CustomEvent<ClientProfileSummary>;
+      setClientProfile(customEvent.detail ?? getStoredClientProfile());
+    }
+
+    function onStorage() {
+      setClientProfile(getStoredClientProfile());
+    }
+
+    window.addEventListener(
+      "nldevs:client-login-updated",
+      onClientLoginUpdated
+    );
+    window.addEventListener("storage", onStorage);
+
+    return () => {
+      window.removeEventListener(
+        "nldevs:client-login-updated",
+        onClientLoginUpdated
+      );
+      window.removeEventListener("storage", onStorage);
+    };
   }, []);
 
   // Close on route change (prevents a sticky mobile menu)
@@ -240,9 +291,15 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={openClientLogin}
-                className="clip-corner-sm hidden border border-neon-cyan/50 bg-neon-cyan/10 px-3 py-2 text-sm font-semibold text-neon-cyan transition hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink lg:inline-flex"
+                className={`clip-corner-sm hidden border px-3 py-2 text-sm font-semibold transition lg:inline-flex ${
+                  clientProfile
+                    ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
+                    : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                }`}
               >
-                Login
+                {clientProfile
+                  ? `Logged in: ${getFirstName(clientProfile.name)}`
+                  : "Login"}
               </button>
 
               <div className="hidden flex-row items-center gap-1.5 sm:flex">
@@ -388,9 +445,15 @@ export default function Navbar() {
                       openClientLogin();
                       closeMenu();
                     }}
-                    className="clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border border-neon-cyan/50 bg-neon-cyan/10 px-3 py-2.5 text-left text-sm font-semibold text-neon-cyan transition hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                    className={`clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border px-3 py-2.5 text-left text-sm font-semibold transition ${
+                      clientProfile
+                        ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
+                        : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                    }`}
                   >
-                    Login
+                    {clientProfile
+                      ? `Logged in: ${getFirstName(clientProfile.name)}`
+                      : "Login"}
                   </button>
 
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
