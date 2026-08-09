@@ -8,7 +8,7 @@ import Hero from "@/components/main/Hero";
 import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { SITE_URL, SOCIAL_LINKS } from "@/constants/site";
+import { SITE_LOGO_URL, SITE_URL, SOCIAL_LINKS } from "@/constants/site";
 
 const featuredMaps: {
   title: string;
@@ -115,6 +115,13 @@ export default function Home() {
     description:
       "NLDEVS is a UEFN game studio building Fortnite experiences. Explore our 6 published games and get island codes, screenshots, and gameplay notes.",
     url: `${SITE_URL}/`,
+    image: SITE_LOGO_URL,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: SITE_LOGO_URL,
+      width: 250,
+      height: 250,
+    },
     isPartOf: { "@type": "WebSite", name: "NLDEVS", url: SITE_URL },
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
     mainEntity: {

@@ -5,7 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
-import { SAME_AS, SITE_URL } from "@/constants/site";
+import { SAME_AS, SITE_LOGO_URL, SITE_URL } from "@/constants/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,7 +64,14 @@ export const metadata: Metadata = {
     description:
       "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
     siteName: "NLDEVS",
-    // Image comes from app/opengraph-image.tsx (generated at build time)
+    images: [
+      {
+        url: SITE_LOGO_URL,
+        width: 250,
+        height: 250,
+        alt: "NLDEVS logo",
+      },
+    ],
   },
 
   twitter: {
@@ -72,6 +79,7 @@ export const metadata: Metadata = {
     title: "NLDEVS — UEFN Game Studio",
     description:
       "NLDEVS builds Fortnite experiences with UEFN. Explore our games and island codes.",
+    images: [SITE_LOGO_URL],
   },
 };
 
@@ -86,6 +94,13 @@ export default function RootLayout({
     "@type": "Organization",
     name: "NLDEVS",
     url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: SITE_LOGO_URL,
+      width: 250,
+      height: 250,
+    },
+    image: SITE_LOGO_URL,
     description: "UEFN game studio building Fortnite experiences.",
     sameAs: SAME_AS,
   };
