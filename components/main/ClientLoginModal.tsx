@@ -16,7 +16,7 @@ type ClientProfile = {
   message?: string;
   imageName?: string;
   imageType?: string;
-  imageData?: string;
+  imageUrl?: string;
   imagePurpose?: string;
   developerInterest: boolean;
   developerRole?: string;
@@ -86,6 +86,8 @@ function readImageFile(file: File) {
 
 export default function ClientLoginModal() {
   const [open, setOpen] = useState(false);
+  const [returningEmail, setReturningEmail] = useState("");
+  const [showNewMember, setShowNewMember] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [fortniteName, setFortniteName] = useState("");
@@ -101,9 +103,12 @@ export default function ClientLoginModal() {
   const [developerSkills, setDeveloperSkills] = useState("");
   const [developerAvailability, setDeveloperAvailability] = useState("");
   const [contactConsent, setContactConsent] = useState(false);
+  const [website, setWebsite] = useState("");
   const [saved, setSaved] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [loggingIn, setLoggingIn] = useState(false);
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
 
   useEffect(() => {
     const storedProfile = window.localStorage.getItem(STORAGE_KEY);
@@ -112,20 +117,9 @@ export default function ClientLoginModal() {
     if (storedProfile) {
       try {
         const profile = JSON.parse(storedProfile) as Partial<ClientProfile>;
-        setName(profile.name ?? "");
-        setEmail(profile.email ?? "");
-        setFortniteName(profile.fortniteName ?? "");
-        setDiscordName(profile.discordName ?? "");
-        setAvatarStyle(profile.avatarStyle ?? "");
-        setFavoriteMap(profile.favoriteMap ?? "");
-        setMessage(profile.message ?? "");
-        setImagePurpose(profile.imagePurpose ?? "");
-        setDeveloperInterest(profile.developerInterest ?? false);
-        setDeveloperRole(profile.developerRole ?? "");
-        setDeveloperPortfolio(profile.developerPortfolio ?? "");
-        setDeveloperSkills(profile.developerSkills ?? "");
-        setDeveloperAvailability(profile.developerAvailability ?? "");
-        setContactConsent(profile.contactConsent ?? false);
+        applyProfile(profile);
+        setReturningEmail(profile.email ?? "");
+        setSaved(Boolean(profile.email));
       } catch {
         window.localStorage.removeItem(STORAGE_KEY);
       }
@@ -153,9 +147,89 @@ export default function ClientLoginModal() {
     setOpen(false);
   }
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  function applyProfile(profile: Partial<ClientProfile>) {
+    setName(profile.name ?? "");
+    setEmail(profile.email ?? "");
+    setFortniteName(profile.fortniteName ?? "");
+    setDiscordName(profile.discordName ?? "");
+    setAvatarStyle(profile.avatarStyle ?? "");
+    setFavoriteMap(profile.favoriteMap ?? "");
+    setMessage(profile.message ?? "");
+    setImagePurpose(profile.imagePurpose ?? "");
+    setDeveloperInterest(profile.developerInterest ?? false);
+    setDeveloperRole(profile.developerRole ?? "");
+    setDeveloperPortfolio(profile.developerPortfolio ?? "");
+    setDeveloperSkills(profile.developerSkills ?? "");
+    setDeveloperAvailability(profile.developerAvailability ?? "");
+    setContactConsent(profile.contactConsent ?? false);
+  }
+
+  function saveProfile(profile: ClientProfile) {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+    window.dispatchEvent(
+      new CustomEvent("nldevs:client-login-updated", {
+        detail: profile,
+      })
+    );
+    setSaved(true);
+  }
+
+  async function onReturningSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
+    setNotice("");
+    setLoggingIn(true);
+
+    try {
+      const response = await fetch("/api/player-leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "login",
+          email: returningEmail.trim(),
+          website,
+        }),
+      });
+
+      const result = (await response.json()) as {
+        error?: string;
+        code?: string;
+        profile?: ClientProfile;
+      };
+
+      if (!response.ok) {
+        if (result.code === "MEMBER_NOT_FOUND") {
+          setEmail(returningEmail.trim());
+          setShowNewMember(true);
+          setNotice("No member found. Join below.");
+          return;
+        }
+
+        throw new Error(result.error || "Unable to log in right now.");
+      }
+
+      if (result.profile) {
+        applyProfile(result.profile);
+        saveProfile(result.profile);
+      }
+
+      setNotice("Welcome back.");
+      window.setTimeout(() => setOpen(false), 900);
+    } catch (loginError) {
+      setError(
+        loginError instanceof Error
+          ? loginError.message
+          : "Could not log in yet. Please try again in a moment."
+      );
+    } finally {
+      setLoggingIn(false);
+    }
+  }
+
+  async function onSignupSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setError("");
+    setNotice("");
     setSubmitting(true);
 
     try {
@@ -178,7 +252,7 @@ export default function ClientLoginModal() {
         message: message.trim() || undefined,
         imageName: imageFile?.name,
         imageType: imageFile?.type,
-        imageData,
+        imageUrl: undefined,
         imagePurpose: imagePurpose || undefined,
         developerInterest,
         developerRole: developerRole || undefined,
@@ -192,21 +266,21 @@ export default function ClientLoginModal() {
       const response = await fetch("/api/player-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(profile),
+        body: JSON.stringify({ ...profile, action: "signup", imageData, website }),
       });
 
+      const result = (await response.json()) as {
+        error?: string;
+        profile?: ClientProfile;
+      };
+
       if (!response.ok) {
-        throw new Error("Unable to save right now.");
+        throw new Error(result.error || "Unable to save right now.");
       }
 
-      const { imageData: _imageData, ...storedProfile } = profile;
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(storedProfile));
-      window.dispatchEvent(
-        new CustomEvent("nldevs:client-login-updated", {
-          detail: storedProfile,
-        })
-      );
-      setSaved(true);
+      const storedProfile = result.profile ?? profile;
+      saveProfile(storedProfile);
+      setReturningEmail(storedProfile.email);
       window.setTimeout(() => setOpen(false), 900);
     } catch (submitError) {
       setError(
@@ -261,7 +335,86 @@ export default function ClientLoginModal() {
           </p>
         )}
 
-        <form className="mt-5 space-y-3 sm:mt-6 sm:space-y-4" onSubmit={onSubmit}>
+        {notice && (
+          <p className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3 text-sm font-semibold text-neon-cyan">
+            {notice}
+          </p>
+        )}
+
+        <form
+          className="mt-5 border border-edge bg-ink-800/40 p-3 sm:mt-6"
+          onSubmit={onReturningSubmit}
+        >
+          <div className="hidden" aria-hidden="true">
+            <label htmlFor="returning-member-website">Website</label>
+            <input
+              id="returning-member-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={website}
+              onChange={(event) => setWebsite(event.target.value)}
+            />
+          </div>
+
+          <h3 className="text-sm font-black uppercase tracking-wide text-white">
+            Returning Member
+          </h3>
+          <div className="mt-3 grid gap-3 sm:grid-cols-[1fr_auto]">
+            <div>
+              <label
+                htmlFor="returning-member-email"
+                className="text-sm font-semibold text-gray-200"
+              >
+                Email
+              </label>
+              <input
+                id="returning-member-email"
+                name="returningEmail"
+                type="email"
+                autoComplete="email"
+                value={returningEmail}
+                onChange={(event) => setReturningEmail(event.target.value)}
+                required
+                className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loggingIn}
+              className="clip-corner-sm self-end border border-neon-cyan bg-neon-cyan px-4 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
+            >
+              {loggingIn ? "Checking" : "Log in"}
+            </button>
+          </div>
+        </form>
+
+        <details
+          className="mt-3 border border-edge bg-ink-800/25 p-3"
+          open={showNewMember}
+          onToggle={(event) => setShowNewMember(event.currentTarget.open)}
+        >
+          <summary className="cursor-pointer text-sm font-black uppercase tracking-wide text-neon-cyan">
+            New Member
+          </summary>
+
+        <form className="mt-4 space-y-3 sm:space-y-4" onSubmit={onSignupSubmit}>
+          <div className="hidden" aria-hidden="true">
+            <label htmlFor="client-website">Website</label>
+            <input
+              id="client-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={website}
+              onChange={(event) => setWebsite(event.target.value)}
+            />
+          </div>
+
           <div>
             <label htmlFor="client-name" className="text-sm font-semibold text-gray-200">
               Name
@@ -459,10 +612,12 @@ export default function ClientLoginModal() {
             />
             <span>NLDEVS can contact me about maps, updates, or playtests.</span>
           </label>
+            </div>
+          </details>
 
           <details className="border border-edge bg-ink-800/40 p-3">
             <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
-              Developer opportunities
+              Developer / creator info
             </summary>
 
             <div className="mt-4 space-y-3 sm:space-y-4">
@@ -563,8 +718,6 @@ export default function ClientLoginModal() {
               </div>
             </div>
           </details>
-            </div>
-          </details>
 
           <button
             type="submit"
@@ -574,12 +727,14 @@ export default function ClientLoginModal() {
             {saved ? "Logged in" : submitting ? "Saving" : "Continue"}
           </button>
 
-          {error && (
-            <p className="text-center text-sm font-semibold text-red-300">
-              {error}
-            </p>
-          )}
         </form>
+        </details>
+
+        {error && (
+          <p className="mt-3 text-center text-sm font-semibold text-red-300">
+            {error}
+          </p>
+        )}
       </div>
     </div>
   );

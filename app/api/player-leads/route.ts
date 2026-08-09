@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 type PlayerLeadInput = {
+  action?: unknown;
   name?: unknown;
   email?: unknown;
   fortniteName?: unknown;
@@ -18,17 +19,51 @@ type PlayerLeadInput = {
   developerSkills?: unknown;
   developerAvailability?: unknown;
   contactConsent?: unknown;
+  website?: unknown;
+};
+
+type LeadRow = {
+  id: string;
+  name: string;
+  email: string;
+  fortnite_name: string | null;
+  discord_name: string | null;
+  avatar_style: string | null;
+  favorite_map: string | null;
+  message: string | null;
+  image_name: string | null;
+  image_type: string | null;
+  image_url: string | null;
+  image_purpose: string | null;
+  developer_interest: boolean | null;
+  developer_role: string | null;
+  developer_portfolio: string | null;
+  developer_skills: string | null;
+  developer_availability: string | null;
+  contact_consent: boolean | null;
+  created_at: string;
+};
+
+type RateEntry = {
+  count: number;
+  resetAt: number;
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const IMAGE_DATA_PATTERN = /^data:(image\/(?:png|jpeg|webp|gif));base64,([A-Za-z0-9+/=]+)$/;
 const MAX_IMAGE_DATA_LENGTH = 2_100_000;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 12;
 const PLACEHOLDER_KEYS = new Set([
   "your-service-role-key",
   "your-secret-key",
   "your_secret_key_here",
   "your-resend-api-key",
 ]);
+
+const rateLimitStore = globalThis as typeof globalThis & {
+  __nldevsRateLimit?: Map<string, RateEntry>;
+};
 
 function cleanText(value: unknown, maxLength: number) {
   if (typeof value !== "string") return "";
@@ -39,11 +74,15 @@ function getSupabaseRestUrl(value: string) {
   return value.replace(/\/+$/, "").replace(/\/rest\/v1$/, "") + "/rest/v1";
 }
 
-function getSupabaseHeaders(key: string) {
+function getSupabaseOrigin(value: string) {
+  return value.replace(/\/+$/, "").replace(/\/rest\/v1$/, "");
+}
+
+function getSupabaseHeaders(key: string, prefer = "return=minimal") {
   const headers: Record<string, string> = {
     apikey: key,
     "Content-Type": "application/json",
-    Prefer: "return=minimal",
+    Prefer: prefer,
   };
 
   if (!key.startsWith("sb_secret_")) {
@@ -51,6 +90,29 @@ function getSupabaseHeaders(key: string) {
   }
 
   return headers;
+}
+
+function getIp(request: NextRequest) {
+  return (
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown"
+  );
+}
+
+function isRateLimited(key: string) {
+  const now = Date.now();
+  const store = rateLimitStore.__nldevsRateLimit ?? new Map<string, RateEntry>();
+  rateLimitStore.__nldevsRateLimit = store;
+
+  const current = store.get(key);
+  if (!current || current.resetAt <= now) {
+    store.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  current.count += 1;
+  return current.count > RATE_LIMIT_MAX_REQUESTS;
 }
 
 function escapeHtml(value: string) {
@@ -66,12 +128,128 @@ function getFirstName(name: string) {
   return name.split(" ")[0] || "there";
 }
 
+function toClientProfile(row: LeadRow) {
+  return {
+    name: row.name,
+    email: row.email,
+    fortniteName: row.fortnite_name ?? undefined,
+    discordName: row.discord_name ?? undefined,
+    avatarStyle: row.avatar_style ?? undefined,
+    favoriteMap: row.favorite_map ?? undefined,
+    message: row.message ?? undefined,
+    imageName: row.image_name ?? undefined,
+    imageType: row.image_type ?? undefined,
+    imageUrl: row.image_url ?? undefined,
+    imagePurpose: row.image_purpose ?? undefined,
+    developerInterest: row.developer_interest ?? false,
+    developerRole: row.developer_role ?? undefined,
+    developerPortfolio: row.developer_portfolio ?? undefined,
+    developerSkills: row.developer_skills ?? undefined,
+    developerAvailability: row.developer_availability ?? undefined,
+    contactConsent: row.contact_consent ?? false,
+    savedAt: row.created_at,
+  };
+}
+
+async function findMemberByEmail({
+  supabaseUrl,
+  serviceRoleKey,
+  email,
+}: {
+  supabaseUrl: string;
+  serviceRoleKey: string;
+  email: string;
+}) {
+  const select = [
+    "id",
+    "name",
+    "email",
+    "fortnite_name",
+    "discord_name",
+    "avatar_style",
+    "favorite_map",
+    "message",
+    "image_name",
+    "image_type",
+    "image_url",
+    "image_purpose",
+    "developer_interest",
+    "developer_role",
+    "developer_portfolio",
+    "developer_skills",
+    "developer_availability",
+    "contact_consent",
+    "created_at",
+  ].join(",");
+
+  const response = await fetch(
+    `${getSupabaseRestUrl(supabaseUrl)}/player_leads?select=${select}&email=eq.${encodeURIComponent(email)}&order=created_at.desc&limit=1`,
+    {
+      headers: getSupabaseHeaders(serviceRoleKey),
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+
+  const rows = (await response.json()) as LeadRow[];
+  return rows[0] ?? null;
+}
+
+async function uploadImage({
+  supabaseUrl,
+  serviceRoleKey,
+  imageData,
+  imageType,
+  imageName,
+}: {
+  supabaseUrl: string;
+  serviceRoleKey: string;
+  imageData: string;
+  imageType: string;
+  imageName: string;
+}) {
+  const bucket = process.env.SUPABASE_STORAGE_BUCKET;
+  if (!bucket || !imageData) return null;
+
+  const match = imageData.match(IMAGE_DATA_PATTERN);
+  if (!match) return null;
+
+  const extension = match[1].split("/")[1].replace("jpeg", "jpg");
+  const safeName = imageName.toLowerCase().replace(/[^a-z0-9._-]+/g, "-");
+  const path = `${Date.now()}-${crypto.randomUUID()}-${safeName || `upload.${extension}`}`;
+  const bytes = Buffer.from(match[2], "base64");
+
+  const response = await fetch(
+    `${getSupabaseOrigin(supabaseUrl)}/storage/v1/object/${bucket}/${path}`,
+    {
+      method: "POST",
+      headers: {
+        apikey: serviceRoleKey,
+        Authorization: `Bearer ${serviceRoleKey}`,
+        "Content-Type": imageType || match[1],
+        "x-upsert": "false",
+      },
+      body: bytes,
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+
+  return `${bucket}/${path}`;
+}
+
 async function sendWelcomeEmail({
   name,
   email,
+  contactConsent,
 }: {
   name: string;
   email: string;
+  contactConsent: boolean;
 }) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const from = process.env.WELCOME_EMAIL_FROM;
@@ -82,6 +260,10 @@ async function sendWelcomeEmail({
   }
 
   const firstName = escapeHtml(getFirstName(name));
+  const updatesLine = contactConsent
+    ? "We will keep you posted on new drops, playtests, and updates."
+    : "You can reply to this email anytime if you want to reach NLDEVS.";
+
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -92,10 +274,10 @@ async function sendWelcomeEmail({
       from,
       to: [email],
       subject: "Welcome to NLDEVS",
-      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. We appreciate you checking out our Fortnite maps and will keep you posted on new drops, playtests, and updates.\n\n- NLDEVS`,
+      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. ${updatesLine}\n\n- NLDEVS`,
       html: `
         <p>Hi ${firstName},</p>
-        <p>Thanks for joining NLDEVS. We appreciate you checking out our Fortnite maps and will keep you posted on new drops, playtests, and updates.</p>
+        <p>Thanks for joining NLDEVS. ${escapeHtml(updatesLine)}</p>
         <p>- NLDEVS</p>
       `,
       ...(replyTo ? { reply_to: replyTo } : {}),
@@ -118,8 +300,65 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
+  const action = cleanText(body.action, 20) || "signup";
   const name = cleanText(body.name, 120);
   const email = cleanText(body.email, 180).toLowerCase();
+  const honeypot = cleanText(body.website, 200);
+  const ip = getIp(request);
+
+  if (honeypot) {
+    return NextResponse.json({ ok: true });
+  }
+
+  if (isRateLimited(`${ip}:${email || "anonymous"}`)) {
+    return NextResponse.json(
+      { error: "Too many attempts. Please wait a few minutes." },
+      { status: 429 }
+    );
+  }
+
+  if (!EMAIL_PATTERN.test(email)) {
+    return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
+  }
+
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const serviceRoleKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.SUPABASE_SECRET_KEY;
+
+  if (!supabaseUrl || !serviceRoleKey || PLACEHOLDER_KEYS.has(serviceRoleKey)) {
+    return NextResponse.json(
+      { error: "Member database is not configured." },
+      { status: 503 }
+    );
+  }
+
+  let existingMember: LeadRow | null;
+
+  try {
+    existingMember = await findMemberByEmail({ supabaseUrl, serviceRoleKey, email });
+  } catch (error) {
+    console.error("Supabase member lookup failed", error);
+    return NextResponse.json(
+      { error: "Could not reach member database." },
+      { status: 502 }
+    );
+  }
+
+  if (action === "login") {
+    if (!existingMember) {
+      return NextResponse.json(
+        { error: "No member found. Join below.", code: "MEMBER_NOT_FOUND" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      mode: "login",
+      profile: toClientProfile(existingMember),
+    });
+  }
+
   const fortniteName = cleanText(body.fortniteName, 80);
   const discordName = cleanText(body.discordName, 80);
   const avatarStyle = cleanText(body.avatarStyle, 80);
@@ -140,10 +379,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Name is required." }, { status: 400 });
   }
 
-  if (!EMAIL_PATTERN.test(email)) {
-    return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
-  }
-
   if (imageData) {
     const match = imageData.match(IMAGE_DATA_PATTERN);
 
@@ -160,70 +395,100 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const serviceRoleKey =
-    process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.SUPABASE_SECRET_KEY;
+  let imageUrl: string | null = null;
 
-  if (!supabaseUrl || !serviceRoleKey || PLACEHOLDER_KEYS.has(serviceRoleKey)) {
+  try {
+    imageUrl = await uploadImage({
+      supabaseUrl,
+      serviceRoleKey,
+      imageData,
+      imageType,
+      imageName,
+    });
+  } catch (error) {
+    console.error("Supabase image upload failed", error);
     return NextResponse.json(
-      { error: "Player lead database is not configured." },
-      { status: 503 }
+      { error: "Image upload failed. Try a smaller image or submit without it." },
+      { status: 502 }
     );
   }
+
+  const payload = {
+    name,
+    email,
+    fortnite_name: fortniteName || null,
+    discord_name: discordName || null,
+    avatar_style: avatarStyle || null,
+    favorite_map: favoriteMap || null,
+    message: message || null,
+    image_name: imageData ? imageName || null : existingMember?.image_name ?? null,
+    image_type: imageData ? imageType || null : existingMember?.image_type ?? null,
+    image_data: null,
+    image_url: imageData ? imageUrl : existingMember?.image_url ?? null,
+    image_purpose: imageData ? imagePurpose || null : existingMember?.image_purpose ?? null,
+    developer_interest: developerInterest,
+    developer_role: developerRole || null,
+    developer_portfolio: developerPortfolio || null,
+    developer_skills: developerSkills || null,
+    developer_availability: developerAvailability || null,
+    contact_consent: contactConsent,
+    source_path: request.headers.get("referer") ?? null,
+    user_agent: request.headers.get("user-agent") ?? null,
+  };
 
   let response: Response;
 
   try {
-    response = await fetch(`${getSupabaseRestUrl(supabaseUrl)}/player_leads`, {
-      method: "POST",
-      headers: getSupabaseHeaders(serviceRoleKey),
-      body: JSON.stringify({
-        name,
-        email,
-        fortnite_name: fortniteName || null,
-        discord_name: discordName || null,
-        avatar_style: avatarStyle || null,
-        favorite_map: favoriteMap || null,
-        message: message || null,
-        image_name: imageData ? imageName || null : null,
-        image_type: imageData ? imageType || null : null,
-        image_data: imageData || null,
-        image_purpose: imageData ? imagePurpose || null : null,
-        developer_interest: developerInterest,
-        developer_role: developerRole || null,
-        developer_portfolio: developerPortfolio || null,
-        developer_skills: developerSkills || null,
-        developer_availability: developerAvailability || null,
-        contact_consent: contactConsent,
-        source_path: request.headers.get("referer") ?? null,
-        user_agent: request.headers.get("user-agent") ?? null,
-      }),
-    });
+    if (existingMember) {
+      response = await fetch(
+        `${getSupabaseRestUrl(supabaseUrl)}/player_leads?id=eq.${existingMember.id}`,
+        {
+          method: "PATCH",
+          headers: getSupabaseHeaders(serviceRoleKey, "return=representation"),
+          body: JSON.stringify(payload),
+        }
+      );
+    } else {
+      response = await fetch(`${getSupabaseRestUrl(supabaseUrl)}/player_leads`, {
+        method: "POST",
+        headers: getSupabaseHeaders(serviceRoleKey, "return=representation"),
+        body: JSON.stringify(payload),
+      });
+    }
   } catch (error) {
     console.error("Supabase player lead request failed", error);
     return NextResponse.json(
-      { error: "Could not reach player lead database." },
+      { error: "Could not reach member database." },
       { status: 502 }
     );
   }
 
   if (!response.ok) {
-    console.error("Supabase player lead insert failed", {
+    console.error("Supabase player lead save failed", {
       status: response.status,
       body: await response.text(),
     });
 
     return NextResponse.json(
-      { error: "Could not save player lead." },
+      { error: "Could not save member profile." },
       { status: 502 }
     );
   }
 
-  try {
-    await sendWelcomeEmail({ name, email });
-  } catch (error) {
-    console.error("Welcome email failed", error);
+  const rows = (await response.json()) as LeadRow[];
+  const savedMember = rows[0];
+
+  if (!existingMember) {
+    try {
+      await sendWelcomeEmail({ name, email, contactConsent });
+    } catch (error) {
+      console.error("Welcome email failed", error);
+    }
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({
+    ok: true,
+    mode: existingMember ? "updated" : "signup",
+    profile: savedMember ? toClientProfile(savedMember) : undefined,
+  });
 }

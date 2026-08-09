@@ -18,7 +18,7 @@ Paste the contents of `database/player_leads.sql` into the editor and run it.
 
 The table is `public.player_leads`.
 
-The SQL also grants `insert` access to Supabase's `service_role`. This is
+The SQL also grants `insert`, `select`, and `update` access to Supabase's `service_role`. This is
 required for newer Supabase projects where new tables are not automatically
 exposed through the REST/Data API.
 
@@ -71,9 +71,18 @@ agent, optional Discord name, avatar style, favorite map, message, uploaded
 image details, developer interest details, contact consent, and created
 timestamp.
 
-Images are stored as small data URLs in the `image_data` column. The form limits
-uploads to 1.5 MB. For larger galleries or many screenshots, move images to
-Supabase Storage and store the file URL in this table instead.
+Returning-member login checks the latest row for that email. New-member signup
+updates an existing email profile instead of creating duplicate rows.
+
+The form limits uploads to 1.5 MB. Image bytes are not stored in the database.
+To save uploads, create a Supabase Storage bucket and add this environment
+variable locally and on the server:
+
+```env
+SUPABASE_STORAGE_BUCKET=player-lead-images
+```
+
+Uploaded image paths are saved in the `image_url` column.
 
 ## 6. Optional Welcome Email
 
