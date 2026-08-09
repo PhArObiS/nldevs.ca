@@ -524,7 +524,7 @@ export default function ClientLoginModal() {
                 htmlFor="client-avatar-style"
                 className="text-sm font-semibold text-gray-200"
               >
-                Avatar <span className="text-gray-500">optional</span>
+                Profile style <span className="text-gray-500">optional</span>
               </label>
               <select
                 id="client-avatar-style"
@@ -533,7 +533,7 @@ export default function ClientLoginModal() {
                 onChange={(event) => setAvatarStyle(event.target.value)}
                 className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
               >
-                <option value="">Choose avatar style</option>
+                <option value="">Choose a style</option>
                 {AVATAR_OPTIONS.map((option) => (
                   <option key={option} value={option}>
                     {option}
