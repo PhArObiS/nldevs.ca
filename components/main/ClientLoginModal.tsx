@@ -180,6 +180,12 @@ export default function ClientLoginModal() {
     setOpen(false);
   }
 
+  function closeAfterWelcome() {
+    window.sessionStorage.setItem(DISMISSED_KEY, "true");
+    setShowWelcomePopup(false);
+    setOpen(false);
+  }
+
   function openEditInfo() {
     setError("");
     setNotice("");
@@ -523,7 +529,7 @@ export default function ClientLoginModal() {
               }}
               className="clip-corner-sm mt-3 border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
-              Sign up as new member
+              New Member Signup
             </button>
           </div>
         )}
@@ -619,7 +625,7 @@ export default function ClientLoginModal() {
           onToggle={(event) => setShowNewMember(event.currentTarget.open)}
         >
           <summary className="cursor-pointer text-sm font-black uppercase tracking-wide text-neon-cyan">
-            {saved ? "Edit Member Info" : "New Member"}
+            {saved ? "Edit Member Info" : "New Member Signup"}
           </summary>
 
         <form className="mt-4 space-y-3 sm:space-y-4" onSubmit={onSignupSubmit}>
@@ -1006,7 +1012,7 @@ export default function ClientLoginModal() {
             </p>
             <button
               type="button"
-              onClick={() => setShowWelcomePopup(false)}
+              onClick={closeAfterWelcome}
               className="clip-corner-sm mt-5 border border-neon-cyan bg-neon-cyan px-5 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
               Got it
