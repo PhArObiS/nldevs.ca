@@ -20,21 +20,28 @@ export const metadata: Metadata = {
 
 const benefits = [
   {
-    title: "Early Playtest Calls",
-    text: "Catch opportunities to test new maps, report issues, and help shape map flow before broader pushes.",
+    title: "Early Access",
+    text: "Get early map drops and code updates before broader pushes when new islands or revisions are ready.",
   },
   {
-    title: "Map Drops",
-    text: "Get notified when NLDEVS launches or updates Fortnite islands, including new codes and status changes.",
+    title: "Private Playtests",
+    text: "Catch private playtest invites, test new loops, and help shape flow before major updates.",
   },
   {
-    title: "Creator Feedback",
-    text: "Send ideas, screenshots, bugs, and gameplay reactions directly into the NLDEVS loop.",
+    title: "Vote And Guide",
+    text: "Vote on upcoming map themes and send feedback, bugs, screenshots, and gameplay reactions directly.",
   },
   {
-    title: "Future Collabs",
-    text: "Developers, artists, testers, and UEFN creators can signal interest for future work or collaboration.",
+    title: "Community Credit",
+    text: "Get considered for future shoutouts, playtester credits, developer opportunities, giveaways, and XP/map events.",
   },
+];
+
+const perkStrip = [
+  "Early map drops",
+  "Playtest invites",
+  "Vote on new themes",
+  "Send feedback directly",
 ];
 
 export default function PlaytestSquadPage() {
@@ -62,12 +69,23 @@ export default function PlaytestSquadPage() {
                 Playtest. Give feedback. Catch drops.
               </h1>
               <p className="mt-4 max-w-2xl leading-relaxed text-gray-400">
-                Join the Discord for the fastest updates, and use Member Access
-                on the site to tell NLDEVS what you want to help with.
+                Join as a member to catch early map drops, private playtest
+                calls, voting opportunities, and a direct feedback line into
+                NLDEVS.
               </p>
               <p className="mt-3 text-sm font-semibold text-gray-500">
                 No spam. No selling info. Delete anytime.
               </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {perkStrip.map((perk) => (
+                  <span
+                    key={perk}
+                    className="clip-corner-sm border border-edge-bright/70 bg-ink/70 px-3 py-1.5 text-xs font-semibold text-gray-300"
+                  >
+                    {perk}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">
               <a

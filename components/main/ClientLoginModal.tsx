@@ -90,6 +90,15 @@ const MEMBER_GOALS = [
   "Just browsing",
 ];
 
+const PLAYTEST_SQUAD_PERKS = [
+  "Early access to new maps",
+  "Private playtest invites",
+  "Vote on upcoming map themes",
+  "Send bugs and screenshots directly",
+  "Map code drops first",
+  "Creator and developer opportunities",
+];
+
 function readImageFile(file: File) {
   return new Promise<string>((resolve, reject) => {
     const reader = new FileReader();
@@ -422,6 +431,28 @@ export default function ClientLoginModal() {
             </h2>
           </div>
         </div>
+
+        {!saved && (
+          <div className="mt-5 border border-neon-cyan/35 bg-neon-cyan/10 px-4 py-4">
+            <p className="text-sm font-black uppercase tracking-wide text-neon-cyan">
+              NLDEVS Playtest Squad
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-gray-300">
+              Join free for closer access to maps, tests, feedback, and future
+              creator opportunities.
+            </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              {PLAYTEST_SQUAD_PERKS.map((perk) => (
+                <div
+                  key={perk}
+                  className="border border-edge/80 bg-ink-800/55 px-3 py-2 text-xs font-semibold text-gray-300"
+                >
+                  {perk}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {saved && (
           <div className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3">

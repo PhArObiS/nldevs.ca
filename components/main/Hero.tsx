@@ -15,6 +15,13 @@ const categories = [
   { href: "/best-fortnite-xp-maps", label: "XP Maps" },
 ];
 
+const memberPerks = [
+  "Early map drops",
+  "Playtest invites",
+  "Vote on new themes",
+  "Send feedback directly",
+];
+
 /**
  * Server component on purpose.
  *
@@ -89,6 +96,40 @@ export default function Hero() {
           >
             Our creator page
           </a>
+        </div>
+
+        <div
+          className="animate-fade-up mx-auto mt-6 max-w-3xl"
+          style={{ animationDelay: "280ms" }}
+        >
+          <Link
+            href="/playtest-squad"
+            className="clip-corner group block border border-neon-cyan/40 bg-ink-800/55 px-4 py-3 text-left shadow-[0_0_28px_rgba(34,211,238,0.10)] transition hover:border-neon-cyan hover:bg-neon-cyan/10 sm:px-5"
+          >
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neon-cyan">
+                  NLDEVS Playtest Squad
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">
+                  Member perks for players who want closer access.
+                </p>
+              </div>
+              <span className="text-xs font-black uppercase tracking-wide text-neon-magenta transition group-hover:text-white">
+                Join free
+              </span>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {memberPerks.map((perk) => (
+                <span
+                  key={perk}
+                  className="clip-corner-sm border border-edge-bright/70 bg-ink/70 px-3 py-1.5 text-xs font-semibold text-gray-300"
+                >
+                  {perk}
+                </span>
+              ))}
+            </div>
+          </Link>
         </div>
 
         {/* Category chips */}
