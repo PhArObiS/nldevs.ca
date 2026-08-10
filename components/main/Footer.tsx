@@ -117,6 +117,9 @@ const Footer: React.FC = () => (
 
       <div className="mt-10 border-t border-white/5 pt-6 text-center text-sm text-gray-500">
         <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <Link href="/uefn-contracts" className="transition hover:text-white">
+            UEFN Contracts
+          </Link>
           <Link href="/privacy" className="transition hover:text-white">
             Privacy
           </Link>

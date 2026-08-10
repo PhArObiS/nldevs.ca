@@ -13,6 +13,7 @@ const HUB_ROUTES = [
   "/fortnite-gun-game-maps",
   "/best-fortnite-xp-maps",
   "/playtest-squad",
+  "/uefn-contracts",
   "/privacy",
 ];
 
