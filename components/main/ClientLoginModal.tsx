@@ -140,6 +140,7 @@ export default function ClientLoginModal() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [showDiscordCta, setShowDiscordCta] = useState(false);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(false);
 
   useEffect(() => {
     const storedProfile = window.localStorage.getItem(STORAGE_KEY);
@@ -182,6 +183,7 @@ export default function ClientLoginModal() {
     setError("");
     setNotice("");
     setShowDiscordCta(false);
+    setShowWelcomePopup(false);
     setShowNewMember(true);
   }
 
@@ -232,6 +234,7 @@ export default function ClientLoginModal() {
     event.preventDefault();
     setError("");
     setNotice("");
+    setShowWelcomePopup(false);
     setShowDiscordCta(false);
     setLoggingIn(true);
 
@@ -293,9 +296,16 @@ export default function ClientLoginModal() {
     event.preventDefault();
     setError("");
     setNotice("");
+    setShowWelcomePopup(false);
     setSubmitting(true);
 
     try {
+      if (!ageAttestation) {
+        throw new Error(
+          "Please confirm you are 13 or older and have parent/guardian permission if under 18."
+        );
+      }
+
       if (imageFile && !imageFile.type.startsWith("image/")) {
         throw new Error("Please upload an image file.");
       }
@@ -370,10 +380,12 @@ export default function ClientLoginModal() {
       }
 
       const storedProfile = result.profile ?? profile;
+      const wasExistingMember = saved;
       saveProfile(storedProfile);
       setEmailConfirmed(storedProfile.emailConfirmed ?? false);
       setReturningEmail(storedProfile.email);
       setShowDiscordCta(true);
+      setShowWelcomePopup(!wasExistingMember);
       setNotice(
         storedProfile.emailConfirmed
           ? saved
@@ -655,6 +667,20 @@ export default function ClientLoginModal() {
             </div>
           </div>
 
+          <label className="flex items-start gap-3 border border-neon-cyan/40 bg-neon-cyan/10 p-3 text-sm text-gray-200">
+            <input
+              type="checkbox"
+              checked={ageAttestation}
+              onChange={(event) => setAgeAttestation(event.target.checked)}
+              required
+              className="mt-1 h-4 w-4 accent-neon-cyan"
+            />
+            <span>
+              I am 13 or older. If I am under 18, I have permission from a
+              parent or guardian to share this information with NLDEVS.
+            </span>
+          </label>
+
           <details className="border border-edge bg-ink-800/40 p-3">
             <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
               Optional player info
@@ -817,20 +843,6 @@ export default function ClientLoginModal() {
             />
             <span>NLDEVS can contact me about maps, updates, or playtests.</span>
           </label>
-
-          <label className="flex items-start gap-3 border border-edge bg-ink-800/60 p-3 text-sm text-gray-300">
-            <input
-              type="checkbox"
-              checked={ageAttestation}
-              onChange={(event) => setAgeAttestation(event.target.checked)}
-              required
-              className="mt-1 h-4 w-4 accent-neon-cyan"
-            />
-            <span>
-              I am 13 or older. If I am under 18, I have permission from a
-              parent or guardian to share this information with NLDEVS.
-            </span>
-          </label>
             </div>
           </details>
 
@@ -955,6 +967,27 @@ export default function ClientLoginModal() {
           </p>
         )}
       </div>
+      {showWelcomePopup && (
+        <div className="fixed inset-0 z-[90] flex items-center justify-center bg-black/55 px-4">
+          <div className="clip-corner max-w-sm border border-neon-cyan bg-ink-900 p-5 text-center shadow-[0_0_40px_rgba(34,211,238,0.24)]">
+            <p className="eyebrow">Welcome</p>
+            <h3 className="mt-2 text-2xl font-black text-white">
+              You&apos;re almost in.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-gray-300">
+              Welcome to NLDEVS. You will receive an email shortly. Please
+              confirm it to finish your member access.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowWelcomePopup(false)}
+              className="clip-corner-sm mt-5 border border-neon-cyan bg-neon-cyan px-5 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
+            >
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
