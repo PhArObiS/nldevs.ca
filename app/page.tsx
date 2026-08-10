@@ -239,6 +239,49 @@ export default function Home() {
 
       <WhyPlayOurMaps />
 
+      {/* UEFN CONTRACTS CTA */}
+      <section
+        id="uefn-contracts-home"
+        aria-labelledby="uefn-contracts-home-title"
+        className="mx-auto w-full max-w-6xl px-6 pb-20"
+      >
+        <Reveal>
+          <div className="clip-corner relative overflow-hidden border border-neon-violet/60 bg-ink-900/75 px-6 py-10 md:px-10">
+            <div
+              className="pointer-events-none absolute inset-0 grid-backdrop"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon-cyan to-transparent"
+              aria-hidden="true"
+            />
+            <div className="relative grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="eyebrow">UEFN contracts</p>
+                <h2
+                  id="uefn-contracts-home-title"
+                  className="mt-4 text-3xl font-black tracking-tight text-white md:text-4xl"
+                >
+                  Need a <span className="neon-text">Fortnite experience</span>{" "}
+                  built?
+                </h2>
+                <p className="mt-4 max-w-2xl leading-relaxed text-gray-400">
+                  NLDEVS can help with UEFN map builds, branded experiences,
+                  gameplay systems, Verse/device work, in-game animations, and
+                  launch polish.
+                </p>
+              </div>
+              <Link
+                href="/uefn-contracts"
+                className="btn-neon clip-corner-sm justify-self-start lg:justify-self-end"
+              >
+                View UEFN services
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* GAMEPLAY SPOTLIGHT */}
       <section
         id="gameplay-spotlight"
