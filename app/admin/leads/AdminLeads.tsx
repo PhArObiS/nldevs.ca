@@ -46,6 +46,7 @@ function formatDate(value?: string | null) {
 
 export default function AdminLeads() {
   const [token, setToken] = useState("");
+  const [confirmToken, setConfirmToken] = useState("");
   const [activeToken, setActiveToken] = useState("");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [statusFilter, setStatusFilter] = useState("all");
@@ -80,9 +81,19 @@ export default function AdminLeads() {
     event?.preventDefault();
     setError("");
     setNotice("");
-    setLoading(true);
     const submittedToken = token;
+    const submittedConfirmToken = confirmToken;
     setToken("");
+    setConfirmToken("");
+
+    if (submittedToken !== submittedConfirmToken) {
+      setActiveToken("");
+      setLeads([]);
+      setError("Access tokens do not match. Please enter both again.");
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const response = await fetch("/api/admin/leads", {
@@ -231,7 +242,7 @@ export default function AdminLeads() {
 
       <form
         onSubmit={loadLeads}
-        className="mt-10 grid gap-3 border border-edge bg-ink-800/50 p-4 md:grid-cols-[1fr_auto]"
+        className="mt-10 grid gap-3 border border-edge bg-ink-800/50 p-4 md:grid-cols-[1fr_1fr_auto]"
       >
         <input
           type="password"
@@ -241,6 +252,16 @@ export default function AdminLeads() {
           spellCheck={false}
           className="w-full border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
           placeholder="Admin access token"
+          required
+        />
+        <input
+          type="password"
+          value={confirmToken}
+          onChange={(event) => setConfirmToken(event.target.value)}
+          autoComplete="off"
+          spellCheck={false}
+          className="w-full border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+          placeholder="Confirm access token"
           required
         />
         <button
