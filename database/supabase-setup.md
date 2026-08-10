@@ -66,7 +66,7 @@ Start the site, submit the popup, then check Supabase Table Editor:
 Table Editor -> player_leads
 ```
 
-You should see name, email, optional Fortnite name, source path, browser user
+You should see name, email, email confirmation status, optional Fortnite name, source path, browser user
 agent, optional Discord name, profile style, favorite map, member goals,
 message, uploaded image details, developer interest details, contact consent,
 age/guardian attestation, and created timestamp.
@@ -96,10 +96,11 @@ ADMIN_ACCESS_TOKEN=choose-a-long-private-password
 
 Do not share this token. The admin API will not load or update leads without it.
 
-## 7. Optional Welcome Email
+## 7. Optional Confirmation Email
 
-The API route can send a short thank-you email after a player joins. It uses
-Resend's HTTP API, so no extra package is required.
+The API route can send a confirmation email after a player joins. Members click
+the confirmation link to mark `email_confirmed` as true. It uses Resend's HTTP
+API, so no extra package is required.
 
 Add these environment variables locally and on the server:
 

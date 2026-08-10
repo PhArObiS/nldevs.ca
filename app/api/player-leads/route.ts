@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createHash, randomBytes } from "crypto";
 import {
   findBlockedLanguageFields,
   hasBlockedLanguage,
@@ -49,6 +50,10 @@ type LeadRow = {
   member_goals: string | null;
   contact_consent: boolean | null;
   age_attestation: boolean | null;
+  email_confirmed: boolean | null;
+  email_confirmed_at: string | null;
+  email_confirmation_token_hash: string | null;
+  email_confirmation_sent_at: string | null;
   created_at: string;
 };
 
@@ -136,6 +141,28 @@ function getFirstName(name: string) {
   return name.split(" ")[0] || "there";
 }
 
+function createConfirmationToken() {
+  return randomBytes(32).toString("base64url");
+}
+
+function hashConfirmationToken(token: string) {
+  return createHash("sha256").update(token).digest("hex");
+}
+
+function getRequestOrigin(request: NextRequest) {
+  const host = request.headers.get("x-forwarded-host") || request.headers.get("host");
+  const protocol = request.headers.get("x-forwarded-proto") || "https";
+
+  if (host) return `${protocol}://${host}`;
+  return "https://nldevs.ca";
+}
+
+function getConfirmEmailUrl(request: NextRequest, token: string) {
+  const url = new URL("/api/player-leads/confirm", getRequestOrigin(request));
+  url.searchParams.set("token", token);
+  return url.toString();
+}
+
 function toClientProfile(row: LeadRow) {
   return {
     name: row.name,
@@ -157,6 +184,8 @@ function toClientProfile(row: LeadRow) {
     memberGoals: row.member_goals ?? undefined,
     contactConsent: row.contact_consent ?? false,
     ageAttestation: row.age_attestation ?? false,
+    emailConfirmed: row.email_confirmed ?? false,
+    emailConfirmedAt: row.email_confirmed_at ?? undefined,
     savedAt: row.created_at,
   };
 }
@@ -191,6 +220,10 @@ async function findMemberByEmail({
     "member_goals",
     "contact_consent",
     "age_attestation",
+    "email_confirmed",
+    "email_confirmed_at",
+    "email_confirmation_token_hash",
+    "email_confirmation_sent_at",
     "created_at",
   ].join(",");
 
@@ -258,10 +291,12 @@ async function sendWelcomeEmail({
   name,
   email,
   contactConsent,
+  confirmEmailUrl,
 }: {
   name: string;
   email: string;
   contactConsent: boolean;
+  confirmEmailUrl: string;
 }) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const from = process.env.WELCOME_EMAIL_FROM;
@@ -275,6 +310,7 @@ async function sendWelcomeEmail({
   const updatesLine = contactConsent
     ? "We will keep you posted on new drops, playtests, and updates."
     : "You can reply to this email anytime if you want to reach NLDEVS.";
+  const safeConfirmUrl = escapeHtml(confirmEmailUrl);
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -285,11 +321,13 @@ async function sendWelcomeEmail({
     body: JSON.stringify({
       from,
       to: [email],
-      subject: "Welcome to NLDEVS",
-      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. ${updatesLine}\n\n- NLDEVS`,
+      subject: "Confirm your NLDEVS email",
+      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. Please confirm your email:\n${confirmEmailUrl}\n\n${updatesLine}\n\n- NLDEVS`,
       html: `
         <p>Hi ${firstName},</p>
-        <p>Thanks for joining NLDEVS. ${escapeHtml(updatesLine)}</p>
+        <p>Thanks for joining NLDEVS. Please confirm your email to verify your member access.</p>
+        <p><a href="${safeConfirmUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">Confirm email</a></p>
+        <p>${escapeHtml(updatesLine)}</p>
         <p>- NLDEVS</p>
       `,
       ...(replyTo ? { reply_to: replyTo } : {}),
@@ -476,6 +514,9 @@ export async function POST(request: NextRequest) {
   const contactConsent = body.contactConsent === true;
   const ageAttestation = body.ageAttestation === true;
   const imageData = typeof body.imageData === "string" ? body.imageData : "";
+  const needsEmailConfirmation = !existingMember?.email_confirmed;
+  const confirmationToken = needsEmailConfirmation ? createConfirmationToken() : "";
+  const confirmationSentAt = needsEmailConfirmation ? new Date().toISOString() : null;
 
   const blockedFields = findBlockedLanguageFields({
     name,
@@ -570,6 +611,13 @@ export async function POST(request: NextRequest) {
     member_goals: memberGoals || null,
     contact_consent: contactConsent,
     age_attestation: ageAttestation,
+    ...(needsEmailConfirmation
+      ? {
+          email_confirmed: false,
+          email_confirmation_token_hash: hashConfirmationToken(confirmationToken),
+          email_confirmation_sent_at: confirmationSentAt,
+        }
+      : {}),
     source_path: request.headers.get("referer") ?? null,
     user_agent: request.headers.get("user-agent") ?? null,
   };
@@ -616,13 +664,20 @@ export async function POST(request: NextRequest) {
   const rows = (await response.json()) as LeadRow[];
   const savedMember = rows[0];
 
-  if (!existingMember) {
+  if (needsEmailConfirmation) {
     try {
-      await sendWelcomeEmail({ name, email, contactConsent });
+      await sendWelcomeEmail({
+        name,
+        email,
+        contactConsent,
+        confirmEmailUrl: getConfirmEmailUrl(request, confirmationToken),
+      });
     } catch (error) {
-      console.error("Welcome email failed", error);
+      console.error("Confirmation email failed", error);
     }
+  }
 
+  if (!existingMember) {
     try {
       await sendOwnerNewMemberEmail({
         profile: {

@@ -31,6 +31,8 @@ type ClientProfile = {
   memberGoals?: string;
   contactConsent: boolean;
   ageAttestation: boolean;
+  emailConfirmed?: boolean;
+  emailConfirmedAt?: string;
   savedAt: string;
 };
 
@@ -121,6 +123,7 @@ export default function ClientLoginModal() {
   const [memberGoals, setMemberGoals] = useState<string[]>([]);
   const [contactConsent, setContactConsent] = useState(false);
   const [ageAttestation, setAgeAttestation] = useState(false);
+  const [emailConfirmed, setEmailConfirmed] = useState(false);
   const [website, setWebsite] = useState("");
   const [saved, setSaved] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -195,6 +198,7 @@ export default function ClientLoginModal() {
     );
     setContactConsent(profile.contactConsent ?? false);
     setAgeAttestation(profile.ageAttestation ?? false);
+    setEmailConfirmed(profile.emailConfirmed ?? false);
   }
 
   function toggleMemberGoal(goal: string) {
@@ -259,8 +263,12 @@ export default function ClientLoginModal() {
         saveProfile(result.profile);
       }
 
-      setNotice("Welcome back.");
-      window.setTimeout(() => setOpen(false), 900);
+      if (result.profile?.emailConfirmed) {
+        setNotice("Welcome back.");
+        window.setTimeout(() => setOpen(false), 900);
+      } else {
+        setNotice("Welcome back. Please confirm your email from your inbox.");
+      }
     } catch (loginError) {
       setError(
         loginError instanceof Error
@@ -349,9 +357,16 @@ export default function ClientLoginModal() {
 
       const storedProfile = result.profile ?? profile;
       saveProfile(storedProfile);
+      setEmailConfirmed(storedProfile.emailConfirmed ?? false);
       setReturningEmail(storedProfile.email);
       setShowDiscordCta(true);
-      setNotice(saved ? "Your member info is updated." : "You're in.");
+      setNotice(
+        storedProfile.emailConfirmed
+          ? saved
+            ? "Your member info is updated."
+            : "You're in."
+          : "Check your email to confirm your member access."
+      );
     } catch (submitError) {
       setError(
         submitError instanceof Error
@@ -402,7 +417,9 @@ export default function ClientLoginModal() {
         {saved && (
           <div className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3">
             <p className="text-sm font-semibold text-neon-cyan">
-              You&apos;re logged in. Welcome to NLDEVS.
+              {emailConfirmed
+                ? "You're logged in. Email confirmed."
+                : "You're logged in. Please confirm your email."}
             </p>
             <button
               type="button"

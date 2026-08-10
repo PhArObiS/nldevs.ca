@@ -90,6 +90,8 @@ export async function GET(request: NextRequest) {
     "developer_availability",
     "contact_consent",
     "age_attestation",
+    "email_confirmed",
+    "email_confirmed_at",
     "admin_status",
     "admin_tags",
     "admin_notes",

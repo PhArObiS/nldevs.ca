@@ -22,6 +22,10 @@ create table if not exists public.player_leads (
   member_goals text,
   contact_consent boolean not null default false,
   age_attestation boolean not null default false,
+  email_confirmed boolean not null default false,
+  email_confirmed_at timestamptz,
+  email_confirmation_token_hash text,
+  email_confirmation_sent_at timestamptz,
   admin_status text not null default 'new',
   admin_tags text,
   admin_notes text,
@@ -50,6 +54,10 @@ alter table public.player_leads
   add column if not exists member_goals text,
   add column if not exists contact_consent boolean not null default false,
   add column if not exists age_attestation boolean not null default false,
+  add column if not exists email_confirmed boolean not null default false,
+  add column if not exists email_confirmed_at timestamptz,
+  add column if not exists email_confirmation_token_hash text,
+  add column if not exists email_confirmation_sent_at timestamptz,
   add column if not exists admin_status text not null default 'new',
   add column if not exists admin_tags text,
   add column if not exists admin_notes text,
@@ -64,6 +72,9 @@ create index if not exists player_leads_email_idx
 
 create index if not exists player_leads_admin_status_idx
   on public.player_leads (admin_status);
+
+create index if not exists player_leads_email_confirmation_token_idx
+  on public.player_leads (email_confirmation_token_hash);
 
 grant insert, select, update on table public.player_leads to service_role;
 

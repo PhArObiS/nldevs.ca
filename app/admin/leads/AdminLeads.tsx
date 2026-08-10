@@ -16,6 +16,8 @@ type Lead = {
   developer_availability: string | null;
   contact_consent: boolean | null;
   age_attestation: boolean | null;
+  email_confirmed: boolean | null;
+  email_confirmed_at: string | null;
   admin_status: string | null;
   admin_tags: string | null;
   admin_notes: string | null;
@@ -235,6 +237,15 @@ export default function AdminLeads() {
                       Developer
                     </span>
                   )}
+                  <span
+                    className={`clip-corner-sm border px-2 py-1 text-[10px] font-black uppercase tracking-wide ${
+                      lead.email_confirmed
+                        ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-300"
+                        : "border-amber-300/40 bg-amber-300/10 text-amber-200"
+                    }`}
+                  >
+                    {lead.email_confirmed ? "Email verified" : "Unconfirmed"}
+                  </span>
                 </div>
                 <p className="mt-2 text-sm text-gray-400">{lead.email}</p>
                 <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
@@ -261,6 +272,12 @@ export default function AdminLeads() {
                   <div>
                     <dt className="text-gray-500">Joined</dt>
                     <dd className="text-gray-300">{formatDate(lead.created_at)}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-gray-500">Email confirmed</dt>
+                    <dd className="text-gray-300">
+                      {lead.email_confirmed ? formatDate(lead.email_confirmed_at) : "-"}
+                    </dd>
                   </div>
                 </dl>
               </div>
