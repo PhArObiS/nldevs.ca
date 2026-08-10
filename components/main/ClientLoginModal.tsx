@@ -141,6 +141,7 @@ export default function ClientLoginModal() {
   const [notice, setNotice] = useState("");
   const [showDiscordCta, setShowDiscordCta] = useState(false);
   const [showWelcomePopup, setShowWelcomePopup] = useState(false);
+  const [showSignupPrompt, setShowSignupPrompt] = useState(false);
 
   useEffect(() => {
     const storedProfile = window.localStorage.getItem(STORAGE_KEY);
@@ -184,6 +185,7 @@ export default function ClientLoginModal() {
     setNotice("");
     setShowDiscordCta(false);
     setShowWelcomePopup(false);
+    setShowSignupPrompt(false);
     setShowNewMember(true);
   }
 
@@ -236,6 +238,7 @@ export default function ClientLoginModal() {
     setNotice("");
     setShowWelcomePopup(false);
     setShowDiscordCta(false);
+    setShowSignupPrompt(false);
     setLoggingIn(true);
 
     try {
@@ -263,6 +266,7 @@ export default function ClientLoginModal() {
         if (result.code === "MEMBER_NOT_FOUND") {
           setEmail(returningEmail.trim());
           setShowNewMember(true);
+          setShowSignupPrompt(true);
           setNotice("No member found. Join below.");
           return;
         }
@@ -297,6 +301,7 @@ export default function ClientLoginModal() {
     setError("");
     setNotice("");
     setShowWelcomePopup(false);
+    setShowSignupPrompt(false);
     setSubmitting(true);
 
     try {
@@ -503,6 +508,26 @@ export default function ClientLoginModal() {
           </p>
         )}
 
+        {showSignupPrompt && (
+          <div className="mt-3 border border-neon-magenta/50 bg-neon-magenta/10 px-4 py-4">
+            <p className="text-sm font-bold text-white">
+              Looks like you are not a member yet.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setShowNewMember(true);
+                document
+                  .getElementById("new-member-panel")
+                  ?.scrollIntoView({ block: "start", behavior: "smooth" });
+              }}
+              className="clip-corner-sm mt-3 border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
+            >
+              Sign up as new member
+            </button>
+          </div>
+        )}
+
         {showDiscordCta && (
           <div className="mt-5 border border-neon-violet/60 bg-ink-800/60 px-4 py-4">
             <p className="text-sm font-bold text-white">
@@ -588,6 +613,7 @@ export default function ClientLoginModal() {
         </p>
 
         <details
+          id="new-member-panel"
           className="mt-3 border border-edge bg-ink-800/25 p-3"
           open={showNewMember}
           onToggle={(event) => setShowNewMember(event.currentTarget.open)}
