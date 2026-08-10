@@ -6,6 +6,7 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import ClientLoginModal from "@/components/main/ClientLoginModal";
+import SiteFooter from "@/components/main/SiteFooter";
 import { SAME_AS, SITE_LOGO_URL, SITE_URL } from "@/constants/site";
 
 const inter = Inter({
@@ -171,6 +172,7 @@ export default function RootLayout({
           quick-nav tab strip adds another ~52px underneath it.
         */}
         <div className="pt-[117px] md:pt-[65px]">{children}</div>
+        <SiteFooter />
       </body>
     </html>
   );

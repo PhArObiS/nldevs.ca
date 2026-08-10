@@ -3,7 +3,6 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import AboutContent from "@/components/sub/AboutContent";
 import FortniteMaps from "@/components/main/FortniteMaps";
-import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
 import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
 import GameplayVideo from "@/components/ui/GameplayVideo";
@@ -489,8 +488,6 @@ export default function Home() {
           ))}
         </RevealGroup>
       </section>
-
-      <Footer />
     </main>
   );
 }
