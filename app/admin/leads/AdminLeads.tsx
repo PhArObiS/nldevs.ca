@@ -53,6 +53,10 @@ export default function AdminLeads() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [savingId, setSavingId] = useState("");
+  const [sendingId, setSendingId] = useState("");
+  const [emailDrafts, setEmailDrafts] = useState<
+    Record<string, { subject: string; message: string }>
+  >({});
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
 
@@ -147,10 +151,70 @@ export default function AdminLeads() {
     }
   }
 
+  async function sendLeadEmail(lead: Lead) {
+    const draft = emailDrafts[lead.id] ?? { subject: "", message: "" };
+    setError("");
+    setNotice("");
+    setSendingId(lead.id);
+
+    try {
+      const response = await fetch("/api/admin/leads", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: lead.id,
+          subject: draft.subject,
+          message: draft.message,
+        }),
+      });
+      const result = (await response.json()) as {
+        error?: string;
+        warning?: string;
+        lead?: Lead;
+      };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Could not send email.");
+      }
+
+      if (result.lead) {
+        setLeads((current) =>
+          current.map((item) => (item.id === result.lead?.id ? result.lead : item))
+        );
+      }
+      setEmailDrafts((current) => ({
+        ...current,
+        [lead.id]: { subject: "", message: "" },
+      }));
+      setNotice(result.warning || `Email sent to ${lead.email}.`);
+    } catch (sendError) {
+      setError(sendError instanceof Error ? sendError.message : "Could not send email.");
+    } finally {
+      setSendingId("");
+    }
+  }
+
   function updateLead(id: string, patch: Partial<Lead>) {
     setLeads((current) =>
       current.map((lead) => (lead.id === id ? { ...lead, ...patch } : lead))
     );
+  }
+
+  function updateEmailDraft(
+    id: string,
+    patch: Partial<{ subject: string; message: string }>
+  ) {
+    setEmailDrafts((current) => ({
+      ...current,
+      [id]: {
+        subject: current[id]?.subject ?? "",
+        message: current[id]?.message ?? "",
+        ...patch,
+      },
+    }));
   }
 
   return (
@@ -321,6 +385,39 @@ export default function AdminLeads() {
                 >
                   {savingId === lead.id ? "Saving" : "Save"}
                 </button>
+
+                <div className="border-t border-white/10 pt-3">
+                  <p className="text-xs font-black uppercase tracking-wide text-neon-cyan">
+                    Send message
+                  </p>
+                  <input
+                    value={emailDrafts[lead.id]?.subject ?? ""}
+                    onChange={(event) =>
+                      updateEmailDraft(lead.id, { subject: event.target.value })
+                    }
+                    maxLength={140}
+                    className="mt-2 w-full border border-edge bg-ink px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+                    placeholder="Subject"
+                  />
+                  <textarea
+                    value={emailDrafts[lead.id]?.message ?? ""}
+                    onChange={(event) =>
+                      updateEmailDraft(lead.id, { message: event.target.value })
+                    }
+                    maxLength={2000}
+                    rows={4}
+                    className="mt-2 w-full resize-none border border-edge bg-ink px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+                    placeholder="Short message"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => sendLeadEmail(lead)}
+                    disabled={sendingId === lead.id}
+                    className="clip-corner-sm mt-2 w-full border border-neon-magenta bg-neon-magenta px-4 py-2.5 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-ink disabled:cursor-wait disabled:opacity-70"
+                  >
+                    {sendingId === lead.id ? "Sending" : "Send email"}
+                  </button>
+                </div>
               </div>
             </div>
           </article>
