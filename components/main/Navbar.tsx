@@ -101,6 +101,7 @@ const CLIENT_PROFILE_STORAGE_KEY = "nldevs-client-profile";
 type ClientProfileSummary = {
   name?: string;
   email?: string;
+  emailConfirmed?: boolean;
 };
 
 function getStoredClientProfile() {
@@ -124,6 +125,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [clientProfile, setClientProfile] =
     useState<ClientProfileSummary | null>(null);
+  const clientConfirmed = clientProfile?.emailConfirmed === true;
   const panelRef = useRef<HTMLDivElement | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement | null>(null);
 
@@ -332,12 +334,16 @@ export default function Navbar() {
                   type="button"
                   onClick={openClientLogin}
                   className={`clip-corner-sm border px-3 py-2 text-sm font-semibold transition ${
-                    clientProfile
+                    clientConfirmed
                       ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
                       : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
                   }`}
                 >
-                  {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                  {clientConfirmed
+                    ? `Hi, ${getFirstName(clientProfile.name)}`
+                    : clientProfile
+                      ? "Confirm"
+                      : "Login"}
                 </button>
 
                 {clientProfile && (
@@ -380,9 +386,11 @@ export default function Navbar() {
               {/* Mobile hamburger */}
               <div
                 className={`clip-corner-sm inline-flex items-center border transition md:hidden ${
-                  clientProfile
+                  clientConfirmed
                     ? "border-neon-cyan bg-neon-cyan/15 text-neon-cyan shadow-[0_0_22px_rgba(34,211,238,0.35)]"
-                    : "border-edge-bright bg-ink-800/70 text-gray-200"
+                    : clientProfile
+                      ? "border-amber-300/60 bg-amber-300/10 text-amber-200"
+                      : "border-edge-bright bg-ink-800/70 text-gray-200"
                 }`}
               >
                 <button
@@ -394,7 +402,7 @@ export default function Navbar() {
                   onPointerDown={handleMenuButtonPointerDown}
                   onClick={handleMenuButtonClick}
                 >
-                  {clientProfile ? (
+                  {clientConfirmed ? (
                     <CheckCircleIcon
                       className="h-4 w-4 text-emerald-400"
                       aria-hidden="true"
@@ -405,7 +413,11 @@ export default function Navbar() {
                       aria-hidden="true"
                     />
                   )}
-                  {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                  {clientConfirmed
+                    ? `Hi, ${getFirstName(clientProfile.name)}`
+                    : clientProfile
+                      ? "Confirm"
+                      : "Login"}
                 </button>
 
                 <button
@@ -488,12 +500,18 @@ export default function Navbar() {
                       closeMenu();
                     }}
                     className={`clip-corner-sm mx-3 my-2 w-[calc(100%-1.5rem)] border px-3 py-2.5 text-left text-sm font-semibold transition ${
-                      clientProfile
+                      clientConfirmed
                         ? "border-neon-cyan bg-neon-cyan text-ink hover:bg-white"
-                        : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
+                        : clientProfile
+                          ? "border-amber-300/60 bg-amber-300/10 text-amber-200 hover:border-amber-200 hover:bg-amber-300 hover:text-ink"
+                          : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
                     }`}
                   >
-                    {clientProfile ? `Hi, ${getFirstName(clientProfile.name)}` : "Login"}
+                    {clientConfirmed
+                      ? `Hi, ${getFirstName(clientProfile.name)}`
+                      : clientProfile
+                        ? "Confirm email"
+                        : "Login"}
                   </button>
 
                   {clientProfile && (

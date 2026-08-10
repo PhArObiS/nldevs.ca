@@ -70,6 +70,9 @@ create index if not exists player_leads_created_at_idx
 create index if not exists player_leads_email_idx
   on public.player_leads (lower(email));
 
+create unique index if not exists player_leads_email_unique_idx
+  on public.player_leads (lower(email));
+
 create index if not exists player_leads_admin_status_idx
   on public.player_leads (admin_status);
 

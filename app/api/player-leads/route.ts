@@ -490,11 +490,42 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!existingMember.email_confirmed) {
+      return NextResponse.json(
+        {
+          error: "Please confirm your email before logging in. Check your inbox.",
+          code: "EMAIL_NOT_CONFIRMED",
+        },
+        { status: 403 }
+      );
+    }
+
     return NextResponse.json({
       ok: true,
       mode: "login",
       profile: toClientProfile(existingMember),
     });
+  }
+
+  if (action === "signup" && existingMember) {
+    return NextResponse.json(
+      {
+        error: existingMember.email_confirmed
+          ? "That email is already a member. Use Returning Member."
+          : "That email is already pending confirmation. Check your inbox.",
+        code: existingMember.email_confirmed
+          ? "MEMBER_ALREADY_EXISTS"
+          : "EMAIL_NOT_CONFIRMED",
+      },
+      { status: 409 }
+    );
+  }
+
+  if (action === "update" && !existingMember) {
+    return NextResponse.json(
+      { error: "No member found. Join below.", code: "MEMBER_NOT_FOUND" },
+      { status: 404 }
+    );
   }
 
   const fortniteName = cleanText(body.fortniteName, 80);

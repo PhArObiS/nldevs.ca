@@ -343,7 +343,12 @@ export default function ClientLoginModal() {
       const response = await fetch("/api/player-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...profile, action: "signup", imageData, website }),
+        body: JSON.stringify({
+          ...profile,
+          action: saved ? "update" : "signup",
+          imageData,
+          website,
+        }),
       });
 
       const result = (await response.json()) as {
@@ -409,7 +414,11 @@ export default function ClientLoginModal() {
           <div>
             <p className="eyebrow">Member Access</p>
             <h2 id="client-login-title" className="mt-1 text-2xl font-black text-white">
-              {saved ? "Logged in" : "Join NLDEVS"}
+              {saved && emailConfirmed
+                ? "Logged in"
+                : saved
+                  ? "Confirm email"
+                  : "Join NLDEVS"}
             </h2>
           </div>
         </div>
@@ -419,7 +428,7 @@ export default function ClientLoginModal() {
             <p className="text-sm font-semibold text-neon-cyan">
               {emailConfirmed
                 ? "You're logged in. Email confirmed."
-                : "You're logged in. Please confirm your email."}
+                : "Member info saved. Please confirm your email before logging in."}
             </p>
             <button
               type="button"
