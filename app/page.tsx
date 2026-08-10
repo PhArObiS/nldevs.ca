@@ -5,6 +5,7 @@ import AboutContent from "@/components/sub/AboutContent";
 import FortniteMaps from "@/components/main/FortniteMaps";
 import Footer from "@/components/main/Footer";
 import Hero from "@/components/main/Hero";
+import VoteNextMap from "@/components/main/VoteNextMap";
 import WhyPlayOurMaps from "@/components/main/WhyPlayOurMaps";
 import GameplayVideo from "@/components/ui/GameplayVideo";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -317,6 +318,8 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
+
+      <VoteNextMap />
 
       {/* FEATURED MAPS */}
       <section

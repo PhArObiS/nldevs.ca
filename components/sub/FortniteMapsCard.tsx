@@ -20,6 +20,29 @@ interface Props {
   updated?: string;
 }
 
+function getStatusClass(status?: string) {
+  const value = status?.toLowerCase() ?? "";
+
+  if (value.includes("live")) {
+    return "border-emerald-400/50 bg-emerald-400/15 text-emerald-300";
+  }
+
+  if (value.includes("playtest") || value.includes("testing")) {
+    return "border-neon-magenta/50 bg-neon-magenta/15 text-neon-magenta";
+  }
+
+  if (value.includes("coming")) {
+    return "border-amber-300/50 bg-amber-300/15 text-amber-200";
+  }
+
+  return "border-neon-cyan/50 bg-neon-cyan/15 text-neon-cyan";
+}
+
+function getStatusLabel(status?: string) {
+  if (!status) return "";
+  return status.toLowerCase() === "testing" ? "Playtest" : status;
+}
+
 const FortniteMapsCard = ({
   src,
   title,
@@ -86,8 +109,15 @@ const FortniteMapsCard = ({
               </span>
             )}
             {status && (
-              <span className="clip-corner-sm border border-neon-magenta/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-magenta backdrop-blur-sm">
-                {status}
+              <span
+                className={`clip-corner-sm border px-2.5 py-1 text-[11px] font-black uppercase tracking-wider backdrop-blur-sm ${getStatusClass(status)}`}
+              >
+                {getStatusLabel(status)}
+              </span>
+            )}
+            {updated && (
+              <span className="clip-corner-sm border border-neon-cyan/40 bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-neon-cyan backdrop-blur-sm">
+                Updated
               </span>
             )}
           </div>

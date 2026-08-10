@@ -108,6 +108,7 @@ function confirmationPage({
   confirmedEmail?: string;
   confirmedAt?: string;
 }) {
+  const safeDiscordUrl = escapeHtml(SOCIAL_LINKS.discord);
   const profileUpdateScript =
     confirmedEmail && confirmedAt
       ? `<script>
@@ -159,6 +160,11 @@ function confirmationPage({
             padding: 12px 18px;
             text-decoration: none;
           }
+          .discord {
+            margin-left: 8px;
+            background: #5865f2;
+            color: #ffffff;
+          }
         </style>
       </head>
       <body>
@@ -166,6 +172,11 @@ function confirmationPage({
           <h1>${title}</h1>
           <p>${message}</p>
           <a href="/">Back to NLDEVS</a>
+          ${
+            confirmedEmail
+              ? `<a class="discord" href="${safeDiscordUrl}">Join Discord</a>`
+              : ""
+          }
         </main>
         ${profileUpdateScript}
       </body>

@@ -433,7 +433,7 @@ export default function ClientLoginModal() {
         </div>
 
         {!saved && (
-          <div className="mt-5 border border-neon-cyan/35 bg-neon-cyan/10 px-4 py-4">
+          <div className="modal-card-rise scanline-sheen mt-5 border border-neon-cyan/35 bg-neon-cyan/10 px-4 py-4">
             <p className="text-sm font-black uppercase tracking-wide text-neon-cyan">
               NLDEVS Playtest Squad
             </p>
@@ -445,7 +445,7 @@ export default function ClientLoginModal() {
               href={SOCIAL_LINKS.fortnite}
               target="_blank"
               rel="noopener noreferrer"
-              className="clip-corner-sm mt-3 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-xs font-black uppercase tracking-wide text-ink transition hover:bg-white"
+              className="badge-pulse clip-corner-sm mt-3 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-xs font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
               Follow @nldevs on Fortnite
             </a>
@@ -463,7 +463,13 @@ export default function ClientLoginModal() {
         )}
 
         {saved && (
-          <div className="mt-5 border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-3">
+          <div
+            className={`mt-5 border px-4 py-3 ${
+              emailConfirmed
+                ? "badge-pulse border-emerald-400/40 bg-emerald-400/10"
+                : "border-neon-cyan/30 bg-neon-cyan/10"
+            }`}
+          >
             <p className="text-sm font-semibold text-neon-cyan">
               {emailConfirmed
                 ? "You're logged in. Email confirmed."
