@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 type ConfirmationRow = {
   id: string;
+  email: string;
   email_confirmed: boolean | null;
 };
 
@@ -37,10 +38,32 @@ function hashConfirmationToken(token: string) {
 function confirmationPage({
   title,
   message,
+  confirmedEmail,
+  confirmedAt,
 }: {
   title: string;
   message: string;
+  confirmedEmail?: string;
+  confirmedAt?: string;
 }) {
+  const profileUpdateScript =
+    confirmedEmail && confirmedAt
+      ? `<script>
+          try {
+            var key = "nldevs-client-profile";
+            var raw = window.localStorage.getItem(key);
+            var profile = raw ? JSON.parse(raw) : null;
+            if (profile && String(profile.email || "").toLowerCase() === ${JSON.stringify(
+              confirmedEmail.toLowerCase()
+            )}) {
+              profile.emailConfirmed = true;
+              profile.emailConfirmedAt = ${JSON.stringify(confirmedAt)};
+              window.localStorage.setItem(key, JSON.stringify(profile));
+            }
+          } catch (_) {}
+        </script>`
+      : "";
+
   return new NextResponse(
     `<!doctype html>
     <html lang="en">
@@ -82,6 +105,7 @@ function confirmationPage({
           <p>${message}</p>
           <a href="/">Back to NLDEVS</a>
         </main>
+        ${profileUpdateScript}
       </body>
     </html>`,
     {
@@ -113,7 +137,7 @@ export async function GET(request: NextRequest) {
 
   const tokenHash = hashConfirmationToken(token);
   const lookup = await fetch(
-    `${getSupabaseRestUrl(supabaseUrl)}/player_leads?select=id,email_confirmed&email_confirmation_token_hash=eq.${encodeURIComponent(tokenHash)}&limit=1`,
+    `${getSupabaseRestUrl(supabaseUrl)}/player_leads?select=id,email,email_confirmed&email_confirmation_token_hash=eq.${encodeURIComponent(tokenHash)}&limit=1`,
     {
       headers: getSupabaseHeaders(serviceRoleKey),
       cache: "no-store",
@@ -168,5 +192,7 @@ export async function GET(request: NextRequest) {
   return confirmationPage({
     title: "Email confirmed",
     message: "You are verified for NLDEVS member access. Thanks for joining.",
+    confirmedEmail: member.email,
+    confirmedAt: now,
   });
 }

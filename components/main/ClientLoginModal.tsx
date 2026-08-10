@@ -396,10 +396,10 @@ export default function ClientLoginModal() {
         <button
           type="button"
           onClick={closeForSession}
-          className="clip-corner-sm absolute right-3 top-3 min-h-10 border border-edge-bright bg-ink-800/90 px-3 text-sm font-semibold text-gray-300 transition hover:border-neon-cyan hover:text-white sm:right-4 sm:top-4"
+          className="clip-corner-sm absolute right-3 top-3 flex min-h-10 min-w-10 items-center justify-center border border-edge-bright bg-ink-800/90 px-3 text-lg font-black text-gray-300 transition hover:border-neon-cyan hover:text-white sm:right-4 sm:top-4"
           aria-label="Close client login"
         >
-          Skip
+          X
         </button>
 
         <div className="flex items-center gap-2.5 pr-16 sm:gap-3">

@@ -119,6 +119,34 @@ function getFirstName(name?: string) {
   return name?.trim().split(/\s+/)[0] || "Player";
 }
 
+async function refreshStoredClientProfile(profile: ClientProfileSummary | null) {
+  if (!profile?.email || profile.emailConfirmed) return profile;
+
+  try {
+    const response = await fetch("/api/player-leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "login", email: profile.email }),
+    });
+
+    if (!response.ok) return profile;
+
+    const result = (await response.json()) as {
+      profile?: ClientProfileSummary;
+    };
+
+    if (!result.profile) return profile;
+
+    window.localStorage.setItem(
+      CLIENT_PROFILE_STORAGE_KEY,
+      JSON.stringify(result.profile)
+    );
+    return result.profile;
+  } catch {
+    return profile;
+  }
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -163,7 +191,11 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setClientProfile(getStoredClientProfile());
+    const storedProfile = getStoredClientProfile();
+    setClientProfile(storedProfile);
+    void refreshStoredClientProfile(storedProfile).then((profile) => {
+      setClientProfile(profile);
+    });
 
     function onClientLoginUpdated(event: Event) {
       const customEvent = event as CustomEvent<ClientProfileSummary>;
