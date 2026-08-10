@@ -89,10 +89,18 @@ export default function PlaytestSquadPage() {
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">
               <a
-                href={SOCIAL_LINKS.discord}
+                href={SOCIAL_LINKS.fortnite}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-neon clip-corner-sm"
+              >
+                Follow @nldevs
+              </a>
+              <a
+                href={SOCIAL_LINKS.discord}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost clip-corner-sm"
               >
                 Join Discord
               </a>

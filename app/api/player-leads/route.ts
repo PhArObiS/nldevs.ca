@@ -4,6 +4,7 @@ import {
   findBlockedLanguageFields,
   hasBlockedLanguage,
 } from "@/utils/contentModeration";
+import { SOCIAL_LINKS } from "@/constants/site";
 
 type PlayerLeadInput = {
   action?: unknown;
@@ -311,6 +312,7 @@ async function sendWelcomeEmail({
     ? "We will keep you posted on new drops, playtests, and updates."
     : "You can reply to this email anytime if you want to reach NLDEVS.";
   const safeConfirmUrl = escapeHtml(confirmEmailUrl);
+  const safeFortniteUrl = escapeHtml(SOCIAL_LINKS.fortnite);
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -322,11 +324,13 @@ async function sendWelcomeEmail({
       from,
       to: [email],
       subject: "Confirm your NLDEVS email",
-      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. Please confirm your email:\n${confirmEmailUrl}\n\n${updatesLine}\n\n- NLDEVS`,
+      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. Please confirm your email:\n${confirmEmailUrl}\n\nFollow NLDEVS on Fortnite for map drops and creator updates:\n${SOCIAL_LINKS.fortnite}\n\n${updatesLine}\n\n- NLDEVS`,
       html: `
         <p>Hi ${firstName},</p>
         <p>Thanks for joining NLDEVS. Please confirm your email to verify your member access.</p>
         <p><a href="${safeConfirmUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">Confirm email</a></p>
+        <p>Follow NLDEVS on Fortnite for map drops and creator updates:</p>
+        <p><a href="${safeFortniteUrl}" style="display:inline-block;border:1px solid #22d3ee;color:#030014;background:#22d3ee;font-weight:700;padding:12px 18px;text-decoration:none;">Follow @nldevs on Fortnite</a></p>
         <p>${escapeHtml(updatesLine)}</p>
         <p>- NLDEVS</p>
       `,

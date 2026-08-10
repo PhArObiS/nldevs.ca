@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Socials } from "@/constants";
-import { SITE_NAME } from "@/constants/site";
+import { SITE_NAME, SOCIAL_LINKS } from "@/constants/site";
 
 const footerNav = [
   {
@@ -60,6 +60,15 @@ const Footer: React.FC = () => (
             A UEFN game studio building replayable Fortnite experiences — gun games,
             themed adventures, and progression maps.
           </p>
+
+          <a
+            href={SOCIAL_LINKS.fortnite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="clip-corner-sm mt-5 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
+          >
+            Follow @nldevs on Fortnite
+          </a>
 
           <div className="mt-6 flex flex-row items-center gap-3">
             {Socials.map((social) => (

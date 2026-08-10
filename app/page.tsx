@@ -297,12 +297,22 @@ export default function Home() {
                   No spam. No selling info. Delete anytime.
                 </p>
               </div>
-              <Link
-                href="/playtest-squad"
-                className="btn-neon clip-corner-sm justify-self-start md:justify-self-end"
-              >
-                Join the squad
-              </Link>
+              <div className="flex flex-wrap gap-3 md:justify-end">
+                <a
+                  href={SOCIAL_LINKS.fortnite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-neon clip-corner-sm justify-self-start"
+                >
+                  Follow @nldevs
+                </a>
+                <Link
+                  href="/playtest-squad"
+                  className="btn-ghost clip-corner-sm justify-self-start"
+                >
+                  Join the squad
+                </Link>
+              </div>
             </div>
           </div>
         </Reveal>
@@ -342,7 +352,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="btn-ghost clip-corner-sm"
           >
-            Browse all maps on Fortnite.com
+            Follow and browse @nldevs on Fortnite
           </a>
         </Reveal>
       </section>

@@ -78,7 +78,7 @@ const AboutContent = () => {
               rel="noopener noreferrer"
               className="btn-neon clip-corner-sm"
             >
-              @nldevs on Fortnite
+              Follow @nldevs on Fortnite
             </a>
           </div>
         </motion.div>

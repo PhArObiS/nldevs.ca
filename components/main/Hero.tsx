@@ -84,18 +84,18 @@ export default function Hero() {
           className="animate-fade-up mt-10 flex flex-wrap items-center justify-center gap-4"
           style={{ animationDelay: "240ms" }}
         >
-          <Link href="#featured-fortnite-maps" className="btn-neon clip-corner-sm">
-            Get map codes
-          </Link>
-
           <a
             href={SOCIAL_LINKS.fortnite}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost clip-corner-sm"
+            className="btn-neon clip-corner-sm"
           >
-            Our creator page
+            Follow @nldevs on Fortnite
           </a>
+
+          <Link href="#featured-fortnite-maps" className="btn-ghost clip-corner-sm">
+            Get map codes
+          </Link>
         </div>
 
         <div
@@ -131,6 +131,14 @@ export default function Hero() {
             </div>
           </Link>
         </div>
+
+        <p
+          className="animate-fade-up mt-4 text-sm font-semibold text-gray-400"
+          style={{ animationDelay: "300ms" }}
+        >
+          Following the creator page helps NLDEVS grow and keeps new Fortnite
+          experiences easier to find.
+        </p>
 
         {/* Category chips */}
         <nav

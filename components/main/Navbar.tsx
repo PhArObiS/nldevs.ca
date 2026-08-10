@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { SOCIAL_LINKS } from "@/constants/site";
 
 type NavItem = {
   href: string;
@@ -361,6 +362,15 @@ export default function Navbar() {
 
             {/* Right side: socials + mobile hamburger */}
             <div className="flex flex-row items-center gap-3">
+              <a
+                href={SOCIAL_LINKS.fortnite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="clip-corner-sm hidden border border-neon-cyan bg-neon-cyan px-3 py-2 text-sm font-black text-ink transition hover:bg-white lg:inline-flex"
+              >
+                Follow Fortnite
+              </a>
+
               <div className="hidden items-center gap-2 lg:flex">
                 <button
                   type="button"
@@ -525,6 +535,16 @@ export default function Navbar() {
             <nav className="p-3" aria-label="Mobile menu">
               <ul className="flex flex-col">
                 <li className="mb-2 border-b border-white/10 pb-2">
+                  <a
+                    href={SOCIAL_LINKS.fortnite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                    className="clip-corner-sm mx-3 my-2 block border border-neon-cyan bg-neon-cyan px-3 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
+                  >
+                    Follow @nldevs on Fortnite
+                  </a>
+
                   <button
                     type="button"
                     onClick={() => {

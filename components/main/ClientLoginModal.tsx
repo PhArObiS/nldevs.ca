@@ -441,6 +441,14 @@ export default function ClientLoginModal() {
               Join free for closer access to maps, tests, feedback, and future
               creator opportunities.
             </p>
+            <a
+              href={SOCIAL_LINKS.fortnite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="clip-corner-sm mt-3 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-xs font-black uppercase tracking-wide text-ink transition hover:bg-white"
+            >
+              Follow @nldevs on Fortnite
+            </a>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
               {PLAYTEST_SQUAD_PERKS.map((perk) => (
                 <div
@@ -493,6 +501,14 @@ export default function ClientLoginModal() {
               className="clip-corner-sm mt-4 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
               Join Discord
+            </a>
+            <a
+              href={SOCIAL_LINKS.fortnite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="clip-corner-sm ml-2 mt-4 inline-flex border border-neon-magenta bg-neon-magenta px-4 py-2 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-ink"
+            >
+              Follow Fortnite
             </a>
           </div>
         )}
