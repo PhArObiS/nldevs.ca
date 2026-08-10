@@ -301,7 +301,7 @@ export default function Navbar() {
 
             {/* Desktop nav */}
             <nav
-              className="hidden items-center gap-1 md:flex"
+              className="hidden items-center gap-1 lg:flex"
               aria-label="Primary navigation"
             >
               {NAV.map((item) => {
@@ -427,7 +427,7 @@ export default function Navbar() {
 
               {/* Mobile hamburger */}
               <div
-                className={`clip-corner-sm inline-flex items-center border transition md:hidden ${
+                className={`clip-corner-sm inline-flex items-center border transition lg:hidden ${
                   clientConfirmed
                     ? "badge-pulse border-emerald-400 bg-emerald-400/15 text-emerald-300 shadow-[0_0_22px_rgba(52,211,153,0.35)]"
                     : clientProfile
@@ -494,7 +494,7 @@ export default function Navbar() {
         {/* Mobile quick-nav tab strip */}
         <nav
           aria-label="Mobile quick navigation"
-          className="border-t border-white/5 md:hidden"
+          className="border-t border-white/5 lg:hidden"
         >
           <div className="scrollbar-none w-full max-w-full overflow-x-auto px-4 py-2">
             <div className="flex items-center gap-2">
@@ -525,7 +525,7 @@ export default function Navbar() {
         <div
           id="mobile-menu"
           ref={panelRef}
-          className={`md:hidden ${
+          className={`lg:hidden ${
             open
               ? "max-h-[calc(100dvh-9rem)] overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch]"
               : "max-h-0 overflow-hidden"
@@ -679,7 +679,7 @@ export default function Navbar() {
       {/* Overlay */}
       {open ? (
         <div
-          className="fixed inset-0 z-40 bg-black/60 md:hidden"
+          className="fixed inset-0 z-40 bg-black/60 lg:hidden"
           onClick={closeMenu}
           aria-hidden="true"
         />
