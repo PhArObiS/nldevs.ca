@@ -7,14 +7,14 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "UEFN Contracts",
   description:
-    "Hire NLDEVS for UEFN contracts, Fortnite map building, branded experiences, and game studio support.",
+    "Hire NLDEVS for UEFN contracts, Fortnite map building, in-game animations, branded experiences, and game studio support.",
   alternates: { canonical: "/uefn-contracts" },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/uefn-contracts`,
     title: "UEFN Contracts | NLDEVS",
     description:
-      "NLDEVS builds Fortnite and UEFN experiences for clients, brands, creators, and studios.",
+      "NLDEVS builds Fortnite and UEFN experiences with map design, gameplay polish, and in-game animations for clients, brands, creators, and studios.",
   },
 };
 
@@ -22,6 +22,7 @@ const services = [
   "UEFN map builds and prototypes",
   "Fortnite tycoon, PvP, gun game, and event-style islands",
   "Branded Fortnite experiences",
+  "In-game animations, cinematic moments, and interactive sequences",
   "Gameplay loop design and polish",
   "Verse, devices, UI, testing, and launch support",
   "Existing island cleanup, updates, and optimization",
