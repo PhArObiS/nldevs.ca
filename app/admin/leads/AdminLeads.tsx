@@ -35,8 +35,6 @@ const STATUSES = [
   { value: "not_a_fit", label: "Not a fit" },
 ];
 
-const TOKEN_STORAGE_KEY = "nldevs-admin-token";
-
 function formatDate(value?: string | null) {
   if (!value) return "-";
   return new Intl.DateTimeFormat("en", {
@@ -48,6 +46,7 @@ function formatDate(value?: string | null) {
 
 export default function AdminLeads() {
   const [token, setToken] = useState("");
+  const [activeToken, setActiveToken] = useState("");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [statusFilter, setStatusFilter] = useState("all");
   const [query, setQuery] = useState("");
@@ -59,10 +58,6 @@ export default function AdminLeads() {
   >({});
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
-
-  useEffect(() => {
-    setToken(window.sessionStorage.getItem(TOKEN_STORAGE_KEY) ?? "");
-  }, []);
 
   const filteredLeads = useMemo(() => {
     const search = query.trim().toLowerCase();
@@ -86,10 +81,12 @@ export default function AdminLeads() {
     setError("");
     setNotice("");
     setLoading(true);
+    const submittedToken = token;
+    setToken("");
 
     try {
       const response = await fetch("/api/admin/leads", {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${submittedToken}` },
       });
       const result = (await response.json()) as {
         error?: string;
@@ -100,10 +97,12 @@ export default function AdminLeads() {
         throw new Error(result.error || "Could not load leads.");
       }
 
-      window.sessionStorage.setItem(TOKEN_STORAGE_KEY, token);
+      setActiveToken(submittedToken);
       setLeads(result.leads ?? []);
       setNotice("Leads loaded.");
     } catch (loadError) {
+      setActiveToken("");
+      setLeads([]);
       setError(loadError instanceof Error ? loadError.message : "Could not load leads.");
     } finally {
       setLoading(false);
@@ -119,7 +118,7 @@ export default function AdminLeads() {
       const response = await fetch("/api/admin/leads", {
         method: "PATCH",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${activeToken}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -161,7 +160,7 @@ export default function AdminLeads() {
       const response = await fetch("/api/admin/leads", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${activeToken}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -238,6 +237,8 @@ export default function AdminLeads() {
           type="password"
           value={token}
           onChange={(event) => setToken(event.target.value)}
+          autoComplete="off"
+          spellCheck={false}
           className="w-full border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
           placeholder="Admin access token"
           required
@@ -380,7 +381,7 @@ export default function AdminLeads() {
                 <button
                   type="button"
                   onClick={() => saveLead(lead)}
-                  disabled={savingId === lead.id}
+                  disabled={!activeToken || savingId === lead.id}
                   className="clip-corner-sm w-full border border-neon-cyan bg-neon-cyan px-4 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
                 >
                   {savingId === lead.id ? "Saving" : "Save"}
@@ -412,7 +413,7 @@ export default function AdminLeads() {
                   <button
                     type="button"
                     onClick={() => sendLeadEmail(lead)}
-                    disabled={sendingId === lead.id}
+                    disabled={!activeToken || sendingId === lead.id}
                     className="clip-corner-sm mt-2 w-full border border-neon-magenta bg-neon-magenta px-4 py-2.5 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-ink disabled:cursor-wait disabled:opacity-70"
                   >
                     {sendingId === lead.id ? "Sending" : "Send email"}
