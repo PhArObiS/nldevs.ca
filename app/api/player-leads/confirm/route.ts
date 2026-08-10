@@ -1,8 +1,10 @@
 import { createHash } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
+import { SOCIAL_LINKS } from "@/constants/site";
 
 type ConfirmationRow = {
   id: string;
+  name: string;
   email: string;
   email_confirmed: boolean | null;
 };
@@ -11,6 +13,7 @@ const PLACEHOLDER_KEYS = new Set([
   "your-service-role-key",
   "your-secret-key",
   "your_secret_key_here",
+  "your-resend-api-key",
 ]);
 
 function getSupabaseRestUrl(value: string) {
@@ -33,6 +36,65 @@ function getSupabaseHeaders(key: string, prefer = "return=representation") {
 
 function hashConfirmationToken(token: string) {
   return createHash("sha256").update(token).digest("hex");
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function getFirstName(name: string) {
+  return name.split(" ")[0] || "there";
+}
+
+async function sendAccountConfirmedEmail({
+  name,
+  email,
+}: {
+  name: string;
+  email: string;
+}) {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const from = process.env.WELCOME_EMAIL_FROM;
+  const replyTo = process.env.WELCOME_EMAIL_REPLY_TO;
+
+  if (!resendApiKey || !from || PLACEHOLDER_KEYS.has(resendApiKey)) {
+    return { skipped: true };
+  }
+
+  const firstName = escapeHtml(getFirstName(name));
+  const safeFortniteUrl = escapeHtml(SOCIAL_LINKS.fortnite);
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [email],
+      subject: "Your NLDEVS member access is confirmed",
+      text: `Hi ${getFirstName(name)},\n\nYour NLDEVS member access is confirmed. You're all set for map drops, playtest invites, and member updates.\n\nFollow NLDEVS on Fortnite:\n${SOCIAL_LINKS.fortnite}\n\n- NLDEVS`,
+      html: `
+        <p>Hi ${firstName},</p>
+        <p>Your NLDEVS member access is confirmed. You're all set for map drops, playtest invites, and member updates.</p>
+        <p><a href="${safeFortniteUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">Follow @nldevs on Fortnite</a></p>
+        <p>- NLDEVS</p>
+      `,
+      ...(replyTo ? { reply_to: replyTo } : {}),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+
+  return { skipped: false };
 }
 
 function confirmationPage({
@@ -137,7 +199,7 @@ export async function GET(request: NextRequest) {
 
   const tokenHash = hashConfirmationToken(token);
   const lookup = await fetch(
-    `${getSupabaseRestUrl(supabaseUrl)}/player_leads?select=id,email,email_confirmed&email_confirmation_token_hash=eq.${encodeURIComponent(tokenHash)}&limit=1`,
+    `${getSupabaseRestUrl(supabaseUrl)}/player_leads?select=id,name,email,email_confirmed&email_confirmation_token_hash=eq.${encodeURIComponent(tokenHash)}&limit=1`,
     {
       headers: getSupabaseHeaders(serviceRoleKey),
       cache: "no-store",
@@ -187,6 +249,15 @@ export async function GET(request: NextRequest) {
       title: "Confirmation unavailable",
       message: "We could not confirm your email right now. Please try again later.",
     });
+  }
+
+  try {
+    await sendAccountConfirmedEmail({
+      name: member.name,
+      email: member.email,
+    });
+  } catch (error) {
+    console.error("Account confirmed email failed", error);
   }
 
   return confirmationPage({
