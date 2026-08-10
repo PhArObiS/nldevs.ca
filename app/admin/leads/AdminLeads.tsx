@@ -273,7 +273,7 @@ export default function AdminLeads() {
         <select
           value={statusFilter}
           onChange={(event) => setStatusFilter(event.target.value)}
-          className="border border-edge bg-ink-800 px-4 py-3 text-white outline-none transition focus:border-neon-cyan"
+          className="border border-edge bg-ink-800 py-3 pl-4 pr-10 text-white outline-none transition focus:border-neon-cyan"
         >
           <option value="all">All statuses</option>
           {STATUSES.map((status) => (
@@ -353,7 +353,7 @@ export default function AdminLeads() {
                   onChange={(event) =>
                     updateLead(lead.id, { admin_status: event.target.value })
                   }
-                  className="w-full border border-edge bg-ink px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan"
+                  className="w-full border border-edge bg-ink py-2.5 pl-3 pr-10 text-white outline-none transition focus:border-neon-cyan"
                 >
                   {STATUSES.map((status) => (
                     <option key={status.value} value={status.value}>
