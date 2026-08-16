@@ -1,0 +1,526 @@
+{
+  "pageMeta": {
+    "star-wars-fortnite-maps": {
+      "title": "Star Wars Fortnite Maps & Island Codes",
+      "description": "Browse Star Wars Fortnite maps and island codes by NLDEVS, including Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB, and Star Wars Tilted 99 Bots Royale.",
+      "ogDescription": "Star Wars Fortnite maps and island codes by NLDEVS — tycoon, Red vs Blue, and bot royale experiences."
+    },
+    "tmnt-fortnite-maps": {
+      "title": "Best TMNT Fortnite Maps & Map Codes",
+      "description": "Browse TMNT Fortnite maps and map codes by NLDEVS, including TMNT Mega Ramp Survival and TMNT City — built with UEFN.",
+      "ogDescription": "TMNT Fortnite maps and map codes by NLDEVS — built with UEFN."
+    },
+    "squid-game-fortnite-maps": {
+      "title": "Best Squid Game Fortnite Maps & Map Codes",
+      "description": "Browse Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 Bots Squid Royale Boss, Sidekick Siege 99 Bots, and RvB Squid Minigame.",
+      "ogDescription": "Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue chaos."
+    },
+    "fortnite-gun-game-maps": {
+      "title": "Best Fortnite Gun Game Maps & Map Codes",
+      "description": "Browse the best Fortnite Gun Game maps and map codes curated by NLDEVS. Fast-paced weapon progression, PvP arenas, and replayable rounds.",
+      "ogDescription": "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability."
+    },
+    "best-fortnite-xp-maps": {
+      "title": "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
+      "description": "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDEVS with quick summaries and updated picks.",
+      "ogDescription": "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS."
+    },
+    "star-wars-tycoon-sidekick-legends": {
+      "title": "Star Wars Tycoon Sidekick Legends Coming Soon ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends is coming soon to Fortnite. Map code {code}. Unlock Sidekicks and Heroes, build new sections, hire workers, climb the Rebirth leaderboard, and save progress automatically.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends is coming soon to Fortnite. Unlock Sidekicks and Heroes, hire workers, and climb the Rebirth leaderboard."
+    },
+    "star-wars-mega-rvb": {
+      "title": "Star Wars Mega RvB Map Code ({code})",
+      "description": "Play Star Wars Mega RvB in Fortnite. Map code {code}. Red vs Blue team deathmatch with Star Wars weapons, vehicles, custom weapons, achievements, and ranking.",
+      "ogDescription": "Red vs Blue team deathmatch with Star Wars weapons, vehicles, achievements, and ranking."
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "title": "Star Wars Tilted 99 Bots Royale Map Code ({code})",
+      "description": "Play Star Wars Tilted 99 Bots Royale in Fortnite. Map code {code}. 99-bot royale survival with unlockable heroes, bosses, saved stats, loadouts, and Tilted x Star Wars action.",
+      "ogDescription": "99-bot royale survival with unlockable heroes, bosses, saved stats, and Tilted x Star Wars action."
+    },
+    "tmnt-mega-ramp-survival": {
+      "title": "TMNT Mega Ramp Survival Map Code ({code})",
+      "description": "Play TMNT Mega Ramp Survival in Fortnite. Map code {code}. High-speed survival gameplay built with UEFN by NLDEVS.",
+      "ogDescription": "High-speed TMNT ramp survival built with UEFN by NLDEVS."
+    },
+    "tmnt-city": {
+      "title": "TMNT City Map Code ({code})",
+      "description": "Explore TMNT City in Fortnite. Map code {code}. A TMNT-themed city experience built with UEFN by NLDEVS.",
+      "ogDescription": "Explore TMNT City in Fortnite. A TMNT-themed city experience built with UEFN."
+    },
+    "rvb-squid-minigame": {
+      "title": "RvB Squid Minigame Map Code ({code})",
+      "description": "Play RvB Squid Minigame in Fortnite. Map code {code}. Fast rounds, team chaos, and replayable minigames.",
+      "ogDescription": "Fast rounds, team chaos, and replayable Squid-style minigames."
+    },
+    "99-bots-squid-royale-boss": {
+      "title": "99 Bots Squid Royale Boss Map Code ({code})",
+      "description": "Play 99 Bots Squid Royale Boss in Fortnite. Map code {code}. A Squid Game 99 bots survival map with PvE, open world action, boss battles, saved stats, ranking, and leaderboards.",
+      "ogDescription": "A Squid Game 99 bots survival map with PvE open-world action, boss battles, saved stats, and leaderboards."
+    },
+    "sidekick-siege-99-bots": {
+      "title": "Sidekick Siege 99 Bots Map Code ({code})",
+      "description": "Play Sidekick Siege 99 Bots in Fortnite. Map code {code}. A Squid Game 99 bots survival map with sidekicks, boss battles, PvE action, saved stats, ranks, and leaderboards.",
+      "ogDescription": "A Squid Game 99 bots survival map with sidekicks, boss battles, PvE action, and leaderboards."
+    },
+    "winterfest-demon-hunters": {
+      "title": "Winterfest Demon Hunters Map Code ({code})",
+      "description": "Play Winterfest Demon Hunters in Fortnite. Map code {code}. Combat-focused rounds with repeatable loops — great for squads and leveling while fighting.",
+      "ogDescription": "Combat-focused gun game rounds with repeatable loops — great for squads."
+    },
+    "playtest-squad": {
+      "title": "NLDEVS Playtest Squad",
+      "description": "Join the NLDEVS Playtest Squad for Fortnite map drops, playtest invites, Discord updates, and future UEFN collaboration opportunities.",
+      "ogDescription": "Join NLDEVS for Fortnite map drops, playtest invites, and UEFN community updates."
+    },
+    "uefn-contracts": {
+      "title": "UEFN Contracts",
+      "description": "Hire NLDEVS for UEFN contracts, Fortnite map building, in-game animations, branded experiences, and game studio support.",
+      "ogDescription": "Hire NLDEVS for UEFN contracts, Fortnite map building, and branded experiences."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "How NLDEVS collects and uses member information for updates, playtests, support, and collaboration opportunities.",
+      "ogDescription": "How NLDEVS collects and uses member information."
+    }
+  },
+  "hubs": {
+    "starWars": {
+      "breadcrumb": "Star Wars Maps",
+      "eyebrow": "A galaxy far, far away",
+      "title": "Star Wars <accent>Fortnite maps</accent>",
+      "description": "Star Wars Fortnite experiences built with Unreal Editor for Fortnite. Explore tycoon progression, Red vs Blue PvP, bot royale survival, and island codes.",
+      "schemaName": "Star Wars Fortnite Maps & Island Codes",
+      "schemaDescription": "A curated list of Star Wars Fortnite maps and island codes built with UEFN by NLDEVS, including tycoon progression, Red vs Blue PvP, and bot royale survival.",
+      "listName": "Star Wars Fortnite Maps",
+      "genre": "Star Wars Fortnite Map",
+      "codesTitle": "Star Wars map",
+      "codesAccent": "codes",
+      "introSections": [],
+      "tipSections": [
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite → Search / Discover.",
+            "Enter the island code exactly (####-####-####).",
+            "Join the island and follow the in-game objectives.",
+            "Favorite the map to find it faster next time."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "What you'll",
+          "accent": "find",
+          "items": [
+            "Star Wars Tycoon progression with saves, rebirths, and rewards.",
+            "Red vs Blue team deathmatch with Star Wars weapons and vehicles.",
+            "99-bot royale survival with heroes, bosses, and saved loadouts.",
+            "UEFN-built experiences designed for repeat sessions with friends."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What are the best Star Wars Fortnite maps by NLDEVS?",
+          "a": "NLDEVS currently features Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB, and Star Wars Tilted 99 Bots Royale."
+        },
+        {
+          "q": "What is the Star Wars Tycoon Sidekick Legends island code?",
+          "a": "Star Wars Tycoon Sidekick Legends is coming soon. The announced island code is 3205-2388-4588."
+        },
+        {
+          "q": "Which Star Wars Fortnite map is best for PvP?",
+          "a": "Star Wars Mega RvB is the best fit for PvP because it is a Red vs Blue team deathmatch map with Star Wars weapons, custom weapons, vehicles, achievements, and ranking."
+        },
+        {
+          "q": "Which Star Wars Fortnite map has bots?",
+          "a": "Star Wars Tilted 99 Bots Royale is the bot-focused Star Wars map, with 99-bot royale survival, boss battles, unlockable heroes, saved stats, and saved loadouts."
+        }
+      ],
+      "notes": {
+        "star-wars-tycoon-sidekick-legends": "Coming soon: Star Wars Tycoon with Sidekick and Hero unlocks, new sections and upgrades, workers that boost production, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+        "star-wars-mega-rvb": "Red vs Blue PvP with Star Wars weapons, custom weapons, vehicles, achievements, music, and ranking up to Unreal.",
+        "star-wars-tilted-99-bots-royale": "Open-world PvE survival with 99 bots, boss battles, unlockable heroes, saved stats and loadouts, and Star Wars-themed Tilted action."
+      },
+      "modeOverrides": {
+        "star-wars-tycoon-sidekick-legends": "Coming Soon / Tycoon",
+        "star-wars-mega-rvb": "Team Deathmatch",
+        "star-wars-tilted-99-bots-royale": "Bot Royale"
+      },
+      "relatedLabels": [
+        "TMNT Maps",
+        "Squid Game Maps",
+        "Gun Game Maps",
+        "XP Maps"
+      ],
+      "disclaimer": "Community-created Fortnite experiences built with UEFN. Not affiliated with Lucasfilm, Disney, or Epic Games."
+    },
+    "tmnt": {
+      "breadcrumb": "TMNT Maps",
+      "eyebrow": "Turtle power",
+      "title": "Best TMNT <accent>Fortnite maps</accent>",
+      "description": "TMNT Fortnite maps and map codes built with UEFN. City exploration, survival runs, and combat arenas designed for replay sessions.",
+      "schemaName": "Best TMNT Fortnite Maps & Map Codes",
+      "schemaDescription": "A curated list of TMNT Fortnite maps and map codes built with UEFN by NLDEVS, including survival runs and city experiences.",
+      "listName": "TMNT Fortnite Maps",
+      "genre": "TMNT Fortnite Map",
+      "codesTitle": "TMNT map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-tmnt-maps",
+          "title": "What are",
+          "accent": "TMNT Fortnite maps?",
+          "paragraphs": [
+            "TMNT Fortnite maps are community-made islands inspired by Teenage Mutant Ninja Turtles themes — city exploration, survival runs, combat arenas, and fast-paced mini-games. These islands are built with UEFN and designed for replayability with friends.",
+            "If you're looking for high-speed action, survival maps like Mega Ramp modes are great for quick sessions. If you want more freedom, city experience maps are ideal for exploring, fighting, and hanging out with a party."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Tips for",
+          "accent": "TMNT maps",
+          "items": [
+            "Play with friends — survival runs and city maps are more fun with a party.",
+            "Mega Ramp tip: stay centered and make small corrections early instead of big turns late.",
+            "Favorite the map after playing so it's easier to return after updates.",
+            "If you want PvP, head into combat zones or gun game modes when available."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite → Search / Discover.",
+            "Enter the map code exactly (####-####-####).",
+            "Join the island and follow the in-game objectives.",
+            "Favorite the map to find it faster next time."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I enter a Fortnite map code?",
+          "a": "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play."
+        },
+        {
+          "q": "Are these TMNT Fortnite maps official?",
+          "a": "These are community-created Fortnite experiences built with UEFN. This page is not affiliated with Nickelodeon or the TMNT brand."
+        },
+        {
+          "q": "What is TMNT Mega Ramp Survival?",
+          "a": "A fast-paced survival experience focused on dodging hazards and staying alive as chaos increases on a mega ramp."
+        },
+        {
+          "q": "Is TMNT City a gun game map?",
+          "a": "TMNT City is primarily a TMNT-themed city experience. Depending on the island's current version, it may include combat areas or game modes."
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "High-speed Mega Ramp survival with TMNT theme. Dodge chaos and survive the run.",
+        "tmnt-city": "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Survival",
+        "tmnt-city": "Experience"
+      },
+      "relatedLabels": [
+        "XP Maps",
+        "Gun Game Maps",
+        "Squid Game Maps",
+        "Star Wars Maps"
+      ]
+    },
+    "squidGame": {
+      "breadcrumb": "Squid Game Maps",
+      "eyebrow": "Elimination rounds",
+      "title": "Best Squid Game <accent>Fortnite maps</accent>",
+      "description": "Squid-style minigames, 99 bots survival, sidekicks, boss battles, and Red vs Blue chaos built with UEFN. Each entry includes an island code and gameplay type.",
+      "schemaName": "Best Squid Game Fortnite Maps & Map Codes",
+      "schemaDescription": "A curated list of Squid Game-style Fortnite maps and map codes built with UEFN by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue maps.",
+      "listName": "Squid Game Fortnite Maps",
+      "genre": "Squid Game Fortnite Map",
+      "codesTitle": "Squid Game map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-squid-maps",
+          "title": "What are",
+          "accent": "Squid Game Fortnite maps?",
+          "paragraphs": [
+            "\"Squid Game\" Fortnite maps are community-made islands inspired by elimination-style minigames. You'll usually see fast rounds, high-stakes challenges, and chaotic competition — often designed for playing with friends.",
+            "Popular Squid-style modes include Red Light Green Light, survival rounds, objective minigames, 99 bots survival, boss battles, and party challenges. Map availability and XP can change over time depending on updates and island revisions."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "id": "tips",
+          "title": "Tips for",
+          "accent": "Squid maps",
+          "items": [
+            "Play with friends: most Squid-style rounds are more fun with a full party and faster re-queues.",
+            "If you want practice, pick bot-based variants to learn routes and mechanics before jumping into PvP rounds.",
+            "Rotate maps if XP slows down; calibration and diminishing returns can vary by island and update cycle.",
+            "Use voice chat or quick pings — coordination matters in elimination challenges and team rounds."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "id": "how-to-play",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite → Search / Discover.",
+            "Enter a map code exactly (####-####-####).",
+            "Join the map and follow the minigame rules (varies by island).",
+            "Play with friends for the best Squid-style elimination rounds."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I enter a Fortnite map code?",
+          "a": "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play."
+        },
+        {
+          "q": "Are Squid Game Fortnite maps official?",
+          "a": "No. These are community-created Fortnite experiences inspired by Squid Game-style minigames and challenges, not official Netflix content."
+        },
+        {
+          "q": "Do Squid Game maps give XP?",
+          "a": "Some islands may grant XP depending on Fortnite calibration and map settings. XP rates can change after updates or revisions."
+        },
+        {
+          "q": "What Squid Game maps are best to play with friends?",
+          "a": "Minigame and elimination-style Squid maps are usually best with a full party. They're more fun when you can run rounds quickly and compete with friends."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Squid-style minigames with Red vs Blue chaos and fast rounds.",
+        "99-bots-squid-royale-boss": "Open-world PvE 99 bots survival with boss battles, new weapons, wildlife riding, ranks, leaderboards, and saved stats.",
+        "sidekick-siege-99-bots": "Sidekick-focused 99 bots survival with boss battles, PvE action, saved loadouts, ranks, leaderboards, and up to 5 players."
+      },
+      "modeOverrides": {
+        "rvb-squid-minigame": "RvB",
+        "99-bots-squid-royale-boss": "99 Bots",
+        "sidekick-siege-99-bots": "Sidekicks"
+      },
+      "relatedLabels": [
+        "XP Maps",
+        "Gun Game Maps",
+        "TMNT Maps",
+        "Star Wars Maps"
+      ]
+    },
+    "gunGame": {
+      "breadcrumb": "Gun Game Maps",
+      "eyebrow": "Weapon progression",
+      "title": "Best Fortnite <accent>Gun Game maps</accent>",
+      "description": "Fast-paced weapon progression modes where eliminations upgrade your loadout. Curated islands with codes and quick notes.",
+      "schemaName": "Best Fortnite Gun Game Maps",
+      "schemaDescription": "A curated list of Fortnite Gun Game maps and map codes built with UEFN by NLDEVS — weapon progression PvP designed for replayable rounds.",
+      "listName": "Fortnite Gun Game Maps",
+      "genre": "Fortnite Gun Game Map",
+      "codesTitle": "Gun Game map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "title": "What is a Fortnite",
+          "accent": "Gun Game map?",
+          "paragraphs": [
+            "Fortnite Gun Game is a weapon progression PvP mode built for quick, replayable rounds. Players start with a weapon and upgrade after each elimination.",
+            "The goal is to finish the weapon list before everyone else. Great Gun Game maps have strong flow, balanced weapon rotations, and fast respawns."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Tips to win",
+          "accent": "Gun Game rounds",
+          "items": [
+            "Learn spawn flow and rotate fights.",
+            "Hold angles and re-peek smart.",
+            "Mid-range accuracy beats flashy plays.",
+            "Keep moving to upgrade weapons faster."
+          ]
+        }
+      ],
+      "faqs": [],
+      "notes": {
+        "tmnt-city": "TMNT-themed combat loops with fast weapon progression and replayable rounds.",
+        "winterfest-demon-hunters": "Holiday demon-hunting gun game with repeatable combat loops and weapon rotations."
+      },
+      "titleOverrides": {
+        "tmnt-city": "TMNT City — Gun Game",
+        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+      },
+      "modeOverrides": {
+        "tmnt-city": "Gun Game",
+        "winterfest-demon-hunters": "FFA Gun Game"
+      },
+      "relatedLabels": [
+        "XP Maps",
+        "TMNT Maps",
+        "Squid Game Maps",
+        "Star Wars Maps"
+      ]
+    },
+    "xp": {
+      "breadcrumb": "XP Maps",
+      "eyebrow": "Level up faster",
+      "title": "Best Fortnite <accent>XP maps</accent>",
+      "description": "Curated Fortnite XP maps with island codes and quick notes on how each one plays.",
+      "schemaName": "Best Fortnite XP Maps",
+      "schemaDescription": "A curated list of Fortnite XP maps and island codes by NLDEVS, with quick notes on how each island plays while you level up.",
+      "listName": "Fortnite XP Maps",
+      "genre": "Fortnite XP Map",
+      "codesTitle": "XP map",
+      "codesAccent": "codes",
+      "introSections": [],
+      "tipSections": [],
+      "faqs": [],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Fast-paced survival runs with repeatable gameplay loops. Great if you prefer active play while leveling.",
+        "winterfest-demon-hunters": "Combat-focused loops with repeatable rounds. Works well for players who want XP while fighting.",
+        "rvb-players-vs-guards": "Team-based objectives and longer sessions. Good for steady XP while playing PvP-style rounds.",
+        "tmnt-city": "Exploration and combat routes with consistent XP loops.",
+        "rvb-squid-minigame": "Fast rounds and objective-based play."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Active",
+        "winterfest-demon-hunters": "Mixed",
+        "rvb-players-vs-guards": "Mixed",
+        "tmnt-city": "Active",
+        "rvb-squid-minigame": "Active"
+      },
+      "relatedLabels": [
+        "Gun Game Maps",
+        "TMNT Maps",
+        "Squid Game Maps",
+        "Star Wars Maps"
+      ]
+    }
+  },
+  "playtest": {
+    "eyebrow": "Community",
+    "title": "Join the NLDEVS <accent>Playtest Squad</accent>",
+    "description": "A simple way to stay close to new maps, tests, updates, and collaboration opportunities from NLDEVS.",
+    "heroTitle": "Playtest. Give feedback. Catch drops.",
+    "heroBody": "Join as a member to catch early map drops, private playtest calls, voting opportunities, and a direct feedback line into NLDEVS.",
+    "heroNote": "No spam. No selling info. Delete anytime.",
+    "perks": [
+      "Early map drops",
+      "Playtest invites",
+      "Vote on new themes",
+      "Send feedback directly"
+    ],
+    "joinDiscord": "Join Discord",
+    "exploreMaps": "Explore maps",
+    "squadPerk": "Squad perk",
+    "benefits": [
+      {
+        "title": "Early Access",
+        "text": "Get early map drops and code updates before broader pushes when new islands or revisions are ready."
+      },
+      {
+        "title": "Private Playtests",
+        "text": "Catch private playtest invites, test new loops, and help shape flow before major updates."
+      },
+      {
+        "title": "Vote And Guide",
+        "text": "Vote on upcoming map themes and send feedback, bugs, screenshots, and gameplay reactions directly."
+      },
+      {
+        "title": "Community Credit",
+        "text": "Get considered for future shoutouts, playtester credits, developer opportunities, giveaways, and XP/map events."
+      }
+    ]
+  },
+  "contracts": {
+    "eyebrow": "Developer / Client Work",
+    "title": "UEFN contracts, <accent>Fortnite experiences</accent>",
+    "description": "NLDEVS builds playable UEFN projects for creators, clients, brands, and studios that need Fortnite production help.",
+    "heroTitle": "Hire NLDEVS for UEFN builds.",
+    "heroBody": "From prototypes to polished Fortnite islands, NLDEVS can help plan, build, test, and improve UEFN experiences with a clean production workflow.",
+    "startProject": "Start a project",
+    "viewCreatorPage": "View creator page",
+    "servicesTitle": "What NLDEVS can build",
+    "services": [
+      "UEFN map builds and prototypes",
+      "Fortnite tycoon, PvP, gun game, and event-style islands",
+      "Branded Fortnite experiences",
+      "In-game animations, cinematic moments, and interactive sequences",
+      "Gameplay loop design and polish",
+      "Verse, devices, UI, testing, and launch support",
+      "Existing island cleanup, updates, and optimization"
+    ],
+    "clientsTitle": "Built for serious projects",
+    "clientTypes": [
+      "Creators who need a reliable UEFN build partner",
+      "Brands exploring Fortnite experiences",
+      "Game studios that need extra UEFN production help",
+      "Teams that want a playable prototype before a bigger launch"
+    ],
+    "ctaTitle": "Send the goal, timeline, and budget range.",
+    "ctaBody": "Keep the first message simple: what you want built, whether it is a new island or existing project, your ideal launch window, and any references or must-have gameplay features.",
+    "exploreMaps": "Explore NLDEVS maps",
+    "mailSubject": "UEFN contract inquiry",
+    "servicesEyebrow": "Services",
+    "clientsEyebrow": "Who It Helps",
+    "inquiryEyebrow": "Project Inquiry"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "We use member information to run NLDEVS, support players, organize playtests, and find future collaborators. We keep it practical, limited, and never sell it.",
+    "sections": [
+      {
+        "title": "What We Collect",
+        "items": [
+          "Name and email address when you join or check in as a member.",
+          "Optional player details such as Fortnite name, Discord username, favorite map, profile style, member goals, messages, and submitted images.",
+          "Optional developer or creator details such as role, availability, portfolio link, and skills.",
+          "A required confirmation that the member is 13 or older and has parent or guardian permission if under 18.",
+          "Basic technical details such as source page and browser information to help us understand where signups come from and troubleshoot issues."
+        ]
+      },
+      {
+        "title": "How We Use It",
+        "items": [
+          "To recognize returning members.",
+          "To respond to messages, bug reports, map ideas, and collaboration interest.",
+          "To invite interested members to playtests, map updates, or NLDEVS opportunities.",
+          "To improve the website, maps, and member experience."
+        ]
+      },
+      {
+        "title": "How We Protect It",
+        "items": [
+          "Member submissions are handled through a server route so secret database keys are not exposed in browser code.",
+          "Database access is restricted with Supabase Row Level Security and server-side credentials.",
+          "We do not sell member information.",
+          "We limit the information we ask for and keep optional fields optional."
+        ]
+      }
+    ],
+    "emailsTitle": "Emails",
+    "emailsBody": "If you join NLDEVS, we may send a short confirmation email. We only use your contact consent for future updates, playtests, or map news.",
+    "manageTitle": "Delete Or Update Info",
+    "manageBody": "To update or delete your member info, email <mail>nldevsmtl@gmail.com</mail>. Use the same email address you joined with so we can find the right record.",
+    "thirdPartyTitle": "Third-Party Services",
+    "thirdPartyBody": "NLDEVS uses trusted services such as Supabase for member data and Resend for email delivery. Those services process data only as needed to provide the site features.",
+    "backHome": "Back to NLDEVS"
+  }
+}

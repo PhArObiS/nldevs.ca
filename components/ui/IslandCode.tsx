@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 /**
  * The prominent island-code panel at the top of a map detail page.
@@ -13,6 +14,7 @@ export default function IslandCode({
   code: string;
   title: string;
 }) {
+  const t = useTranslations("common");
   const [copied, setCopied] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -44,7 +46,7 @@ export default function IslandCode({
       <div className="relative flex flex-col items-center justify-center gap-5 text-center md:flex-row md:justify-between md:text-left">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
-            Island code
+            {t("islandCode")}
           </p>
           <p className="mt-2 font-mono text-2xl tracking-tight text-white md:text-3xl">
             {code}
@@ -54,17 +56,17 @@ export default function IslandCode({
         <button
           type="button"
           onClick={copyCode}
-          aria-label={`Copy island code for ${title}`}
+          aria-label={t("copyAria", { title })}
           className={`btn-neon clip-corner-sm shrink-0 ${
             copied ? "brightness-110" : ""
           }`}
         >
-          {copied ? "Copied" : "Copy code"}
+          {copied ? t("copied") : t("copyCode")}
         </button>
       </div>
 
       <span aria-live="polite" className="sr-only">
-        {copied ? `Island code ${code} copied to clipboard` : ""}
+        {copied ? t("copiedAnnounce", { code }) : ""}
       </span>
     </div>
   );

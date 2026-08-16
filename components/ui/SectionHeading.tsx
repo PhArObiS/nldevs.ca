@@ -2,6 +2,11 @@ import type { ReactNode } from "react";
 
 type Props = {
   eyebrow?: string;
+  /**
+   * Accepts a node so callers can pass `t.rich(...)` output, where the
+   * highlighted span sits wherever the target language needs it rather than
+   * always at the end.
+   */
   title: ReactNode;
   /** Highlighted tail of the title, rendered in the neon gradient. */
   accent?: string;

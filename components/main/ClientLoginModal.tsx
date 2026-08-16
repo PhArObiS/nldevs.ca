@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { SOCIAL_LINKS } from "@/constants/site";
 import {
   findBlockedLanguageFields,
@@ -38,15 +39,26 @@ type ClientProfile = {
 
 const MAX_IMAGE_BYTES = 1.5 * 1024 * 1024;
 
-const AVATAR_OPTIONS = [
-  "No preference",
-  "Star Wars",
-  "TMNT",
-  "Squid Game",
-  "Winterfest",
-  "NLDEVS logo",
+/**
+ * Select/checkbox options.
+ *
+ * `value` is what gets stored and sent to the API — deliberately English and
+ * locale-independent, so a lead submitted from the Portuguese site is still
+ * readable in the admin view and comparable with every other lead. Only
+ * `key` (the visible label) is translated.
+ */
+type Option = { value: string; key: string };
+
+const AVATAR_OPTIONS: Option[] = [
+  { value: "No preference", key: "avatarNoPreference" },
+  { value: "Star Wars", key: "avatarStarWars" },
+  { value: "TMNT", key: "avatarTmnt" },
+  { value: "Squid Game", key: "avatarSquidGame" },
+  { value: "Winterfest", key: "avatarWinterfest" },
+  { value: "NLDEVS logo", key: "avatarLogo" },
 ];
 
+/** In-game island names — untranslated by design, see constants/maps.ts. */
 const FAVORITE_MAPS = [
   "Star Wars Tycoon Sidekick Legends",
   "Star Wars Mega RvB",
@@ -60,44 +72,43 @@ const FAVORITE_MAPS = [
   "RvB Players vs Guards",
 ];
 
-const IMAGE_PURPOSES = ["Screenshot", "Bug", "Map idea", "Fan art", "Other"];
-
-const DEVELOPER_ROLES = [
-  "UEFN / Verse developer",
-  "Unreal Engine developer",
-  "3D artist",
-  "Level designer",
-  "Gameplay designer",
-  "UI / web developer",
-  "QA tester",
-  "Other",
+const IMAGE_PURPOSES: Option[] = [
+  { value: "Screenshot", key: "purposeScreenshot" },
+  { value: "Bug", key: "purposeBug" },
+  { value: "Map idea", key: "purposeMapIdea" },
+  { value: "Fan art", key: "purposeFanArt" },
+  { value: "Other", key: "purposeOther" },
 ];
 
-const DEVELOPER_AVAILABILITY = [
-  "Open now",
-  "Open soon",
-  "Part-time",
-  "Contract / freelance",
-  "Future opportunities",
+const DEVELOPER_ROLES: Option[] = [
+  { value: "UEFN / Verse developer", key: "roleUefn" },
+  { value: "Unreal Engine developer", key: "roleUnreal" },
+  { value: "3D artist", key: "role3dArtist" },
+  { value: "Level designer", key: "roleLevelDesigner" },
+  { value: "Gameplay designer", key: "roleGameplayDesigner" },
+  { value: "UI / web developer", key: "roleUiWeb" },
+  { value: "QA tester", key: "roleQa" },
+  { value: "Other", key: "roleOther" },
 ];
 
-const MEMBER_GOALS = [
-  "Map updates",
-  "Playtests",
-  "Bug reports",
-  "Collab / work",
-  "Creator support",
-  "Just browsing",
+const DEVELOPER_AVAILABILITY: Option[] = [
+  { value: "Open now", key: "availOpenNow" },
+  { value: "Open soon", key: "availOpenSoon" },
+  { value: "Part-time", key: "availPartTime" },
+  { value: "Contract / freelance", key: "availContract" },
+  { value: "Future opportunities", key: "availFuture" },
 ];
 
-const PLAYTEST_SQUAD_PERKS = [
-  "Early access to new maps",
-  "Private playtest invites",
-  "Vote on upcoming map themes",
-  "Send bugs and screenshots directly",
-  "Map code drops first",
-  "Creator and developer opportunities",
+const MEMBER_GOALS: Option[] = [
+  { value: "Map updates", key: "goalMapUpdates" },
+  { value: "Playtests", key: "goalPlaytests" },
+  { value: "Bug reports", key: "goalBugReports" },
+  { value: "Collab / work", key: "goalCollab" },
+  { value: "Creator support", key: "goalCreatorSupport" },
+  { value: "Just browsing", key: "goalBrowsing" },
 ];
+
+const PERK_KEYS = ["perk1", "perk2", "perk3", "perk4", "perk5", "perk6"];
 
 function readImageFile(file: File) {
   return new Promise<string>((resolve, reject) => {
@@ -112,6 +123,9 @@ function readImageFile(file: File) {
 }
 
 export default function ClientLoginModal() {
+  const t = useTranslations("login");
+  const tc = useTranslations("common");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [returningEmail, setReturningEmail] = useState("");
   const [showNewMember, setShowNewMember] = useState(false);
@@ -249,13 +263,16 @@ export default function ClientLoginModal() {
 
     try {
       if (hasBlockedLanguage([returningEmail])) {
-        throw new Error("Please keep member info respectful and appropriate.");
+        throw new Error(t("errBlockedLanguage"));
       }
 
       const response = await fetch("/api/player-leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          // Sent so server errors and the confirmation email come back in
+          // the language the member is actually browsing in.
+          locale,
           action: "login",
           email: returningEmail.trim(),
           website,
@@ -273,11 +290,11 @@ export default function ClientLoginModal() {
           setEmail(returningEmail.trim());
           setShowNewMember(true);
           setShowSignupPrompt(true);
-          setNotice("No member found. Join below.");
+          setNotice(t("noticeNoMember"));
           return;
         }
 
-        throw new Error(result.error || "Unable to log in right now.");
+        throw new Error(result.error || t("errLoginGeneric"));
       }
 
       if (result.profile) {
@@ -286,16 +303,16 @@ export default function ClientLoginModal() {
       }
 
       if (result.profile?.emailConfirmed) {
-        setNotice("Welcome back.");
+        setNotice(t("noticeWelcomeBack"));
         window.setTimeout(() => setOpen(false), 900);
       } else {
-        setNotice("Welcome back. Please confirm your email from your inbox.");
+        setNotice(t("noticeConfirmInbox"));
       }
     } catch (loginError) {
       setError(
         loginError instanceof Error
           ? loginError.message
-          : "Could not log in yet. Please try again in a moment."
+          : t("errLoginRetry")
       );
     } finally {
       setLoggingIn(false);
@@ -313,16 +330,16 @@ export default function ClientLoginModal() {
     try {
       if (!ageAttestation) {
         throw new Error(
-          "Please confirm you are 13 or older and have parent/guardian permission if under 18."
+          t("errAgeRequired")
         );
       }
 
       if (imageFile && !imageFile.type.startsWith("image/")) {
-        throw new Error("Please upload an image file.");
+        throw new Error(t("errImageType"));
       }
 
       if (imageFile && imageFile.size > MAX_IMAGE_BYTES) {
-        throw new Error("Image must be 1.5 MB or smaller.");
+        throw new Error(t("errImageSize"));
       }
 
       const blockedFields = findBlockedLanguageFields({
@@ -343,7 +360,7 @@ export default function ClientLoginModal() {
       });
 
       if (blockedFields.length > 0) {
-        throw new Error("Please keep member info respectful and appropriate.");
+        throw new Error(t("errBlockedLanguage"));
       }
 
       const imageData = imageFile ? await readImageFile(imageFile) : undefined;
@@ -375,6 +392,7 @@ export default function ClientLoginModal() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...profile,
+          locale,
           action: saved ? "update" : "signup",
           imageData,
           website,
@@ -387,7 +405,7 @@ export default function ClientLoginModal() {
       };
 
       if (!response.ok) {
-        throw new Error(result.error || "Unable to save right now.");
+        throw new Error(result.error || t("errSaveGeneric"));
       }
 
       const storedProfile = result.profile ?? profile;
@@ -400,15 +418,15 @@ export default function ClientLoginModal() {
       setNotice(
         storedProfile.emailConfirmed
           ? saved
-            ? "Your member info is updated."
-            : "You're in."
-          : "Check your email to confirm your member access."
+            ? t("noticeUpdated")
+            : t("noticeYoureIn")
+          : t("noticeCheckEmail")
       );
     } catch (submitError) {
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Could not save yet. Please try again in a moment."
+          : t("errSaveRetry")
       );
     } finally {
       setSubmitting(false);
@@ -429,7 +447,7 @@ export default function ClientLoginModal() {
           type="button"
           onClick={closeForSession}
           className="clip-corner-sm absolute right-3 top-3 flex min-h-10 min-w-10 items-center justify-center border border-edge-bright bg-ink-800/90 px-3 text-lg font-black text-gray-300 transition hover:border-neon-cyan hover:text-white sm:right-4 sm:top-4"
-          aria-label="Close client login"
+          aria-label={t("close")}
         >
           X
         </button>
@@ -444,13 +462,13 @@ export default function ClientLoginModal() {
             priority
           />
           <div>
-            <p className="eyebrow">Member Access</p>
+            <p className="eyebrow">{t("eyebrow")}</p>
             <h2 id="client-login-title" className="mt-1 text-2xl font-black text-white">
               {saved && emailConfirmed
-                ? "Logged in"
+                ? t("titleLoggedIn")
                 : saved
-                  ? "Confirm email"
-                  : "Join NLDEVS"}
+                  ? t("titleConfirm")
+                  : t("titleJoin")}
             </h2>
           </div>
         </div>
@@ -458,11 +476,10 @@ export default function ClientLoginModal() {
         {!saved && (
           <div className="modal-card-rise scanline-sheen mt-5 border border-neon-cyan/35 bg-neon-cyan/10 px-4 py-4">
             <p className="text-sm font-black uppercase tracking-wide text-neon-cyan">
-              NLDEVS Playtest Squad
+              {t("squadName")}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-gray-300">
-              Join free for closer access to maps, tests, feedback, and future
-              creator opportunities.
+              {t("squadPitch")}
             </p>
             <a
               href={SOCIAL_LINKS.fortnite}
@@ -470,15 +487,15 @@ export default function ClientLoginModal() {
               rel="noopener noreferrer"
               className="badge-pulse clip-corner-sm mt-3 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-xs font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
-              Follow @nldevs on Fortnite
+              {tc("followFortnite")}
             </a>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
-              {PLAYTEST_SQUAD_PERKS.map((perk) => (
+              {PERK_KEYS.map((key) => (
                 <div
-                  key={perk}
+                  key={key}
                   className="border border-edge/80 bg-ink-800/55 px-3 py-2 text-xs font-semibold text-gray-300"
                 >
-                  {perk}
+                  {t(key)}
                 </div>
               ))}
             </div>
@@ -495,15 +512,15 @@ export default function ClientLoginModal() {
           >
             <p className="text-sm font-semibold text-neon-cyan">
               {emailConfirmed
-                ? "You're logged in. Email confirmed."
-                : "Member info saved. Please confirm your email before logging in."}
+                ? t("statusConfirmed")
+                : t("statusUnconfirmed")}
             </p>
             <button
               type="button"
               onClick={openEditInfo}
               className="clip-corner-sm mt-3 border border-neon-cyan/70 bg-ink-800/70 px-3 py-2 text-xs font-black uppercase tracking-wide text-neon-cyan transition hover:bg-neon-cyan hover:text-ink"
             >
-              Edit Info
+              {t("editInfo")}
             </button>
           </div>
         )}
@@ -517,7 +534,7 @@ export default function ClientLoginModal() {
         {showSignupPrompt && (
           <div className="mt-3 border border-neon-magenta/50 bg-neon-magenta/10 px-4 py-4">
             <p className="text-sm font-bold text-white">
-              Looks like you are not a member yet.
+              {t("notMemberYet")}
             </p>
             <button
               type="button"
@@ -529,7 +546,7 @@ export default function ClientLoginModal() {
               }}
               className="clip-corner-sm mt-3 border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
-              New Member Signup
+              {t("newMemberSignup")}
             </button>
           </div>
         )}
@@ -537,11 +554,10 @@ export default function ClientLoginModal() {
         {showDiscordCta && (
           <div className="mt-5 border border-neon-violet/60 bg-ink-800/60 px-4 py-4">
             <p className="text-sm font-bold text-white">
-              Join the NLDEVS Playtest Squad
+              {t("discordTitle")}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-gray-400">
-              Get map drops, playtest calls, and quick updates directly in the
-              community.
+              {t("discordBody")}
             </p>
             <a
               href={SOCIAL_LINKS.discord}
@@ -549,7 +565,7 @@ export default function ClientLoginModal() {
               rel="noopener noreferrer"
               className="clip-corner-sm mt-4 inline-flex border border-neon-cyan bg-neon-cyan px-4 py-2 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
-              Join Discord
+              {t("joinDiscord")}
             </a>
             <a
               href={SOCIAL_LINKS.fortnite}
@@ -557,7 +573,7 @@ export default function ClientLoginModal() {
               rel="noopener noreferrer"
               className="clip-corner-sm ml-2 mt-4 inline-flex border border-neon-magenta bg-neon-magenta px-4 py-2 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-ink"
             >
-              Follow Fortnite
+              {tc("followFortniteShort")}
             </a>
           </div>
         )}
@@ -580,7 +596,7 @@ export default function ClientLoginModal() {
           </div>
 
           <h3 className="text-sm font-black uppercase tracking-wide text-white">
-            Returning Member
+            {t("returningMember")}
           </h3>
           <div className="mt-3 grid gap-3 sm:grid-cols-[1fr_auto]">
             <div>
@@ -588,7 +604,7 @@ export default function ClientLoginModal() {
                 htmlFor="returning-member-email"
                 className="text-sm font-semibold text-gray-200"
               >
-                Email
+                {t("email")}
               </label>
               <input
                 id="returning-member-email"
@@ -599,7 +615,7 @@ export default function ClientLoginModal() {
                 onChange={(event) => setReturningEmail(event.target.value)}
                 required
                 className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
-                placeholder="you@example.com"
+                placeholder={t("emailPlaceholder")}
               />
             </div>
 
@@ -608,14 +624,13 @@ export default function ClientLoginModal() {
               disabled={loggingIn}
               className="clip-corner-sm self-end border border-neon-cyan bg-neon-cyan px-4 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
             >
-              {loggingIn ? "Checking" : "Log in"}
+              {loggingIn ? t("checking") : t("logIn")}
             </button>
           </div>
         </form>
 
         <p className="mt-3 border border-edge/80 bg-ink-800/30 px-3 py-2 text-xs leading-relaxed text-gray-400">
-          We only use your info for NLDEVS updates, playtests, support, and
-          collaboration opportunities. We never sell your info.
+          {t("privacyNote")}
         </p>
 
         <details
@@ -625,7 +640,7 @@ export default function ClientLoginModal() {
           onToggle={(event) => setShowNewMember(event.currentTarget.open)}
         >
           <summary className="cursor-pointer text-sm font-black uppercase tracking-wide text-neon-cyan">
-            {saved ? "Edit Member Info" : "New Member Signup"}
+            {saved ? t("editMemberInfo") : t("newMemberSignup")}
           </summary>
 
         <form className="mt-4 space-y-3 sm:space-y-4" onSubmit={onSignupSubmit}>
@@ -644,7 +659,7 @@ export default function ClientLoginModal() {
 
           <div>
             <label htmlFor="client-name" className="text-sm font-semibold text-gray-200">
-              Name
+              {t("name")}
             </label>
             <input
               id="client-name"
@@ -656,13 +671,13 @@ export default function ClientLoginModal() {
               required
               minLength={2}
               className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-              placeholder="Your name"
+              placeholder={t("namePlaceholder")}
             />
           </div>
 
           <div>
             <label htmlFor="client-email" className="text-sm font-semibold text-gray-200">
-              Email
+              {t("email")}
             </label>
             <input
               id="client-email"
@@ -673,27 +688,28 @@ export default function ClientLoginModal() {
               onChange={(event) => setEmail(event.target.value)}
               required
               className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-              placeholder="you@example.com"
+              placeholder={t("emailPlaceholder")}
             />
           </div>
 
           <div className="border border-edge bg-ink-800/40 p-3">
             <p className="text-sm font-semibold text-gray-200">
-              What are you here for? <span className="text-gray-500">optional</span>
+              {t("whatAreYouHereFor")}{" "}
+              <span className="text-gray-500">{t("optional")}</span>
             </p>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
               {MEMBER_GOALS.map((goal) => (
                 <label
-                  key={goal}
+                  key={goal.value}
                   className="flex items-center gap-2 border border-edge bg-ink-800/60 px-3 py-2 text-sm text-gray-300"
                 >
                   <input
                     type="checkbox"
-                    checked={memberGoals.includes(goal)}
-                    onChange={() => toggleMemberGoal(goal)}
+                    checked={memberGoals.includes(goal.value)}
+                    onChange={() => toggleMemberGoal(goal.value)}
                     className="h-4 w-4 accent-neon-cyan"
                   />
-                  <span>{goal}</span>
+                  <span>{t(goal.key)}</span>
                 </label>
               ))}
             </div>
@@ -707,15 +723,12 @@ export default function ClientLoginModal() {
               required
               className="mt-1 h-4 w-4 accent-neon-cyan"
             />
-            <span>
-              I am 13 or older. If I am under 18, I have permission from a
-              parent or guardian to share this information with NLDEVS.
-            </span>
+            <span>{t("ageAttestation")}</span>
           </label>
 
           <details className="border border-edge bg-ink-800/40 p-3">
             <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
-              Optional player info
+              {t("optionalPlayerInfo")}
             </summary>
 
             <div className="mt-4 space-y-3 sm:space-y-4">
@@ -724,7 +737,8 @@ export default function ClientLoginModal() {
               htmlFor="client-fortnite-name"
               className="text-sm font-semibold text-gray-200"
             >
-              Fortnite name <span className="text-gray-500">optional</span>
+              {t("fortniteName")}{" "}
+              <span className="text-gray-500">{t("optional")}</span>
             </label>
             <input
               id="client-fortnite-name"
@@ -734,7 +748,7 @@ export default function ClientLoginModal() {
               value={fortniteName}
               onChange={(event) => setFortniteName(event.target.value)}
               className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-              placeholder="Epic / Fortnite name"
+              placeholder={t("fortniteNamePlaceholder")}
             />
           </div>
 
@@ -744,7 +758,8 @@ export default function ClientLoginModal() {
                 htmlFor="client-discord-name"
                 className="text-sm font-semibold text-gray-200"
               >
-                Discord <span className="text-gray-500">optional</span>
+                {t("discord")}{" "}
+                <span className="text-gray-500">{t("optional")}</span>
               </label>
               <input
                 id="client-discord-name"
@@ -754,7 +769,7 @@ export default function ClientLoginModal() {
                 value={discordName}
                 onChange={(event) => setDiscordName(event.target.value)}
                 className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-                placeholder="Discord username"
+                placeholder={t("discordPlaceholder")}
               />
             </div>
 
@@ -763,7 +778,8 @@ export default function ClientLoginModal() {
                 htmlFor="client-avatar-style"
                 className="text-sm font-semibold text-gray-200"
               >
-                Profile style <span className="text-gray-500">optional</span>
+                {t("profileStyle")}{" "}
+                <span className="text-gray-500">{t("optional")}</span>
               </label>
               <select
                 id="client-avatar-style"
@@ -772,10 +788,10 @@ export default function ClientLoginModal() {
                 onChange={(event) => setAvatarStyle(event.target.value)}
                 className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
               >
-                <option value="">Choose a style</option>
+                <option value="">{t("chooseStyle")}</option>
                 {AVATAR_OPTIONS.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
+                  <option key={option.value} value={option.value}>
+                    {t(option.key)}
                   </option>
                 ))}
               </select>
@@ -787,7 +803,8 @@ export default function ClientLoginModal() {
               htmlFor="client-favorite-map"
               className="text-sm font-semibold text-gray-200"
             >
-              Favorite map <span className="text-gray-500">optional</span>
+              {t("favoriteMap")}{" "}
+              <span className="text-gray-500">{t("optional")}</span>
             </label>
             <select
               id="client-favorite-map"
@@ -796,7 +813,7 @@ export default function ClientLoginModal() {
               onChange={(event) => setFavoriteMap(event.target.value)}
               className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
             >
-              <option value="">Choose a map</option>
+              <option value="">{t("chooseMap")}</option>
               {FAVORITE_MAPS.map((map) => (
                 <option key={map} value={map}>
                   {map}
@@ -811,7 +828,8 @@ export default function ClientLoginModal() {
                 htmlFor="client-image"
                 className="text-sm font-semibold text-gray-200"
               >
-                Image to send NLDEVS <span className="text-gray-500">optional</span>
+                {t("imageToSend")}{" "}
+              <span className="text-gray-500">{t("optional")}</span>
               </label>
               <input
                 id="client-image"
@@ -828,7 +846,8 @@ export default function ClientLoginModal() {
                 htmlFor="client-image-purpose"
                 className="text-sm font-semibold text-gray-200"
               >
-                Type <span className="text-gray-500">optional</span>
+                {t("imageType")}{" "}
+                <span className="text-gray-500">{t("optional")}</span>
               </label>
               <select
                 id="client-image-purpose"
@@ -837,10 +856,10 @@ export default function ClientLoginModal() {
                 onChange={(event) => setImagePurpose(event.target.value)}
                 className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
               >
-                <option value="">Choose type</option>
+                <option value="">{t("chooseType")}</option>
                 {IMAGE_PURPOSES.map((purpose) => (
-                  <option key={purpose} value={purpose}>
-                    {purpose}
+                  <option key={purpose.value} value={purpose.value}>
+                    {t(purpose.key)}
                   </option>
                 ))}
               </select>
@@ -852,7 +871,8 @@ export default function ClientLoginModal() {
               htmlFor="client-message"
               className="text-sm font-semibold text-gray-200"
             >
-              Message to NLDEVS <span className="text-gray-500">optional</span>
+              {t("messageToNldevs")}{" "}
+              <span className="text-gray-500">{t("optional")}</span>
             </label>
             <textarea
               id="client-message"
@@ -862,7 +882,7 @@ export default function ClientLoginModal() {
               maxLength={600}
               rows={2}
               className="mt-2 w-full resize-none border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-              placeholder="Ideas, feedback, playtest interest, or anything you want to send."
+              placeholder={t("messagePlaceholder")}
             />
           </div>
 
@@ -873,14 +893,14 @@ export default function ClientLoginModal() {
               onChange={(event) => setContactConsent(event.target.checked)}
               className="mt-1 h-4 w-4 accent-neon-cyan"
             />
-            <span>NLDEVS can contact me about maps, updates, or playtests.</span>
+            <span>{t("contactConsent")}</span>
           </label>
             </div>
           </details>
 
           <details className="border border-edge bg-ink-800/40 p-3">
             <summary className="cursor-pointer text-sm font-semibold text-neon-cyan">
-              Developer / creator info
+              {t("developerInfo")}
             </summary>
 
             <div className="mt-4 space-y-3 sm:space-y-4">
@@ -891,7 +911,7 @@ export default function ClientLoginModal() {
                   onChange={(event) => setDeveloperInterest(event.target.checked)}
                   className="mt-1 h-4 w-4 accent-neon-cyan"
                 />
-                <span>I&apos;m a developer or creator interested in future work with NLDEVS.</span>
+                <span>{t("developerInterest")}</span>
               </label>
 
               <div className="grid gap-4 md:grid-cols-2">
@@ -900,7 +920,8 @@ export default function ClientLoginModal() {
                     htmlFor="client-developer-role"
                     className="text-sm font-semibold text-gray-200"
                   >
-                    Role <span className="text-gray-500">optional</span>
+                    {t("role")}{" "}
+                    <span className="text-gray-500">{t("optional")}</span>
                   </label>
                   <select
                     id="client-developer-role"
@@ -909,10 +930,10 @@ export default function ClientLoginModal() {
                     onChange={(event) => setDeveloperRole(event.target.value)}
                     className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
                   >
-                    <option value="">Choose role</option>
+                    <option value="">{t("chooseRole")}</option>
                     {DEVELOPER_ROLES.map((role) => (
-                      <option key={role} value={role}>
-                        {role}
+                      <option key={role.value} value={role.value}>
+                        {t(role.key)}
                       </option>
                     ))}
                   </select>
@@ -923,7 +944,8 @@ export default function ClientLoginModal() {
                     htmlFor="client-developer-availability"
                     className="text-sm font-semibold text-gray-200"
                   >
-                    Availability <span className="text-gray-500">optional</span>
+                    {t("availability")}{" "}
+                    <span className="text-gray-500">{t("optional")}</span>
                   </label>
                   <select
                     id="client-developer-availability"
@@ -932,10 +954,10 @@ export default function ClientLoginModal() {
                     onChange={(event) => setDeveloperAvailability(event.target.value)}
                     className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition focus:border-neon-cyan sm:px-4 sm:py-3"
                   >
-                    <option value="">Choose availability</option>
+                    <option value="">{t("chooseAvailability")}</option>
                     {DEVELOPER_AVAILABILITY.map((availability) => (
-                      <option key={availability} value={availability}>
-                        {availability}
+                      <option key={availability.value} value={availability.value}>
+                        {t(availability.key)}
                       </option>
                     ))}
                   </select>
@@ -947,7 +969,8 @@ export default function ClientLoginModal() {
                   htmlFor="client-developer-portfolio"
                   className="text-sm font-semibold text-gray-200"
                 >
-                  Portfolio / profile <span className="text-gray-500">optional</span>
+                  {t("portfolio")}{" "}
+                  <span className="text-gray-500">{t("optional")}</span>
                 </label>
                 <input
                   id="client-developer-portfolio"
@@ -957,7 +980,7 @@ export default function ClientLoginModal() {
                   value={developerPortfolio}
                   onChange={(event) => setDeveloperPortfolio(event.target.value)}
                   className="mt-2 w-full border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-                  placeholder="Website, ArtStation, GitHub, Fortnite page"
+                  placeholder={t("portfolioPlaceholder")}
                 />
               </div>
 
@@ -966,7 +989,8 @@ export default function ClientLoginModal() {
                   htmlFor="client-developer-skills"
                   className="text-sm font-semibold text-gray-200"
                 >
-                  Skills / tools <span className="text-gray-500">optional</span>
+                  {t("skills")}{" "}
+                  <span className="text-gray-500">{t("optional")}</span>
                 </label>
                 <textarea
                   id="client-developer-skills"
@@ -976,7 +1000,7 @@ export default function ClientLoginModal() {
                   maxLength={500}
                   rows={2}
                   className="mt-2 w-full resize-none border border-edge bg-ink-800 px-3 py-2.5 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan sm:px-4 sm:py-3"
-                  placeholder="UEFN, Verse, Blender, Unreal, level design, QA..."
+                  placeholder={t("skillsPlaceholder")}
                 />
               </div>
             </div>
@@ -987,7 +1011,7 @@ export default function ClientLoginModal() {
             disabled={submitting}
             className="clip-corner-sm w-full border border-neon-cyan bg-neon-cyan px-5 py-3 font-black uppercase tracking-wide text-ink transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
           >
-            {submitting ? "Saving" : saved ? "Save changes" : "Join NLDEVS"}
+            {submitting ? t("saving") : saved ? t("saveChanges") : t("joinNldevs")}
           </button>
 
         </form>
@@ -1002,20 +1026,19 @@ export default function ClientLoginModal() {
       {showWelcomePopup && (
         <div className="fixed inset-0 z-[90] flex items-center justify-center bg-black/55 px-4">
           <div className="clip-corner max-w-sm border border-neon-cyan bg-ink-900 p-5 text-center shadow-[0_0_40px_rgba(34,211,238,0.24)]">
-            <p className="eyebrow">Welcome</p>
+            <p className="eyebrow">{t("welcomeEyebrow")}</p>
             <h3 className="mt-2 text-2xl font-black text-white">
-              You&apos;re almost in.
+              {t("welcomeTitle")}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-gray-300">
-              Welcome to NLDEVS. You will receive an email shortly. Please
-              confirm it to finish your member access.
+              {t("welcomeBody")}
             </p>
             <button
               type="button"
               onClick={closeAfterWelcome}
               className="clip-corner-sm mt-5 border border-neon-cyan bg-neon-cyan px-5 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
             >
-              Got it
+              {t("gotIt")}
             </button>
           </div>
         </div>

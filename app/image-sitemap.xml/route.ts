@@ -1,163 +1,103 @@
+import { getTranslations } from "next-intl/server";
+import { getPathname } from "@/i18n/navigation";
+import {
+  locales,
+  type AppPathname,
+  type Locale,
+} from "@/i18n/routing";
+import { MAPS, type MapId } from "@/constants/maps";
 import { SITE_LOGO_URL, SITE_URL } from "@/constants/site";
 
-const ENTRIES = [
-  {
-    page: "/",
-    images: [{ loc: SITE_LOGO_URL, title: "NLDEVS logo" }],
-  },
+/**
+ * Image sitemap, emitted for every locale.
+ *
+ * Previously this listed only the English page URLs with English image
+ * titles, so the fr/pt/es pages had no image coverage at all. Image `loc`
+ * values now come from the map registry rather than being repeated here, so
+ * an image swap in constants/maps.ts cannot leave this file stale.
+ */
+
+/** Title phrasing, keyed into the `imageSitemap` namespace. */
+type TitleKind = "map" | "islandCode" | "gunGame" | "xp";
+
+type Entry = {
+  page: AppPathname;
+  images: { mapId: MapId; kind: TitleKind }[];
+};
+
+const ENTRIES: Entry[] = [
   {
     page: "/star-wars-fortnite-maps",
     images: [
-      {
-        loc: `${SITE_URL}/StarWarsRvB.jpg`,
-        title: "Star Wars Mega RvB Fortnite map",
-      },
-      {
-        loc: `${SITE_URL}/TycoonSidekicks.jpg`,
-        title: "Star Wars Tycoon Sidekick Legends Fortnite map",
-      },
-      {
-        loc: `${SITE_URL}/StarWarsTilted99BotsRoyale.jpg`,
-        title: "Star Wars Tilted 99 Bots Royale Fortnite map",
-      },
+      { mapId: "star-wars-mega-rvb", kind: "map" },
+      { mapId: "star-wars-tycoon-sidekick-legends", kind: "map" },
+      { mapId: "star-wars-tilted-99-bots-royale", kind: "map" },
     ],
   },
   {
     page: "/tmnt-fortnite-maps",
     images: [
-      {
-        loc: `${SITE_URL}/MegaRampSurvival.jpeg`,
-        title: "TMNT Mega Ramp Survival Fortnite map",
-      },
-      {
-        loc: `${SITE_URL}/CityTMNT.jpg`,
-        title: "TMNT City Fortnite map",
-      },
+      { mapId: "tmnt-mega-ramp-survival", kind: "map" },
+      { mapId: "tmnt-city", kind: "map" },
     ],
   },
   {
     page: "/squid-game-fortnite-maps",
     images: [
-      {
-        loc: `${SITE_URL}/RedVsBlueSquidMinigame.jpg`,
-        title: "RvB Squid Minigame Fortnite map",
-      },
-      {
-        loc: `${SITE_URL}/99 Bots Squid Royale Boss.jpg`,
-        title: "99 Bots Squid Royale Boss Fortnite map",
-      },
-      {
-        loc: `${SITE_URL}/Squid99BotsSidekicks.jpg`,
-        title: "Sidekick Siege 99 Bots Fortnite map",
-      },
+      { mapId: "rvb-squid-minigame", kind: "map" },
+      { mapId: "99-bots-squid-royale-boss", kind: "map" },
+      { mapId: "sidekick-siege-99-bots", kind: "map" },
     ],
   },
   {
     page: "/fortnite-gun-game-maps",
     images: [
-      {
-        loc: `${SITE_URL}/WinterfestDemonHuntersGunGame.jpeg`,
-        title: "Winterfest Demon Hunters Fortnite gun game map",
-      },
-      {
-        loc: `${SITE_URL}/CityTMNT.jpg`,
-        title: "TMNT City Fortnite gun game map",
-      },
+      { mapId: "winterfest-demon-hunters", kind: "gunGame" },
+      { mapId: "tmnt-city", kind: "gunGame" },
     ],
   },
   {
     page: "/best-fortnite-xp-maps",
     images: [
-      {
-        loc: `${SITE_URL}/MegaRampSurvival.jpeg`,
-        title: "TMNT Mega Ramp Survival Fortnite XP map",
-      },
-      {
-        loc: `${SITE_URL}/RedVsBluePlayersVsGuards.jpeg`,
-        title: "RvB Players vs Guards Fortnite XP map",
-      },
+      { mapId: "tmnt-mega-ramp-survival", kind: "xp" },
+      { mapId: "rvb-players-vs-guards", kind: "xp" },
     ],
   },
   {
     page: "/star-wars-tycoon-sidekick-legends",
-    images: [
-      {
-        loc: `${SITE_URL}/TycoonSidekicks.jpg`,
-        title: "Star Wars Tycoon Sidekick Legends Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "star-wars-tycoon-sidekick-legends", kind: "islandCode" }],
   },
   {
     page: "/star-wars-mega-rvb",
-    images: [
-      {
-        loc: `${SITE_URL}/StarWarsRvB.jpg`,
-        title: "Star Wars Mega RvB Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "star-wars-mega-rvb", kind: "islandCode" }],
   },
   {
     page: "/star-wars-tilted-99-bots-royale",
-    images: [
-      {
-        loc: `${SITE_URL}/StarWarsTilted99BotsRoyale.jpg`,
-        title: "Star Wars Tilted 99 Bots Royale Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "star-wars-tilted-99-bots-royale", kind: "islandCode" }],
   },
   {
     page: "/tmnt-mega-ramp-survival",
-    images: [
-      {
-        loc: `${SITE_URL}/MegaRampSurvival.jpeg`,
-        title: "TMNT Mega Ramp Survival Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "tmnt-mega-ramp-survival", kind: "islandCode" }],
   },
   {
     page: "/tmnt-city",
-    images: [
-      {
-        loc: `${SITE_URL}/CityTMNT.jpg`,
-        title: "TMNT City Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "tmnt-city", kind: "islandCode" }],
   },
   {
     page: "/rvb-squid-minigame",
-    images: [
-      {
-        loc: `${SITE_URL}/RedVsBlueSquidMinigame.jpg`,
-        title: "RvB Squid Minigame Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "rvb-squid-minigame", kind: "islandCode" }],
   },
   {
     page: "/99-bots-squid-royale-boss",
-    images: [
-      {
-        loc: `${SITE_URL}/99 Bots Squid Royale Boss.jpg`,
-        title: "99 Bots Squid Royale Boss Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "99-bots-squid-royale-boss", kind: "islandCode" }],
   },
   {
     page: "/sidekick-siege-99-bots",
-    images: [
-      {
-        loc: `${SITE_URL}/Squid99BotsSidekicks.jpg`,
-        title: "Sidekick Siege 99 Bots Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "sidekick-siege-99-bots", kind: "islandCode" }],
   },
   {
     page: "/winterfest-demon-hunters",
-    images: [
-      {
-        loc: `${SITE_URL}/WinterfestDemonHuntersGunGame.jpeg`,
-        title: "Winterfest Demon Hunters Fortnite island code",
-      },
-    ],
+    images: [{ mapId: "winterfest-demon-hunters", kind: "islandCode" }],
   },
 ];
 
@@ -170,29 +110,71 @@ function escapeXml(value: string) {
     .replace(/'/g, "&apos;");
 }
 
-export function GET() {
-  const urls = ENTRIES.map(
-    (entry) => `<url>
-  <loc>${escapeXml(`${SITE_URL}${entry.page}`)}</loc>
-${entry.images
-  .map(
-    (image) => `  <image:image>
-    <image:loc>${escapeXml(image.loc)}</image:loc>
-    <image:title>${escapeXml(image.title)}</image:title>
-  </image:image>`
-  )
-  .join("\n")}
-</url>`
-  ).join("\n");
+function absolute(href: AppPathname, locale: Locale) {
+  return `${SITE_URL}${getPathname({ href, locale })}`;
+}
+
+/** Image URLs are absolute and locale-independent — one file per asset. */
+function imageUrl(path: string) {
+  return `${SITE_URL}${encodeURI(path)}`;
+}
+
+export const dynamic = "force-static";
+
+export async function GET() {
+  const blocks: string[] = [];
+
+  for (const locale of locales) {
+    const t = await getTranslations({ locale, namespace: "imageSitemap" });
+
+    // Homepage / logo
+    blocks.push(
+      [
+        "<url>",
+        `  <loc>${escapeXml(absolute("/", locale))}</loc>`,
+        "  <image:image>",
+        `    <image:loc>${escapeXml(SITE_LOGO_URL)}</image:loc>`,
+        `    <image:title>${escapeXml(t("logo"))}</image:title>`,
+        "  </image:image>",
+        "</url>",
+      ].join("\n")
+    );
+
+    for (const entry of ENTRIES) {
+      const images = entry.images
+        .map(({ mapId, kind }) => {
+          const map = MAPS[mapId];
+          return [
+            "  <image:image>",
+            `    <image:loc>${escapeXml(imageUrl(map.image))}</image:loc>`,
+            `    <image:title>${escapeXml(
+              t(kind, { title: map.title })
+            )}</image:title>`,
+            "  </image:image>",
+          ].join("\n");
+        })
+        .join("\n");
+
+      blocks.push(
+        [
+          "<url>",
+          `  <loc>${escapeXml(absolute(entry.page, locale))}</loc>`,
+          images,
+          "</url>",
+        ].join("\n")
+      );
+    }
+  }
 
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${urls}
+${blocks.join("\n")}
 </urlset>`,
     {
       headers: {
         "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=0, s-maxage=3600",
       },
     }
   );

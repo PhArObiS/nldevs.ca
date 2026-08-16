@@ -1,0 +1,526 @@
+{
+  "pageMeta": {
+    "star-wars-fortnite-maps": {
+      "title": "Mapas de Star Wars en Fortnite y códigos de isla",
+      "description": "Descubre los mapas de Star Wars en Fortnite y los códigos de isla de NLDEVS, incluidos Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB y Star Wars Tilted 99 Bots Royale.",
+      "ogDescription": "Mapas de Star Wars en Fortnite y códigos de isla de NLDEVS — experiencias tycoon, Rojo vs Azul y bot royale."
+    },
+    "tmnt-fortnite-maps": {
+      "title": "Mejores mapas de las Tortugas Ninja en Fortnite y códigos",
+      "description": "Descubre los mapas de las Tortugas Ninja en Fortnite y los códigos de mapa de NLDEVS, incluidos TMNT Mega Ramp Survival y TMNT City — creados con UEFN.",
+      "ogDescription": "Mapas de las Tortugas Ninja en Fortnite y códigos de mapa de NLDEVS — creados con UEFN."
+    },
+    "squid-game-fortnite-maps": {
+      "title": "Mejores mapas de El Juego del Calamar en Fortnite y códigos",
+      "description": "Descubre los mapas al estilo El Juego del Calamar en Fortnite y los códigos de mapa de NLDEVS, incluidos 99 Bots Squid Royale Boss, Sidekick Siege 99 Bots y RvB Squid Minigame.",
+      "ogDescription": "Mapas al estilo El Juego del Calamar en Fortnite y códigos de mapa de NLDEVS: supervivencia contra 99 bots, batallas de jefe, sidekicks y caos Rojo vs Azul."
+    },
+    "fortnite-gun-game-maps": {
+      "title": "Mejores mapas de Gun Game en Fortnite y códigos",
+      "description": "Descubre los mejores mapas de Gun Game de Fortnite y los códigos seleccionados por NLDEVS. Progresión de armas acelerada, arenas PvP y rondas rejugables.",
+      "ogDescription": "Mapas de Gun Game de Fortnite y códigos seleccionados por NLDEVS — mapas PvP de progresión de armas hechos para rejugar."
+    },
+    "best-fortnite-xp-maps": {
+      "title": "Mejores mapas de XP de Fortnite y códigos (sube rápido)",
+      "description": "Los mejores mapas de XP de Fortnite y códigos de mapa para subir de nivel de forma eficiente. Selección de NLDEVS con resúmenes rápidos y elecciones actualizadas.",
+      "ogDescription": "Explora mapas de XP de Fortnite y sus códigos para subir de nivel de forma eficiente. Selección de NLDEVS."
+    },
+    "star-wars-tycoon-sidekick-legends": {
+      "title": "Star Wars Tycoon Sidekick Legends llega pronto ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends llega pronto a Fortnite. Código de mapa {code}. Desbloquea sidekicks y héroes, construye nuevas secciones, contrata trabajadores, sube en la clasificación de Rebirth y guarda tu progreso automáticamente.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends llega pronto a Fortnite. Desbloquea sidekicks y héroes, contrata trabajadores y sube en la clasificación de Rebirth."
+    },
+    "star-wars-mega-rvb": {
+      "title": "Código de mapa Star Wars Mega RvB ({code})",
+      "description": "Juega Star Wars Mega RvB en Fortnite. Código de mapa {code}. Combate a muerte por equipos Rojo vs Azul con armas y vehículos de Star Wars, armas personalizadas, logros y clasificación.",
+      "ogDescription": "Combate a muerte por equipos Rojo vs Azul con armas y vehículos de Star Wars, logros y clasificación."
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "title": "Código de mapa Star Wars Tilted 99 Bots Royale ({code})",
+      "description": "Juega Star Wars Tilted 99 Bots Royale en Fortnite. Código de mapa {code}. Supervivencia royale contra 99 bots con héroes desbloqueables, jefes, estadísticas guardadas, loadouts y acción Tilted x Star Wars.",
+      "ogDescription": "Supervivencia royale contra 99 bots con héroes desbloqueables, jefes, estadísticas guardadas y acción Tilted x Star Wars."
+    },
+    "tmnt-mega-ramp-survival": {
+      "title": "Código de mapa TMNT Mega Ramp Survival ({code})",
+      "description": "Juega TMNT Mega Ramp Survival en Fortnite. Código de mapa {code}. Gameplay de supervivencia a alta velocidad creado con UEFN por NLDEVS.",
+      "ogDescription": "Supervivencia en mega rampa a alta velocidad con onda Tortugas Ninja, creada con UEFN por NLDEVS."
+    },
+    "tmnt-city": {
+      "title": "Código de mapa TMNT City ({code})",
+      "description": "Explora TMNT City en Fortnite. Código de mapa {code}. Una ciudad temática de las Tortugas Ninja creada con UEFN por NLDEVS.",
+      "ogDescription": "Explora TMNT City en Fortnite. Una ciudad temática de las Tortugas Ninja creada con UEFN."
+    },
+    "rvb-squid-minigame": {
+      "title": "Código de mapa RvB Squid Minigame ({code})",
+      "description": "Juega RvB Squid Minigame en Fortnite. Código de mapa {code}. Rondas rápidas, caos entre equipos y minijuegos rejugables.",
+      "ogDescription": "Rondas rápidas, caos entre equipos y minijuegos rejugables al estilo El Juego del Calamar."
+    },
+    "99-bots-squid-royale-boss": {
+      "title": "Código de mapa 99 Bots Squid Royale Boss ({code})",
+      "description": "Juega 99 Bots Squid Royale Boss en Fortnite. Código de mapa {code}. Un mapa de supervivencia estilo El Juego del Calamar contra 99 bots con PvE, acción en mundo abierto, batallas de jefe, estadísticas guardadas, rangos y clasificaciones.",
+      "ogDescription": "Un mapa de supervivencia estilo El Juego del Calamar contra 99 bots con acción PvE en mundo abierto, batallas de jefe y clasificaciones."
+    },
+    "sidekick-siege-99-bots": {
+      "title": "Código de mapa Sidekick Siege 99 Bots ({code})",
+      "description": "Juega Sidekick Siege 99 Bots en Fortnite. Código de mapa {code}. Un mapa de supervivencia estilo El Juego del Calamar contra 99 bots con sidekicks, batallas de jefe, acción PvE, estadísticas guardadas, rangos y clasificaciones.",
+      "ogDescription": "Un mapa de supervivencia estilo El Juego del Calamar contra 99 bots con sidekicks, batallas de jefe, acción PvE y clasificaciones."
+    },
+    "winterfest-demon-hunters": {
+      "title": "Código de mapa Winterfest Demon Hunters ({code})",
+      "description": "Juega Winterfest Demon Hunters en Fortnite. Código de mapa {code}. Rondas centradas en el combate con ciclos repetibles — ideal para squads y para subir de nivel peleando.",
+      "ogDescription": "Rondas de gun game centradas en el combate con ciclos repetibles — ideal para squads."
+    },
+    "playtest-squad": {
+      "title": "NLDEVS Playtest Squad",
+      "description": "Únete a la NLDEVS Playtest Squad para recibir lanzamientos de mapas de Fortnite, invitaciones a playtests, novedades de Discord y futuras oportunidades de colaboración en UEFN.",
+      "ogDescription": "Únete a NLDEVS para recibir lanzamientos de mapas de Fortnite, invitaciones a playtests y novedades de la comunidad UEFN."
+    },
+    "uefn-contracts": {
+      "title": "Contratos UEFN",
+      "description": "Contrata a NLDEVS para contratos UEFN, creación de mapas de Fortnite, animaciones dentro del juego, experiencias de marca y soporte de estudio.",
+      "ogDescription": "Contrata a NLDEVS para contratos UEFN, creación de mapas de Fortnite y experiencias de marca."
+    },
+    "privacy": {
+      "title": "Privacidad",
+      "description": "Cómo NLDEVS recopila y usa la información de los miembros para novedades, playtests, soporte y oportunidades de colaboración.",
+      "ogDescription": "Cómo NLDEVS recopila y usa la información de los miembros."
+    }
+  },
+  "hubs": {
+    "starWars": {
+      "breadcrumb": "Mapas de Star Wars",
+      "eyebrow": "Una galaxia muy, muy lejana",
+      "title": "Mapas de <accent>Star Wars en Fortnite</accent>",
+      "description": "Experiencias de Star Wars en Fortnite creadas con Unreal Editor for Fortnite. Progresión tycoon, PvP Rojo vs Azul, supervivencia bot royale y códigos de isla.",
+      "schemaName": "Mapas de Star Wars en Fortnite y códigos de isla",
+      "schemaDescription": "Una selección de mapas de Star Wars en Fortnite y códigos de isla creados con UEFN por NLDEVS, incluidos progresión tycoon, PvP Rojo vs Azul y supervivencia bot royale.",
+      "listName": "Mapas de Star Wars en Fortnite",
+      "genre": "Mapa de Star Wars en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "Star Wars",
+      "introSections": [],
+      "tipSections": [
+        {
+          "type": "orderedList",
+          "title": "Cómo",
+          "accent": "jugar",
+          "items": [
+            "Abre Fortnite → Buscar / Descubrir.",
+            "Ingresa el código de isla exactamente (####-####-####).",
+            "Entra a la isla y sigue los objetivos del juego.",
+            "Marca el mapa como favorito para encontrarlo más rápido después."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Lo que vas a",
+          "accent": "encontrar",
+          "items": [
+            "Progresión Star Wars Tycoon con guardado, rebirths y recompensas.",
+            "Combate a muerte por equipos Rojo vs Azul con armas y vehículos de Star Wars.",
+            "Supervivencia royale contra 99 bots con héroes, jefes y loadouts guardados.",
+            "Experiencias creadas con UEFN y pensadas para repetir sesiones con amigos."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuáles son los mejores mapas de Star Wars en Fortnite de NLDEVS?",
+          "a": "NLDEVS tiene actualmente Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB y Star Wars Tilted 99 Bots Royale."
+        },
+        {
+          "q": "¿Cuál es el código de isla de Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends llega pronto. El código de isla anunciado es 3205-2388-4588."
+        },
+        {
+          "q": "¿Qué mapa de Star Wars en Fortnite es mejor para PvP?",
+          "a": "Star Wars Mega RvB es el más adecuado para PvP, porque es un mapa de combate a muerte por equipos Rojo vs Azul con armas de Star Wars, armas personalizadas, vehículos, logros y clasificación."
+        },
+        {
+          "q": "¿Qué mapa de Star Wars en Fortnite tiene bots?",
+          "a": "Star Wars Tilted 99 Bots Royale es el mapa de Star Wars centrado en bots, con supervivencia royale contra 99 bots, batallas de jefe, héroes desbloqueables, estadísticas y loadouts guardados."
+        }
+      ],
+      "notes": {
+        "star-wars-tycoon-sidekick-legends": "Próximamente: Star Wars Tycoon con desbloqueo de sidekicks y héroes, nuevas secciones y mejoras, trabajadores que aumentan la producción, clasificación de rebirth, progreso guardado automáticamente y hasta 4 jugadores.",
+        "star-wars-mega-rvb": "PvP Rojo vs Azul con armas de Star Wars, armas personalizadas, vehículos, logros, música y progresión hasta el rango Unreal.",
+        "star-wars-tilted-99-bots-royale": "Supervivencia PvE en mundo abierto con 99 bots, batallas de jefe, héroes desbloqueables, estadísticas y loadouts guardados, y acción Tilted con temática de Star Wars."
+      },
+      "modeOverrides": {
+        "star-wars-tycoon-sidekick-legends": "Próximamente / Tycoon",
+        "star-wars-mega-rvb": "Combate por equipos",
+        "star-wars-tilted-99-bots-royale": "Bot Royale"
+      },
+      "relatedLabels": [
+        "Mapas Tortugas Ninja",
+        "Mapas El Juego del Calamar",
+        "Mapas Gun Game",
+        "Mapas de XP"
+      ],
+      "disclaimer": "Experiencias de Fortnite creadas por la comunidad con UEFN. No afiliado a Lucasfilm, Disney ni Epic Games."
+    },
+    "tmnt": {
+      "breadcrumb": "Mapas Tortugas Ninja",
+      "eyebrow": "Turtle power",
+      "title": "Mejores mapas de las <accent>Tortugas Ninja en Fortnite</accent>",
+      "description": "Mapas de las Tortugas Ninja en Fortnite y códigos de mapa creados con UEFN. Exploración urbana, partidas de supervivencia y arenas de combate hechas para repetir.",
+      "schemaName": "Mejores mapas de las Tortugas Ninja en Fortnite y códigos de mapa",
+      "schemaDescription": "Una selección de mapas de las Tortugas Ninja en Fortnite y códigos de mapa creados con UEFN por NLDEVS, incluidas partidas de supervivencia y experiencias urbanas.",
+      "listName": "Mapas de las Tortugas Ninja en Fortnite",
+      "genre": "Mapa de las Tortugas Ninja en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "Tortugas Ninja",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-tmnt-maps",
+          "title": "¿Qué son los mapas de las",
+          "accent": "Tortugas Ninja en Fortnite?",
+          "paragraphs": [
+            "Los mapas de las Tortugas Ninja en Fortnite son islas creadas por la comunidad e inspiradas en el universo de las Tortugas Ninja — exploración urbana, partidas de supervivencia, arenas de combate y minijuegos acelerados. Estas islas están creadas con UEFN y pensadas para rejugarse con amigos.",
+            "Si buscas acción a alta velocidad, los mapas de supervivencia como los modos Mega Ramp son ideales para sesiones rápidas. Si quieres más libertad, los mapas de experiencia urbana son perfectos para explorar, pelear y pasar el rato en grupo."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Consejos para los mapas de las",
+          "accent": "Tortugas Ninja",
+          "items": [
+            "Juega con amigos — las partidas de supervivencia y los mapas urbanos son más divertidos en grupo.",
+            "Consejo de Mega Ramp: mantente centrado y haz correcciones pequeñas temprano en lugar de giros grandes tarde.",
+            "Marca el mapa como favorito después de jugar para volver más fácil tras las actualizaciones.",
+            "Si quieres PvP, ve a las zonas de combate o a los modos gun game cuando estén disponibles."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Cómo",
+          "accent": "jugar",
+          "items": [
+            "Abre Fortnite → Buscar / Descubrir.",
+            "Ingresa el código de mapa exactamente (####-####-####).",
+            "Entra a la isla y sigue los objetivos del juego.",
+            "Marca el mapa como favorito para encontrarlo más rápido después."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cómo ingreso un código de mapa en Fortnite?",
+          "a": "Abre Fortnite, ve a Buscar/Descubrir, ingresa el código de isla (####-####-####) y selecciona el resultado para jugar."
+        },
+        {
+          "q": "¿Estos mapas de las Tortugas Ninja en Fortnite son oficiales?",
+          "a": "Son experiencias de Fortnite creadas por la comunidad con UEFN. Esta página no está afiliada a Nickelodeon ni a la marca TMNT."
+        },
+        {
+          "q": "¿Qué es TMNT Mega Ramp Survival?",
+          "a": "Una experiencia de supervivencia acelerada centrada en esquivar peligros y seguir con vida mientras el caos aumenta en una mega rampa."
+        },
+        {
+          "q": "¿TMNT City es un mapa de gun game?",
+          "a": "TMNT City es principalmente una experiencia urbana con temática de las Tortugas Ninja. Según la versión actual de la isla, puede incluir zonas de combate o modos de juego."
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Supervivencia en mega rampa a alta velocidad con temática de las Tortugas Ninja. Esquiva el caos y sobrevive hasta el final.",
+        "tmnt-city": "Experiencia urbana con temática de las Tortugas Ninja creada en UEFN — explora, pelea y relájate con amigos."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Supervivencia",
+        "tmnt-city": "Experiencia"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Gun Game",
+        "Mapas El Juego del Calamar",
+        "Mapas Star Wars"
+      ]
+    },
+    "squidGame": {
+      "breadcrumb": "Mapas El Juego del Calamar",
+      "eyebrow": "Rondas de eliminación",
+      "title": "Mejores mapas de <accent>El Juego del Calamar en Fortnite</accent>",
+      "description": "Minijuegos al estilo El Juego del Calamar, supervivencia contra 99 bots, sidekicks, batallas de jefe y caos Rojo vs Azul creados con UEFN. Cada entrada incluye un código de isla y el tipo de gameplay.",
+      "schemaName": "Mejores mapas de El Juego del Calamar en Fortnite y códigos de mapa",
+      "schemaDescription": "Una selección de mapas al estilo El Juego del Calamar en Fortnite y códigos de mapa creados con UEFN por NLDEVS, incluidas supervivencia contra 99 bots, batallas de jefe, sidekicks y mapas Rojo vs Azul.",
+      "listName": "Mapas de El Juego del Calamar en Fortnite",
+      "genre": "Mapa de El Juego del Calamar en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "El Juego del Calamar",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-squid-maps",
+          "title": "¿Qué son los mapas de",
+          "accent": "El Juego del Calamar en Fortnite?",
+          "paragraphs": [
+            "Los mapas de «El Juego del Calamar» en Fortnite son islas creadas por la comunidad e inspiradas en minijuegos de eliminación. Normalmente vas a encontrar rondas rápidas, desafíos de alto riesgo y competencia caótica — casi siempre pensados para jugar con amigos.",
+            "Entre los modos populares al estilo El Juego del Calamar están Luz roja, luz verde, rondas de supervivencia, minijuegos con objetivos, supervivencia contra 99 bots, batallas de jefe y desafíos en grupo. La disponibilidad de los mapas y el XP pueden cambiar con el tiempo según las actualizaciones y revisiones de las islas."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "id": "tips",
+          "title": "Consejos para los mapas de",
+          "accent": "El Juego del Calamar",
+          "items": [
+            "Juega con amigos: la mayoría de las rondas al estilo El Juego del Calamar son más divertidas con el grupo completo y con colas más rápidas.",
+            "Si quieres practicar, elige las variantes con bots para aprender rutas y mecánicas antes de pasar al PvP.",
+            "Cambia de mapa si el XP baja; la calibración y los rendimientos decrecientes varían según la isla y el ciclo de actualizaciones.",
+            "Usa chat de voz o pings rápidos — la coordinación importa en los desafíos de eliminación y las rondas por equipos."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "id": "how-to-play",
+          "title": "Cómo",
+          "accent": "jugar",
+          "items": [
+            "Abre Fortnite → Buscar / Descubrir.",
+            "Ingresa el código de mapa exactamente (####-####-####).",
+            "Entra al mapa y sigue las reglas del minijuego (varían según la isla).",
+            "Juega con amigos para aprovechar mejor las rondas de eliminación."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cómo ingreso un código de mapa en Fortnite?",
+          "a": "Abre Fortnite, ve a Buscar/Descubrir, ingresa el código de isla (####-####-####) y selecciona el resultado para jugar."
+        },
+        {
+          "q": "¿Los mapas de El Juego del Calamar en Fortnite son oficiales?",
+          "a": "No. Son experiencias de Fortnite creadas por la comunidad e inspiradas en minijuegos y desafíos al estilo El Juego del Calamar, sin vínculo oficial con Netflix."
+        },
+        {
+          "q": "¿Los mapas de El Juego del Calamar dan XP?",
+          "a": "Algunas islas pueden otorgar XP según la calibración de Fortnite y la configuración del mapa. Las tasas de XP pueden cambiar tras actualizaciones o revisiones."
+        },
+        {
+          "q": "¿Qué mapas de El Juego del Calamar son mejores para jugar con amigos?",
+          "a": "Los mapas de tipo minijuego y eliminación suelen ser mejores con el grupo completo. Son más divertidos cuando puedes encadenar rondas rápido y competir con amigos."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minijuegos al estilo El Juego del Calamar con caos Rojo vs Azul y rondas rápidas.",
+        "99-bots-squid-royale-boss": "Supervivencia PvE en mundo abierto contra 99 bots con batallas de jefe, nuevas armas, monturas de fauna, rangos, clasificaciones y estadísticas guardadas.",
+        "sidekick-siege-99-bots": "Supervivencia contra 99 bots centrada en sidekicks, con batallas de jefe, acción PvE, loadouts guardados, rangos, clasificaciones y hasta 5 jugadores."
+      },
+      "modeOverrides": {
+        "rvb-squid-minigame": "RvB",
+        "99-bots-squid-royale-boss": "99 Bots",
+        "sidekick-siege-99-bots": "Sidekicks"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Gun Game",
+        "Mapas Tortugas Ninja",
+        "Mapas Star Wars"
+      ]
+    },
+    "gunGame": {
+      "breadcrumb": "Mapas Gun Game",
+      "eyebrow": "Progresión de armas",
+      "title": "Mejores mapas de <accent>Gun Game en Fortnite</accent>",
+      "description": "Modos acelerados de progresión de armas donde cada eliminación mejora tu loadout. Una selección de islas con códigos y notas rápidas.",
+      "schemaName": "Mejores mapas de Gun Game en Fortnite",
+      "schemaDescription": "Una selección de mapas de Gun Game de Fortnite y códigos de mapa creados con UEFN por NLDEVS — PvP de progresión de armas hecho para rondas rejugables.",
+      "listName": "Mapas de Gun Game en Fortnite",
+      "genre": "Mapa de Gun Game en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "Gun Game",
+      "introSections": [
+        {
+          "type": "prose",
+          "title": "¿Qué es un mapa de",
+          "accent": "Gun Game en Fortnite?",
+          "paragraphs": [
+            "Gun Game en Fortnite es un modo PvP de progresión de armas hecho para rondas rápidas y rejugables. Los jugadores empiezan con un arma y suben a la siguiente después de cada eliminación.",
+            "El objetivo es terminar la lista de armas antes que los demás. Los buenos mapas de Gun Game tienen buen flujo, rotaciones de armas equilibradas y reapariciones rápidas."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Consejos para ganar rondas de",
+          "accent": "Gun Game",
+          "items": [
+            "Aprende el flujo de reapariciones y rodea los combates.",
+            "Mantén los ángulos y vuelve a asomarte con criterio.",
+            "La precisión a media distancia vale más que las jugadas vistosas.",
+            "Sigue en movimiento para mejorar las armas más rápido."
+          ]
+        }
+      ],
+      "faqs": [],
+      "notes": {
+        "tmnt-city": "Ciclos de combate con temática de las Tortugas Ninja, progresión de armas rápida y rondas rejugables.",
+        "winterfest-demon-hunters": "Gun game de caza de demonios con temática invernal, ciclos de combate repetibles y rotación de armas."
+      },
+      "titleOverrides": {
+        "tmnt-city": "TMNT City — Gun Game",
+        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+      },
+      "modeOverrides": {
+        "tmnt-city": "Gun Game",
+        "winterfest-demon-hunters": "Gun Game FFA"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Tortugas Ninja",
+        "Mapas El Juego del Calamar",
+        "Mapas Star Wars"
+      ]
+    },
+    "xp": {
+      "breadcrumb": "Mapas de XP",
+      "eyebrow": "Sube de nivel más rápido",
+      "title": "Mejores mapas de <accent>XP de Fortnite</accent>",
+      "description": "Una selección de mapas de XP de Fortnite con códigos de isla y notas rápidas sobre cómo se juega cada uno.",
+      "schemaName": "Mejores mapas de XP de Fortnite",
+      "schemaDescription": "Una selección de mapas de XP de Fortnite y códigos de isla de NLDEVS, con notas rápidas sobre cómo se juega cada isla mientras subes de nivel.",
+      "listName": "Mapas de XP de Fortnite",
+      "genre": "Mapa de XP de Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "de XP",
+      "introSections": [],
+      "tipSections": [],
+      "faqs": [],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Partidas de supervivencia aceleradas con ciclos de gameplay repetibles. Ideal si prefieres jugar activamente mientras subes de nivel.",
+        "winterfest-demon-hunters": "Ciclos centrados en el combate con rondas repetibles. Funciona bien para quienes quieren XP mientras pelean.",
+        "rvb-players-vs-guards": "Objetivos por equipos y sesiones más largas. Bueno para un XP constante jugando rondas estilo PvP.",
+        "tmnt-city": "Rutas de exploración y combate con ciclos de XP consistentes.",
+        "rvb-squid-minigame": "Rondas rápidas y juego basado en objetivos."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Activo",
+        "winterfest-demon-hunters": "Mixto",
+        "rvb-players-vs-guards": "Mixto",
+        "tmnt-city": "Activo",
+        "rvb-squid-minigame": "Activo"
+      },
+      "relatedLabels": [
+        "Mapas Gun Game",
+        "Mapas Tortugas Ninja",
+        "Mapas El Juego del Calamar",
+        "Mapas Star Wars"
+      ]
+    }
+  },
+  "playtest": {
+    "eyebrow": "Comunidad",
+    "title": "Únete a la <accent>NLDEVS Playtest Squad</accent>",
+    "description": "Una forma simple de mantenerte cerca de los nuevos mapas, pruebas, novedades y oportunidades de colaboración de NLDEVS.",
+    "heroTitle": "Prueba. Comparte tu opinión. Consigue los drops.",
+    "heroBody": "Únete como miembro para recibir mapas antes que nadie, convocatorias a playtests privados, oportunidades de voto y una línea directa de feedback con NLDEVS.",
+    "heroNote": "Sin spam. Sin venta de datos. Puedes darte de baja cuando quieras.",
+    "perks": [
+      "Mapas antes que nadie",
+      "Invitaciones a playtests",
+      "Voto en los nuevos temas",
+      "Comentarios directos al equipo"
+    ],
+    "joinDiscord": "Entrar a Discord",
+    "exploreMaps": "Explorar mapas",
+    "squadPerk": "Beneficio de miembro",
+    "benefits": [
+      {
+        "title": "Acceso anticipado",
+        "text": "Recibe mapas y actualizaciones de código antes de las publicaciones más amplias, apenas haya nuevas islas o revisiones listas."
+      },
+      {
+        "title": "Playtests privados",
+        "text": "Recibe invitaciones a playtests privados, prueba nuevos ciclos y ayuda a afinar el gameplay antes de las grandes actualizaciones."
+      },
+      {
+        "title": "Vota y orienta",
+        "text": "Vota los próximos temas de mapas y envía comentarios, bugs, capturas y reacciones de gameplay directamente."
+      },
+      {
+        "title": "Crédito en la comunidad",
+        "text": "Entra en consideración para futuras menciones, créditos de playtester, oportunidades de desarrollo, sorteos y eventos de XP/mapas."
+      }
+    ]
+  },
+  "contracts": {
+    "eyebrow": "Trabajo para devs / clientes",
+    "title": "Contratos UEFN, <accent>experiencias en Fortnite</accent>",
+    "description": "NLDEVS crea proyectos UEFN jugables para creadores, clientes, marcas y estudios que necesitan apoyo en producción para Fortnite.",
+    "heroTitle": "Contrata a NLDEVS para proyectos en UEFN.",
+    "heroBody": "Desde prototipos hasta islas de Fortnite pulidas, NLDEVS puede ayudarte a planificar, construir, probar y mejorar experiencias en UEFN con un flujo de producción ordenado.",
+    "startProject": "Iniciar un proyecto",
+    "viewCreatorPage": "Ver página del creador",
+    "servicesTitle": "Lo que NLDEVS puede crear",
+    "services": [
+      "Creación y prototipos de mapas en UEFN",
+      "Islas de Fortnite tipo tycoon, PvP, gun game y de eventos",
+      "Experiencias de marca en Fortnite",
+      "Animaciones dentro del juego, momentos cinematográficos y secuencias interactivas",
+      "Diseño y pulido de ciclos de gameplay",
+      "Verse, dispositivos, UI, pruebas y soporte de lanzamiento",
+      "Limpieza, actualización y optimización de islas existentes"
+    ],
+    "clientsTitle": "Hecho para proyectos serios",
+    "clientTypes": [
+      "Creadores que necesitan un socio confiable en UEFN",
+      "Marcas que exploran experiencias en Fortnite",
+      "Estudios de juegos que necesitan refuerzo en producción UEFN",
+      "Equipos que quieren un prototipo jugable antes de un lanzamiento mayor"
+    ],
+    "ctaTitle": "Envía el objetivo, el plazo y el rango de presupuesto.",
+    "ctaBody": "Mantén el primer mensaje simple: qué quieres construir, si es una isla nueva o un proyecto existente, tu ventana ideal de lanzamiento y cualquier referencia o característica de gameplay indispensable.",
+    "exploreMaps": "Explorar mapas de NLDEVS",
+    "mailSubject": "Consulta sobre contrato UEFN",
+    "servicesEyebrow": "Servicios",
+    "clientsEyebrow": "Para quién es",
+    "inquiryEyebrow": "Consulta de proyecto"
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "intro": "Usamos la información de los miembros para operar NLDEVS, apoyar a los jugadores, organizar playtests y encontrar futuros colaboradores. La mantenemos práctica, limitada y nunca la vendemos.",
+    "sections": [
+      {
+        "title": "Qué recopilamos",
+        "items": [
+          "Nombre y correo electrónico cuando te unes o inicias sesión como miembro.",
+          "Datos opcionales de jugador, como nombre en Fortnite, usuario de Discord, mapa favorito, estilo de perfil, objetivos de miembro, mensajes e imágenes enviadas.",
+          "Datos opcionales de desarrollador o creador, como rol, disponibilidad, enlace de portafolio y habilidades.",
+          "Una confirmación obligatoria de que el miembro tiene 13 años o más y cuenta con permiso de un padre o tutor si es menor de 18.",
+          "Datos técnicos básicos, como la página de origen y la información del navegador, para entender de dónde vienen los registros y resolver problemas."
+        ]
+      },
+      {
+        "title": "Cómo la usamos",
+        "items": [
+          "Para reconocer a los miembros que vuelven.",
+          "Para responder mensajes, reportes de bugs, ideas de mapas e interés en colaboraciones.",
+          "Para invitar a los miembros interesados a playtests, actualizaciones de mapas u oportunidades de NLDEVS.",
+          "Para mejorar el sitio, los mapas y la experiencia de los miembros."
+        ]
+      },
+      {
+        "title": "Cómo la protegemos",
+        "items": [
+          "Los envíos de los miembros pasan por una ruta del servidor, para que las claves secretas de la base de datos no queden expuestas en el código del navegador.",
+          "El acceso a la base de datos está restringido con Row Level Security de Supabase y credenciales del lado del servidor.",
+          "No vendemos la información de los miembros.",
+          "Limitamos la información que pedimos y mantenemos los campos opcionales realmente opcionales."
+        ]
+      }
+    ],
+    "emailsTitle": "Correos",
+    "emailsBody": "Si te unes a NLDEVS, podemos enviarte un correo breve de confirmación. Solo usamos tu consentimiento de contacto para novedades futuras, playtests o noticias de mapas.",
+    "manageTitle": "Eliminar o actualizar tu información",
+    "manageBody": "Para actualizar o eliminar tu información de miembro, escribe a <mail>nldevsmtl@gmail.com</mail>. Usa el mismo correo con el que te registraste para que podamos encontrar el registro correcto.",
+    "thirdPartyTitle": "Servicios de terceros",
+    "thirdPartyBody": "NLDEVS usa servicios confiables como Supabase para los datos de miembros y Resend para el envío de correos. Esos servicios procesan los datos solo en la medida necesaria para ofrecer las funciones del sitio.",
+    "backHome": "Volver a NLDEVS"
+  }
+}

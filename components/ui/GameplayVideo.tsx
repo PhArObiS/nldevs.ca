@@ -1,5 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+// Locale-aware Link: with next/link the CTA sent visitors on /fr, /pt and
+// /es to the English route.
+import { Link } from "@/i18n/navigation";
+import type { AppPathname } from "@/i18n/routing";
 import { SOCIAL_LINKS } from "@/constants/site";
 
 type Props = {
@@ -7,7 +11,7 @@ type Props = {
   description: string;
   poster: string;
   youtubeId?: string;
-  ctaHref?: string;
+  ctaHref?: AppPathname;
   ctaLabel?: string;
 };
 
@@ -17,8 +21,10 @@ export default function GameplayVideo({
   poster,
   youtubeId,
   ctaHref,
-  ctaLabel = "View map",
+  ctaLabel,
 }: Props) {
+  const tc = useTranslations("common");
+  const label = ctaLabel ?? tc("viewMap");
   return (
     <div className="clip-corner relative overflow-hidden border border-edge/70 bg-ink-800">
       <div className="relative aspect-video">
@@ -54,7 +60,7 @@ export default function GameplayVideo({
               <div className="mt-5 flex flex-wrap gap-3">
                 {ctaHref && (
                   <Link href={ctaHref} className="btn-neon clip-corner-sm">
-                    {ctaLabel}
+                    {label}
                   </Link>
                 )}
                 <a

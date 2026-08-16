@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { AppPathname } from "@/i18n/routing";
 import { RevealGroup, RevealItem } from "./Reveal";
 
 /** Bordered panel used for FAQ entries and short content blocks. */
@@ -39,7 +41,7 @@ export function FaqList({
 export function PillLinks({
   links,
 }: {
-  links: { href: string; label: string }[];
+  links: { href: AppPathname; label: string }[];
 }) {
   return (
     <div className="flex flex-wrap justify-center gap-2.5">
@@ -58,13 +60,15 @@ export function PillLinks({
 
 /** "Back to top" affordance at the foot of an inner page. */
 export function BackToTop() {
+  const t = useTranslations("common");
+
   return (
     <div className="mt-16 flex justify-center">
       <a
         href="#top"
         className="text-sm text-gray-500 transition hover:text-neon-cyan"
       >
-        Back to top ↑
+        {t("backToTop")}
       </a>
     </div>
   );

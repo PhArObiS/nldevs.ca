@@ -8,57 +8,60 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import type { AppPathname } from "@/i18n/routing";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { SOCIAL_LINKS } from "@/constants/site";
 
 type NavItem = {
-  href: string;
-  label: string;
+  href: AppPathname;
+  /** Key under the `nav` namespace. */
+  labelKey: string;
   /** Renders a hover/focus dropdown on desktop and a labelled group on mobile. */
-  children?: { href: string; label: string }[];
+  children?: { href: AppPathname; labelKey: string }[];
 };
 
 const NAV: NavItem[] = [
-  { href: "/", label: "Home" },
+  { href: "/", labelKey: "home" },
   {
     href: "/star-wars-fortnite-maps",
-    label: "Star Wars",
+    labelKey: "starWars",
     children: [
       {
         href: "/star-wars-tycoon-sidekick-legends",
-        label: "Star Wars Tycoon",
+        labelKey: "starWarsTycoon",
       },
-      { href: "/star-wars-mega-rvb", label: "Mega RvB" },
+      { href: "/star-wars-mega-rvb", labelKey: "megaRvb" },
       {
         href: "/star-wars-tilted-99-bots-royale",
-        label: "Tilted 99 Bots Royale",
+        labelKey: "tilted99Bots",
       },
     ],
   },
   {
     href: "/tmnt-fortnite-maps",
-    label: "TMNT",
+    labelKey: "tmnt",
     children: [
-      { href: "/tmnt-mega-ramp-survival", label: "Mega Ramp Survival" },
-      { href: "/tmnt-city", label: "TMNT City" },
+      { href: "/tmnt-mega-ramp-survival", labelKey: "megaRampSurvival" },
+      { href: "/tmnt-city", labelKey: "tmntCity" },
     ],
   },
   {
     href: "/squid-game-fortnite-maps",
-    label: "Squid Game",
+    labelKey: "squidGame",
     children: [
-      { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
-      { href: "/99-bots-squid-royale-boss", label: "99 Bots Squid Royale Boss" },
-      { href: "/sidekick-siege-99-bots", label: "Sidekick Siege 99 Bots" },
+      { href: "/rvb-squid-minigame", labelKey: "rvbSquidMinigame" },
+      { href: "/99-bots-squid-royale-boss", labelKey: "squidRoyaleBoss" },
+      { href: "/sidekick-siege-99-bots", labelKey: "sidekickSiege" },
     ],
   },
-  { href: "/fortnite-gun-game-maps", label: "Gun Games" },
-  { href: "/best-fortnite-xp-maps", label: "XP Maps" },
+  { href: "/fortnite-gun-game-maps", labelKey: "gunGames" },
+  { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
 ];
 
-const FEATURED_SUBLINKS = [
+const FEATURED_SUBLINKS: { href: AppPathname; label: string }[] = [
   {
     href: "/star-wars-tycoon-sidekick-legends",
     label: "Star Wars Tycoon Sidekick Legends",
@@ -116,8 +119,8 @@ function getStoredClientProfile() {
   }
 }
 
-function getFirstName(name?: string) {
-  return name?.trim().split(/\s+/)[0] || "Player";
+function getFirstName(name: string | undefined, fallback: string) {
+  return name?.trim().split(/\s+/)[0] || fallback;
 }
 
 async function refreshStoredClientProfile(profile: ClientProfileSummary | null) {
@@ -149,6 +152,8 @@ async function refreshStoredClientProfile(profile: ClientProfileSummary | null) 
 }
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+  const tc = useTranslations("common");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -281,9 +286,12 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="group flex flex-row items-center gap-2.5"
+              // shrink-0: without it the logo box compresses below its own
+              // text and the wordmark spills over the first nav item — which
+              // only showed up once labels were translated.
+              className="group flex shrink-0 flex-row items-center gap-2.5"
               onClick={closeMenu}
-              aria-label="NLDEVS Home"
+              aria-label={t("homeAria")}
             >
               <Image
                 src="/NavLogo.png"
@@ -302,7 +310,7 @@ export default function Navbar() {
             {/* Desktop nav */}
             <nav
               className="hidden items-center gap-1 lg:flex"
-              aria-label="Primary navigation"
+              aria-label={t("primaryNav")}
             >
               {NAV.map((item) => {
                 const active = isBranchActive(pathname, item);
@@ -312,18 +320,21 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       aria-current={active ? "page" : undefined}
-                      className={`relative block px-3 py-2 text-sm font-medium transition-colors ${
+                      // nowrap: translated labels ("Tortues Ninja", "El Juego
+                      // del Calamar") are long enough that flex shrink broke
+                      // every link onto two lines outside English.
+                      className={`relative block whitespace-nowrap px-2.5 py-2 text-sm font-medium transition-colors xl:px-3 ${
                         active
                           ? "text-white"
                           : "text-gray-400 hover:text-white"
                       }`}
                     >
-                      {item.label}
+                      {t(item.labelKey)}
 
                       {/* Neon underline: solid when active, on hover otherwise */}
                       <span
                         aria-hidden="true"
-                        className={`absolute inset-x-3 -bottom-px h-0.5 bg-gradient-to-r from-neon-cyan to-neon-magenta transition-transform duration-300 ${
+                        className={`absolute inset-x-2.5 -bottom-px h-0.5 bg-gradient-to-r from-neon-cyan to-neon-magenta transition-transform duration-300 xl:inset-x-3 ${
                           active
                             ? "scale-x-100"
                             : "scale-x-0 group-hover:scale-x-100"
@@ -338,7 +349,7 @@ export default function Navbar() {
                             href={item.href}
                             className="block px-3 py-2 text-sm text-gray-300 transition hover:bg-white/5 hover:text-white"
                           >
-                            {item.label} Hub
+                            {t("hub", { label: t(item.labelKey) })}
                           </Link>
 
                           <div className="my-2 h-px bg-white/10" />
@@ -349,7 +360,7 @@ export default function Navbar() {
                               href={c.href}
                               className="block px-3 py-2 text-sm text-gray-300 transition hover:bg-white/5 hover:text-white"
                             >
-                              {c.label}
+                              {t(c.labelKey)}
                             </Link>
                           ))}
                         </div>
@@ -361,45 +372,59 @@ export default function Navbar() {
             </nav>
 
             {/* Right side: socials + mobile hamburger */}
-            <div className="flex flex-row items-center gap-3">
+            <div className="flex flex-row items-center gap-2 xl:gap-3">
               <a
                 href={SOCIAL_LINKS.fortnite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="clip-corner-sm hidden border border-neon-cyan bg-neon-cyan px-3 py-2 text-sm font-black text-ink transition hover:bg-white lg:inline-flex"
+                className="clip-corner-sm hidden whitespace-nowrap border border-neon-cyan bg-neon-cyan px-3 py-2 text-sm font-black text-ink transition hover:bg-white xl:inline-flex"
               >
-                Follow Fortnite
+                {tc("followFortniteShort")}
               </a>
 
               <div className="hidden items-center gap-2 lg:flex">
+                <LanguageSwitcher />
                 <button
                   type="button"
                   onClick={openClientLogin}
-                  className={`clip-corner-sm border px-3 py-2 text-sm font-semibold transition ${
+                  className={`clip-corner-sm whitespace-nowrap border px-3 py-2 text-sm font-semibold transition ${
                     clientConfirmed
                       ? "badge-pulse border-emerald-400 bg-emerald-400 text-ink hover:bg-white"
                       : "border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan hover:border-neon-cyan hover:bg-neon-cyan hover:text-ink"
                   }`}
                 >
                   {clientConfirmed
-                    ? `Hi, ${getFirstName(clientProfile.name)}`
+                    ? t("greeting", {
+                        name: getFirstName(
+                          clientProfile.name,
+                          t("defaultPlayerName")
+                        ),
+                      })
                     : clientProfile
-                      ? "Confirm"
-                      : "Login"}
+                      ? t("confirm")
+                      : t("login")}
                 </button>
 
                 {clientProfile && (
                   <button
                     type="button"
                     onClick={logoutClient}
-                    className="clip-corner-sm border border-edge-bright bg-ink-800/70 px-3 py-2 text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
+                    className="clip-corner-sm whitespace-nowrap border border-edge-bright bg-ink-800/70 px-3 py-2 text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
                   >
-                    Logout
+                    {t("logout")}
                   </button>
                 )}
               </div>
 
-              <div className="hidden flex-row items-center gap-1.5 sm:flex">
+              {/*
+                Shown only below lg, where the desktop nav is hidden and there
+                is room. From lg up the row already carries the full nav, the
+                Fortnite button, the language picker and login — adding five
+                icons pushed Spanish and Portuguese past the 1280px max width
+                at every breakpoint. Socials stay reachable in the footer and
+                the mobile menu.
+              */}
+              <div className="hidden flex-row items-center gap-1.5 sm:flex lg:hidden">
                 {Socials.map((social) => {
                   const external = isExternalHref(social.href);
 
@@ -438,7 +463,9 @@ export default function Navbar() {
                 <button
                   type="button"
                   className="inline-flex min-h-11 touch-manipulation items-center gap-1.5 px-2.5 text-xs font-bold uppercase tracking-wide text-current transition hover:text-white"
-                  aria-label={clientProfile ? "Open member menu" : "Open login menu"}
+                  aria-label={
+                    clientProfile ? t("openMemberMenu") : t("openLoginMenu")
+                  }
                   aria-controls="mobile-menu"
                   aria-expanded={open}
                   onPointerDown={handleMenuButtonPointerDown}
@@ -456,17 +483,22 @@ export default function Navbar() {
                     />
                   )}
                   {clientConfirmed
-                    ? `Hi, ${getFirstName(clientProfile.name)}`
+                    ? t("greeting", {
+                        name: getFirstName(
+                          clientProfile.name,
+                          t("defaultPlayerName")
+                        ),
+                      })
                     : clientProfile
-                      ? "Confirm"
-                      : "Login"}
+                      ? t("confirm")
+                      : t("login")}
                 </button>
 
                 <button
                   ref={menuButtonRef}
                   type="button"
                   className="inline-flex min-h-11 min-w-11 touch-manipulation items-center justify-center border-l border-current/25 px-3 py-2 text-current transition hover:bg-neon-cyan hover:text-ink"
-                  aria-label={open ? "Close menu" : "Open menu"}
+                  aria-label={open ? t("closeMenu") : t("openMenu")}
                   aria-controls="mobile-menu"
                   aria-expanded={open}
                   onPointerDown={handleMenuButtonPointerDown}
@@ -493,7 +525,7 @@ export default function Navbar() {
 
         {/* Mobile quick-nav tab strip */}
         <nav
-          aria-label="Mobile quick navigation"
+          aria-label={t("mobileQuickNav")}
           className="border-t border-white/5 lg:hidden"
         >
           <div className="scrollbar-none w-full max-w-full overflow-x-auto px-4 py-2">
@@ -513,7 +545,7 @@ export default function Navbar() {
                         : "border-edge bg-ink-800/60 text-gray-400 hover:text-white"
                     }`}
                   >
-                    {item.label}
+                    {t(item.labelKey)}
                   </Link>
                 );
               })}
@@ -532,7 +564,7 @@ export default function Navbar() {
           }`}
         >
           <div className="clip-corner mx-4 mb-4 mt-3 border border-edge bg-ink/95 backdrop-blur-xl">
-            <nav className="p-3" aria-label="Mobile menu">
+            <nav className="p-3" aria-label={t("mobileMenu")}>
               <ul className="flex flex-col">
                 <li className="mb-2 border-b border-white/10 pb-2">
                   <a
@@ -542,7 +574,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="clip-corner-sm mx-3 my-2 block border border-neon-cyan bg-neon-cyan px-3 py-2.5 text-sm font-black uppercase tracking-wide text-ink transition hover:bg-white"
                   >
-                    Follow @nldevs on Fortnite
+                    {tc("followFortnite")}
                   </a>
 
                   <button
@@ -560,10 +592,15 @@ export default function Navbar() {
                     }`}
                   >
                     {clientConfirmed
-                      ? `Hi, ${getFirstName(clientProfile.name)}`
+                      ? t("greeting", {
+                          name: getFirstName(
+                            clientProfile.name,
+                            t("defaultPlayerName")
+                          ),
+                        })
                       : clientProfile
-                        ? "Confirm email"
-                        : "Login"}
+                        ? t("confirmEmail")
+                        : t("login")}
                   </button>
 
                   {clientProfile && (
@@ -575,7 +612,7 @@ export default function Navbar() {
                       }}
                       className="clip-corner-sm mx-3 mb-2 w-[calc(100%-1.5rem)] border border-edge-bright bg-ink-800/70 px-3 py-2.5 text-left text-sm font-semibold text-gray-300 transition hover:border-neon-magenta hover:text-white"
                     >
-                      Logout
+                      {t("logout")}
                     </button>
                   )}
                 </li>
@@ -594,7 +631,7 @@ export default function Navbar() {
                       }`}
                       onClick={closeMenu}
                     >
-                      {item.label}
+                      {t(item.labelKey)}
                     </Link>
 
                     {item.children && (
@@ -610,7 +647,7 @@ export default function Navbar() {
                             }`}
                             onClick={closeMenu}
                           >
-                            {c.label}
+                            {t(c.labelKey)}
                           </Link>
                         ))}
                       </div>
@@ -620,7 +657,7 @@ export default function Navbar() {
 
                 <li className="mt-2 border-t border-white/10 pt-2">
                   <p className="px-3 py-2 text-xs uppercase tracking-wider text-gray-500">
-                    Featured
+                    {t("featured")}
                   </p>
                   {FEATURED_SUBLINKS.map((s) => (
                     <Link
@@ -639,10 +676,15 @@ export default function Navbar() {
                 </li>
               </ul>
 
+              {/* Language picker sits above the socials in the mobile panel */}
+              <div className="mt-2 border-t border-white/10">
+                <LanguageSwitcher variant="mobile" onNavigate={closeMenu} />
+              </div>
+
               {/* Mobile socials */}
               <div className="mt-3 border-t border-white/10 px-3 pb-2 pt-3">
                 <p className="mb-3 text-xs uppercase tracking-wider text-gray-500">
-                  Follow NLDEVS
+                  {t("followNldevs")}
                 </p>
                 <div className="flex flex-row items-center gap-3">
                   {Socials.map((social) => {

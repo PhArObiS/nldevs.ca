@@ -1,5 +1,7 @@
 import { createHash } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
+import { getApiTranslations, resolveApiLocale } from "@/i18n/apiLocale";
+import { LOCALE_META, type Locale } from "@/i18n/routing";
 import { SOCIAL_LINKS } from "@/constants/site";
 
 type ConfirmationRow = {
@@ -54,9 +56,12 @@ function getFirstName(name: string) {
 async function sendAccountConfirmedEmail({
   name,
   email,
+  locale,
 }: {
   name: string;
   email: string;
+  /** Language carried from the confirmation link. */
+  locale: Locale;
 }) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const from = process.env.WELCOME_EMAIL_FROM;
@@ -66,7 +71,8 @@ async function sendAccountConfirmedEmail({
     return { skipped: true };
   }
 
-  const firstName = escapeHtml(getFirstName(name));
+  const t = await getApiTranslations(locale);
+  const greeting = t("emailGreeting", { name: getFirstName(name) });
   const safeFortniteUrl = escapeHtml(SOCIAL_LINKS.fortnite);
 
   const response = await fetch("https://api.resend.com/emails", {
@@ -78,13 +84,13 @@ async function sendAccountConfirmedEmail({
     body: JSON.stringify({
       from,
       to: [email],
-      subject: "Your NLDEVS member access is confirmed",
-      text: `Hi ${getFirstName(name)},\n\nYour NLDEVS member access is confirmed. You're all set for map drops, playtest invites, and member updates.\n\nFollow NLDEVS on Fortnite:\n${SOCIAL_LINKS.fortnite}\n\n- NLDEVS`,
+      subject: t("confirmedSubject"),
+      text: `${greeting}\n\n${t("confirmedBody")}\n\n${t("confirmedFollowLine")}\n${SOCIAL_LINKS.fortnite}\n\n${t("emailSignoff")}`,
       html: `
-        <p>Hi ${firstName},</p>
-        <p>Your NLDEVS member access is confirmed. You're all set for map drops, playtest invites, and member updates.</p>
-        <p><a href="${safeFortniteUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">Follow @nldevs on Fortnite</a></p>
-        <p>- NLDEVS</p>
+        <p>${escapeHtml(greeting)}</p>
+        <p>${escapeHtml(t("confirmedBody"))}</p>
+        <p><a href="${safeFortniteUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">${escapeHtml(t("emailFollowButton"))}</a></p>
+        <p>${escapeHtml(t("emailSignoff"))}</p>
       `,
       ...(replyTo ? { reply_to: replyTo } : {}),
     }),
@@ -100,11 +106,15 @@ async function sendAccountConfirmedEmail({
 function confirmationPage({
   title,
   message,
+  discordLabel,
+  locale,
   confirmedEmail,
   confirmedAt,
 }: {
   title: string;
   message: string;
+  discordLabel: string;
+  locale: Locale;
   confirmedEmail?: string;
   confirmedAt?: string;
 }) {
@@ -129,7 +139,7 @@ function confirmationPage({
 
   return new NextResponse(
     `<!doctype html>
-    <html lang="en">
+    <html lang="${LOCALE_META[locale].htmlLang}">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -174,7 +184,7 @@ function confirmationPage({
           <a href="/">Back to NLDEVS</a>
           ${
             confirmedEmail
-              ? `<a class="discord" href="${safeDiscordUrl}">Join Discord</a>`
+              ? `<a class="discord" href="${safeDiscordUrl}">${escapeHtml(discordLabel)}</a>`
               : ""
           }
         </main>
@@ -190,10 +200,29 @@ function confirmationPage({
 export async function GET(request: NextRequest) {
   const token = request.nextUrl.searchParams.get("token")?.trim() ?? "";
 
+  // The link is clicked from an inbox, so there is no NEXT_LOCALE cookie —
+  // the language rides along in ?lang, set when the email was sent.
+  const locale = resolveApiLocale(
+    request,
+    request.nextUrl.searchParams.get("lang")
+  );
+  const t = await getApiTranslations(locale);
+  const page = (opts: {
+    title: string;
+    message: string;
+    confirmedEmail?: string;
+    confirmedAt?: string;
+  }) =>
+    confirmationPage({
+      ...opts,
+      locale,
+      discordLabel: t("pageJoinDiscord"),
+    });
+
   if (!token) {
-    return confirmationPage({
-      title: "Invalid confirmation link",
-      message: "This confirmation link is missing a token. Please try signing up again.",
+    return page({
+      title: t("pageInvalidTitle"),
+      message: t("pageMissingToken"),
     });
   }
 
@@ -202,9 +231,9 @@ export async function GET(request: NextRequest) {
     process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.SUPABASE_SECRET_KEY;
 
   if (!supabaseUrl || !serviceRoleKey || PLACEHOLDER_KEYS.has(serviceRoleKey)) {
-    return confirmationPage({
-      title: "Confirmation unavailable",
-      message: "The member database is not configured right now. Please try again later.",
+    return page({
+      title: t("pageUnavailableTitle"),
+      message: t("pageDbNotConfigured"),
     });
   }
 
@@ -218,9 +247,9 @@ export async function GET(request: NextRequest) {
   );
 
   if (!lookup.ok) {
-    return confirmationPage({
-      title: "Confirmation unavailable",
-      message: "We could not check this confirmation link. Please try again later.",
+    return page({
+      title: t("pageUnavailableTitle"),
+      message: t("pageCheckFailed"),
     });
   }
 
@@ -228,16 +257,16 @@ export async function GET(request: NextRequest) {
   const member = rows[0];
 
   if (!member) {
-    return confirmationPage({
-      title: "Invalid confirmation link",
-      message: "This confirmation link is invalid or has already been replaced.",
+    return page({
+      title: t("pageInvalidTitle"),
+      message: t("pageLinkReplaced"),
     });
   }
 
   if (member.email_confirmed) {
-    return confirmationPage({
-      title: "Email already confirmed",
-      message: "Your NLDEVS member email is already verified.",
+    return page({
+      title: t("pageAlreadyTitle"),
+      message: t("pageAlreadyMessage"),
     });
   }
 
@@ -256,9 +285,9 @@ export async function GET(request: NextRequest) {
   );
 
   if (!update.ok) {
-    return confirmationPage({
-      title: "Confirmation unavailable",
-      message: "We could not confirm your email right now. Please try again later.",
+    return page({
+      title: t("pageUnavailableTitle"),
+      message: t("pageConfirmFailed"),
     });
   }
 
@@ -266,14 +295,15 @@ export async function GET(request: NextRequest) {
     await sendAccountConfirmedEmail({
       name: member.name,
       email: member.email,
+      locale,
     });
   } catch (error) {
     console.error("Account confirmed email failed", error);
   }
 
-  return confirmationPage({
-    title: "Email confirmed",
-    message: "You are verified for NLDEVS member access. Thanks for joining.",
+  return page({
+    title: t("pageConfirmedTitle"),
+    message: t("pageConfirmedMessage"),
     confirmedEmail: member.email,
     confirmedAt: now,
   });

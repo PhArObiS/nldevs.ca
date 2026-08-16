@@ -1,0 +1,526 @@
+{
+  "pageMeta": {
+    "star-wars-fortnite-maps": {
+      "title": "Mapas Star Wars no Fortnite e códigos de ilha",
+      "description": "Conheça os mapas Star Wars do Fortnite e os códigos de ilha da NLDEVS, incluindo Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB e Star Wars Tilted 99 Bots Royale.",
+      "ogDescription": "Mapas Star Wars do Fortnite e códigos de ilha da NLDEVS — experiências tycoon, Vermelho vs Azul e bot royale."
+    },
+    "tmnt-fortnite-maps": {
+      "title": "Melhores mapas das Tartarugas Ninja no Fortnite e códigos",
+      "description": "Conheça os mapas das Tartarugas Ninja no Fortnite e os códigos de mapa da NLDEVS, incluindo TMNT Mega Ramp Survival e TMNT City — criados com UEFN.",
+      "ogDescription": "Mapas das Tartarugas Ninja no Fortnite e códigos de mapa da NLDEVS — criados com UEFN."
+    },
+    "squid-game-fortnite-maps": {
+      "title": "Melhores mapas de Round 6 no Fortnite e códigos de mapa",
+      "description": "Conheça os mapas no estilo Round 6 do Fortnite e os códigos de mapa da NLDEVS, incluindo 99 Bots Squid Royale Boss, Sidekick Siege 99 Bots e RvB Squid Minigame.",
+      "ogDescription": "Mapas no estilo Round 6 do Fortnite e códigos de mapa da NLDEVS: sobrevivência contra 99 bots, batalhas de chefe, sidekicks e caos Vermelho vs Azul."
+    },
+    "fortnite-gun-game-maps": {
+      "title": "Melhores mapas de Gun Game no Fortnite e códigos",
+      "description": "Conheça os melhores mapas de Gun Game do Fortnite e os códigos selecionados pela NLDEVS. Progressão de armas acelerada, arenas PvP e rodadas rejogáveis.",
+      "ogDescription": "Mapas de Gun Game do Fortnite e códigos selecionados pela NLDEVS — mapas PvP de progressão de armas feitos para rejogar."
+    },
+    "best-fortnite-xp-maps": {
+      "title": "Melhores mapas de XP do Fortnite e códigos (suba rápido)",
+      "description": "Os melhores mapas de XP do Fortnite e códigos de mapa para subir de nível com eficiência. Seleção da NLDEVS com resumos rápidos e escolhas atualizadas.",
+      "ogDescription": "Explore mapas de XP do Fortnite e seus códigos para subir de nível com eficiência. Seleção da NLDEVS."
+    },
+    "star-wars-tycoon-sidekick-legends": {
+      "title": "Star Wars Tycoon Sidekick Legends chega em breve ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends chega em breve ao Fortnite. Código do mapa {code}. Desbloqueie sidekicks e heróis, construa novas seções, contrate trabalhadores, suba no ranking de Rebirth e salve o progresso automaticamente.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends chega em breve ao Fortnite. Desbloqueie sidekicks e heróis, contrate trabalhadores e suba no ranking de Rebirth."
+    },
+    "star-wars-mega-rvb": {
+      "title": "Código do mapa Star Wars Mega RvB ({code})",
+      "description": "Jogue Star Wars Mega RvB no Fortnite. Código do mapa {code}. Mata-mata por equipes Vermelho vs Azul com armas e veículos de Star Wars, armas personalizadas, conquistas e ranking.",
+      "ogDescription": "Mata-mata por equipes Vermelho vs Azul com armas e veículos de Star Wars, conquistas e ranking."
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "title": "Código do mapa Star Wars Tilted 99 Bots Royale ({code})",
+      "description": "Jogue Star Wars Tilted 99 Bots Royale no Fortnite. Código do mapa {code}. Sobrevivência royale contra 99 bots com heróis desbloqueáveis, chefes, estatísticas salvas, loadouts e ação Tilted x Star Wars.",
+      "ogDescription": "Sobrevivência royale contra 99 bots com heróis desbloqueáveis, chefes, estatísticas salvas e ação Tilted x Star Wars."
+    },
+    "tmnt-mega-ramp-survival": {
+      "title": "Código do mapa TMNT Mega Ramp Survival ({code})",
+      "description": "Jogue TMNT Mega Ramp Survival no Fortnite. Código do mapa {code}. Gameplay de sobrevivência em alta velocidade criado com UEFN pela NLDEVS.",
+      "ogDescription": "Sobrevivência em mega rampa de alta velocidade com clima de Tartarugas Ninja, criada com UEFN pela NLDEVS."
+    },
+    "tmnt-city": {
+      "title": "Código do mapa TMNT City ({code})",
+      "description": "Explore TMNT City no Fortnite. Código do mapa {code}. Uma cidade temática das Tartarugas Ninja criada com UEFN pela NLDEVS.",
+      "ogDescription": "Explore TMNT City no Fortnite. Uma cidade temática das Tartarugas Ninja criada com UEFN."
+    },
+    "rvb-squid-minigame": {
+      "title": "Código do mapa RvB Squid Minigame ({code})",
+      "description": "Jogue RvB Squid Minigame no Fortnite. Código do mapa {code}. Rodadas rápidas, caos entre times e minigames rejogáveis.",
+      "ogDescription": "Rodadas rápidas, caos entre times e minigames rejogáveis no estilo Round 6."
+    },
+    "99-bots-squid-royale-boss": {
+      "title": "Código do mapa 99 Bots Squid Royale Boss ({code})",
+      "description": "Jogue 99 Bots Squid Royale Boss no Fortnite. Código do mapa {code}. Um mapa de sobrevivência estilo Round 6 contra 99 bots com PvE, ação em mundo aberto, batalhas de chefe, estatísticas salvas, ranques e rankings.",
+      "ogDescription": "Um mapa de sobrevivência estilo Round 6 contra 99 bots com ação PvE em mundo aberto, batalhas de chefe, estatísticas salvas e rankings."
+    },
+    "sidekick-siege-99-bots": {
+      "title": "Código do mapa Sidekick Siege 99 Bots ({code})",
+      "description": "Jogue Sidekick Siege 99 Bots no Fortnite. Código do mapa {code}. Um mapa de sobrevivência estilo Round 6 contra 99 bots com sidekicks, batalhas de chefe, ação PvE, estatísticas salvas, ranques e rankings.",
+      "ogDescription": "Um mapa de sobrevivência estilo Round 6 contra 99 bots com sidekicks, batalhas de chefe, ação PvE e rankings."
+    },
+    "winterfest-demon-hunters": {
+      "title": "Código do mapa Winterfest Demon Hunters ({code})",
+      "description": "Jogue Winterfest Demon Hunters no Fortnite. Código do mapa {code}. Rodadas focadas em combate com ciclos repetíveis — ótimo para squads e para subir de nível lutando.",
+      "ogDescription": "Rodadas de gun game focadas em combate com ciclos repetíveis — ótimo para squads."
+    },
+    "playtest-squad": {
+      "title": "NLDEVS Playtest Squad",
+      "description": "Entre na NLDEVS Playtest Squad para receber lançamentos de mapas do Fortnite, convites para playtests, novidades no Discord e futuras oportunidades de colaboração em UEFN.",
+      "ogDescription": "Entre na NLDEVS para receber lançamentos de mapas do Fortnite, convites para playtests e novidades da comunidade UEFN."
+    },
+    "uefn-contracts": {
+      "title": "Contratos UEFN",
+      "description": "Contrate a NLDEVS para contratos UEFN, criação de mapas no Fortnite, animações dentro do jogo, experiências de marca e suporte de estúdio.",
+      "ogDescription": "Contrate a NLDEVS para contratos UEFN, criação de mapas no Fortnite e experiências de marca."
+    },
+    "privacy": {
+      "title": "Privacidade",
+      "description": "Como a NLDEVS coleta e usa as informações dos membros para novidades, playtests, suporte e oportunidades de colaboração.",
+      "ogDescription": "Como a NLDEVS coleta e usa as informações dos membros."
+    }
+  },
+  "hubs": {
+    "starWars": {
+      "breadcrumb": "Mapas Star Wars",
+      "eyebrow": "Uma galáxia muito, muito distante",
+      "title": "Mapas de <accent>Star Wars no Fortnite</accent>",
+      "description": "Experiências Star Wars no Fortnite criadas com o Unreal Editor for Fortnite. Progressão tycoon, PvP Vermelho vs Azul, sobrevivência bot royale e códigos de ilha.",
+      "schemaName": "Mapas Star Wars no Fortnite e códigos de ilha",
+      "schemaDescription": "Uma seleção de mapas Star Wars do Fortnite e códigos de ilha criados com UEFN pela NLDEVS, incluindo progressão tycoon, PvP Vermelho vs Azul e sobrevivência bot royale.",
+      "listName": "Mapas Star Wars no Fortnite",
+      "genre": "Mapa Star Wars do Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "Star Wars",
+      "introSections": [],
+      "tipSections": [
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código da ilha exatamente (####-####-####).",
+            "Entre na ilha e siga os objetivos do jogo.",
+            "Favorite o mapa para encontrá-lo mais rápido depois."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "O que você vai",
+          "accent": "encontrar",
+          "items": [
+            "Progressão Star Wars Tycoon com saves, rebirths e recompensas.",
+            "Mata-mata por equipes Vermelho vs Azul com armas e veículos de Star Wars.",
+            "Sobrevivência royale contra 99 bots com heróis, chefes e loadouts salvos.",
+            "Experiências criadas com UEFN e pensadas para jogar de novo com os amigos."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quais são os melhores mapas Star Wars do Fortnite da NLDEVS?",
+          "a": "A NLDEVS tem atualmente Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB e Star Wars Tilted 99 Bots Royale."
+        },
+        {
+          "q": "Qual é o código da ilha de Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends chega em breve. O código de ilha anunciado é 3205-2388-4588."
+        },
+        {
+          "q": "Qual mapa Star Wars do Fortnite é melhor para PvP?",
+          "a": "Star Wars Mega RvB é o mais indicado para PvP, por ser um mapa de mata-mata por equipes Vermelho vs Azul com armas de Star Wars, armas personalizadas, veículos, conquistas e ranking."
+        },
+        {
+          "q": "Qual mapa Star Wars do Fortnite tem bots?",
+          "a": "Star Wars Tilted 99 Bots Royale é o mapa Star Wars focado em bots, com sobrevivência royale contra 99 bots, batalhas de chefe, heróis desbloqueáveis, estatísticas e loadouts salvos."
+        }
+      ],
+      "notes": {
+        "star-wars-tycoon-sidekick-legends": "Em breve: Star Wars Tycoon com desbloqueio de sidekicks e heróis, novas seções e melhorias, trabalhadores que aumentam a produção, ranking de rebirth, progresso salvo automaticamente e até 4 jogadores.",
+        "star-wars-mega-rvb": "PvP Vermelho vs Azul com armas de Star Wars, armas personalizadas, veículos, conquistas, música e progressão até o ranque Unreal.",
+        "star-wars-tilted-99-bots-royale": "Sobrevivência PvE em mundo aberto com 99 bots, batalhas de chefe, heróis desbloqueáveis, estatísticas e loadouts salvos, e ação Tilted com tema Star Wars."
+      },
+      "modeOverrides": {
+        "star-wars-tycoon-sidekick-legends": "Em breve / Tycoon",
+        "star-wars-mega-rvb": "Mata-mata por equipes",
+        "star-wars-tilted-99-bots-royale": "Bot Royale"
+      },
+      "relatedLabels": [
+        "Mapas Tartarugas Ninja",
+        "Mapas Round 6",
+        "Mapas Gun Game",
+        "Mapas de XP"
+      ],
+      "disclaimer": "Experiências do Fortnite criadas pela comunidade com UEFN. Não afiliado à Lucasfilm, Disney ou Epic Games."
+    },
+    "tmnt": {
+      "breadcrumb": "Mapas Tartarugas Ninja",
+      "eyebrow": "Turtle power",
+      "title": "Melhores mapas das <accent>Tartarugas Ninja no Fortnite</accent>",
+      "description": "Mapas das Tartarugas Ninja no Fortnite e códigos de mapa criados com UEFN. Exploração urbana, runs de sobrevivência e arenas de combate feitas para rejogar.",
+      "schemaName": "Melhores mapas das Tartarugas Ninja no Fortnite e códigos de mapa",
+      "schemaDescription": "Uma seleção de mapas das Tartarugas Ninja no Fortnite e códigos de mapa criados com UEFN pela NLDEVS, incluindo runs de sobrevivência e experiências urbanas.",
+      "listName": "Mapas das Tartarugas Ninja no Fortnite",
+      "genre": "Mapa das Tartarugas Ninja no Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "Tartarugas Ninja",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-tmnt-maps",
+          "title": "O que são os mapas das",
+          "accent": "Tartarugas Ninja no Fortnite?",
+          "paragraphs": [
+            "Os mapas das Tartarugas Ninja no Fortnite são ilhas criadas pela comunidade e inspiradas no universo das Tartarugas Ninja — exploração urbana, runs de sobrevivência, arenas de combate e minigames acelerados. Essas ilhas são criadas com UEFN e pensadas para rejogar com os amigos.",
+            "Se você procura ação em alta velocidade, mapas de sobrevivência como os modos Mega Ramp são ótimos para sessões rápidas. Se quer mais liberdade, os mapas de experiência urbana são ideais para explorar, lutar e curtir com a galera."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Dicas para os mapas das",
+          "accent": "Tartarugas Ninja",
+          "items": [
+            "Jogue com amigos — runs de sobrevivência e mapas urbanos são mais divertidos em grupo.",
+            "Dica do Mega Ramp: fique centralizado e faça pequenas correções cedo, em vez de curvas grandes no fim.",
+            "Favorite o mapa depois de jogar para voltar mais fácil após as atualizações.",
+            "Se quiser PvP, vá para as zonas de combate ou modos gun game quando estiverem disponíveis."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código do mapa exatamente (####-####-####).",
+            "Entre na ilha e siga os objetivos do jogo.",
+            "Favorite o mapa para encontrá-lo mais rápido depois."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como inserir um código de mapa no Fortnite?",
+          "a": "Abra o Fortnite, vá em Buscar/Descobrir, digite o código da ilha (####-####-####) e selecione o resultado para jogar."
+        },
+        {
+          "q": "Esses mapas das Tartarugas Ninja no Fortnite são oficiais?",
+          "a": "São experiências do Fortnite criadas pela comunidade com UEFN. Esta página não é afiliada à Nickelodeon nem à marca TMNT."
+        },
+        {
+          "q": "O que é TMNT Mega Ramp Survival?",
+          "a": "Uma experiência de sobrevivência acelerada, focada em desviar de obstáculos e continuar vivo conforme o caos aumenta em uma mega rampa."
+        },
+        {
+          "q": "TMNT City é um mapa de gun game?",
+          "a": "TMNT City é principalmente uma experiência urbana com tema das Tartarugas Ninja. Dependendo da versão atual da ilha, pode incluir áreas de combate ou modos de jogo."
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Sobrevivência em mega rampa de alta velocidade com tema das Tartarugas Ninja. Desvie do caos e sobreviva até o fim.",
+        "tmnt-city": "Experiência urbana com tema das Tartarugas Ninja criada no UEFN — explore, lute e relaxe com os amigos."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Sobrevivência",
+        "tmnt-city": "Experiência"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Gun Game",
+        "Mapas Round 6",
+        "Mapas Star Wars"
+      ]
+    },
+    "squidGame": {
+      "breadcrumb": "Mapas Round 6",
+      "eyebrow": "Rodadas de eliminação",
+      "title": "Melhores mapas de <accent>Round 6 no Fortnite</accent>",
+      "description": "Minigames no estilo Round 6, sobrevivência contra 99 bots, sidekicks, batalhas de chefe e caos Vermelho vs Azul criados com UEFN. Cada item traz um código de ilha e o tipo de gameplay.",
+      "schemaName": "Melhores mapas de Round 6 no Fortnite e códigos de mapa",
+      "schemaDescription": "Uma seleção de mapas no estilo Round 6 do Fortnite e códigos de mapa criados com UEFN pela NLDEVS, incluindo sobrevivência contra 99 bots, batalhas de chefe, sidekicks e mapas Vermelho vs Azul.",
+      "listName": "Mapas de Round 6 no Fortnite",
+      "genre": "Mapa de Round 6 no Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "Round 6",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-squid-maps",
+          "title": "O que são os mapas de",
+          "accent": "Round 6 no Fortnite?",
+          "paragraphs": [
+            "Os mapas de Round 6 no Fortnite são ilhas criadas pela comunidade e inspiradas em minigames de eliminação. Normalmente você encontra rodadas rápidas, desafios de alto risco e competição caótica — geralmente pensados para jogar com amigos.",
+            "Entre os modos populares no estilo Round 6 estão Batatinha Frita 1, 2, 3, rodadas de sobrevivência, minigames com objetivos, sobrevivência contra 99 bots, batalhas de chefe e desafios em grupo. A disponibilidade dos mapas e o XP podem mudar com o tempo, dependendo das atualizações e revisões das ilhas."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "id": "tips",
+          "title": "Dicas para os mapas de",
+          "accent": "Round 6",
+          "items": [
+            "Jogue com amigos: a maioria das rodadas no estilo Round 6 é mais divertida com o grupo completo e com filas mais rápidas.",
+            "Se quiser treinar, escolha as variantes com bots para aprender rotas e mecânicas antes de partir para o PvP.",
+            "Troque de mapa se o XP cair; a calibragem e os retornos decrescentes variam conforme a ilha e o ciclo de atualizações.",
+            "Use chat de voz ou pings rápidos — coordenação faz diferença em desafios de eliminação e rodadas em equipe."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "id": "how-to-play",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código do mapa exatamente (####-####-####).",
+            "Entre no mapa e siga as regras do minigame (variam por ilha).",
+            "Jogue com amigos para aproveitar melhor as rodadas de eliminação."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como inserir um código de mapa no Fortnite?",
+          "a": "Abra o Fortnite, vá em Buscar/Descobrir, digite o código da ilha (####-####-####) e selecione o resultado para jogar."
+        },
+        {
+          "q": "Os mapas de Round 6 no Fortnite são oficiais?",
+          "a": "Não. São experiências do Fortnite criadas pela comunidade e inspiradas em minigames e desafios no estilo Round 6, sem vínculo oficial com a Netflix."
+        },
+        {
+          "q": "Os mapas de Round 6 dão XP?",
+          "a": "Algumas ilhas podem conceder XP dependendo da calibragem do Fortnite e das configurações do mapa. As taxas de XP podem mudar após atualizações ou revisões."
+        },
+        {
+          "q": "Quais mapas de Round 6 são melhores para jogar com amigos?",
+          "a": "Os mapas de Round 6 do tipo minigame e eliminação costumam ser melhores com o grupo completo. Ficam mais divertidos quando dá para emendar rodadas rápido e competir entre amigos."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minigames no estilo Round 6 com caos Vermelho vs Azul e rodadas rápidas.",
+        "99-bots-squid-royale-boss": "Sobrevivência PvE em mundo aberto contra 99 bots com batalhas de chefe, novas armas, montaria em animais, ranques, rankings e estatísticas salvas.",
+        "sidekick-siege-99-bots": "Sobrevivência contra 99 bots focada em sidekicks, com batalhas de chefe, ação PvE, loadouts salvos, ranques, rankings e até 5 jogadores."
+      },
+      "modeOverrides": {
+        "rvb-squid-minigame": "RvB",
+        "99-bots-squid-royale-boss": "99 Bots",
+        "sidekick-siege-99-bots": "Sidekicks"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Gun Game",
+        "Mapas Tartarugas Ninja",
+        "Mapas Star Wars"
+      ]
+    },
+    "gunGame": {
+      "breadcrumb": "Mapas Gun Game",
+      "eyebrow": "Progressão de armas",
+      "title": "Melhores mapas de <accent>Gun Game no Fortnite</accent>",
+      "description": "Modos acelerados de progressão de armas em que cada eliminação melhora seu loadout. Uma seleção de ilhas com códigos e notas rápidas.",
+      "schemaName": "Melhores mapas de Gun Game no Fortnite",
+      "schemaDescription": "Uma seleção de mapas de Gun Game do Fortnite e códigos de mapa criados com UEFN pela NLDEVS — PvP de progressão de armas feito para rodadas rejogáveis.",
+      "listName": "Mapas de Gun Game no Fortnite",
+      "genre": "Mapa de Gun Game no Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "Gun Game",
+      "introSections": [
+        {
+          "type": "prose",
+          "title": "O que é um mapa de",
+          "accent": "Gun Game no Fortnite?",
+          "paragraphs": [
+            "Gun Game no Fortnite é um modo PvP de progressão de armas feito para rodadas rápidas e rejogáveis. Os jogadores começam com uma arma e sobem para a próxima a cada eliminação.",
+            "O objetivo é terminar a lista de armas antes de todo mundo. Bons mapas de Gun Game têm fluxo bem construído, rotações de armas equilibradas e renascimentos rápidos."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Dicas para vencer rodadas de",
+          "accent": "Gun Game",
+          "items": [
+            "Aprenda o fluxo dos renascimentos e contorne os combates.",
+            "Segure os ângulos e reapareça com inteligência.",
+            "Precisão a média distância vale mais que jogadas de efeito.",
+            "Continue se movendo para melhorar as armas mais rápido."
+          ]
+        }
+      ],
+      "faqs": [],
+      "notes": {
+        "tmnt-city": "Ciclos de combate com tema das Tartarugas Ninja, progressão de armas rápida e rodadas rejogáveis.",
+        "winterfest-demon-hunters": "Gun game de caça a demônios com tema de fim de ano, ciclos de combate repetíveis e rotação de armas."
+      },
+      "titleOverrides": {
+        "tmnt-city": "TMNT City — Gun Game",
+        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+      },
+      "modeOverrides": {
+        "tmnt-city": "Gun Game",
+        "winterfest-demon-hunters": "Gun Game FFA"
+      },
+      "relatedLabels": [
+        "Mapas de XP",
+        "Mapas Tartarugas Ninja",
+        "Mapas Round 6",
+        "Mapas Star Wars"
+      ]
+    },
+    "xp": {
+      "breadcrumb": "Mapas de XP",
+      "eyebrow": "Suba de nível mais rápido",
+      "title": "Melhores mapas de <accent>XP do Fortnite</accent>",
+      "description": "Uma seleção de mapas de XP do Fortnite com códigos de ilha e notas rápidas sobre como cada um se joga.",
+      "schemaName": "Melhores mapas de XP do Fortnite",
+      "schemaDescription": "Uma seleção de mapas de XP do Fortnite e códigos de ilha da NLDEVS, com notas rápidas sobre como cada ilha se joga enquanto você sobe de nível.",
+      "listName": "Mapas de XP do Fortnite",
+      "genre": "Mapa de XP do Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "de XP",
+      "introSections": [],
+      "tipSections": [],
+      "faqs": [],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Runs de sobrevivência acelerados com ciclos de gameplay repetíveis. Ótimo se você prefere jogar ativamente enquanto sobe de nível.",
+        "winterfest-demon-hunters": "Ciclos focados em combate com rodadas repetíveis. Funciona bem para quem quer XP enquanto luta.",
+        "rvb-players-vs-guards": "Objetivos em equipe e sessões mais longas. Bom para um XP constante jogando rodadas no estilo PvP.",
+        "tmnt-city": "Rotas de exploração e combate com ciclos de XP consistentes.",
+        "rvb-squid-minigame": "Rodadas rápidas e jogo baseado em objetivos."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Ativo",
+        "winterfest-demon-hunters": "Misto",
+        "rvb-players-vs-guards": "Misto",
+        "tmnt-city": "Ativo",
+        "rvb-squid-minigame": "Ativo"
+      },
+      "relatedLabels": [
+        "Mapas Gun Game",
+        "Mapas Tartarugas Ninja",
+        "Mapas Round 6",
+        "Mapas Star Wars"
+      ]
+    }
+  },
+  "playtest": {
+    "eyebrow": "Comunidade",
+    "title": "Entre na <accent>NLDEVS Playtest Squad</accent>",
+    "description": "Um jeito simples de ficar por dentro dos novos mapas, testes, novidades e oportunidades de colaboração da NLDEVS.",
+    "heroTitle": "Teste. Dê feedback. Pegue os drops.",
+    "heroBody": "Entre como membro para receber mapas em primeira mão, convites para playtests privados, oportunidades de voto e um canal direto de feedback com a NLDEVS.",
+    "heroNote": "Sem spam. Sem venda de dados. Exclusão quando quiser.",
+    "perks": [
+      "Mapas em primeira mão",
+      "Convites para playtests",
+      "Voto nos novos temas",
+      "Feedback direto para o time"
+    ],
+    "joinDiscord": "Entrar no Discord",
+    "exploreMaps": "Explorar mapas",
+    "squadPerk": "Vantagem de membro",
+    "benefits": [
+      {
+        "title": "Acesso antecipado",
+        "text": "Receba mapas e atualizações de código antes das divulgações maiores, assim que novas ilhas ou revisões ficarem prontas."
+      },
+      {
+        "title": "Playtests privados",
+        "text": "Receba convites para playtests privados, teste novos ciclos e ajude a moldar o gameplay antes das grandes atualizações."
+      },
+      {
+        "title": "Vote e oriente",
+        "text": "Vote nos próximos temas de mapas e envie feedback, bugs, capturas de tela e reações de gameplay diretamente."
+      },
+      {
+        "title": "Crédito na comunidade",
+        "text": "Seja considerado para futuros agradecimentos, créditos de playtester, oportunidades de desenvolvimento, sorteios e eventos de XP/mapas."
+      }
+    ]
+  },
+  "contracts": {
+    "eyebrow": "Trabalho para devs / clientes",
+    "title": "Contratos UEFN, <accent>experiências no Fortnite</accent>",
+    "description": "A NLDEVS cria projetos UEFN jogáveis para criadores, clientes, marcas e estúdios que precisam de apoio em produção no Fortnite.",
+    "heroTitle": "Contrate a NLDEVS para projetos em UEFN.",
+    "heroBody": "De protótipos a ilhas do Fortnite finalizadas, a NLDEVS pode ajudar a planejar, construir, testar e melhorar experiências em UEFN com um fluxo de produção organizado.",
+    "startProject": "Iniciar um projeto",
+    "viewCreatorPage": "Ver página do criador",
+    "servicesTitle": "O que a NLDEVS pode criar",
+    "services": [
+      "Criação e protótipos de mapas em UEFN",
+      "Ilhas do Fortnite de tycoon, PvP, gun game e eventos",
+      "Experiências de marca no Fortnite",
+      "Animações no jogo, momentos cinematográficos e sequências interativas",
+      "Design e polimento de ciclos de gameplay",
+      "Verse, devices, UI, testes e suporte no lançamento",
+      "Limpeza, atualização e otimização de ilhas existentes"
+    ],
+    "clientsTitle": "Feito para projetos sérios",
+    "clientTypes": [
+      "Criadores que precisam de um parceiro confiável em UEFN",
+      "Marcas explorando experiências no Fortnite",
+      "Estúdios de jogos que precisam de reforço na produção em UEFN",
+      "Times que querem um protótipo jogável antes de um lançamento maior"
+    ],
+    "ctaTitle": "Envie o objetivo, o prazo e a faixa de orçamento.",
+    "ctaBody": "Deixe a primeira mensagem simples: o que você quer construir, se é uma ilha nova ou um projeto existente, sua janela ideal de lançamento e quaisquer referências ou recursos de gameplay indispensáveis.",
+    "exploreMaps": "Explorar mapas da NLDEVS",
+    "mailSubject": "Consulta sobre contrato UEFN",
+    "servicesEyebrow": "Serviços",
+    "clientsEyebrow": "Para quem é",
+    "inquiryEyebrow": "Consulta de projeto"
+  },
+  "privacy": {
+    "title": "Privacidade",
+    "intro": "Usamos as informações dos membros para manter a NLDEVS funcionando, apoiar os jogadores, organizar playtests e encontrar futuros colaboradores. Mantemos tudo prático, limitado e nunca vendemos esses dados.",
+    "sections": [
+      {
+        "title": "O que coletamos",
+        "items": [
+          "Nome e e-mail quando você entra ou faz login como membro.",
+          "Dados opcionais de jogador, como nome no Fortnite, usuário do Discord, mapa favorito, estilo de perfil, objetivos de membro, mensagens e imagens enviadas.",
+          "Dados opcionais de desenvolvedor ou criador, como função, disponibilidade, link de portfólio e habilidades.",
+          "Uma confirmação obrigatória de que o membro tem 13 anos ou mais e tem permissão de um pai ou responsável se for menor de 18.",
+          "Dados técnicos básicos, como página de origem e informações do navegador, para entender de onde vêm os cadastros e resolver problemas."
+        ]
+      },
+      {
+        "title": "Como usamos",
+        "items": [
+          "Para reconhecer membros que voltam.",
+          "Para responder a mensagens, relatos de bugs, ideias de mapas e interesse em colaborações.",
+          "Para convidar membros interessados a playtests, atualizações de mapas ou oportunidades da NLDEVS.",
+          "Para melhorar o site, os mapas e a experiência dos membros."
+        ]
+      },
+      {
+        "title": "Como protegemos",
+        "items": [
+          "Os envios dos membros passam por uma rota no servidor, para que as chaves secretas do banco de dados não fiquem expostas no código do navegador.",
+          "O acesso ao banco de dados é restrito com Row Level Security do Supabase e credenciais do lado do servidor.",
+          "Não vendemos informações de membros.",
+          "Limitamos as informações que pedimos e mantemos os campos opcionais realmente opcionais."
+        ]
+      }
+    ],
+    "emailsTitle": "E-mails",
+    "emailsBody": "Se você entrar para a NLDEVS, podemos enviar um e-mail curto de confirmação. Só usamos seu consentimento de contato para novidades futuras, playtests ou notícias de mapas.",
+    "manageTitle": "Excluir ou atualizar suas informações",
+    "manageBody": "Para atualizar ou excluir suas informações de membro, envie um e-mail para <mail>nldevsmtl@gmail.com</mail>. Use o mesmo endereço de e-mail com que você se cadastrou, para que possamos localizar o registro certo.",
+    "thirdPartyTitle": "Serviços de terceiros",
+    "thirdPartyBody": "A NLDEVS usa serviços confiáveis como o Supabase para dados de membros e o Resend para envio de e-mails. Esses serviços processam os dados apenas no necessário para oferecer os recursos do site.",
+    "backHome": "Voltar para a NLDEVS"
+  }
+}

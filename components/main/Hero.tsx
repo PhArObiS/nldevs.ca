@@ -1,26 +1,22 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { AppPathname } from "@/i18n/routing";
 import { SOCIAL_LINKS } from "@/constants/site";
 
-const stats = [
-  { value: "6", label: "Live experiences" },
-  { value: "5", label: "Map categories" },
-  { value: "UEFN", label: "Built with" },
+const categories: { href: AppPathname; labelKey: string }[] = [
+  { href: "/star-wars-fortnite-maps", labelKey: "starWars" },
+  { href: "/tmnt-fortnite-maps", labelKey: "tmnt" },
+  { href: "/squid-game-fortnite-maps", labelKey: "squidGame" },
+  { href: "/fortnite-gun-game-maps", labelKey: "gunGames" },
+  { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
 ];
 
-const categories = [
-  { href: "/star-wars-fortnite-maps", label: "Star Wars" },
-  { href: "/tmnt-fortnite-maps", label: "TMNT" },
-  { href: "/squid-game-fortnite-maps", label: "Squid Game" },
-  { href: "/fortnite-gun-game-maps", label: "Gun Games" },
-  { href: "/best-fortnite-xp-maps", label: "XP Maps" },
-];
-
-const memberPerks = [
-  "Early map drops",
-  "Playtest invites",
-  "Vote on new themes",
-  "Send feedback directly",
-];
+const PERK_KEYS = [
+  "perkEarlyDrops",
+  "perkPlaytestInvites",
+  "perkVote",
+  "perkFeedback",
+] as const;
 
 /**
  * Server component on purpose.
@@ -33,10 +29,20 @@ const memberPerks = [
  * The global prefers-reduced-motion rule collapses these to ~0s.
  */
 export default function Hero() {
+  const t = useTranslations("hero");
+  const tc = useTranslations("common");
+  const tn = useTranslations("nav");
+
+  const stats = [
+    { value: "6", label: t("statLiveExperiences") },
+    { value: "5", label: t("statMapCategories") },
+    { value: "UEFN", label: t("statBuiltWith") },
+  ];
+
   return (
     <section
       className="relative overflow-hidden px-6 pb-20 pt-14 md:pt-20"
-      aria-label="NLDEVS introduction"
+      aria-label={t("introAria")}
     >
       {/* Decorative backdrop */}
       <div
@@ -61,22 +67,26 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-5xl text-center">
-        <p className="eyebrow animate-fade-up">UEFN Game Studio</p>
+        <p className="eyebrow animate-fade-up">{t("eyebrow")}</p>
 
         <h1
           className="animate-fade-up mt-5 text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
           style={{ animationDelay: "80ms" }}
         >
-          NLDEVS builds{" "}
-          <span className="neon-text-animated">Fortnite experiences</span>
+          {/* Rich tag rather than a split string, so each language decides
+              where the highlighted phrase sits in the sentence. */}
+          {t.rich("title", {
+            accent: (chunks) => (
+              <span className="neon-text-animated">{chunks}</span>
+            ),
+          })}
         </h1>
 
         <p
           className="animate-fade-up mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-gray-300 md:text-xl"
           style={{ animationDelay: "160ms" }}
         >
-          Star Wars, TMNT, Squid Game, Gun Games and XP maps — built with Unreal
-          Editor for Fortnite for fast rounds, clean flow, and squad chaos.
+          {t("subtitle")}
         </p>
 
         {/* Primary actions */}
@@ -90,12 +100,12 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn-neon clip-corner-sm"
           >
-            Follow @nldevs on Fortnite
+            {tc("followFortnite")}
           </a>
 
-          <Link href="#featured-fortnite-maps" className="btn-ghost clip-corner-sm">
-            Get map codes
-          </Link>
+          <a href="#featured-fortnite-maps" className="btn-ghost clip-corner-sm">
+            {t("getMapCodes")}
+          </a>
         </div>
 
         <div
@@ -109,23 +119,23 @@ export default function Hero() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-[10px] font-black uppercase tracking-[0.2em] text-neon-cyan">
-                  NLDEVS Playtest Squad
+                  {t("squadName")}
                 </p>
                 <p className="mt-1 text-sm font-semibold text-white">
-                  Member perks for players who want closer access.
+                  {t("squadPitch")}
                 </p>
               </div>
               <span className="text-xs font-black uppercase tracking-wide text-neon-magenta transition group-hover:text-white">
-                Join free
+                {tc("joinFree")}
               </span>
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {memberPerks.map((perk) => (
+              {PERK_KEYS.map((key) => (
                 <span
-                  key={perk}
+                  key={key}
                   className="clip-corner-sm border border-edge-bright/70 bg-ink/70 px-3 py-1.5 text-xs font-semibold text-gray-300"
                 >
-                  {perk}
+                  {t(key)}
                 </span>
               ))}
             </div>
@@ -136,13 +146,12 @@ export default function Hero() {
           className="animate-fade-up mt-4 text-sm font-semibold text-gray-400"
           style={{ animationDelay: "300ms" }}
         >
-          Following the creator page helps NLDEVS grow and keeps new Fortnite
-          experiences easier to find.
+          {t("followNote")}
         </p>
 
         {/* Category chips */}
         <nav
-          aria-label="Map categories"
+          aria-label={t("categoriesAria")}
           className="animate-fade-up mt-10 flex flex-wrap items-center justify-center gap-2.5"
           style={{ animationDelay: "320ms" }}
         >
@@ -152,7 +161,7 @@ export default function Hero() {
               href={c.href}
               className="clip-corner-sm border border-edge-bright/70 bg-ink-800/60 px-4 py-2 text-sm text-gray-300 transition hover:border-neon-cyan hover:text-white"
             >
-              {c.label}
+              {tn(c.labelKey)}
             </Link>
           ))}
         </nav>

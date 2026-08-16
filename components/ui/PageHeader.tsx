@@ -1,14 +1,18 @@
 import type { ReactNode } from "react";
-import Breadcrumbs from "@/components/main/Breadcrumbs";
+import { useLocale, useTranslations } from "next-intl";
+import Breadcrumbs, { type Crumb } from "@/components/main/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL } from "@/constants/site";
-
-type Crumb = { href?: string; label: string };
+import { absoluteUrl } from "@/i18n/metadata";
+import type { Locale } from "@/i18n/routing";
 
 type Props = {
   crumbs: Crumb[];
   eyebrow?: string;
-  title: string;
+  /**
+   * Accepts a node so callers can pass `t.rich(...)` output, placing the
+   * neon span wherever the target language needs it.
+   */
+  title: ReactNode;
   /** Highlighted tail of the title, rendered in the neon gradient. */
   accent?: string;
   description?: ReactNode;
@@ -29,6 +33,11 @@ export default function PageHeader({
   lastUpdated,
   children,
 }: Props) {
+  const locale = useLocale() as Locale;
+  const t = useTranslations("common");
+
+  // Breadcrumb schema must point at the locale's own URLs, otherwise every
+  // translation would tell Google its parent is the English page.
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -36,14 +45,18 @@ export default function PageHeader({
       "@type": "ListItem",
       position: index + 1,
       name: crumb.label,
-      ...(crumb.href ? { item: `${SITE_URL}${crumb.href}` } : {}),
+      ...(crumb.href ? { item: absoluteUrl(crumb.href, locale) } : {}),
     })),
   };
 
   return (
     <header className="relative">
       <JsonLd
-        id={`breadcrumb-schema-${crumbs.map((c) => c.label).join("-").toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+        id={`breadcrumb-schema-${crumbs
+          .map((c) => c.label)
+          .join("-")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")}`}
         data={breadcrumbSchema}
       />
 
@@ -83,7 +96,7 @@ export default function PageHeader({
 
           {lastUpdated && (
             <p className="mt-4 text-sm text-gray-500">
-              Last updated: {lastUpdated}
+              {t("lastUpdated", { date: lastUpdated })}
             </p>
           )}
 

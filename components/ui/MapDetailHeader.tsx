@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import PageHeader from "./PageHeader";
 import IslandCode from "./IslandCode";
 import { Reveal } from "./Reveal";
-
-type Crumb = { href?: string; label: string };
+import type { Crumb } from "@/components/main/Breadcrumbs";
 
 type Props = {
   crumbs: Crumb[];
@@ -29,9 +29,16 @@ export default function MapDetailHeader({
   intro,
   stats = [],
 }: Props) {
+  const t = useTranslations("common");
+
   return (
     <>
-      <PageHeader crumbs={crumbs} eyebrow={eyebrow} title={title} description={intro}>
+      <PageHeader
+        crumbs={crumbs}
+        eyebrow={eyebrow}
+        title={title}
+        description={intro}
+      >
         <IslandCode code={code} title={title} />
       </PageHeader>
 
@@ -59,7 +66,7 @@ export default function MapDetailHeader({
         <div className="clip-corner relative aspect-video w-full overflow-hidden border border-edge/70 bg-ink-800">
           <Image
             src={image}
-            alt={`${title} Fortnite gameplay screenshot`}
+            alt={t("gameplayScreenshot", { title })}
             fill
             sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover"

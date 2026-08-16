@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getApiTranslations, resolveApiLocale } from "@/i18n/apiLocale";
+import type { Locale } from "@/i18n/routing";
 import { createHash, randomBytes } from "crypto";
 import {
   findBlockedLanguageFields,
@@ -7,6 +9,8 @@ import {
 import { SOCIAL_LINKS } from "@/constants/site";
 
 type PlayerLeadInput = {
+  /** Locale the client is browsing in; drives error + email language. */
+  locale?: unknown;
   action?: unknown;
   name?: unknown;
   email?: unknown;
@@ -158,9 +162,16 @@ function getRequestOrigin(request: NextRequest) {
   return "https://nldevs.ca";
 }
 
-function getConfirmEmailUrl(request: NextRequest, token: string) {
+function getConfirmEmailUrl(
+  request: NextRequest,
+  token: string,
+  locale: Locale
+) {
   const url = new URL("/api/player-leads/confirm", getRequestOrigin(request));
   url.searchParams.set("token", token);
+  // Carried through the email so the landing page renders in the language
+  // the member signed up in — there is no cookie on a click from an inbox.
+  url.searchParams.set("lang", locale);
   return url.toString();
 }
 
@@ -293,11 +304,14 @@ async function sendWelcomeEmail({
   email,
   contactConsent,
   confirmEmailUrl,
+  locale,
 }: {
   name: string;
   email: string;
   contactConsent: boolean;
   confirmEmailUrl: string;
+  /** Language the member signed up in — the email follows it. */
+  locale: Locale;
 }) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const from = process.env.WELCOME_EMAIL_FROM;
@@ -307,10 +321,12 @@ async function sendWelcomeEmail({
     return { skipped: true };
   }
 
+  const t = await getApiTranslations(locale);
   const firstName = escapeHtml(getFirstName(name));
   const updatesLine = contactConsent
-    ? "We will keep you posted on new drops, playtests, and updates."
-    : "You can reply to this email anytime if you want to reach NLDEVS.";
+    ? t("emailUpdatesConsent")
+    : t("emailUpdatesNoConsent");
+  const greeting = t("emailGreeting", { name: getFirstName(name) });
   const safeConfirmUrl = escapeHtml(confirmEmailUrl);
   const safeFortniteUrl = escapeHtml(SOCIAL_LINKS.fortnite);
 
@@ -323,16 +339,16 @@ async function sendWelcomeEmail({
     body: JSON.stringify({
       from,
       to: [email],
-      subject: "Confirm your NLDEVS email",
-      text: `Hi ${getFirstName(name)},\n\nThanks for joining NLDEVS. Please confirm your email:\n${confirmEmailUrl}\n\nFollow NLDEVS on Fortnite for map drops and creator updates:\n${SOCIAL_LINKS.fortnite}\n\n${updatesLine}\n\n- NLDEVS`,
+      subject: t("emailSubject"),
+      text: `${greeting}\n\n${t("emailIntroText")}\n${confirmEmailUrl}\n\n${t("emailFollowLine")}\n${SOCIAL_LINKS.fortnite}\n\n${updatesLine}\n\n${t("emailSignoff")}`,
       html: `
-        <p>Hi ${firstName},</p>
-        <p>Thanks for joining NLDEVS. Please confirm your email to verify your member access.</p>
-        <p><a href="${safeConfirmUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">Confirm email</a></p>
-        <p>Follow NLDEVS on Fortnite for map drops and creator updates:</p>
-        <p><a href="${safeFortniteUrl}" style="display:inline-block;border:1px solid #22d3ee;color:#030014;background:#22d3ee;font-weight:700;padding:12px 18px;text-decoration:none;">Follow @nldevs on Fortnite</a></p>
+        <p>${escapeHtml(greeting)}</p>
+        <p>${escapeHtml(t("emailIntroHtml"))}</p>
+        <p><a href="${safeConfirmUrl}" style="display:inline-block;background:#22d3ee;color:#030014;font-weight:700;padding:12px 18px;text-decoration:none;">${escapeHtml(t("emailConfirmButton"))}</a></p>
+        <p>${escapeHtml(t("emailFollowLine"))}</p>
+        <p><a href="${safeFortniteUrl}" style="display:inline-block;border:1px solid #22d3ee;color:#030014;background:#22d3ee;font-weight:700;padding:12px 18px;text-decoration:none;">${escapeHtml(t("emailFollowButton"))}</a></p>
         <p>${escapeHtml(updatesLine)}</p>
-        <p>- NLDEVS</p>
+        <p>${escapeHtml(t("emailSignoff"))}</p>
       `,
       ...(replyTo ? { reply_to: replyTo } : {}),
     }),
@@ -429,11 +445,18 @@ async function sendOwnerNewMemberEmail({
 export async function POST(request: NextRequest) {
   let body: PlayerLeadInput;
 
+  // Before the body is parsed only the cookie/header are available.
+  let t = await getApiTranslations(resolveApiLocale(request));
+
   try {
     body = (await request.json()) as PlayerLeadInput;
   } catch {
-    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+    return NextResponse.json({ error: t("invalidBody") }, { status: 400 });
   }
+
+  // The client sends its active locale, which beats the cookie.
+  const locale = resolveApiLocale(request, body.locale);
+  t = await getApiTranslations(locale);
 
   const action = cleanText(body.action, 20) || "signup";
   const name = cleanText(body.name, 120);
@@ -447,18 +470,18 @@ export async function POST(request: NextRequest) {
 
   if (isRateLimited(`${ip}:${email || "anonymous"}`)) {
     return NextResponse.json(
-      { error: "Too many attempts. Please wait a few minutes." },
+      { error: t("tooManyAttempts") },
       { status: 429 }
     );
   }
 
   if (!EMAIL_PATTERN.test(email)) {
-    return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
+    return NextResponse.json({ error: t("validEmailRequired") }, { status: 400 });
   }
 
   if (hasBlockedLanguage([email])) {
     return NextResponse.json(
-      { error: "Please keep member info respectful and appropriate." },
+      { error: t("blockedLanguage") },
       { status: 400 }
     );
   }
@@ -469,7 +492,7 @@ export async function POST(request: NextRequest) {
 
   if (!supabaseUrl || !serviceRoleKey || PLACEHOLDER_KEYS.has(serviceRoleKey)) {
     return NextResponse.json(
-      { error: "Member database is not configured." },
+      { error: t("dbNotConfigured") },
       { status: 503 }
     );
   }
@@ -481,7 +504,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Supabase member lookup failed", error);
     return NextResponse.json(
-      { error: "Could not reach member database." },
+      { error: t("dbUnreachable") },
       { status: 502 }
     );
   }
@@ -489,7 +512,7 @@ export async function POST(request: NextRequest) {
   if (action === "login") {
     if (!existingMember) {
       return NextResponse.json(
-        { error: "No member found. Join below.", code: "MEMBER_NOT_FOUND" },
+        { error: t("memberNotFound"), code: "MEMBER_NOT_FOUND" },
         { status: 404 }
       );
     }
@@ -497,7 +520,7 @@ export async function POST(request: NextRequest) {
     if (!existingMember.email_confirmed) {
       return NextResponse.json(
         {
-          error: "Please confirm your email before logging in. Check your inbox.",
+          error: t("confirmBeforeLogin"),
           code: "EMAIL_NOT_CONFIRMED",
         },
         { status: 403 }
@@ -515,8 +538,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: existingMember.email_confirmed
-          ? "That email is already a member. Use Returning Member."
-          : "That email is already pending confirmation. Check your inbox.",
+          ? t("alreadyMember")
+          : t("alreadyPending"),
         code: existingMember.email_confirmed
           ? "MEMBER_ALREADY_EXISTS"
           : "EMAIL_NOT_CONFIRMED",
@@ -527,7 +550,7 @@ export async function POST(request: NextRequest) {
 
   if (action === "update" && !existingMember) {
     return NextResponse.json(
-      { error: "No member found. Join below.", code: "MEMBER_NOT_FOUND" },
+      { error: t("memberNotFound"), code: "MEMBER_NOT_FOUND" },
       { status: 404 }
     );
   }
@@ -572,20 +595,19 @@ export async function POST(request: NextRequest) {
 
   if (blockedFields.length > 0) {
     return NextResponse.json(
-      { error: "Please keep member info respectful and appropriate." },
+      { error: t("blockedLanguage") },
       { status: 400 }
     );
   }
 
   if (name.length < 2) {
-    return NextResponse.json({ error: "Name is required." }, { status: 400 });
+    return NextResponse.json({ error: t("nameRequired") }, { status: 400 });
   }
 
   if (!ageAttestation) {
     return NextResponse.json(
       {
-        error:
-          "Please confirm you are 13 or older and have parent/guardian permission if under 18.",
+        error: t("ageRequired"),
       },
       { status: 400 }
     );
@@ -595,15 +617,15 @@ export async function POST(request: NextRequest) {
     const match = imageData.match(IMAGE_DATA_PATTERN);
 
     if (!match) {
-      return NextResponse.json({ error: "Image must be PNG, JPG, WebP, or GIF." }, { status: 400 });
+      return NextResponse.json({ error: t("imageFormat") }, { status: 400 });
     }
 
     if (imageData.length > MAX_IMAGE_DATA_LENGTH) {
-      return NextResponse.json({ error: "Image must be 1.5 MB or smaller." }, { status: 400 });
+      return NextResponse.json({ error: t("imageTooLarge") }, { status: 400 });
     }
 
     if (imageType && imageType !== match[1]) {
-      return NextResponse.json({ error: "Image type does not match upload." }, { status: 400 });
+      return NextResponse.json({ error: t("imageMismatch") }, { status: 400 });
     }
   }
 
@@ -620,7 +642,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Supabase image upload failed", error);
     return NextResponse.json(
-      { error: "Image upload failed. Try a smaller image or submit without it." },
+      { error: t("imageUploadFailed") },
       { status: 502 }
     );
   }
@@ -679,7 +701,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Supabase player lead request failed", error);
     return NextResponse.json(
-      { error: "Could not reach member database." },
+      { error: t("dbUnreachable") },
       { status: 502 }
     );
   }
@@ -691,7 +713,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { error: "Could not save member profile." },
+      { error: t("saveFailed") },
       { status: 502 }
     );
   }
@@ -702,10 +724,15 @@ export async function POST(request: NextRequest) {
   if (needsEmailConfirmation) {
     try {
       await sendWelcomeEmail({
+        locale,
         name,
         email,
         contactConsent,
-        confirmEmailUrl: getConfirmEmailUrl(request, confirmationToken),
+        confirmEmailUrl: getConfirmEmailUrl(
+          request,
+          confirmationToken,
+          locale
+        ),
       });
     } catch (error) {
       console.error("Confirmation email failed", error);

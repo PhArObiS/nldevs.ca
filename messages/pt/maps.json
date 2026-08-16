@@ -1,0 +1,734 @@
+{
+  "mapPages": {
+    "star-wars-tycoon-sidekick-legends": {
+      "breadcrumbParent": "Mapas Star Wars",
+      "eyebrow": "EM BREVE / Star Wars Tycoon",
+      "intro": "Em breve pela NLDEVS: uma nova experiência Star Wars Tycoon com o código de ilha anunciado {code}, desbloqueio de sidekicks e heróis, novas seções, trabalhadores, ranking de Rebirth, salvamento automático e até 4 jogadores.",
+      "schemaGenre": "Star Wars Tycoon",
+      "schemaDescription": "Star Wars Tycoon Sidekick Legends é um mapa Star Wars Tycoon do Fortnite que chega em breve pela NLDEVS, com desbloqueio de sidekicks e heróis, novas seções, trabalhadores, aumento de produção, progressão no ranking de Rebirth, salvamento automático e até 4 jogadores.",
+      "stats": [
+        { "label": "Jogadores", "value": "1-4" },
+        { "label": "Modo", "value": "Progressão tycoon" },
+        { "label": "Status", "value": "Em breve" },
+        { "label": "Progresso", "value": "Salvamento automático" },
+        { "label": "Ideal para", "value": "Squads e construtores" },
+        { "label": "Dificuldade", "value": "Grind tranquilo" }
+      ],
+      "sections": [
+        {
+          "type": "card",
+          "title": "Status do",
+          "accent": "lançamento",
+          "heading": "EM BREVE",
+          "body": "Star Wars Tycoon Sidekick Legends ainda não foi lançado. A página está pronta para o lançamento com o código de ilha anunciado 3205-2388-4588; volte aqui para conferir o status de disponibilidade quando a aprovação da Epic for concluída."
+        },
+        {
+          "type": "list",
+          "title": "Recursos de",
+          "accent": "gameplay",
+          "items": [
+            "🐶 Desbloqueie todos os sidekicks e heróis.",
+            "🗼 Desbloqueie novas seções e melhorias.",
+            "👷 Desbloqueie trabalhadores e aumente a produção.",
+            "✨ Suba no ranking acumulando Rebirths.",
+            "👥 Até 4 jogadores.",
+            "🔁 Faça Rebirth e desbloqueie novas recompensas poderosas.",
+            "💾 Todo o progresso é salvo automaticamente."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Status do",
+          "accent": "código de ilha",
+          "paragraphs": [
+            "Star Wars Tycoon Sidekick Legends chega em breve. O código de ilha anunciado é 3205-2388-4588; assim que o mapa for aprovado e entrar no ar, os jogadores poderão digitá-lo em Buscar / Descobrir para jogar o novo mapa Star Wars Tycoon da NLDEVS, com desbloqueio de sidekicks e heróis, trabalhadores, aumento de produção, rebirths e progressão salva.",
+            "Salve esta página para acompanhar o código de ilha de Star Wars Tycoon Sidekick Legends, as notas de lançamento e os detalhes de gameplay."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Como",
+          "accent": "jogar",
+          "heading": "Código de ilha 3205-2388-4588",
+          "body": "Star Wars Tycoon Sidekick Legends chega em breve. Quando entrar no ar, abra o Fortnite, vá em Buscar / Descobrir, digite 3205-2388-4588 e entre na ilha."
+        },
+        {
+          "type": "prose",
+          "title": "Por que é",
+          "accent": "novidade",
+          "paragraphs": [
+            "Sidekick Legends é o próximo lançamento Star Wars Tycoon da NLDEVS, feito para quem quer progressão tycoon de longo prazo em vez de partidas rápidas de uma rodada só. Salvamento automático, rebirths, trabalhadores, seções e melhorias dão motivo para voltar depois de cada sessão."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Ideal para",
+          "accent": "quem gosta de",
+          "items": [
+            "Mapas tycoon do Fortnite com progressão de longo prazo.",
+            "Melhorias tycoon, heróis, sidekicks e recompensas com tema Star Wars.",
+            "Jogar com amigos enquanto desbloqueia novas seções e trabalhadores.",
+            "Mapas com salvamento automático, rebirths, aumento de produção e metas repetíveis."
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de Star Wars Tycoon Sidekick Legends",
+        "Captura de tela de gameplay de Star Wars Tycoon Sidekick Legends",
+        "Captura de tela adicional de Star Wars Tycoon Sidekick Legends"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o código de ilha de Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends chega em breve. O código de ilha anunciado é 3205-2388-4588."
+        },
+        {
+          "q": "Star Wars Tycoon Sidekick Legends salva o progresso?",
+          "a": "Sim. Todo o progresso é salvo automaticamente, então dá para retomar sua progressão tycoon."
+        },
+        {
+          "q": "Quantos jogadores podem entrar?",
+          "a": "Star Wars Tycoon Sidekick Legends suporta até 4 jogadores."
+        }
+      ],
+      "similarLabels": [
+        "Todos os mapas Star Wars",
+        "Star Wars Mega RvB",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+
+    "star-wars-mega-rvb": {
+      "breadcrumbParent": "Mapas Star Wars",
+      "eyebrow": "Star Wars / Vermelho vs Azul",
+      "intro": "Um mapa Star Wars de mata-mata por equipes Vermelho vs Azul com armas personalizadas, veículos desbloqueáveis, conquistas, música e ranking.",
+      "schemaGenre": "Mata-mata por equipes Star Wars Vermelho vs Azul",
+      "schemaDescription": "Star Wars Mega RvB é um mapa PvP Vermelho vs Azul do Fortnite feito pela NLDEVS, com armas de Star Wars, veículos, conquistas, música, armas personalizadas e progressão até o ranque Unreal.",
+      "stats": [
+        { "label": "Jogadores", "value": "Até 20" },
+        { "label": "Modo", "value": "PvP Vermelho vs Azul" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Progresso", "value": "Subir de ranque" },
+        { "label": "Ideal para", "value": "Brigas rápidas em equipe" },
+        { "label": "Dificuldade", "value": "Média" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "Star Wars Mega RvB foi feito para sessões de PvP rápidas com time vermelho contra time azul, armas de Star Wars, desbloqueio de armas personalizadas e progressão de ranque. Entre, lute, complete conquistas e avance rumo ao Unreal."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Recursos do",
+          "accent": "mapa",
+          "items": [
+            "Armas de Star Wars e armas totalmente novas.",
+            "Mata-mata por equipes com renascimentos e música.",
+            "Armas personalizadas, conquistas e veículos desbloqueáveis.",
+            "Suba até o ranque Unreal e compita com os amigos."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Por que jogar",
+          "accent": "Mega RvB",
+          "paragraphs": [
+            "Star Wars Mega RvB é para quem procura um mapa Vermelho vs Azul de Star Wars no Fortnite com ação imediata. O foco é simples: escolha um lado, renasça rápido, use armas de Star Wars, desbloqueie veículos e continue lutando.",
+            "Se você quer um código de ilha de mata-mata por equipes de Star Wars com armas personalizadas, conquistas e progressão de ranque, esse é o mapa da NLDEVS por onde começar."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código do mapa 7323-8876-4862.",
+            "Escolha um lado e comece a lutar.",
+            "Desbloqueie armas, veículos e conquistas conforme joga."
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia da gameplay de Star Wars Mega RvB",
+        "Captura de tela de gameplay de Star Wars Mega RvB",
+        "Captura de tela adicional de Star Wars Mega RvB"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o código de ilha de Star Wars Mega RvB?",
+          "a": "O código de ilha de Star Wars Mega RvB é 7323-8876-4862."
+        },
+        {
+          "q": "Que tipo de mapa é Star Wars Mega RvB?",
+          "a": "É um mapa PvP de mata-mata por equipes Vermelho vs Azul com armas de Star Wars, armas personalizadas, veículos, conquistas, música e ranking."
+        },
+        {
+          "q": "Dá para desbloquear veículos?",
+          "a": "Sim. Star Wars Mega RvB inclui veículos desbloqueáveis e progressão de armas personalizadas."
+        }
+      ],
+      "similarLabels": [
+        "Todos os mapas Star Wars",
+        "Star Wars Tycoon Sidekick Legends",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+
+    "star-wars-tilted-99-bots-royale": {
+      "breadcrumbParent": "Mapas Star Wars",
+      "eyebrow": "Star Wars / 99 Bots Royale",
+      "intro": "Um mapa de sobrevivência royale contra 99 bots com tema Star Wars, com batalhas de chefe, heróis desbloqueáveis, estatísticas e loadouts salvos e ação em Tilted.",
+      "schemaGenre": "Star Wars 99 Bots Royale",
+      "schemaDescription": "Star Wars Tilted 99 Bots Royale é um mapa de sobrevivência PvE em mundo aberto do Fortnite feito pela NLDEVS, com 99 bots, batalhas de chefe, heróis desbloqueáveis, estatísticas e loadouts salvos e ação Tilted x Star Wars.",
+      "stats": [
+        { "label": "Jogadores", "value": "1-5" },
+        { "label": "Modo", "value": "99 Bots Royale" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Progresso", "value": "Estatísticas salvas" },
+        { "label": "Ideal para", "value": "Sobrevivência PvE" },
+        { "label": "Dificuldade", "value": "Média" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royale mistura treino de bot royale com sobrevivência PvE em mundo aberto no tema Star Wars. Entre, elimine bots, desbloqueie heróis, enfrente chefes e mantenha suas estatísticas e loadouts salvos entre as sessões."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Recursos do",
+          "accent": "mapa",
+          "items": [
+            "Ação de bot royale infinita com 99 bots.",
+            "Desbloqueie heróis totalmente novos e enfrente batalhas de chefe.",
+            "Estatísticas e loadouts salvos entre sessões.",
+            "Tema Tilted Towers x Star Wars para jogar com amigos."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Por que jogar",
+          "accent": "99 Bots Royale",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royale é voltado para quem procura um código de mapa de Star Wars no Fortnite com brigas contra bots, ritmo de sobrevivência e progressão salva. O formato com 99 bots mantém as partidas movimentadas sem esperar lobbies cheios.",
+            "Heróis desbloqueáveis, batalhas de chefe, estatísticas e loadouts salvos e o tema Tilted Towers x Star Wars fazem dele uma ótima escolha para aquecimento, sessões casuais e ação PvE rejogável."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código do mapa 1116-7765-9076.",
+            "Entre no royale e comece a enfrentar os bots.",
+            "Desbloqueie heróis, salve loadouts e suba no ranking."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Uma nota",
+          "accent": "rápida",
+          "heading": "Feito para sessões repetidas",
+          "body": "Estatísticas e loadouts salvos fazem deste um ótimo mapa de aquecimento e rejogabilidade, especialmente se você quer brigas rápidas sem esperar lobbies cheios."
+        }
+      ],
+      "gallery": [
+        "Prévia de Star Wars Tilted 99 Bots Royale",
+        "Captura de tela de gameplay de Star Wars Tilted 99 Bots Royale",
+        "Captura de tela adicional de Star Wars Tilted 99 Bots Royale"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o código de ilha de Star Wars Tilted 99 Bots Royale?",
+          "a": "O código de ilha de Star Wars Tilted 99 Bots Royale é 1116-7765-9076."
+        },
+        {
+          "q": "Esse mapa tem bots?",
+          "a": "Sim. Ele é construído em torno da sobrevivência royale contra 99 bots, para brigas rápidas, treino e diversão com amigos."
+        },
+        {
+          "q": "Ele salva estatísticas e loadouts?",
+          "a": "Sim. O mapa inclui estatísticas e loadouts salvos, além de heróis desbloqueáveis e batalhas de chefe."
+        }
+      ],
+      "similarLabels": [
+        "Todos os mapas Star Wars",
+        "Star Wars Mega RvB",
+        "Star Wars Tycoon Sidekick Legends"
+      ]
+    },
+
+    "tmnt-mega-ramp-survival": {
+      "breadcrumbParent": "Mapas Tartarugas Ninja",
+      "eyebrow": "Tartarugas Ninja / Sobrevivência",
+      "intro": "Uma experiência de sobrevivência em alta velocidade em que os jogadores sobem por uma rampa gigante desviando de obstáculos e sobrevivendo o máximo possível.",
+      "schemaGenre": "Sobrevivência",
+      "schemaDescription": "Experiência de sobrevivência em rampa de alta velocidade no Fortnite, criada com UEFN pela NLDEVS.",
+      "stats": [
+        { "label": "Jogadores", "value": "Solo / grupo" },
+        { "label": "Modo", "value": "Sobrevivência em mega rampa" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Duração da rodada", "value": "Partidas rápidas" },
+        { "label": "Ideal para", "value": "Caos e movimentação" },
+        { "label": "Dificuldade", "value": "Fácil de começar" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "TMNT Mega Ramp Survival é uma experiência de sobrevivência em alta velocidade em que os jogadores sobem por uma rampa gigante desviando de obstáculos e sobrevivendo o máximo possível."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Descobrir",
+            "Digite o código do mapa 0556-7584-6565",
+            "Entre na ilha e comece uma partida",
+            "Sobreviva mais tempo para melhorar sua pontuação"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que é",
+          "accent": "divertido",
+          "items": [
+            "Rejogabilidade imediata do tipo “mais uma partida”",
+            "Movimentação em alta velocidade e caos",
+            "Ótimo sozinho ou com amigos",
+            "Tema das Tartarugas Ninja bem marcante"
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de TMNT Mega Ramp Survival",
+        "Captura de tela de gameplay de TMNT Mega Ramp Survival",
+        "Captura de tela adicional de TMNT Mega Ramp Survival"
+      ],
+      "faqs": [
+        {
+          "q": "Como jogo esse mapa?",
+          "a": "Digite o código 0556-7584-6565 no Descobrir do Fortnite."
+        },
+        {
+          "q": "É multijogador?",
+          "a": "Sim — é divertido sozinho ou em grupo."
+        }
+      ],
+      "similarLabels": [
+        "TMNT City",
+        "RvB Squid Minigame",
+        "Melhores mapas de XP"
+      ]
+    },
+
+    "tmnt-city": {
+      "breadcrumbParent": "Mapas Tartarugas Ninja",
+      "eyebrow": "Tartarugas Ninja / Experiência",
+      "intro": "Uma experiência urbana imersiva com tema das Tartarugas Ninja criada no UEFN — explore, lute e curta com os amigos.",
+      "schemaGenre": "Experiência",
+      "schemaDescription": "Experiência urbana com tema das Tartarugas Ninja criada no UEFN — explore, lute e relaxe com os amigos.",
+      "stats": [
+        { "label": "Jogadores", "value": "Solo / squads" },
+        { "label": "Modo", "value": "Experiência urbana" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Ritmo", "value": "Explorar + lutar" },
+        { "label": "Ideal para", "value": "Sessões de descontração" },
+        { "label": "Dificuldade", "value": "Casual" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "TMNT City é uma experiência urbana imersiva com tema das Tartarugas Ninja criada no UEFN. Explore, lute e curta com os amigos em um ambiente temático feito para voltar várias vezes."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Digite o código do mapa 1383-6989-3967 no Descobrir do Fortnite",
+            "Entre e explore a cidade",
+            "Siga os objetivos e atividades do mapa",
+            "Jogue com amigos para curtir melhor"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que é",
+          "accent": "divertido",
+          "items": [
+            "Atmosfera forte das Tartarugas Ninja",
+            "Ciclos de exploração e combate",
+            "Ótimo mapa para relaxar com a squad"
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de TMNT City",
+        "Captura de tela de gameplay de TMNT City",
+        "Captura de tela adicional de TMNT City"
+      ],
+      "faqs": [
+        {
+          "q": "TMNT City é um gun game?",
+          "a": "É mais um mapa de experiência e exploração, com elementos de ação."
+        },
+        {
+          "q": "Como encontro no Fortnite?",
+          "a": "Descobrir → digite 1383-6989-3967."
+        }
+      ],
+      "similarLabels": [
+        "TMNT Mega Ramp Survival",
+        "Mapas Gun Game",
+        "Todos os mapas Tartarugas Ninja"
+      ]
+    },
+
+    "rvb-squid-minigame": {
+      "breadcrumbParent": "Mapas Round 6",
+      "eyebrow": "Round 6 / RvB",
+      "intro": "Uma experiência Vermelho vs Azul acelerada inspirada nos desafios do estilo Round 6 — feita para rodadas rápidas e ação constante.",
+      "schemaGenre": "Vermelho vs Azul / Minigames",
+      "schemaDescription": "Minigames no estilo Round 6 com caos Vermelho vs Azul e rodadas rápidas.",
+      "stats": [
+        { "label": "Jogadores", "value": "Bom para grupos" },
+        { "label": "Modo", "value": "Minigames RvB" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Duração da rodada", "value": "Rodadas curtas" },
+        { "label": "Ideal para", "value": "Partidas rápidas" },
+        { "label": "Dificuldade", "value": "Fácil" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "RvB Squid Minigame é uma experiência Vermelho vs Azul acelerada inspirada nos desafios do estilo Round 6. Foi feita para rodadas rápidas, ação constante e aquela rejogabilidade de “bora de novo”."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Digite o código do mapa 2720-5344-3341 no Descobrir",
+            "Entre em um time",
+            "Jogue as rodadas rápidas de minigame",
+            "Vença as rodadas com trabalho em equipe e eliminações"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que é",
+          "accent": "divertido",
+          "items": [
+            "Rodadas curtas garantem alta rejogabilidade",
+            "Caos Vermelho vs Azul com os amigos",
+            "Competitivo e fácil de entender"
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de RvB Squid Minigame",
+        "Captura de tela de gameplay de RvB Squid Minigame",
+        "Captura de tela adicional de RvB Squid Minigame"
+      ],
+      "faqs": [
+        {
+          "q": "Esse é um mapa de Round 6?",
+          "a": "São minigames inspirados no estilo Round 6, com formato Vermelho vs Azul."
+        },
+        {
+          "q": "Posso jogar com amigos?",
+          "a": "Sim — fica melhor ainda com squads ou grupos."
+        }
+      ],
+      "similarLabels": [
+        "Mapas Round 6",
+        "Melhores mapas de XP",
+        "Mapas Gun Game"
+      ]
+    },
+
+    "99-bots-squid-royale-boss": {
+      "breadcrumbParent": "Mapas Round 6",
+      "eyebrow": "Round 6 / 99 Bots",
+      "intro": "Bem-vindo ao Squid Royale. Digite o código de ilha do Fortnite {code} para jogar um mapa de sobrevivência PvE em mundo aberto contra 99 bots, com batalhas de chefe, ranques, rankings, estatísticas salvas e novas armas.",
+      "schemaGenre": "Round 6 / 99 Bots / Sobrevivência",
+      "schemaDescription": "99 Bots Squid Royale Boss é um mapa do Fortnite no estilo Round 6 feito pela NLDEVS, com bot royale infinito, batalhas de chefe, novas armas, montaria em animais, estatísticas salvas, ranques, rankings e gameplay de sobrevivência.",
+      "stats": [
+        { "label": "Jogadores", "value": "1-5" },
+        { "label": "Modo", "value": "Sobrevivência com 99 bots" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Progresso", "value": "Estatísticas salvas" },
+        { "label": "Ideal para", "value": "Batalhas de chefe" },
+        { "label": "Dificuldade", "value": "Média" }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Recursos de",
+          "accent": "gameplay",
+          "items": [
+            "Bot royale infinito",
+            "Batalha de chefe",
+            "Armas totalmente novas",
+            "Montaria em animais",
+            "Estatísticas e loadout salvos",
+            "Construções resetam a cada 20 minutos",
+            "Sistema de ranques",
+            "Rankings",
+            "Diversão com amigos",
+            "Jogo de sobrevivência"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Detalhes da",
+          "accent": "ilha",
+          "heading": "Código de ilha 0596-3765-4845",
+          "body": "99 Bots Squid Royale Boss é um mapa de sobrevivência no estilo Round 6 para até 5 jogadores. Elimine bots para subir de ranque, participe dos eventos de batalha de chefe e mantenha suas estatísticas salvas entre as sessões."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que jogar",
+          "accent": "esse mapa",
+          "items": [
+            "Sobrevivência PvE em mundo aberto com ação constante contra bots.",
+            "Eventos de batalha de chefe para lutas e recompensas maiores.",
+            "Sistema de ranques e rankings para metas repetíveis.",
+            "Estatísticas e loadouts salvos para quem volta a jogar."
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de 99 Bots Squid Royale Boss",
+        "Captura de tela de gameplay de 99 Bots Squid Royale Boss",
+        "Captura de tela adicional de 99 Bots Squid Royale Boss"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o código de ilha de 99 Bots Squid Royale Boss?",
+          "a": "O código de ilha de 99 Bots Squid Royale Boss é 0596-3765-4845."
+        },
+        {
+          "q": "99 Bots Squid Royale Boss é um mapa de Round 6 no Fortnite?",
+          "a": "Sim. É um mapa do Fortnite no estilo Round 6 feito pela NLDEVS, com 99 bots, sobrevivência PvE, batalhas de chefe e ação em mundo aberto."
+        },
+        {
+          "q": "Quantos jogadores podem entrar?",
+          "a": "99 Bots Squid Royale Boss suporta até 5 jogadores."
+        }
+      ],
+      "similarLabels": [
+        "Mapas Round 6",
+        "Sidekick Siege 99 Bots",
+        "RvB Squid Minigame"
+      ]
+    },
+
+    "sidekick-siege-99-bots": {
+      "breadcrumbParent": "Mapas Round 6",
+      "eyebrow": "Round 6 / 99 Bots",
+      "intro": "Bem-vindo ao 99 Bots: Sidekick Siege. Digite o código de ilha do Fortnite {code} para jogar um mapa de sobrevivência PvE focado em sidekicks, com batalhas de chefe, ranques, rankings, estatísticas salvas e até 5 jogadores.",
+      "schemaGenre": "Round 6 / 99 Bots / Sobrevivência",
+      "schemaDescription": "Sidekick Siege 99 Bots é um mapa do Fortnite no estilo Round 6 feito pela NLDEVS, com sidekicks, bot royale infinito, batalhas de chefe, novas armas, montaria em animais, estatísticas salvas, ranques, rankings e gameplay de sobrevivência.",
+      "stats": [
+        { "label": "Jogadores", "value": "1-5" },
+        { "label": "Modo", "value": "Sobrevivência com sidekicks" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Progresso", "value": "Loadouts salvos" },
+        { "label": "Ideal para", "value": "Squads PvE" },
+        { "label": "Dificuldade", "value": "Média" }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Recursos de",
+          "accent": "gameplay",
+          "items": [
+            "Sidekicks",
+            "Bot royale infinito",
+            "Batalha de chefe",
+            "Armas totalmente novas",
+            "Montaria em animais",
+            "Estatísticas e loadout salvos",
+            "Construções resetam a cada 20 minutos",
+            "Sistema de ranques",
+            "Rankings",
+            "Diversão com amigos",
+            "Jogo de sobrevivência"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Detalhes da",
+          "accent": "ilha",
+          "heading": "Código de ilha 5577-7953-8449",
+          "body": "Sidekick Siege 99 Bots é um mapa de sobrevivência no estilo Round 6 para até 5 jogadores. Leve sidekicks para as batalhas contra 99 bots, enfrente chefes, suba de ranque e mantenha estatísticas e loadouts salvos."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que jogar",
+          "accent": "esse mapa",
+          "items": [
+            "Ação de sobrevivência contra 99 bots focada em sidekicks.",
+            "Batalhas de chefe, combate PvE e ritmo de battle royale.",
+            "Sistema de ranques e rankings para sessões repetidas.",
+            "Estatísticas e loadouts salvos para quem gosta de progressão."
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia de Sidekick Siege 99 Bots",
+        "Captura de tela de gameplay de Sidekick Siege 99 Bots",
+        "Captura de tela adicional de Sidekick Siege 99 Bots"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o código de ilha de Sidekick Siege 99 Bots?",
+          "a": "O código de ilha de Sidekick Siege 99 Bots é 5577-7953-8449."
+        },
+        {
+          "q": "Sidekick Siege 99 Bots inclui sidekicks?",
+          "a": "Sim. Os sidekicks são um dos principais recursos de Sidekick Siege 99 Bots."
+        },
+        {
+          "q": "Quantos jogadores podem entrar?",
+          "a": "Sidekick Siege 99 Bots suporta até 5 jogadores."
+        }
+      ],
+      "similarLabels": [
+        "Mapas Round 6",
+        "99 Bots Squid Royale Boss",
+        "RvB Squid Minigame"
+      ]
+    },
+
+    "winterfest-demon-hunters": {
+      "breadcrumbParent": "Mapas Gun Game",
+      "eyebrow": "Gun Game / FFA",
+      "intro": "Uma experiência focada em combate feita para rodadas repetíveis — gameplay com a ação em primeiro lugar e XP constante por sessão, dependendo da calibragem.",
+      "schemaGenre": "Gun Game / Combate PvE",
+      "schemaDescription": "Gun game de caça a demônios com tema de fim de ano, rotação de armas e ciclos de combate repetíveis.",
+      "stats": [
+        { "label": "Jogadores", "value": "Bom para squads" },
+        { "label": "Modo", "value": "Combate gun game" },
+        { "label": "Status", "value": "Disponível" },
+        { "label": "Duração da rodada", "value": "Ciclos rápidos" },
+        { "label": "Ideal para", "value": "XP em combate" },
+        { "label": "Dificuldade", "value": "Fácil / média" }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descrição da",
+          "accent": "gameplay",
+          "paragraphs": [
+            "Entre em Winterfest Demon Hunters para ciclos de combate acelerados, rotação de armas e rodadas rejogáveis. Foi feito para manter a ação em movimento — ótimo para squads que querem brigas constantes e filas rápidas."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir",
+            "Digite o código do mapa 6101-7751-8665",
+            "Entre na ilha e siga os objetivos do mapa",
+            "Fique ativo nas brigas para manter o ritmo da partida (e o XP, se disponível)"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que é",
+          "accent": "divertido",
+          "items": [
+            "Rodadas focadas em combate com ciclos repetíveis",
+            "Ótimo com amigos (squads / grupos)",
+            "Variedade de armas e ritmo de “mais uma rodada”",
+            "Boa opção quando você quer XP jogando de verdade"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Dicas",
+          "accent": "e táticas",
+          "items": [
+            "Jogue em grupo para manter as rodadas fluindo e reduzir o tempo parado.",
+            "Se o XP cair, troque de mapa (a calibragem e os retornos decrescentes variam).",
+            "Foque em brigas consistentes a média distância — eliminações rápidas mantêm o ritmo."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Uma nota",
+          "accent": "rápida",
+          "heading": "Sobre a disponibilidade de XP",
+          "body": "A disponibilidade de XP pode mudar com atualizações do Fortnite e com a calibragem. Esta página foca em ciclos de gameplay normais e repetíveis — não em exploits."
+        }
+      ],
+      "gallery": [
+        "Prévia de Winterfest Demon Hunters",
+        "Captura de tela de gameplay de Winterfest Demon Hunters",
+        "Captura de tela adicional de Winterfest Demon Hunters"
+      ],
+      "faqs": [
+        {
+          "q": "Esse é um mapa de Gun Game?",
+          "a": "É uma experiência focada em combate com rodadas repetíveis. Algumas versões funcionam como um gun game / ciclo de rotação — siga as regras do mapa na versão atual."
+        },
+        {
+          "q": "Dá XP?",
+          "a": "O XP depende da calibragem do Fortnite e das configurações atuais da ilha. As taxas de XP podem mudar após atualizações ou revisões."
+        },
+        {
+          "q": "Posso jogar com amigos?",
+          "a": "Sim — esse fica melhor com squads ou grupos, para rodadas mais rápidas."
+        }
+      ],
+      "similarLabels": [
+        "Mapas Gun Game",
+        "Melhores mapas de XP",
+        "Mapas Tartarugas Ninja"
+      ]
+    }
+  }
+}
