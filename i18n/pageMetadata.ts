@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { buildPageMetadata } from "./metadata";
-import type { AppPathname, Locale } from "./routing";
+import { routing, type AppPathname, type Locale } from "./routing";
 
 /**
  * Builds a page's full Metadata from the `pageMeta` catalog.
@@ -17,6 +19,12 @@ export async function pageMetadata(
   locale: Locale,
   opts: { code?: string; image?: string; noIndex?: boolean } = {}
 ): Promise<Metadata> {
+  // [locale] behaves as a catch-all: a request the middleware skipped (any
+  // path containing a dot) arrives here with locale set to that filename.
+  // Without this guard LOCALE_META[locale] is undefined and the page threw a
+  // 500 instead of returning a 404.
+  if (!hasLocale(routing.locales, locale)) notFound();
+
   // Catalog keys mirror the canonical (English) route without its slash.
   const key = href.slice(1);
   const t = await getTranslations({ locale, namespace: `pageMeta.${key}` });

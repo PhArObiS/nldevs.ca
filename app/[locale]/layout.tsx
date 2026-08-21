@@ -30,6 +30,9 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale };
 }): Promise<Metadata> {
+  // Runs before the component body, so it needs its own guard.
+  if (!hasLocale(routing.locales, locale)) notFound();
+
   const t = await getTranslations({ locale, namespace: "meta" });
   const meta = LOCALE_META[locale];
 

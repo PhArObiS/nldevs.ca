@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { hasLocale, useTranslations } from "next-intl";
+import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import JsonLd from "@/components/JsonLd";
 import AboutContent from "@/components/sub/AboutContent";
@@ -11,7 +12,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { Link } from "@/i18n/navigation";
 import { buildAlternates, absoluteUrl } from "@/i18n/metadata";
-import { LOCALE_META, locales, type Locale } from "@/i18n/routing";
+import { LOCALE_META, locales, routing, type Locale } from "@/i18n/routing";
 import { FEATURED_MAP_IDS, MAPS, mapAnchor } from "@/constants/maps";
 import { SITE_LOGO_URL, SITE_URL, SOCIAL_LINKS } from "@/constants/site";
 
@@ -24,6 +25,8 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale };
 }): Promise<Metadata> {
+  if (!hasLocale(routing.locales, locale)) notFound();
+
   const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
@@ -73,6 +76,8 @@ export default function Home({
 }: {
   params: { locale: Locale };
 }) {
+  if (!hasLocale(routing.locales, locale)) notFound();
+
   setRequestLocale(locale);
   return <HomeContent locale={locale} />;
 }
