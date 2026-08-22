@@ -185,6 +185,9 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
     "tmnt-city",
     "winterfest-demon-hunters",
     "rvb-players-vs-guards",
+    "99-bots-squid-royale-boss",
+    "sidekick-siege-99-bots",
+    "star-wars-tilted-99-bots-royale",
   ],
 };
 

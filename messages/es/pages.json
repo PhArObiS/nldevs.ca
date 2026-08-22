@@ -397,14 +397,20 @@
         "winterfest-demon-hunters": "Ciclos centrados en el combate con rondas repetibles. Funciona bien para quienes quieren XP mientras pelean.",
         "rvb-players-vs-guards": "Objetivos por equipos y sesiones más largas. Bueno para un XP constante jugando rondas estilo PvP.",
         "tmnt-city": "Rutas de exploración y combate con ciclos de XP consistentes.",
-        "rvb-squid-minigame": "Rondas rápidas y juego basado en objetivos."
+        "rvb-squid-minigame": "Rondas rápidas y juego basado en objetivos.",
+        "99-bots-squid-royale-boss": "Supervivencia contra bots en mundo abierto con acción constante y eventos de jefe. Fuerte para sesiones largas.",
+        "sidekick-siege-99-bots": "Supervivencia contra bots liderada por sidekicks, con progresión guardada. Buena para repetir partidas.",
+        "star-wars-tilted-99-bots-royale": "Royale contra 99 bots sin esperas de lobby. Acción desde el salto."
       },
       "modeOverrides": {
         "tmnt-mega-ramp-survival": "Activo",
         "winterfest-demon-hunters": "Mixto",
         "rvb-players-vs-guards": "Mixto",
         "tmnt-city": "Activo",
-        "rvb-squid-minigame": "Activo"
+        "rvb-squid-minigame": "Activo",
+        "99-bots-squid-royale-boss": "Activo",
+        "sidekick-siege-99-bots": "Activo",
+        "star-wars-tilted-99-bots-royale": "Activo"
       },
       "relatedLabels": [
         "Mapas Gun Game",
