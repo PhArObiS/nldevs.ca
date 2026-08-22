@@ -94,6 +94,11 @@
       "title": "Meilleures cartes Fortnite Rouge contre Bleu et codes de map",
       "description": "Codes de map Fortnite Rouge contre Bleu par NLDEVS. Des îles équipe contre équipe avec réapparitions rapides, manches à objectifs et chaos en squad.",
       "ogDescription": "Codes de map Fortnite Rouge contre Bleu par NLDEVS — match à mort par équipe, mini-jeux et combats contre les gardes."
+    },
+    "rvb-players-vs-guards": {
+      "title": "Code de map RvB Players vs Guards (6263-5571-9595)",
+      "description": "Jouez a RvB Players vs Guards sur Fortnite. Code de map 6263-5571-9595. Une ile Rouge contre Bleu avec joueurs contre gardes, objectifs d'equipe et manches repetables.",
+      "ogDescription": "Map Fortnite Rouge contre Bleu avec joueurs contre gardes, objectifs d'equipe et combats repetables."
     }
   },
   "hubs": {
@@ -416,24 +421,73 @@
       "genre": "Carte XP Fortnite",
       "codesTitle": "Codes des maps",
       "codesAccent": "XP",
-      "introSections": [],
-      "tipSections": [],
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "how-fortnite-xp-maps-work",
+          "title": "Comment fonctionnent les",
+          "accent": "maps XP Fortnite",
+          "paragraphs": [
+            "Les maps XP Fortnite sont des iles Creative et UEFN avec des activites repetables qui peuvent donner de l'XP de compte quand l'ile est calibree et que l'XP est activee. Les meilleures ne sont pas des boutons magiques : ce sont des maps avec des boucles stables, des objectifs clairs et assez d'action pour progresser en jouant vraiment.",
+            "Les gains peuvent changer apres les mises a jour Fortnite, les revisions d'ile, les changements de calibration et tes habitudes de jeu quotidiennes. Utilise cette page comme une selection pratique de maps NLDEVS avec des boucles actives, pas comme une promesse d'un montant d'XP fixe."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Conseils pour les",
+          "accent": "maps XP",
+          "items": [
+            "Choisis des maps actives avec eliminations, objectifs, vagues de survie ou combats repetables plutot que des promesses AFK.",
+            "Alterne entre plusieurs iles pendant les longues sessions, car l'XP peut ralentir apres des parties repetees.",
+            "Reverifie la map apres les grosses mises a jour Fortnite : la calibration et les recompenses peuvent bouger.",
+            "Joue avec des amis quand c'est possible. Des manches plus rapides et plus de rencontres gardent la session active."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Comment",
+          "accent": "utiliser la liste",
+          "items": [
+            "Choisis une map selon ton style : combat, survie, Rouge contre Bleu ou exploration.",
+            "Entre le code d'ile dans Recherche / Decouvrir sur Fortnite.",
+            "Joue normalement quelques manches et regarde si les notifications d'XP restent regulieres.",
+            "Ajoute les maps efficaces aux favoris et change d'ile quand les gains ralentissent."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Note",
+          "accent": "importante",
+          "heading": "L'XP n'est pas garantie",
+          "body": "L'XP Fortnite depend de la calibration Epic, des reglages de l'ile, de ton compte et des limites en cours. Cette page met en avant des maps jouables et repetables, pas des glitches, exploits ou methodes AFK."
+        }
+      ],
       "faqs": [
         {
-          "q": "Ces cartes XP Fortnite donnent-elles toujours de l'XP ?",
-          "a": "L'XP dépend du calibrage de Fortnite et des réglages actuels de chaque île, et les taux changent après les mises à jour ou les révisions. Les maps listées ici sont choisies pour leurs boucles de gameplay répétables plutôt que pour un chiffre d'XP fixe."
+          "q": "Ces maps XP Fortnite donnent-elles encore de l'XP ?",
+          "a": "L'XP depend de la calibration Fortnite et des reglages actuels de chaque ile. Les maps ici sont choisies pour leurs boucles repetables, mais les gains peuvent changer apres une mise a jour ou une revision."
         },
         {
-          "q": "Quelle map donne le plus d'XP ?",
-          "a": "Cela change d'une saison à l'autre. Plutôt que de miser sur une seule île, alterne entre plusieurs — les rendements décroissants s'appliquent par map, donc changer garde un rythme plus régulier sur la durée."
+          "q": "Quelle map XP Fortnite donne le plus d'XP ?",
+          "a": "Cela change selon la saison et le compte. Pour une session plus stable, alterne entre des maps actives avec eliminations, objectifs, survie ou manches Rouge contre Bleu."
         },
         {
-          "q": "Comment saisir un code de map XP ?",
-          "a": "Ouvre Fortnite, va dans Rechercher/Découvrir, saisis le code d'île (####-####-####), puis sélectionne le résultat pour jouer."
+          "q": "Les maps XP sont-elles sures ?",
+          "a": "Les maps Creative et UEFN normales, lancees depuis Fortnite Discover, sont l'option la plus propre. Evite les iles qui promettent des glitches, exploits ou methodes qui contournent les regles de Fortnite."
         },
         {
-          "q": "Puis-je gagner de l'XP en jouant entre amis ?",
-          "a": "Oui. La plupart de ces maps sont adaptées au jeu en groupe, et jouer en squad permet généralement d'enchaîner les manches plus vite qu'en solo."
+          "q": "Pourquoi l'XP ralentit-elle sur une map ?",
+          "a": "L'XP peut ralentir a cause des limites quotidiennes, du jeu repete, de la calibration de l'ile ou d'une mise a jour Fortnite. Essaie une autre map, fais une pause ou reviens apres une mise a jour."
+        },
+        {
+          "q": "Comment entrer un code de map XP ?",
+          "a": "Ouvre Fortnite, va dans Recherche ou Decouvrir, entre le code d'ile au format ####-####-####, puis selectionne l'ile."
+        },
+        {
+          "q": "Puis-je gagner de l'XP avec des amis ?",
+          "a": "Oui. La plupart de ces maps fonctionnent en groupe, et jouer en squad peut accelerer les manches, objectifs et combats."
         }
       ],
       "notes": {

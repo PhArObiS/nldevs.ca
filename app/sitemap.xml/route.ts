@@ -27,6 +27,8 @@ const HUB_ROUTES: AppPathname[] = [
   "/squid-game-fortnite-maps",
   "/fortnite-gun-game-maps",
   "/best-fortnite-xp-maps",
+  "/fortnite-99-bots-maps",
+  "/fortnite-red-vs-blue-maps",
   "/playtest-squad",
   "/uefn-contracts",
   "/privacy",

@@ -94,6 +94,11 @@
       "title": "Mejores mapas de Rojo vs Azul en Fortnite y códigos",
       "description": "Códigos de mapa Rojo vs Azul en Fortnite de NLDEVS. Islas equipo contra equipo con reapariciones rápidas, rondas por objetivos y caos en squad.",
       "ogDescription": "Códigos de mapa Rojo vs Azul en Fortnite de NLDEVS — combate por equipos, minijuegos y batallas contra guardias."
+    },
+    "rvb-players-vs-guards": {
+      "title": "Codigo del mapa RvB Players vs Guards (6263-5571-9595)",
+      "description": "Juega RvB Players vs Guards en Fortnite. Codigo de mapa 6263-5571-9595. Una isla Rojo vs Azul con jugadores contra guardias, objetivos por equipo y rondas repetibles.",
+      "ogDescription": "Mapa Fortnite Rojo vs Azul con jugadores contra guardias, objetivos por equipo y combate repetible."
     }
   },
   "hubs": {
@@ -416,24 +421,73 @@
       "genre": "Mapa de XP de Fortnite",
       "codesTitle": "Códigos de los mapas",
       "codesAccent": "de XP",
-      "introSections": [],
-      "tipSections": [],
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "how-fortnite-xp-maps-work",
+          "title": "Como funcionan los",
+          "accent": "mapas de XP",
+          "paragraphs": [
+            "Los mapas de XP de Fortnite son islas Creative y UEFN con actividades repetibles que pueden dar XP de cuenta cuando la isla esta calibrada y tiene XP activa. Las mejores opciones no son botones magicos: son mapas con ciclos constantes, objetivos claros y suficiente accion para subir mientras juegas de verdad.",
+            "Las tasas de XP pueden cambiar despues de actualizaciones de Fortnite, revisiones de isla, cambios de calibracion y patrones diarios de juego. Usa esta pagina como una seleccion practica de mapas NLDEVS con gameplay activo, no como una promesa de una cantidad fija de XP."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Consejos para",
+          "accent": "mapas de XP",
+          "items": [
+            "Prioriza mapas activos con eliminaciones, objetivos, oleadas de supervivencia o ciclos de combate en lugar de promesas AFK.",
+            "Rota entre varias islas en sesiones largas, porque la XP puede bajar despues de jugar repetidamente.",
+            "Revisa el mapa despues de grandes actualizaciones de Fortnite; la calibracion y las recompensas pueden cambiar.",
+            "Juega con amigos cuando puedas. Rondas mas rapidas y mas encuentros suelen mantener la sesion activa."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "usar la lista",
+          "items": [
+            "Elige un mapa por estilo: combate, supervivencia, Rojo vs Azul o exploracion.",
+            "Introduce el codigo de isla en Buscar / Descubrir en Fortnite.",
+            "Juega normalmente unas rondas y mira si las notificaciones de XP se mantienen constantes.",
+            "Marca como favoritos los mapas que funcionen bien y rota cuando las ganancias bajen."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Nota",
+          "accent": "importante",
+          "heading": "La XP no esta garantizada",
+          "body": "La XP de Fortnite depende de la calibracion de Epic, la configuracion de la isla, el estado de tu cuenta y los limites actuales. Esta pagina se centra en mapas repetibles de gameplay, no en exploits, glitches ni farmeo AFK."
+        }
+      ],
       "faqs": [
         {
-          "q": "¿Estos mapas de XP de Fortnite siguen dando XP?",
-          "a": "El XP depende de la calibración de Fortnite y de la configuración actual de cada isla, y las tasas cambian tras actualizaciones o revisiones. Los mapas de aquí se eligen por sus ciclos de gameplay repetibles, no por una cifra fija de XP."
+          "q": "Estos mapas de XP de Fortnite todavia dan XP?",
+          "a": "La XP depende de la calibracion de Fortnite y de la configuracion actual de cada isla. Los mapas aqui se eligen por sus ciclos repetibles, pero las tasas pueden cambiar despues de actualizaciones o revisiones."
         },
         {
-          "q": "¿Qué mapa da más XP?",
-          "a": "Cambia de una temporada a otra. En lugar de apostar por una sola isla, alterna entre varias — los rendimientos decrecientes aplican por mapa, así que cambiar mantiene un ritmo más estable durante la sesión."
+          "q": "Que mapa de XP de Fortnite da mas XP?",
+          "a": "Cambia segun la temporada y la cuenta. Para una sesion mas estable, rota entre mapas activos con eliminaciones, objetivos, supervivencia o rondas Rojo vs Azul."
         },
         {
-          "q": "¿Cómo ingreso un código de mapa de XP?",
-          "a": "Abre Fortnite, ve a Buscar/Descubrir, ingresa el código de isla (####-####-####) y selecciona el resultado para jugar."
+          "q": "Los mapas de XP son seguros?",
+          "a": "Los mapas Creative y UEFN normales jugados desde Discover de Fortnite son la opcion mas limpia. Evita islas que prometen glitches, exploits o cualquier cosa contra las reglas de Fortnite."
         },
         {
-          "q": "¿Puedo ganar XP jugando con amigos?",
-          "a": "Sí. La mayoría de estos mapas funciona bien en grupo, y jugar con la squad suele mantener las rondas más rápidas que en solitario."
+          "q": "Por que bajo la XP en un mapa?",
+          "a": "La XP puede bajar por limites diarios, juego repetido, calibracion de la isla o una actualizacion de Fortnite. Prueba otro mapa, toma un descanso o vuelve despues de una actualizacion."
+        },
+        {
+          "q": "Como introduzco un codigo de mapa de XP?",
+          "a": "Abre Fortnite, ve a Buscar o Descubrir, introduce el codigo de isla en formato ####-####-#### y selecciona la isla."
+        },
+        {
+          "q": "Puedo ganar XP jugando con amigos?",
+          "a": "Si. La mayoria de estos mapas aceptan grupo, y jugar con squad puede mantener rondas, objetivos y combates mas rapidos."
         }
       ],
       "notes": {

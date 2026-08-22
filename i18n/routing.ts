@@ -161,6 +161,12 @@ export const pathnames = {
     pt: "/festa-invernal-cacadores-de-demonios",
     es: "/fiesta-invernal-cazadores-de-demonios",
   },
+  "/rvb-players-vs-guards": {
+    en: "/rvb-players-vs-guards",
+    fr: "/rvb-joueurs-contre-gardes",
+    pt: "/rvb-jogadores-vs-guardas",
+    es: "/rvb-jugadores-vs-guardias",
+  },
 
   // ---- Standalone pages --------------------------------------------------
   "/playtest-squad": {

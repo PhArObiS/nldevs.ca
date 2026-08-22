@@ -140,7 +140,7 @@ export const MAPS: Record<MapId, MapEntry> = {
     title: "RvB Players vs Guards",
     code: "6263-5571-9595",
     image: "/RedVsBluePlayersVsGuards.jpeg",
-    // No detail page yet — card renders without a link.
+    href: "/rvb-players-vs-guards",
     status: "live",
     mode: "redVsBlue",
     updated: "2026-08",

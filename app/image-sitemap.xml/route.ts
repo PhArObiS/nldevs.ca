@@ -99,6 +99,10 @@ const ENTRIES: Entry[] = [
     page: "/winterfest-demon-hunters",
     images: [{ mapId: "winterfest-demon-hunters", kind: "islandCode" }],
   },
+  {
+    page: "/rvb-players-vs-guards",
+    images: [{ mapId: "rvb-players-vs-guards", kind: "islandCode" }],
+  },
 ];
 
 function escapeXml(value: string) {

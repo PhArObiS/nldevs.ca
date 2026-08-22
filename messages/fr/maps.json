@@ -7,12 +7,30 @@
       "schemaGenre": "Star Wars Tycoon",
       "schemaDescription": "Star Wars Tycoon Sidekick Legends est une map Star Wars Tycoon Fortnite à venir, créée par NLDEVS, avec déblocage de sidekicks et de héros, nouvelles sections, ouvriers, boosts de production, progression au classement Rebirth, sauvegarde automatique et jusqu'à 4 joueurs.",
       "stats": [
-        { "label": "Joueurs", "value": "1-4" },
-        { "label": "Mode", "value": "Progression tycoon" },
-        { "label": "Statut", "value": "Bientôt disponible" },
-        { "label": "Progression", "value": "Sauvegarde auto" },
-        { "label": "Idéal pour", "value": "Squads et bâtisseurs" },
-        { "label": "Difficulté", "value": "Grind décontracté" }
+        {
+          "label": "Joueurs",
+          "value": "1-4"
+        },
+        {
+          "label": "Mode",
+          "value": "Progression tycoon"
+        },
+        {
+          "label": "Statut",
+          "value": "Bientôt disponible"
+        },
+        {
+          "label": "Progression",
+          "value": "Sauvegarde auto"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Squads et bâtisseurs"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Grind décontracté"
+        }
       ],
       "sections": [
         {
@@ -99,7 +117,6 @@
         "Star Wars Tilted 99 Bots Royale"
       ]
     },
-
     "star-wars-mega-rvb": {
       "breadcrumbParent": "Cartes Star Wars",
       "eyebrow": "Star Wars / Rouge contre Bleu",
@@ -107,12 +124,30 @@
       "schemaGenre": "Match à mort par équipe Star Wars Rouge contre Bleu",
       "schemaDescription": "Star Wars Mega RvB est une map PvP Rouge contre Bleu sur Fortnite créée par NLDEVS, avec armes Star Wars, véhicules, succès, musique, armes personnalisées et progression jusqu'au rang Unreal.",
       "stats": [
-        { "label": "Joueurs", "value": "Jusqu'à 20" },
-        { "label": "Mode", "value": "PvP Rouge contre Bleu" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Progression", "value": "Montée en rang" },
-        { "label": "Idéal pour", "value": "Combats d'équipe rapides" },
-        { "label": "Difficulté", "value": "Moyenne" }
+        {
+          "label": "Joueurs",
+          "value": "Jusqu'à 20"
+        },
+        {
+          "label": "Mode",
+          "value": "PvP Rouge contre Bleu"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progression",
+          "value": "Montée en rang"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Combats d'équipe rapides"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Moyenne"
+        }
       ],
       "sections": [
         {
@@ -182,7 +217,6 @@
         "Star Wars Tilted 99 Bots Royale"
       ]
     },
-
     "star-wars-tilted-99-bots-royale": {
       "breadcrumbParent": "Cartes Star Wars",
       "eyebrow": "Star Wars / 99 Bots Royale",
@@ -190,12 +224,30 @@
       "schemaGenre": "Star Wars 99 Bots Royale",
       "schemaDescription": "Star Wars Tilted 99 Bots Royale est une map Fortnite de survie PvE en monde ouvert créée par NLDEVS, avec 99 bots, combats de boss, héros à débloquer, stats et loadouts sauvegardés, et action Tilted x Star Wars.",
       "stats": [
-        { "label": "Joueurs", "value": "1-5" },
-        { "label": "Mode", "value": "99 Bots Royale" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Progression", "value": "Stats sauvegardées" },
-        { "label": "Idéal pour", "value": "Survie PvE" },
-        { "label": "Difficulté", "value": "Moyenne" }
+        {
+          "label": "Joueurs",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "99 Bots Royale"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progression",
+          "value": "Stats sauvegardées"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Survie PvE"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Moyenne"
+        }
       ],
       "sections": [
         {
@@ -272,7 +324,6 @@
         "Star Wars Tycoon Sidekick Legends"
       ]
     },
-
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Cartes Tortues Ninja",
       "eyebrow": "Tortues Ninja / Survie",
@@ -280,12 +331,30 @@
       "schemaGenre": "Survie",
       "schemaDescription": "Expérience Fortnite de survie sur méga-rampe à haute vitesse créée avec UEFN par NLDEVS.",
       "stats": [
-        { "label": "Joueurs", "value": "Solo / groupe" },
-        { "label": "Mode", "value": "Survie sur méga-rampe" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Durée d'une manche", "value": "Runs rapides" },
-        { "label": "Idéal pour", "value": "Chaos et mouvement" },
-        { "label": "Difficulté", "value": "Facile à prendre en main" }
+        {
+          "label": "Joueurs",
+          "value": "Solo / groupe"
+        },
+        {
+          "label": "Mode",
+          "value": "Survie sur méga-rampe"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Durée d'une manche",
+          "value": "Runs rapides"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Chaos et mouvement"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Facile à prendre en main"
+        }
       ],
       "sections": [
         {
@@ -342,7 +411,6 @@
         "Meilleures maps XP"
       ]
     },
-
     "tmnt-city": {
       "breadcrumbParent": "Cartes Tortues Ninja",
       "eyebrow": "Tortues Ninja / Expérience",
@@ -350,12 +418,30 @@
       "schemaGenre": "Expérience",
       "schemaDescription": "Expérience urbaine sur thème Tortues Ninja créée avec UEFN — explore, combats et détends-toi entre amis.",
       "stats": [
-        { "label": "Joueurs", "value": "Solo / squads" },
-        { "label": "Mode", "value": "Expérience urbaine" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Rythme", "value": "Exploration + combat" },
-        { "label": "Idéal pour", "value": "Sessions détente" },
-        { "label": "Difficulté", "value": "Décontractée" }
+        {
+          "label": "Joueurs",
+          "value": "Solo / squads"
+        },
+        {
+          "label": "Mode",
+          "value": "Expérience urbaine"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Rythme",
+          "value": "Exploration + combat"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Sessions détente"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Décontractée"
+        }
       ],
       "sections": [
         {
@@ -411,7 +497,6 @@
         "Toutes les maps Tortues Ninja"
       ]
     },
-
     "rvb-squid-minigame": {
       "breadcrumbParent": "Cartes Squid Game",
       "eyebrow": "Squid Game / RvB",
@@ -419,12 +504,30 @@
       "schemaGenre": "Rouge contre Bleu / Mini-jeux",
       "schemaDescription": "Mini-jeux façon Squid Game avec chaos Rouge contre Bleu et manches rapides.",
       "stats": [
-        { "label": "Joueurs", "value": "Adapté aux groupes" },
-        { "label": "Mode", "value": "Mini-jeux RvB" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Durée d'une manche", "value": "Manches courtes" },
-        { "label": "Idéal pour", "value": "Parties rapides" },
-        { "label": "Difficulté", "value": "Facile" }
+        {
+          "label": "Joueurs",
+          "value": "Adapté aux groupes"
+        },
+        {
+          "label": "Mode",
+          "value": "Mini-jeux RvB"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Durée d'une manche",
+          "value": "Manches courtes"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Parties rapides"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Facile"
+        }
       ],
       "sections": [
         {
@@ -480,7 +583,6 @@
         "Maps Gun Game"
       ]
     },
-
     "99-bots-squid-royale-boss": {
       "breadcrumbParent": "Cartes Squid Game",
       "eyebrow": "Squid Game / 99 Bots",
@@ -488,12 +590,30 @@
       "schemaGenre": "Squid Game / 99 Bots / Survie",
       "schemaDescription": "99 Bots Squid Royale Boss est une map Fortnite façon Squid Game créée par NLDEVS, avec bot royale infinie, combats de boss, nouvelles armes, montures sauvages, stats sauvegardées, rangs, classements et gameplay de survie.",
       "stats": [
-        { "label": "Joueurs", "value": "1-5" },
-        { "label": "Mode", "value": "Survie contre 99 bots" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Progression", "value": "Stats sauvegardées" },
-        { "label": "Idéal pour", "value": "Combats de boss" },
-        { "label": "Difficulté", "value": "Moyenne" }
+        {
+          "label": "Joueurs",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Survie contre 99 bots"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progression",
+          "value": "Stats sauvegardées"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Combats de boss"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Moyenne"
+        }
       ],
       "sections": [
         {
@@ -559,7 +679,6 @@
         "RvB Squid Minigame"
       ]
     },
-
     "sidekick-siege-99-bots": {
       "breadcrumbParent": "Cartes Squid Game",
       "eyebrow": "Squid Game / 99 Bots",
@@ -567,12 +686,30 @@
       "schemaGenre": "Squid Game / 99 Bots / Survie",
       "schemaDescription": "Sidekick Siege 99 Bots est une map Fortnite façon Squid Game créée par NLDEVS, avec sidekicks, bot royale infinie, combats de boss, nouvelles armes, montures sauvages, stats sauvegardées, classement, leaderboards et gameplay de survie.",
       "stats": [
-        { "label": "Joueurs", "value": "1-5" },
-        { "label": "Mode", "value": "Survie avec sidekicks" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Progression", "value": "Loadouts sauvegardés" },
-        { "label": "Idéal pour", "value": "Squads PvE" },
-        { "label": "Difficulté", "value": "Moyenne" }
+        {
+          "label": "Joueurs",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Survie avec sidekicks"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progression",
+          "value": "Loadouts sauvegardés"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Squads PvE"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Moyenne"
+        }
       ],
       "sections": [
         {
@@ -639,7 +776,6 @@
         "RvB Squid Minigame"
       ]
     },
-
     "winterfest-demon-hunters": {
       "breadcrumbParent": "Cartes Gun Game",
       "eyebrow": "Gun Game / FFA",
@@ -647,12 +783,30 @@
       "schemaGenre": "Gun Game / Combat PvE",
       "schemaDescription": "Gun game de chasse aux démons sur thème hivernal avec rotations d'armes et boucles de combat répétables.",
       "stats": [
-        { "label": "Joueurs", "value": "Adapté aux squads" },
-        { "label": "Mode", "value": "Combat gun game" },
-        { "label": "Statut", "value": "Disponible" },
-        { "label": "Durée d'une manche", "value": "Boucles rapides" },
-        { "label": "Idéal pour", "value": "XP en combattant" },
-        { "label": "Difficulté", "value": "Facile / moyenne" }
+        {
+          "label": "Joueurs",
+          "value": "Adapté aux squads"
+        },
+        {
+          "label": "Mode",
+          "value": "Combat gun game"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Durée d'une manche",
+          "value": "Boucles rapides"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "XP en combattant"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Facile / moyenne"
+        }
       ],
       "sections": [
         {
@@ -728,6 +882,105 @@
         "Maps Gun Game",
         "Meilleures maps XP",
         "Maps Tortues Ninja"
+      ]
+    },
+    "rvb-players-vs-guards": {
+      "breadcrumbParent": "Maps Rouge contre Bleu",
+      "eyebrow": "Rouge contre Bleu / Joueurs contre gardes",
+      "intro": "Entre le code d'ile Fortnite {code} pour jouer a RvB Players vs Guards, une map Rouge contre Bleu ou les joueurs affrontent des gardes, des objectifs et des manches de combat repetables.",
+      "schemaGenre": "Rouge contre Bleu / Joueurs contre gardes",
+      "schemaDescription": "RvB Players vs Guards est une map Fortnite Rouge contre Bleu par NLDEVS avec objectifs d'equipe, combats joueurs contre gardes, manches repetables et gameplay ideal en groupe.",
+      "stats": [
+        {
+          "label": "Joueurs",
+          "value": "Ideal en groupe"
+        },
+        {
+          "label": "Mode",
+          "value": "Objectifs RvB"
+        },
+        {
+          "label": "Statut",
+          "value": "Disponible"
+        },
+        {
+          "label": "Rythme",
+          "value": "Combat regulier"
+        },
+        {
+          "label": "Ideal pour",
+          "value": "Squads"
+        },
+        {
+          "label": "Difficulte",
+          "value": "Facile / moyenne"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Description du",
+          "accent": "gameplay",
+          "paragraphs": [
+            "RvB Players vs Guards ajoute une touche PvE au format Rouge contre Bleu. Les equipes progressent face aux gardes, aux objectifs et aux combats repetables au lieu d'attendre la fin d'une seule manche d'elimination.",
+            "C'est un bon choix pour les joueurs qui veulent de l'action RvB avec des sessions plus longues, des rencontres regulieres et une structure qui fonctionne bien entre amis."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Comment",
+          "accent": "jouer",
+          "items": [
+            "Ouvre Recherche / Decouvrir dans Fortnite.",
+            "Entre le code d'ile 6263-5571-9595.",
+            "Rejoins une equipe et suis l'objectif affiche.",
+            "Affronte les gardes, aide ton equipe et garde le rythme."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Pourquoi jouer a",
+          "accent": "cette map",
+          "items": [
+            "Structure Rouge contre Bleu avec pression des gardes.",
+            "Objectifs d'equipe parfaits pour les squads.",
+            "Boucles de combat repetables pour une action reguliere.",
+            "Une bonne option a alterner dans les sessions XP quand l'XP est disponible."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Details de",
+          "accent": "l'ile",
+          "heading": "Code d'ile 6263-5571-9595",
+          "body": "Utilise ce code dans Recherche / Decouvrir sur Fortnite pour lancer RvB Players vs Guards. L'XP peut changer avec la calibration, mais la map repose sur un gameplay normal et repetable."
+        }
+      ],
+      "gallery": [
+        "Apercu du gameplay de RvB Players vs Guards",
+        "Capture d'ecran du gameplay de RvB Players vs Guards",
+        "Capture de combat avec objectifs de RvB Players vs Guards"
+      ],
+      "faqs": [
+        {
+          "q": "Quel est le code d'ile de RvB Players vs Guards ?",
+          "a": "Le code d'ile de RvB Players vs Guards est 6263-5571-9595."
+        },
+        {
+          "q": "Quel type de map Fortnite est RvB Players vs Guards ?",
+          "a": "C'est une map Rouge contre Bleu avec combats joueurs contre gardes, objectifs et manches repetables."
+        },
+        {
+          "q": "RvB Players vs Guards est-elle bonne pour l'XP ?",
+          "a": "Elle peut etre une bonne option active quand l'XP est activee et calibree, mais les gains peuvent changer apres les mises a jour Fortnite ou les revisions de l'ile."
+        }
+      ],
+      "similarLabels": [
+        "Maps Rouge contre Bleu",
+        "Maps XP",
+        "RvB Squid Minigame"
       ]
     }
   }

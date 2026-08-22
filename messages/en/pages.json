@@ -94,6 +94,11 @@
       "title": "Best Fortnite Red vs Blue Maps & Map Codes",
       "description": "Fortnite Red vs Blue map codes by NLDEVS. Team versus team islands with fast respawns, objective rounds and squad-friendly chaos.",
       "ogDescription": "Fortnite Red vs Blue map codes by NLDEVS — team deathmatch, minigames and guard battles."
+    },
+    "rvb-players-vs-guards": {
+      "title": "RvB Players vs Guards Map Code (6263-5571-9595)",
+      "description": "Play RvB Players vs Guards in Fortnite. Map code 6263-5571-9595. A Red vs Blue players-versus-guards island with team objectives, repeatable rounds, and steady combat.",
+      "ogDescription": "Red vs Blue players-versus-guards Fortnite map with team objectives and repeatable combat rounds."
     }
   },
   "hubs": {
@@ -416,24 +421,73 @@
       "genre": "Fortnite XP Map",
       "codesTitle": "XP map",
       "codesAccent": "codes",
-      "introSections": [],
-      "tipSections": [],
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "how-fortnite-xp-maps-work",
+          "title": "How Fortnite",
+          "accent": "XP maps work",
+          "paragraphs": [
+            "Fortnite XP maps are Creative and UEFN islands with repeatable activities that can award account XP when the island is calibrated and XP is enabled. The best picks are not magic buttons; they are maps with steady loops, clear objectives, and enough action to keep earning while you actually play.",
+            "XP rates can change after Fortnite updates, island revisions, calibration changes, and daily play patterns. Use this page as a practical shortlist of NLDEVS maps with active gameplay loops rather than a promise of one fixed XP amount."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "XP map",
+          "accent": "tips",
+          "items": [
+            "Favor active maps with eliminations, objectives, survival waves, or combat loops instead of idle promises.",
+            "Rotate between a few islands during longer sessions because XP can slow down after repeated play.",
+            "Check the map after major Fortnite updates; calibration and rewards can shift when an island is revised.",
+            "Play with friends where possible. Faster rounds and more encounters usually keep the session moving."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "use this list",
+          "items": [
+            "Pick a map that matches how you want to play: combat, survival, Red vs Blue, or exploration.",
+            "Enter the island code in Fortnite Search / Discover.",
+            "Play normally for a few rounds and watch whether XP notifications feel steady.",
+            "Favorite the maps that work well for your account and rotate when gains slow down."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Important",
+          "accent": "XP note",
+          "heading": "XP is not guaranteed",
+          "body": "Fortnite XP depends on Epic calibration, island settings, your account state, and current limits. This page focuses on repeatable gameplay maps, not exploits, glitches, or AFK farming."
+        }
+      ],
       "faqs": [
         {
           "q": "Do these Fortnite XP maps still give XP?",
-          "a": "XP depends on Fortnite's calibration and each island's current settings, and rates change after updates or revisions. The maps here are chosen for repeatable gameplay loops rather than a fixed XP figure."
+          "a": "XP depends on Fortnite calibration and each island's current settings. The maps here are chosen for repeatable gameplay loops, but XP rates can change after updates or revisions."
         },
         {
-          "q": "Which map gives the most XP?",
-          "a": "It shifts season to season. Rather than chase one island, rotate between a few — diminishing returns apply per map, so switching keeps your rate steadier over a session."
+          "q": "Which Fortnite XP map gives the most XP?",
+          "a": "It shifts season to season and account to account. For a steadier session, rotate between active maps with eliminations, objectives, survival runs, or Red vs Blue rounds instead of relying on one island."
+        },
+        {
+          "q": "Are XP maps safe to use?",
+          "a": "Normal Creative and UEFN maps played through Fortnite Discover are the safer route. Avoid maps that advertise glitches, exploits, or anything that asks you to break Fortnite's rules."
+        },
+        {
+          "q": "Why did XP slow down on a map?",
+          "a": "XP can slow because of daily limits, repeat play, island calibration, or a Fortnite update. Try another map, take a break, or check back after the island is updated."
         },
         {
           "q": "How do I enter an XP map code?",
-          "a": "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play."
+          "a": "Open Fortnite, go to Search or Discover, enter the island code exactly in the ####-####-#### format, then select the island and play."
         },
         {
           "q": "Can I earn XP playing with friends?",
-          "a": "Yes. Most of these maps are party friendly, and playing with a squad usually keeps rounds moving faster than going solo."
+          "a": "Yes. Most of these maps are party friendly, and playing with a squad can keep rounds, objectives, and combat encounters moving faster."
         }
       ],
       "notes": {

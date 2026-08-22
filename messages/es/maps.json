@@ -7,12 +7,30 @@
       "schemaGenre": "Star Wars Tycoon",
       "schemaDescription": "Star Wars Tycoon Sidekick Legends es un mapa Star Wars Tycoon de Fortnite que llega pronto de NLDEVS, con desbloqueo de sidekicks y héroes, nuevas secciones, trabajadores, aumento de producción, progresión en la clasificación de Rebirth, guardado automático y hasta 4 jugadores.",
       "stats": [
-        { "label": "Jugadores", "value": "1-4" },
-        { "label": "Modo", "value": "Progresión tycoon" },
-        { "label": "Estado", "value": "Próximamente" },
-        { "label": "Progreso", "value": "Guardado automático" },
-        { "label": "Ideal para", "value": "Squads y constructores" },
-        { "label": "Dificultad", "value": "Farmeo relajado" }
+        {
+          "label": "Jugadores",
+          "value": "1-4"
+        },
+        {
+          "label": "Modo",
+          "value": "Progresión tycoon"
+        },
+        {
+          "label": "Estado",
+          "value": "Próximamente"
+        },
+        {
+          "label": "Progreso",
+          "value": "Guardado automático"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Squads y constructores"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Farmeo relajado"
+        }
       ],
       "sections": [
         {
@@ -99,7 +117,6 @@
         "Star Wars Tilted 99 Bots Royale"
       ]
     },
-
     "star-wars-mega-rvb": {
       "breadcrumbParent": "Mapas de Star Wars",
       "eyebrow": "Star Wars / Rojo vs Azul",
@@ -107,12 +124,30 @@
       "schemaGenre": "Combate a muerte por equipos Star Wars Rojo vs Azul",
       "schemaDescription": "Star Wars Mega RvB es un mapa PvP Rojo vs Azul de Fortnite creado por NLDEVS, con armas de Star Wars, vehículos, logros, música, armas personalizadas y progresión hasta el rango Unreal.",
       "stats": [
-        { "label": "Jugadores", "value": "Hasta 20" },
-        { "label": "Modo", "value": "PvP Rojo vs Azul" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Progreso", "value": "Subir de rango" },
-        { "label": "Ideal para", "value": "Peleas rápidas en equipo" },
-        { "label": "Dificultad", "value": "Media" }
+        {
+          "label": "Jugadores",
+          "value": "Hasta 20"
+        },
+        {
+          "label": "Modo",
+          "value": "PvP Rojo vs Azul"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progreso",
+          "value": "Subir de rango"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Peleas rápidas en equipo"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Media"
+        }
       ],
       "sections": [
         {
@@ -182,7 +217,6 @@
         "Star Wars Tilted 99 Bots Royale"
       ]
     },
-
     "star-wars-tilted-99-bots-royale": {
       "breadcrumbParent": "Mapas de Star Wars",
       "eyebrow": "Star Wars / 99 Bots Royale",
@@ -190,12 +224,30 @@
       "schemaGenre": "Star Wars 99 Bots Royale",
       "schemaDescription": "Star Wars Tilted 99 Bots Royale es un mapa de supervivencia PvE en mundo abierto de Fortnite creado por NLDEVS, con 99 bots, batallas de jefe, héroes desbloqueables, estadísticas y loadouts guardados, y acción Tilted x Star Wars.",
       "stats": [
-        { "label": "Jugadores", "value": "1-5" },
-        { "label": "Modo", "value": "99 Bots Royale" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Progreso", "value": "Estadísticas guardadas" },
-        { "label": "Ideal para", "value": "Supervivencia PvE" },
-        { "label": "Dificultad", "value": "Media" }
+        {
+          "label": "Jugadores",
+          "value": "1-5"
+        },
+        {
+          "label": "Modo",
+          "value": "99 Bots Royale"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progreso",
+          "value": "Estadísticas guardadas"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Supervivencia PvE"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Media"
+        }
       ],
       "sections": [
         {
@@ -272,7 +324,6 @@
         "Star Wars Tycoon Sidekick Legends"
       ]
     },
-
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Mapas Tortugas Ninja",
       "eyebrow": "Tortugas Ninja / Supervivencia",
@@ -280,12 +331,30 @@
       "schemaGenre": "Supervivencia",
       "schemaDescription": "Experiencia de supervivencia en rampa a alta velocidad en Fortnite, creada con UEFN por NLDEVS.",
       "stats": [
-        { "label": "Jugadores", "value": "Solo / grupo" },
-        { "label": "Modo", "value": "Supervivencia en mega rampa" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Duración de ronda", "value": "Partidas rápidas" },
-        { "label": "Ideal para", "value": "Caos y movimiento" },
-        { "label": "Dificultad", "value": "Fácil de empezar" }
+        {
+          "label": "Jugadores",
+          "value": "Solo / grupo"
+        },
+        {
+          "label": "Modo",
+          "value": "Supervivencia en mega rampa"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Duración de ronda",
+          "value": "Partidas rápidas"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Caos y movimiento"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Fácil de empezar"
+        }
       ],
       "sections": [
         {
@@ -342,7 +411,6 @@
         "Mejores mapas de XP"
       ]
     },
-
     "tmnt-city": {
       "breadcrumbParent": "Mapas Tortugas Ninja",
       "eyebrow": "Tortugas Ninja / Experiencia",
@@ -350,12 +418,30 @@
       "schemaGenre": "Experiencia",
       "schemaDescription": "Experiencia urbana con temática de las Tortugas Ninja creada en UEFN — explora, pelea y relájate con amigos.",
       "stats": [
-        { "label": "Jugadores", "value": "Solo / squads" },
-        { "label": "Modo", "value": "Experiencia urbana" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Ritmo", "value": "Explorar + pelear" },
-        { "label": "Ideal para", "value": "Sesiones relajadas" },
-        { "label": "Dificultad", "value": "Casual" }
+        {
+          "label": "Jugadores",
+          "value": "Solo / squads"
+        },
+        {
+          "label": "Modo",
+          "value": "Experiencia urbana"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Ritmo",
+          "value": "Explorar + pelear"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Sesiones relajadas"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Casual"
+        }
       ],
       "sections": [
         {
@@ -411,7 +497,6 @@
         "Todos los mapas Tortugas Ninja"
       ]
     },
-
     "rvb-squid-minigame": {
       "breadcrumbParent": "Mapas El Juego del Calamar",
       "eyebrow": "El Juego del Calamar / RvB",
@@ -419,12 +504,30 @@
       "schemaGenre": "Rojo vs Azul / Minijuegos",
       "schemaDescription": "Minijuegos al estilo El Juego del Calamar con caos Rojo vs Azul y rondas rápidas.",
       "stats": [
-        { "label": "Jugadores", "value": "Bueno para grupos" },
-        { "label": "Modo", "value": "Minijuegos RvB" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Duración de ronda", "value": "Rondas cortas" },
-        { "label": "Ideal para", "value": "Partidas rápidas" },
-        { "label": "Dificultad", "value": "Fácil" }
+        {
+          "label": "Jugadores",
+          "value": "Bueno para grupos"
+        },
+        {
+          "label": "Modo",
+          "value": "Minijuegos RvB"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Duración de ronda",
+          "value": "Rondas cortas"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Partidas rápidas"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Fácil"
+        }
       ],
       "sections": [
         {
@@ -480,7 +583,6 @@
         "Mapas Gun Game"
       ]
     },
-
     "99-bots-squid-royale-boss": {
       "breadcrumbParent": "Mapas El Juego del Calamar",
       "eyebrow": "El Juego del Calamar / 99 Bots",
@@ -488,12 +590,30 @@
       "schemaGenre": "El Juego del Calamar / 99 Bots / Supervivencia",
       "schemaDescription": "99 Bots Squid Royale Boss es un mapa de Fortnite al estilo El Juego del Calamar creado por NLDEVS, con bot royale infinito, batallas de jefe, nuevas armas, monturas de fauna, estadísticas guardadas, rangos, clasificaciones y gameplay de supervivencia.",
       "stats": [
-        { "label": "Jugadores", "value": "1-5" },
-        { "label": "Modo", "value": "Supervivencia con 99 bots" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Progreso", "value": "Estadísticas guardadas" },
-        { "label": "Ideal para", "value": "Batallas de jefe" },
-        { "label": "Dificultad", "value": "Media" }
+        {
+          "label": "Jugadores",
+          "value": "1-5"
+        },
+        {
+          "label": "Modo",
+          "value": "Supervivencia con 99 bots"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progreso",
+          "value": "Estadísticas guardadas"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Batallas de jefe"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Media"
+        }
       ],
       "sections": [
         {
@@ -559,7 +679,6 @@
         "RvB Squid Minigame"
       ]
     },
-
     "sidekick-siege-99-bots": {
       "breadcrumbParent": "Mapas El Juego del Calamar",
       "eyebrow": "El Juego del Calamar / 99 Bots",
@@ -567,12 +686,30 @@
       "schemaGenre": "El Juego del Calamar / 99 Bots / Supervivencia",
       "schemaDescription": "Sidekick Siege 99 Bots es un mapa de Fortnite al estilo El Juego del Calamar creado por NLDEVS, con sidekicks, bot royale infinito, batallas de jefe, nuevas armas, monturas de fauna, estadísticas guardadas, rangos, clasificaciones y gameplay de supervivencia.",
       "stats": [
-        { "label": "Jugadores", "value": "1-5" },
-        { "label": "Modo", "value": "Supervivencia con sidekicks" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Progreso", "value": "Loadouts guardados" },
-        { "label": "Ideal para", "value": "Squads PvE" },
-        { "label": "Dificultad", "value": "Media" }
+        {
+          "label": "Jugadores",
+          "value": "1-5"
+        },
+        {
+          "label": "Modo",
+          "value": "Supervivencia con sidekicks"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progreso",
+          "value": "Loadouts guardados"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Squads PvE"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Media"
+        }
       ],
       "sections": [
         {
@@ -639,7 +776,6 @@
         "RvB Squid Minigame"
       ]
     },
-
     "winterfest-demon-hunters": {
       "breadcrumbParent": "Mapas Gun Game",
       "eyebrow": "Gun Game / FFA",
@@ -647,12 +783,30 @@
       "schemaGenre": "Gun Game / Combate PvE",
       "schemaDescription": "Gun game de caza de demonios con temática invernal, rotación de armas y ciclos de combate repetibles.",
       "stats": [
-        { "label": "Jugadores", "value": "Bueno para squads" },
-        { "label": "Modo", "value": "Combate gun game" },
-        { "label": "Estado", "value": "Disponible" },
-        { "label": "Duración de ronda", "value": "Ciclos rápidos" },
-        { "label": "Ideal para", "value": "XP en combate" },
-        { "label": "Dificultad", "value": "Fácil / media" }
+        {
+          "label": "Jugadores",
+          "value": "Bueno para squads"
+        },
+        {
+          "label": "Modo",
+          "value": "Combate gun game"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Duración de ronda",
+          "value": "Ciclos rápidos"
+        },
+        {
+          "label": "Ideal para",
+          "value": "XP en combate"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Fácil / media"
+        }
       ],
       "sections": [
         {
@@ -728,6 +882,105 @@
         "Mapas Gun Game",
         "Mejores mapas de XP",
         "Mapas Tortugas Ninja"
+      ]
+    },
+    "rvb-players-vs-guards": {
+      "breadcrumbParent": "Mapas Rojo vs Azul",
+      "eyebrow": "Rojo vs Azul / Jugadores vs guardias",
+      "intro": "Introduce el codigo de isla {code} en Fortnite para jugar RvB Players vs Guards, un mapa Rojo vs Azul donde los jugadores enfrentan guardias, objetivos y rondas de combate repetibles.",
+      "schemaGenre": "Rojo vs Azul / Jugadores vs guardias",
+      "schemaDescription": "RvB Players vs Guards es un mapa Fortnite Rojo vs Azul de NLDEVS con objetivos por equipo, combate de jugadores contra guardias, rondas repetibles y gameplay ideal para grupos.",
+      "stats": [
+        {
+          "label": "Jugadores",
+          "value": "Ideal para grupos"
+        },
+        {
+          "label": "Modo",
+          "value": "Objetivos RvB"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Ritmo",
+          "value": "Combate constante"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Squads"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Facil / media"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Descripcion del",
+          "accent": "gameplay",
+          "paragraphs": [
+            "RvB Players vs Guards le da un giro PvE al formato Rojo vs Azul. Los equipos avanzan contra guardias, objetivos y combates repetibles en lugar de esperar a que termine una sola ronda de eliminacion.",
+            "Es una buena opcion para jugadores que quieren accion RvB con sesiones mas largas, encuentros constantes y un flujo que funciona bien con amigos."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jugar",
+          "items": [
+            "Abre Buscar / Descubrir en Fortnite.",
+            "Introduce el codigo de isla 6263-5571-9595.",
+            "Entra a un lado y sigue el objetivo del mapa.",
+            "Pelea contra guardias, apoya a tu equipo y manten las rondas activas."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por que jugar",
+          "accent": "este mapa",
+          "items": [
+            "Estructura Rojo vs Azul con presion de guardias.",
+            "Objetivos por equipo que funcionan bien para squads.",
+            "Ciclos de combate repetibles para accion constante.",
+            "Una buena opcion para rotar en sesiones de XP cuando la XP este disponible."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Detalles de la",
+          "accent": "isla",
+          "heading": "Codigo de isla 6263-5571-9595",
+          "body": "Usa este codigo en Buscar / Descubrir de Fortnite para abrir RvB Players vs Guards. La XP puede cambiar con la calibracion, pero el mapa esta hecho para gameplay normal y repetible."
+        }
+      ],
+      "gallery": [
+        "Vista previa del gameplay de RvB Players vs Guards",
+        "Captura del gameplay de RvB Players vs Guards",
+        "Captura de combate con objetivos de RvB Players vs Guards"
+      ],
+      "faqs": [
+        {
+          "q": "Cual es el codigo de isla de RvB Players vs Guards?",
+          "a": "El codigo de isla de RvB Players vs Guards es 6263-5571-9595."
+        },
+        {
+          "q": "Que tipo de mapa Fortnite es RvB Players vs Guards?",
+          "a": "Es un mapa Rojo vs Azul con combate de jugadores contra guardias, objetivos y rondas repetibles."
+        },
+        {
+          "q": "RvB Players vs Guards es bueno para XP?",
+          "a": "Puede ser una buena opcion de juego activo cuando la XP esta habilitada y calibrada, pero las tasas pueden cambiar despues de actualizaciones de Fortnite o revisiones de la isla."
+        }
+      ],
+      "similarLabels": [
+        "Mapas Rojo vs Azul",
+        "Mapas de XP",
+        "RvB Squid Minigame"
       ]
     }
   }

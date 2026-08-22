@@ -14,6 +14,56 @@ import { absoluteUrl } from "@/i18n/metadata";
 import { LOCALE_META, type AppPathname, type Locale } from "@/i18n/routing";
 import { SITE_URL } from "@/constants/site";
 
+const HUB_LINKS: Record<
+  MapId,
+  { href: AppPathname; labelKey: string }[]
+> = {
+  "star-wars-tycoon-sidekick-legends": [
+    { href: "/star-wars-fortnite-maps", labelKey: "starWarsMaps" },
+  ],
+  "star-wars-mega-rvb": [
+    { href: "/star-wars-fortnite-maps", labelKey: "starWarsMaps" },
+    { href: "/fortnite-red-vs-blue-maps", labelKey: "redVsBlueMaps" },
+  ],
+  "star-wars-tilted-99-bots-royale": [
+    { href: "/star-wars-fortnite-maps", labelKey: "starWarsMaps" },
+    { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "tmnt-mega-ramp-survival": [
+    { href: "/tmnt-fortnite-maps", labelKey: "tmntMaps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "tmnt-city": [
+    { href: "/tmnt-fortnite-maps", labelKey: "tmntMaps" },
+    { href: "/fortnite-gun-game-maps", labelKey: "gunGameMaps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "rvb-squid-minigame": [
+    { href: "/squid-game-fortnite-maps", labelKey: "squidGameMaps" },
+    { href: "/fortnite-red-vs-blue-maps", labelKey: "redVsBlueMaps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "99-bots-squid-royale-boss": [
+    { href: "/squid-game-fortnite-maps", labelKey: "squidGameMaps" },
+    { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "sidekick-siege-99-bots": [
+    { href: "/squid-game-fortnite-maps", labelKey: "squidGameMaps" },
+    { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "winterfest-demon-hunters": [
+    { href: "/fortnite-gun-game-maps", labelKey: "gunGameMaps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "rvb-players-vs-guards": [
+    { href: "/fortnite-red-vs-blue-maps", labelKey: "redVsBlueMaps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+};
+
 type Props = {
   mapId: MapId;
   /** Category hub this map belongs to; becomes the middle breadcrumb. */
@@ -45,6 +95,7 @@ export default function MapDetailPage({
   const locale = useLocale() as Locale;
   const t = useTranslations(`mapPages.${mapId}`);
   const tc = useTranslations("common");
+  const tf = useTranslations("footer");
 
   // See rawArray in PageSections for why t.raw() cannot be trusted directly.
   // Sections split around the gallery because that is where the original
@@ -57,6 +108,19 @@ export default function MapDetailPage({
   const similarLabels = rawArray<string>(t, "similarLabels");
 
   const url = absoluteUrl(map.href ?? "/", locale);
+  const similarLinks = [
+    ...HUB_LINKS[mapId].map((link) => ({
+      href: link.href,
+      label: tf(link.labelKey),
+    })),
+    ...similarHrefs.map((href, i) => ({
+      href,
+      label: similarLabels[i] ?? href,
+    })),
+  ].filter(
+    (link, index, links) =>
+      links.findIndex((candidate) => candidate.href === link.href) === index
+  );
 
   const schema = {
     "@context": "https://schema.org",
@@ -117,12 +181,7 @@ export default function MapDetailPage({
       <PageSections sections={sectionsAfter} />
 
       <ContentSection title={tc("similarMaps")} accent={tc("similarMapsAccent")}>
-        <PillLinks
-          links={similarHrefs.map((href, i) => ({
-            href,
-            label: similarLabels[i] ?? href,
-          }))}
-        />
+        <PillLinks links={similarLinks} />
       </ContentSection>
 
       <ContentSection title={tc("faqTitle")} accent={tc("faqAccent")}>
