@@ -183,10 +183,10 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
     "tmnt-mega-ramp-survival",
     "rvb-squid-minigame",
     "tmnt-city",
-    "winterfest-demon-hunters",
-    "rvb-players-vs-guards",
-    "99-bots-squid-royale-boss",
     "sidekick-siege-99-bots",
+    "99-bots-squid-royale-boss",
+    "rvb-players-vs-guards",
+    "winterfest-demon-hunters",
     "star-wars-tilted-99-bots-royale",
   ],
 };
