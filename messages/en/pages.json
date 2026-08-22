@@ -84,6 +84,16 @@
       "title": "Privacy",
       "description": "How NLDEVS collects and uses member information for updates, playtests, support, and collaboration opportunities.",
       "ogDescription": "How NLDEVS collects and uses member information."
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Best Fortnite 99 Bots Maps & Map Codes",
+      "description": "Fortnite 99 bots maps and map codes by NLDEVS. Bot royale survival, boss battles, saved stats and leaderboards — no waiting for a full lobby.",
+      "ogDescription": "Fortnite 99 bots maps and map codes by NLDEVS — bot royale survival, boss battles and saved progression."
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Best Fortnite Red vs Blue Maps & Map Codes",
+      "description": "Fortnite Red vs Blue map codes by NLDEVS. Team versus team islands with fast respawns, objective rounds and squad-friendly chaos.",
+      "ogDescription": "Fortnite Red vs Blue map codes by NLDEVS — team deathmatch, minigames and guard battles."
     }
   },
   "hubs": {
@@ -451,6 +461,160 @@
         "TMNT Maps",
         "Squid Game Maps",
         "Star Wars Maps"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "99 Bots Maps",
+      "eyebrow": "No lobby waits",
+      "title": "Best Fortnite <accent>99 Bots maps</accent>",
+      "description": "Bot royale islands that fill instantly and stay busy. Boss battles, saved stats and leaderboards across Squid Game and Star Wars themes.",
+      "schemaName": "Best Fortnite 99 Bots Maps & Map Codes",
+      "schemaDescription": "A curated list of Fortnite 99 bots maps and map codes built with UEFN by NLDEVS, covering bot royale survival, boss battles and saved progression.",
+      "listName": "Fortnite 99 Bots Maps",
+      "genre": "Fortnite 99 Bots Map",
+      "codesTitle": "99 Bots map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "What is a",
+          "accent": "99 bots map?",
+          "paragraphs": [
+            "A 99 bots map fills the lobby with AI opponents instead of players, so a match starts the moment you land. No queue, no waiting for a lobby to fill, and the action is constant from the drop.",
+            "They suit warmups, aim practice and long solo sessions. Most add progression on top — ranks, saved stats, unlockable heroes and boss events — so a run gives you something to come back for."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Tips for",
+          "accent": "bot royale",
+          "items": [
+            "Use them to warm up before ranked — the fights start immediately and the pacing is close to a real match.",
+            "Learn a weapon you avoid in PvP. Bots punish mistakes less, so it is a cheap place to build a habit.",
+            "Play with a squad where the island supports it; boss events are far quicker with more players.",
+            "Check each map's saved-progress features — ranks and loadouts carry between sessions on most of these."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite → Search / Discover.",
+            "Enter the island code exactly (####-####-####).",
+            "Drop in and start clearing bots.",
+            "Favorite the map so you can find it again after an update."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What does 99 bots mean in Fortnite?",
+          "a": "The lobby is filled with 99 AI opponents rather than real players. Matches start immediately and the island stays active regardless of how many people are online."
+        },
+        {
+          "q": "Are 99 bots maps good for practice?",
+          "a": "Yes, for warmups, movement and weapon familiarity. Bots do not replace PvP for aim duels, but they are useful for building habits without the pressure of a ranked match."
+        },
+        {
+          "q": "Do these maps save my progress?",
+          "a": "Most of them save stats, ranks and loadouts between sessions. Check the individual map page for what each island keeps."
+        },
+        {
+          "q": "Can I play 99 bots maps with friends?",
+          "a": "Yes. Player counts vary by island — several support up to 5 players. Open a map's page for its exact count."
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "Open-world PvE survival with boss battles, new weapons, wildlife riding, ranks and saved stats.",
+        "sidekick-siege-99-bots": "Sidekick-led bot survival with boss battles, saved loadouts, ranks and up to 5 players.",
+        "star-wars-tilted-99-bots-royale": "Bot royale with unlockable heroes, bosses and saved loadouts, set in a Star Wars take on Tilted."
+      },
+      "relatedLabels": [
+        "Squid Game Maps",
+        "Star Wars Maps",
+        "XP Maps",
+        "Red vs Blue Maps"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "Red vs Blue Maps",
+      "eyebrow": "Team versus team",
+      "title": "Best Fortnite <accent>Red vs Blue maps</accent>",
+      "description": "Red vs Blue island codes built with UEFN. Fast respawns, objective rounds and team chaos across minigame, deathmatch and guard-battle formats.",
+      "schemaName": "Best Fortnite Red vs Blue Maps & Map Codes",
+      "schemaDescription": "A curated list of Fortnite Red vs Blue maps and map codes built with UEFN by NLDEVS, covering team deathmatch, objective minigames and guard battles.",
+      "listName": "Fortnite Red vs Blue Maps",
+      "genre": "Fortnite Red vs Blue Map",
+      "codesTitle": "Red vs Blue map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "What is",
+          "accent": "Red vs Blue?",
+          "paragraphs": [
+            "Red vs Blue splits the lobby into two teams and gives them a reason to fight — eliminations, objectives, or a minigame gauntlet. Respawns are fast and rounds are short, so nobody sits out watching.",
+            "It is the most squad-friendly format on this site. Rounds reset quickly, the rules are obvious within seconds, and a full party can drop in without anyone needing an explanation."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Tips for",
+          "accent": "RvB rounds",
+          "items": [
+            "Play with a full party — team formats fall flat with two people and shine with six.",
+            "Use voice chat or pings. Coordination decides objective rounds far more than aim does.",
+            "Watch the respawn flow and rotate rather than pushing the same lane every time.",
+            "Rounds are short by design, so treat a loss as a re-queue rather than a comeback."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite → Search / Discover.",
+            "Enter the island code exactly (####-####-####).",
+            "Join a team and wait for the round to start.",
+            "Follow the in-map objective — it varies by island."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a Red vs Blue map in Fortnite?",
+          "a": "An island that splits players into two teams and scores them against each other, usually with fast respawns and short rounds. Formats range from team deathmatch to objective minigames."
+        },
+        {
+          "q": "How many players do Red vs Blue maps need?",
+          "a": "They work best with a full party. Player counts vary by island — check a map's page for its exact count and mode."
+        },
+        {
+          "q": "Do Red vs Blue maps give XP?",
+          "a": "Some islands grant XP depending on Fortnite calibration and the map's current settings. Rates change after updates, so treat it as a bonus."
+        },
+        {
+          "q": "Which Red vs Blue map should I start with?",
+          "a": "Pick a minigame-style island if your group is new to the format — the rules read instantly and rounds finish fast. Deathmatch maps suit groups that already play together."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Squid-style minigames with Red vs Blue chaos and fast rounds.",
+        "star-wars-mega-rvb": "Team deathmatch with Star Wars weapons, vehicles, achievements and ranking up to Unreal.",
+        "rvb-players-vs-guards": "Team-based objectives against guards — good for longer sessions."
+      },
+      "relatedLabels": [
+        "Squid Game Maps",
+        "Star Wars Maps",
+        "99 Bots Maps",
+        "XP Maps"
       ]
     }
   },

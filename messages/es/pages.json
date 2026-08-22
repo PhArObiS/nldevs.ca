@@ -84,6 +84,16 @@
       "title": "Privacidad",
       "description": "Cómo NLDEVS recopila y usa la información de los miembros para novedades, playtests, soporte y oportunidades de colaboración.",
       "ogDescription": "Cómo NLDEVS recopila y usa la información de los miembros."
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Mejores mapas de 99 Bots en Fortnite y códigos",
+      "description": "Mapas de 99 bots en Fortnite y códigos de mapa de NLDEVS. Supervivencia bot royale, batallas de jefe, estadísticas guardadas y clasificaciones — sin esperar a que se llene la sala.",
+      "ogDescription": "Mapas de 99 bots en Fortnite y códigos de mapa de NLDEVS — supervivencia bot royale, batallas de jefe y progresión guardada."
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Mejores mapas de Rojo vs Azul en Fortnite y códigos",
+      "description": "Códigos de mapa Rojo vs Azul en Fortnite de NLDEVS. Islas equipo contra equipo con reapariciones rápidas, rondas por objetivos y caos en squad.",
+      "ogDescription": "Códigos de mapa Rojo vs Azul en Fortnite de NLDEVS — combate por equipos, minijuegos y batallas contra guardias."
     }
   },
   "hubs": {
@@ -451,6 +461,160 @@
         "Mapas Tortugas Ninja",
         "Mapas El Juego del Calamar",
         "Mapas Star Wars"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "Mapas 99 Bots",
+      "eyebrow": "Sin esperas de sala",
+      "title": "Mejores mapas de <accent>99 Bots en Fortnite</accent>",
+      "description": "Islas de bot royale que se llenan al instante y no paran. Batallas de jefe, estadísticas guardadas y clasificaciones, con temáticas de El Juego del Calamar y Star Wars.",
+      "schemaName": "Mejores mapas de 99 Bots en Fortnite y códigos de mapa",
+      "schemaDescription": "Una selección de mapas de 99 bots de Fortnite y códigos de mapa creados con UEFN por NLDEVS, con supervivencia bot royale, batallas de jefe y progresión guardada.",
+      "listName": "Mapas de 99 Bots en Fortnite",
+      "genre": "Mapa de 99 Bots en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "99 Bots",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "¿Qué es un",
+          "accent": "mapa de 99 bots?",
+          "paragraphs": [
+            "Un mapa de 99 bots llena la sala con rivales de IA en lugar de jugadores, así que la partida empieza en cuanto aterrizas. Sin cola, sin esperar a que se llene la sala, y la acción es constante desde el salto.",
+            "Van bien para calentar, practicar puntería y sesiones largas en solitario. La mayoría añade progresión encima — rangos, estadísticas guardadas, héroes desbloqueables y eventos de jefe — para darte un motivo de volver."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Consejos para el",
+          "accent": "bot royale",
+          "items": [
+            "Úsalos para calentar antes del competitivo: las peleas empiezan de inmediato y el ritmo se parece al de una partida real.",
+            "Practica un arma que evitas en PvP. Los bots perdonan más errores, así que es un sitio barato para crear el hábito.",
+            "Juega con squad cuando la isla lo permita; los eventos de jefe se resuelven mucho más rápido entre varios.",
+            "Revisa las funciones de progreso guardado de cada mapa — rangos y loadouts se mantienen entre sesiones en la mayoría."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Cómo",
+          "accent": "jugar",
+          "items": [
+            "Abre Fortnite → Buscar / Descubrir.",
+            "Ingresa el código de isla exactamente (####-####-####).",
+            "Entra y empieza a eliminar bots.",
+            "Marca el mapa como favorito para encontrarlo tras una actualización."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué significa 99 bots en Fortnite?",
+          "a": "La sala se llena con 99 rivales de IA en vez de jugadores reales. Las partidas empiezan de inmediato y la isla sigue activa sin importar cuánta gente haya conectada."
+        },
+        {
+          "q": "¿Los mapas de 99 bots sirven para practicar?",
+          "a": "Sí, para calentar, moverte y familiarizarte con las armas. Los bots no sustituyen al PvP en duelos de puntería, pero ayudan a crear hábitos sin la presión del competitivo."
+        },
+        {
+          "q": "¿Estos mapas guardan mi progreso?",
+          "a": "La mayoría guarda estadísticas, rangos y loadouts entre sesiones. Consulta la página de cada mapa para ver qué conserva cada isla."
+        },
+        {
+          "q": "¿Puedo jugar mapas de 99 bots con amigos?",
+          "a": "Sí. El número de jugadores varía según la isla — varios admiten hasta 5. Abre la página del mapa para el número exacto."
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "Supervivencia PvE en mundo abierto con batallas de jefe, nuevas armas, monturas de fauna, rangos y estadísticas guardadas.",
+        "sidekick-siege-99-bots": "Supervivencia contra bots centrada en sidekicks, con batallas de jefe, loadouts guardados, rangos y hasta 5 jugadores.",
+        "star-wars-tilted-99-bots-royale": "Bot royale con héroes desbloqueables, jefes y loadouts guardados, en una versión Star Wars de Tilted."
+      },
+      "relatedLabels": [
+        "Mapas El Juego del Calamar",
+        "Mapas Star Wars",
+        "Mapas de XP",
+        "Mapas Rojo vs Azul"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "Mapas Rojo vs Azul",
+      "eyebrow": "Equipo contra equipo",
+      "title": "Mejores mapas de <accent>Rojo vs Azul en Fortnite</accent>",
+      "description": "Códigos de isla Rojo vs Azul creados con UEFN. Reapariciones rápidas, rondas por objetivos y caos entre equipos, en formato minijuego, combate a muerte o batalla contra guardias.",
+      "schemaName": "Mejores mapas de Rojo vs Azul en Fortnite y códigos de mapa",
+      "schemaDescription": "Una selección de mapas Rojo vs Azul de Fortnite y códigos de mapa creados con UEFN por NLDEVS, con combate a muerte por equipos, minijuegos por objetivos y batallas contra guardias.",
+      "listName": "Mapas Rojo vs Azul en Fortnite",
+      "genre": "Mapa Rojo vs Azul en Fortnite",
+      "codesTitle": "Códigos de los mapas",
+      "codesAccent": "Rojo vs Azul",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "¿Qué es",
+          "accent": "Rojo vs Azul?",
+          "paragraphs": [
+            "Rojo vs Azul divide la sala en dos equipos y les da un motivo para pelear — eliminaciones, objetivos o una tanda de minijuegos. Las reapariciones son rápidas y las rondas cortas, así que nadie se queda mirando.",
+            "Es el formato más amigable para squad de todo el sitio. Las rondas se reinician rápido, las reglas se entienden en segundos y un grupo completo puede entrar sin que nadie necesite explicación."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Consejos para rondas",
+          "accent": "RvB",
+          "items": [
+            "Juega con el grupo completo — los formatos por equipos quedan sosos con dos personas y brillan con seis.",
+            "Usa chat de voz o pings. La coordinación decide las rondas por objetivos mucho más que la puntería.",
+            "Observa el flujo de reaparición y rodea, en vez de empujar siempre la misma línea.",
+            "Las rondas son cortas a propósito: toma una derrota como una nueva cola, no como una remontada."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Cómo",
+          "accent": "jugar",
+          "items": [
+            "Abre Fortnite → Buscar / Descubrir.",
+            "Ingresa el código de isla exactamente (####-####-####).",
+            "Únete a un equipo y espera a que empiece la ronda.",
+            "Sigue el objetivo del mapa — varía según la isla."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es un mapa Rojo vs Azul en Fortnite?",
+          "a": "Una isla que reparte a los jugadores en dos equipos y los enfrenta, normalmente con reapariciones rápidas y rondas cortas. Los formatos van del combate a muerte por equipos a los minijuegos por objetivos."
+        },
+        {
+          "q": "¿Cuántos jugadores necesita un mapa Rojo vs Azul?",
+          "a": "Funcionan mejor con el grupo completo. El número varía según la isla — consulta la página del mapa para el número exacto y el modo."
+        },
+        {
+          "q": "¿Los mapas Rojo vs Azul dan XP?",
+          "a": "Algunas islas otorgan XP según la calibración de Fortnite y la configuración actual del mapa. Las tasas cambian tras las actualizaciones, así que tómalo como un extra."
+        },
+        {
+          "q": "¿Con qué mapa Rojo vs Azul conviene empezar?",
+          "a": "Elige una isla de minijuego si tu grupo es nuevo en el formato — las reglas se leen al instante y las rondas terminan rápido. Los mapas de combate a muerte encajan con grupos que ya juegan juntos."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minijuegos al estilo El Juego del Calamar con caos Rojo vs Azul y rondas rápidas.",
+        "star-wars-mega-rvb": "Combate a muerte por equipos con armas y vehículos de Star Wars, logros y progresión hasta el rango Unreal.",
+        "rvb-players-vs-guards": "Objetivos por equipos contra guardias — ideal para sesiones más largas."
+      },
+      "relatedLabels": [
+        "Mapas El Juego del Calamar",
+        "Mapas Star Wars",
+        "Mapas 99 Bots",
+        "Mapas de XP"
       ]
     }
   },

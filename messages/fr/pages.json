@@ -84,6 +84,16 @@
       "title": "Confidentialité",
       "description": "Comment NLDEVS collecte et utilise les informations des membres pour les actus, les playtests, le support et les opportunités de collaboration.",
       "ogDescription": "Comment NLDEVS collecte et utilise les informations des membres."
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Meilleures cartes Fortnite 99 Bots et codes de map",
+      "description": "Cartes Fortnite 99 bots et codes de map par NLDEVS. Survie en bot royale, combats de boss, stats sauvegardées et classements — sans attendre un lobby complet.",
+      "ogDescription": "Cartes Fortnite 99 bots et codes de map par NLDEVS — survie en bot royale, combats de boss et progression sauvegardée."
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Meilleures cartes Fortnite Rouge contre Bleu et codes de map",
+      "description": "Codes de map Fortnite Rouge contre Bleu par NLDEVS. Des îles équipe contre équipe avec réapparitions rapides, manches à objectifs et chaos en squad.",
+      "ogDescription": "Codes de map Fortnite Rouge contre Bleu par NLDEVS — match à mort par équipe, mini-jeux et combats contre les gardes."
     }
   },
   "hubs": {
@@ -451,6 +461,160 @@
         "Maps Tortues Ninja",
         "Maps Squid Game",
         "Maps Star Wars"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "Cartes 99 Bots",
+      "eyebrow": "Aucune attente de lobby",
+      "title": "Meilleures cartes Fortnite <accent>99 Bots</accent>",
+      "description": "Des îles de bot royale qui se remplissent instantanément et restent animées. Combats de boss, stats sauvegardées et classements, sur des thèmes Squid Game et Star Wars.",
+      "schemaName": "Meilleures cartes Fortnite 99 Bots et codes de map",
+      "schemaDescription": "Une sélection de cartes Fortnite 99 bots et de codes de map créées avec UEFN par NLDEVS, couvrant la survie en bot royale, les combats de boss et la progression sauvegardée.",
+      "listName": "Cartes Fortnite 99 Bots",
+      "genre": "Carte Fortnite 99 Bots",
+      "codesTitle": "Codes des maps",
+      "codesAccent": "99 Bots",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "Qu'est-ce qu'une",
+          "accent": "carte 99 bots ?",
+          "paragraphs": [
+            "Une carte 99 bots remplit le lobby d'adversaires IA plutôt que de joueurs : la partie démarre dès que tu atterris. Aucune file d'attente, aucun lobby à remplir, et l'action est constante dès le saut.",
+            "C'est idéal pour l'échauffement, l'entraînement à la visée et les longues sessions en solo. La plupart ajoutent une progression par-dessus — rangs, stats sauvegardées, héros à débloquer et événements de boss — pour te donner une raison de revenir."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Conseils pour la",
+          "accent": "bot royale",
+          "items": [
+            "Utilise-les pour t'échauffer avant le classé : les combats démarrent tout de suite et le rythme est proche d'une vraie partie.",
+            "Travaille une arme que tu évites en PvP. Les bots pardonnent davantage, c'est donc un bon endroit pour prendre l'habitude.",
+            "Joue en squad quand l'île le permet ; les événements de boss vont beaucoup plus vite à plusieurs.",
+            "Regarde les fonctions de sauvegarde de chaque map — rangs et loadouts sont conservés d'une session à l'autre sur la plupart d'entre elles."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Comment",
+          "accent": "jouer",
+          "items": [
+            "Ouvre Fortnite → Rechercher / Découvrir.",
+            "Saisis le code d'île exactement (####-####-####).",
+            "Lance-toi et commence à éliminer les bots.",
+            "Ajoute la map aux favoris pour la retrouver après une mise à jour."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Que signifie 99 bots sur Fortnite ?",
+          "a": "Le lobby est rempli de 99 adversaires IA au lieu de vrais joueurs. Les parties démarrent immédiatement et l'île reste active quel que soit le nombre de personnes connectées."
+        },
+        {
+          "q": "Les cartes 99 bots sont-elles bonnes pour s'entraîner ?",
+          "a": "Oui, pour l'échauffement, les déplacements et la prise en main des armes. Les bots ne remplacent pas le PvP pour les duels de visée, mais ils permettent d'installer des automatismes sans la pression du classé."
+        },
+        {
+          "q": "Ces maps sauvegardent-elles ma progression ?",
+          "a": "La plupart conservent stats, rangs et loadouts entre les sessions. Consulte la page de chaque map pour savoir ce qu'elle enregistre."
+        },
+        {
+          "q": "Puis-je jouer aux cartes 99 bots entre amis ?",
+          "a": "Oui. Le nombre de joueurs varie selon l'île — plusieurs acceptent jusqu'à 5 joueurs. Ouvre la page d'une map pour le nombre exact."
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "Survie PvE en monde ouvert avec combats de boss, nouvelles armes, montures sauvages, rangs et stats sauvegardées.",
+        "sidekick-siege-99-bots": "Survie contre les bots menée par les sidekicks, avec combats de boss, loadouts sauvegardés, rangs et jusqu'à 5 joueurs.",
+        "star-wars-tilted-99-bots-royale": "Bot royale avec héros à débloquer, boss et loadouts sauvegardés, dans une version Star Wars de Tilted."
+      },
+      "relatedLabels": [
+        "Maps Squid Game",
+        "Maps Star Wars",
+        "Maps XP",
+        "Maps Rouge contre Bleu"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "Cartes Rouge contre Bleu",
+      "eyebrow": "Équipe contre équipe",
+      "title": "Meilleures cartes Fortnite <accent>Rouge contre Bleu</accent>",
+      "description": "Des codes d'île Rouge contre Bleu créés avec UEFN. Réapparitions rapides, manches à objectifs et chaos en équipe, en mini-jeu, match à mort ou combat contre les gardes.",
+      "schemaName": "Meilleures cartes Fortnite Rouge contre Bleu et codes de map",
+      "schemaDescription": "Une sélection de cartes Fortnite Rouge contre Bleu et de codes de map créées avec UEFN par NLDEVS, couvrant match à mort par équipe, mini-jeux à objectifs et combats contre les gardes.",
+      "listName": "Cartes Fortnite Rouge contre Bleu",
+      "genre": "Carte Fortnite Rouge contre Bleu",
+      "codesTitle": "Codes des maps",
+      "codesAccent": "Rouge contre Bleu",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "Qu'est-ce que le",
+          "accent": "Rouge contre Bleu ?",
+          "paragraphs": [
+            "Le Rouge contre Bleu divise le lobby en deux équipes et leur donne une raison de s'affronter : éliminations, objectifs, ou une série de mini-jeux. Les réapparitions sont rapides et les manches courtes, donc personne ne reste sur le banc.",
+            "C'est le format le plus adapté au squad sur ce site. Les manches se relancent vite, les règles se comprennent en quelques secondes, et un groupe complet peut se lancer sans explication."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Conseils pour les",
+          "accent": "manches RvB",
+          "items": [
+            "Joue en groupe complet — les formats par équipe sont fades à deux et excellents à six.",
+            "Utilise le chat vocal ou les pings. La coordination décide des manches à objectifs bien plus que la visée.",
+            "Observe les points de réapparition et contourne plutôt que de repousser toujours la même ligne.",
+            "Les manches sont courtes par conception : traite une défaite comme une relance, pas comme une remontée."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Comment",
+          "accent": "jouer",
+          "items": [
+            "Ouvre Fortnite → Rechercher / Découvrir.",
+            "Saisis le code d'île exactement (####-####-####).",
+            "Rejoins une équipe et attends le début de la manche.",
+            "Suis l'objectif affiché — il varie selon l'île."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qu'est-ce qu'une carte Rouge contre Bleu sur Fortnite ?",
+          "a": "Une île qui répartit les joueurs en deux équipes et les fait s'affronter, généralement avec des réapparitions rapides et des manches courtes. Les formats vont du match à mort par équipe aux mini-jeux à objectifs."
+        },
+        {
+          "q": "Combien de joueurs faut-il pour une carte Rouge contre Bleu ?",
+          "a": "Elles fonctionnent mieux en groupe complet. Le nombre de joueurs varie selon l'île — consulte la page d'une map pour son nombre exact et son mode."
+        },
+        {
+          "q": "Les cartes Rouge contre Bleu donnent-elles de l'XP ?",
+          "a": "Certaines îles accordent de l'XP selon le calibrage de Fortnite et les réglages actuels de la map. Les taux changent après les mises à jour : considère-le comme un bonus."
+        },
+        {
+          "q": "Par quelle carte Rouge contre Bleu commencer ?",
+          "a": "Choisis une île de type mini-jeu si ton groupe découvre le format — les règles se lisent instantanément et les manches sont rapides. Les maps de match à mort conviennent aux groupes déjà rodés."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Mini-jeux façon Squid Game avec chaos Rouge contre Bleu et manches rapides.",
+        "star-wars-mega-rvb": "Match à mort par équipe avec armes et véhicules Star Wars, succès et progression jusqu'au rang Unreal.",
+        "rvb-players-vs-guards": "Objectifs en équipe face aux gardes — idéal pour les sessions plus longues."
+      },
+      "relatedLabels": [
+        "Maps Squid Game",
+        "Maps Star Wars",
+        "Maps 99 Bots",
+        "Maps XP"
       ]
     }
   },

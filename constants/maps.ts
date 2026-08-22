@@ -179,6 +179,18 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
     "sidekick-siege-99-bots",
   ],
   gunGame: ["tmnt-city", "winterfest-demon-hunters"],
+  // Mode-based hubs. These cut across franchises — players search "99 bots"
+  // and "red vs blue" as modes, not as Star Wars or Squid Game content.
+  bots99: [
+    "99-bots-squid-royale-boss",
+    "sidekick-siege-99-bots",
+    "star-wars-tilted-99-bots-royale",
+  ],
+  redVsBlue: [
+    "rvb-squid-minigame",
+    "star-wars-mega-rvb",
+    "rvb-players-vs-guards",
+  ],
   xp: [
     "rvb-squid-minigame",
     "tmnt-city",

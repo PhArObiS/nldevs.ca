@@ -84,6 +84,16 @@
       "title": "Privacidade",
       "description": "Como a NLDEVS coleta e usa as informações dos membros para novidades, playtests, suporte e oportunidades de colaboração.",
       "ogDescription": "Como a NLDEVS coleta e usa as informações dos membros."
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Melhores mapas de 99 Bots no Fortnite e códigos",
+      "description": "Mapas de 99 bots no Fortnite e códigos de mapa da NLDEVS. Sobrevivência bot royale, batalhas de chefe, estatísticas salvas e rankings — sem esperar lobby cheio.",
+      "ogDescription": "Mapas de 99 bots no Fortnite e códigos de mapa da NLDEVS — sobrevivência bot royale, batalhas de chefe e progressão salva."
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Melhores mapas de Vermelho vs Azul no Fortnite e códigos",
+      "description": "Códigos de mapa Vermelho vs Azul no Fortnite pela NLDEVS. Ilhas time contra time com renascimentos rápidos, rodadas de objetivo e caos com a squad.",
+      "ogDescription": "Códigos de mapa Vermelho vs Azul no Fortnite pela NLDEVS — mata-mata por equipes, minigames e batalhas contra guardas."
     }
   },
   "hubs": {
@@ -451,6 +461,160 @@
         "Mapas Tartarugas Ninja",
         "Mapas Round 6",
         "Mapas Star Wars"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "Mapas 99 Bots",
+      "eyebrow": "Sem espera de lobby",
+      "title": "Melhores mapas de <accent>99 Bots no Fortnite</accent>",
+      "description": "Ilhas de bot royale que enchem na hora e ficam movimentadas. Batalhas de chefe, estatísticas salvas e rankings, com temas de Round 6 e Star Wars.",
+      "schemaName": "Melhores mapas de 99 Bots no Fortnite e códigos de mapa",
+      "schemaDescription": "Uma seleção de mapas de 99 bots do Fortnite e códigos de mapa criados com UEFN pela NLDEVS, cobrindo sobrevivência bot royale, batalhas de chefe e progressão salva.",
+      "listName": "Mapas de 99 Bots no Fortnite",
+      "genre": "Mapa de 99 Bots no Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "99 Bots",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "O que é um",
+          "accent": "mapa de 99 bots?",
+          "paragraphs": [
+            "Um mapa de 99 bots enche o lobby com adversários de IA em vez de jogadores, então a partida começa assim que você pousa. Sem fila, sem esperar o lobby encher, e a ação é constante desde o início.",
+            "Servem bem para aquecimento, treino de mira e sessões longas no solo. A maioria ainda adiciona progressão por cima — ranques, estatísticas salvas, heróis desbloqueáveis e eventos de chefe — dando motivo para voltar."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Dicas para o",
+          "accent": "bot royale",
+          "items": [
+            "Use para aquecer antes do ranqueado: as brigas começam de imediato e o ritmo é parecido com o de uma partida real.",
+            "Treine uma arma que você evita no PvP. Os bots perdoam mais erros, então é um lugar barato para criar o hábito.",
+            "Jogue com a squad quando a ilha permitir; eventos de chefe saem muito mais rápido com mais gente.",
+            "Confira os recursos de progresso salvo de cada mapa — ranques e loadouts continuam entre sessões na maioria deles."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código da ilha exatamente (####-####-####).",
+            "Entre e comece a eliminar os bots.",
+            "Favorite o mapa para reencontrá-lo depois de uma atualização."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que significa 99 bots no Fortnite?",
+          "a": "O lobby é preenchido com 99 adversários de IA em vez de jogadores reais. As partidas começam na hora e a ilha continua movimentada independentemente de quantas pessoas estão online."
+        },
+        {
+          "q": "Mapas de 99 bots são bons para treinar?",
+          "a": "Sim, para aquecimento, movimentação e familiaridade com armas. Bots não substituem o PvP em duelos de mira, mas ajudam a criar hábitos sem a pressão do ranqueado."
+        },
+        {
+          "q": "Esses mapas salvam meu progresso?",
+          "a": "A maioria salva estatísticas, ranques e loadouts entre sessões. Veja a página de cada mapa para saber o que a ilha guarda."
+        },
+        {
+          "q": "Dá para jogar mapas de 99 bots com amigos?",
+          "a": "Sim. A quantidade de jogadores varia por ilha — vários suportam até 5. Abra a página do mapa para o número exato."
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "Sobrevivência PvE em mundo aberto com batalhas de chefe, novas armas, montaria em animais, ranques e estatísticas salvas.",
+        "sidekick-siege-99-bots": "Sobrevivência contra bots focada em sidekicks, com batalhas de chefe, loadouts salvos, ranques e até 5 jogadores.",
+        "star-wars-tilted-99-bots-royale": "Bot royale com heróis desbloqueáveis, chefes e loadouts salvos, numa versão Star Wars de Tilted."
+      },
+      "relatedLabels": [
+        "Mapas Round 6",
+        "Mapas Star Wars",
+        "Mapas de XP",
+        "Mapas Vermelho vs Azul"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "Mapas Vermelho vs Azul",
+      "eyebrow": "Time contra time",
+      "title": "Melhores mapas de <accent>Vermelho vs Azul no Fortnite</accent>",
+      "description": "Códigos de ilha Vermelho vs Azul criados com UEFN. Renascimentos rápidos, rodadas de objetivo e caos entre times, em formato de minigame, mata-mata ou batalha contra guardas.",
+      "schemaName": "Melhores mapas de Vermelho vs Azul no Fortnite e códigos de mapa",
+      "schemaDescription": "Uma seleção de mapas Vermelho vs Azul do Fortnite e códigos de mapa criados com UEFN pela NLDEVS, cobrindo mata-mata por equipes, minigames de objetivo e batalhas contra guardas.",
+      "listName": "Mapas Vermelho vs Azul no Fortnite",
+      "genre": "Mapa Vermelho vs Azul no Fortnite",
+      "codesTitle": "Códigos dos mapas",
+      "codesAccent": "Vermelho vs Azul",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "O que é",
+          "accent": "Vermelho vs Azul?",
+          "paragraphs": [
+            "Vermelho vs Azul divide o lobby em dois times e dá a eles um motivo para brigar — eliminações, objetivos ou uma sequência de minigames. Os renascimentos são rápidos e as rodadas curtas, então ninguém fica só assistindo.",
+            "É o formato mais amigável para squad aqui no site. As rodadas reiniciam rápido, as regras ficam claras em segundos, e um grupo completo entra sem ninguém precisar de explicação."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Dicas para rodadas",
+          "accent": "RvB",
+          "items": [
+            "Jogue com o grupo completo — formatos em equipe ficam sem graça com duas pessoas e ótimos com seis.",
+            "Use chat de voz ou pings. Coordenação decide rodadas de objetivo muito mais do que mira.",
+            "Observe o fluxo de renascimento e contorne, em vez de forçar sempre a mesma rota.",
+            "As rodadas são curtas de propósito: trate a derrota como uma nova fila, não como uma virada."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Como",
+          "accent": "jogar",
+          "items": [
+            "Abra o Fortnite → Buscar / Descobrir.",
+            "Digite o código da ilha exatamente (####-####-####).",
+            "Entre em um time e espere a rodada começar.",
+            "Siga o objetivo do mapa — ele varia por ilha."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um mapa Vermelho vs Azul no Fortnite?",
+          "a": "Uma ilha que divide os jogadores em dois times e os coloca um contra o outro, normalmente com renascimentos rápidos e rodadas curtas. Os formatos vão de mata-mata por equipes a minigames de objetivo."
+        },
+        {
+          "q": "Quantos jogadores um mapa Vermelho vs Azul precisa?",
+          "a": "Funcionam melhor com o grupo completo. A quantidade varia por ilha — veja a página do mapa para o número exato e o modo."
+        },
+        {
+          "q": "Mapas Vermelho vs Azul dão XP?",
+          "a": "Algumas ilhas concedem XP dependendo da calibragem do Fortnite e das configurações atuais do mapa. As taxas mudam após atualizações, então trate como um bônus."
+        },
+        {
+          "q": "Por qual mapa Vermelho vs Azul começar?",
+          "a": "Escolha uma ilha de minigame se o seu grupo é novo no formato — as regras se entendem na hora e as rodadas terminam rápido. Mapas de mata-mata combinam com grupos que já jogam juntos."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minigames no estilo Round 6 com caos Vermelho vs Azul e rodadas rápidas.",
+        "star-wars-mega-rvb": "Mata-mata por equipes com armas e veículos de Star Wars, conquistas e progressão até o ranque Unreal.",
+        "rvb-players-vs-guards": "Objetivos em equipe contra guardas — ótimo para sessões mais longas."
+      },
+      "relatedLabels": [
+        "Mapas Round 6",
+        "Mapas Star Wars",
+        "Mapas 99 Bots",
+        "Mapas de XP"
       ]
     }
   },

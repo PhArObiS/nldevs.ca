@@ -111,7 +111,9 @@
     "uefnContracts": "UEFN Contracts",
     "privacy": "Privacy",
     "contact": "Contact",
-    "copyright": "© {year} NLDEVS. Not affiliated with Epic Games."
+    "copyright": "© {year} NLDEVS. Not affiliated with Epic Games.",
+    "bots99Maps": "99 Bots Maps",
+    "redVsBlueMaps": "Red vs Blue Maps"
   },
   "hero": {
     "eyebrow": "UEFN Game Studio",

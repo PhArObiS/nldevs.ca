@@ -22,6 +22,11 @@ const footerNav: FooterColumn[] = [
       { href: "/squid-game-fortnite-maps", labelKey: "squidGameMaps" },
       { href: "/fortnite-gun-game-maps", labelKey: "gunGameMaps" },
       { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+      // Mode hubs. Site-wide footer links are the main internal path to
+      // these — they are deliberately kept out of the top nav, which is
+      // already at its width limit once labels are translated.
+      { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
+      { href: "/fortnite-red-vs-blue-maps", labelKey: "redVsBlueMaps" },
     ],
   },
   {

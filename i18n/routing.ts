@@ -91,6 +91,20 @@ export const pathnames = {
     pt: "/melhores-mapas-de-xp-fortnite",
     es: "/mejores-mapas-de-xp-fortnite",
   },
+  // "99 bots" is a mode players search by name, so the number carries across
+  // every locale untranslated.
+  "/fortnite-99-bots-maps": {
+    en: "/fortnite-99-bots-maps",
+    fr: "/cartes-fortnite-99-bots",
+    pt: "/mapas-fortnite-99-bots",
+    es: "/mapas-fortnite-99-bots",
+  },
+  "/fortnite-red-vs-blue-maps": {
+    en: "/fortnite-red-vs-blue-maps",
+    fr: "/cartes-fortnite-rouge-contre-bleu",
+    pt: "/mapas-fortnite-vermelho-vs-azul",
+    es: "/mapas-fortnite-rojo-vs-azul",
+  },
 
   // ---- Map detail pages --------------------------------------------------
   "/star-wars-tycoon-sidekick-legends": {
