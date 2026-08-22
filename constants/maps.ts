@@ -180,9 +180,9 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
   ],
   gunGame: ["tmnt-city", "winterfest-demon-hunters"],
   xp: [
-    "tmnt-mega-ramp-survival",
     "rvb-squid-minigame",
     "tmnt-city",
+    "tmnt-mega-ramp-survival",
     "sidekick-siege-99-bots",
     "99-bots-squid-royale-boss",
     "rvb-players-vs-guards",
