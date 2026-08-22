@@ -187,9 +187,13 @@ export default function MapHubPage({
 
       <PageSections sections={tipSections} />
 
-      <ContentSection title={tc("faqTitle")} accent={tc("faqAccent")}>
-        <FaqList items={faqs} />
-      </ContentSection>
+      {/* Rendered only when the hub has FAQs — an empty heading with
+          nothing under it looked like a broken page. */}
+      {faqs.length > 0 && (
+        <ContentSection title={tc("faqTitle")} accent={tc("faqAccent")}>
+          <FaqList items={faqs} />
+        </ContentSection>
+      )}
 
       <ContentSection
         title={tc("relatedPages")}

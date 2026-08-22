@@ -358,7 +358,24 @@
           ]
         }
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "q": "What is a Fortnite Gun Game map?",
+          "a": "A weapon progression mode. You start with one weapon and move to the next after each elimination — first player to finish the weapon list wins the round."
+        },
+        {
+          "q": "Do gun game maps give XP?",
+          "a": "Some islands grant XP depending on Fortnite calibration and the map's current settings. Rates can change after updates, so treat XP as a bonus rather than the reason to play."
+        },
+        {
+          "q": "How many players do these maps support?",
+          "a": "It varies by island. Most work solo or with a full party — open a map's page for its player count and mode details."
+        },
+        {
+          "q": "Which gun game map is best to start with?",
+          "a": "Pick one with fast respawns and a shorter weapon list so rounds finish quickly. Both maps here are built around quick re-queues."
+        }
+      ],
       "notes": {
         "tmnt-city": "TMNT-themed combat loops with fast weapon progression and replayable rounds.",
         "winterfest-demon-hunters": "Holiday demon-hunting gun game with repeatable combat loops and weapon rotations."
@@ -391,7 +408,24 @@
       "codesAccent": "codes",
       "introSections": [],
       "tipSections": [],
-      "faqs": [],
+      "faqs": [
+        {
+          "q": "Do these Fortnite XP maps still give XP?",
+          "a": "XP depends on Fortnite's calibration and each island's current settings, and rates change after updates or revisions. The maps here are chosen for repeatable gameplay loops rather than a fixed XP figure."
+        },
+        {
+          "q": "Which map gives the most XP?",
+          "a": "It shifts season to season. Rather than chase one island, rotate between a few — diminishing returns apply per map, so switching keeps your rate steadier over a session."
+        },
+        {
+          "q": "How do I enter an XP map code?",
+          "a": "Open Fortnite, go to Search/Discover, enter the island code (####-####-####), then select the result to play."
+        },
+        {
+          "q": "Can I earn XP playing with friends?",
+          "a": "Yes. Most of these maps are party friendly, and playing with a squad usually keeps rounds moving faster than going solo."
+        }
+      ],
       "notes": {
         "tmnt-mega-ramp-survival": "Fast-paced survival runs with repeatable gameplay loops. Great if you prefer active play while leveling.",
         "winterfest-demon-hunters": "Combat-focused loops with repeatable rounds. Works well for players who want XP while fighting.",

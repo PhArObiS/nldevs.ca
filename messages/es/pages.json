@@ -358,7 +358,24 @@
           ]
         }
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "q": "¿Qué es un mapa de Gun Game en Fortnite?",
+          "a": "Un modo de progresión de armas. Empiezas con un arma y pasas a la siguiente tras cada eliminación — el primero en terminar la lista de armas gana la ronda."
+        },
+        {
+          "q": "¿Los mapas de gun game dan XP?",
+          "a": "Algunas islas otorgan XP según la calibración de Fortnite y la configuración actual del mapa. Las tasas pueden cambiar tras las actualizaciones, así que toma el XP como un extra y no como el motivo para jugar."
+        },
+        {
+          "q": "¿Cuántos jugadores admiten estos mapas?",
+          "a": "Varía según la isla. La mayoría funciona en solitario o con un grupo completo — abre la página del mapa para ver su número de jugadores y los detalles del modo."
+        },
+        {
+          "q": "¿Con qué mapa de gun game conviene empezar?",
+          "a": "Elige uno con reapariciones rápidas y una lista de armas más corta, para terminar las rondas pronto. Los dos mapas de aquí están hechos para colas rápidas."
+        }
+      ],
       "notes": {
         "tmnt-city": "Ciclos de combate con temática de las Tortugas Ninja, progresión de armas rápida y rondas rejugables.",
         "winterfest-demon-hunters": "Gun game de caza de demonios con temática invernal, ciclos de combate repetibles y rotación de armas."
@@ -391,7 +408,24 @@
       "codesAccent": "de XP",
       "introSections": [],
       "tipSections": [],
-      "faqs": [],
+      "faqs": [
+        {
+          "q": "¿Estos mapas de XP de Fortnite siguen dando XP?",
+          "a": "El XP depende de la calibración de Fortnite y de la configuración actual de cada isla, y las tasas cambian tras actualizaciones o revisiones. Los mapas de aquí se eligen por sus ciclos de gameplay repetibles, no por una cifra fija de XP."
+        },
+        {
+          "q": "¿Qué mapa da más XP?",
+          "a": "Cambia de una temporada a otra. En lugar de apostar por una sola isla, alterna entre varias — los rendimientos decrecientes aplican por mapa, así que cambiar mantiene un ritmo más estable durante la sesión."
+        },
+        {
+          "q": "¿Cómo ingreso un código de mapa de XP?",
+          "a": "Abre Fortnite, ve a Buscar/Descubrir, ingresa el código de isla (####-####-####) y selecciona el resultado para jugar."
+        },
+        {
+          "q": "¿Puedo ganar XP jugando con amigos?",
+          "a": "Sí. La mayoría de estos mapas funciona bien en grupo, y jugar con la squad suele mantener las rondas más rápidas que en solitario."
+        }
+      ],
       "notes": {
         "tmnt-mega-ramp-survival": "Partidas de supervivencia aceleradas con ciclos de gameplay repetibles. Ideal si prefieres jugar activamente mientras subes de nivel.",
         "winterfest-demon-hunters": "Ciclos centrados en el combate con rondas repetibles. Funciona bien para quienes quieren XP mientras pelean.",
