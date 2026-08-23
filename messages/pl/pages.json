@@ -1,0 +1,784 @@
+{
+  "pageMeta": {
+    "star-wars-fortnite-maps": {
+      "title": "Mapy Fortnite Star Wars i kody wysp",
+      "description": "Przeglądaj mapy Fortnite Star Wars i kody wysp od NLDEVS: Tycoon, Mega RvB i Tilted 99 Bots Royale.",
+      "ogDescription": "Mapy Fortnite Star Wars i kody wysp od NLDEVS — tycoon, Czerwoni kontra Niebiescy i bot royale."
+    },
+    "tmnt-fortnite-maps": {
+      "title": "Najlepsze mapy Fortnite TMNT i kody map",
+      "description": "Przeglądaj mapy Fortnite TMNT i kody map od NLDEVS, w tym TMNT Mega Ramp Survival i TMNT City.",
+      "ogDescription": "Mapy Fortnite TMNT i kody map od NLDEVS — stworzone w UEFN."
+    },
+    "squid-game-fortnite-maps": {
+      "title": "Najlepsze mapy Fortnite Squid Game i kody map",
+      "description": "Przeglądaj mapy Fortnite w stylu Squid Game i kody NLDEVS: 99 Bots, Sidekick Siege i RvB Squid Minigame.",
+      "ogDescription": "Mapy Fortnite w stylu Squid Game i kody map od NLDEVS: survival z 99 botami, walki z bossami, sidekicki i chaos Czerwoni kontra Niebiescy."
+    },
+    "fortnite-gun-game-maps": {
+      "title": "Najlepsze mapy Fortnite Gun Game i kody",
+      "description": "Wybrane mapy Fortnite Gun Game i kody od NLDEVS: szybka walka, progresja broni i rundy do powtarzania.",
+      "ogDescription": "Mapy Fortnite Gun Game i kody map w zestawieniu NLDEVS — PvP z progresją broni i wysoką regrywalnością."
+    },
+    "best-fortnite-xp-maps": {
+      "title": "Najlepsze mapy XP Fortnite i kody do levelowania",
+      "description": "Najlepsze mapy XP Fortnite i kody wysp do efektywnego levelowania. Lista NLDEVS z krótkimi opisami.",
+      "ogDescription": "Przeglądaj mapy XP w Fortnite i kody map, żeby levelować efektywnie. Zestawienie NLDEVS."
+    },
+    "star-wars-tycoon-sidekick-legends": {
+      "title": "Star Wars Tycoon Sidekick Legends wkrótce ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends wkrótce w Fortnite. Kod mapy {code}. Sidekicki, bohaterowie, nowe sekcje, pracownicy, rebirth leaderboard i auto-save.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends wkrótce w Fortnite. Odblokowuj sidekicki i bohaterów, zatrudniaj pracowników i wspinaj się w tabeli Rebirth."
+    },
+    "star-wars-mega-rvb": {
+      "title": "Kod mapy Star Wars Mega RvB ({code})",
+      "description": "Zagraj w Star Wars Mega RvB w Fortnite. Kod mapy {code}. Red vs Blue z bronią Star Wars, pojazdami, osiągnięciami i rankingiem.",
+      "ogDescription": "Drużynowy deathmatch Czerwoni kontra Niebiescy z bronią Star Wars, pojazdami, osiągnięciami i rankingiem."
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "title": "Kod mapy Star Wars Tilted 99 Bots Royale ({code})",
+      "description": "Zagraj w Star Wars Tilted 99 Bots Royale w Fortnite. Kod {code}. 99 bots royale, bossowie, bohaterowie, zapis statystyk i loadoutów.",
+      "ogDescription": "Survival w royale z 99 botami: odblokowywani bohaterowie, bossowie, zapis statystyk i akcja Tilted x Star Wars."
+    },
+    "tmnt-mega-ramp-survival": {
+      "title": "Kod mapy TMNT Mega Ramp Survival ({code})",
+      "description": "Zagraj w TMNT Mega Ramp Survival w Fortnite. Kod mapy {code}. Szybkie przetrwanie na mega rampie stworzone przez NLDEVS w UEFN.",
+      "ogDescription": "Szybki survival na mega rampie w stylu TMNT, stworzony przez NLDEVS w UEFN."
+    },
+    "tmnt-city": {
+      "title": "Kod mapy TMNT City ({code})",
+      "description": "Odkryj TMNT City w Fortnite. Kod mapy {code}. Miejska mapa TMNT od NLDEVS stworzona w UEFN.",
+      "ogDescription": "Odkryj TMNT City w Fortnite. Miejski tryb w stylu TMNT stworzony w UEFN."
+    },
+    "rvb-squid-minigame": {
+      "title": "Kod mapy RvB Squid Minigame ({code})",
+      "description": "Zagraj w RvB Squid Minigame w Fortnite. Kod {code}. Szybkie rundy, chaos drużynowy i minigry w stylu Squid Game.",
+      "ogDescription": "Szybkie rundy, drużynowy chaos i regrywalne minigry w stylu Squid Game."
+    },
+    "99-bots-squid-royale-boss": {
+      "title": "Kod mapy 99 Bots Squid Royale Boss ({code})",
+      "description": "Zagraj w 99 Bots Squid Royale Boss w Fortnite. Kod {code}. Squid Game 99 bots survival z PvE, bossami, rankingami i leaderboardami.",
+      "ogDescription": "Mapa survivalowa z 99 botami w stylu Squid Game: PvE w otwartym świecie, walki z bossami, zapis statystyk i tabele wyników."
+    },
+    "sidekick-siege-99-bots": {
+      "title": "Kod mapy Sidekick Siege 99 Bots ({code})",
+      "description": "Zagraj w Sidekick Siege 99 Bots w Fortnite. Kod {code}. 99 bots survival z sidekickami, bossami, PvE, zapisem postępów i rangami.",
+      "ogDescription": "Mapa survivalowa z 99 botami w stylu Squid Game: sidekicki, walki z bossami, PvE i tabele wyników."
+    },
+    "winterfest-demon-hunters": {
+      "title": "Kod mapy Winterfest Demon Hunters ({code})",
+      "description": "Zagraj w Winterfest Demon Hunters w Fortnite. Kod {code}. Rundy bojowe, powtarzalne pętle i dobry wybór do gry squad.",
+      "ogDescription": "Rundy gun game nastawione na walkę, z powtarzalnymi pętlami — świetne do grania w paczce."
+    },
+    "playtest-squad": {
+      "title": "NLDEVS Playtest Squad",
+      "description": "Dołącz do NLDEVS Playtest Squad, aby dostawać nowe mapy Fortnite, zaproszenia na playtesty, aktualizacje Discord i okazje UEFN.",
+      "ogDescription": "Dołącz do NLDEVS po nowe mapy Fortnite, zaproszenia na playtesty i aktualizacje społeczności UEFN."
+    },
+    "uefn-contracts": {
+      "title": "Kontrakty UEFN",
+      "description": "Zatrudnij NLDEVS do kontraktów UEFN, tworzenia map Fortnite, animacji, doświadczeń branded i wsparcia projektów gier.",
+      "ogDescription": "Zatrudnij NLDEVS do kontraktów UEFN, budowy map Fortnite i trybów brandowanych."
+    },
+    "privacy": {
+      "title": "Prywatność",
+      "description": "Jak NLDEVS zbiera i wykorzystuje informacje członków do aktualizacji, playtestów, wsparcia i współpracy.",
+      "ogDescription": "Jak NLDEVS zbiera i wykorzystuje dane członków."
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Najlepsze mapy Fortnite 99 Bots i kody",
+      "description": "Mapy Fortnite 99 bots i kody od NLDEVS: bot royale, bossowie, zapis statystyk i szybki start bez czekania na lobby.",
+      "ogDescription": "Mapy Fortnite z 99 botami i kody map od NLDEVS — survival w bot royale, walki z bossami i zapis postępów."
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Najlepsze mapy Fortnite czerwoni kontra niebiescy i kody",
+      "description": "Kody map Fortnite Red vs Blue od NLDEVS: drużynowe wyspy, szybkie respawny, cele i chaos dla squadów.",
+      "ogDescription": "Kody map Fortnite Czerwoni kontra Niebiescy od NLDEVS — drużynowy deathmatch, minigry i walki ze strażnikami."
+    },
+    "rvb-players-vs-guards": {
+      "title": "Kod mapy RvB Players vs Guards (6263-5571-9595)",
+      "description": "Zagraj w RvB Players vs Guards w Fortnite. Kod 6263-5571-9595. Red vs Blue z graczami kontra strażnicy, celami i powtarzalnymi rundami.",
+      "ogDescription": "Mapa Fortnite Czerwoni kontra Niebiescy w formacie gracze kontra strażnicy: cele drużynowe i powtarzalne rundy walki."
+    }
+  },
+  "hubs": {
+    "starWars": {
+      "breadcrumb": "Mapy Star Wars",
+      "eyebrow": "Dawno temu w odległej galaktyce",
+      "title": "Mapy Fortnite <accent>Star Wars</accent>",
+      "description": "Tryby Fortnite w klimacie Star Wars stworzone w Unreal Editor for Fortnite. Progresja tycoon, PvP Czerwoni kontra Niebiescy, survival w bot royale i kody wysp.",
+      "schemaName": "Mapy Fortnite Star Wars i kody wysp",
+      "schemaDescription": "Zestawienie map Fortnite Star Wars i kodów wysp stworzonych przez NLDEVS w UEFN: progresja tycoon, PvP Czerwoni kontra Niebiescy i survival w bot royale.",
+      "listName": "Mapy Fortnite Star Wars",
+      "genre": "Mapa Fortnite Star Wars",
+      "codesTitle": "Kody map",
+      "codesAccent": "Star Wars",
+      "introSections": [],
+      "tipSections": [
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod wyspy dokładnie (####-####-####).",
+            "Dołącz do wyspy i realizuj cele w grze.",
+            "Dodaj mapę do ulubionych, żeby szybciej ją znaleźć następnym razem."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Co tu",
+          "accent": "znajdziesz",
+          "items": [
+            "Progresję Star Wars Tycoon z zapisem, rebirthami i nagrodami.",
+            "Drużynowy deathmatch Czerwoni kontra Niebiescy z bronią i pojazdami Star Wars.",
+            "Survival w royale z 99 botami: bohaterowie, bossowie i zapisane loadouty.",
+            "Tryby zbudowane w UEFN z myślą o powtarzalnych sesjach ze znajomymi."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jakie są najlepsze mapy Fortnite Star Wars od NLDEVS?",
+          "a": "NLDEVS ma obecnie Star Wars Tycoon Sidekick Legends, Star Wars Mega RvB i Star Wars Tilted 99 Bots Royale."
+        },
+        {
+          "q": "Jaki jest kod wyspy Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588."
+        },
+        {
+          "q": "Która mapa Fortnite Star Wars jest najlepsza do PvP?",
+          "a": "Do PvP najlepiej sprawdza się Star Wars Mega RvB: to mapa drużynowego deathmatchu Czerwoni kontra Niebiescy z bronią Star Wars, własnymi broniami, pojazdami, osiągnięciami i rankingiem."
+        },
+        {
+          "q": "Na której mapie Fortnite Star Wars są boty?",
+          "a": "Star Wars Tilted 99 Bots Royale to mapa Star Wars nastawiona na boty: royale z 99 botami, walki z bossami, odblokowywani bohaterowie, zapis statystyk i loadoutów."
+        }
+      ],
+      "notes": {
+        "star-wars-tycoon-sidekick-legends": "Wkrótce: Star Wars Tycoon z odblokowywaniem sidekicków i bohaterów, nowymi sekcjami i ulepszeniami, pracownikami zwiększającymi produkcję, wspinaczką w tabeli rebirth, autozapisem i obsługą do 4 graczy.",
+        "star-wars-mega-rvb": "PvP Czerwoni kontra Niebiescy z bronią Star Wars, własnymi broniami, pojazdami, osiągnięciami, muzyką i awansem aż do rangi Unreal.",
+        "star-wars-tilted-99-bots-royale": "Survival PvE w otwartym świecie z 99 botami: walki z bossami, odblokowywani bohaterowie, zapis statystyk i loadoutów oraz akcja w Tilted w klimacie Star Wars."
+      },
+      "modeOverrides": {
+        "star-wars-tycoon-sidekick-legends": "Wkrótce / Tycoon",
+        "star-wars-mega-rvb": "Deathmatch drużynowy",
+        "star-wars-tilted-99-bots-royale": "Bot Royale"
+      },
+      "relatedLabels": [
+        "Mapy TMNT",
+        "Mapy Squid Game",
+        "Mapy Gun Game",
+        "Mapy XP"
+      ],
+      "disclaimer": "Tryby Fortnite tworzone przez społeczność w UEFN. Brak powiązania z Lucasfilm, Disney ani Epic Games."
+    },
+    "tmnt": {
+      "breadcrumb": "Mapy TMNT",
+      "eyebrow": "Moc żółwi",
+      "title": "Najlepsze mapy Fortnite <accent>TMNT</accent>",
+      "description": "Mapy Fortnite TMNT i kody map stworzone w UEFN. Eksploracja miasta, tryby survivalowe i areny walki zaprojektowane pod powtarzalne sesje.",
+      "schemaName": "Najlepsze mapy Fortnite TMNT i kody map",
+      "schemaDescription": "Zestawienie map Fortnite TMNT i kodów map stworzonych przez NLDEVS w UEFN, w tym tryby survivalowe i miejskie.",
+      "listName": "Mapy Fortnite TMNT",
+      "genre": "Mapa Fortnite TMNT",
+      "codesTitle": "Kody map",
+      "codesAccent": "TMNT",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-tmnt-maps",
+          "title": "Czym są",
+          "accent": "mapy TMNT w Fortnite?",
+          "paragraphs": [
+            "Mapy TMNT w Fortnite to wyspy tworzone przez społeczność, inspirowane Wojowniczymi Żółwiami Ninja: eksploracja miasta, tryby survivalowe, areny walki i szybkie minigry. Takie wyspy powstają w UEFN i są projektowane pod regrywalność ze znajomymi.",
+            "Jeśli szukasz szybkiej akcji, do krótkich sesji świetnie nadają się mapy survivalowe w stylu mega rampy. Jeśli wolisz swobodę, wybierz mapy miejskie — tam można zwiedzać, walczyć i po prostu spędzać czas w paczce."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Wskazówki do",
+          "accent": "map TMNT",
+          "items": [
+            "Graj ze znajomymi — tryby survivalowe i mapy miejskie są lepsze w paczce.",
+            "Wskazówka do mega rampy: trzymaj się środka i koryguj tor drobnymi ruchami wcześniej, zamiast ostro skręcać na końcu.",
+            "Dodaj mapę do ulubionych po grze, żeby łatwiej wrócić po aktualizacjach.",
+            "Jeśli chcesz PvP, wejdź w strefy walki albo tryby gun game, gdy są dostępne."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod mapy dokładnie (####-####-####).",
+            "Dołącz do wyspy i realizuj cele w grze.",
+            "Dodaj mapę do ulubionych, żeby szybciej ją znaleźć następnym razem."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jak wpisać kod mapy w Fortnite?",
+          "a": "Otwórz Fortnite, wejdź w „Szukaj/Odkrywaj”, wpisz kod wyspy (####-####-####), a potem wybierz wynik, żeby zagrać."
+        },
+        {
+          "q": "Czy te mapy TMNT w Fortnite są oficjalne?",
+          "a": "To tryby Fortnite tworzone przez społeczność w UEFN. Ta strona nie jest powiązana z Nickelodeon ani marką TMNT."
+        },
+        {
+          "q": "Czym jest TMNT Mega Ramp Survival?",
+          "a": "To szybki tryb survivalowy: unikaj przeszkód i utrzymaj się przy życiu, gdy chaos na mega rampie narasta."
+        },
+        {
+          "q": "Czy TMNT City to mapa gun game?",
+          "a": "TMNT City to przede wszystkim miejski tryb w klimacie TMNT. W zależności od aktualnej wersji wyspy mogą się tam pojawić strefy walki albo osobne tryby."
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Szybki survival na mega rampie w klimacie TMNT. Unikaj chaosu i przetrwaj przejazd.",
+        "tmnt-city": "Miejski tryb w klimacie TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Przetrwanie",
+        "tmnt-city": "Tryb"
+      },
+      "relatedLabels": [
+        "Mapy XP",
+        "Mapy Gun Game",
+        "Mapy Squid Game",
+        "Mapy Star Wars"
+      ]
+    },
+    "squidGame": {
+      "breadcrumb": "Mapy Squid Game",
+      "eyebrow": "Rundy na wylot",
+      "title": "Najlepsze mapy Fortnite <accent>Squid Game</accent>",
+      "description": "Minigry w stylu Squid Game, survival z 99 botami, sidekicki, walki z bossami i chaos Czerwoni kontra Niebiescy — wszystko zbudowane w UEFN. Każda pozycja ma kod wyspy i typ rozgrywki.",
+      "schemaName": "Najlepsze mapy Fortnite w stylu Squid Game i kody map",
+      "schemaDescription": "Zestawienie map Fortnite w stylu Squid Game i kodów map stworzonych przez NLDEVS w UEFN: survival z 99 botami, walki z bossami, sidekicki i mapy Czerwoni kontra Niebiescy.",
+      "listName": "Mapy Fortnite w stylu Squid Game",
+      "genre": "Mapa Fortnite w stylu Squid Game",
+      "codesTitle": "Kody map",
+      "codesAccent": "Squid Game",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-squid-maps",
+          "title": "Czym są",
+          "accent": "mapy Squid Game w Fortnite?",
+          "paragraphs": [
+            "Mapy Fortnite „w stylu Squid Game” to wyspy tworzone przez społeczność, inspirowane minigrami na wylot. Zwykle są to szybkie rundy, wyzwania z wysoką ceną błędu i chaotyczna rywalizacja — najczęściej projektowane pod granie ze znajomymi.",
+            "Popularne formaty to Czerwone światło, zielone światło, rundy survivalowe, minigry z celami, survival z 99 botami, walki z bossami i wyzwania drużynowe. Dostępność map i przyznawanie XP mogą się zmieniać z czasem wraz z aktualizacjami i poprawkami wysp."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "id": "tips",
+          "title": "Wskazówki do",
+          "accent": "map Squid",
+          "items": [
+            "Graj ze znajomymi: większość rund na wylot jest lepsza w pełnej paczce i z szybkim ponownym wejściem.",
+            "Jeśli chcesz potrenować, wybierz warianty z botami, żeby poznać trasy i mechaniki przed rundami PvP.",
+            "Zmieniaj mapy, gdy XP zwalnia; kalibracja i malejące zyski różnią się między wyspami i aktualizacjami.",
+            "Korzystaj z czatu głosowego albo szybkich pingów — w wyzwaniach na wylot i rundach drużynowych liczy się koordynacja."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "id": "how-to-play",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod mapy dokładnie (####-####-####).",
+            "Dołącz do mapy i trzymaj się zasad minigry (różnią się między wyspami).",
+            "Graj ze znajomymi — tak rundy na wylot sprawdzają się najlepiej."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jak wpisać kod mapy w Fortnite?",
+          "a": "Otwórz Fortnite, wejdź w „Szukaj/Odkrywaj”, wpisz kod wyspy (####-####-####), a potem wybierz wynik, żeby zagrać."
+        },
+        {
+          "q": "Czy mapy Squid Game w Fortnite są oficjalne?",
+          "a": "Nie. To tryby Fortnite tworzone przez społeczność, inspirowane minigrami i wyzwaniami w stylu Squid Game, a nie oficjalna zawartość Netflixa."
+        },
+        {
+          "q": "Czy mapy Squid Game dają XP?",
+          "a": "Niektóre wyspy mogą dawać XP — zależy to od kalibracji Fortnite i ustawień mapy. Po aktualizacjach i poprawkach stawki XP mogą się zmienić."
+        },
+        {
+          "q": "W które mapy Squid Game najlepiej grać ze znajomymi?",
+          "a": "Zwykle najlepiej sprawdzają się minigry i mapy na wylot w pełnej paczce. Są ciekawsze, gdy można szybko rozgrywać rundy i rywalizować ze znajomymi."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minigry w stylu Squid z chaosem Czerwoni kontra Niebiescy i szybkimi rundami.",
+        "99-bots-squid-royale-boss": "Survival PvE z 99 botami w otwartym świecie: walki z bossami, nowe bronie, jazda na zwierzętach, rangi, tabele wyników i zapis statystyk.",
+        "sidekick-siege-99-bots": "Survival z 99 botami nastawiony na sidekicki: walki z bossami, PvE, zapis loadoutów, rangi, tabele wyników i do 5 graczy."
+      },
+      "modeOverrides": {
+        "rvb-squid-minigame": "RvB",
+        "99-bots-squid-royale-boss": "99 Bots",
+        "sidekick-siege-99-bots": "Sidekicki"
+      },
+      "relatedLabels": [
+        "Mapy XP",
+        "Mapy Gun Game",
+        "Mapy TMNT",
+        "Mapy Star Wars"
+      ]
+    },
+    "gunGame": {
+      "breadcrumb": "Mapy Gun Game",
+      "eyebrow": "Progresja broni",
+      "title": "Najlepsze mapy Fortnite <accent>Gun Game</accent>",
+      "description": "Szybkie tryby z progresją broni, gdzie każda eliminacja ulepsza twój arsenał. Wyselekcjonowane wyspy z kodami i krótkimi notatkami.",
+      "schemaName": "Najlepsze mapy Fortnite Gun Game",
+      "schemaDescription": "Zestawienie map Fortnite Gun Game i kodów map stworzonych przez NLDEVS w UEFN — PvP z progresją broni pod rundy, do których chce się wracać.",
+      "listName": "Mapy Fortnite Gun Game",
+      "genre": "Mapa Fortnite Gun Game",
+      "codesTitle": "Kody map",
+      "codesAccent": "Gun Game",
+      "introSections": [
+        {
+          "type": "prose",
+          "title": "Czym jest mapa",
+          "accent": "Gun Game w Fortnite?",
+          "paragraphs": [
+            "Fortnite Gun Game to tryb PvP z progresją broni, zbudowany pod szybkie, powtarzalne rundy. Gracz zaczyna z jedną bronią i dostaje kolejną po każdej eliminacji.",
+            "Celem jest przejście całej listy broni szybciej niż reszta. Dobre mapy Gun Game mają czytelny rytm, zbalansowaną rotację broni i szybkie odrodzenia."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Jak wygrywać",
+          "accent": "rundy Gun Game",
+          "items": [
+            "Poznaj rytm odrodzeń i zmieniaj kierunki walki.",
+            "Trzymaj kąty i mądrze wyglądaj ponownie.",
+            "Celność na średnim dystansie bije efektowne zagrania.",
+            "Nie stój w miejscu — tak szybciej ulepszasz broń."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Czym jest mapa Fortnite Gun Game?",
+          "a": "To tryb z progresją broni. Zaczynasz z jedną bronią i przechodzisz do kolejnej po każdej eliminacji — rundę wygrywa ten, kto pierwszy skończy listę broni."
+        },
+        {
+          "q": "Czy mapy gun game dają XP?",
+          "a": "Niektóre wyspy dają XP — zależy to od kalibracji Fortnite i aktualnych ustawień mapy. Po aktualizacjach stawki się zmieniają, więc traktuj XP jako bonus, a nie powód do grania."
+        },
+        {
+          "q": "Ilu graczy obsługują te mapy?",
+          "a": "To zależy od wyspy. Większość działa solo albo w pełnej paczce — otwórz stronę mapy, żeby zobaczyć liczbę graczy i szczegóły trybu."
+        },
+        {
+          "q": "Od której mapy gun game zacząć?",
+          "a": "Wybierz taką z szybkimi odrodzeniami i krótszą listą broni, żeby rundy kończyły się szybko. Obie mapy tutaj są zbudowane pod szybkie ponowne wejście."
+        }
+      ],
+      "notes": {
+        "tmnt-city": "Pętle walki w klimacie TMNT z szybką progresją broni i rundami, do których chce się wracać.",
+        "winterfest-demon-hunters": "Świąteczny gun game z polowaniem na demony, powtarzalnymi pętlami walki i rotacją broni."
+      },
+      "titleOverrides": {
+        "tmnt-city": "TMNT City — Gun Game",
+        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+      },
+      "modeOverrides": {
+        "tmnt-city": "Gun Game",
+        "winterfest-demon-hunters": "FFA Gun Game"
+      },
+      "relatedLabels": [
+        "Mapy XP",
+        "Mapy TMNT",
+        "Mapy Squid Game",
+        "Mapy Star Wars"
+      ]
+    },
+    "xp": {
+      "breadcrumb": "Mapy XP",
+      "eyebrow": "Levelujesz szybciej",
+      "title": "Najlepsze mapy Fortnite <accent>XP</accent>",
+      "description": "Wyselekcjonowane mapy XP w Fortnite z kodami wysp i krótkimi notatkami o tym, jak każda z nich się gra.",
+      "schemaName": "Najlepsze mapy XP w Fortnite",
+      "schemaDescription": "Zestawienie map XP w Fortnite i kodów wysp od NLDEVS, z krótkimi notatkami o tym, jak gra się na każdej wyspie podczas levelowania.",
+      "listName": "Mapy XP w Fortnite",
+      "genre": "Mapa XP w Fortnite",
+      "codesTitle": "Kody map",
+      "codesAccent": "XP",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "how-fortnite-xp-maps-work",
+          "title": "Jak działają",
+          "accent": "mapy XP w Fortnite",
+          "paragraphs": [
+            "Mapy XP w Fortnite to wyspy Creative i UEFN z powtarzalnymi aktywnościami, które mogą przyznawać XP konta, jeśli wyspa jest skalibrowana i XP jest włączone. Najlepsze pozycje to nie magiczny przycisk, tylko mapy z równym rytmem, jasnymi celami i taką ilością akcji, żeby XP kapało, gdy naprawdę grasz.",
+            "Stawki XP mogą się zmieniać po aktualizacjach Fortnite, poprawkach wysp, zmianach kalibracji i w zależności od tego, ile grasz danego dnia. Traktuj tę stronę jako praktyczną listę map NLDEVS z żywymi pętlami rozgrywki, a nie obietnicę stałej ilości XP."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Wskazówki do",
+          "accent": "map XP",
+          "items": [
+            "Wybieraj aktywne mapy z eliminacjami, celami, falami survivalu albo pętlami walki, zamiast obietnic XP za bezczynność.",
+            "Na dłuższych sesjach zmieniaj kilka wysp, bo przy długim graniu na jednej XP może zwalniać.",
+            "Sprawdzaj mapę po dużych aktualizacjach Fortnite — kalibracja i nagrody zmieniają się, gdy wyspa jest poprawiana.",
+            "Jeśli możesz, graj ze znajomymi. Szybsze rundy i więcej starć zwykle utrzymują tempo sesji."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak korzystać",
+          "accent": "z tej listy",
+          "items": [
+            "Wybierz mapę pod swój styl: walka, survival, Czerwoni kontra Niebiescy albo eksploracja.",
+            "Wpisz kod wyspy w sekcji „Szukaj / Odkrywaj” w Fortnite.",
+            "Zagraj kilka rund normalnie i zobacz, czy powiadomienia o XP lecą równo.",
+            "Dodawaj do ulubionych mapy, które działają na twoim koncie, i zmieniaj je, gdy zyski spadają."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Ważna",
+          "accent": "uwaga o XP",
+          "heading": "XP nie jest gwarantowane",
+          "body": "XP w Fortnite zależy od kalibracji Epic, ustawień wyspy, stanu twojego konta i aktualnych limitów. Ta strona skupia się na mapach z powtarzalną rozgrywką, a nie na exploitach, glitchach czy farmieniu na AFK."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Czy te mapy XP w Fortnite nadal dają XP?",
+          "a": "XP zależy od kalibracji Fortnite i aktualnych ustawień każdej wyspy. Mapy tutaj są wybrane pod powtarzalne pętle rozgrywki, ale po aktualizacjach i poprawkach stawki XP mogą się zmienić."
+        },
+        {
+          "q": "Która mapa XP w Fortnite daje najwięcej XP?",
+          "a": "To zmienia się z sezonu na sezon i z konta na konto. Dla równiejszej sesji zmieniaj aktywne mapy z eliminacjami, celami, trybami survivalowymi albo rundami Czerwoni kontra Niebiescy, zamiast polegać na jednej wyspie."
+        },
+        {
+          "q": "Czy mapy XP są bezpieczne?",
+          "a": "Zwykłe mapy Creative i UEFN uruchamiane przez „Odkrywaj” w Fortnite to bezpieczniejsza droga. Unikaj map reklamujących glitche, exploity albo cokolwiek, co każe łamać zasady Fortnite."
+        },
+        {
+          "q": "Dlaczego XP zwolniło na mapie?",
+          "a": "XP może zwolnić przez dzienne limity, długie granie na jednej wyspie, kalibrację albo aktualizację Fortnite. Spróbuj innej mapy, zrób przerwę albo wróć po aktualizacji wyspy."
+        },
+        {
+          "q": "Jak wpisać kod mapy XP?",
+          "a": "Otwórz Fortnite, wejdź w „Szukaj” lub „Odkrywaj”, wpisz kod wyspy dokładnie w formacie ####-####-####, a potem wybierz wyspę i graj."
+        },
+        {
+          "q": "Czy mogę zdobywać XP, grając ze znajomymi?",
+          "a": "Tak. Większość tych map jest przyjazna paczkom, a granie w drużynie pomaga szybciej rozgrywać rundy, cele i starcia."
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "Szybkie tryby survivalowe z powtarzalnymi pętlami rozgrywki. Świetne, jeśli wolisz aktywne granie podczas levelowania.",
+        "winterfest-demon-hunters": "Pętle nastawione na walkę z powtarzalnymi rundami. Dobre dla graczy, którzy chcą XP w trakcie walki.",
+        "rvb-players-vs-guards": "Cele drużynowe i dłuższe sesje. Dobre na równe XP w rundach w stylu PvP.",
+        "tmnt-city": "Trasy eksploracji i walki ze stabilnymi pętlami XP.",
+        "rvb-squid-minigame": "Szybkie rundy i granie pod cele.",
+        "99-bots-squid-royale-boss": "Survival z botami w otwartym świecie ze stałą akcją i wydarzeniami z bossami. Mocna opcja na długie sesje.",
+        "sidekick-siege-99-bots": "Survival z botami prowadzony przez sidekicki, z zapisem postępów. Dobry na powtarzalne przejścia.",
+        "star-wars-tilted-99-bots-royale": "Royale z 99 botami bez czekania na lobby. Akcja od samego zeskoku."
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "Aktywna",
+        "winterfest-demon-hunters": "Mieszana",
+        "rvb-players-vs-guards": "Mieszana",
+        "tmnt-city": "Aktywna",
+        "rvb-squid-minigame": "Aktywna",
+        "99-bots-squid-royale-boss": "Aktywna",
+        "sidekick-siege-99-bots": "Aktywna",
+        "star-wars-tilted-99-bots-royale": "Aktywna"
+      },
+      "relatedLabels": [
+        "Mapy Gun Game",
+        "Mapy TMNT",
+        "Mapy Squid Game",
+        "Mapy Star Wars"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "Mapy 99 Bots",
+      "eyebrow": "Bez czekania na lobby",
+      "title": "Najlepsze mapy Fortnite <accent>99 Bots</accent>",
+      "description": "Wyspy bot royale, które zapełniają się natychmiast i nie stoją puste. Walki z bossami, zapis statystyk i tabele wyników w klimatach Squid Game i Star Wars.",
+      "schemaName": "Najlepsze mapy Fortnite z 99 botami i kody map",
+      "schemaDescription": "Zestawienie map Fortnite z 99 botami i kodów map stworzonych przez NLDEVS w UEFN: survival w bot royale, walki z bossami i zapis postępów.",
+      "listName": "Mapy Fortnite z 99 botami",
+      "genre": "Mapa Fortnite z 99 botami",
+      "codesTitle": "Kody map",
+      "codesAccent": "99 Bots",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "Czym jest",
+          "accent": "mapa z 99 botami?",
+          "paragraphs": [
+            "Mapa z 99 botami zapełnia lobby przeciwnikami AI zamiast graczy, więc mecz zaczyna się w chwili, gdy lądujesz. Żadnej kolejki, żadnego czekania na zapełnienie lobby — akcja trwa od samego zeskoku.",
+            "Sprawdzają się na rozgrzewkę, trening celowania i długie sesje solo. Większość dokłada do tego progresję — rangi, zapis statystyk, odblokowywanych bohaterów i wydarzenia z bossami — więc przejście daje powód, żeby wrócić."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Wskazówki do",
+          "accent": "bot royale",
+          "items": [
+            "Używaj ich na rozgrzewkę przed rankingiem — walki zaczynają się od razu, a tempo jest bliskie prawdziwemu meczowi.",
+            "Poznaj broń, której unikasz w PvP. Boty mniej karzą za błędy, więc to tani sposób na wyrobienie nawyku.",
+            "Graj w drużynie tam, gdzie wyspa to obsługuje: wydarzenia z bossami idą znacznie szybciej przy większej liczbie graczy.",
+            "Sprawdzaj, co każda mapa zapisuje — na większości z nich rangi i loadouty przenoszą się między sesjami."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod wyspy dokładnie (####-####-####).",
+            "Zeskocz i zacznij czyścić boty.",
+            "Dodaj mapę do ulubionych, żeby znaleźć ją ponownie po aktualizacji."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Co znaczy „99 botów” w Fortnite?",
+          "a": "Lobby zapełnia się 99 przeciwnikami AI zamiast prawdziwymi graczami. Mecze zaczynają się od razu, a wyspa pozostaje aktywna niezależnie od tego, ile osób jest online."
+        },
+        {
+          "q": "Czy mapy z 99 botami nadają się do treningu?",
+          "a": "Tak — na rozgrzewkę, ruch i oswojenie się z bronią. Boty nie zastąpią PvP w pojedynkach na celność, ale przydają się do wyrabiania nawyków bez presji meczu rankingowego."
+        },
+        {
+          "q": "Czy te mapy zapisują moje postępy?",
+          "a": "Większość zapisuje statystyki, rangi i loadouty między sesjami. Sprawdź stronę konkretnej mapy, żeby zobaczyć, co zapisuje każda wyspa."
+        },
+        {
+          "q": "Czy mogę grać na mapach z 99 botami ze znajomymi?",
+          "a": "Tak. Liczba graczy zależy od wyspy — kilka obsługuje do 5 osób. Otwórz stronę mapy, żeby zobaczyć dokładną liczbę."
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "Survival PvE w otwartym świecie z walkami z bossami, nowymi broniami, jazdą na zwierzętach, rangami i zapisem statystyk.",
+        "sidekick-siege-99-bots": "Survival z botami prowadzony przez sidekicki: walki z bossami, zapis loadoutów, rangi i do 5 graczy.",
+        "star-wars-tilted-99-bots-royale": "Bot royale z odblokowywanymi bohaterami, bossami i zapisem loadoutów, w wersji Tilted w klimacie Star Wars."
+      },
+      "relatedLabels": [
+        "Mapy Squid Game",
+        "Mapy Star Wars",
+        "Mapy XP",
+        "Mapy Czerwoni kontra Niebiescy"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "Mapy Red vs Blue",
+      "eyebrow": "Drużyna kontra drużyna",
+      "title": "Najlepsze mapy Fortnite <accent>Czerwoni kontra Niebiescy</accent>",
+      "description": "Kody wysp Czerwoni kontra Niebiescy stworzone w UEFN. Szybkie odrodzenia, rundy z celami i drużynowy chaos w formatach minigier, deathmatchu i walk ze strażnikami.",
+      "schemaName": "Najlepsze mapy Fortnite Czerwoni kontra Niebiescy i kody map",
+      "schemaDescription": "Zestawienie map Fortnite Czerwoni kontra Niebiescy i kodów map stworzonych przez NLDEVS w UEFN: drużynowy deathmatch, minigry z celami i walki ze strażnikami.",
+      "listName": "Mapy Fortnite Czerwoni kontra Niebiescy",
+      "genre": "Mapa Fortnite Czerwoni kontra Niebiescy",
+      "codesTitle": "Kody map",
+      "codesAccent": "Czerwoni kontra Niebiescy",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "Czym jest",
+          "accent": "Czerwoni kontra Niebiescy?",
+          "paragraphs": [
+            "Format Czerwoni kontra Niebiescy dzieli lobby na dwie drużyny i daje im powód do walki: eliminacje, cele albo serię minigier. Odrodzenia są szybkie, a rundy krótkie, więc nikt nie siedzi z boku.",
+            "To najbardziej przyjazny paczkom format na tej stronie. Rundy resetują się szybko, zasady są jasne w kilka sekund, a pełna ekipa może wskoczyć bez tłumaczenia czegokolwiek."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Wskazówki do",
+          "accent": "rund RvB",
+          "items": [
+            "Graj w pełnej paczce — formaty drużynowe nie działają we dwójkę, a rozkręcają się w sześciu.",
+            "Korzystaj z czatu głosowego albo pingów. W rundach z celami koordynacja liczy się znacznie bardziej niż celność.",
+            "Obserwuj rytm odrodzeń i zmieniaj kierunek zamiast pchać się za każdym razem tą samą drogą.",
+            "Rundy są krótkie z założenia, więc traktuj porażkę jako ponowne wejście, a nie odrabianie strat."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod wyspy dokładnie (####-####-####).",
+            "Dołącz do drużyny i poczekaj na start rundy.",
+            "Realizuj cel na mapie — różni się między wyspami."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Czym jest mapa Czerwoni kontra Niebiescy w Fortnite?",
+          "a": "To wyspa, która dzieli graczy na dwie drużyny i punktuje je przeciwko sobie, zwykle z szybkimi odrodzeniami i krótkimi rundami. Formaty sięgają od drużynowego deathmatchu po minigry z celami."
+        },
+        {
+          "q": "Ilu graczy potrzebują mapy Czerwoni kontra Niebiescy?",
+          "a": "Najlepiej działają w pełnej paczce. Liczba graczy zależy od wyspy — sprawdź stronę mapy, żeby zobaczyć dokładną liczbę i tryb."
+        },
+        {
+          "q": "Czy mapy Czerwoni kontra Niebiescy dają XP?",
+          "a": "Niektóre wyspy dają XP — zależy to od kalibracji Fortnite i aktualnych ustawień mapy. Stawki zmieniają się po aktualizacjach, więc traktuj to jako bonus."
+        },
+        {
+          "q": "Od której mapy Czerwoni kontra Niebiescy zacząć?",
+          "a": "Jeśli twoja ekipa nie zna formatu, wybierz wyspę z minigrami — zasady czyta się natychmiast, a rundy kończą się szybko. Mapy deathmatchowe pasują grupom, które już razem grają."
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "Minigry w stylu Squid z chaosem Czerwoni kontra Niebiescy i szybkimi rundami.",
+        "star-wars-mega-rvb": "Drużynowy deathmatch z bronią Star Wars, pojazdami, osiągnięciami i awansem aż do rangi Unreal.",
+        "rvb-players-vs-guards": "Cele drużynowe przeciwko strażnikom — dobre na dłuższe sesje."
+      },
+      "relatedLabels": [
+        "Mapy Squid Game",
+        "Mapy Star Wars",
+        "Mapy 99 Bots",
+        "Mapy XP"
+      ]
+    }
+  },
+  "playtest": {
+    "eyebrow": "Społeczność",
+    "title": "Dołącz do <accent>NLDEVS Playtest Squad</accent>",
+    "description": "Prosty sposób, żeby być blisko nowych map, testów, aktualizacji i wspólnych projektów NLDEVS.",
+    "heroTitle": "Testuj. Dawaj feedback. Łap premiery.",
+    "heroBody": "Dołącz jako członek, żeby łapać wczesne premiery map, zaproszenia na zamknięte playtesty, prawo głosu i bezpośredni kanał kontaktu z NLDEVS.",
+    "heroNote": "Zero spamu. Nie sprzedajemy danych. Możesz je usunąć w każdej chwili.",
+    "perks": [
+      "Wczesne premiery map",
+      "Zaproszenia na playtesty",
+      "Głosowanie na nowe motywy",
+      "Bezpośredni feedback"
+    ],
+    "joinDiscord": "Wejdź na Discorda",
+    "exploreMaps": "Zobacz mapy",
+    "squadPerk": "Bonus paczki",
+    "benefits": [
+      {
+        "title": "Wczesny dostęp",
+        "text": "Odbieraj wczesne premiery map i aktualizacje kodów przed szerszym wydaniem, gdy nowe wyspy albo poprawki są gotowe."
+      },
+      {
+        "title": "Zamknięte playtesty",
+        "text": "Łap zaproszenia na zamknięte playtesty, testuj nowe pętle i pomagaj ustawić rytm przed dużymi aktualizacjami."
+      },
+      {
+        "title": "Głosuj i kieruj",
+        "text": "Głosuj na motywy kolejnych map i wysyłaj bezpośrednio opinie, bugi, zrzuty ekranu i wrażenia z rozgrywki."
+      },
+      {
+        "title": "Uznanie społeczności",
+        "text": "Bądź brany pod uwagę przy przyszłych wyróżnieniach, napisach dla playtesterów, okazjach deweloperskich, konkursach i wydarzeniach z XP i mapami."
+      }
+    ]
+  },
+  "contracts": {
+    "eyebrow": "Praca z deweloperami i klientami",
+    "title": "Kontrakty UEFN, <accent>tryby Fortnite</accent>",
+    "description": "NLDEVS buduje grywalne projekty w UEFN dla twórców, klientów, marek i studiów, które potrzebują wsparcia przy produkcji w Fortnite.",
+    "heroTitle": "Zatrudnij NLDEVS do budowy w UEFN.",
+    "heroBody": "Od prototypów po dopracowane wyspy Fortnite: NLDEVS pomoże zaplanować, zbudować, przetestować i ulepszyć tryby w UEFN z czytelnym procesem produkcji.",
+    "startProject": "Zacznij projekt",
+    "viewCreatorPage": "Zobacz stronę twórcy",
+    "servicesTitle": "Co może zbudować NLDEVS",
+    "services": [
+      "Budowa map i prototypów w UEFN",
+      "Wyspy Fortnite: tycoon, PvP, gun game i formaty eventowe",
+      "Brandowane tryby Fortnite",
+      "Animacje w grze, sceny filmowe i sekwencje interaktywne",
+      "Projektowanie i szlifowanie pętli rozgrywki",
+      "Verse, urządzenia, interfejs, testy i wsparcie przy premierze",
+      "Porządkowanie, aktualizacja i optymalizacja istniejących wysp"
+    ],
+    "clientsTitle": "Pod poważne projekty",
+    "clientTypes": [
+      "Twórcy, którzy potrzebują pewnego partnera do budowy w UEFN",
+      "Marki, które chcą spróbować formatu Fortnite",
+      "Studia gier, którym przyda się dodatkowe wsparcie przy produkcji w UEFN",
+      "Zespoły, które chcą grywalny prototyp przed większą premierą"
+    ],
+    "ctaTitle": "Wyślij cel, termin i widełki budżetu.",
+    "ctaBody": "Pierwsza wiadomość może być prosta: co ma powstać, czy to nowa wyspa czy istniejący projekt, wymarzone okno premiery oraz ewentualne referencje i obowiązkowe mechaniki.",
+    "exploreMaps": "Zobacz mapy NLDEVS",
+    "mailSubject": "Zapytanie o kontrakt UEFN",
+    "servicesEyebrow": "Usługi",
+    "clientsEyebrow": "Komu to pomaga",
+    "inquiryEyebrow": "Zapytanie o projekt"
+  },
+  "privacy": {
+    "title": "Prywatność",
+    "intro": "Dane członków wykorzystujemy, żeby prowadzić NLDEVS, wspierać graczy, organizować playtesty i znajdować przyszłych współpracowników. Zbieramy tylko to, co potrzebne, i nigdy tych danych nie sprzedajemy.",
+    "sections": [
+      {
+        "title": "Co zbieramy",
+        "items": [
+          "Imię i adres email, gdy dołączasz albo logujesz się jako członek.",
+          "Opcjonalne dane gracza: nick w Fortnite, nazwę użytkownika na Discordzie, ulubioną mapę, styl profilu, cele członkostwa, wiadomości i przesłane obrazy.",
+          "Opcjonalne dane dewelopera lub twórcy: rolę, dostępność, link do portfolio i umiejętności.",
+          "Wymagane potwierdzenie, że członek ma co najmniej 13 lat i że poniżej 18. roku życia ma zgodę rodzica lub opiekuna.",
+          "Podstawowe dane techniczne, na przykład stronę źródłową i informacje o przeglądarce, żeby rozumieć, skąd przychodzą rejestracje, i rozwiązywać problemy."
+        ]
+      },
+      {
+        "title": "Jak z nich korzystamy",
+        "items": [
+          "Żeby rozpoznawać powracających członków.",
+          "Żeby odpowiadać na wiadomości, zgłoszenia bugów, pomysły na mapy i propozycje współpracy.",
+          "Żeby zapraszać zainteresowanych członków na playtesty, aktualizacje map albo projekty NLDEVS.",
+          "Żeby ulepszać stronę, mapy i doświadczenie członków."
+        ]
+      },
+      {
+        "title": "Jak je chronimy",
+        "items": [
+          "Zgłoszenia członków obsługujemy przez trasę serwerową, więc tajne klucze bazy danych nie trafiają do kodu przeglądarki.",
+          "Dostęp do bazy jest ograniczony przez Row Level Security w Supabase i poświadczenia po stronie serwera.",
+          "Nie sprzedajemy danych członków.",
+          "Ograniczamy zakres pytań i zostawiamy pola opcjonalne opcjonalnymi."
+        ]
+      }
+    ],
+    "emailsTitle": "Emaile",
+    "emailsBody": "Jeśli dołączysz do NLDEVS, możemy wysłać krótki email potwierdzający. Twojej zgody na kontakt używamy wyłącznie do przyszłych aktualizacji, playtestów i nowości o mapach.",
+    "manageTitle": "Usuń lub zmień dane",
+    "manageBody": "Aby zmienić lub usunąć swoje dane członka, napisz na <mail>nldevsmtl@gmail.com</mail>. Pisz z tego samego adresu, z którego dołączyłeś, żebyśmy znaleźli właściwy wpis.",
+    "thirdPartyTitle": "Usługi zewnętrzne",
+    "thirdPartyBody": "NLDEVS korzysta ze sprawdzonych usług, takich jak Supabase do danych członków i Resend do wysyłki maili. Te usługi przetwarzają dane tylko w zakresie potrzebnym do działania strony.",
+    "backHome": "Wróć do NLDEVS"
+  }
+}

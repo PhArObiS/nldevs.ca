@@ -1,0 +1,987 @@
+{
+  "mapPages": {
+    "star-wars-tycoon-sidekick-legends": {
+      "breadcrumbParent": "Mapy Star Wars",
+      "eyebrow": "WKRÓTCE / Star Wars Tycoon",
+      "intro": "Wkrótce od NLDEVS: nowy tryb Star Wars Tycoon z ogłoszonym kodem wyspy {code}, odblokowywaniem sidekicków i bohaterów, nowymi sekcjami tycoon, pracownikami, wspinaczką w tabeli Rebirth, autozapisem i obsługą do 4 graczy.",
+      "schemaGenre": "Star Wars Tycoon",
+      "schemaDescription": "Star Wars Tycoon Sidekick Legends to mapa Fortnite w klimacie Star Wars Tycoon od NLDEVS, która ukaże się wkrótce: odblokowywanie sidekicków i bohaterów, nowe sekcje, pracownicy, zwiększanie produkcji, progresja w tabeli Rebirth, autozapis i do 4 graczy.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-4"
+        },
+        {
+          "label": "Tryb",
+          "value": "Progresja tycoon"
+        },
+        {
+          "label": "Status",
+          "value": "Wkrótce"
+        },
+        {
+          "label": "Postępy",
+          "value": "Autozapis"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Paczek i budowniczych"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Spokojny grind"
+        }
+      ],
+      "sections": [
+        {
+          "type": "card",
+          "title": "Status",
+          "accent": "premiery",
+          "heading": "WKRÓTCE",
+          "body": "Star Wars Tycoon Sidekick Legends jeszcze się nie ukazała. Strona jest gotowa na premierę z ogłoszonym kodem wyspy 3205-2388-4588; zaglądaj tutaj po status dostępności, gdy zatwierdzenie Epic zostanie zakończone."
+        },
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "rozgrywki",
+          "items": [
+            "🐶 Odblokuj wszystkich sidekicków i bohaterów.",
+            "🗼 Odblokuj nowe sekcje i ulepszenia.",
+            "👷 Odblokuj pracowników i zwiększ produkcję.",
+            "✨ Wspinaj się w tabeli wyników dzięki Rebirthom.",
+            "👥 Do 4 graczy.",
+            "🔁 Rób Rebirth i odblokowuj nowe, potężne nagrody.",
+            "💾 Całe postępy zapisują się automatycznie."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Status",
+          "accent": "kodu wyspy",
+          "paragraphs": [
+            "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588; gdy mapa zostanie zatwierdzona i wejdzie na serwery, gracze będą mogli wpisać go w „Szukaj / Odkrywaj”, żeby zagrać w nową mapę Star Wars Tycoon od NLDEVS z odblokowywaniem sidekicków i bohaterów, pracownikami, zwiększaniem produkcji, rebirthami i zapisem postępów.",
+            "Dodaj tę stronę do zakładek, żeby śledzić kod wyspy Star Wars Tycoon Sidekick Legends, informacje o premierze i szczegóły rozgrywki."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Jak",
+          "accent": "grać",
+          "heading": "Kod wyspy 3205-2388-4588",
+          "body": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Gdy wejdzie na serwery, otwórz Fortnite, wejdź w „Szukaj / Odkrywaj”, wpisz 3205-2388-4588 i dołącz do wyspy."
+        },
+        {
+          "type": "prose",
+          "title": "Dlaczego to",
+          "accent": "nowość",
+          "paragraphs": [
+            "Sidekick Legends to kolejna premiera NLDEVS w klimacie Star Wars Tycoon, zrobiona dla graczy, którzy chcą długiej progresji tycoon zamiast szybkich meczów na jedną rundę. Autozapis, rebirthy, pracownicy, sekcje i ulepszenia dają powód, żeby wracać po każdej sesji."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Dla tych,",
+          "accent": "którzy lubią",
+          "items": [
+            "Mapy tycoon w Fortnite z długą progresją.",
+            "Ulepszenia tycoon, bohaterów, sidekicków i nagrody w klimacie Star Wars.",
+            "Granie ze znajomymi przy odblokowywaniu nowych sekcji i pracowników.",
+            "Mapy z autozapisem, rebirthami, zwiększaniem produkcji i powtarzalnymi celami."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd Star Wars Tycoon Sidekick Legends",
+        "Zrzut ekranu z rozgrywki Star Wars Tycoon Sidekick Legends",
+        "Dodatkowy zrzut ekranu Star Wars Tycoon Sidekick Legends"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588."
+        },
+        {
+          "q": "Czy Star Wars Tycoon Sidekick Legends zapisuje postępy?",
+          "a": "Tak. Całe postępy zapisują się automatycznie, więc można wrócić do swojej progresji tycoon."
+        },
+        {
+          "q": "Ilu graczy może dołączyć?",
+          "a": "Star Wars Tycoon Sidekick Legends obsługuje do 4 graczy."
+        }
+      ],
+      "similarLabels": [
+        "Wszystkie mapy Star Wars",
+        "Star Wars Mega RvB",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "star-wars-mega-rvb": {
+      "breadcrumbParent": "Mapy Star Wars",
+      "eyebrow": "Star Wars / Czerwoni kontra Niebiescy",
+      "intro": "Mapa Star Wars w formacie drużynowego deathmatchu Czerwoni kontra Niebiescy z własnymi broniami, odblokowywanymi pojazdami, osiągnięciami, muzyką i rankingiem.",
+      "schemaGenre": "Drużynowy deathmatch Star Wars Czerwoni kontra Niebiescy",
+      "schemaDescription": "Star Wars Mega RvB to mapa PvP Fortnite Czerwoni kontra Niebiescy od NLDEVS z bronią Star Wars, pojazdami, osiągnięciami, muzyką, własnymi broniami i awansem aż do rangi Unreal.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Do 20"
+        },
+        {
+          "label": "Tryb",
+          "value": "PvP Czerwoni kontra Niebiescy"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Postępy",
+          "value": "Awans rangi"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Szybkich walk drużynowych"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "Star Wars Mega RvB powstała pod szybkie sesje PvP: czerwona drużyna kontra niebieska, broń Star Wars, odblokowywanie własnych broni i progresja rang. Wskakuj, walcz, zaliczaj osiągnięcia i pnij się do Unreal."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "mapy",
+          "items": [
+            "Broń Star Wars i zupełnie nowe pukawki.",
+            "Drużynowy deathmatch z odrodzeniami i muzyką.",
+            "Własne bronie, osiągnięcia i odblokowywane pojazdy.",
+            "Awansuj aż do rangi Unreal i rywalizuj ze znajomymi."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Dlaczego warto zagrać w",
+          "accent": "Mega RvB",
+          "paragraphs": [
+            "Star Wars Mega RvB jest dla graczy, którzy szukają mapy Fortnite Czerwoni kontra Niebiescy w klimacie Star Wars z natychmiastową akcją. Zasada jest prosta: wybierz stronę, odradzaj się szybko, używaj broni Star Wars, odblokowuj pojazdy i walcz dalej.",
+            "Jeśli szukasz kodu wyspy z drużynowym deathmatchem w klimacie Star Wars, własnymi broniami, osiągnięciami i progresją rang — zacznij od tej mapy NLDEVS."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod mapy 7323-8876-4862.",
+            "Wybierz stronę i zacznij walczyć.",
+            "Odblokowuj broń, pojazdy i osiągnięcia w trakcie gry."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd rozgrywki Star Wars Mega RvB",
+        "Zrzut ekranu z rozgrywki Star Wars Mega RvB",
+        "Dodatkowy zrzut ekranu Star Wars Mega RvB"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy Star Wars Mega RvB?",
+          "a": "Kod wyspy Star Wars Mega RvB to 7323-8876-4862."
+        },
+        {
+          "q": "Jakiego typu mapą jest Star Wars Mega RvB?",
+          "a": "To mapa PvP z drużynowym deathmatchem Czerwoni kontra Niebiescy, z bronią Star Wars, własnymi broniami, pojazdami, osiągnięciami, muzyką i rankingiem."
+        },
+        {
+          "q": "Czy mogę odblokować pojazdy?",
+          "a": "Tak. Star Wars Mega RvB ma odblokowywane pojazdy i progresję własnych broni."
+        }
+      ],
+      "similarLabels": [
+        "Wszystkie mapy Star Wars",
+        "Star Wars Tycoon Sidekick Legends",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "breadcrumbParent": "Mapy Star Wars",
+      "eyebrow": "Star Wars / Royale z 99 botami",
+      "intro": "Mapa survivalowa w royale z 99 botami w klimacie Star Wars: walki z bossami, odblokowywani bohaterowie, zapis statystyk i loadoutów oraz akcja w Tilted.",
+      "schemaGenre": "Star Wars 99 Bots Royale",
+      "schemaDescription": "Star Wars Tilted 99 Bots Royale to mapa Fortnite z survivalem PvE w otwartym świecie od NLDEVS: 99 botów, walki z bossami, odblokowywani bohaterowie, zapis statystyk i loadoutów oraz akcja Tilted x Star Wars.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-5"
+        },
+        {
+          "label": "Tryb",
+          "value": "99 Bots Royale"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Postępy",
+          "value": "Zapis statystyk"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Survivalu PvE"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royale łączy trening w bot royale z survivalem PvE w otwartym świecie w klimacie Star Wars. Zeskocz, przebijaj się przez boty, odblokowuj bohaterów, walcz z bossami i zachowaj statystyki oraz loadouty między sesjami."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "mapy",
+          "items": [
+            "Nieskończona akcja bot royale z 99 botami.",
+            "Odblokowuj zupełnie nowych bohaterów i walcz z bossami.",
+            "Statystyki i loadouty zapisywane między sesjami.",
+            "Motyw Tilted Towers x Star Wars — ze znajomymi."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "Dlaczego warto zagrać w",
+          "accent": "99 Bots Royale",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royale celuje w graczy szukających kodu mapy Fortnite w klimacie Star Wars z walkami z botami, tempem survivalu i zapisem postępów. Układ z 99 botami utrzymuje mecze aktywne bez czekania na pełne lobby.",
+            "Odblokowywani bohaterowie, walki z bossami, zapis statystyk i loadoutów oraz motyw Tilted Towers x Star Wars czynią z niej dobry wybór na rozgrzewkę, luźne sesje i powtarzalną akcję PvE."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod mapy 1116-7765-9076.",
+            "Zeskocz do royale i zacznij walczyć z botami.",
+            "Odblokowuj bohaterów, zapisuj loadouty i wspinaj się w tabeli wyników."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Krótka",
+          "accent": "uwaga",
+          "heading": "Zrobione pod powtarzalne sesje",
+          "body": "Zapis statystyk i loadoutów sprawia, że to mocna mapa na rozgrzewkę i powtarzane wejścia, zwłaszcza jeśli chcesz szybkich walk bez czekania na pełne lobby."
+        }
+      ],
+      "gallery": [
+        "Podgląd Star Wars Tilted 99 Bots Royale",
+        "Zrzut ekranu z rozgrywki Star Wars Tilted 99 Bots Royale",
+        "Dodatkowy zrzut ekranu Star Wars Tilted 99 Bots Royale"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy Star Wars Tilted 99 Bots Royale?",
+          "a": "Kod wyspy Star Wars Tilted 99 Bots Royale to 1116-7765-9076."
+        },
+        {
+          "q": "Czy na tej mapie są boty?",
+          "a": "Tak. Jest zbudowana wokół survivalu w royale z 99 botami — pod szybkie walki, trening i zabawę ze znajomymi."
+        },
+        {
+          "q": "Czy zapisuje statystyki i loadouty?",
+          "a": "Tak. Mapa zapisuje statystyki i loadouty, a do tego ma odblokowywanych bohaterów i walki z bossami."
+        }
+      ],
+      "similarLabels": [
+        "Wszystkie mapy Star Wars",
+        "Star Wars Mega RvB",
+        "Star Wars Tycoon Sidekick Legends"
+      ]
+    },
+    "tmnt-mega-ramp-survival": {
+      "breadcrumbParent": "Mapy TMNT",
+      "eyebrow": "TMNT / Przetrwanie",
+      "intro": "Szybki tryb survivalowy, w którym gracze pędzą w górę ogromnej rampy, unikając przeszkód i starając się przetrwać jak najdłużej.",
+      "schemaGenre": "Przetrwanie",
+      "schemaDescription": "Szybki tryb Fortnite na przetrwanie na rampie, stworzony przez NLDEVS w UEFN.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Solo / paczka"
+        },
+        {
+          "label": "Tryb",
+          "value": "Przetrwanie na mega rampie"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Długość rundy",
+          "value": "Krótkie przejazdy"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Szybkiego chaosu"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Łatwo zacząć"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "TMNT Mega Ramp Survival to szybki tryb survivalowy, w którym gracze pędzą w górę ogromnej rampy, unikając przeszkód i starając się przetrwać jak najdłużej."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Odkrywaj”",
+            "Wpisz kod mapy 0556-7584-6565",
+            "Dołącz do wyspy i zacznij przejazd",
+            "Przetrwaj dłużej, żeby poprawić wynik"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego jest",
+          "accent": "fajna",
+          "items": [
+            "Wciąga na zasadzie „jeszcze jeden przejazd”",
+            "Szybki ruch i chaos",
+            "Świetna solo i ze znajomymi",
+            "Wyrazisty motyw TMNT"
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd TMNT Mega Ramp Survival",
+        "Zrzut ekranu z rozgrywki TMNT Mega Ramp Survival",
+        "Dodatkowy zrzut ekranu TMNT Mega Ramp Survival"
+      ],
+      "faqs": [
+        {
+          "q": "Jak zagrać na tej mapie?",
+          "a": "Wpisz kod 0556-7584-6565 w „Odkrywaj” w Fortnite."
+        },
+        {
+          "q": "Czy to tryb wieloosobowy?",
+          "a": "Tak — jest fajnie solo i w paczce."
+        }
+      ],
+      "similarLabels": [
+        "TMNT City",
+        "RvB Squid Minigame",
+        "Najlepsze mapy XP"
+      ]
+    },
+    "tmnt-city": {
+      "breadcrumbParent": "Mapy TMNT",
+      "eyebrow": "TMNT / Tryb",
+      "intro": "Klimatyczny miejski tryb w stylu TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi.",
+      "schemaGenre": "Tryb",
+      "schemaDescription": "Miejski tryb w klimacie TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Solo / paczki"
+        },
+        {
+          "label": "Tryb",
+          "value": "Tryb miejski"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Tempo",
+          "value": "Zwiedzanie i walka"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Wspólnego spędzania czasu"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Luźny"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "TMNT City to klimatyczny miejski tryb w stylu TMNT zbudowany w UEFN. Zwiedzaj, walcz i spędzaj czas ze znajomymi w tematycznym otoczeniu zaprojektowanym pod powtarzane wizyty."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Wpisz kod mapy 1383-6989-3967 w „Odkrywaj” w Fortnite",
+            "Wczytaj się i zwiedzaj miasto",
+            "Realizuj cele i aktywności na mapie",
+            "Graj ze znajomymi — klimat jest wtedy najlepszy"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego jest",
+          "accent": "fajna",
+          "items": [
+            "Mocny klimat TMNT",
+            "Pętle zwiedzania i walki",
+            "Świetna mapa na wspólne zawieszanie się w paczce"
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd TMNT City",
+        "Zrzut ekranu z rozgrywki TMNT City",
+        "Dodatkowy zrzut ekranu TMNT City"
+      ],
+      "faqs": [
+        {
+          "q": "Czy TMNT City to gun game?",
+          "a": "To raczej mapa-tryb do zwiedzania z elementami akcji."
+        },
+        {
+          "q": "Jak znaleźć ją w Fortnite?",
+          "a": "„Odkrywaj” → wpisz 1383-6989-3967."
+        }
+      ],
+      "similarLabels": [
+        "TMNT Mega Ramp Survival",
+        "Mapy Gun Game",
+        "Wszystkie mapy TMNT"
+      ]
+    },
+    "rvb-squid-minigame": {
+      "breadcrumbParent": "Mapy Squid Game",
+      "eyebrow": "Squid Game / RvB",
+      "intro": "Szybki tryb Czerwoni kontra Niebiescy inspirowany wyzwaniami w stylu Squid Game — zrobiony pod krótkie rundy i nieustanną akcję.",
+      "schemaGenre": "Czerwoni kontra Niebiescy / Minigry",
+      "schemaDescription": "Minigry w stylu Squid z chaosem Czerwoni kontra Niebiescy i szybkimi rundami.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Dobre w paczce"
+        },
+        {
+          "label": "Tryb",
+          "value": "Minigry RvB"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Długość rundy",
+          "value": "Krótkie rundy"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Szybkich powtórek"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Łatwy"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "RvB Squid Minigame to szybki tryb Czerwoni kontra Niebiescy inspirowany wyzwaniami w stylu Squid. Powstał pod krótkie rundy, nieustanną akcję i ochotę na jeszcze jedno wejście."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Wpisz kod mapy 2720-5344-3341 w „Odkrywaj”",
+            "Dołącz do drużyny",
+            "Rozgrywaj szybkie rundy minigier",
+            "Wygrywaj rundy dzięki współpracy i eliminacjom"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego jest",
+          "accent": "fajna",
+          "items": [
+            "Krótkie rundy to wysoka regrywalność",
+            "Chaos Czerwoni kontra Niebiescy ze znajomymi",
+            "Rywalizacja i zasady zrozumiałe od razu"
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd RvB Squid Minigame",
+        "Zrzut ekranu z rozgrywki RvB Squid Minigame",
+        "Dodatkowy zrzut ekranu RvB Squid Minigame"
+      ],
+      "faqs": [
+        {
+          "q": "Czy to mapa Squid Game?",
+          "a": "To minigry inspirowane stylem Squid w formacie Czerwoni kontra Niebiescy."
+        },
+        {
+          "q": "Czy mogę grać ze znajomymi?",
+          "a": "Tak — najlepiej w drużynie albo pełnej paczce."
+        }
+      ],
+      "similarLabels": [
+        "Mapy Squid Game",
+        "Najlepsze mapy XP",
+        "Mapy Gun Game"
+      ]
+    },
+    "99-bots-squid-royale-boss": {
+      "breadcrumbParent": "Mapy Squid Game",
+      "eyebrow": "Squid Game / 99 Bots",
+      "intro": "Witaj w Squid Royale. Wpisz kod wyspy Fortnite {code}, żeby zagrać na mapie survivalu PvE z 99 botami w otwartym świecie: walki z bossami, rangi, tabele wyników, zapis statystyk i nowe bronie.",
+      "schemaGenre": "Squid Game / 99 Bots / Przetrwanie",
+      "schemaDescription": "99 Bots Squid Royale Boss to mapa Fortnite w stylu Squid Game od NLDEVS z nieskończonym bot royale, walkami z bossami, nowymi broniami, jazdą na zwierzętach, zapisem statystyk, rangami, tabelami wyników i rozgrywką survivalową.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-5"
+        },
+        {
+          "label": "Tryb",
+          "value": "Survival z 99 botami"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Postępy",
+          "value": "Zapis statystyk"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Walk z bossami"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "rozgrywki",
+          "items": [
+            "Nieskończone bot royale",
+            "Walka z bossem",
+            "Zupełnie nowe bronie",
+            "Jazda na zwierzętach",
+            "Zapis statystyk i loadoutu",
+            "Reset budowli co 20 minut",
+            "System rang",
+            "Tabele wyników",
+            "Zabawa ze znajomymi",
+            "Gra survivalowa"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Szczegóły",
+          "accent": "wyspy",
+          "heading": "Kod wyspy 0596-3765-4845",
+          "body": "99 Bots Squid Royale Boss to mapa survivalowa w stylu Squid Game dla maksymalnie 5 graczy. Eliminuj boty, żeby awansować w rangach, bierz udział w wydarzeniach z bossami i zachowuj statystyki między sesjami."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego warto zagrać na",
+          "accent": "tej mapie",
+          "items": [
+            "Survival PvE w otwartym świecie ze stałą akcją przeciwko botom.",
+            "Wydarzenia z bossami dla większych walk i nagród.",
+            "System rang i tabele wyników dla powtarzalnych celów.",
+            "Zapis statystyk i loadoutów dla powracających graczy."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd 99 Bots Squid Royale Boss",
+        "Zrzut ekranu z rozgrywki 99 Bots Squid Royale Boss",
+        "Dodatkowy zrzut ekranu 99 Bots Squid Royale Boss"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy 99 Bots Squid Royale Boss?",
+          "a": "Kod wyspy 99 Bots Squid Royale Boss to 0596-3765-4845."
+        },
+        {
+          "q": "Czy 99 Bots Squid Royale Boss to mapa Fortnite w stylu Squid Game?",
+          "a": "Tak. To mapa Fortnite w stylu Squid Game od NLDEVS z 99 botami, survivalem PvE, walkami z bossami i akcją w otwartym świecie."
+        },
+        {
+          "q": "Ilu graczy może dołączyć?",
+          "a": "99 Bots Squid Royale Boss obsługuje do 5 graczy."
+        }
+      ],
+      "similarLabels": [
+        "Mapy Squid Game",
+        "Sidekick Siege 99 Bots",
+        "RvB Squid Minigame"
+      ]
+    },
+    "sidekick-siege-99-bots": {
+      "breadcrumbParent": "Mapy Squid Game",
+      "eyebrow": "Squid Game / 99 Bots",
+      "intro": "Witaj w 99 Bots: Sidekick Siege. Wpisz kod wyspy Fortnite {code}, żeby zagrać na mapie survivalu PvE nastawionej na sidekicki: walki z bossami, rangi, tabele wyników, zapis statystyk i do 5 graczy.",
+      "schemaGenre": "Squid Game / 99 Bots / Przetrwanie",
+      "schemaDescription": "Sidekick Siege 99 Bots to mapa Fortnite w stylu Squid Game od NLDEVS z sidekickami, nieskończonym bot royale, walkami z bossami, nowymi broniami, jazdą na zwierzętach, zapisem statystyk, rankingiem, tabelami wyników i rozgrywką survivalową.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-5"
+        },
+        {
+          "label": "Tryb",
+          "value": "Survival z sidekickami"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Postępy",
+          "value": "Zapis loadoutów"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Paczek PvE"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "rozgrywki",
+          "items": [
+            "Sidekicki",
+            "Nieskończone bot royale",
+            "Walka z bossem",
+            "Zupełnie nowe bronie",
+            "Jazda na zwierzętach",
+            "Zapis statystyk i loadoutu",
+            "Reset budowli co 20 minut",
+            "System rang",
+            "Tabele wyników",
+            "Zabawa ze znajomymi",
+            "Gra survivalowa"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Szczegóły",
+          "accent": "wyspy",
+          "heading": "Kod wyspy 5577-7953-8449",
+          "body": "Sidekick Siege 99 Bots to mapa survivalowa w stylu Squid Game dla maksymalnie 5 graczy. Zabieraj sidekicki do walk z 99 botami, pokonuj bossów, awansuj w rangach i zachowuj statystyki oraz loadouty."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego warto zagrać na",
+          "accent": "tej mapie",
+          "items": [
+            "Survival z 99 botami nastawiony na sidekicki.",
+            "Walki z bossami, starcia PvE i tempo battle royale.",
+            "System rang i tabele wyników pod powtarzalne sesje.",
+            "Zapis statystyk i loadoutów dla graczy nastawionych na progresję."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd Sidekick Siege 99 Bots",
+        "Zrzut ekranu z rozgrywki Sidekick Siege 99 Bots",
+        "Dodatkowy zrzut ekranu Sidekick Siege 99 Bots"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy Sidekick Siege 99 Bots?",
+          "a": "Kod wyspy Sidekick Siege 99 Bots to 5577-7953-8449."
+        },
+        {
+          "q": "Czy Sidekick Siege 99 Bots ma sidekicki?",
+          "a": "Tak. Sidekicki to jedna z głównych cech Sidekick Siege 99 Bots."
+        },
+        {
+          "q": "Ilu graczy może dołączyć?",
+          "a": "Sidekick Siege 99 Bots obsługuje do 5 graczy."
+        }
+      ],
+      "similarLabels": [
+        "Mapy Squid Game",
+        "99 Bots Squid Royale Boss",
+        "RvB Squid Minigame"
+      ]
+    },
+    "winterfest-demon-hunters": {
+      "breadcrumbParent": "Mapy Gun Game",
+      "eyebrow": "Gun Game / FFA",
+      "intro": "Tryb nastawiony na walkę, zbudowany pod powtarzalne rundy — akcja na pierwszym miejscu i równe XP w sesji, zależnie od kalibracji.",
+      "schemaGenre": "Gun Game / Walka PvE",
+      "schemaDescription": "Świąteczny gun game z polowaniem na demony, rotacją broni i powtarzalnymi pętlami walki.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Dobre w drużynie"
+        },
+        {
+          "label": "Tryb",
+          "value": "Walka w stylu gun game"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Długość rundy",
+          "value": "Szybkie pętle"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "XP w walce"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Łatwy / średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "Wskakuj do Winterfest Demon Hunters po szybkie pętle walki, rotację broni i rundy, do których chce się wracać. Mapa jest zaprojektowana tak, żeby akcja nie zwalniała — świetna dla paczek, które chcą ciągłych walk i szybkiego ponownego wejścia."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”",
+            "Wpisz kod mapy 6101-7751-8665",
+            "Dołącz do wyspy i realizuj cele na mapie",
+            "Bądź aktywny w walkach, żeby utrzymać tempo meczu (i XP, jeśli jest dostępne)"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego jest",
+          "accent": "fajna",
+          "items": [
+            "Rundy nastawione na walkę z powtarzalnymi pętlami",
+            "Świetna ze znajomymi (w drużynie albo paczce)",
+            "Różnorodność broni i tempo „jeszcze jedna runda”",
+            "Dobra opcja, gdy chcesz XP w trakcie normalnego grania"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Wskazówki",
+          "accent": "i taktyka",
+          "items": [
+            "Graj w paczce, żeby rundy szły szybciej i było mniej przestojów.",
+            "Jeśli XP zwalnia, zmieniaj mapy (kalibracja i malejące zyski bywają różne).",
+            "Stawiaj na równe walki na średnim dystansie — szybkie eliminacje utrzymują tempo."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Krótka",
+          "accent": "uwaga",
+          "heading": "O dostępności XP",
+          "body": "Dostępność XP może się zmieniać wraz z aktualizacjami Fortnite i kalibracją. Ta strona skupia się na normalnych, powtarzalnych pętlach rozgrywki — nie na exploitach."
+        }
+      ],
+      "gallery": [
+        "Podgląd Winterfest Demon Hunters",
+        "Zrzut ekranu z rozgrywki Winterfest Demon Hunters",
+        "Dodatkowy zrzut ekranu Winterfest Demon Hunters"
+      ],
+      "faqs": [
+        {
+          "q": "Czy to mapa Gun Game?",
+          "a": "To tryb nastawiony na walkę z powtarzalnymi rundami. Niektóre wersje grają się jak gun game z rotacją broni — trzymaj się zasad aktualnej wersji na mapie."
+        },
+        {
+          "q": "Czy daje XP?",
+          "a": "XP zależy od kalibracji Fortnite i aktualnych ustawień wyspy. Po aktualizacjach i poprawkach stawki XP mogą się zmienić."
+        },
+        {
+          "q": "Czy mogę grać ze znajomymi?",
+          "a": "Tak — tutaj najlepiej w drużynie albo paczce, wtedy rundy idą szybciej."
+        }
+      ],
+      "similarLabels": [
+        "Mapy Gun Game",
+        "Najlepsze mapy XP",
+        "Mapy TMNT"
+      ]
+    },
+    "rvb-players-vs-guards": {
+      "breadcrumbParent": "Mapy Czerwoni kontra Niebiescy",
+      "eyebrow": "Czerwoni kontra Niebiescy / Gracze kontra strażnicy",
+      "intro": "Wpisz kod wyspy Fortnite {code}, żeby zagrać w RvB Players vs Guards — drużynową mapę Czerwoni kontra Niebiescy, na której gracze przebijają się przez presję strażników, realizują cele i rozgrywają powtarzalne rundy walki.",
+      "schemaGenre": "Czerwoni kontra Niebiescy / Gracze kontra strażnicy",
+      "schemaDescription": "RvB Players vs Guards to mapa Fortnite Czerwoni kontra Niebiescy od NLDEVS z celami drużynowymi, walką graczy przeciwko strażnikom, powtarzalnymi rundami i rozgrywką przyjazną paczkom.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "Dobre w paczce"
+        },
+        {
+          "label": "Tryb",
+          "value": "Cele Czerwoni kontra Niebiescy"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Tempo",
+          "value": "Równa walka"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Paczek"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Łatwy / średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Opis",
+          "accent": "rozgrywki",
+          "paragraphs": [
+            "RvB Players vs Guards dodaje formatowi Czerwoni kontra Niebiescy zwrot w stronę PvE. Drużyny przepychają się przez presję strażników, realizują cele i toczą powtarzalne walki, zamiast czekać na koniec jednej rundy na wylot.",
+            "To dobry wybór dla graczy, którzy chcą akcji Czerwoni kontra Niebiescy z dłuższymi sesjami, równymi starciami i tempem mapy, które dobrze działa ze znajomymi."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz „Szukaj / Odkrywaj” w Fortnite.",
+            "Wpisz kod wyspy 6263-5571-9595.",
+            "Dołącz do strony i realizuj cel na mapie.",
+            "Walcz ze strażnikami, wspieraj drużynę i utrzymuj tempo rund."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego warto zagrać na",
+          "accent": "tej mapie",
+          "items": [
+            "Struktura drużynowa Czerwoni kontra Niebiescy z presją strażników.",
+            "Sesje oparte na celach, które dobrze działają w drużynie.",
+            "Powtarzalne pętle walki dla graczy, którzy chcą równej akcji.",
+            "Przydatna opcja do rotacji w sesjach nastawionych na XP, gdy jest dostępne."
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Szczegóły",
+          "accent": "wyspy",
+          "heading": "Kod wyspy 6263-5571-9595",
+          "body": "Wpisz ten kod w „Szukaj / Odkrywaj” w Fortnite, żeby uruchomić RvB Players vs Guards. Dostępność XP może się zmieniać wraz z kalibracją, ale mapa jest zbudowana wokół normalnej, powtarzalnej rozgrywki."
+        }
+      ],
+      "gallery": [
+        "Podgląd rozgrywki RvB Players vs Guards",
+        "Zrzut ekranu z rozgrywki RvB Players vs Guards",
+        "Zrzut ekranu z walki o cel w RvB Players vs Guards"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy RvB Players vs Guards?",
+          "a": "Kod wyspy RvB Players vs Guards to 6263-5571-9595."
+        },
+        {
+          "q": "Jakiego typu mapą Fortnite jest RvB Players vs Guards?",
+          "a": "To drużynowa mapa Czerwoni kontra Niebiescy z walką graczy przeciwko strażnikom, celami i powtarzalnymi rundami."
+        },
+        {
+          "q": "Czy RvB Players vs Guards jest dobra na XP?",
+          "a": "Może być dobrą opcją do aktywnego grania, gdy XP jest włączone i skalibrowane, ale stawki XP mogą się zmienić po aktualizacjach Fortnite albo poprawkach wyspy."
+        }
+      ],
+      "similarLabels": [
+        "Mapy Czerwoni kontra Niebiescy",
+        "Najlepsze mapy XP",
+        "RvB Squid Minigame"
+      ]
+    }
+  }
+}

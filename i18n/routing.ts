@@ -5,7 +5,7 @@ import { defineRouting } from "next-intl/routing";
  * because these are language targets, not country targets — see LOCALE_META
  * for the hreflang codes actually emitted to crawlers.
  */
-export const locales = ["en", "fr", "pt", "es"] as const;
+export const locales = ["en", "fr", "pt", "es", "ru", "pl"] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
@@ -41,6 +41,8 @@ export const LOCALE_META: Record<
     // social platforms accept, and matches the audience better than es_ES.
     ogLocale: "es_LA",
   },
+  ru: { hreflang: "ru", htmlLang: "ru", label: "Русский", ogLocale: "ru_RU" },
+  pl: { hreflang: "pl", htmlLang: "pl", label: "Polski", ogLocale: "pl_PL" },
 };
 
 /**
@@ -66,30 +68,40 @@ export const pathnames = {
     fr: "/cartes-fortnite-star-wars",
     pt: "/mapas-fortnite-star-wars",
     es: "/mapas-fortnite-star-wars",
+    ru: "/karty-fortnite-star-wars",
+    pl: "/mapy-fortnite-star-wars",
   },
   "/tmnt-fortnite-maps": {
     en: "/tmnt-fortnite-maps",
     fr: "/cartes-fortnite-tortues-ninja",
     pt: "/mapas-fortnite-tartarugas-ninja",
     es: "/mapas-fortnite-tortugas-ninja",
+    ru: "/karty-fortnite-cherepashki-nindzya",
+    pl: "/mapy-fortnite-wojownicze-zolwie-ninja",
   },
   "/squid-game-fortnite-maps": {
     en: "/squid-game-fortnite-maps",
     fr: "/cartes-fortnite-squid-game",
     pt: "/mapas-fortnite-round-6",
     es: "/mapas-fortnite-el-juego-del-calamar",
+    ru: "/karty-fortnite-igra-v-kalmara",
+    pl: "/mapy-fortnite-squid-game",
   },
   "/fortnite-gun-game-maps": {
     en: "/fortnite-gun-game-maps",
     fr: "/cartes-fortnite-gun-game",
     pt: "/mapas-fortnite-gun-game",
     es: "/mapas-fortnite-gun-game",
+    ru: "/karty-fortnite-gun-game",
+    pl: "/mapy-fortnite-gun-game",
   },
   "/best-fortnite-xp-maps": {
     en: "/best-fortnite-xp-maps",
     fr: "/meilleures-cartes-xp-fortnite",
     pt: "/melhores-mapas-de-xp-fortnite",
     es: "/mejores-mapas-de-xp-fortnite",
+    ru: "/luchshie-karty-xp-fortnite",
+    pl: "/najlepsze-mapy-xp-fortnite",
   },
   // "99 bots" is a mode players search by name, so the number carries across
   // every locale untranslated.
@@ -98,12 +110,16 @@ export const pathnames = {
     fr: "/cartes-fortnite-99-bots",
     pt: "/mapas-fortnite-99-bots",
     es: "/mapas-fortnite-99-bots",
+    ru: "/karty-fortnite-99-bots",
+    pl: "/mapy-fortnite-99-bots",
   },
   "/fortnite-red-vs-blue-maps": {
     en: "/fortnite-red-vs-blue-maps",
     fr: "/cartes-fortnite-rouge-contre-bleu",
     pt: "/mapas-fortnite-vermelho-vs-azul",
     es: "/mapas-fortnite-rojo-vs-azul",
+    ru: "/karty-fortnite-krasnye-protiv-sinih",
+    pl: "/mapy-fortnite-czerwoni-kontra-niebiescy",
   },
 
   // ---- Map detail pages --------------------------------------------------
@@ -112,60 +128,80 @@ export const pathnames = {
     fr: "/star-wars-tycoon-sidekick-legends",
     pt: "/star-wars-tycoon-sidekick-legends",
     es: "/star-wars-tycoon-sidekick-legends",
+    ru: "/star-wars-tycoon-sidekick-legends",
+    pl: "/star-wars-tycoon-sidekick-legends",
   },
   "/star-wars-mega-rvb": {
     en: "/star-wars-mega-rvb",
     fr: "/star-wars-mega-rvb",
     pt: "/star-wars-mega-rvb",
     es: "/star-wars-mega-rvb",
+    ru: "/star-wars-mega-rvb",
+    pl: "/star-wars-mega-rvb",
   },
   "/star-wars-tilted-99-bots-royale": {
     en: "/star-wars-tilted-99-bots-royale",
     fr: "/star-wars-tilted-99-bots-royale",
     pt: "/star-wars-tilted-99-bots-royale",
     es: "/star-wars-tilted-99-bots-royale",
+    ru: "/star-wars-tilted-99-bots-royale",
+    pl: "/star-wars-tilted-99-bots-royale",
   },
   "/tmnt-mega-ramp-survival": {
     en: "/tmnt-mega-ramp-survival",
     fr: "/tortues-ninja-mega-rampe-survie",
     pt: "/tartarugas-ninja-mega-rampa-sobrevivencia",
     es: "/tortugas-ninja-mega-rampa-supervivencia",
+    ru: "/cherepashki-nindzya-mega-rampa-vyzhivanie",
+    pl: "/wojownicze-zolwie-ninja-mega-rampa-przetrwanie",
   },
   "/tmnt-city": {
     en: "/tmnt-city",
     fr: "/ville-tortues-ninja",
     pt: "/cidade-tartarugas-ninja",
     es: "/ciudad-tortugas-ninja",
+    ru: "/gorod-cherepashki-nindzya",
+    pl: "/miasto-wojownicze-zolwie-ninja",
   },
   "/rvb-squid-minigame": {
     en: "/rvb-squid-minigame",
     fr: "/mini-jeu-squid-rvb",
     pt: "/minigame-round-6-rvb",
     es: "/minijuego-calamar-rvb",
+    ru: "/mini-igra-kalmar-rvb",
+    pl: "/minigra-squid-rvb",
   },
   "/99-bots-squid-royale-boss": {
     en: "/99-bots-squid-royale-boss",
     fr: "/99-bots-squid-royale-boss",
     pt: "/99-bots-round-6-royale-boss",
     es: "/99-bots-calamar-royale-boss",
+    ru: "/99-bots-kalmar-royale-boss",
+    pl: "/99-bots-squid-royale-boss",
   },
   "/sidekick-siege-99-bots": {
     en: "/sidekick-siege-99-bots",
     fr: "/siege-sidekick-99-bots",
     pt: "/cerco-sidekick-99-bots",
     es: "/asedio-sidekick-99-bots",
+    ru: "/osada-sidekick-99-bots",
+    pl: "/oblezenie-sidekick-99-bots",
   },
   "/winterfest-demon-hunters": {
     en: "/winterfest-demon-hunters",
     fr: "/fete-hivernale-chasseurs-de-demons",
     pt: "/festa-invernal-cacadores-de-demonios",
     es: "/fiesta-invernal-cazadores-de-demonios",
+    ru: "/zimniy-festival-ohotniki-na-demonov",
+    pl: "/winterfest-lowcy-demonow",
   },
   "/rvb-players-vs-guards": {
     en: "/rvb-players-vs-guards",
     fr: "/rvb-joueurs-contre-gardes",
     pt: "/rvb-jogadores-vs-guardas",
     es: "/rvb-jugadores-vs-guardias",
+    ru: "/rvb-igroki-protiv-ohrany",
+    pl: "/rvb-gracze-kontra-straznicy",
   },
 
   // ---- Standalone pages --------------------------------------------------
@@ -174,18 +210,24 @@ export const pathnames = {
     fr: "/escouade-playtest",
     pt: "/esquadrao-de-playtest",
     es: "/escuadron-de-playtest",
+    ru: "/komanda-pleytesta",
+    pl: "/druzyna-playtestow",
   },
   "/uefn-contracts": {
     en: "/uefn-contracts",
     fr: "/contrats-uefn",
     pt: "/contratos-uefn",
     es: "/contratos-uefn",
+    ru: "/kontrakty-uefn",
+    pl: "/kontrakty-uefn",
   },
   "/privacy": {
     en: "/privacy",
     fr: "/confidentialite",
     pt: "/privacidade",
     es: "/privacidad",
+    ru: "/konfidentsialnost",
+    pl: "/prywatnosc",
   },
 
   // ---- Internal ----------------------------------------------------------
