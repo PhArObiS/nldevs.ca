@@ -16,6 +16,14 @@ type Props = {
 };
 
 /**
+ * Japanese (and CJK generally) does not put spaces between words, so the
+ * separator before the accent span is suppressed when the accent opens with a
+ * CJK ideograph, kana, or full-width punctuation. Latin and Cyrillic locales
+ * are unaffected.
+ */
+const CJK_LEADING = /^[　-鿿豈-﫿＀-￯]/;
+
+/**
  * A titled block on an inner page. Mobile stays centered; desktop is left-aligned.
  */
 export default function ContentSection({
@@ -34,7 +42,7 @@ export default function ContentSection({
         {title}
         {accent && (
           <>
-            {" "}
+            {CJK_LEADING.test(accent) ? "" : " "}
             <span className="neon-text">{accent}</span>
           </>
         )}

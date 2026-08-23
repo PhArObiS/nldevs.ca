@@ -1,0 +1,987 @@
+{
+  "mapPages": {
+    "star-wars-tycoon-sidekick-legends": {
+      "breadcrumbParent": "Star Warsマップ",
+      "eyebrow": "近日公開 / Star Wars Tycoon",
+      "intro": "NLDEVSから近日公開: 発表済みの島コード {code}、サイドキックとヒーローの解放、新しいTycoonエリア、ワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えた新作Star Wars Tycoon。",
+      "schemaGenre": "Star Wars Tycoon",
+      "schemaDescription": "Star Wars Tycoon Sidekick LegendsはNLDEVSが近日公開するFortniteのStar Wars Tycoonマップ。サイドキックとヒーローの解放、新エリア、ワーカー、生産アップ、リバースランキングの育成、オートセーブ、最大4人プレイに対応。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "1-4"
+        },
+        {
+          "label": "モード",
+          "value": "Tycoon育成"
+        },
+        {
+          "label": "ステータス",
+          "value": "近日公開"
+        },
+        {
+          "label": "進行状況",
+          "value": "オートセーブ"
+        },
+        {
+          "label": "おすすめ",
+          "value": "パーティ・建築好き"
+        },
+        {
+          "label": "難易度",
+          "value": "のんびり周回"
+        }
+      ],
+      "sections": [
+        {
+          "type": "card",
+          "title": "公開",
+          "accent": "ステータス",
+          "heading": "近日公開",
+          "body": "Star Wars Tycoon Sidekick Legendsはまだ公開されていない。発表済みの島コード 3205-2388-4588 でページは準備済み。Epicの承認が終わったら、ここで公開状況を確認してほしい。"
+        },
+        {
+          "type": "list",
+          "title": "ゲームプレイ",
+          "accent": "の特徴",
+          "items": [
+            "🐶 サイドキックとヒーローを全部解放。",
+            "🗼 新エリアとアップグレードを解放。",
+            "👷 ワーカーを解放して生産量アップ。",
+            "✨ リバースを重ねてランキングを上げる。",
+            "👥 最大4人プレイ。",
+            "🔁 リバースして強力な新報酬を解放。",
+            "💾 進行状況はすべて自動保存。"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "島コードの",
+          "accent": "状況",
+          "paragraphs": [
+            "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。承認が下りて公開されたら、「検索／発見」で入力してNLDEVSの新作Star Wars Tycoonマップを遊べる。サイドキックとヒーローの解放、ワーカー、生産アップ、リバース、進行状況の保存に対応。",
+            "Star Wars Tycoon Sidekick Legendsの島コード、公開情報、ゲームプレイの詳細はこのページをブックマークしておこう。"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "遊び",
+          "accent": "方",
+          "heading": "島コード 3205-2388-4588",
+          "body": "Star Wars Tycoon Sidekick Legendsは近日公開。公開されたらFortniteを開いて「検索／発見」へ、3205-2388-4588 を入力して島に参加しよう。"
+        },
+        {
+          "type": "prose",
+          "title": "ここが",
+          "accent": "新しい",
+          "paragraphs": [
+            "Sidekick LegendsはNLDEVSの次のStar Wars Tycoon作品。1ラウンドで終わる試合じゃなく、長く続くTycoon育成を求める人向けに作っている。オートセーブ、リバース、ワーカー、エリア、アップグレードがあるから、セッションのたびにまた来る理由になる。"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "こんな人に",
+          "accent": "おすすめ",
+          "items": [
+            "長く育てられるFortniteのTycoonマップが好きな人。",
+            "Star Wars風のTycoonアップグレード、ヒーロー、サイドキック、報酬が好きな人。",
+            "友達と一緒に新エリアやワーカーを解放していきたい人。",
+            "オートセーブ、リバース、生産アップ、周回できる目標があるマップが好きな人。"
+          ]
+        }
+      ],
+      "gallery": [
+        "Star Wars Tycoon Sidekick Legendsのプレビュー",
+        "Star Wars Tycoon Sidekick Legendsのゲームプレイスクショ",
+        "Star Wars Tycoon Sidekick Legendsの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "Star Wars Tycoon Sidekick Legendsの島コードは？",
+          "a": "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。"
+        },
+        {
+          "q": "進行状況は保存される？",
+          "a": "される。すべて自動保存されるので、Tycoonの育成をいつでも再開できる。"
+        },
+        {
+          "q": "何人まで参加できる？",
+          "a": "Star Wars Tycoon Sidekick Legendsは最大4人まで対応。"
+        }
+      ],
+      "similarLabels": [
+        "Star Warsマップ一覧",
+        "Star Wars Mega RvB",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "star-wars-mega-rvb": {
+      "breadcrumbParent": "Star Warsマップ",
+      "eyebrow": "Star Wars / 赤 vs 青",
+      "intro": "カスタム武器、解放できる乗り物、実績、BGM、ランクを備えたStar Warsの赤vs青チームデスマッチマップ。",
+      "schemaGenre": "Star Wars 赤vs青 チームデスマッチ",
+      "schemaDescription": "Star Wars Mega RvBはNLDEVS制作のFortnite赤vs青PvPマップ。Star Wars武器、乗り物、実績、BGM、カスタム武器、Unrealまでのランク上げに対応。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "最大20人"
+        },
+        {
+          "label": "モード",
+          "value": "赤vs青 PvP"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "進行状況",
+          "value": "ランク上げ"
+        },
+        {
+          "label": "おすすめ",
+          "value": "テンポの速いチーム戦"
+        },
+        {
+          "label": "難易度",
+          "value": "ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "Star Wars Mega RvBはテンポの速いPvPセッション向け。赤チーム対青チーム、Star Warsの武器、カスタム武器の解放、ランクの育成がある。入って、戦って、実績を埋めて、Unrealを目指そう。"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "マップ",
+          "accent": "の特徴",
+          "items": [
+            "Star Warsの武器と完全新規の武器。",
+            "リスポーンとBGMありのチームデスマッチPvP。",
+            "カスタム武器、実績、解放できる乗り物。",
+            "Unrealまでランクを上げて友達と競おう。"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "おすすめの理由:",
+          "accent": "Mega RvB",
+          "paragraphs": [
+            "Star Wars Mega RvBは、すぐ戦えるStar Wars風の赤vs青マップを探している人向け。やることはシンプル。サイドを選んで、すぐリスポーンして、Star Warsの武器を使い、乗り物を解放して、戦い続けるだけ。",
+            "カスタム武器、実績、ランク育成があるStar Warsのチームデスマッチ島コードを探しているなら、まずはこのNLDEVSマップから。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "マップコード 7323-8876-4862 を入力。",
+            "サイドを選んで戦闘開始。",
+            "遊びながら武器、乗り物、実績を解放していく。"
+          ]
+        }
+      ],
+      "gallery": [
+        "Star Wars Mega RvBのゲームプレイプレビュー",
+        "Star Wars Mega RvBのゲームプレイスクショ",
+        "Star Wars Mega RvBの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "Star Wars Mega RvBの島コードは？",
+          "a": "Star Wars Mega RvBの島コードは 7323-8876-4862。"
+        },
+        {
+          "q": "Star Wars Mega RvBはどんなマップ？",
+          "a": "Star Wars武器、カスタム武器、乗り物、実績、BGM、ランクを備えた赤vs青のチームデスマッチPvPマップ。"
+        },
+        {
+          "q": "乗り物は解放できる？",
+          "a": "できる。Star Wars Mega RvBには解放できる乗り物とカスタム武器の育成要素がある。"
+        }
+      ],
+      "similarLabels": [
+        "Star Warsマップ一覧",
+        "Star Wars Tycoon Sidekick Legends",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "breadcrumbParent": "Star Warsマップ",
+      "eyebrow": "Star Wars / 99 Bots Royale",
+      "intro": "ボス戦、解放できるヒーロー、ステータスとロードアウトの保存、Tiltedのアクションを備えたStar Wars風の99ボットロワイヤルサバイバルマップ。",
+      "schemaGenre": "Star Wars 99 Bots Royale",
+      "schemaDescription": "Star Wars Tilted 99 Bots RoyaleはNLDEVS制作のFortniteオープンワールドPvEサバイバルマップ。99ボット、ボス戦、解放できるヒーロー、ステータスとロードアウトの保存、Tilted×Star Warsのアクションに対応。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "1-5"
+        },
+        {
+          "label": "モード",
+          "value": "99 Bots Royale"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "進行状況",
+          "value": "ステータス保存"
+        },
+        {
+          "label": "おすすめ",
+          "value": "PvEサバイバル"
+        },
+        {
+          "label": "難易度",
+          "value": "ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royaleは、ボットロワイヤルの練習とStar Wars風のオープンワールドPvEサバイバルを合わせたマップ。降下してボットを倒し、ヒーローを解放し、ボスと戦い、ステータスとロードアウトをセッションをまたいで持ち越そう。"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "マップ",
+          "accent": "の特徴",
+          "items": [
+            "99ボットの無限ロワイヤルアクション。",
+            "完全新規のヒーローを解放してボスと戦う。",
+            "ステータスとロードアウトはセッションをまたいで保存。",
+            "Tilted Towers × Star Warsを友達と。"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "prose",
+          "title": "おすすめの理由:",
+          "accent": "99 Bots Royale",
+          "paragraphs": [
+            "Star Wars Tilted 99 Bots Royaleは、ボット戦、サバイバルのテンポ、進行状況の保存があるStar WarsのFortniteマップコードを探している人向け。99ボット構成なので、ロビーが埋まるのを待たずに試合が動き続ける。",
+            "解放できるヒーロー、ボス戦、ステータスとロードアウトの保存、Tilted Towers×Star Warsの世界観のおかげで、ウォームアップにも、まったり遊ぶのにも、周回するPvEにも向いている。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "マップコード 1116-7765-9076 を入力。",
+            "ロワイヤルに降りてボットを倒し始める。",
+            "ヒーローを解放し、ロードアウトを保存して、ランキングを上げていく。"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "ちょっとした",
+          "accent": "メモ",
+          "heading": "周回向けの作り",
+          "body": "ステータスとロードアウトが保存されるので、ウォームアップにも周回にも向いている。ロビー待ちなしでサッと戦いたいときにちょうどいい。"
+        }
+      ],
+      "gallery": [
+        "Star Wars Tilted 99 Bots Royaleのプレビュー",
+        "Star Wars Tilted 99 Bots Royaleのゲームプレイスクショ",
+        "Star Wars Tilted 99 Bots Royaleの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "Star Wars Tilted 99 Bots Royaleの島コードは？",
+          "a": "Star Wars Tilted 99 Bots Royaleの島コードは 1116-7765-9076。"
+        },
+        {
+          "q": "このマップにはボットが出る？",
+          "a": "出る。99ボットのロワイヤルサバイバルを軸にしていて、サッと戦いたいときも、練習にも、友達と遊ぶのにも向いている。"
+        },
+        {
+          "q": "ステータスとロードアウトは保存される？",
+          "a": "される。ステータスとロードアウトが保存され、解放できるヒーローとボス戦もある。"
+        }
+      ],
+      "similarLabels": [
+        "Star Warsマップ一覧",
+        "Star Wars Mega RvB",
+        "Star Wars Tycoon Sidekick Legends"
+      ]
+    },
+    "tmnt-mega-ramp-survival": {
+      "breadcrumbParent": "タートルズマップ",
+      "eyebrow": "タートルズ / サバイバル",
+      "intro": "巨大なランプを駆け上がりながら障害物をよけて、できるだけ長く生き残る高速サバイバル。",
+      "schemaGenre": "サバイバル",
+      "schemaDescription": "NLDEVSがUEFNで制作したFortniteの高速ランプサバイバル。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "ソロ / パーティ"
+        },
+        {
+          "label": "モード",
+          "value": "メガランプサバイバル"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "ラウンドの長さ",
+          "value": "短め"
+        },
+        {
+          "label": "おすすめ",
+          "value": "高速アクション"
+        },
+        {
+          "label": "難易度",
+          "value": "はじめやすい"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "TMNT Mega Ramp Survivalは、巨大なランプを駆け上がりながら障害物をよけて、できるだけ長く生き残る高速サバイバル。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「発見」へ",
+            "マップコード 0556-7584-6565 を入力",
+            "島に参加してスタート",
+            "長く生き残るほどスコアが伸びる"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "面白い",
+          "accent": "理由",
+          "items": [
+            "「もう1回だけ」と繰り返したくなる",
+            "スピード感とカオス",
+            "ソロでも友達とでも楽しい",
+            "濃いタートルズの世界観"
+          ]
+        }
+      ],
+      "gallery": [
+        "TMNT Mega Ramp Survivalのプレビュー",
+        "TMNT Mega Ramp Survivalのゲームプレイスクショ",
+        "TMNT Mega Ramp Survivalの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "このマップはどうやって遊ぶ？",
+          "a": "Fortniteの「発見」でコード 0556-7584-6565 を入力しよう。"
+        },
+        {
+          "q": "マルチプレイできる？",
+          "a": "できる — ソロでもパーティでも楽しい。"
+        }
+      ],
+      "similarLabels": [
+        "TMNT City",
+        "RvB Squid Minigame",
+        "最強XPマップ"
+      ]
+    },
+    "tmnt-city": {
+      "breadcrumbParent": "タートルズマップ",
+      "eyebrow": "タートルズ / モード",
+      "intro": "UEFNで作った没入感のあるタートルズ風の街モード — 探索して、戦って、友達とまったり。",
+      "schemaGenre": "モード",
+      "schemaDescription": "UEFNで作ったタートルズ風の街モード — 探索して、戦って、友達とまったり。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "ソロ / パーティ"
+        },
+        {
+          "label": "モード",
+          "value": "街モード"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "テンポ",
+          "value": "探索と戦闘"
+        },
+        {
+          "label": "おすすめ",
+          "value": "みんなでまったり"
+        },
+        {
+          "label": "難易度",
+          "value": "ゆるめ"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "TMNT CityはUEFNで作った没入感のあるタートルズ風の街モード。何度も訪れたくなるように作られたテーマ空間で、探索して、戦って、友達とまったり過ごせる。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteの「発見」でマップコード 1383-6989-3967 を入力",
+            "ロードして街を探索",
+            "マップ内の目標やアクティビティを進める",
+            "友達と遊ぶのが一番雰囲気が出る"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "面白い",
+          "accent": "理由",
+          "items": [
+            "濃いタートルズの空気感",
+            "探索と戦闘のループ",
+            "みんなでたまるのにちょうどいいマップ"
+          ]
+        }
+      ],
+      "gallery": [
+        "TMNT Cityのプレビュー",
+        "TMNT Cityのゲームプレイスクショ",
+        "TMNT Cityの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "TMNT Cityはガンゲーム？",
+          "a": "どちらかというとアクション要素のある探索・体験系マップ。"
+        },
+        {
+          "q": "Fortniteでどうやって見つける？",
+          "a": "「発見」→ 1383-6989-3967 を入力。"
+        }
+      ],
+      "similarLabels": [
+        "TMNT Mega Ramp Survival",
+        "ガンゲームマップ",
+        "タートルズマップ一覧"
+      ]
+    },
+    "rvb-squid-minigame": {
+      "breadcrumbParent": "イカゲームマップ",
+      "eyebrow": "イカゲーム / RvB",
+      "intro": "イカゲーム風のチャレンジに着想を得たテンポの速い赤vs青モード。短いラウンドと途切れないアクション向けに作られている。",
+      "schemaGenre": "赤vs青 / ミニゲーム",
+      "schemaDescription": "赤vs青のカオスとテンポの速いラウンドが楽しいイカゲーム風ミニゲーム。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "パーティ向き"
+        },
+        {
+          "label": "モード",
+          "value": "RvBミニゲーム"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "ラウンドの長さ",
+          "value": "短い"
+        },
+        {
+          "label": "おすすめ",
+          "value": "サクッと周回"
+        },
+        {
+          "label": "難易度",
+          "value": "やさしい"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "RvB Squid Minigameは、イカゲーム風のチャレンジに着想を得たテンポの速い赤vs青モード。短いラウンド、途切れないアクション、そして「もう1回」と言いたくなる作りになっている。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "「発見」でマップコード 2720-5344-3341 を入力",
+            "チームに入る",
+            "テンポの速いミニゲームラウンドを進める",
+            "連携とキルでラウンドを取る"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "面白い",
+          "accent": "理由",
+          "items": [
+            "ラウンドが短いから何度も遊べる",
+            "友達との赤vs青のカオス",
+            "競り合えて、ルールもすぐわかる"
+          ]
+        }
+      ],
+      "gallery": [
+        "RvB Squid Minigameのプレビュー",
+        "RvB Squid Minigameのゲームプレイスクショ",
+        "RvB Squid Minigameの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "これはイカゲームのマップ？",
+          "a": "イカゲーム風のミニゲームを赤vs青の形式にしたもの。"
+        },
+        {
+          "q": "友達と遊べる？",
+          "a": "遊べる — パーティで遊ぶのが一番おすすめ。"
+        }
+      ],
+      "similarLabels": [
+        "イカゲームマップ",
+        "最強XPマップ",
+        "ガンゲームマップ"
+      ]
+    },
+    "99-bots-squid-royale-boss": {
+      "breadcrumbParent": "イカゲームマップ",
+      "eyebrow": "イカゲーム / 99 Bots",
+      "intro": "Squid Royaleへようこそ。Fortniteの島コード {code} を入力して、ボス戦、ランク、リーダーボード、ステータス保存、新武器を備えたオープンワールドPvEの99ボットサバイバルへ。",
+      "schemaGenre": "イカゲーム / 99 Bots / サバイバル",
+      "schemaDescription": "99 Bots Squid Royale BossはNLDEVS制作のイカゲーム風Fortniteマップ。無限ボットロワイヤル、ボス戦、新武器、動物ライド、ステータス保存、ランク、リーダーボード、サバイバル要素を収録。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "1-5"
+        },
+        {
+          "label": "モード",
+          "value": "99ボットサバイバル"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "進行状況",
+          "value": "ステータス保存"
+        },
+        {
+          "label": "おすすめ",
+          "value": "ボス戦"
+        },
+        {
+          "label": "難易度",
+          "value": "ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "ゲームプレイ",
+          "accent": "の特徴",
+          "items": [
+            "無限ボットロワイヤル",
+            "ボス戦",
+            "完全新規の武器",
+            "動物ライド",
+            "ステータスとロードアウトの保存",
+            "20分ごとに建築をリセット",
+            "ランクシステム",
+            "リーダーボード",
+            "友達と遊ぶと楽しい",
+            "サバイバルゲーム"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "島の",
+          "accent": "詳細",
+          "heading": "島コード 0596-3765-4845",
+          "body": "99 Bots Squid Royale Bossは最大5人のイカゲーム風サバイバルマップ。ボットを倒してランクを上げ、ボスイベントに参加して、ステータスをセッションをまたいで保存しよう。"
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "このマップの",
+          "accent": "いいところ",
+          "items": [
+            "ボット戦が途切れないオープンワールドPvEサバイバル。",
+            "大きな戦いと報酬があるボスイベント。",
+            "周回の目標になるランクシステムとリーダーボード。",
+            "また来る人のためのステータスとロードアウトの保存。"
+          ]
+        }
+      ],
+      "gallery": [
+        "99 Bots Squid Royale Bossのプレビュー",
+        "99 Bots Squid Royale Bossのゲームプレイスクショ",
+        "99 Bots Squid Royale Bossの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "99 Bots Squid Royale Bossの島コードは？",
+          "a": "99 Bots Squid Royale Bossの島コードは 0596-3765-4845。"
+        },
+        {
+          "q": "99 Bots Squid Royale Bossはイカゲーム系のFortniteマップ？",
+          "a": "そう。NLDEVS制作のイカゲーム風Fortniteマップで、99ボット、PvEサバイバル、ボス戦、オープンワールドのアクションがある。"
+        },
+        {
+          "q": "何人まで参加できる？",
+          "a": "99 Bots Squid Royale Bossは最大5人まで対応。"
+        }
+      ],
+      "similarLabels": [
+        "イカゲームマップ",
+        "Sidekick Siege 99 Bots",
+        "RvB Squid Minigame"
+      ]
+    },
+    "sidekick-siege-99-bots": {
+      "breadcrumbParent": "イカゲームマップ",
+      "eyebrow": "イカゲーム / 99 Bots",
+      "intro": "99 Bots: Sidekick Siegeへようこそ。Fortniteの島コード {code} を入力して、ボス戦、ランク、リーダーボード、ステータス保存、最大5人プレイに対応したサイドキック中心のPvEサバイバルへ。",
+      "schemaGenre": "イカゲーム / 99 Bots / サバイバル",
+      "schemaDescription": "Sidekick Siege 99 BotsはNLDEVS制作のイカゲーム風Fortniteマップ。サイドキック、無限ボットロワイヤル、ボス戦、新武器、動物ライド、ステータス保存、ランク、リーダーボード、サバイバル要素を収録。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "1-5"
+        },
+        {
+          "label": "モード",
+          "value": "サイドキックサバイバル"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "進行状況",
+          "value": "ロードアウト保存"
+        },
+        {
+          "label": "おすすめ",
+          "value": "PvEパーティ"
+        },
+        {
+          "label": "難易度",
+          "value": "ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "ゲームプレイ",
+          "accent": "の特徴",
+          "items": [
+            "サイドキック",
+            "無限ボットロワイヤル",
+            "ボス戦",
+            "完全新規の武器",
+            "動物ライド",
+            "ステータスとロードアウトの保存",
+            "20分ごとに建築をリセット",
+            "ランクシステム",
+            "リーダーボード",
+            "友達と遊ぶと楽しい",
+            "サバイバルゲーム"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "島の",
+          "accent": "詳細",
+          "heading": "島コード 5577-7953-8449",
+          "body": "Sidekick Siege 99 Botsは最大5人のイカゲーム風サバイバルマップ。サイドキックを連れて99ボットと戦い、ボスを倒し、ランクを上げて、ステータスとロードアウトを保存しよう。"
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "このマップの",
+          "accent": "いいところ",
+          "items": [
+            "サイドキック中心の99ボットサバイバル。",
+            "ボス戦、PvE戦闘、バトルロワイヤルのテンポ。",
+            "周回向けのランクシステムとリーダーボード。",
+            "育成好きに嬉しいステータスとロードアウトの保存。"
+          ]
+        }
+      ],
+      "gallery": [
+        "Sidekick Siege 99 Botsのプレビュー",
+        "Sidekick Siege 99 Botsのゲームプレイスクショ",
+        "Sidekick Siege 99 Botsの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "Sidekick Siege 99 Botsの島コードは？",
+          "a": "Sidekick Siege 99 Botsの島コードは 5577-7953-8449。"
+        },
+        {
+          "q": "Sidekick Siege 99 Botsにサイドキックは出る？",
+          "a": "出る。サイドキックはSidekick Siege 99 Botsの目玉のひとつ。"
+        },
+        {
+          "q": "何人まで参加できる？",
+          "a": "Sidekick Siege 99 Botsは最大5人まで対応。"
+        }
+      ],
+      "similarLabels": [
+        "イカゲームマップ",
+        "99 Bots Squid Royale Boss",
+        "RvB Squid Minigame"
+      ]
+    },
+    "winterfest-demon-hunters": {
+      "breadcrumbParent": "ガンゲームマップ",
+      "eyebrow": "ガンゲーム / FFA",
+      "intro": "繰り返し遊べるラウンド向けに作られた戦闘中心のモード。アクション優先で、調整次第だがセッション中のXPも安定しやすい。",
+      "schemaGenre": "ガンゲーム / PvE戦闘",
+      "schemaDescription": "武器ローテーションと繰り返し遊べる戦闘ループを備えた、冬イベント風のデーモンハントガンゲーム。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "パーティ向き"
+        },
+        {
+          "label": "モード",
+          "value": "ガンゲーム戦闘"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "ラウンドの長さ",
+          "value": "サクサク"
+        },
+        {
+          "label": "おすすめ",
+          "value": "戦いながらXP"
+        },
+        {
+          "label": "難易度",
+          "value": "やさしい / ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "Winterfest Demon Huntersはテンポの速い戦闘ループ、武器ローテーション、何度も遊べるラウンドが楽しめるマップ。アクションが止まらないように作ってあるので、ずっと戦っていたいパーティやサッと次に入りたい人にぴったり。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ",
+            "マップコード 6101-7751-8665 を入力",
+            "島に参加してマップ内の目標を進める",
+            "積極的に戦って試合のテンポを保つ（XPがあるならそれも）"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "面白い",
+          "accent": "理由",
+          "items": [
+            "繰り返し遊べる戦闘中心のラウンド",
+            "友達と遊ぶと楽しい（パーティ向き）",
+            "武器のバリエーションと「もう1回」のテンポ",
+            "普通に遊びながらXPも欲しいときにちょうどいい"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "コツと",
+          "accent": "立ち回り",
+          "items": [
+            "パーティで遊ぶとラウンドが回って待ち時間も減る。",
+            "XPが渋くなったらマップを変えよう（調整や獲得量の逓減は場合による）。",
+            "中距離の安定した撃ち合いを意識しよう — 早く倒せるほど流れが続く。"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "ちょっとした",
+          "accent": "メモ",
+          "heading": "XPについて",
+          "body": "XPの入り方はFortniteのアップデートや調整で変わることがある。このページで扱うのは普通に繰り返し遊べるゲームループで、バグ利用じゃない。"
+        }
+      ],
+      "gallery": [
+        "Winterfest Demon Huntersのプレビュー",
+        "Winterfest Demon Huntersのゲームプレイスクショ",
+        "Winterfest Demon Huntersの追加スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "これはガンゲームマップ？",
+          "a": "繰り返し遊べる戦闘中心のモード。バージョンによってはガンゲームや武器ローテーション的な遊び方になる。今のバージョンのルールはマップ内の表示に従ってほしい。"
+        },
+        {
+          "q": "XPはもらえる？",
+          "a": "XPはFortniteの調整と島の現在の設定次第。アップデートや更新のあとに変わることもある。"
+        },
+        {
+          "q": "友達と遊べる？",
+          "a": "遊べる — ここはパーティで遊ぶのが一番。ラウンドも速く回る。"
+        }
+      ],
+      "similarLabels": [
+        "ガンゲームマップ",
+        "最強XPマップ",
+        "タートルズマップ"
+      ]
+    },
+    "rvb-players-vs-guards": {
+      "breadcrumbParent": "赤 vs 青マップ",
+      "eyebrow": "赤 vs 青 / プレイヤー vs ガード",
+      "intro": "Fortniteの島コード {code} を入力してRvB Players vs Guardsへ。ガードの圧力、目標、繰り返し遊べる戦闘ラウンドを突破していく赤vs青のチームマップ。",
+      "schemaGenre": "赤 vs 青 / プレイヤー vs ガード",
+      "schemaDescription": "RvB Players vs GuardsはNLDEVS制作のFortnite赤vs青マップ。チーム目標、プレイヤーvsガードの戦闘、繰り返し遊べるラウンド、パーティ向けの作りが特徴。",
+      "stats": [
+        {
+          "label": "プレイヤー",
+          "value": "パーティ向き"
+        },
+        {
+          "label": "モード",
+          "value": "赤vs青の目標戦"
+        },
+        {
+          "label": "ステータス",
+          "value": "公開中"
+        },
+        {
+          "label": "テンポ",
+          "value": "安定した戦闘"
+        },
+        {
+          "label": "おすすめ",
+          "value": "パーティ"
+        },
+        {
+          "label": "難易度",
+          "value": "やさしい / ふつう"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "ゲームプレイ",
+          "accent": "の紹介",
+          "paragraphs": [
+            "RvB Players vs Guardsは赤vs青の形式にPvE要素を足したマップ。1回の脱落ラウンドが終わるのを待つんじゃなく、ガードの圧力を押し返しながら目標を進めて、繰り返し戦っていく。",
+            "長めのセッション、安定した戦闘、友達と遊びやすいテンポで赤vs青を楽しみたい人におすすめ。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteの「検索／発見」を開く。",
+            "島コード 6263-5571-9595 を入力。",
+            "サイドを選んでマップ内の目標に従う。",
+            "ガードと戦い、チームを支えて、ラウンドを回していく。"
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "このマップの",
+          "accent": "いいところ",
+          "items": [
+            "ガードの圧力がある赤vs青のチーム構成。",
+            "パーティで遊びやすい目標中心のセッション。",
+            "安定した戦闘を求める人向けの繰り返し遊べるループ。",
+            "XP狙いのセッションで回すのにも使いやすい（XPが有効なとき）。"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "島の",
+          "accent": "詳細",
+          "heading": "島コード 6263-5571-9595",
+          "body": "Fortniteの「検索／発見」でこのコードを入力するとRvB Players vs Guardsを起動できる。XPの入り方は調整で変わることがあるけど、マップ自体は普通に繰り返し遊べる作りになっている。"
+        }
+      ],
+      "gallery": [
+        "RvB Players vs Guardsのゲームプレイプレビュー",
+        "RvB Players vs Guardsのゲームプレイスクショ",
+        "RvB Players vs Guardsの目標戦スクショ"
+      ],
+      "faqs": [
+        {
+          "q": "RvB Players vs Guardsの島コードは？",
+          "a": "RvB Players vs Guardsの島コードは 6263-5571-9595。"
+        },
+        {
+          "q": "RvB Players vs Guardsはどんなタイプのマップ？",
+          "a": "プレイヤーvsガードの戦闘、目標、繰り返し遊べるラウンドがある赤vs青のチームマップ。"
+        },
+        {
+          "q": "RvB Players vs GuardsはXP稼ぎに向いてる？",
+          "a": "XPが有効で調整されていれば、アクティブに遊べる選択肢としてはあり。ただしXPの入り方はFortniteのアップデートや島の更新で変わることがある。"
+        }
+      ],
+      "similarLabels": [
+        "赤 vs 青マップ",
+        "最強XPマップ",
+        "RvB Squid Minigame"
+      ]
+    }
+  }
+}

@@ -1,0 +1,784 @@
+{
+  "pageMeta": {
+    "star-wars-fortnite-maps": {
+      "title": "Star WarsのFortniteマップと島コード",
+      "description": "NLDEVSのStar Wars系Fortniteマップと島コード。Star Wars Tycoon Sidekick Legends、Star Wars Mega RvB、Star Wars Tilted 99 Bots Royaleなど。",
+      "ogDescription": "NLDEVSのStar Wars系Fortniteマップと島コード — Tycoon、赤vs青、ボットロワイヤル。"
+    },
+    "tmnt-fortnite-maps": {
+      "title": "タートルズのFortnite最強マップとマップコード",
+      "description": "NLDEVSのタートルズ系Fortniteマップとマップコード。TMNT Mega Ramp SurvivalやTMNT Cityなど、UEFN製。",
+      "ogDescription": "NLDEVSのタートルズ系Fortniteマップとマップコード — UEFN製。"
+    },
+    "squid-game-fortnite-maps": {
+      "title": "イカゲーム系Fortnite最強マップとマップコード",
+      "description": "NLDEVSのイカゲーム系Fortniteマップとマップコード。99 Bots Squid Royale Boss、Sidekick Siege 99 Bots、RvB Squid Minigameなど。",
+      "ogDescription": "NLDEVSのイカゲーム系Fortniteマップとマップコード。99ボットサバイバル、ボス戦、サイドキック、赤vs青のカオス。"
+    },
+    "fortnite-gun-game-maps": {
+      "title": "Fortniteガンゲーム最強マップとマップコード",
+      "description": "NLDEVS厳選のFortniteガンゲームマップとマップコード。テンポの速い武器進行、PvPアリーナ、何度も遊べるラウンド。",
+      "ogDescription": "NLDEVS厳選のFortniteガンゲームマップとマップコード — 武器進行型PvPで何度も遊べる。"
+    },
+    "best-fortnite-xp-maps": {
+      "title": "Fortnite最強XPマップとマップコード（速くレベル上げ）",
+      "description": "効率よくレベルを上げるためのFortnite最強XPマップとマップコード。NLDEVSが短いメモ付きで厳選。",
+      "ogDescription": "効率よくレベルを上げるためのFortnite XPマップとマップコード。NLDEVS厳選。"
+    },
+    "star-wars-tycoon-sidekick-legends": {
+      "title": "Star Wars Tycoon Sidekick Legends 近日公開（{code}）",
+      "description": "Star Wars Tycoon Sidekick LegendsがFortniteに近日登場。マップコード {code}。サイドキックとヒーローの解放、新エリアの建設、ワーカーの雇用、リバースランキングの上昇、進行状況のオートセーブ。",
+      "ogDescription": "Star Wars Tycoon Sidekick LegendsがFortniteに近日登場。サイドキックとヒーローを解放し、ワーカーを雇い、リバースランキングを駆け上がろう。"
+    },
+    "star-wars-mega-rvb": {
+      "title": "Star Wars Mega RvB マップコード（{code}）",
+      "description": "FortniteでStar Wars Mega RvBをプレイ。マップコード {code}。Star Wars武器、乗り物、カスタム武器、実績、ランク付きの赤vs青チームデスマッチ。",
+      "ogDescription": "Star Wars武器、乗り物、実績、ランク付きの赤vs青チームデスマッチ。"
+    },
+    "star-wars-tilted-99-bots-royale": {
+      "title": "Star Wars Tilted 99 Bots Royale マップコード（{code}）",
+      "description": "FortniteでStar Wars Tilted 99 Bots Royaleをプレイ。マップコード {code}。99ボットのロワイヤルサバイバル。解放可能なヒーロー、ボス、ステータス保存、ロードアウト、Tilted×Star Warsのアクション。",
+      "ogDescription": "99ボットのロワイヤルサバイバル。解放可能なヒーロー、ボス、ステータス保存、Tilted×Star Warsのアクション。"
+    },
+    "tmnt-mega-ramp-survival": {
+      "title": "TMNT Mega Ramp Survival マップコード（{code}）",
+      "description": "FortniteでTMNT Mega Ramp Survivalをプレイ。マップコード {code}。NLDEVSがUEFNで作った高速サバイバル。",
+      "ogDescription": "NLDEVSがUEFNで作ったタートルズ風の高速ランプサバイバル。"
+    },
+    "tmnt-city": {
+      "title": "TMNT City マップコード（{code}）",
+      "description": "FortniteでTMNT Cityを探索。マップコード {code}。NLDEVSがUEFNで作ったタートルズ風の街モード。",
+      "ogDescription": "FortniteでTMNT Cityを探索。UEFNで作ったタートルズ風の街モード。"
+    },
+    "rvb-squid-minigame": {
+      "title": "RvB Squid Minigame マップコード（{code}）",
+      "description": "FortniteでRvB Squid Minigameをプレイ。マップコード {code}。テンポの速いラウンド、チームのカオス、何度も遊べるミニゲーム。",
+      "ogDescription": "テンポの速いラウンド、チームのカオス、何度も遊べるイカゲーム風ミニゲーム。"
+    },
+    "99-bots-squid-royale-boss": {
+      "title": "99 Bots Squid Royale Boss マップコード（{code}）",
+      "description": "Fortniteで99 Bots Squid Royale Bossをプレイ。マップコード {code}。イカゲーム風の99ボットサバイバル。PvE、オープンワールド、ボス戦、ステータス保存、ランク、リーダーボード付き。",
+      "ogDescription": "イカゲーム風の99ボットサバイバル。PvEオープンワールド、ボス戦、ステータス保存、リーダーボード付き。"
+    },
+    "sidekick-siege-99-bots": {
+      "title": "Sidekick Siege 99 Bots マップコード（{code}）",
+      "description": "FortniteでSidekick Siege 99 Botsをプレイ。マップコード {code}。イカゲーム風の99ボットサバイバル。サイドキック、ボス戦、PvE、ステータス保存、ランク、リーダーボード付き。",
+      "ogDescription": "イカゲーム風の99ボットサバイバル。サイドキック、ボス戦、PvE、リーダーボード付き。"
+    },
+    "winterfest-demon-hunters": {
+      "title": "Winterfest Demon Hunters マップコード（{code}）",
+      "description": "FortniteでWinterfest Demon Huntersをプレイ。マップコード {code}。戦闘中心のラウンドと繰り返し遊べるループ — パーティ向きで、戦いながらレベルも上がる。",
+      "ogDescription": "戦闘中心のガンゲームラウンドと繰り返し遊べるループ — パーティ向き。"
+    },
+    "playtest-squad": {
+      "title": "NLDEVS Playtest Squad",
+      "description": "NLDEVS Playtest Squadに参加して、Fortniteの新マップ、プレイテスト招待、Discordの更新、今後のUEFNコラボの機会を受け取ろう。",
+      "ogDescription": "NLDEVSに参加して、Fortniteの新マップ、プレイテスト招待、UEFNコミュニティの最新情報を受け取ろう。"
+    },
+    "uefn-contracts": {
+      "title": "UEFN制作依頼",
+      "description": "UEFNの制作依頼、Fortniteのマップ制作、ゲーム内アニメーション、ブランド案件、ゲームスタジオ向けの支援はNLDEVSへ。",
+      "ogDescription": "UEFNの制作依頼、Fortniteマップ制作、ブランド案件はNLDEVSへ。"
+    },
+    "privacy": {
+      "title": "プライバシー",
+      "description": "NLDEVSがアップデート、プレイテスト、サポート、コラボのためにメンバー情報をどう収集し利用するか。",
+      "ogDescription": "NLDEVSがメンバー情報をどう収集し利用するか。"
+    },
+    "fortnite-99-bots-maps": {
+      "title": "Fortnite最強99 Botsマップとマップコード",
+      "description": "NLDEVSのFortnite 99ボットマップとマップコード。ボットロワイヤルサバイバル、ボス戦、ステータス保存、リーダーボード — ロビーが埋まるのを待つ必要なし。",
+      "ogDescription": "NLDEVSのFortnite 99ボットマップとマップコード — ボットロワイヤルサバイバル、ボス戦、進行状況の保存。"
+    },
+    "fortnite-red-vs-blue-maps": {
+      "title": "Fortnite最強赤vs青マップとマップコード",
+      "description": "NLDEVSのFortnite赤vs青マップコード。速いリスポーン、目標ラウンド、パーティ向けのカオスが楽しめるチーム対チームの島。",
+      "ogDescription": "NLDEVSのFortnite赤vs青マップコード — チームデスマッチ、ミニゲーム、ガード戦。"
+    },
+    "rvb-players-vs-guards": {
+      "title": "RvB Players vs Guards マップコード（6263-5571-9595）",
+      "description": "FortniteでRvB Players vs Guardsをプレイ。マップコード 6263-5571-9595。チーム目標、繰り返し遊べるラウンド、安定した戦闘があるプレイヤーvsガード形式の赤vs青の島。",
+      "ogDescription": "チーム目標と繰り返し遊べる戦闘ラウンドを備えた、プレイヤーvsガード形式のFortnite赤vs青マップ。"
+    }
+  },
+  "hubs": {
+    "starWars": {
+      "breadcrumb": "Star Warsマップ",
+      "eyebrow": "遠い昔、はるか彼方の銀河系で",
+      "title": "Star Warsの<accent>Fortniteマップ</accent>",
+      "description": "Unreal Editor for Fortniteで作ったStar Wars系のFortniteモード。Tycoonの育成、赤vs青のPvP、ボットロワイヤルサバイバル、島コードをまとめて紹介。",
+      "schemaName": "Star WarsのFortniteマップと島コード",
+      "schemaDescription": "NLDEVSがUEFNで制作したStar Wars系Fortniteマップと島コードのまとめ。Tycoonの育成、赤vs青のPvP、ボットロワイヤルサバイバルを収録。",
+      "listName": "Star WarsのFortniteマップ",
+      "genre": "Star WarsのFortniteマップ",
+      "codesTitle": "Star Warsマップ",
+      "codesAccent": "コード",
+      "introSections": [],
+      "tipSections": [
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "島コードを正確に入力する（####-####-####）。",
+            "島に参加して、ゲーム内の目標に沿って進める。",
+            "お気に入りに入れておくと次回すぐ見つかる。"
+          ]
+        },
+        {
+          "type": "list",
+          "title": "ここで",
+          "accent": "遊べるもの",
+          "items": [
+            "セーブ、リバース、報酬があるStar Wars Tycoonの育成。",
+            "Star Warsの武器と乗り物が使える赤vs青のチームデスマッチ。",
+            "ヒーロー、ボス、ロードアウト保存付きの99ボットロワイヤルサバイバル。",
+            "友達と何度も遊べるように作られたUEFN製モード。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "NLDEVSのStar Wars系Fortniteマップでおすすめは？",
+          "a": "現在はStar Wars Tycoon Sidekick Legends、Star Wars Mega RvB、Star Wars Tilted 99 Bots Royaleを公開している。"
+        },
+        {
+          "q": "Star Wars Tycoon Sidekick Legendsの島コードは？",
+          "a": "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。"
+        },
+        {
+          "q": "PvPに一番向いているStar Warsマップは？",
+          "a": "PvPならStar Wars Mega RvB。Star Wars武器、カスタム武器、乗り物、実績、ランクを備えた赤vs青のチームデスマッチマップ。"
+        },
+        {
+          "q": "ボットが出るStar Warsマップは？",
+          "a": "Star Wars Tilted 99 Bots Royale。99ボットのロワイヤルサバイバル、ボス戦、解放できるヒーロー、ステータスとロードアウトの保存がある。"
+        }
+      ],
+      "notes": {
+        "star-wars-tycoon-sidekick-legends": "近日公開: サイドキックとヒーローの解放、新エリアとアップグレード、生産を上げるワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えたStar Wars Tycoon。",
+        "star-wars-mega-rvb": "Star Wars武器、カスタム武器、乗り物、実績、BGM、Unrealまでのランク上げがある赤vs青のPvP。",
+        "star-wars-tilted-99-bots-royale": "99ボットのオープンワールドPvEサバイバル。ボス戦、解放できるヒーロー、ステータスとロードアウトの保存、Star Wars風のTiltedアクション。"
+      },
+      "modeOverrides": {
+        "star-wars-tycoon-sidekick-legends": "近日公開 / Tycoon",
+        "star-wars-mega-rvb": "チームデスマッチ",
+        "star-wars-tilted-99-bots-royale": "Bot Royale"
+      },
+      "relatedLabels": [
+        "タートルズマップ",
+        "イカゲームマップ",
+        "ガンゲームマップ",
+        "XPマップ"
+      ],
+      "disclaimer": "UEFNで作られたコミュニティ製のFortniteモードです。Lucasfilm、Disney、Epic Gamesとは関係ありません。"
+    },
+    "tmnt": {
+      "breadcrumb": "タートルズマップ",
+      "eyebrow": "タートルパワー",
+      "title": "タートルズの<accent>Fortnite最強マップ</accent>",
+      "description": "UEFNで作ったタートルズ系のFortniteマップとマップコード。街の探索、サバイバル、戦闘アリーナなど、何度も遊べる設計。",
+      "schemaName": "タートルズのFortnite最強マップとマップコード",
+      "schemaDescription": "NLDEVSがUEFNで制作したタートルズ系Fortniteマップとマップコードのまとめ。サバイバルや街モードを収録。",
+      "listName": "タートルズのFortniteマップ",
+      "genre": "タートルズのFortniteマップ",
+      "codesTitle": "タートルズマップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-tmnt-maps",
+          "title": "タートルズの",
+          "accent": "Fortniteマップとは？",
+          "paragraphs": [
+            "タートルズのFortniteマップは、ミュータント・タートルズをテーマにしたコミュニティ製の島。街の探索、サバイバル、戦闘アリーナ、テンポの速いミニゲームなどがある。UEFNで作られていて、友達と何度も遊べるように設計されている。",
+            "スピード感が欲しいならメガランプ系のサバイバルが短時間セッションに向いている。自由に動きたいなら街マップがおすすめ。探索も戦闘も、みんなでまったりするのにも使える。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "タートルズマップの",
+          "accent": "コツ",
+          "items": [
+            "友達と遊ぼう — サバイバルも街マップも人数がいる方が楽しい。",
+            "メガランプのコツ: 真ん中をキープして、直前に大きく曲がるより早めに小刻みに修正する。",
+            "遊んだらお気に入りに入れておくと、アップデート後も戻りやすい。",
+            "PvPがしたいなら、戦闘エリアかガンゲームモードがあるときにそこへ。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "マップコードを正確に入力する（####-####-####）。",
+            "島に参加して、ゲーム内の目標に沿って進める。",
+            "お気に入りに入れておくと次回すぐ見つかる。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Fortniteでマップコードを入力するには？",
+          "a": "Fortniteを開いて「検索／発見」へ。島コード（####-####-####）を入力して、結果を選べば遊べる。"
+        },
+        {
+          "q": "このタートルズマップは公式？",
+          "a": "UEFNで作られたコミュニティ製のFortniteモード。このページはNickelodeonやTMNTブランドとは関係ない。"
+        },
+        {
+          "q": "TMNT Mega Ramp Survivalってどんなマップ？",
+          "a": "テンポの速いサバイバル。メガランプ上でカオスが増していく中、障害物をよけてできるだけ長く生き残る。"
+        },
+        {
+          "q": "TMNT Cityはガンゲームマップ？",
+          "a": "TMNT Cityは基本的にタートルズ風の街モード。島のバージョンによっては戦闘エリアやモードが入ることもある。"
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "タートルズ風の高速メガランプサバイバル。カオスをよけて走り切ろう。",
+        "tmnt-city": "UEFNで作ったタートルズ風の街モード — 探索して、戦って、友達とまったり。"
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "サバイバル",
+        "tmnt-city": "モード"
+      },
+      "relatedLabels": [
+        "XPマップ",
+        "ガンゲームマップ",
+        "イカゲームマップ",
+        "Star Warsマップ"
+      ]
+    },
+    "squidGame": {
+      "breadcrumb": "イカゲームマップ",
+      "eyebrow": "脱落サバイバル",
+      "title": "イカゲーム系<accent>Fortnite最強マップ</accent>",
+      "description": "イカゲーム風ミニゲーム、99ボットサバイバル、サイドキック、ボス戦、赤vs青のカオス。すべてUEFN製。各マップに島コードとプレイタイプを掲載。",
+      "schemaName": "イカゲーム系Fortnite最強マップとマップコード",
+      "schemaDescription": "NLDEVSがUEFNで制作したイカゲーム風Fortniteマップとマップコードのまとめ。99ボットサバイバル、ボス戦、サイドキック、赤vs青のマップを収録。",
+      "listName": "イカゲーム系Fortniteマップ",
+      "genre": "イカゲーム系Fortniteマップ",
+      "codesTitle": "イカゲームマップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-squid-maps",
+          "title": "イカゲーム系の",
+          "accent": "Fortniteマップとは？",
+          "paragraphs": [
+            "「イカゲーム風」のFortniteマップは、脱落系ミニゲームに着想を得たコミュニティ製の島。テンポの速いラウンド、一発勝負のチャレンジ、わちゃわちゃした競争が中心で、たいてい友達と遊ぶ前提で作られている。",
+            "定番はダルマさんが転んだ、サバイバルラウンド、目標系ミニゲーム、99ボットサバイバル、ボス戦、パーティチャレンジなど。マップの公開状況やXPは、アップデートや島の更新で変わることがある。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "id": "tips",
+          "title": "イカゲームマップの",
+          "accent": "コツ",
+          "items": [
+            "友達と遊ぼう: 脱落系はフルパーティの方が盛り上がるし、次の試合にもすぐ入れる。",
+            "練習したいならボット版から。PvPラウンドの前にルートと仕様を覚えられる。",
+            "XPが渋くなったらマップを変えよう。調整や獲得量の逓減は島やアップデートによって違う。",
+            "ボイスチャットやピンを使おう — 脱落系やチーム戦は連携で決まる。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "id": "how-to-play",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "マップコードを正確に入力する（####-####-####）。",
+            "マップに参加して、ミニゲームのルールに従う（島ごとに違う）。",
+            "友達と遊ぶのが一番おすすめ。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Fortniteでマップコードを入力するには？",
+          "a": "Fortniteを開いて「検索／発見」へ。島コード（####-####-####）を入力して、結果を選べば遊べる。"
+        },
+        {
+          "q": "イカゲーム系のFortniteマップは公式？",
+          "a": "いや、違う。イカゲーム風のミニゲームやチャレンジに着想を得たコミュニティ製のFortniteモードで、Netflixの公式コンテンツではない。"
+        },
+        {
+          "q": "イカゲーム系マップでXPはもらえる？",
+          "a": "島によってはXPがもらえる。Fortniteの調整とマップの設定次第で、アップデートや更新のあとに変わることもある。"
+        },
+        {
+          "q": "友達と遊ぶならどのイカゲームマップがいい？",
+          "a": "ミニゲーム系や脱落系はフルパーティが一番。ラウンドをどんどん回して競い合えるほど楽しい。"
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "赤vs青のカオスとテンポの速いラウンドが楽しいイカゲーム風ミニゲーム。",
+        "99-bots-squid-royale-boss": "99ボットのオープンワールドPvEサバイバル。ボス戦、新武器、動物ライド、ランク、リーダーボード、ステータス保存付き。",
+        "sidekick-siege-99-bots": "サイドキック中心の99ボットサバイバル。ボス戦、PvE、ロードアウト保存、ランク、リーダーボード、最大5人プレイ。"
+      },
+      "modeOverrides": {
+        "rvb-squid-minigame": "RvB",
+        "99-bots-squid-royale-boss": "99 Bots",
+        "sidekick-siege-99-bots": "Sidekicks"
+      },
+      "relatedLabels": [
+        "XPマップ",
+        "ガンゲームマップ",
+        "タートルズマップ",
+        "Star Warsマップ"
+      ]
+    },
+    "gunGame": {
+      "breadcrumb": "ガンゲームマップ",
+      "eyebrow": "武器進行",
+      "title": "Fortnite最強<accent>ガンゲームマップ</accent>",
+      "description": "倒すたびに武器が変わっていくテンポの速い武器進行モード。厳選した島をコードと短いメモ付きで紹介。",
+      "schemaName": "Fortnite最強ガンゲームマップ",
+      "schemaDescription": "NLDEVSがUEFNで制作したFortniteガンゲームマップとマップコードのまとめ — 何度も遊べる武器進行型PvP。",
+      "listName": "Fortniteガンゲームマップ",
+      "genre": "Fortniteガンゲームマップ",
+      "codesTitle": "ガンゲームマップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "title": "Fortniteの",
+          "accent": "ガンゲームマップとは？",
+          "paragraphs": [
+            "Fortniteのガンゲームは、短いラウンドを何度も回す武器進行型のPvPモード。1つの武器から始まり、倒すたびに次の武器へ進む。",
+            "目標は誰よりも早く武器リストを終わらせること。いいガンゲームマップは動線がわかりやすく、武器のローテーションが噛み合っていて、リスポーンが速い。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "ガンゲームで",
+          "accent": "勝つコツ",
+          "items": [
+            "リスポーンの流れを覚えて、戦う場所を変えていく。",
+            "角をキープして、賢く撃ち直す。",
+            "派手なプレイより中距離の安定した命中率。",
+            "止まらず動き続けると武器が早く進む。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Fortniteのガンゲームマップって何？",
+          "a": "武器進行型のモード。1つの武器から始めて、倒すたびに次の武器へ。武器リストを最初に終わらせた人がラウンドの勝者。"
+        },
+        {
+          "q": "ガンゲームマップでXPはもらえる？",
+          "a": "島によってはもらえる。Fortniteの調整とマップの現在の設定次第で、アップデート後に変わることもあるから、XPは遊ぶ理由じゃなくおまけくらいに考えておこう。"
+        },
+        {
+          "q": "何人まで遊べる？",
+          "a": "島によって違う。ほとんどはソロでもフルパーティでも遊べる。人数やモードの詳細は各マップのページで確認できる。"
+        },
+        {
+          "q": "最初はどのガンゲームマップがおすすめ？",
+          "a": "リスポーンが速くて武器リストが短めのものを選ぶと、ラウンドがサクッと終わる。ここにある2つはどちらもすぐ次に入れる作り。"
+        }
+      ],
+      "notes": {
+        "tmnt-city": "タートルズ風の戦闘ループ。武器の進行が速く、何度も遊べるラウンド。",
+        "winterfest-demon-hunters": "冬イベント風のデーモンハントガンゲーム。繰り返し遊べる戦闘ループと武器ローテーション付き。"
+      },
+      "titleOverrides": {
+        "tmnt-city": "TMNT City — Gun Game",
+        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+      },
+      "modeOverrides": {
+        "tmnt-city": "Gun Game",
+        "winterfest-demon-hunters": "FFA ガンゲーム"
+      },
+      "relatedLabels": [
+        "XPマップ",
+        "タートルズマップ",
+        "イカゲームマップ",
+        "Star Warsマップ"
+      ]
+    },
+    "xp": {
+      "breadcrumb": "XPマップ",
+      "eyebrow": "速くレベルを上げる",
+      "title": "Fortnite最強<accent>XPマップ</accent>",
+      "description": "厳選したFortniteのXPマップを、島コードと遊んだ感じの短いメモ付きで紹介。",
+      "schemaName": "Fortnite最強XPマップ",
+      "schemaDescription": "NLDEVSが厳選したFortniteのXPマップと島コードのまとめ。レベル上げ中に各島がどう遊べるかを短いメモで紹介。",
+      "listName": "FortniteのXPマップ",
+      "genre": "FortniteのXPマップ",
+      "codesTitle": "XPマップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "how-fortnite-xp-maps-work",
+          "title": "XPマップは",
+          "accent": "こう動く",
+          "paragraphs": [
+            "FortniteのXPマップは、繰り返し遊べるアクティビティを備えたクリエイティブ／UEFNの島。島が調整されていてXPが有効なら、アカウントXPが入ることがある。おすすめといっても魔法のボタンじゃなくて、テンポが安定していて目標がはっきりしていて、普通に遊んでいればXPが入るくらい動きのあるマップのこと。",
+            "XPの入り方はFortniteのアップデート、島の更新、調整の変更、その日の遊び方で変わる。このページは決まったXP量を約束するものじゃなく、ちゃんと動くゲームループを持つNLDEVSマップの実用リストとして使ってほしい。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "XPマップの",
+          "accent": "コツ",
+          "items": [
+            "放置で稼げるという話より、キル、目標、サバイバルの波、戦闘ループがある動きのあるマップを選ぼう。",
+            "長めのセッションでは島をいくつか回そう。同じところで遊び続けるとXPが渋くなることがある。",
+            "大きなアップデートのあとはマップを見直そう。島が更新されると調整や報酬が変わる。",
+            "できれば友達と。ラウンドが速く回って戦闘も増えるから、テンポが落ちにくい。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "このリストの",
+          "accent": "使い方",
+          "items": [
+            "遊びたいスタイルで選ぼう: 戦闘、サバイバル、赤vs青、探索。",
+            "Fortniteの「検索／発見」で島コードを入力する。",
+            "何ラウンドか普通に遊んで、XPの通知が安定して出るか見る。",
+            "自分のアカウントで調子がいいマップをお気に入りに入れて、伸びが鈍ったら回していく。"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "XPについて",
+          "accent": "の注意",
+          "heading": "XPは保証されていない",
+          "body": "FortniteのXPはEpicの調整、島の設定、アカウントの状態、現在の上限によって変わる。このページで扱うのは繰り返し遊べる普通のマップで、バグ利用やAFK放置じゃない。"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "このXPマップは今もXPが入る？",
+          "a": "XPはFortniteの調整と各島の現在の設定次第。ここのマップは繰り返し遊べるループを基準に選んでいるけど、アップデートや更新でXPの入り方は変わることがある。"
+        },
+        {
+          "q": "一番XPが入るFortniteのマップは？",
+          "a": "シーズンごと、アカウントごとに変わる。安定させたいなら、1つの島に頼らずキル、目標、サバイバル、赤vs青などの動きのあるマップを回すのがいい。"
+        },
+        {
+          "q": "XPマップって使っても大丈夫？",
+          "a": "Fortniteの「発見」から入る普通のクリエイティブ／UEFNマップなら安心。バグやチートをうたうマップ、Fortniteのルールを破るよう求めてくるマップは避けよう。"
+        },
+        {
+          "q": "マップでXPが渋くなったのはなぜ？",
+          "a": "1日の上限、同じ島で遊び続けたこと、島の調整、Fortniteのアップデートなどが原因。別のマップを試すか、少し休むか、島が更新されてからまた来てみよう。"
+        },
+        {
+          "q": "XPマップのコードはどう入力する？",
+          "a": "Fortniteを開いて「検索」または「発見」へ。島コードを ####-####-#### の形式で正確に入力して、島を選んで遊ぶ。"
+        },
+        {
+          "q": "友達と遊んでもXPは入る？",
+          "a": "入る。ここのマップはほとんどパーティ向きで、チームで遊ぶとラウンドも目標も戦闘も速く回る。"
+        }
+      ],
+      "notes": {
+        "tmnt-mega-ramp-survival": "繰り返し遊べるループのある高速サバイバル。レベル上げ中もアクティブに動きたい人向け。",
+        "winterfest-demon-hunters": "繰り返し遊べる戦闘中心のループ。戦いながらXPを稼ぎたい人にちょうどいい。",
+        "rvb-players-vs-guards": "チーム目標と長めのセッション。PvP寄りのラウンドで安定してXPを稼ぎたいときに。",
+        "tmnt-city": "探索と戦闘のルートがあり、XPループも安定している。",
+        "rvb-squid-minigame": "テンポの速いラウンドと目標中心のプレイ。",
+        "99-bots-squid-royale-boss": "常に戦闘があるオープンワールドのボットサバイバル。ボスイベントもあり長時間セッション向き。",
+        "sidekick-siege-99-bots": "サイドキック中心のボットサバイバル。進行状況が保存されるので周回に向く。",
+        "star-wars-tilted-99-bots-royale": "ロビー待ちなしの99ボットロワイヤル。降りた瞬間から戦える。"
+      },
+      "modeOverrides": {
+        "tmnt-mega-ramp-survival": "アクティブ",
+        "winterfest-demon-hunters": "ミックス",
+        "rvb-players-vs-guards": "ミックス",
+        "tmnt-city": "アクティブ",
+        "rvb-squid-minigame": "アクティブ",
+        "99-bots-squid-royale-boss": "アクティブ",
+        "sidekick-siege-99-bots": "アクティブ",
+        "star-wars-tilted-99-bots-royale": "アクティブ"
+      },
+      "relatedLabels": [
+        "ガンゲームマップ",
+        "タートルズマップ",
+        "イカゲームマップ",
+        "Star Warsマップ"
+      ]
+    },
+    "bots99": {
+      "breadcrumb": "99 Botsマップ",
+      "eyebrow": "ロビー待ちなし",
+      "title": "Fortnite最強<accent>99 Botsマップ</accent>",
+      "description": "すぐ埋まって常に動いているボットロワイヤルの島。イカゲームとStar Warsのテーマで、ボス戦、ステータス保存、リーダーボードを収録。",
+      "schemaName": "Fortnite最強99 Botsマップとマップコード",
+      "schemaDescription": "NLDEVSがUEFNで制作したFortniteの99ボットマップとマップコードのまとめ。ボットロワイヤルサバイバル、ボス戦、進行状況の保存を収録。",
+      "listName": "Fortniteの99 Botsマップ",
+      "genre": "Fortniteの99 Botsマップ",
+      "codesTitle": "99 Botsマップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-are-99-bots-maps",
+          "title": "99ボットマップ",
+          "accent": "って何？",
+          "paragraphs": [
+            "99ボットマップは、プレイヤーの代わりにAIの敵でロビーを埋める仕組み。降りた瞬間から試合が始まる。順番待ちもロビーが埋まるのを待つ必要もなく、最初から最後まで戦い続けられる。",
+            "ウォームアップ、エイム練習、長時間のソロプレイに向いている。多くはその上に育成要素がある — ランク、ステータス保存、解放できるヒーロー、ボスイベントなど。1回の周回がまた来る理由になる。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "コツ:",
+          "accent": "bot royale",
+          "items": [
+            "ランク前のウォームアップに使おう — すぐ戦闘が始まって、テンポも本番に近い。",
+            "PvPで避けている武器を練習しよう。ボットはミスに厳しくないので、癖をつけるには手頃。",
+            "島が対応しているならチームで。ボスイベントは人数が多いほど早く終わる。",
+            "各マップの保存機能を確認しよう — ほとんどはランクとロードアウトがセッションをまたいで残る。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "島コードを正確に入力する（####-####-####）。",
+            "降下してボットを倒していく。",
+            "お気に入りに入れておくとアップデート後も見つけやすい。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Fortniteの「99ボット」ってどういう意味？",
+          "a": "ロビーが実際のプレイヤーではなく99体のAIの敵で埋まるということ。試合はすぐ始まり、何人オンラインかに関係なく島は動き続ける。"
+        },
+        {
+          "q": "99ボットマップは練習に向いてる？",
+          "a": "向いている。ウォームアップ、立ち回り、武器慣れに使える。エイム勝負の練習としてPvPの代わりにはならないけど、ランクのプレッシャーなしで癖をつけるには便利。"
+        },
+        {
+          "q": "このマップは進行状況を保存してくれる？",
+          "a": "ほとんどはステータス、ランク、ロードアウトがセッションをまたいで残る。何が保存されるかは各マップのページで確認できる。"
+        },
+        {
+          "q": "99ボットマップは友達と遊べる？",
+          "a": "遊べる。人数は島によって違って、いくつかは最大5人まで対応。正確な人数は各マップのページで確認できる。"
+        }
+      ],
+      "notes": {
+        "99-bots-squid-royale-boss": "オープンワールドのPvEサバイバル。ボス戦、新武器、動物ライド、ランク、ステータス保存付き。",
+        "sidekick-siege-99-bots": "サイドキック中心のボットサバイバル。ボス戦、ロードアウト保存、ランク、最大5人プレイ。",
+        "star-wars-tilted-99-bots-royale": "解放できるヒーロー、ボス、ロードアウト保存があるボットロワイヤル。Star Wars風のTiltedが舞台。"
+      },
+      "relatedLabels": [
+        "イカゲームマップ",
+        "Star Warsマップ",
+        "XPマップ",
+        "赤 vs 青マップ"
+      ]
+    },
+    "redVsBlue": {
+      "breadcrumb": "赤 vs 青マップ",
+      "eyebrow": "チーム対チーム",
+      "title": "Fortnite最強<accent>赤 vs 青マップ</accent>",
+      "description": "UEFNで作った赤vs青の島コード。速いリスポーン、目標ラウンド、チームのカオスを、ミニゲーム・デスマッチ・ガード戦の形式で。",
+      "schemaName": "Fortnite最強赤vs青マップとマップコード",
+      "schemaDescription": "NLDEVSがUEFNで制作したFortniteの赤vs青マップとマップコードのまとめ。チームデスマッチ、目標系ミニゲーム、ガード戦を収録。",
+      "listName": "Fortniteの赤vs青マップ",
+      "genre": "Fortniteの赤vs青マップ",
+      "codesTitle": "赤 vs 青マップ",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "what-is-rvb",
+          "title": "赤 vs 青",
+          "accent": "って何？",
+          "paragraphs": [
+            "赤vs青はロビーを2チームに分けて、戦う理由を用意する形式 — キル、目標、あるいはミニゲームの連続。リスポーンが速くラウンドも短いので、誰も見てるだけにならない。",
+            "このサイトで一番パーティ向きの形式。ラウンドがすぐリセットされて、ルールも数秒でわかる。フルパーティで入っても説明はいらない。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "赤vs青ラウンドの",
+          "accent": "コツ",
+          "items": [
+            "フルパーティで遊ぼう — チーム形式は2人だと物足りず、6人で化ける。",
+            "ボイスチャットかピンを使おう。目標ラウンドではエイムより連携が効く。",
+            "リスポーンの流れを見て、毎回同じルートを押すより回り込もう。",
+            "ラウンドは短く作られているから、負けは巻き返しじゃなく次の試合と考えよう。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "島コードを正確に入力する（####-####-####）。",
+            "チームに入ってラウンド開始を待つ。",
+            "マップ内の目標に従う — 島ごとに違う。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Fortniteの赤vs青マップって何？",
+          "a": "プレイヤーを2チームに分けて、互いにスコアを競わせる島。たいていリスポーンが速くラウンドが短い。形式はチームデスマッチから目標系ミニゲームまで幅がある。"
+        },
+        {
+          "q": "赤vs青マップは何人必要？",
+          "a": "フルパーティが一番。人数は島によって違うので、正確な人数とモードは各マップのページで確認しよう。"
+        },
+        {
+          "q": "赤vs青マップでXPはもらえる？",
+          "a": "島によってはもらえる。Fortniteの調整とマップの現在の設定次第で、アップデート後に変わるのでおまけくらいに考えておこう。"
+        },
+        {
+          "q": "赤vs青は最初どのマップがいい？",
+          "a": "この形式に慣れていないグループならミニゲーム系の島がおすすめ。ルールがすぐ読めてラウンドも早く終わる。デスマッチ系はもう一緒に遊び慣れているグループ向き。"
+        }
+      ],
+      "notes": {
+        "rvb-squid-minigame": "赤vs青のカオスとテンポの速いラウンドが楽しいイカゲーム風ミニゲーム。",
+        "star-wars-mega-rvb": "Star Wars武器、乗り物、実績、Unrealまでのランク上げがあるチームデスマッチ。",
+        "rvb-players-vs-guards": "ガードと戦うチーム目標 — 長めのセッション向き。"
+      },
+      "relatedLabels": [
+        "イカゲームマップ",
+        "Star Warsマップ",
+        "99 Botsマップ",
+        "XPマップ"
+      ]
+    }
+  },
+  "playtest": {
+    "eyebrow": "コミュニティ",
+    "title": "NLDEVS <accent>Playtest Squad</accent>に参加",
+    "description": "NLDEVSの新マップ、テスト、アップデート、コラボの機会に近いところにいられるシンプルな方法。",
+    "heroTitle": "テストして、感想を送って、新作をいち早く。",
+    "heroBody": "メンバーになると、新マップの先行公開、非公開プレイテストの招集、投票、そしてNLDEVSへの直通の連絡先が手に入る。",
+    "heroNote": "スパムなし。情報の販売なし。いつでも削除可能。",
+    "perks": [
+      "新マップに先行アクセス",
+      "プレイテスト招待",
+      "新テーマの投票",
+      "直接フィードバック"
+    ],
+    "joinDiscord": "Discordに参加",
+    "exploreMaps": "マップを見る",
+    "squadPerk": "スクワッド特典",
+    "benefits": [
+      {
+        "title": "先行アクセス",
+        "text": "新しい島や更新が準備できたら、広く公開する前に新マップやコードの更新を受け取れる。"
+      },
+      {
+        "title": "非公開プレイテスト",
+        "text": "非公開プレイテストの招待を受け取り、新しいループを試して、大型アップデート前のテンポ作りに関われる。"
+      },
+      {
+        "title": "投票して方向を決める",
+        "text": "今後のマップテーマに投票して、感想、バグ、スクショ、プレイした印象を直接送れる。"
+      },
+      {
+        "title": "コミュニティでの紹介",
+        "text": "今後の紹介、プレイテスターのクレジット、開発の機会、プレゼント企画、XPやマップのイベントの候補になれる。"
+      }
+    ]
+  },
+  "contracts": {
+    "eyebrow": "開発・クライアント案件",
+    "title": "UEFN制作依頼、<accent>Fortniteモード</accent>",
+    "description": "NLDEVSは、Fortnite制作の支援を必要とするクリエイター、クライアント、ブランド、スタジオ向けに、遊べるUEFNプロジェクトを作っています。",
+    "heroTitle": "UEFN制作はNLDEVSへ。",
+    "heroBody": "プロトタイプから作り込んだFortniteの島まで、NLDEVSはUEFNモードの設計、制作、テスト、改善を、きちんとした制作フローで支援します。",
+    "startProject": "プロジェクトを始める",
+    "viewCreatorPage": "クリエイターページを見る",
+    "servicesTitle": "NLDEVSができること",
+    "services": [
+      "UEFNでのマップ制作とプロトタイプ",
+      "Fortniteの島: Tycoon、PvP、ガンゲーム、イベント型",
+      "ブランド案件のFortniteモード",
+      "ゲーム内アニメーション、シネマティック、インタラクティブな演出",
+      "ゲームループの設計と調整",
+      "Verse、デバイス、UI、テスト、リリース時のサポート",
+      "既存の島の整理、アップデート、最適化"
+    ],
+    "clientsTitle": "本気のプロジェクト向け",
+    "clientTypes": [
+      "UEFN制作を任せられるパートナーを探しているクリエイター",
+      "Fortniteでの展開を検討しているブランド",
+      "UEFN制作の追加リソースが必要なゲームスタジオ",
+      "本格展開の前に遊べるプロトタイプがほしいチーム"
+    ],
+    "ctaTitle": "目的、スケジュール、予算感を送ってください。",
+    "ctaBody": "最初の連絡はシンプルで大丈夫です。作りたいもの、新規の島か既存プロジェクトか、希望のリリース時期、参考資料や必須の仕様があればそれも添えてください。",
+    "exploreMaps": "NLDEVSのマップを見る",
+    "mailSubject": "UEFN制作のお問い合わせ",
+    "servicesEyebrow": "サービス",
+    "clientsEyebrow": "こんな方に",
+    "inquiryEyebrow": "プロジェクトのご相談"
+  },
+  "privacy": {
+    "title": "プライバシー",
+    "intro": "メンバー情報は、NLDEVSの運営、プレイヤーのサポート、プレイテストの運営、今後の協力者を見つけるために使っています。必要な範囲にとどめ、販売することはありません。",
+    "sections": [
+      {
+        "title": "収集する情報",
+        "items": [
+          "参加時やメンバーとしてログインする際の名前とメールアドレス。",
+          "任意のプレイヤー情報（Fortnite名、Discordのユーザー名、好きなマップ、プロフィールのスタイル、参加の目的、メッセージ、送信された画像など）。",
+          "任意の開発者・クリエイター情報（職種、稼働状況、ポートフォリオのリンク、スキルなど）。",
+          "13歳以上であること、18歳未満の場合は保護者の同意があることの確認（必須）。",
+          "登録の流入元の把握や不具合の調査のための、参照元ページやブラウザ情報などの基本的な技術情報。"
+        ]
+      },
+      {
+        "title": "利用の目的",
+        "items": [
+          "再訪したメンバーを識別するため。",
+          "メッセージ、バグ報告、マップのアイデア、コラボの相談に返信するため。",
+          "希望する方をプレイテスト、マップの更新、NLDEVSの案件に招待するため。",
+          "サイト、マップ、メンバー体験を改善するため。"
+        ]
+      },
+      {
+        "title": "情報の保護",
+        "items": [
+          "メンバーからの送信はサーバー側のルート経由で処理し、データベースの秘密鍵がブラウザのコードに出ないようにしています。",
+          "データベースへのアクセスはSupabaseのRow Level Securityとサーバー側の認証情報で制限しています。",
+          "メンバー情報を販売することはありません。",
+          "お聞きする情報は最小限にとどめ、任意項目は任意のままにしています。"
+        ]
+      }
+    ],
+    "emailsTitle": "メール",
+    "emailsBody": "NLDEVSに参加すると、短い確認メールをお送りすることがあります。連絡への同意は、今後のアップデート、プレイテスト、マップの新着情報にのみ利用します。",
+    "manageTitle": "情報の削除・変更",
+    "manageBody": "メンバー情報の変更や削除は <mail>nldevsmtl@gmail.com</mail> までご連絡ください。該当する記録を見つけられるよう、登録時と同じメールアドレスからお送りください。",
+    "thirdPartyTitle": "外部サービス",
+    "thirdPartyBody": "NLDEVSは、メンバー情報にSupabase、メール配信にResendなど信頼できるサービスを利用しています。これらのサービスは、サイトの機能提供に必要な範囲でのみデータを処理します。",
+    "backHome": "NLDEVSに戻る"
+  }
+}

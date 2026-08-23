@@ -5,7 +5,7 @@ import { defineRouting } from "next-intl/routing";
  * because these are language targets, not country targets — see LOCALE_META
  * for the hreflang codes actually emitted to crawlers.
  */
-export const locales = ["en", "fr", "pt", "es", "ru", "pl"] as const;
+export const locales = ["en", "fr", "pt", "es", "ru", "pl", "de", "ja"] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
@@ -43,6 +43,8 @@ export const LOCALE_META: Record<
   },
   ru: { hreflang: "ru", htmlLang: "ru", label: "Русский", ogLocale: "ru_RU" },
   pl: { hreflang: "pl", htmlLang: "pl", label: "Polski", ogLocale: "pl_PL" },
+  de: { hreflang: "de", htmlLang: "de", label: "Deutsch", ogLocale: "de_DE" },
+  ja: { hreflang: "ja", htmlLang: "ja", label: "日本語", ogLocale: "ja_JP" },
 };
 
 /**
@@ -58,6 +60,10 @@ export const LOCALE_META: Record<
  * Legends, Tilted, RvB, Gun Game) stay put — that is what players search.
  *
  * Slugs are ASCII-only on purpose: no accents, so URLs never percent-encode.
+ * German transliterates umlauts (ä->ae, ö->oe, ü->ue, ß->ss) and Japanese uses
+ * romaji rather than kana for the same reason — a percent-encoded path is
+ * unreadable the moment it leaves the browser (Discord, email, analytics).
+ * German keeps "maps" over "Karten" because that is what German players search.
  */
 export const pathnames = {
   "/": "/",
@@ -70,6 +76,8 @@ export const pathnames = {
     es: "/mapas-fortnite-star-wars",
     ru: "/karty-fortnite-star-wars",
     pl: "/mapy-fortnite-star-wars",
+    de: "/star-wars-fortnite-maps",
+    ja: "/star-wars-fortnite-map",
   },
   "/tmnt-fortnite-maps": {
     en: "/tmnt-fortnite-maps",
@@ -78,7 +86,12 @@ export const pathnames = {
     es: "/mapas-fortnite-tortugas-ninja",
     ru: "/karty-fortnite-cherepashki-nindzya",
     pl: "/mapy-fortnite-wojownicze-zolwie-ninja",
+    de: "/ninja-turtles-fortnite-maps",
+    ja: "/ninja-turtles-fortnite-map",
   },
+  // Squid Game keeps the Netflix title per market: "Round 6" in Brazil,
+  // "El Juego del Calamar" across LatAm, "Игра в кальмара" in Russia, and
+  // イカゲーム ("ika game") in Japan. Germany and Poland ship it in English.
   "/squid-game-fortnite-maps": {
     en: "/squid-game-fortnite-maps",
     fr: "/cartes-fortnite-squid-game",
@@ -86,6 +99,8 @@ export const pathnames = {
     es: "/mapas-fortnite-el-juego-del-calamar",
     ru: "/karty-fortnite-igra-v-kalmara",
     pl: "/mapy-fortnite-squid-game",
+    de: "/squid-game-fortnite-maps",
+    ja: "/ika-game-fortnite-map",
   },
   "/fortnite-gun-game-maps": {
     en: "/fortnite-gun-game-maps",
@@ -94,6 +109,8 @@ export const pathnames = {
     es: "/mapas-fortnite-gun-game",
     ru: "/karty-fortnite-gun-game",
     pl: "/mapy-fortnite-gun-game",
+    de: "/fortnite-gun-game-maps",
+    ja: "/fortnite-gun-game-map",
   },
   "/best-fortnite-xp-maps": {
     en: "/best-fortnite-xp-maps",
@@ -102,6 +119,8 @@ export const pathnames = {
     es: "/mejores-mapas-de-xp-fortnite",
     ru: "/luchshie-karty-xp-fortnite",
     pl: "/najlepsze-mapy-xp-fortnite",
+    de: "/beste-fortnite-xp-maps",
+    ja: "/saikyou-fortnite-xp-map",
   },
   // "99 bots" is a mode players search by name, so the number carries across
   // every locale untranslated.
@@ -112,6 +131,8 @@ export const pathnames = {
     es: "/mapas-fortnite-99-bots",
     ru: "/karty-fortnite-99-bots",
     pl: "/mapy-fortnite-99-bots",
+    de: "/fortnite-99-bots-maps",
+    ja: "/fortnite-99-bots-map",
   },
   "/fortnite-red-vs-blue-maps": {
     en: "/fortnite-red-vs-blue-maps",
@@ -120,6 +141,8 @@ export const pathnames = {
     es: "/mapas-fortnite-rojo-vs-azul",
     ru: "/karty-fortnite-krasnye-protiv-sinih",
     pl: "/mapy-fortnite-czerwoni-kontra-niebiescy",
+    de: "/fortnite-rot-gegen-blau-maps",
+    ja: "/fortnite-aka-vs-ao-map",
   },
 
   // ---- Map detail pages --------------------------------------------------
@@ -130,6 +153,8 @@ export const pathnames = {
     es: "/star-wars-tycoon-sidekick-legends",
     ru: "/star-wars-tycoon-sidekick-legends",
     pl: "/star-wars-tycoon-sidekick-legends",
+    de: "/star-wars-tycoon-sidekick-legends",
+    ja: "/star-wars-tycoon-sidekick-legends",
   },
   "/star-wars-mega-rvb": {
     en: "/star-wars-mega-rvb",
@@ -138,6 +163,8 @@ export const pathnames = {
     es: "/star-wars-mega-rvb",
     ru: "/star-wars-mega-rvb",
     pl: "/star-wars-mega-rvb",
+    de: "/star-wars-mega-rvb",
+    ja: "/star-wars-mega-rvb",
   },
   "/star-wars-tilted-99-bots-royale": {
     en: "/star-wars-tilted-99-bots-royale",
@@ -146,6 +173,8 @@ export const pathnames = {
     es: "/star-wars-tilted-99-bots-royale",
     ru: "/star-wars-tilted-99-bots-royale",
     pl: "/star-wars-tilted-99-bots-royale",
+    de: "/star-wars-tilted-99-bots-royale",
+    ja: "/star-wars-tilted-99-bots-royale",
   },
   "/tmnt-mega-ramp-survival": {
     en: "/tmnt-mega-ramp-survival",
@@ -154,6 +183,8 @@ export const pathnames = {
     es: "/tortugas-ninja-mega-rampa-supervivencia",
     ru: "/cherepashki-nindzya-mega-rampa-vyzhivanie",
     pl: "/wojownicze-zolwie-ninja-mega-rampa-przetrwanie",
+    de: "/ninja-turtles-mega-ramp-survival",
+    ja: "/ninja-turtles-mega-ramp-survival",
   },
   "/tmnt-city": {
     en: "/tmnt-city",
@@ -162,6 +193,8 @@ export const pathnames = {
     es: "/ciudad-tortugas-ninja",
     ru: "/gorod-cherepashki-nindzya",
     pl: "/miasto-wojownicze-zolwie-ninja",
+    de: "/ninja-turtles-city",
+    ja: "/ninja-turtles-city",
   },
   "/rvb-squid-minigame": {
     en: "/rvb-squid-minigame",
@@ -170,6 +203,8 @@ export const pathnames = {
     es: "/minijuego-calamar-rvb",
     ru: "/mini-igra-kalmar-rvb",
     pl: "/minigra-squid-rvb",
+    de: "/rvb-squid-minispiel",
+    ja: "/rvb-ika-minigame",
   },
   "/99-bots-squid-royale-boss": {
     en: "/99-bots-squid-royale-boss",
@@ -178,6 +213,8 @@ export const pathnames = {
     es: "/99-bots-calamar-royale-boss",
     ru: "/99-bots-kalmar-royale-boss",
     pl: "/99-bots-squid-royale-boss",
+    de: "/99-bots-squid-royale-boss",
+    ja: "/99-bots-ika-royale-boss",
   },
   "/sidekick-siege-99-bots": {
     en: "/sidekick-siege-99-bots",
@@ -186,6 +223,8 @@ export const pathnames = {
     es: "/asedio-sidekick-99-bots",
     ru: "/osada-sidekick-99-bots",
     pl: "/oblezenie-sidekick-99-bots",
+    de: "/sidekick-belagerung-99-bots",
+    ja: "/sidekick-siege-99-bots",
   },
   "/winterfest-demon-hunters": {
     en: "/winterfest-demon-hunters",
@@ -194,6 +233,8 @@ export const pathnames = {
     es: "/fiesta-invernal-cazadores-de-demonios",
     ru: "/zimniy-festival-ohotniki-na-demonov",
     pl: "/winterfest-lowcy-demonow",
+    de: "/winterfest-daemonenjaeger",
+    ja: "/winterfest-demon-hunters",
   },
   "/rvb-players-vs-guards": {
     en: "/rvb-players-vs-guards",
@@ -202,6 +243,8 @@ export const pathnames = {
     es: "/rvb-jugadores-vs-guardias",
     ru: "/rvb-igroki-protiv-ohrany",
     pl: "/rvb-gracze-kontra-straznicy",
+    de: "/rvb-spieler-gegen-waechter",
+    ja: "/rvb-player-vs-guard",
   },
 
   // ---- Standalone pages --------------------------------------------------
@@ -212,6 +255,8 @@ export const pathnames = {
     es: "/escuadron-de-playtest",
     ru: "/komanda-pleytesta",
     pl: "/druzyna-playtestow",
+    de: "/playtest-squad",
+    ja: "/playtest-squad",
   },
   "/uefn-contracts": {
     en: "/uefn-contracts",
@@ -220,6 +265,8 @@ export const pathnames = {
     es: "/contratos-uefn",
     ru: "/kontrakty-uefn",
     pl: "/kontrakty-uefn",
+    de: "/uefn-auftraege",
+    ja: "/uefn-keiyaku",
   },
   "/privacy": {
     en: "/privacy",
@@ -228,6 +275,8 @@ export const pathnames = {
     es: "/privacidad",
     ru: "/konfidentsialnost",
     pl: "/prywatnosc",
+    de: "/datenschutz",
+    ja: "/privacy-policy",
   },
 
   // ---- Internal ----------------------------------------------------------
