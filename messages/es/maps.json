@@ -264,9 +264,12 @@
           "accent": "mapa",
           "items": [
             "Acción de bot royale infinita con 99 bots.",
-            "Desbloquea héroes totalmente nuevos y enfrenta batallas de jefe.",
-            "Estadísticas y loadouts guardados entre sesiones.",
-            "Temática Tilted Towers x Star Wars para jugar con amigos."
+            "Desbloquea héroes nuevos y enfréntate a batallas de jefe.",
+            "Monta tauntauns por el mapa.",
+            "Estadísticas y equipamiento guardados entre sesiones.",
+            "Las construcciones se reinician cada 20 minutos.",
+            "Sube hasta Unreal en la tabla de clasificación del juego.",
+            "Temática Tilted Towers x Star Wars con amigos."
           ]
         }
       ],
@@ -556,9 +559,11 @@
           "title": "Por qué es",
           "accent": "divertido",
           "items": [
-            "Las rondas cortas dan alta rejugabilidad",
-            "Caos Rojo vs Azul con amigos",
-            "Competitivo y fácil de entender"
+            "Minijuegos al estilo Calamar con caos Rojo vs Azul y rondas cortas.",
+            "Armas personalizadas y armas nuevas en la rotación.",
+            "Sube hasta Unreal y completa los logros.",
+            "Desbloquea el Hammerhead del 3.er piso, un OVNI y un helicóptero.",
+            "Rondas todos contra todos, mejores con el grupo completo."
           ]
         }
       ],

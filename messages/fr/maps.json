@@ -264,9 +264,12 @@
           "accent": "map",
           "items": [
             "Action de bot royale infinie avec 99 bots.",
-            "Débloque des héros inédits et affronte des boss.",
-            "Stats et loadouts sauvegardés entre les sessions.",
-            "Thème Tilted Towers x Star Wars, à jouer entre amis."
+            "Débloquez des héros inédits et affrontez des boss.",
+            "Chevauchez des tauntauns à travers la carte.",
+            "Stats et équipements sauvegardés entre les sessions.",
+            "Les constructions se réinitialisent toutes les 20 minutes.",
+            "Montez jusqu'à Unreal sur le classement en jeu.",
+            "Thème Tilted Towers x Star Wars entre amis."
           ]
         }
       ],
@@ -556,9 +559,11 @@
           "title": "Pourquoi c'est",
           "accent": "fun",
           "items": [
-            "Des manches courtes, donc une forte rejouabilité",
-            "Du chaos Rouge contre Bleu entre amis",
-            "Compétitif et facile à comprendre"
+            "Mini-jeux façon Squid avec du chaos Rouge contre Bleu et des manches courtes.",
+            "Armes personnalisées et armes inédites dans la rotation.",
+            "Montez jusqu'à Unreal et complétez les succès.",
+            "Débloquez le Hammerhead du 3e étage, un OVNI et un hélicoptère.",
+            "Des manches en chacun pour soi, idéales en groupe complet."
           ]
         }
       ],
