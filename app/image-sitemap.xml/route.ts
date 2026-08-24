@@ -52,7 +52,7 @@ const ENTRIES: Entry[] = [
   {
     page: "/fortnite-gun-game-maps",
     images: [
-      { mapId: "winterfest-demon-hunters", kind: "gunGame" },
+      { mapId: "kpop-demon-hunters", kind: "gunGame" },
       { mapId: "tmnt-city", kind: "gunGame" },
     ],
   },
@@ -96,8 +96,12 @@ const ENTRIES: Entry[] = [
     images: [{ mapId: "sidekick-siege-99-bots", kind: "islandCode" }],
   },
   {
-    page: "/winterfest-demon-hunters",
-    images: [{ mapId: "winterfest-demon-hunters", kind: "islandCode" }],
+    page: "/99-bots-zombies-royale",
+    images: [{ mapId: "99-bots-zombies-royale", kind: "islandCode" }],
+  },
+  {
+    page: "/kpop-demon-hunters",
+    images: [{ mapId: "kpop-demon-hunters", kind: "islandCode" }],
   },
   {
     page: "/rvb-players-vs-guards",

@@ -218,7 +218,7 @@
     "notesRvbSquid": "Minijuegos al estilo El Juego del Calamar con rondas rápidas y caos entre equipos.",
     "notesSquidRoyale": "Supervivencia PvE en mundo abierto con 99 bots, batallas de jefe, nuevas armas, monturas de fauna, rangos, clasificaciones y estadísticas guardadas.",
     "notesSidekickSiege": "Supervivencia contra 99 bots centrada en sidekicks, con batallas de jefe, acción PvE, loadouts guardados, rangos, clasificaciones y hasta 5 jugadores.",
-    "notesWinterfest": "Un gun game de caza de demonios con temática invernal, rotación de armas y ciclos repetibles.",
+    "notesKpop": "Gun game todos contra todos con temática K-Pop, progresión de armas infinita y evento de batalla de jefe.",
     "notesPlayersVsGuards": "Acción por equipos contra guardias — ideal para sesiones largas.",
     "categoryTycoon": "PRÓXIMAMENTE / Star Wars Tycoon",
     "categoryMegaRamp": "Tortugas Ninja / Supervivencia",
@@ -226,7 +226,7 @@
     "categoryRvbSquid": "El Juego del Calamar / RvB",
     "categorySquidRoyale": "El Juego del Calamar / 99 Bots",
     "categorySidekickSiege": "El Juego del Calamar / Sidekicks",
-    "categoryWinterfest": "Gun Game / FFA",
+    "categoryKpop": "Gun Game / Todos contra Todos",
     "categoryPlayersVsGuards": "RvB / PvP"
   },
   "login": {

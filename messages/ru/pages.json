@@ -52,7 +52,7 @@
     },
     "rvb-squid-minigame": {
       "title": "Код карты RvB Squid Minigame ({code})",
-      "description": "Играйте в RvB Squid Minigame в Fortnite. Код {code}. Быстрые раунды, командный хаос и мини-игры в стиле Squid Game.",
+      "description": "Играйте в RvB Squid Minigame в Fortnite. Код карты {code}. Быстрые раунды «каждый сам за себя», командный хаос, кастомное оружие и мини-игры, которые хочется переигрывать.",
       "ogDescription": "Быстрые раунды, командный хаос и мини-игры в стиле «Игры в кальмара» с высокой реиграбельностью."
     },
     "99-bots-squid-royale-boss": {
@@ -65,10 +65,15 @@
       "description": "Играйте в Sidekick Siege 99 Bots в Fortnite. Код {code}. 99 bots survival с sidekicks, боссами, PvE, сохранением прогресса и рангами.",
       "ogDescription": "Карта выживания с 99 ботами в стиле «Игры в кальмара»: сайдкики, бои с боссами, PvE и таблицы лидеров."
     },
-    "winterfest-demon-hunters": {
-      "title": "Код карты Winterfest Demon Hunters ({code})",
-      "description": "Играйте в Winterfest Demon Hunters в Fortnite. Код карты {code}. Gun game в формате «каждый сам за себя» с ротацией оружия и повторяемыми циклами — отлично отрядом и для прокачки в бою.",
-      "ogDescription": "Раунды gun game «Каждый сам за себя» с повторяемыми боевыми циклами — отлично заходит отрядом."
+    "99-bots-zombies-royale": {
+      "title": "Код карты 99 Bots Zombies Royale ({code})",
+      "description": "Играйте в 99 Bots Zombies Royale в Fortnite. Код карты {code}. Карта выживания среди зомби в открытом мире: 99 ботов, новое оружие, езда на животных, сохранение статистики, ранги и таблицы лидеров.",
+      "ogDescription": "Выживание среди зомби в открытом мире с 99 ботами, постоянный экшен, сохранение статистики и таблицы лидеров."
+    },
+    "kpop-demon-hunters": {
+      "title": "Код карты KPop Demon Hunters Gun Game ({code})",
+      "description": "Играйте в KPop Demon Hunters Gun Game в Fortnite. Код карты {code}. Gun game «каждый сам за себя» на кастомном K-Pop острове: бесконечная прогрессия оружия, событие с боссом и сохранение рангов.",
+      "ogDescription": "Gun game «каждый сам за себя» на кастомном K-Pop острове: бесконечная прогрессия оружия, событие с боссом, сохранение рангов."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -97,7 +102,7 @@
     },
     "rvb-players-vs-guards": {
       "title": "Код карты RvB Players vs Guards (6263-5571-9595)",
-      "description": "Играйте в RvB Players vs Guards в Fortnite. Код 6263-5571-9595. Red vs Blue с игроками против охраны, целями и повторяемыми раундами.",
+      "description": "Играйте в RvB Players vs Guards в Fortnite. Код карты 6263-5571-9595. Карта «Красные против синих» в формате игроки против охраны: бой «каждый сам за себя», Tank Wars, суперспособности и сохранение рангов.",
       "ogDescription": "Карта Fortnite «Красные против синих» в формате игроки против охраны: командные задачи и повторяемые боевые раунды."
     }
   },
@@ -393,15 +398,15 @@
       ],
       "notes": {
         "tmnt-city": "Боевые циклы в стиле TMNT с быстрой прогрессией оружия и раундами для повторных заходов.",
-        "winterfest-demon-hunters": "Праздничный gun game с охотой на демонов, повторяемыми боевыми циклами и ротацией оружия."
+        "kpop-demon-hunters": "Бесконечный gun game в стиле K-Pop с событием с боссом, респаунами «каждый сам за себя» и сохранением статистики."
       },
       "titleOverrides": {
         "tmnt-city": "TMNT City — Gun Game",
-        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+        "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {
         "tmnt-city": "Gun Game",
-        "winterfest-demon-hunters": "FFA Gun Game"
+        "kpop-demon-hunters": "FFA Gun Game"
       },
       "relatedLabels": [
         "Карты XP",
@@ -492,23 +497,25 @@
       ],
       "notes": {
         "tmnt-mega-ramp-survival": "Скоростные забеги на выживание с повторяемыми игровыми циклами. Отлично, если вы любите активную игру во время прокачки.",
-        "winterfest-demon-hunters": "Боевые циклы с повторяемыми раундами. Хорошо заходит тем, кто хочет получать XP в бою.",
+        "kpop-demon-hunters": "Gun game «каждый сам за себя» с постоянными респаунами. Хорошо, когда нужен XP в бою.",
         "rvb-players-vs-guards": "Командные задачи и долгие сессии. Хороший вариант для ровного XP в раундах PvP-формата.",
         "tmnt-city": "Маршруты для исследования и боя со стабильными циклами XP.",
         "rvb-squid-minigame": "Быстрые раунды и игра от задач.",
         "99-bots-squid-royale-boss": "Выживание против ботов в открытом мире с постоянным экшеном и событиями с боссами. Хорошо для долгих сессий.",
         "sidekick-siege-99-bots": "Выживание против ботов с сайдкиками и сохранением прогресса. Хорошо для повторных забегов.",
-        "star-wars-tilted-99-bots-royale": "Рояль с 99 ботами без ожидания лобби. Экшен с самой высадки."
+        "star-wars-tilted-99-bots-royale": "Рояль с 99 ботами без ожидания лобби. Экшен с самой высадки.",
+        "99-bots-zombies-royale": "Выживание среди зомби в открытом мире с 99 ботами, новым оружием, ездой на животных, рангами и сохранением статистики."
       },
       "modeOverrides": {
         "tmnt-mega-ramp-survival": "Активная",
-        "winterfest-demon-hunters": "Смешанная",
+        "kpop-demon-hunters": "Смешанная",
         "rvb-players-vs-guards": "Смешанная",
         "tmnt-city": "Активная",
         "rvb-squid-minigame": "Активная",
         "99-bots-squid-royale-boss": "Активная",
         "sidekick-siege-99-bots": "Активная",
-        "star-wars-tilted-99-bots-royale": "Активная"
+        "star-wars-tilted-99-bots-royale": "Активная",
+        "99-bots-zombies-royale": "Активная"
       },
       "relatedLabels": [
         "Карты Gun Game",
@@ -585,7 +592,8 @@
       "notes": {
         "99-bots-squid-royale-boss": "PvE-выживание в открытом мире с боями с боссами, новым оружием, ездой на животных, рангами и сохранением статистики.",
         "sidekick-siege-99-bots": "Выживание против ботов с сайдкиками: бои с боссами, сохранение лоадаутов, ранги и до 5 игроков.",
-        "star-wars-tilted-99-bots-royale": "Бот-рояль с открываемыми героями, боссами и сохранением лоадаутов в версии Tilted по мотивам Star Wars."
+        "star-wars-tilted-99-bots-royale": "Бот-рояль с открываемыми героями, боссами и сохранением лоадаутов в версии Tilted по мотивам Star Wars.",
+        "99-bots-zombies-royale": "Выживание среди зомби в открытом мире с 99 ботами, новым оружием, ездой на животных, рангами и сохранением статистики."
       },
       "relatedLabels": [
         "Карты Игры в кальмара",

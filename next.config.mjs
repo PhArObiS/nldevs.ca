@@ -27,6 +27,25 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Winterfest Demon Hunters was renamed to KPop Demon Hunters on Epic —
+      // same island code (6101-7751-8665), new theme. Every locale had its own
+      // winterfest slug, so each needs its own redirect. The English path is
+      // unprefixed; the rest keep their locale prefix so the visitor stays in
+      // their language.
+      ...[
+        ["", "/winterfest-demon-hunters"],
+        ["/fr", "/fete-hivernale-chasseurs-de-demons"],
+        ["/pt", "/festa-invernal-cacadores-de-demonios"],
+        ["/es", "/fiesta-invernal-cazadores-de-demonios"],
+        ["/ru", "/zimniy-festival-ohotniki-na-demonov"],
+        ["/pl", "/winterfest-lowcy-demonow"],
+        ["/de", "/winterfest-daemonenjaeger"],
+        ["/ja", "/winterfest-demon-hunters"],
+      ].map(([prefix, oldPath]) => ({
+        source: `${prefix}${oldPath}`,
+        destination: `${prefix}/kpop-demon-hunters`,
+        permanent: true,
+      })),
     ];
   },
 };

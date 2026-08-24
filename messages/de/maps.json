@@ -501,7 +501,7 @@
       "breadcrumbParent": "Squid Game Maps",
       "eyebrow": "Squid Game / RvB",
       "intro": "Ein schneller Rot-gegen-Blau-Modus, inspiriert von Challenges im Squid-Stil — gebaut für kurze Runden und Dauer-Action.",
-      "schemaGenre": "Rot gegen Blau / Minispiele",
+      "schemaGenre": "Rot gegen Blau / Minispiele / Jeder gegen Jeden",
       "schemaDescription": "Minispiele im Squid-Stil mit Rot-gegen-Blau-Chaos und schnellen Runden.",
       "stats": [
         {
@@ -776,12 +776,108 @@
         "RvB Squid Minigame"
       ]
     },
-    "winterfest-demon-hunters": {
+    "99-bots-zombies-royale": {
+      "breadcrumbParent": "99 Bots Maps",
+      "eyebrow": "Survival Horror / 99 Bots",
+      "intro": "Willkommen bei Zombies Royale. Gib den Fortnite-Inselcode {code} ein für eine Open-World-Zombie-Survival-Map mit 99 Bots, komplett neuen Waffen, Tierreiten, Rängen, Leaderboards und gespeicherten Stats.",
+      "schemaGenre": "Survival Horror / 99 Bots / Open World",
+      "schemaDescription": "99 Bots Zombies Royale ist eine Fortnite-Survival-Horror-Map von NLDEVS mit endlosem Bot-Royale, einer von Untoten überrannten Open World, neuen Waffen, Tierreiten, gespeicherten Stats und Loadouts, Rängen und Leaderboards.",
+      "stats": [
+        {
+          "label": "Spieler",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Zombie-Survival"
+        },
+        {
+          "label": "Status",
+          "value": "Live"
+        },
+        {
+          "label": "Fortschritt",
+          "value": "Gespeicherte Stats"
+        },
+        {
+          "label": "Ideal für",
+          "value": "Horror-Survival"
+        },
+        {
+          "label": "Schwierigkeit",
+          "value": "Mittel"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Gameplay-",
+          "accent": "Features",
+          "items": [
+            "Endloses Bot-Royale",
+            "Von Untoten überrannte Open World",
+            "Komplett neue Waffen",
+            "Tierreiten",
+            "Stats und Loadout gespeichert",
+            "Setzt Bauten regelmäßig zurück",
+            "Rangsystem",
+            "Leaderboards",
+            "Spaß mit Freunden",
+            "Survival-Spiel"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Insel-",
+          "accent": "Details",
+          "heading": "Inselcode 9762-0799-4961",
+          "body": "99 Bots Zombies Royale ist eine Open-World-Survival-Map für bis zu 5 Spieler. Räum die Untoten auf, um im Rang zu steigen, reite Tiere über die Karte und behalte Stats und Loadout über Sessions hinweg."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Warum",
+          "accent": "diese Map",
+          "items": [
+            "Survival Horror im Tempo eines Bot-Royale — kein Warten auf die Lobby.",
+            "Eine Open World, die man zwischen den Kämpfen wirklich erkunden kann.",
+            "Rangsystem und Leaderboards, denen man über Sessions hinweg nachjagt.",
+            "Gespeicherte Stats und Loadouts für Spieler, die Progression wollen."
+          ]
+        }
+      ],
+      "gallery": [
+        "99 Bots Zombies Royale Vorschau",
+        "99 Bots Zombies Royale Gameplay-Screenshot",
+        "99 Bots Zombies Royale weiterer Screenshot"
+      ],
+      "faqs": [
+        {
+          "q": "Wie lautet der Inselcode von 99 Bots Zombies Royale?",
+          "a": "Der Inselcode von 99 Bots Zombies Royale ist 9762-0799-4961."
+        },
+        {
+          "q": "Ist Zombies Royale PvE oder PvP?",
+          "a": "Es ist PvE. Die Lobby füllt sich mit 99 Bots und die Map ist von Untoten überrannt — der Kampf startet also beim Landen, ohne auf Spieler zu warten."
+        },
+        {
+          "q": "Wie viele Spieler können beitreten?",
+          "a": "99 Bots Zombies Royale unterstützt bis zu 5 Spieler."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Squid Royale Boss",
+        "Sidekick Belagerung 99 Bots",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "kpop-demon-hunters": {
       "breadcrumbParent": "Gun Game Maps",
       "eyebrow": "Gun Game / FFA",
-      "intro": "Ein kampforientierter Modus für wiederholbare Runden — Action zuerst, mit gleichmäßigem Session-XP, abhängig von der Kalibrierung.",
+      "intro": "Ein Jeder-gegen-Jeden-Gun-Game auf einer eigenen K-Pop-Insel — endlose Waffenprogression, ein Bosskampf-Event, Bots zum Auffüllen der Lobby und gespeicherte Stats.",
       "schemaGenre": "Gun Game / Jeder gegen Jeden",
-      "schemaDescription": "Winterliches Dämonenjagd-Gun-Game mit Waffenrotation und wiederholbaren Kampf-Loops.",
+      "schemaDescription": "Jeder-gegen-Jeden-Gun-Game im K-Pop-Stil mit endloser Waffenprogression, Bosskampf-Event, neuen Waffen, gespeicherten Stats und Loadouts, Rängen und Leaderboards.",
       "stats": [
         {
           "label": "Spieler",
@@ -814,7 +910,7 @@
           "title": "Gameplay-",
           "accent": "Beschreibung",
           "paragraphs": [
-            "Spring in Winterfest Demon Hunters für schnelle Kampf-Loops, Waffenrotation und Runden mit Wiederspielwert. Die Map ist so gebaut, dass die Action nicht abreißt — ideal für Squads, die Dauerkämpfe und schnelles Neustarten wollen."
+            "Spring in KPop Demon Hunters für endlose Waffenprogression auf einer eigenen K-Pop-Insel. Jede Elimination bringt dich in der Waffenliste weiter, ein Bosskampf-Event unterbricht die Runden, und Bots halten die Lobby voll, damit die Action nie einbricht."
           ]
         },
         {
@@ -835,10 +931,10 @@
           "title": "Warum es",
           "accent": "Spaß macht",
           "items": [
-            "Kampforientierte Runden mit wiederholbaren Loops",
-            "Gut mit Freunden (Squads/Gruppen)",
-            "Waffenvielfalt und „nur noch eine Runde“-Tempo",
-            "Gute Option, wenn du XP beim echten Spielen willst"
+            "Endloses Gun Game — die Waffenliste rotiert weiter, Runden laufen nie ins Leere.",
+            "Bosskampf-Event für einen größeren Kampf zwischen den Runden.",
+            "Jeder gegen Jeden mit Respawns und Bots: kein Team und keine Lobby, auf die man wartet.",
+            "Stats, Loadouts und Ränge werden zwischen Sessions gespeichert."
           ]
         },
         {
@@ -860,14 +956,14 @@
         }
       ],
       "gallery": [
-        "Winterfest Demon Hunters Vorschau",
-        "Winterfest Demon Hunters Gameplay-Screenshot",
-        "Winterfest Demon Hunters weiterer Screenshot"
+        "KPop Demon Hunters Gun-Game-Vorschau",
+        "KPop Demon Hunters Gameplay-Screenshot",
+        "KPop Demon Hunters Screenshot der eigenen K-Pop-Insel"
       ],
       "faqs": [
         {
           "q": "Ist das eine Gun-Game-Map?",
-          "a": "Es ist ein kampforientierter Modus mit wiederholbaren Runden. Manche Versionen spielen sich wie ein Gun Game mit Waffenrotation — folg den Regeln der aktuellen Version auf der Map."
+          "a": "Ja. Es ist ein endloses Gun Game — jede Elimination bringt dich zur nächsten Waffe — gespielt als Jeder gegen Jeden mit Respawns, plus ein Bosskampf-Event."
         },
         {
           "q": "Gibt es XP?",
@@ -888,7 +984,7 @@
       "breadcrumbParent": "Rot-gegen-Blau-Maps",
       "eyebrow": "Rot gegen Blau / Spieler gegen Wächter",
       "intro": "Gib den Fortnite-Inselcode {code} ein und spiel RvB Players vs Guards, eine Rot-gegen-Blau-Team-Map, auf der sich Spieler durch Wächterdruck, Ziele und wiederholbare Kampfrunden arbeiten.",
-      "schemaGenre": "Rot gegen Blau / Spieler gegen Wächter",
+      "schemaGenre": "Rot gegen Blau / Team-Deathmatch / Jeder gegen Jeden",
       "schemaDescription": "RvB Players vs Guards ist eine Fortnite-Rot-gegen-Blau-Map von NLDEVS mit Teamzielen, Spieler-gegen-Wächter-Kämpfen, wiederholbaren Runden und gruppentauglichem Gameplay.",
       "stats": [
         {
@@ -944,10 +1040,10 @@
           "title": "Warum",
           "accent": "diese Map",
           "items": [
-            "Rot-gegen-Blau-Teamstruktur mit Wächterdruck.",
-            "Zielorientierte Sessions, die im Squad gut funktionieren.",
-            "Wiederholbare Kampf-Loops für Spieler, die gleichmäßige Action wollen.",
-            "Praktische Option zum Rotieren in XP-orientierten Sessions, sofern verfügbar."
+            "Alle 25 Minuten Tank Wars, zusätzlich zu den normalen Rot-gegen-Blau-Runden.",
+            "Superkräfte, eigene Waffen sowie exotische und mythische Items im Loadout-Pool.",
+            "Schalte den Hammerhead im 3. Stock, ein UFO und einen Helikopter frei.",
+            "Eliminierungen und Ränge werden zwischen Sessions gespeichert — steig bis Unreal auf."
           ]
         },
         {

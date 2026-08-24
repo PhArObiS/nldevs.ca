@@ -501,7 +501,7 @@
       "breadcrumbParent": "Mapy Squid Game",
       "eyebrow": "Squid Game / RvB",
       "intro": "Szybki tryb Czerwoni kontra Niebiescy inspirowany wyzwaniami w stylu Squid Game — zrobiony pod krótkie rundy i nieustanną akcję.",
-      "schemaGenre": "Czerwoni kontra Niebiescy / Minigry",
+      "schemaGenre": "Czerwoni kontra Niebiescy / Minigry / Każdy na każdego",
       "schemaDescription": "Minigry w stylu Squid z chaosem Czerwoni kontra Niebiescy i szybkimi rundami.",
       "stats": [
         {
@@ -776,12 +776,108 @@
         "RvB Squid Minigame"
       ]
     },
-    "winterfest-demon-hunters": {
+    "99-bots-zombies-royale": {
+      "breadcrumbParent": "Mapy 99 Bots",
+      "eyebrow": "Survival horror / 99 Bots",
+      "intro": "Witaj w Zombies Royale. Wpisz kod wyspy Fortnite {code}, żeby zagrać na mapie survivalu z zombie w otwartym świecie: 99 botów, nowe bronie, jazda na zwierzętach, rangi, tabele wyników i zapis statystyk.",
+      "schemaGenre": "Survival horror / 99 Bots / Otwarty świat",
+      "schemaDescription": "99 Bots Zombies Royale to mapa survival horror do Fortnite od NLDEVS: nieskończone bot royale, otwarty świat opanowany przez nieumarłych, nowe bronie, jazda na zwierzętach, zapis statystyk i loadoutów, rangi oraz tabele wyników.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Survival z zombie"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Postępy",
+          "value": "Zapis statystyk"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Survivalu grozy"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Cechy",
+          "accent": "rozgrywki",
+          "items": [
+            "Nieskończone bot royale",
+            "Otwarty świat opanowany przez nieumarłych",
+            "Nowe bronie",
+            "Jazda na zwierzętach",
+            "Zapis statystyk i loadoutu",
+            "Regularny reset budowli",
+            "System rang",
+            "Tabele wyników",
+            "Zabawa ze znajomymi",
+            "Gra survivalowa"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Szczegóły",
+          "accent": "wyspy",
+          "heading": "Kod wyspy 9762-0799-4961",
+          "body": "99 Bots Zombies Royale to mapa survivalowa w otwartym świecie dla maksymalnie 5 graczy. Czyść nieumarłych, żeby awansować w rangach, jeźdź na zwierzętach po mapie i zachowuj statystyki oraz loadout między sesjami."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Dlaczego warto zagrać na",
+          "accent": "tej mapie",
+          "items": [
+            "Survival horror w tempie bot royale — bez czekania na lobby.",
+            "Otwarty świat, który naprawdę da się zwiedzać między walkami.",
+            "System rang i tabele wyników, o które warto walczyć między sesjami.",
+            "Zapis statystyk i loadoutów dla graczy nastawionych na progresję."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd 99 Bots Zombies Royale",
+        "Zrzut ekranu z rozgrywki 99 Bots Zombies Royale",
+        "Dodatkowy zrzut ekranu 99 Bots Zombies Royale"
+      ],
+      "faqs": [
+        {
+          "q": "Jaki jest kod wyspy 99 Bots Zombies Royale?",
+          "a": "Kod wyspy 99 Bots Zombies Royale to 9762-0799-4961."
+        },
+        {
+          "q": "Czy Zombies Royale to PvE czy PvP?",
+          "a": "To PvE. Lobby zapełnia się 99 botami, a mapa jest opanowana przez nieumarłych, więc walka zaczyna się zaraz po zeskoku, bez czekania na graczy."
+        },
+        {
+          "q": "Ilu graczy może dołączyć?",
+          "a": "99 Bots Zombies Royale obsługuje do 5 graczy."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Squid Royale Boss",
+        "Oblężenie Sidekick 99 Bots",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "kpop-demon-hunters": {
       "breadcrumbParent": "Mapy Gun Game",
       "eyebrow": "Gun Game / FFA",
-      "intro": "Tryb nastawiony na walkę, zbudowany pod powtarzalne rundy — akcja na pierwszym miejscu i równe XP w sesji, zależnie od kalibracji.",
+      "intro": "Gun game w trybie każdy na każdego na własnej wyspie K-Pop: nieskończona progresja broni, wydarzenie z bossem, boty zapełniające lobby i zapis statystyk.",
       "schemaGenre": "Gun Game / Każdy na każdego",
-      "schemaDescription": "Świąteczny gun game z polowaniem na demony, rotacją broni i powtarzalnymi pętlami walki.",
+      "schemaDescription": "Gun game każdy na każdego w klimacie K-Pop: nieskończona progresja broni, wydarzenie z bossem, nowe bronie, zapis statystyk i loadoutów, rangi oraz tabele wyników.",
       "stats": [
         {
           "label": "Gracze",
@@ -814,7 +910,7 @@
           "title": "Opis",
           "accent": "rozgrywki",
           "paragraphs": [
-            "Wskakuj do Winterfest Demon Hunters po szybkie pętle walki, rotację broni i rundy, do których chce się wracać. Mapa jest zaprojektowana tak, żeby akcja nie zwalniała — świetna dla paczek, które chcą ciągłych walk i szybkiego ponownego wejścia."
+            "Wskakuj do KPop Demon Hunters po nieskończoną progresję broni na własnej wyspie K-Pop. Każda eliminacja przesuwa cię po liście broni, wydarzenie z bossem przełamuje rytm rund, a boty utrzymują pełne lobby, więc akcja nigdy nie siada."
           ]
         },
         {
@@ -835,10 +931,10 @@
           "title": "Dlaczego jest",
           "accent": "fajna",
           "items": [
-            "Rundy nastawione na walkę z powtarzalnymi pętlami",
-            "Świetna ze znajomymi (w drużynie albo paczce)",
-            "Różnorodność broni i tempo „jeszcze jedna runda”",
-            "Dobra opcja, gdy chcesz XP w trakcie normalnego grania"
+            "Nieskończony gun game — lista broni krąży, więc rundy nie kończą się ślepo.",
+            "Wydarzenie z bossem na większą walkę pomiędzy rundami.",
+            "Każdy na każdego z odrodzeniami i botami: nie ma drużyny ani lobby, na które trzeba czekać.",
+            "Statystyki, loadouty i rangi zapisywane między sesjami."
           ]
         },
         {
@@ -860,14 +956,14 @@
         }
       ],
       "gallery": [
-        "Podgląd Winterfest Demon Hunters",
-        "Zrzut ekranu z rozgrywki Winterfest Demon Hunters",
-        "Dodatkowy zrzut ekranu Winterfest Demon Hunters"
+        "Podgląd gun game KPop Demon Hunters",
+        "Zrzut ekranu z rozgrywki KPop Demon Hunters",
+        "Zrzut ekranu własnej wyspy K-Pop w KPop Demon Hunters"
       ],
       "faqs": [
         {
           "q": "Czy to mapa Gun Game?",
-          "a": "To tryb nastawiony na walkę z powtarzalnymi rundami. Niektóre wersje grają się jak gun game z rotacją broni — trzymaj się zasad aktualnej wersji na mapie."
+          "a": "Tak. To nieskończony gun game — każda eliminacja przenosi cię na kolejną broń — rozgrywany w trybie każdy na każdego z odrodzeniami, plus wydarzenie z bossem."
         },
         {
           "q": "Czy daje XP?",
@@ -888,7 +984,7 @@
       "breadcrumbParent": "Mapy Czerwoni kontra Niebiescy",
       "eyebrow": "Czerwoni kontra Niebiescy / Gracze kontra strażnicy",
       "intro": "Wpisz kod wyspy Fortnite {code}, żeby zagrać w RvB Players vs Guards — drużynową mapę Czerwoni kontra Niebiescy, na której gracze przebijają się przez presję strażników, realizują cele i rozgrywają powtarzalne rundy walki.",
-      "schemaGenre": "Czerwoni kontra Niebiescy / Gracze kontra strażnicy",
+      "schemaGenre": "Czerwoni kontra Niebiescy / Deathmatch drużynowy / Każdy na każdego",
       "schemaDescription": "RvB Players vs Guards to mapa Fortnite Czerwoni kontra Niebiescy od NLDEVS z celami drużynowymi, walką graczy przeciwko strażnikom, powtarzalnymi rundami i rozgrywką przyjazną paczkom.",
       "stats": [
         {
@@ -944,10 +1040,10 @@
           "title": "Dlaczego warto zagrać na",
           "accent": "tej mapie",
           "items": [
-            "Struktura drużynowa Czerwoni kontra Niebiescy z presją strażników.",
-            "Sesje oparte na celach, które dobrze działają w drużynie.",
-            "Powtarzalne pętle walki dla graczy, którzy chcą równej akcji.",
-            "Przydatna opcja do rotacji w sesjach nastawionych na XP, gdy jest dostępne."
+            "Tank Wars co 25 minut, obok zwykłych rund Czerwoni kontra Niebiescy.",
+            "Supermoce, własne bronie oraz przedmioty Egzotyczne i Mityczne w puli loadoutu.",
+            "Odblokuj Hammerheada z 3. piętra, UFO i helikopter.",
+            "Eliminacje i rangi zapisują się między sesjami — wspinaj się aż do Unreal."
           ]
         },
         {

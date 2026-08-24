@@ -501,7 +501,7 @@
       "breadcrumbParent": "Squid Game Maps",
       "eyebrow": "Squid Game / RvB",
       "intro": "A fast-paced Red vs Blue experience inspired by Squid-style challenges — built for quick rounds and constant action.",
-      "schemaGenre": "Red vs Blue / Minigames",
+      "schemaGenre": "Red vs Blue / Minigames / Free For All",
       "schemaDescription": "Squid-style minigames with Red vs Blue chaos and fast rounds.",
       "stats": [
         {
@@ -776,12 +776,108 @@
         "RvB Squid Minigame"
       ]
     },
-    "winterfest-demon-hunters": {
+    "99-bots-zombies-royale": {
+      "breadcrumbParent": "99 Bots Maps",
+      "eyebrow": "Survival Horror / 99 Bots",
+      "intro": "Welcome to Zombies Royale. Enter Fortnite island code {code} to play an open-world zombie survival map with 99 bots, all-new weapons, wildlife riding, ranks, leaderboards, and saved stats.",
+      "schemaGenre": "Survival Horror / 99 Bots / Open World",
+      "schemaDescription": "99 Bots Zombies Royale is a Fortnite survival horror map by NLDEVS with infinite bot royale, an open world overrun by the undead, new weapons, wildlife riding, saved stats and loadouts, ranks, and leaderboards.",
+      "stats": [
+        {
+          "label": "Players",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Zombie survival"
+        },
+        {
+          "label": "Status",
+          "value": "Live"
+        },
+        {
+          "label": "Progress",
+          "value": "Saved stats"
+        },
+        {
+          "label": "Best for",
+          "value": "Horror survival"
+        },
+        {
+          "label": "Difficulty",
+          "value": "Medium"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Gameplay",
+          "accent": "features",
+          "items": [
+            "Infinite bot royale",
+            "Open world overrun by the undead",
+            "All new weapons",
+            "Wildlife riding",
+            "Stats and loadout saved",
+            "Resets builds regularly",
+            "Rank system",
+            "Leaderboards",
+            "Fun with friends",
+            "Survival game"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Island",
+          "accent": "details",
+          "heading": "Island code 9762-0799-4961",
+          "body": "99 Bots Zombies Royale is an open-world survival map for up to 5 players. Clear the undead to rank up, ride wildlife across the map, and keep your stats and loadout saved across sessions."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Why play",
+          "accent": "this map",
+          "items": [
+            "Survival horror with the pacing of a bot royale — no lobby wait.",
+            "An open world you can actually explore between fights.",
+            "Rank system and leaderboards to chase across sessions.",
+            "Saved stats and loadouts for players who want progression."
+          ]
+        }
+      ],
+      "gallery": [
+        "99 Bots Zombies Royale preview",
+        "99 Bots Zombies Royale gameplay screenshot",
+        "99 Bots Zombies Royale extra screenshot"
+      ],
+      "faqs": [
+        {
+          "q": "What is the 99 Bots Zombies Royale island code?",
+          "a": "The 99 Bots Zombies Royale island code is 9762-0799-4961."
+        },
+        {
+          "q": "Is Zombies Royale PvE or PvP?",
+          "a": "It is PvE. The lobby fills with 99 bots and the map is overrun by the undead, so the fight starts the moment you land without waiting for players."
+        },
+        {
+          "q": "How many players can join?",
+          "a": "99 Bots Zombies Royale supports up to 5 players."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Squid Royale Boss",
+        "Sidekick Siege 99 Bots",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "kpop-demon-hunters": {
       "breadcrumbParent": "Gun Game Maps",
       "eyebrow": "Gun Game / FFA",
-      "intro": "A combat-focused experience built for repeatable rounds — action-first gameplay with steady session XP, depending on calibration.",
+      "intro": "A free-for-all gun game on a custom K-Pop island — infinite weapon progression, a boss battle event, bots to fill the lobby, and saved stats.",
       "schemaGenre": "Gun Game / Free For All",
-      "schemaDescription": "Holiday demon-hunting gun game with weapon rotations and repeatable combat loops.",
+      "schemaDescription": "K-Pop themed free-for-all gun game with infinite weapon progression, a boss battle event, new weapons, saved stats and loadouts, ranks, and leaderboards.",
       "stats": [
         {
           "label": "Players",
@@ -814,7 +910,7 @@
           "title": "Gameplay",
           "accent": "description",
           "paragraphs": [
-            "Jump into Winterfest Demon Hunters for fast-paced combat loops, weapon rotations, and replayable rounds. It's designed to keep the action moving — great for squads who want constant fights and quick re-queues."
+            "Jump into KPop Demon Hunters for infinite gun game progression on a custom K-Pop island. Every elimination moves you up the weapon list, a boss battle event breaks up the rounds, and bots keep the lobby full so the action never stalls."
           ]
         },
         {
@@ -835,10 +931,10 @@
           "title": "Why it's",
           "accent": "fun",
           "items": [
-            "Combat-focused rounds with repeatable loops",
-            "Great with friends (squads/parties)",
-            "Weapon variety and “one more round” pacing",
-            "Good option when you want XP while actually playing"
+            "Infinite gun game — the weapon list keeps cycling, so rounds never dead-end.",
+            "Boss battle event for a bigger fight between rounds.",
+            "Free-for-all with respawns and bots, so there is no team or lobby to wait on.",
+            "Stats, loadouts and ranks saved between sessions."
           ]
         },
         {
@@ -860,14 +956,14 @@
         }
       ],
       "gallery": [
-        "Winterfest Demon Hunters preview",
-        "Winterfest Demon Hunters gameplay screenshot placeholder",
-        "Winterfest Demon Hunters extra screenshot placeholder"
+        "KPop Demon Hunters gun game preview",
+        "KPop Demon Hunters gameplay screenshot",
+        "KPop Demon Hunters custom island screenshot"
       ],
       "faqs": [
         {
           "q": "Is this a Gun Game map?",
-          "a": "It's a combat-focused experience with repeatable rounds. Some versions play like a gun game/rotation loop — follow the in-map rules for the current build."
+          "a": "Yes. It is an infinite gun game — each elimination moves you to the next weapon — played free-for-all with respawns, plus a boss battle event."
         },
         {
           "q": "Does it give XP?",
@@ -888,7 +984,7 @@
       "breadcrumbParent": "Red vs Blue Maps",
       "eyebrow": "Red vs Blue / Players vs Guards",
       "intro": "Enter Fortnite island code {code} to play RvB Players vs Guards, a Red vs Blue team map where players fight through guard pressure, objectives, and repeatable combat rounds.",
-      "schemaGenre": "Red vs Blue / Players vs Guards",
+      "schemaGenre": "Red vs Blue / Team Deathmatch / Free For All",
       "schemaDescription": "RvB Players vs Guards is a Fortnite Red vs Blue map by NLDEVS with team objectives, players-versus-guards combat, repeatable rounds, and party-friendly gameplay.",
       "stats": [
         {
@@ -944,10 +1040,10 @@
           "title": "Why play",
           "accent": "this map",
           "items": [
-            "Red vs Blue team structure with guard pressure.",
-            "Objective-style sessions that work well for squads.",
-            "Repeatable combat loops for players who want steady action.",
-            "A useful option to rotate into XP-focused sessions when available."
+            "Tank Wars every 25 minutes on top of the usual Red vs Blue rounds.",
+            "Superpowers, custom weapons, and Exotics & Mythics in the loadout pool.",
+            "Unlock the 3rd floor Hammerhead, a UFO, and a helicopter.",
+            "Eliminations and ranks save between sessions — climb all the way to Unreal."
           ]
         },
         {

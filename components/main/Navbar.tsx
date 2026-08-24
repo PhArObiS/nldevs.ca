@@ -66,7 +66,7 @@ const FEATURED_SUBLINKS: { href: AppPathname; label: string }[] = [
     href: "/star-wars-tycoon-sidekick-legends",
     label: "Star Wars Tycoon Sidekick Legends",
   },
-  { href: "/winterfest-demon-hunters", label: "Winterfest Demon Hunters" },
+  { href: "/kpop-demon-hunters", label: "Winterfest Demon Hunters" },
 ];
 
 function isExternalHref(href: string) {

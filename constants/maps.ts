@@ -23,8 +23,9 @@ export type MapId =
   | "rvb-squid-minigame"
   | "99-bots-squid-royale-boss"
   | "sidekick-siege-99-bots"
-  | "winterfest-demon-hunters"
-  | "rvb-players-vs-guards";
+  | "kpop-demon-hunters"
+  | "rvb-players-vs-guards"
+  | "99-bots-zombies-royale";
 
 /** Message keys under the `status` / `modes` namespaces. */
 export type MapStatus = "live" | "testing" | "comingSoon";
@@ -59,7 +60,7 @@ export const MAPS: Record<MapId, MapEntry> = {
     id: "star-wars-mega-rvb",
     title: "Star Wars Mega RvB",
     code: "7323-8876-4862",
-    image: "/StarWarsRvB.jpg",
+    image: "/StarWarsMegaRvB.png",
     href: "/star-wars-mega-rvb",
     status: "live",
     mode: "redVsBlue",
@@ -125,12 +126,22 @@ export const MAPS: Record<MapId, MapEntry> = {
     mode: "sidekicks",
     updated: "2026-08",
   },
-  "winterfest-demon-hunters": {
-    id: "winterfest-demon-hunters",
-    title: "Winterfest Demon Hunters",
+  "99-bots-zombies-royale": {
+    id: "99-bots-zombies-royale",
+    title: "99 Bots Zombies Royale",
+    code: "9762-0799-4961",
+    image: "/Zombies99BotsRoyale.png",
+    href: "/99-bots-zombies-royale",
+    status: "live",
+    mode: "bots99",
+    updated: "2026-08",
+  },
+  "kpop-demon-hunters": {
+    id: "kpop-demon-hunters",
+    title: "KPop Demon Hunters Gun Game",
     code: "6101-7751-8665",
-    image: "/WinterfestDemonHuntersGunGame.jpeg",
-    href: "/winterfest-demon-hunters",
+    image: "/KpopDemonHuntersGunGame.png",
+    href: "/kpop-demon-hunters",
     status: "live",
     mode: "gunGame",
     updated: "2026-08",
@@ -155,7 +166,7 @@ export const FEATURED_MAP_IDS: MapId[] = [
   "rvb-squid-minigame",
   "99-bots-squid-royale-boss",
   "sidekick-siege-99-bots",
-  "winterfest-demon-hunters",
+  "kpop-demon-hunters",
   "rvb-players-vs-guards",
 ];
 
@@ -178,10 +189,11 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
     "99-bots-squid-royale-boss",
     "sidekick-siege-99-bots",
   ],
-  gunGame: ["tmnt-city", "winterfest-demon-hunters"],
+  gunGame: ["tmnt-city", "kpop-demon-hunters"],
   // Mode-based hubs. These cut across franchises — players search "99 bots"
   // and "red vs blue" as modes, not as Star Wars or Squid Game content.
   bots99: [
+    "99-bots-zombies-royale",
     "99-bots-squid-royale-boss",
     "sidekick-siege-99-bots",
     "star-wars-tilted-99-bots-royale",
@@ -198,8 +210,9 @@ export const HUB_MAP_IDS: Record<string, MapId[]> = {
     "sidekick-siege-99-bots",
     "99-bots-squid-royale-boss",
     "rvb-players-vs-guards",
-    "winterfest-demon-hunters",
+    "kpop-demon-hunters",
     "star-wars-tilted-99-bots-royale",
+    "99-bots-zombies-royale",
   ],
 };
 

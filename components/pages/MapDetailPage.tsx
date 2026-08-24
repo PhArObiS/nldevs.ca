@@ -54,7 +54,11 @@ const HUB_LINKS: Record<
     { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
     { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
   ],
-  "winterfest-demon-hunters": [
+  "99-bots-zombies-royale": [
+    { href: "/fortnite-99-bots-maps", labelKey: "bots99Maps" },
+    { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
+  ],
+  "kpop-demon-hunters": [
     { href: "/fortnite-gun-game-maps", labelKey: "gunGameMaps" },
     { href: "/best-fortnite-xp-maps", labelKey: "xpMaps" },
   ],

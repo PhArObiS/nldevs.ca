@@ -218,7 +218,7 @@
     "notesRvbSquid": "Minispiele im Squid-Stil mit schnellen Runden und Team-Chaos.",
     "notesSquidRoyale": "Open-World-PvE-Survival mit 99 Bots, Bosskämpfen, neuen Waffen, Tierreiten, Rängen, Leaderboards und gespeicherten Stats.",
     "notesSidekickSiege": "Sidekick-fokussiertes 99-Bot-Survival mit Bosskämpfen, PvE-Action, gespeicherten Loadouts, Rängen, Leaderboards und bis zu 5 Spielern.",
-    "notesWinterfest": "Winterliches Dämonenjagd-Gun-Game mit Waffenrotation und wiederholbaren Loops.",
+    "notesKpop": "Jeder-gegen-Jeden-Gun-Game im K-Pop-Stil mit endloser Waffenprogression und Bosskampf-Event.",
     "notesPlayersVsGuards": "Team-Action gegen Wächter — gut für längere Sessions.",
     "categoryTycoon": "BALD / Star Wars Tycoon",
     "categoryMegaRamp": "TMNT / Survival",
@@ -226,7 +226,7 @@
     "categoryRvbSquid": "Squid Game / RvB",
     "categorySquidRoyale": "Squid Game / 99 Bots",
     "categorySidekickSiege": "Squid Game / Sidekicks",
-    "categoryWinterfest": "Gun Game / FFA",
+    "categoryKpop": "Gun Game / FFA",
     "categoryPlayersVsGuards": "RvB / PvP"
   },
   "login": {

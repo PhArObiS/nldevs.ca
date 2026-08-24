@@ -501,7 +501,7 @@
       "breadcrumbParent": "Mapas El Juego del Calamar",
       "eyebrow": "El Juego del Calamar / RvB",
       "intro": "Una experiencia Rojo vs Azul acelerada inspirada en los desafíos al estilo El Juego del Calamar — hecha para rondas rápidas y acción constante.",
-      "schemaGenre": "Rojo vs Azul / Minijuegos",
+      "schemaGenre": "Rojo vs Azul / Minijuegos / Todos contra Todos",
       "schemaDescription": "Minijuegos al estilo El Juego del Calamar con caos Rojo vs Azul y rondas rápidas.",
       "stats": [
         {
@@ -776,12 +776,108 @@
         "RvB Squid Minigame"
       ]
     },
-    "winterfest-demon-hunters": {
+    "99-bots-zombies-royale": {
+      "breadcrumbParent": "Mapas 99 Bots",
+      "eyebrow": "Survival horror / 99 Bots",
+      "intro": "Bienvenido a Zombies Royale. Ingresa el código de isla de Fortnite {code} para jugar un mapa de supervivencia zombi en mundo abierto con 99 bots, armas nuevas, montura de animales, rangos, tablas de clasificación y estadísticas guardadas.",
+      "schemaGenre": "Survival horror / 99 Bots / Mundo abierto",
+      "schemaDescription": "99 Bots Zombies Royale es un mapa de survival horror de Fortnite creado por NLDEVS, con bot royale infinito, mundo abierto tomado por los muertos vivientes, armas nuevas, montura de animales, estadísticas y equipamiento guardados, rangos y tablas de clasificación.",
+      "stats": [
+        {
+          "label": "Jugadores",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Supervivencia zombi"
+        },
+        {
+          "label": "Estado",
+          "value": "Disponible"
+        },
+        {
+          "label": "Progreso",
+          "value": "Estadísticas guardadas"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Supervivencia de terror"
+        },
+        {
+          "label": "Dificultad",
+          "value": "Media"
+        }
+      ],
+      "sections": [
+        {
+          "type": "list",
+          "title": "Características del",
+          "accent": "gameplay",
+          "items": [
+            "Bot royale infinito",
+            "Mundo abierto tomado por los muertos vivientes",
+            "Armas nuevas",
+            "Montura de animales",
+            "Estadísticas y equipamiento guardados",
+            "Reinicia las construcciones periódicamente",
+            "Sistema de rangos",
+            "Tablas de clasificación",
+            "Diversión con amigos",
+            "Juego de supervivencia"
+          ]
+        },
+        {
+          "type": "card",
+          "title": "Detalles de la",
+          "accent": "isla",
+          "heading": "Código de isla 9762-0799-4961",
+          "body": "99 Bots Zombies Royale es un mapa de supervivencia en mundo abierto para hasta 5 jugadores. Limpia a los muertos vivientes para subir de rango, monta animales por el mapa y conserva tus estadísticas y equipamiento entre sesiones."
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "list",
+          "title": "Por qué jugar",
+          "accent": "este mapa",
+          "items": [
+            "Survival horror con el ritmo de un bot royale: sin esperar lobby.",
+            "Un mundo abierto que de verdad se puede explorar entre combates.",
+            "Sistema de rangos y tablas de clasificación para perseguir entre sesiones.",
+            "Estadísticas y equipamiento guardados para quienes buscan progresión."
+          ]
+        }
+      ],
+      "gallery": [
+        "Vista previa de 99 Bots Zombies Royale",
+        "Captura de gameplay de 99 Bots Zombies Royale",
+        "Captura adicional de 99 Bots Zombies Royale"
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuál es el código de isla de 99 Bots Zombies Royale?",
+          "a": "El código de isla de 99 Bots Zombies Royale es 9762-0799-4961."
+        },
+        {
+          "q": "¿Zombies Royale es PvE o PvP?",
+          "a": "Es PvE. El lobby se llena con 99 bots y el mapa está tomado por los muertos vivientes, así que la pelea empieza apenas aterrizas, sin esperar jugadores."
+        },
+        {
+          "q": "¿Cuántos jugadores pueden entrar?",
+          "a": "99 Bots Zombies Royale admite hasta 5 jugadores."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Squid Royale Boss",
+        "Asedio Sidekick 99 Bots",
+        "Star Wars Tilted 99 Bots Royale"
+      ]
+    },
+    "kpop-demon-hunters": {
       "breadcrumbParent": "Mapas Gun Game",
       "eyebrow": "Gun Game / FFA",
-      "intro": "Una experiencia centrada en el combate hecha para rondas repetibles — gameplay con la acción primero y XP constante por sesión, según la calibración.",
+      "intro": "Un gun game todos contra todos en una isla K-Pop personalizada: progresión de armas infinita, evento de batalla de jefe, bots para llenar el lobby y estadísticas guardadas.",
       "schemaGenre": "Gun Game / Todos contra Todos",
-      "schemaDescription": "Gun game de caza de demonios con temática invernal, rotación de armas y ciclos de combate repetibles.",
+      "schemaDescription": "Gun game todos contra todos con temática K-Pop, progresión de armas infinita, evento de batalla de jefe, armas nuevas, estadísticas y equipamiento guardados, rangos y tablas de clasificación.",
       "stats": [
         {
           "label": "Jugadores",
@@ -814,7 +910,7 @@
           "title": "Descripción del",
           "accent": "gameplay",
           "paragraphs": [
-            "Entra a Winterfest Demon Hunters para ciclos de combate acelerados, rotación de armas y rondas rejugables. Está diseñado para mantener la acción en movimiento — ideal para squads que quieren peleas constantes y colas rápidas."
+            "Entra en KPop Demon Hunters para una progresión de armas infinita en una isla K-Pop personalizada. Cada eliminación te hace avanzar en la lista de armas, un evento de batalla de jefe rompe el ritmo de las rondas, y los bots mantienen el lobby lleno para que la acción no se detenga."
           ]
         },
         {
@@ -835,10 +931,10 @@
           "title": "Por qué es",
           "accent": "divertido",
           "items": [
-            "Rondas centradas en el combate con ciclos repetibles",
-            "Genial con amigos (squads / grupos)",
-            "Variedad de armas y ritmo de “una ronda más”",
-            "Buena opción cuando quieres XP jugando de verdad"
+            "Gun game infinito: la lista de armas sigue rotando, así que las rondas nunca se estancan.",
+            "Evento de batalla de jefe para un enfrentamiento más grande entre rondas.",
+            "Todos contra todos con reapariciones y bots: no hay equipo ni lobby que esperar.",
+            "Estadísticas, equipamiento y rangos guardados entre sesiones."
           ]
         },
         {
@@ -860,14 +956,14 @@
         }
       ],
       "gallery": [
-        "Vista previa de Winterfest Demon Hunters",
-        "Captura de gameplay de Winterfest Demon Hunters",
-        "Captura adicional de Winterfest Demon Hunters"
+        "Vista previa del gun game KPop Demon Hunters",
+        "Captura de gameplay de KPop Demon Hunters",
+        "Captura de la isla K-Pop personalizada de KPop Demon Hunters"
       ],
       "faqs": [
         {
           "q": "¿Es un mapa de Gun Game?",
-          "a": "Es una experiencia centrada en el combate con rondas repetibles. Algunas versiones funcionan como un gun game / ciclo de rotación — sigue las reglas del mapa en la versión actual."
+          "a": "Sí. Es un gun game infinito —cada eliminación te lleva al arma siguiente— jugado todos contra todos con reapariciones, además de un evento de batalla de jefe."
         },
         {
           "q": "¿Da XP?",
@@ -888,7 +984,7 @@
       "breadcrumbParent": "Mapas Rojo vs Azul",
       "eyebrow": "Rojo vs Azul / Jugadores vs guardias",
       "intro": "Introduce el codigo de isla {code} en Fortnite para jugar RvB Players vs Guards, un mapa Rojo vs Azul donde los jugadores enfrentan guardias, objetivos y rondas de combate repetibles.",
-      "schemaGenre": "Rojo vs Azul / Jugadores vs guardias",
+      "schemaGenre": "Rojo vs Azul / Combate a muerte por equipos / Todos contra Todos",
       "schemaDescription": "RvB Players vs Guards es un mapa Fortnite Rojo vs Azul de NLDEVS con objetivos por equipo, combate de jugadores contra guardias, rondas repetibles y gameplay ideal para grupos.",
       "stats": [
         {
@@ -944,10 +1040,10 @@
           "title": "Por que jugar",
           "accent": "este mapa",
           "items": [
-            "Estructura Rojo vs Azul con presion de guardias.",
-            "Objetivos por equipo que funcionan bien para squads.",
-            "Ciclos de combate repetibles para accion constante.",
-            "Una buena opcion para rotar en sesiones de XP cuando la XP este disponible."
+            "Tank Wars cada 25 minutos, además de las rondas normales de Rojo vs Azul.",
+            "Superpoderes, armas personalizadas y objetos Exóticos y Míticos en el equipamiento.",
+            "Desbloquea el Hammerhead del 3.er piso, un OVNI y un helicóptero.",
+            "Las eliminaciones y los rangos se guardan entre sesiones: sube hasta Unreal."
           ]
         },
         {

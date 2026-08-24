@@ -55,9 +55,9 @@ export const LOCALE_META: Record<
  *  - Squid Game is "Round 6" in Brazil (Netflix BR title) and
  *    "El Juego del Calamar" across Latin America.
  *  - TMNT localizes fully: Tortues Ninja / Tartarugas Ninja / Tortugas Ninja.
- *  - Winterfest is Epic's own event, localized as Epic localizes it.
  * Product names that ship in English inside Fortnite itself (Tycoon Sidekick
- * Legends, Tilted, RvB, Gun Game) stay put — that is what players search.
+ * Legends, Tilted, RvB, Gun Game, KPop Demon Hunters, Zombies Royale) stay
+ * put — that is what players search, in every market.
  *
  * Slugs are ASCII-only on purpose: no accents, so URLs never percent-encode.
  * German transliterates umlauts (ä->ae, ö->oe, ü->ue, ß->ss) and Japanese uses
@@ -226,15 +226,30 @@ export const pathnames = {
     de: "/sidekick-belagerung-99-bots",
     ja: "/sidekick-siege-99-bots",
   },
-  "/winterfest-demon-hunters": {
-    en: "/winterfest-demon-hunters",
-    fr: "/fete-hivernale-chasseurs-de-demons",
-    pt: "/festa-invernal-cacadores-de-demonios",
-    es: "/fiesta-invernal-cazadores-de-demonios",
-    ru: "/zimniy-festival-ohotniki-na-demonov",
-    pl: "/winterfest-lowcy-demonow",
-    de: "/winterfest-daemonenjaeger",
-    ja: "/winterfest-demon-hunters",
+  // Renamed on Epic from Winterfest Demon Hunters; same island code. KPop
+  // Demon Hunters is a brand name, so it does not localize — the old
+  // per-locale winterfest slugs are 301'd in next.config.mjs.
+  // Zombies Royale is a mode name players search in English; the slug is
+  // identical across locales for the same reason as the Star Wars maps.
+  "/99-bots-zombies-royale": {
+    en: "/99-bots-zombies-royale",
+    fr: "/99-bots-zombies-royale",
+    pt: "/99-bots-zombies-royale",
+    es: "/99-bots-zombies-royale",
+    ru: "/99-bots-zombies-royale",
+    pl: "/99-bots-zombies-royale",
+    de: "/99-bots-zombies-royale",
+    ja: "/99-bots-zombies-royale",
+  },
+  "/kpop-demon-hunters": {
+    en: "/kpop-demon-hunters",
+    fr: "/kpop-demon-hunters",
+    pt: "/kpop-demon-hunters",
+    es: "/kpop-demon-hunters",
+    ru: "/kpop-demon-hunters",
+    pl: "/kpop-demon-hunters",
+    de: "/kpop-demon-hunters",
+    ja: "/kpop-demon-hunters",
   },
   "/rvb-players-vs-guards": {
     en: "/rvb-players-vs-guards",

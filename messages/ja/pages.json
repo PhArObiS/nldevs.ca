@@ -52,7 +52,7 @@
     },
     "rvb-squid-minigame": {
       "title": "RvB Squid Minigame マップコード（{code}）",
-      "description": "FortniteでRvB Squid Minigameをプレイ。マップコード {code}。テンポの速いラウンド、チームのカオス、何度も遊べるミニゲーム。",
+      "description": "FortniteでRvB Squid Minigameをプレイ。マップコード {code}。テンポの速いFFAラウンド、チームのカオス、カスタム武器、何度も遊べるミニゲーム。",
       "ogDescription": "テンポの速いラウンド、チームのカオス、何度も遊べるイカゲーム風ミニゲーム。"
     },
     "99-bots-squid-royale-boss": {
@@ -65,10 +65,15 @@
       "description": "FortniteでSidekick Siege 99 Botsをプレイ。マップコード {code}。イカゲーム風の99ボットサバイバル。サイドキック、ボス戦、PvE、ステータス保存、ランク、リーダーボード付き。",
       "ogDescription": "イカゲーム風の99ボットサバイバル。サイドキック、ボス戦、PvE、リーダーボード付き。"
     },
-    "winterfest-demon-hunters": {
-      "title": "Winterfest Demon Hunters マップコード（{code}）",
-      "description": "FortniteでWinterfest Demon Huntersをプレイ。マップコード {code}。武器ローテーションと繰り返し遊べるループがあるFFA（全員対戦）ガンゲーム — パーティ向きで、戦いながらレベルも上がる。",
-      "ogDescription": "繰り返し遊べる戦闘ループがあるFFA（全員対戦）ガンゲームのラウンド — パーティ向き。"
+    "99-bots-zombies-royale": {
+      "title": "99 Bots Zombies Royale マップコード（{code}）",
+      "description": "Fortniteで99 Bots Zombies Royaleをプレイ。マップコード {code}。99ボットのオープンワールド・ゾンビサバイバル。新武器、動物ライド、ステータス保存、ランク、リーダーボード付き。",
+      "ogDescription": "99ボットのオープンワールド・ゾンビサバイバル。途切れないアクション、ステータス保存、リーダーボード。"
+    },
+    "kpop-demon-hunters": {
+      "title": "KPop Demon Hunters ガンゲーム マップコード（{code}）",
+      "description": "FortniteでKPop Demon Hunters Gun Gameをプレイ。マップコード {code}。カスタムK-Pop島のFFAガンゲームで、無限の武器進行、ボス戦イベント、ランク保存に対応。",
+      "ogDescription": "カスタムK-Pop島のFFAガンゲーム — 無限の武器進行、ボス戦イベント、ランク保存。"
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -97,7 +102,7 @@
     },
     "rvb-players-vs-guards": {
       "title": "RvB Players vs Guards マップコード（6263-5571-9595）",
-      "description": "FortniteでRvB Players vs Guardsをプレイ。マップコード 6263-5571-9595。チーム目標、繰り返し遊べるラウンド、安定した戦闘があるプレイヤーvsガード形式の赤vs青の島。",
+      "description": "FortniteでRvB Players vs Guardsをプレイ。マップコード 6263-5571-9595。FFA（全員対戦）の戦闘、25分ごとのTank Wars、スーパーパワー、ランク保存があるプレイヤーvsガード形式の赤vs青の島。",
       "ogDescription": "チーム目標と繰り返し遊べる戦闘ラウンドを備えた、プレイヤーvsガード形式のFortnite赤vs青マップ。"
     }
   },
@@ -393,15 +398,15 @@
       ],
       "notes": {
         "tmnt-city": "タートルズ風の戦闘ループ。武器の進行が速く、何度も遊べるラウンド。",
-        "winterfest-demon-hunters": "冬イベント風のデーモンハントガンゲーム。繰り返し遊べる戦闘ループと武器ローテーション付き。"
+        "kpop-demon-hunters": "K-Pop風の無限ガンゲーム。ボス戦イベント、FFAのリスポーン、ステータス保存付き。"
       },
       "titleOverrides": {
         "tmnt-city": "TMNT City — Gun Game",
-        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+        "kpop-demon-hunters": "KPop Demon Hunters — ガンゲーム"
       },
       "modeOverrides": {
         "tmnt-city": "Gun Game",
-        "winterfest-demon-hunters": "FFA ガンゲーム"
+        "kpop-demon-hunters": "FFA ガンゲーム"
       },
       "relatedLabels": [
         "XPマップ",
@@ -492,23 +497,25 @@
       ],
       "notes": {
         "tmnt-mega-ramp-survival": "繰り返し遊べるループのある高速サバイバル。レベル上げ中もアクティブに動きたい人向け。",
-        "winterfest-demon-hunters": "繰り返し遊べる戦闘中心のループ。戦いながらXPを稼ぎたい人にちょうどいい。",
+        "kpop-demon-hunters": "リスポーンが途切れないFFAガンゲーム。戦いながらXPを稼ぎたい人に。",
         "rvb-players-vs-guards": "チーム目標と長めのセッション。PvP寄りのラウンドで安定してXPを稼ぎたいときに。",
         "tmnt-city": "探索と戦闘のルートがあり、XPループも安定している。",
         "rvb-squid-minigame": "テンポの速いラウンドと目標中心のプレイ。",
         "99-bots-squid-royale-boss": "常に戦闘があるオープンワールドのボットサバイバル。ボスイベントもあり長時間セッション向き。",
         "sidekick-siege-99-bots": "サイドキック中心のボットサバイバル。進行状況が保存されるので周回に向く。",
-        "star-wars-tilted-99-bots-royale": "ロビー待ちなしの99ボットロワイヤル。降りた瞬間から戦える。"
+        "star-wars-tilted-99-bots-royale": "ロビー待ちなしの99ボットロワイヤル。降りた瞬間から戦える。",
+        "99-bots-zombies-royale": "99ボットのオープンワールド・ゾンビサバイバル。新武器、動物ライド、ランク、ステータス保存付き。"
       },
       "modeOverrides": {
         "tmnt-mega-ramp-survival": "アクティブ",
-        "winterfest-demon-hunters": "ミックス",
+        "kpop-demon-hunters": "ミックス",
         "rvb-players-vs-guards": "ミックス",
         "tmnt-city": "アクティブ",
         "rvb-squid-minigame": "アクティブ",
         "99-bots-squid-royale-boss": "アクティブ",
         "sidekick-siege-99-bots": "アクティブ",
-        "star-wars-tilted-99-bots-royale": "アクティブ"
+        "star-wars-tilted-99-bots-royale": "アクティブ",
+        "99-bots-zombies-royale": "アクティブ"
       },
       "relatedLabels": [
         "ガンゲームマップ",
@@ -585,7 +592,8 @@
       "notes": {
         "99-bots-squid-royale-boss": "オープンワールドのPvEサバイバル。ボス戦、新武器、動物ライド、ランク、ステータス保存付き。",
         "sidekick-siege-99-bots": "サイドキック中心のボットサバイバル。ボス戦、ロードアウト保存、ランク、最大5人プレイ。",
-        "star-wars-tilted-99-bots-royale": "解放できるヒーロー、ボス、ロードアウト保存があるボットロワイヤル。Star Wars風のTiltedが舞台。"
+        "star-wars-tilted-99-bots-royale": "解放できるヒーロー、ボス、ロードアウト保存があるボットロワイヤル。Star Wars風のTiltedが舞台。",
+        "99-bots-zombies-royale": "99ボットのオープンワールド・ゾンビサバイバル。新武器、動物ライド、ランク、ステータス保存付き。"
       },
       "relatedLabels": [
         "イカゲームマップ",

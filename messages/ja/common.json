@@ -218,7 +218,7 @@
     "notesRvbSquid": "テンポの速いラウンドとチームのカオスが楽しいイカゲーム風ミニゲーム。",
     "notesSquidRoyale": "99ボットのオープンワールドPvEサバイバル。ボス戦、新武器、動物ライド、ランク、リーダーボード、ステータス保存あり。",
     "notesSidekickSiege": "サイドキック中心の99ボットサバイバル。ボス戦、PvE、ロードアウト保存、ランク、リーダーボード、最大5人プレイ。",
-    "notesWinterfest": "冬イベント風のデーモンハントガンゲーム。武器ローテーションと繰り返し遊べるループ付き。",
+    "notesKpop": "K-Pop風のFFAガンゲーム。無限の武器進行とボス戦イベント付き。",
     "notesPlayersVsGuards": "ガードと戦うチーム戦 — 長めのセッション向き。",
     "categoryTycoon": "近日公開 / Star Wars Tycoon",
     "categoryMegaRamp": "タートルズ / サバイバル",
@@ -226,7 +226,7 @@
     "categoryRvbSquid": "イカゲーム / RvB",
     "categorySquidRoyale": "イカゲーム / 99 Bots",
     "categorySidekickSiege": "イカゲーム / サイドキック",
-    "categoryWinterfest": "ガンゲーム / FFA",
+    "categoryKpop": "ガンゲーム / FFA",
     "categoryPlayersVsGuards": "RvB / PvP"
   },
   "login": {

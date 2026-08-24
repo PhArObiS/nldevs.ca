@@ -46,7 +46,7 @@ const footerNav: FooterColumn[] = [
       },
       { href: "/sidekick-siege-99-bots", label: "Sidekick Siege 99 Bots" },
       { href: "/rvb-squid-minigame", label: "RvB Squid Minigame" },
-      { href: "/winterfest-demon-hunters", label: "Winterfest Demon Hunters" },
+      { href: "/kpop-demon-hunters", label: "Winterfest Demon Hunters" },
     ],
   },
 ];

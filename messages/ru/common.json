@@ -218,7 +218,7 @@
     "notesRvbSquid": "Мини-игры в стиле «Кальмара» с быстрыми раундами и командным хаосом.",
     "notesSquidRoyale": "PvE-выживание в открытом мире с 99 ботами, боями с боссами, новым оружием, ездой на животных, рангами, таблицами лидеров и сохранением статистики.",
     "notesSidekickSiege": "Выживание против 99 ботов с упором на сайдкиков: бои с боссами, PvE, сохранение лоадаутов, ранги, таблицы лидеров и до 5 игроков.",
-    "notesWinterfest": "Праздничный gun game с охотой на демонов, ротацией оружия и повторяемыми циклами.",
+    "notesKpop": "Gun game «каждый сам за себя» в стиле K-Pop с бесконечной прогрессией оружия и событием с боссом.",
     "notesPlayersVsGuards": "Командный экшен против охраны — хорошо заходит на длинные сессии.",
     "categoryTycoon": "СКОРО / Star Wars Tycoon",
     "categoryMegaRamp": "Черепашки-ниндзя / Выживание",
@@ -226,7 +226,7 @@
     "categoryRvbSquid": "Игра в кальмара / RvB",
     "categorySquidRoyale": "Игра в кальмара / 99 Bots",
     "categorySidekickSiege": "Игра в кальмара / Сайдкики",
-    "categoryWinterfest": "Gun Game / FFA",
+    "categoryKpop": "Gun Game / FFA",
     "categoryPlayersVsGuards": "RvB / PvP"
   },
   "login": {

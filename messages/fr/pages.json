@@ -52,7 +52,7 @@
     },
     "rvb-squid-minigame": {
       "title": "Code de map RvB Squid Minigame ({code})",
-      "description": "Jouez à RvB Squid Minigame sur Fortnite. Code de map {code}. Manches rapides, chaos en équipe et mini-jeux rejouables.",
+      "description": "Jouez au mini-jeu Squid RvB sur Fortnite. Code de map {code}. Manches rapides en chacun pour soi, chaos en équipe, armes personnalisées et mini-jeux à rejouer.",
       "ogDescription": "Manches rapides, chaos en équipe et mini-jeux rejouables façon Squid Game."
     },
     "99-bots-squid-royale-boss": {
@@ -65,10 +65,15 @@
       "description": "Jouez à Sidekick Siege 99 Bots sur Fortnite. Code de map {code}. Une map de survie Squid Game contre 99 bots avec sidekicks, combats de boss, action PvE, stats sauvegardées, rangs et classements.",
       "ogDescription": "Une map de survie Squid Game contre 99 bots avec sidekicks, combats de boss, action PvE et classements."
     },
-    "winterfest-demon-hunters": {
-      "title": "Code de map Winterfest Demon Hunters ({code})",
-      "description": "Jouez à Winterfest Demon Hunters sur Fortnite. Code de map {code}. Un gun game en chacun pour soi avec rotations d'armes et boucles répétables — idéal en escouade et pour monter en niveau en combattant.",
-      "ogDescription": "Manches de gun game en Chacun pour soi avec des boucles de combat répétables — parfait en escouade."
+    "99-bots-zombies-royale": {
+      "title": "Code de map 99 Bots Zombies Royale ({code})",
+      "description": "Jouez à 99 Bots Zombies Royale sur Fortnite. Code de map {code}. Une carte de survie zombie en monde ouvert avec 99 bots, des armes inédites, des montures sauvages, des stats sauvegardées, des rangs et des classements.",
+      "ogDescription": "Survie zombie en monde ouvert avec 99 bots, action permanente, stats sauvegardées et classements."
+    },
+    "kpop-demon-hunters": {
+      "title": "Code de map KPop Demon Hunters Gun Game ({code})",
+      "description": "Jouez à KPop Demon Hunters Gun Game sur Fortnite. Code de map {code}. Un gun game en chacun pour soi sur une île K-Pop personnalisée, avec progression d'armes infinie, événement de boss et rangs sauvegardés.",
+      "ogDescription": "Gun game en chacun pour soi sur une île K-Pop personnalisée — progression d'armes infinie, événement de boss, rangs sauvegardés."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -97,7 +102,7 @@
     },
     "rvb-players-vs-guards": {
       "title": "Code de map RvB Players vs Guards (6263-5571-9595)",
-      "description": "Jouez a RvB Players vs Guards sur Fortnite. Code de map 6263-5571-9595. Une ile Rouge contre Bleu avec joueurs contre gardes, objectifs d'equipe et manches repetables.",
+      "description": "Jouez à RvB Joueurs contre Gardes sur Fortnite. Code de map 6263-5571-9595. Une île Rouge contre Bleu joueurs-contre-gardes avec du combat en chacun pour soi, des Tank Wars, des super-pouvoirs et des rangs sauvegardés.",
       "ogDescription": "Map Fortnite Rouge contre Bleu avec joueurs contre gardes, objectifs d'equipe et combats repetables."
     }
   },
@@ -393,15 +398,15 @@
       ],
       "notes": {
         "tmnt-city": "Boucles de combat sur thème Tortues Ninja avec progression d'armes rapide et manches rejouables.",
-        "winterfest-demon-hunters": "Gun game de chasse aux démons sur thème hivernal avec boucles de combat répétables et rotations d'armes."
+        "kpop-demon-hunters": "Gun game infini sur thème K-Pop avec événement de boss, réapparitions en chacun pour soi et stats sauvegardées."
       },
       "titleOverrides": {
         "tmnt-city": "TMNT City — Gun Game",
-        "winterfest-demon-hunters": "Winterfest Demon Hunters — Gun Game"
+        "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {
         "tmnt-city": "Gun Game",
-        "winterfest-demon-hunters": "Gun Game FFA"
+        "kpop-demon-hunters": "Gun Game FFA"
       },
       "relatedLabels": [
         "Maps XP",
@@ -492,23 +497,25 @@
       ],
       "notes": {
         "tmnt-mega-ramp-survival": "Runs de survie nerveux avec des boucles de gameplay répétables. Parfait si tu préfères jouer activement en montant en niveau.",
-        "winterfest-demon-hunters": "Boucles axées combat avec des manches répétables. Idéal pour les joueurs qui veulent de l'XP en combattant.",
+        "kpop-demon-hunters": "Gun game en chacun pour soi avec réapparitions constantes. Bon pour l'XP en combattant.",
         "rvb-players-vs-guards": "Objectifs en équipe et sessions plus longues. Bon pour un XP régulier tout en jouant des manches façon PvP.",
         "tmnt-city": "Trajets d'exploration et de combat avec des boucles d'XP constantes.",
         "rvb-squid-minigame": "Manches rapides et jeu basé sur des objectifs.",
         "99-bots-squid-royale-boss": "Survie contre les bots en monde ouvert avec de l'action constante et des événements de boss. Idéal pour les longues sessions.",
         "sidekick-siege-99-bots": "Survie contre les bots menée par les sidekicks, avec progression sauvegardée. Parfait pour enchaîner les runs.",
-        "star-wars-tilted-99-bots-royale": "Royale contre 99 bots sans attente de lobby. De l'action dès le saut."
+        "star-wars-tilted-99-bots-royale": "Royale contre 99 bots sans attente de lobby. De l'action dès le saut.",
+        "99-bots-zombies-royale": "Survie zombie en monde ouvert avec 99 bots, armes inédites, montures sauvages, rangs et stats sauvegardées."
       },
       "modeOverrides": {
         "tmnt-mega-ramp-survival": "Actif",
-        "winterfest-demon-hunters": "Mixte",
+        "kpop-demon-hunters": "Mixte",
         "rvb-players-vs-guards": "Mixte",
         "tmnt-city": "Actif",
         "rvb-squid-minigame": "Actif",
         "99-bots-squid-royale-boss": "Actif",
         "sidekick-siege-99-bots": "Actif",
-        "star-wars-tilted-99-bots-royale": "Actif"
+        "star-wars-tilted-99-bots-royale": "Actif",
+        "99-bots-zombies-royale": "Active"
       },
       "relatedLabels": [
         "Maps Gun Game",
@@ -585,7 +592,8 @@
       "notes": {
         "99-bots-squid-royale-boss": "Survie PvE en monde ouvert avec combats de boss, nouvelles armes, montures sauvages, rangs et stats sauvegardées.",
         "sidekick-siege-99-bots": "Survie contre les bots menée par les sidekicks, avec combats de boss, loadouts sauvegardés, rangs et jusqu'à 5 joueurs.",
-        "star-wars-tilted-99-bots-royale": "Bot royale avec héros à débloquer, boss et loadouts sauvegardés, dans une version Star Wars de Tilted."
+        "star-wars-tilted-99-bots-royale": "Bot royale avec héros à débloquer, boss et loadouts sauvegardés, dans une version Star Wars de Tilted.",
+        "99-bots-zombies-royale": "Survie zombie en monde ouvert avec 99 bots, armes inédites, montures sauvages, rangs et stats sauvegardées."
       },
       "relatedLabels": [
         "Maps Squid Game",

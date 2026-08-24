@@ -59,9 +59,9 @@ const FEATURED_COPY: Record<string, { notes: string; category: string }> = {
     notes: "notesSidekickSiege",
     category: "categorySidekickSiege",
   },
-  "winterfest-demon-hunters": {
-    notes: "notesWinterfest",
-    category: "categoryWinterfest",
+  "kpop-demon-hunters": {
+    notes: "notesKpop",
+    category: "categoryKpop",
   },
   "rvb-players-vs-guards": {
     notes: "notesPlayersVsGuards",
