@@ -46,8 +46,8 @@
       "ogDescription": "Deathrun de las Tortugas Ninja por una mega rampa: hoverboards, tablas guardadas, pizzas y 0,01 % de supervivencia."
     },
     "tmnt-city": {
-      "title": "Código de mapa TMNT City ({code})",
-      "description": "Explora TMNT City en Fortnite. Código de mapa {code}. Una experiencia de ciudad con temática Tortugas Ninja y zonas de combate todos contra todos, creada con UEFN por NLDEVS.",
+      "title": "Código de mapa TMNT City Gun Game One Shot ({code})",
+      "description": "Explora TMNT City en Fortnite. Código de mapa {code}. Una ciudad con temática Tortugas Ninja, gun game one shot, zonas de combate todos contra todos y reapariciones infinitas, creada con UEFN por NLDEVS.",
       "ogDescription": "Explora TMNT City en Fortnite. Una ciudad temática de las Tortugas Ninja creada con UEFN."
     },
     "rvb-squid-minigame": {
@@ -71,7 +71,7 @@
       "ogDescription": "Supervivencia zombi en mundo abierto con 99 bots, acción constante, estadísticas guardadas y clasificaciones."
     },
     "kpop-demon-hunters": {
-      "title": "Código de mapa KPop Demon Hunters Gun Game ({code})",
+      "title": "Código de mapa KPop Demon Hunters Fortnite Gun Game ({code})",
       "description": "Juega KPop Demon Hunters Gun Game en Fortnite. Código de mapa {code}. Un gun game todos contra todos en una isla K-Pop personalizada, con progresión de armas infinita, evento de jefe y rangos guardados.",
       "ogDescription": "Gun game todos contra todos en una isla K-Pop personalizada: progresión de armas infinita, evento de jefe, rangos guardados."
     },
@@ -401,7 +401,7 @@
         "kpop-demon-hunters": "Gun game infinito con temática K-Pop, evento de jefe, reapariciones todos contra todos y estadísticas guardadas."
       },
       "titleOverrides": {
-        "tmnt-city": "TMNT City — Gun Game",
+        "tmnt-city": "TMNT City — Gun Game One Shot",
         "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {

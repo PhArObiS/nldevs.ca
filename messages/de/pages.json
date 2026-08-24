@@ -46,8 +46,8 @@
       "ogDescription": "TMNT-Deathrun eine Mega Ramp hinauf — Hoverboards, gespeicherte Leaderboards, Pizzen und 0,01 % Überlebensrate."
     },
     "tmnt-city": {
-      "title": "TMNT City Map-Code ({code})",
-      "description": "Erkunde TMNT City in Fortnite. Map-Code {code}. Ein Stadt-Modus im TMNT-Stil mit Jeder-gegen-Jeden-Kampfzonen, gebaut mit UEFN von NLDEVS.",
+      "title": "TMNT City Gun Game One Shot Map-Code ({code})",
+      "description": "Erkunde TMNT City in Fortnite. Map-Code {code}. Eine Stadt im TMNT-Stil mit One-Shot-Gun-Game, Jeder-gegen-Jeden-Kampfzonen und endlosen Respawns, gebaut mit UEFN von NLDEVS.",
       "ogDescription": "Erkunde TMNT City in Fortnite. Ein Stadt-Modus im TMNT-Stil, gebaut mit UEFN."
     },
     "rvb-squid-minigame": {
@@ -71,7 +71,7 @@
       "ogDescription": "Open-World-Zombie-Survival mit 99 Bots, Dauer-Action, gespeicherten Stats und Leaderboards."
     },
     "kpop-demon-hunters": {
-      "title": "KPop Demon Hunters Gun Game Map-Code ({code})",
+      "title": "KPop Demon Hunters Fortnite Gun Game Map-Code ({code})",
       "description": "Spiel KPop Demon Hunters Gun Game in Fortnite. Map-Code {code}. Ein Jeder-gegen-Jeden-Gun-Game auf einer eigenen K-Pop-Insel mit endloser Waffenprogression, Bosskampf-Event und gespeicherten Rängen.",
       "ogDescription": "Jeder-gegen-Jeden-Gun-Game auf einer eigenen K-Pop-Insel — endlose Waffenprogression, Bosskampf-Event, gespeicherte Ränge."
     },
@@ -401,7 +401,7 @@
         "kpop-demon-hunters": "Endloses Gun Game im K-Pop-Stil mit Bosskampf-Event, Jeder-gegen-Jeden-Respawns und gespeicherten Stats."
       },
       "titleOverrides": {
-        "tmnt-city": "TMNT City — Gun Game",
+        "tmnt-city": "TMNT City — Gun Game One Shot",
         "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {

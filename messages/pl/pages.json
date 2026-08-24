@@ -46,8 +46,8 @@
       "ogDescription": "Deathrun Żółwi Ninja na mega rampie — hoverboardy, zapisywane tabele wyników, pizze i 0,01 % szans na przetrwanie."
     },
     "tmnt-city": {
-      "title": "Kod mapy TMNT City ({code})",
-      "description": "Odkryj TMNT City w Fortnite. Kod mapy {code}. Miejski tryb w klimacie Żółwi Ninja ze strefami walki każdy na każdego, stworzony przez NLDEVS w UEFN.",
+      "title": "Kod mapy TMNT City Gun Game One Shot ({code})",
+      "description": "Odkryj TMNT City w Fortnite. Kod mapy {code}. Miasto w klimacie Żółwi Ninja z gun game w trybie one shot, strefami walki każdy na każdego i nieskończonymi odrodzeniami, stworzone przez NLDEVS w UEFN.",
       "ogDescription": "Odkryj TMNT City w Fortnite. Miejski tryb w stylu TMNT stworzony w UEFN."
     },
     "rvb-squid-minigame": {
@@ -71,7 +71,7 @@
       "ogDescription": "Survival z zombie w otwartym świecie z 99 botami, ciągła akcja, zapis statystyk i tabele wyników."
     },
     "kpop-demon-hunters": {
-      "title": "Kod mapy KPop Demon Hunters Gun Game ({code})",
+      "title": "Kod mapy KPop Demon Hunters Fortnite Gun Game ({code})",
       "description": "Zagraj w KPop Demon Hunters Gun Game w Fortnite. Kod mapy {code}. Gun game każdy na każdego na własnej wyspie K-Pop, z nieskończoną progresją broni, wydarzeniem z bossem i zapisywanymi rangami.",
       "ogDescription": "Gun game każdy na każdego na własnej wyspie K-Pop — nieskończona progresja broni, wydarzenie z bossem, zapisywane rangi."
     },
@@ -401,7 +401,7 @@
         "kpop-demon-hunters": "Nieskończony gun game w klimacie K-Pop z wydarzeniem z bossem, odrodzeniami każdy na każdego i zapisem statystyk."
       },
       "titleOverrides": {
-        "tmnt-city": "TMNT City — Gun Game",
+        "tmnt-city": "TMNT City — Gun Game One Shot",
         "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {

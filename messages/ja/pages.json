@@ -46,8 +46,8 @@
       "ogDescription": "メガランプを駆け上がるタートルズのデスラン — ホバーボード、保存されるリーダーボード、ピザ、生存率0.01%。"
     },
     "tmnt-city": {
-      "title": "TMNT City マップコード（{code}）",
-      "description": "FortniteでTMNT Cityを探索。マップコード {code}。FFA（全員対戦）の戦闘エリアがある、NLDEVSがUEFNで作ったタートルズ風の街モード。",
+      "title": "TMNT City ガンゲーム ワンショット マップコード（{code}）",
+      "description": "FortniteでTMNT Cityを探索。マップコード {code}。ワンショットのガンゲーム、FFA（全員対戦）の戦闘エリア、無限リスポーンを備えた、NLDEVSがUEFNで作ったタートルズ風の街。",
       "ogDescription": "FortniteでTMNT Cityを探索。UEFNで作ったタートルズ風の街モード。"
     },
     "rvb-squid-minigame": {
@@ -71,7 +71,7 @@
       "ogDescription": "99ボットのオープンワールド・ゾンビサバイバル。途切れないアクション、ステータス保存、リーダーボード。"
     },
     "kpop-demon-hunters": {
-      "title": "KPop Demon Hunters ガンゲーム マップコード（{code}）",
+      "title": "KPop Demon Hunters Fortnite ガンゲーム マップコード（{code}）",
       "description": "FortniteでKPop Demon Hunters Gun Gameをプレイ。マップコード {code}。カスタムK-Pop島のFFAガンゲームで、無限の武器進行、ボス戦イベント、ランク保存に対応。",
       "ogDescription": "カスタムK-Pop島のFFAガンゲーム — 無限の武器進行、ボス戦イベント、ランク保存。"
     },
@@ -401,7 +401,7 @@
         "kpop-demon-hunters": "K-Pop風の無限ガンゲーム。ボス戦イベント、FFAのリスポーン、ステータス保存付き。"
       },
       "titleOverrides": {
-        "tmnt-city": "TMNT City — Gun Game",
+        "tmnt-city": "TMNT City — ガンゲーム ワンショット",
         "kpop-demon-hunters": "KPop Demon Hunters — ガンゲーム"
       },
       "modeOverrides": {

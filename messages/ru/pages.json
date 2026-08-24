@@ -46,8 +46,8 @@
       "ogDescription": "Deathrun по «Черепашкам-ниндзя» на мега-рампе — ховерборды, сохраняемые таблицы лидеров, пицца и 0,01 % выживаемости."
     },
     "tmnt-city": {
-      "title": "Код карты TMNT City ({code})",
-      "description": "Исследуйте TMNT City в Fortnite. Код карты {code}. Городская карта в стиле «Черепашек-ниндзя» с боевыми зонами «каждый сам за себя», созданная NLDEVS в UEFN.",
+      "title": "Код карты TMNT City Gun Game One Shot ({code})",
+      "description": "Исследуйте TMNT City в Fortnite. Код карты {code}. Городская карта в стиле «Черепашек-ниндзя» с gun game в режиме one shot, зонами боя «каждый сам за себя» и бесконечными респаунами, созданная NLDEVS в UEFN.",
       "ogDescription": "Исследуйте TMNT City в Fortnite. Городской режим в стиле TMNT, созданный в UEFN."
     },
     "rvb-squid-minigame": {
@@ -71,7 +71,7 @@
       "ogDescription": "Выживание среди зомби в открытом мире с 99 ботами, постоянный экшен, сохранение статистики и таблицы лидеров."
     },
     "kpop-demon-hunters": {
-      "title": "Код карты KPop Demon Hunters Gun Game ({code})",
+      "title": "Код карты KPop Demon Hunters Fortnite Gun Game ({code})",
       "description": "Играйте в KPop Demon Hunters Gun Game в Fortnite. Код карты {code}. Gun game «каждый сам за себя» на кастомном K-Pop острове: бесконечная прогрессия оружия, событие с боссом и сохранение рангов.",
       "ogDescription": "Gun game «каждый сам за себя» на кастомном K-Pop острове: бесконечная прогрессия оружия, событие с боссом, сохранение рангов."
     },
@@ -401,7 +401,7 @@
         "kpop-demon-hunters": "Бесконечный gun game в стиле K-Pop с событием с боссом, респаунами «каждый сам за себя» и сохранением статистики."
       },
       "titleOverrides": {
-        "tmnt-city": "TMNT City — Gun Game",
+        "tmnt-city": "TMNT City — Gun Game One Shot",
         "kpop-demon-hunters": "KPop Demon Hunters — Gun Game"
       },
       "modeOverrides": {
