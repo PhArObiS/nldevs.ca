@@ -18,6 +18,9 @@ type Lead = {
   age_attestation: boolean | null;
   email_confirmed: boolean | null;
   email_confirmed_at: string | null;
+  signup_locale: string | null;
+  preferred_email_locale: string | null;
+  marketing_unsubscribed: boolean | null;
   admin_status: string | null;
   admin_tags: string | null;
   admin_notes: string | null;
@@ -33,6 +36,17 @@ const STATUSES = [
   { value: "developer", label: "Developer" },
   { value: "priority", label: "Priority" },
   { value: "not_a_fit", label: "Not a fit" },
+];
+
+const LOCALES = [
+  { value: "en", label: "English" },
+  { value: "fr", label: "French" },
+  { value: "pt", label: "Portuguese" },
+  { value: "es", label: "Spanish" },
+  { value: "ru", label: "Russian" },
+  { value: "pl", label: "Polish" },
+  { value: "de", label: "German" },
+  { value: "ja", label: "Japanese" },
 ];
 
 function formatDate(value?: string | null) {
@@ -54,6 +68,14 @@ export default function AdminLeads() {
   const [loading, setLoading] = useState(false);
   const [savingId, setSavingId] = useState("");
   const [sendingId, setSendingId] = useState("");
+  const [broadcasting, setBroadcasting] = useState(false);
+  const [broadcastDraft, setBroadcastDraft] = useState({
+    subject: "",
+    message: "",
+    sourceLocale: "en",
+    forceEnglish: false,
+    confirmBroadcast: "",
+  });
   const [emailDrafts, setEmailDrafts] = useState<
     Record<string, { subject: string; message: string }>
   >({});
@@ -137,6 +159,7 @@ export default function AdminLeads() {
           adminStatus: lead.admin_status || "new",
           adminTags: lead.admin_tags || "",
           adminNotes: lead.admin_notes || "",
+          preferredEmailLocale: lead.preferred_email_locale || null,
         }),
       });
       const result = (await response.json()) as {
@@ -204,6 +227,61 @@ export default function AdminLeads() {
       setError(sendError instanceof Error ? sendError.message : "Could not send email.");
     } finally {
       setSendingId("");
+    }
+  }
+
+  async function sendBroadcast() {
+    setError("");
+    setNotice("");
+    setBroadcasting(true);
+
+    try {
+      const response = await fetch("/api/admin/leads", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${activeToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          broadcast: true,
+          subject: broadcastDraft.subject,
+          message: broadcastDraft.message,
+          sourceLocale: broadcastDraft.sourceLocale,
+          forceEnglish: broadcastDraft.forceEnglish,
+          confirmBroadcast: broadcastDraft.confirmBroadcast,
+        }),
+      });
+      const result = (await response.json()) as {
+        error?: string;
+        sent?: number;
+        failed?: string[];
+        translatedLocales?: string[];
+      };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Could not send broadcast.");
+      }
+
+      setBroadcastDraft((current) => ({
+        ...current,
+        subject: "",
+        message: "",
+        confirmBroadcast: "",
+      }));
+      const failedCount = result.failed?.length ?? 0;
+      setNotice(
+        failedCount
+          ? `Broadcast sent to ${result.sent ?? 0}; ${failedCount} failed.`
+          : `Broadcast sent to ${result.sent ?? 0} members.`
+      );
+    } catch (broadcastError) {
+      setError(
+        broadcastError instanceof Error
+          ? broadcastError.message
+          : "Could not send broadcast."
+      );
+    } finally {
+      setBroadcasting(false);
     }
   }
 
@@ -283,6 +361,103 @@ export default function AdminLeads() {
         </p>
       )}
 
+      <section className="mt-8 border border-edge bg-ink-800/50 p-4">
+        <div className="grid gap-3 lg:grid-cols-[1fr_14rem_12rem]">
+          <input
+            value={broadcastDraft.subject}
+            onChange={(event) =>
+              setBroadcastDraft((current) => ({
+                ...current,
+                subject: event.target.value,
+              }))
+            }
+            maxLength={140}
+            className="w-full border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+            placeholder="Launch or event email subject"
+          />
+          <select
+            value={broadcastDraft.sourceLocale}
+            onChange={(event) =>
+              setBroadcastDraft((current) => ({
+                ...current,
+                sourceLocale: event.target.value,
+              }))
+            }
+            className="border border-edge bg-ink py-3 pl-4 pr-10 text-white outline-none transition focus:border-neon-cyan"
+          >
+            {LOCALES.map((locale) => (
+              <option key={locale.value} value={locale.value}>
+                Written in {locale.label}
+              </option>
+            ))}
+          </select>
+          <label className="flex items-center gap-2 border border-edge bg-ink px-4 py-3 text-sm font-semibold text-gray-300">
+            <input
+              type="checkbox"
+              checked={broadcastDraft.forceEnglish}
+              onChange={(event) =>
+                setBroadcastDraft((current) => ({
+                  ...current,
+                  forceEnglish: event.target.checked,
+                }))
+              }
+              className="h-4 w-4 accent-neon-cyan"
+            />
+            Force English
+          </label>
+        </div>
+        <textarea
+          value={broadcastDraft.message}
+          onChange={(event) =>
+            setBroadcastDraft((current) => ({
+              ...current,
+              message: event.target.value,
+            }))
+          }
+          maxLength={2000}
+          rows={5}
+          className="mt-3 w-full resize-none border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+          placeholder="Write one update. It will be sent individually to confirmed members who allowed updates, translated to their language unless English is forced."
+        />
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-gray-500">
+            Eligible now:{" "}
+            {
+              leads.filter(
+                (lead) =>
+                  lead.email_confirmed &&
+                  lead.contact_consent &&
+                  !lead.marketing_unsubscribed
+              ).length
+            }{" "}
+            confirmed consenting members.
+          </p>
+          <input
+            value={broadcastDraft.confirmBroadcast}
+            onChange={(event) =>
+              setBroadcastDraft((current) => ({
+                ...current,
+                confirmBroadcast: event.target.value,
+              }))
+            }
+            className="w-32 border border-edge bg-ink px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-neon-cyan"
+            placeholder="Type SEND"
+          />
+          <button
+            type="button"
+            onClick={sendBroadcast}
+            disabled={
+              !activeToken ||
+              broadcasting ||
+              broadcastDraft.confirmBroadcast !== "SEND"
+            }
+            className="clip-corner-sm border border-neon-magenta bg-neon-magenta px-5 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white hover:text-ink disabled:cursor-wait disabled:opacity-70"
+          >
+            {broadcasting ? "Sending" : "Send broadcast"}
+          </button>
+        </div>
+      </section>
+
       <div className="mt-8 grid gap-3 md:grid-cols-[1fr_14rem]">
         <input
           type="search"
@@ -332,6 +507,11 @@ export default function AdminLeads() {
                   >
                     {lead.email_confirmed ? "Email verified" : "Unconfirmed"}
                   </span>
+                  {lead.marketing_unsubscribed && (
+                    <span className="clip-corner-sm border border-red-300/40 bg-red-300/10 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-red-200">
+                      Unsubscribed
+                    </span>
+                  )}
                 </div>
                 <p className="mt-2 text-sm text-gray-400">{lead.email}</p>
                 <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
@@ -365,10 +545,38 @@ export default function AdminLeads() {
                       {lead.email_confirmed ? formatDate(lead.email_confirmed_at) : "-"}
                     </dd>
                   </div>
+                  <div>
+                    <dt className="text-gray-500">Signup language</dt>
+                    <dd className="text-gray-300">
+                      {lead.signup_locale?.toUpperCase() || "EN"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-gray-500">Updates consent</dt>
+                    <dd className="text-gray-300">
+                      {lead.contact_consent ? "Yes" : "No"}
+                    </dd>
+                  </div>
                 </dl>
               </div>
 
               <div className="space-y-3">
+                <select
+                  value={lead.preferred_email_locale || ""}
+                  onChange={(event) =>
+                    updateLead(lead.id, {
+                      preferred_email_locale: event.target.value || null,
+                    })
+                  }
+                  className="w-full border border-edge bg-ink py-2.5 pl-3 pr-10 text-white outline-none transition focus:border-neon-cyan"
+                >
+                  <option value="">Auto language</option>
+                  {LOCALES.map((locale) => (
+                    <option key={locale.value} value={locale.value}>
+                      Prefer {locale.label}
+                    </option>
+                  ))}
+                </select>
                 <select
                   value={lead.admin_status || "new"}
                   onChange={(event) =>

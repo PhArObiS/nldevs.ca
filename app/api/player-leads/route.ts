@@ -59,6 +59,8 @@ type LeadRow = {
   email_confirmed_at: string | null;
   email_confirmation_token_hash: string | null;
   email_confirmation_sent_at: string | null;
+  signup_locale: string | null;
+  preferred_email_locale: string | null;
   created_at: string;
 };
 
@@ -198,6 +200,8 @@ function toClientProfile(row: LeadRow) {
     ageAttestation: row.age_attestation ?? false,
     emailConfirmed: row.email_confirmed ?? false,
     emailConfirmedAt: row.email_confirmed_at ?? undefined,
+    signupLocale: row.signup_locale ?? undefined,
+    preferredEmailLocale: row.preferred_email_locale ?? undefined,
     savedAt: row.created_at,
   };
 }
@@ -236,6 +240,8 @@ async function findMemberByEmail({
     "email_confirmed_at",
     "email_confirmation_token_hash",
     "email_confirmation_sent_at",
+    "signup_locale",
+    "preferred_email_locale",
     "created_at",
   ].join(",");
 
@@ -668,6 +674,7 @@ export async function POST(request: NextRequest) {
     member_goals: memberGoals || null,
     contact_consent: contactConsent,
     age_attestation: ageAttestation,
+    signup_locale: existingMember?.signup_locale || locale,
     ...(needsEmailConfirmation
       ? {
           email_confirmed: false,
