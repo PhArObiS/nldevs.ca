@@ -389,6 +389,10 @@
     "pageConfirmFailed": "Сейчас не удалось подтвердить email. Попробуйте позже.",
     "pageConfirmedTitle": "Email подтверждён",
     "pageConfirmedMessage": "Доступ участника NLDEVS подтверждён. Спасибо, что присоединились.",
-    "pageJoinDiscord": "Зайти в Discord"
+    "pageJoinDiscord": "Зайти в Discord",
+    "confirmationReminderSubject": "Напоминание: подтвердите email в NLDEVS",
+    "confirmationReminderText": "Короткое напоминание: подтвердите email в NLDEVS, чтобы завершить доступ участника.",
+    "confirmationReminderHtml": "Короткое напоминание: подтвердите email в NLDEVS, чтобы завершить доступ участника.",
+    "confirmationReminderIgnore": "Если это были не вы, просто проигнорируйте это письмо."
   }
 }

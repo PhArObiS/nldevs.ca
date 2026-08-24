@@ -389,6 +389,10 @@
     "pageConfirmFailed": "Wir konnten deine E-Mail gerade nicht bestätigen. Bitte versuch es später nochmal.",
     "pageConfirmedTitle": "E-Mail bestätigt",
     "pageConfirmedMessage": "Dein NLDEVS-Mitgliederzugang ist verifiziert. Danke, dass du dabei bist.",
-    "pageJoinDiscord": "Discord beitreten"
+    "pageJoinDiscord": "Discord beitreten",
+    "confirmationReminderSubject": "Erinnerung: bestaetige deine NLDEVS-E-Mail",
+    "confirmationReminderText": "Kurze Erinnerung: Bitte bestaetige deine NLDEVS-E-Mail, um deinen Mitgliederzugang abzuschliessen.",
+    "confirmationReminderHtml": "Kurze Erinnerung: Bitte bestaetige deine NLDEVS-E-Mail, um deinen Mitgliederzugang abzuschliessen.",
+    "confirmationReminderIgnore": "Wenn du das nicht warst, kannst du diese E-Mail ignorieren."
   }
 }

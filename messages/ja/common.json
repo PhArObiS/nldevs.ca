@@ -389,6 +389,10 @@
     "pageConfirmFailed": "現在メールを確認できませんでした。後でもう一度お試しください。",
     "pageConfirmedTitle": "メールを確認しました",
     "pageConfirmedMessage": "NLDEVSのメンバー登録が有効になりました。参加ありがとうございます。",
-    "pageJoinDiscord": "Discordに参加"
+    "pageJoinDiscord": "Discordに参加",
+    "confirmationReminderSubject": "リマインダー: NLDEVSのメールを確認してください",
+    "confirmationReminderText": "NLDEVSのメンバーアクセスを完了するため、メール確認をお願いします。",
+    "confirmationReminderHtml": "NLDEVSのメンバーアクセスを完了するため、メール確認をお願いします。",
+    "confirmationReminderIgnore": "心当たりがない場合は、このメールを無視してください。"
   }
 }

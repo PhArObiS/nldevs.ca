@@ -389,6 +389,10 @@
     "pageConfirmFailed": "No pudimos confirmar tu correo en este momento. Inténtalo más tarde.",
     "pageConfirmedTitle": "Correo confirmado",
     "pageConfirmedMessage": "Tu acceso de miembro de NLDEVS está verificado. Gracias por unirte.",
-    "pageJoinDiscord": "Entrar a Discord"
+    "pageJoinDiscord": "Entrar a Discord",
+    "confirmationReminderSubject": "Recordatorio: confirma tu correo de NLDEVS",
+    "confirmationReminderText": "Recordatorio rapido: confirma tu correo de NLDEVS para terminar tu acceso de miembro.",
+    "confirmationReminderHtml": "Recordatorio rapido: confirma tu correo de NLDEVS para terminar tu acceso de miembro.",
+    "confirmationReminderIgnore": "Si no fuiste tu, puedes ignorar este correo."
   }
 }

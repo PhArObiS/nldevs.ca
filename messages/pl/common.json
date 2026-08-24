@@ -389,6 +389,10 @@
     "pageConfirmFailed": "Nie udało się teraz potwierdzić emaila. Spróbuj później.",
     "pageConfirmedTitle": "Email potwierdzony",
     "pageConfirmedMessage": "Masz zweryfikowany dostęp członkowski NLDEVS. Dzięki za dołączenie.",
-    "pageJoinDiscord": "Wejdź na Discorda"
+    "pageJoinDiscord": "Wejdź na Discorda",
+    "confirmationReminderSubject": "Przypomnienie: potwierdz email NLDEVS",
+    "confirmationReminderText": "Krotkie przypomnienie: potwierdz email NLDEVS, aby dokonczyc dostep czlonka.",
+    "confirmationReminderHtml": "Krotkie przypomnienie: potwierdz email NLDEVS, aby dokonczyc dostep czlonka.",
+    "confirmationReminderIgnore": "Jesli to nie byles Ty, mozesz zignorowac tego maila."
   }
 }

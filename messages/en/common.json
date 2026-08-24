@@ -389,6 +389,10 @@
     "pageConfirmFailed": "We could not confirm your email right now. Please try again later.",
     "pageConfirmedTitle": "Email confirmed",
     "pageConfirmedMessage": "You are verified for NLDEVS member access. Thanks for joining.",
-    "pageJoinDiscord": "Join Discord"
+    "pageJoinDiscord": "Join Discord",
+    "confirmationReminderSubject": "Reminder: confirm your NLDEVS email",
+    "confirmationReminderText": "Quick reminder: please confirm your NLDEVS email so you can finish your member access.",
+    "confirmationReminderHtml": "Quick reminder: please confirm your NLDEVS email so you can finish your member access.",
+    "confirmationReminderIgnore": "If this was not you, you can ignore this email."
   }
 }
