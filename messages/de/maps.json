@@ -415,7 +415,7 @@
       "breadcrumbParent": "TMNT Maps",
       "eyebrow": "TMNT / Modus",
       "intro": "Ein stimmungsvoller Stadt-Modus im TMNT-Stil, gebaut in UEFN — erkunden, kämpfen und mit Freunden abhängen.",
-      "schemaGenre": "Modus",
+      "schemaGenre": "Modus / Jeder gegen Jeden",
       "schemaDescription": "Stadt-Modus im TMNT-Stil, gebaut in UEFN — erkunden, kämpfen und mit Freunden abhängen.",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "Gun Game Maps",
       "eyebrow": "Gun Game / FFA",
       "intro": "Ein kampforientierter Modus für wiederholbare Runden — Action zuerst, mit gleichmäßigem Session-XP, abhängig von der Kalibrierung.",
-      "schemaGenre": "Gun Game / PvE-Kampf",
+      "schemaGenre": "Gun Game / Jeder gegen Jeden",
       "schemaDescription": "Winterliches Dämonenjagd-Gun-Game mit Waffenrotation und wiederholbaren Kampf-Loops.",
       "stats": [
         {

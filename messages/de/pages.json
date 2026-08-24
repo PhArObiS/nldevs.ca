@@ -16,9 +16,9 @@
       "ogDescription": "Fortnite Maps im Squid-Game-Stil und Map-Codes von NLDEVS: 99-Bot-Survival, Bosskämpfe, Sidekicks und Rot-gegen-Blau-Chaos."
     },
     "fortnite-gun-game-maps": {
-      "title": "Beste Fortnite Gun Game Maps & Map-Codes",
-      "description": "Die besten Fortnite Gun Game Maps und Map-Codes, ausgewählt von NLDEVS. Schnelle Waffenprogression, PvP-Arenen und Runden mit Wiederspielwert.",
-      "ogDescription": "Fortnite Gun Game Maps und Map-Codes von NLDEVS — PvP mit Waffenprogression und hohem Wiederspielwert."
+      "title": "Beste Fortnite Gun Game & Jeder gegen Jeden Maps",
+      "description": "Entdecke die besten Fortnite Gun Game und Jeder-gegen-Jeden-Map-Codes (FFA), ausgewählt von NLDEVS. Schnelle Waffenprogression, FFA-Arenen und Runden mit Wiederspielwert.",
+      "ogDescription": "Fortnite Gun Game und Jeder-gegen-Jeden-Map-Codes von NLDEVS — Waffenprogression und FFA-Arenen mit hohem Wiederspielwert."
     },
     "best-fortnite-xp-maps": {
       "title": "Beste Fortnite XP-Maps & Map-Codes (schnell leveln)",
@@ -47,7 +47,7 @@
     },
     "tmnt-city": {
       "title": "TMNT City Map-Code ({code})",
-      "description": "Erkunde TMNT City in Fortnite. Map-Code {code}. Ein Stadt-Modus im TMNT-Stil, gebaut mit UEFN von NLDEVS.",
+      "description": "Erkunde TMNT City in Fortnite. Map-Code {code}. Ein Stadt-Modus im TMNT-Stil mit Jeder-gegen-Jeden-Kampfzonen, gebaut mit UEFN von NLDEVS.",
       "ogDescription": "Erkunde TMNT City in Fortnite. Ein Stadt-Modus im TMNT-Stil, gebaut mit UEFN."
     },
     "rvb-squid-minigame": {
@@ -67,8 +67,8 @@
     },
     "winterfest-demon-hunters": {
       "title": "Winterfest Demon Hunters Map-Code ({code})",
-      "description": "Spiel Winterfest Demon Hunters in Fortnite. Map-Code {code}. Kampforientierte Runden mit wiederholbaren Loops — ideal für Squads und zum Leveln im Gefecht.",
-      "ogDescription": "Kampforientierte Gun-Game-Runden mit wiederholbaren Loops — ideal für Squads."
+      "description": "Spiel Winterfest Demon Hunters in Fortnite. Map-Code {code}. Ein Jeder-gegen-Jeden-Gun-Game mit Waffenrotation und wiederholbaren Loops — ideal für Squads und zum Leveln im Gefecht.",
+      "ogDescription": "Jeder-gegen-Jeden-Gun-Game-Runden mit wiederholbaren Kampf-Loops — ideal für Squads."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -342,9 +342,9 @@
       "breadcrumb": "Gun Game Maps",
       "eyebrow": "Waffenprogression",
       "title": "Beste Fortnite <accent>Gun Game Maps</accent>",
-      "description": "Schnelle Modi mit Waffenprogression, bei denen jede Elimination dein Arsenal aufwertet. Ausgewählte Inseln mit Codes und kurzen Notizen.",
+      "description": "Schnelle Modi mit Waffenprogression und Jeder gegen Jeden (FFA), bei denen jede Elimination dein Arsenal aufwertet. Ausgewählte Inseln mit Codes und kurzen Notizen.",
       "schemaName": "Beste Fortnite Gun Game Maps",
-      "schemaDescription": "Eine kuratierte Liste von Fortnite Gun Game Maps und Map-Codes, gebaut mit UEFN von NLDEVS — PvP mit Waffenprogression für Runden mit Wiederspielwert.",
+      "schemaDescription": "Eine kuratierte Liste von Fortnite Gun Game und Jeder-gegen-Jeden-Maps und Map-Codes, gebaut mit UEFN von NLDEVS — Waffenprogression und FFA-Kampf für Runden mit Wiederspielwert.",
       "listName": "Fortnite Gun Game Maps",
       "genre": "Fortnite Gun Game Map",
       "codesTitle": "Gun-Game-Map-",
@@ -356,7 +356,7 @@
           "accent": "Gun Game Map?",
           "paragraphs": [
             "Fortnite Gun Game ist ein PvP-Modus mit Waffenprogression, gebaut für kurze Runden mit Wiederspielwert. Du startest mit einer Waffe und rückst nach jeder Elimination auf.",
-            "Ziel ist es, die Waffenliste vor allen anderen abzuschließen. Gute Gun-Game-Maps haben klaren Spielfluss, ausgewogene Waffenrotation und schnelle Respawns."
+            "Ziel ist es, die Waffenliste vor allen anderen abzuschließen. Beide Inseln hier laufen als Jeder gegen Jeden, es gibt also kein Team, auf das man warten muss — gute Gun-Game-Maps haben klaren Spielfluss, ausgewogene Waffenrotation und schnelle Respawns."
           ]
         }
       ],

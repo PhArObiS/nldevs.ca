@@ -16,9 +16,9 @@
       "ogDescription": "Mapy Fortnite w stylu Squid Game i kody map od NLDEVS: survival z 99 botami, walki z bossami, sidekicki i chaos Czerwoni kontra Niebiescy."
     },
     "fortnite-gun-game-maps": {
-      "title": "Najlepsze mapy Fortnite Gun Game i kody",
-      "description": "Wybrane mapy Fortnite Gun Game i kody od NLDEVS: szybka walka, progresja broni i rundy do powtarzania.",
-      "ogDescription": "Mapy Fortnite Gun Game i kody map w zestawieniu NLDEVS — PvP z progresją broni i wysoką regrywalnością."
+      "title": "Najlepsze mapy Fortnite Gun Game i Każdy na każdego",
+      "description": "Przeglądaj najlepsze kody map Fortnite Gun Game i Każdy na każdego (FFA) wybrane przez NLDEVS. Szybka progresja broni, areny FFA i rundy, do których chce się wracać.",
+      "ogDescription": "Kody map Fortnite Gun Game i Każdy na każdego od NLDEVS — progresja broni i areny FFA o wysokiej regrywalności."
     },
     "best-fortnite-xp-maps": {
       "title": "Najlepsze mapy XP Fortnite i kody do levelowania",
@@ -47,7 +47,7 @@
     },
     "tmnt-city": {
       "title": "Kod mapy TMNT City ({code})",
-      "description": "Odkryj TMNT City w Fortnite. Kod mapy {code}. Miejska mapa TMNT od NLDEVS stworzona w UEFN.",
+      "description": "Odkryj TMNT City w Fortnite. Kod mapy {code}. Miejski tryb w klimacie Żółwi Ninja ze strefami walki każdy na każdego, stworzony przez NLDEVS w UEFN.",
       "ogDescription": "Odkryj TMNT City w Fortnite. Miejski tryb w stylu TMNT stworzony w UEFN."
     },
     "rvb-squid-minigame": {
@@ -67,8 +67,8 @@
     },
     "winterfest-demon-hunters": {
       "title": "Kod mapy Winterfest Demon Hunters ({code})",
-      "description": "Zagraj w Winterfest Demon Hunters w Fortnite. Kod {code}. Rundy bojowe, powtarzalne pętle i dobry wybór do gry squad.",
-      "ogDescription": "Rundy gun game nastawione na walkę, z powtarzalnymi pętlami — świetne do grania w paczce."
+      "description": "Zagraj w Winterfest Demon Hunters w Fortnite. Kod mapy {code}. Gun game w trybie każdy na każdego z rotacją broni i powtarzalnymi pętlami — świetny w paczce i do levelowania w walce.",
+      "ogDescription": "Rundy gun game Każdy na każdego z powtarzalnymi pętlami walki — świetne do grania w paczce."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -342,9 +342,9 @@
       "breadcrumb": "Mapy Gun Game",
       "eyebrow": "Progresja broni",
       "title": "Najlepsze mapy Fortnite <accent>Gun Game</accent>",
-      "description": "Szybkie tryby z progresją broni, gdzie każda eliminacja ulepsza twój arsenał. Wyselekcjonowane wyspy z kodami i krótkimi notatkami.",
+      "description": "Szybkie tryby z progresją broni i Każdy na każdego (FFA), gdzie każda eliminacja ulepsza twój arsenał. Wyselekcjonowane wyspy z kodami i krótkimi notatkami.",
       "schemaName": "Najlepsze mapy Fortnite Gun Game",
-      "schemaDescription": "Zestawienie map Fortnite Gun Game i kodów map stworzonych przez NLDEVS w UEFN — PvP z progresją broni pod rundy, do których chce się wracać.",
+      "schemaDescription": "Zestawienie map i kodów Fortnite Gun Game i Każdy na każdego stworzonych przez NLDEVS w UEFN — progresja broni i walka FFA pod rundy, do których chce się wracać.",
       "listName": "Mapy Fortnite Gun Game",
       "genre": "Mapa Fortnite Gun Game",
       "codesTitle": "Kody map",
@@ -356,7 +356,7 @@
           "accent": "Gun Game w Fortnite?",
           "paragraphs": [
             "Fortnite Gun Game to tryb PvP z progresją broni, zbudowany pod szybkie, powtarzalne rundy. Gracz zaczyna z jedną bronią i dostaje kolejną po każdej eliminacji.",
-            "Celem jest przejście całej listy broni szybciej niż reszta. Dobre mapy Gun Game mają czytelny rytm, zbalansowaną rotację broni i szybkie odrodzenia."
+            "Celem jest przejście całej listy broni szybciej niż reszta. Obie wyspy tutaj działają w trybie każdy na każdego, więc nie ma na kogo czekać — dobre mapy Gun Game mają czytelny rytm, zbalansowaną rotację broni i szybkie odrodzenia."
           ]
         }
       ],

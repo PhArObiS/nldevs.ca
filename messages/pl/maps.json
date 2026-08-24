@@ -415,7 +415,7 @@
       "breadcrumbParent": "Mapy TMNT",
       "eyebrow": "TMNT / Tryb",
       "intro": "Klimatyczny miejski tryb w stylu TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi.",
-      "schemaGenre": "Tryb",
+      "schemaGenre": "Tryb / Każdy na każdego",
       "schemaDescription": "Miejski tryb w klimacie TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi.",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "Mapy Gun Game",
       "eyebrow": "Gun Game / FFA",
       "intro": "Tryb nastawiony na walkę, zbudowany pod powtarzalne rundy — akcja na pierwszym miejscu i równe XP w sesji, zależnie od kalibracji.",
-      "schemaGenre": "Gun Game / Walka PvE",
+      "schemaGenre": "Gun Game / Każdy na każdego",
       "schemaDescription": "Świąteczny gun game z polowaniem na demony, rotacją broni i powtarzalnymi pętlami walki.",
       "stats": [
         {

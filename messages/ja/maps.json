@@ -415,7 +415,7 @@
       "breadcrumbParent": "タートルズマップ",
       "eyebrow": "タートルズ / モード",
       "intro": "UEFNで作った没入感のあるタートルズ風の街モード — 探索して、戦って、友達とまったり。",
-      "schemaGenre": "モード",
+      "schemaGenre": "モード / FFA",
       "schemaDescription": "UEFNで作ったタートルズ風の街モード — 探索して、戦って、友達とまったり。",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "ガンゲームマップ",
       "eyebrow": "ガンゲーム / FFA",
       "intro": "繰り返し遊べるラウンド向けに作られた戦闘中心のモード。アクション優先で、調整次第だがセッション中のXPも安定しやすい。",
-      "schemaGenre": "ガンゲーム / PvE戦闘",
+      "schemaGenre": "ガンゲーム / FFA",
       "schemaDescription": "武器ローテーションと繰り返し遊べる戦闘ループを備えた、冬イベント風のデーモンハントガンゲーム。",
       "stats": [
         {

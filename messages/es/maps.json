@@ -415,7 +415,7 @@
       "breadcrumbParent": "Mapas Tortugas Ninja",
       "eyebrow": "Tortugas Ninja / Experiencia",
       "intro": "Una experiencia urbana inmersiva con temática de las Tortugas Ninja creada en UEFN — explora, pelea y pasa el rato con amigos.",
-      "schemaGenre": "Experiencia",
+      "schemaGenre": "Modo / Todos contra Todos",
       "schemaDescription": "Experiencia urbana con temática de las Tortugas Ninja creada en UEFN — explora, pelea y relájate con amigos.",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "Mapas Gun Game",
       "eyebrow": "Gun Game / FFA",
       "intro": "Una experiencia centrada en el combate hecha para rondas repetibles — gameplay con la acción primero y XP constante por sesión, según la calibración.",
-      "schemaGenre": "Gun Game / Combate PvE",
+      "schemaGenre": "Gun Game / Todos contra Todos",
       "schemaDescription": "Gun game de caza de demonios con temática invernal, rotación de armas y ciclos de combate repetibles.",
       "stats": [
         {

@@ -415,7 +415,7 @@
       "breadcrumbParent": "TMNT Maps",
       "eyebrow": "TMNT / Experience",
       "intro": "An immersive city-style TMNT experience built in UEFN — explore, fight, and hang out with friends.",
-      "schemaGenre": "Experience",
+      "schemaGenre": "Experience / Free For All",
       "schemaDescription": "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends.",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "Gun Game Maps",
       "eyebrow": "Gun Game / FFA",
       "intro": "A combat-focused experience built for repeatable rounds — action-first gameplay with steady session XP, depending on calibration.",
-      "schemaGenre": "Gun Game / PvE Combat",
+      "schemaGenre": "Gun Game / Free For All",
       "schemaDescription": "Holiday demon-hunting gun game with weapon rotations and repeatable combat loops.",
       "stats": [
         {

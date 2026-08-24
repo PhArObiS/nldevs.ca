@@ -16,9 +16,9 @@
       "ogDescription": "NLDEVSのイカゲーム系Fortniteマップとマップコード。99ボットサバイバル、ボス戦、サイドキック、赤vs青のカオス。"
     },
     "fortnite-gun-game-maps": {
-      "title": "Fortniteガンゲーム最強マップとマップコード",
-      "description": "NLDEVS厳選のFortniteガンゲームマップとマップコード。テンポの速い武器進行、PvPアリーナ、何度も遊べるラウンド。",
-      "ogDescription": "NLDEVS厳選のFortniteガンゲームマップとマップコード — 武器進行型PvPで何度も遊べる。"
+      "title": "Fortnite最強ガンゲーム・FFAマップとマップコード",
+      "description": "NLDEVS厳選のFortniteガンゲーム・FFA（全員対戦）マップコード。テンポの速い武器進行、FFAアリーナ、何度も遊べるラウンド。",
+      "ogDescription": "NLDEVSのFortniteガンゲーム・FFAマップコード — 武器進行とFFAアリーナで何度も遊べる。"
     },
     "best-fortnite-xp-maps": {
       "title": "Fortnite最強XPマップとマップコード（速くレベル上げ）",
@@ -47,7 +47,7 @@
     },
     "tmnt-city": {
       "title": "TMNT City マップコード（{code}）",
-      "description": "FortniteでTMNT Cityを探索。マップコード {code}。NLDEVSがUEFNで作ったタートルズ風の街モード。",
+      "description": "FortniteでTMNT Cityを探索。マップコード {code}。FFA（全員対戦）の戦闘エリアがある、NLDEVSがUEFNで作ったタートルズ風の街モード。",
       "ogDescription": "FortniteでTMNT Cityを探索。UEFNで作ったタートルズ風の街モード。"
     },
     "rvb-squid-minigame": {
@@ -67,8 +67,8 @@
     },
     "winterfest-demon-hunters": {
       "title": "Winterfest Demon Hunters マップコード（{code}）",
-      "description": "FortniteでWinterfest Demon Huntersをプレイ。マップコード {code}。戦闘中心のラウンドと繰り返し遊べるループ — パーティ向きで、戦いながらレベルも上がる。",
-      "ogDescription": "戦闘中心のガンゲームラウンドと繰り返し遊べるループ — パーティ向き。"
+      "description": "FortniteでWinterfest Demon Huntersをプレイ。マップコード {code}。武器ローテーションと繰り返し遊べるループがあるFFA（全員対戦）ガンゲーム — パーティ向きで、戦いながらレベルも上がる。",
+      "ogDescription": "繰り返し遊べる戦闘ループがあるFFA（全員対戦）ガンゲームのラウンド — パーティ向き。"
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -342,9 +342,9 @@
       "breadcrumb": "ガンゲームマップ",
       "eyebrow": "武器進行",
       "title": "Fortnite最強<accent>ガンゲームマップ</accent>",
-      "description": "倒すたびに武器が変わっていくテンポの速い武器進行モード。厳選した島をコードと短いメモ付きで紹介。",
+      "description": "倒すたびに武器が変わるテンポの速い武器進行モードとFFA（全員対戦）。厳選した島をコードと短いメモ付きで紹介。",
       "schemaName": "Fortnite最強ガンゲームマップ",
-      "schemaDescription": "NLDEVSがUEFNで制作したFortniteガンゲームマップとマップコードのまとめ — 何度も遊べる武器進行型PvP。",
+      "schemaDescription": "NLDEVSがUEFNで制作したFortniteガンゲーム・FFAマップとマップコードのまとめ — 何度も遊べる武器進行とFFA戦闘。",
       "listName": "Fortniteガンゲームマップ",
       "genre": "Fortniteガンゲームマップ",
       "codesTitle": "ガンゲームマップ",
@@ -356,7 +356,7 @@
           "accent": "ガンゲームマップとは？",
           "paragraphs": [
             "Fortniteのガンゲームは、短いラウンドを何度も回す武器進行型のPvPモード。1つの武器から始まり、倒すたびに次の武器へ進む。",
-            "目標は誰よりも早く武器リストを終わらせること。いいガンゲームマップは動線がわかりやすく、武器のローテーションが噛み合っていて、リスポーンが速い。"
+            "目標は誰よりも早く武器リストを終わらせること。ここの2つの島はどちらもFFA（全員対戦）なので、チームを待つ必要はない。いいガンゲームマップは動線がわかりやすく、武器のローテーションが噛み合っていて、リスポーンが速い。"
           ]
         }
       ],

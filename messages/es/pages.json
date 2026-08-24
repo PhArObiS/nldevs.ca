@@ -16,9 +16,9 @@
       "ogDescription": "Mapas al estilo El Juego del Calamar en Fortnite y códigos de mapa de NLDEVS: supervivencia contra 99 bots, batallas de jefe, sidekicks y caos Rojo vs Azul."
     },
     "fortnite-gun-game-maps": {
-      "title": "Mejores mapas de Gun Game en Fortnite y códigos",
-      "description": "Descubre los mejores mapas de Gun Game de Fortnite y los códigos seleccionados por NLDEVS. Progresión de armas acelerada, arenas PvP y rondas rejugables.",
-      "ogDescription": "Mapas de Gun Game de Fortnite y códigos seleccionados por NLDEVS — mapas PvP de progresión de armas hechos para rejugar."
+      "title": "Mejores mapas de Gun Game y Todos contra Todos en Fortnite",
+      "description": "Explora los mejores códigos de mapas de Gun Game y Todos contra Todos (FFA) de Fortnite seleccionados por NLDEVS. Progresión de armas rápida, arenas FFA y rondas para repetir.",
+      "ogDescription": "Códigos de mapas de Gun Game y Todos contra Todos de Fortnite por NLDEVS — progresión de armas y arenas FFA hechas para repetir."
     },
     "best-fortnite-xp-maps": {
       "title": "Mejores mapas de XP de Fortnite y códigos (sube rápido)",
@@ -47,7 +47,7 @@
     },
     "tmnt-city": {
       "title": "Código de mapa TMNT City ({code})",
-      "description": "Explora TMNT City en Fortnite. Código de mapa {code}. Una ciudad temática de las Tortugas Ninja creada con UEFN por NLDEVS.",
+      "description": "Explora TMNT City en Fortnite. Código de mapa {code}. Una experiencia de ciudad con temática Tortugas Ninja y zonas de combate todos contra todos, creada con UEFN por NLDEVS.",
       "ogDescription": "Explora TMNT City en Fortnite. Una ciudad temática de las Tortugas Ninja creada con UEFN."
     },
     "rvb-squid-minigame": {
@@ -67,8 +67,8 @@
     },
     "winterfest-demon-hunters": {
       "title": "Código de mapa Winterfest Demon Hunters ({code})",
-      "description": "Juega Winterfest Demon Hunters en Fortnite. Código de mapa {code}. Rondas centradas en el combate con ciclos repetibles — ideal para squads y para subir de nivel peleando.",
-      "ogDescription": "Rondas de gun game centradas en el combate con ciclos repetibles — ideal para squads."
+      "description": "Juega Winterfest Demon Hunters en Fortnite. Código de mapa {code}. Un gun game todos contra todos con rotación de armas y ciclos repetibles — ideal para squads y para subir de nivel peleando.",
+      "ogDescription": "Rondas de gun game Todos contra Todos con ciclos de combate repetibles — ideal para squads."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -342,9 +342,9 @@
       "breadcrumb": "Mapas Gun Game",
       "eyebrow": "Progresión de armas",
       "title": "Mejores mapas de <accent>Gun Game en Fortnite</accent>",
-      "description": "Modos acelerados de progresión de armas donde cada eliminación mejora tu loadout. Una selección de islas con códigos y notas rápidas.",
+      "description": "Modos rápidos de progresión de armas y Todos contra Todos (FFA) donde cada eliminación mejora tu equipamiento. Islas seleccionadas con códigos y notas breves.",
       "schemaName": "Mejores mapas de Gun Game en Fortnite",
-      "schemaDescription": "Una selección de mapas de Gun Game de Fortnite y códigos de mapa creados con UEFN por NLDEVS — PvP de progresión de armas hecho para rondas rejugables.",
+      "schemaDescription": "Una lista seleccionada de mapas y códigos de Gun Game y Todos contra Todos de Fortnite creados con UEFN por NLDEVS — progresión de armas y combate FFA pensados para rondas repetibles.",
       "listName": "Mapas de Gun Game en Fortnite",
       "genre": "Mapa de Gun Game en Fortnite",
       "codesTitle": "Códigos de los mapas",
@@ -356,7 +356,7 @@
           "accent": "Gun Game en Fortnite?",
           "paragraphs": [
             "Gun Game en Fortnite es un modo PvP de progresión de armas hecho para rondas rápidas y rejugables. Los jugadores empiezan con un arma y suben a la siguiente después de cada eliminación.",
-            "El objetivo es terminar la lista de armas antes que los demás. Los buenos mapas de Gun Game tienen buen flujo, rotaciones de armas equilibradas y reapariciones rápidas."
+            "El objetivo es terminar la lista de armas antes que los demás. Las dos islas aquí son todos contra todos, así que no hay equipo que esperar — los buenos mapas de Gun Game tienen buen ritmo, rotación de armas equilibrada y reapariciones rápidas."
           ]
         }
       ],

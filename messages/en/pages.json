@@ -16,9 +16,9 @@
       "ogDescription": "Squid Game-style Fortnite maps and map codes by NLDEVS, including 99 bots survival, boss battles, sidekicks, and Red vs Blue chaos."
     },
     "fortnite-gun-game-maps": {
-      "title": "Best Fortnite Gun Game Maps & Map Codes",
-      "description": "Browse the best Fortnite Gun Game maps and map codes curated by NLDEVS. Fast-paced weapon progression, PvP arenas, and replayable rounds.",
-      "ogDescription": "Fortnite Gun Game maps and map codes curated by NLDEVS — weapon progression PvP maps built for replayability."
+      "title": "Best Fortnite Gun Game & Free For All Maps",
+      "description": "Browse the best Fortnite Gun Game and Free For All map codes curated by NLDEVS. Fast-paced weapon progression, FFA combat arenas, and replayable rounds.",
+      "ogDescription": "Fortnite Gun Game and Free For All map codes by NLDEVS — weapon progression and FFA arenas built for replayability."
     },
     "best-fortnite-xp-maps": {
       "title": "Best Fortnite XP Maps & Map Codes (Level Up Fast)",
@@ -47,7 +47,7 @@
     },
     "tmnt-city": {
       "title": "TMNT City Map Code ({code})",
-      "description": "Explore TMNT City in Fortnite. Map code {code}. A TMNT-themed city experience built with UEFN by NLDEVS.",
+      "description": "Explore TMNT City in Fortnite. Map code {code}. A TMNT-themed city experience with free-for-all combat zones, built with UEFN by NLDEVS.",
       "ogDescription": "Explore TMNT City in Fortnite. A TMNT-themed city experience built with UEFN."
     },
     "rvb-squid-minigame": {
@@ -67,8 +67,8 @@
     },
     "winterfest-demon-hunters": {
       "title": "Winterfest Demon Hunters Map Code ({code})",
-      "description": "Play Winterfest Demon Hunters in Fortnite. Map code {code}. Combat-focused rounds with repeatable loops — great for squads and leveling while fighting.",
-      "ogDescription": "Combat-focused gun game rounds with repeatable loops — great for squads."
+      "description": "Play Winterfest Demon Hunters in Fortnite. Map code {code}. A free-for-all gun game with weapon rotations and repeatable loops — great for squads and leveling while fighting.",
+      "ogDescription": "Free For All gun game rounds with repeatable combat loops — great for squads."
     },
     "playtest-squad": {
       "title": "NLDEVS Playtest Squad",
@@ -342,9 +342,9 @@
       "breadcrumb": "Gun Game Maps",
       "eyebrow": "Weapon progression",
       "title": "Best Fortnite <accent>Gun Game maps</accent>",
-      "description": "Fast-paced weapon progression modes where eliminations upgrade your loadout. Curated islands with codes and quick notes.",
+      "description": "Fast-paced weapon progression and Free For All modes where every elimination upgrades your loadout. Curated islands with codes and quick notes.",
       "schemaName": "Best Fortnite Gun Game Maps",
-      "schemaDescription": "A curated list of Fortnite Gun Game maps and map codes built with UEFN by NLDEVS — weapon progression PvP designed for replayable rounds.",
+      "schemaDescription": "A curated list of Fortnite Gun Game and Free For All maps and map codes built with UEFN by NLDEVS — weapon progression and FFA combat designed for replayable rounds.",
       "listName": "Fortnite Gun Game Maps",
       "genre": "Fortnite Gun Game Map",
       "codesTitle": "Gun Game map",
@@ -356,7 +356,7 @@
           "accent": "Gun Game map?",
           "paragraphs": [
             "Fortnite Gun Game is a weapon progression PvP mode built for quick, replayable rounds. Players start with a weapon and upgrade after each elimination.",
-            "The goal is to finish the weapon list before everyone else. Great Gun Game maps have strong flow, balanced weapon rotations, and fast respawns."
+            "The goal is to finish the weapon list before everyone else. Both islands here run free-for-all, so there are no teams to wait on — great Gun Game maps have strong flow, balanced weapon rotations, and fast respawns."
           ]
         }
       ],

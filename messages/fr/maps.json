@@ -415,7 +415,7 @@
       "breadcrumbParent": "Cartes Tortues Ninja",
       "eyebrow": "Tortues Ninja / Expérience",
       "intro": "Une expérience urbaine immersive sur thème Tortues Ninja créée avec UEFN — explore, combats et détends-toi entre amis.",
-      "schemaGenre": "Expérience",
+      "schemaGenre": "Expérience / Chacun pour soi",
       "schemaDescription": "Expérience urbaine sur thème Tortues Ninja créée avec UEFN — explore, combats et détends-toi entre amis.",
       "stats": [
         {
@@ -780,7 +780,7 @@
       "breadcrumbParent": "Cartes Gun Game",
       "eyebrow": "Gun Game / FFA",
       "intro": "Une expérience axée combat conçue pour des manches répétables — du gameplay orienté action avec un XP de session régulier, selon le calibrage.",
-      "schemaGenre": "Gun Game / Combat PvE",
+      "schemaGenre": "Gun Game / Chacun pour soi",
       "schemaDescription": "Gun game de chasse aux démons sur thème hivernal avec rotations d'armes et boucles de combat répétables.",
       "stats": [
         {
