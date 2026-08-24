@@ -41,9 +41,9 @@
       "ogDescription": "99ボットのロワイヤルサバイバル。解放可能なヒーロー、ボス、ステータス保存、Tilted×Star Warsのアクション。"
     },
     "tmnt-mega-ramp-survival": {
-      "title": "TMNT Mega Ramp Survival マップコード（{code}）",
-      "description": "FortniteでTMNT Mega Ramp Survivalをプレイ。マップコード {code}。NLDEVSがUEFNで作った高速サバイバル。",
-      "ogDescription": "NLDEVSがUEFNで作ったタートルズ風の高速ランプサバイバル。"
+      "title": "TMNT Mega Ramp Survival デスラン マップコード（{code}）",
+      "description": "FortniteでTMNT Mega Ramp Survivalをプレイ。マップコード {code}。ホバーボード、動物、車でランプを登るタートルズのデスラン。保存されるリーダーボード、集めるピザ、生存率0.01%。",
+      "ogDescription": "メガランプを駆け上がるタートルズのデスラン — ホバーボード、保存されるリーダーボード、ピザ、生存率0.01%。"
     },
     "tmnt-city": {
       "title": "TMNT City マップコード（{code}）",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "タートルズ風の高速メガランプサバイバル。カオスをよけて走り切ろう。",
+        "tmnt-mega-ramp-survival": "メガランプを駆け上がるタートルズのデスラン。ホバーボード、保存されるリーダーボード、ピザ、生存率0.01%。",
         "tmnt-city": "UEFNで作ったタートルズ風の街モード — 探索して、戦って、友達とまったり。"
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "繰り返し遊べるループのある高速サバイバル。レベル上げ中もアクティブに動きたい人向け。",
+        "tmnt-mega-ramp-survival": "テンポの速いデスランの周回。レベル上げ中もアクティブに動きたい人向け。",
         "kpop-demon-hunters": "リスポーンが途切れないFFAガンゲーム。戦いながらXPを稼ぎたい人に。",
         "rvb-players-vs-guards": "チーム目標と長めのセッション。PvP寄りのラウンドで安定してXPを稼ぎたいときに。",
         "tmnt-city": "探索と戦闘のルートがあり、XPループも安定している。",

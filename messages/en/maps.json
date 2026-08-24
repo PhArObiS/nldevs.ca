@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "TMNT Maps",
       "eyebrow": "TMNT / Survival",
-      "intro": "A high-speed survival experience where players race up a massive ramp while avoiding hazards and surviving as long as possible.",
-      "schemaGenre": "Survival",
-      "schemaDescription": "High-speed ramp survival Fortnite experience built with UEFN by NLDEVS.",
+      "intro": "A TMNT deathrun up a massive ramp — ride hoverboards, wildlife and cars, dodge falling traffic, and see how far you get against a 0.01% survival rate.",
+      "schemaGenre": "Deathrun / Survival / Party Game",
+      "schemaDescription": "TMNT-themed deathrun and survival map built with UEFN by NLDEVS, with hoverboards, wildlife and cars up the ramp, saving lap-time and bot-kill leaderboards, collectable pizzas, and a 0.01% survival rate.",
       "stats": [
         {
           "label": "Players",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Mode",
-          "value": "Mega ramp survival"
+          "value": "Deathrun / survival"
         },
         {
           "label": "Status",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Best for",
-          "value": "Movement chaos"
+          "value": "Party runs"
         },
         {
           "label": "Difficulty",
@@ -362,7 +362,7 @@
           "title": "Gameplay",
           "accent": "description",
           "paragraphs": [
-            "TMNT Mega Ramp Survival is a high-speed survival experience where players race up a massive ramp while avoiding hazards and surviving as long as possible."
+            "TMNT Mega Ramp Survival is a deathrun up a massive ramp. Ride hoverboards, wildlife and cars to the top, battle TMNT enemies and fight alongside Splinter and the Turtles, collect pizzas along the way, and dodge deadly obstacles and falling cars. The stated survival rate is 0.01%."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Why it's",
           "accent": "fun",
           "items": [
-            "Quick “one more run” replayability",
-            "High-speed movement and chaos",
-            "Great solo or with friends",
-            "Strong TMNT theme"
+            "Two saving leaderboards — best lap time and most bot kills.",
+            "Ride hoverboards, wildlife and cars up the ramp.",
+            "Battle TMNT enemies and fight alongside Splinter and the Turtles.",
+            "Collect pizzas, dodge falling cars, and beat a 0.01% survival rate."
           ]
         }
       ],

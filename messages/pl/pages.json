@@ -41,9 +41,9 @@
       "ogDescription": "Survival w royale z 99 botami: odblokowywani bohaterowie, bossowie, zapis statystyk i akcja Tilted x Star Wars."
     },
     "tmnt-mega-ramp-survival": {
-      "title": "Kod mapy TMNT Mega Ramp Survival ({code})",
-      "description": "Zagraj w TMNT Mega Ramp Survival w Fortnite. Kod mapy {code}. Szybkie przetrwanie na mega rampie stworzone przez NLDEVS w UEFN.",
-      "ogDescription": "Szybki survival na mega rampie w stylu TMNT, stworzony przez NLDEVS w UEFN."
+      "title": "Kod mapy TMNT Mega Ramp Survival Deathrun ({code})",
+      "description": "Zagraj w TMNT Mega Ramp Survival w Fortnite. Kod mapy {code}. Deathrun w klimacie Żółwi Ninja z hoverboardami, zwierzętami i samochodami na rampie, zapisywanymi tabelami wyników, pizzami i 0,01 % szans na przetrwanie.",
+      "ogDescription": "Deathrun Żółwi Ninja na mega rampie — hoverboardy, zapisywane tabele wyników, pizze i 0,01 % szans na przetrwanie."
     },
     "tmnt-city": {
       "title": "Kod mapy TMNT City ({code})",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Szybki survival na mega rampie w klimacie TMNT. Unikaj chaosu i przetrwaj przejazd.",
+        "tmnt-mega-ramp-survival": "Deathrun Żółwi Ninja na mega rampie. Hoverboardy, zapisywane tabele wyników, pizze i 0,01 % szans na przetrwanie.",
         "tmnt-city": "Miejski tryb w klimacie TMNT zbudowany w UEFN — zwiedzaj, walcz i spędzaj czas ze znajomymi."
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Szybkie tryby survivalowe z powtarzalnymi pętlami rozgrywki. Świetne, jeśli wolisz aktywne granie podczas levelowania.",
+        "tmnt-mega-ramp-survival": "Szybkie okrążenia deathrun z powtarzalnymi pętlami. Świetne, jeśli wolisz aktywne granie podczas levelowania.",
         "kpop-demon-hunters": "Gun game każdy na każdego z ciągłymi odrodzeniami. Dobre na XP w trakcie walki.",
         "rvb-players-vs-guards": "Cele drużynowe i dłuższe sesje. Dobre na równe XP w rundach w stylu PvP.",
         "tmnt-city": "Trasy eksploracji i walki ze stabilnymi pętlami XP.",

@@ -41,9 +41,9 @@
       "ogDescription": "Survie en royale contre 99 bots avec héros à débloquer, boss, stats sauvegardées et action Tilted x Star Wars."
     },
     "tmnt-mega-ramp-survival": {
-      "title": "Code de map TMNT Mega Ramp Survival ({code})",
-      "description": "Jouez à TMNT Mega Ramp Survival sur Fortnite. Code de map {code}. Gameplay de survie à haute vitesse créé avec UEFN par NLDEVS.",
-      "ogDescription": "Survie sur méga-rampe à haute vitesse, ambiance Tortues Ninja, créée avec UEFN par NLDEVS."
+      "title": "Code de map TMNT Mega Ramp Survival Deathrun ({code})",
+      "description": "Jouez à TMNT Mega Ramp Survival sur Fortnite. Code de map {code}. Un deathrun Tortues Ninja avec hoverboards, animaux et voitures sur la rampe, classements sauvegardés, pizzas à collecter et un taux de survie de 0,01 %.",
+      "ogDescription": "Deathrun Tortues Ninja sur une méga rampe — hoverboards, classements sauvegardés, pizzas et un taux de survie de 0,01 %."
     },
     "tmnt-city": {
       "title": "Code de map TMNT City ({code})",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Survie à haute vitesse sur méga-rampe, thème Tortues Ninja. Esquive le chaos et survis jusqu'au bout.",
+        "tmnt-mega-ramp-survival": "Deathrun Tortues Ninja sur une méga rampe. Hoverboards, classements sauvegardés, pizzas et 0,01 % de survie.",
         "tmnt-city": "Expérience urbaine sur thème Tortues Ninja créée avec UEFN — explore, combats et détends-toi entre amis."
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Runs de survie nerveux avec des boucles de gameplay répétables. Parfait si tu préfères jouer activement en montant en niveau.",
+        "tmnt-mega-ramp-survival": "Tours de deathrun rapides et répétables. Parfait si vous aimez jouer activement en montant en niveau.",
         "kpop-demon-hunters": "Gun game en chacun pour soi avec réapparitions constantes. Bon pour l'XP en combattant.",
         "rvb-players-vs-guards": "Objectifs en équipe et sessions plus longues. Bon pour un XP régulier tout en jouant des manches façon PvP.",
         "tmnt-city": "Trajets d'exploration et de combat avec des boucles d'XP constantes.",

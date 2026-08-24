@@ -41,9 +41,9 @@
       "ogDescription": "99-Bot-Royale-Survival mit freischaltbaren Helden, Bossen, gespeicherten Stats und Tilted-x-Star-Wars-Action."
     },
     "tmnt-mega-ramp-survival": {
-      "title": "TMNT Mega Ramp Survival Map-Code ({code})",
-      "description": "Spiel TMNT Mega Ramp Survival in Fortnite. Map-Code {code}. Schnelles Survival-Gameplay, gebaut mit UEFN von NLDEVS.",
-      "ogDescription": "Schnelles TMNT-Ramp-Survival, gebaut mit UEFN von NLDEVS."
+      "title": "TMNT Mega Ramp Survival Deathrun Map-Code ({code})",
+      "description": "Spiel TMNT Mega Ramp Survival in Fortnite. Map-Code {code}. Ein TMNT-Deathrun mit Hoverboards, Tieren und Autos auf der Ramp, gespeicherten Leaderboards, sammelbaren Pizzen und einer Überlebensrate von 0,01 %.",
+      "ogDescription": "TMNT-Deathrun eine Mega Ramp hinauf — Hoverboards, gespeicherte Leaderboards, Pizzen und 0,01 % Überlebensrate."
     },
     "tmnt-city": {
       "title": "TMNT City Map-Code ({code})",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Schnelles Mega-Ramp-Survival im TMNT-Stil. Weich dem Chaos aus und überlebe den Run.",
+        "tmnt-mega-ramp-survival": "TMNT-Deathrun eine Mega Ramp hinauf. Hoverboards, gespeicherte Leaderboards, Pizzen und 0,01 % Überlebensrate.",
         "tmnt-city": "Stadt-Modus im TMNT-Stil, gebaut in UEFN — erkunden, kämpfen und mit Freunden abhängen."
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Schnelle Survival-Runs mit wiederholbaren Gameplay-Loops. Ideal, wenn du beim Leveln aktiv spielen willst.",
+        "tmnt-mega-ramp-survival": "Schnelle Deathrun-Runden mit wiederholbaren Loops. Ideal, wenn du beim Leveln aktiv spielen willst.",
         "kpop-demon-hunters": "Jeder-gegen-Jeden-Gun-Game mit ständigen Respawns. Gut für XP im Gefecht.",
         "rvb-players-vs-guards": "Teamziele und längere Sessions. Gut für gleichmäßiges XP in PvP-artigen Runden.",
         "tmnt-city": "Erkundungs- und Kampfrouten mit konstanten XP-Loops.",

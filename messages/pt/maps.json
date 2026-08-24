@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Mapas Tartarugas Ninja",
       "eyebrow": "Tartarugas Ninja / Sobrevivência",
-      "intro": "Uma experiência de sobrevivência em alta velocidade em que os jogadores sobem por uma rampa gigante desviando de obstáculos e sobrevivendo o máximo possível.",
-      "schemaGenre": "Sobrevivência",
-      "schemaDescription": "Experiência de sobrevivência em rampa de alta velocidade no Fortnite, criada com UEFN pela NLDEVS.",
+      "intro": "Um deathrun das Tartarugas Ninja numa rampa gigante — pilote hoverboards, animais e carros, desvie do trânsito que cai e veja até onde chega com uma taxa de sobrevivência de 0,01%.",
+      "schemaGenre": "Deathrun / Sobrevivência / Jogo de festa",
+      "schemaDescription": "Mapa de deathrun e sobrevivência com tema Tartarugas Ninja criado com UEFN pela NLDEVS, com hoverboards, animais e carros na rampa, tabelas de líderes salvas de melhor volta e de mortes de bots, pizzas para coletar e uma taxa de sobrevivência de 0,01%.",
       "stats": [
         {
           "label": "Jogadores",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Modo",
-          "value": "Sobrevivência em mega rampa"
+          "value": "Deathrun / sobrevivência"
         },
         {
           "label": "Status",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Ideal para",
-          "value": "Caos e movimentação"
+          "value": "Partidas com amigos"
         },
         {
           "label": "Dificuldade",
@@ -362,7 +362,7 @@
           "title": "Descrição da",
           "accent": "gameplay",
           "paragraphs": [
-            "TMNT Mega Ramp Survival é uma experiência de sobrevivência em alta velocidade em que os jogadores sobem por uma rampa gigante desviando de obstáculos e sobrevivendo o máximo possível."
+            "TMNT Mega Ramp Survival é um deathrun numa rampa gigante. Suba pilotando hoverboards, animais e carros, enfrente os inimigos das Tartarugas e lute ao lado do Splinter e dos Turtles, colete pizzas pelo caminho e desvie de obstáculos mortais e carros que caem. A taxa de sobrevivência anunciada é de 0,01%."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Por que é",
           "accent": "divertido",
           "items": [
-            "Rejogabilidade imediata do tipo “mais uma partida”",
-            "Movimentação em alta velocidade e caos",
-            "Ótimo sozinho ou com amigos",
-            "Tema das Tartarugas Ninja bem marcante"
+            "Duas tabelas de líderes salvas — melhor tempo de volta e mais mortes de bots.",
+            "Suba a rampa de hoverboard, montado em animais ou de carro.",
+            "Enfrente os inimigos das Tartarugas e lute ao lado do Splinter e dos Turtles.",
+            "Colete pizzas, desvie dos carros que caem e supere uma taxa de sobrevivência de 0,01%."
           ]
         }
       ],

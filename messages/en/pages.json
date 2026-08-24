@@ -41,9 +41,9 @@
       "ogDescription": "99-bot royale survival with unlockable heroes, bosses, saved stats, and Tilted x Star Wars action."
     },
     "tmnt-mega-ramp-survival": {
-      "title": "TMNT Mega Ramp Survival Map Code ({code})",
-      "description": "Play TMNT Mega Ramp Survival in Fortnite. Map code {code}. High-speed survival gameplay built with UEFN by NLDEVS.",
-      "ogDescription": "High-speed TMNT ramp survival built with UEFN by NLDEVS."
+      "title": "TMNT Mega Ramp Survival Deathrun Map Code ({code})",
+      "description": "Play TMNT Mega Ramp Survival in Fortnite. Map code {code}. A TMNT deathrun with hoverboards, wildlife and cars up the ramp, saving leaderboards, collectable pizzas, and a 0.01% survival rate.",
+      "ogDescription": "TMNT deathrun up a mega ramp — hoverboards, saving leaderboards, pizzas, and a 0.01% survival rate."
     },
     "tmnt-city": {
       "title": "TMNT City Map Code ({code})",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "High-speed Mega Ramp survival with TMNT theme. Dodge chaos and survive the run.",
+        "tmnt-mega-ramp-survival": "TMNT deathrun up a mega ramp. Hoverboards, saving leaderboards, pizzas and a 0.01% survival rate.",
         "tmnt-city": "TMNT-themed city experience built in UEFN — explore, fight, and chill with friends."
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Fast-paced survival runs with repeatable gameplay loops. Great if you prefer active play while leveling.",
+        "tmnt-mega-ramp-survival": "Fast deathrun laps with repeatable loops. Great if you prefer active play while leveling.",
         "kpop-demon-hunters": "Free-for-all gun game with constant respawns. Good for players who want XP while fighting.",
         "rvb-players-vs-guards": "Team-based objectives and longer sessions. Good for steady XP while playing PvP-style rounds.",
         "tmnt-city": "Exploration and combat routes with consistent XP loops.",

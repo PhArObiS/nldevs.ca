@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Mapy TMNT",
       "eyebrow": "TMNT / Przetrwanie",
-      "intro": "Szybki tryb survivalowy, w którym gracze pędzą w górę ogromnej rampy, unikając przeszkód i starając się przetrwać jak najdłużej.",
-      "schemaGenre": "Przetrwanie",
-      "schemaDescription": "Szybki tryb Fortnite na przetrwanie na rampie, stworzony przez NLDEVS w UEFN.",
+      "intro": "Deathrun w klimacie Żółwi Ninja na gigantycznej rampie — jedź na hoverboardach, zwierzętach i samochodach, unikaj spadającego ruchu i sprawdź, jak daleko zajdziesz przy 0,01 % szans na przetrwanie.",
+      "schemaGenre": "Deathrun / Przetrwanie / Gra imprezowa",
+      "schemaDescription": "Mapa deathrun i survivalu w klimacie Żółwi Ninja stworzona w UEFN przez NLDEVS: hoverboardy, zwierzęta i samochody na rampie, zapisywane tabele najlepszego okrążenia i zabójstw botów, zbierane pizze oraz 0,01 % szans na przetrwanie.",
       "stats": [
         {
           "label": "Gracze",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Tryb",
-          "value": "Przetrwanie na mega rampie"
+          "value": "Deathrun / przetrwanie"
         },
         {
           "label": "Status",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Najlepsze do",
-          "value": "Szybkiego chaosu"
+          "value": "Grania w paczce"
         },
         {
           "label": "Poziom trudności",
@@ -362,7 +362,7 @@
           "title": "Opis",
           "accent": "rozgrywki",
           "paragraphs": [
-            "TMNT Mega Ramp Survival to szybki tryb survivalowy, w którym gracze pędzą w górę ogromnej rampy, unikając przeszkód i starając się przetrwać jak najdłużej."
+            "TMNT Mega Ramp Survival to deathrun na gigantycznej rampie. Wjedź na szczyt na hoverboardzie, zwierzęciu albo samochodem, walcz z wrogami Żółwi i stań ramię w ramię ze Splinterem i Żółwiami, zbieraj po drodze pizze i unikaj śmiertelnych przeszkód oraz spadających samochodów. Deklarowana szansa przetrwania to 0,01 %."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Dlaczego jest",
           "accent": "fajna",
           "items": [
-            "Wciąga na zasadzie „jeszcze jeden przejazd”",
-            "Szybki ruch i chaos",
-            "Świetna solo i ze znajomymi",
-            "Wyrazisty motyw TMNT"
+            "Dwie zapisywane tabele wyników — najlepsze okrążenie i najwięcej zabitych botów.",
+            "Wjedź na rampę na hoverboardzie, zwierzęciu albo samochodem.",
+            "Walcz z wrogami Żółwi i stań do walki ze Splinterem i Żółwiami.",
+            "Zbieraj pizze, unikaj spadających samochodów i pobij 0,01 % szans na przetrwanie."
           ]
         }
       ],

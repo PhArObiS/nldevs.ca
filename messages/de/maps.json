@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "TMNT Maps",
       "eyebrow": "TMNT / Survival",
-      "intro": "Ein schneller Survival-Modus, in dem Spieler eine riesige Ramp hochrasen, Hindernissen ausweichen und so lange wie möglich überleben.",
-      "schemaGenre": "Survival",
-      "schemaDescription": "Schneller Ramp-Survival-Modus für Fortnite, gebaut mit UEFN von NLDEVS.",
+      "intro": "Ein TMNT-Deathrun eine riesige Ramp hinauf — fahr Hoverboards, Tiere und Autos, weich herabfallendem Verkehr aus und sieh, wie weit du bei 0,01 % Überlebensrate kommst.",
+      "schemaGenre": "Deathrun / Survival / Partyspiel",
+      "schemaDescription": "TMNT-Deathrun- und Survival-Map, gebaut mit UEFN von NLDEVS, mit Hoverboards, Tieren und Autos auf der Ramp, gespeicherten Bestzeit- und Bot-Kill-Leaderboards, sammelbaren Pizzen und einer Überlebensrate von 0,01 %.",
       "stats": [
         {
           "label": "Spieler",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Modus",
-          "value": "Mega-Ramp-Survival"
+          "value": "Deathrun / Survival"
         },
         {
           "label": "Status",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Ideal für",
-          "value": "Bewegungschaos"
+          "value": "Runden in der Gruppe"
         },
         {
           "label": "Schwierigkeit",
@@ -362,7 +362,7 @@
           "title": "Gameplay-",
           "accent": "Beschreibung",
           "paragraphs": [
-            "TMNT Mega Ramp Survival ist ein schneller Survival-Modus, in dem Spieler eine riesige Ramp hochrasen, Hindernissen ausweichen und so lange wie möglich überleben."
+            "TMNT Mega Ramp Survival ist ein Deathrun eine riesige Ramp hinauf. Fahr mit Hoverboards, Tieren und Autos nach oben, bekämpfe TMNT-Gegner und kämpfe an der Seite von Splinter und den Turtles, sammle unterwegs Pizzen und weich tödlichen Hindernissen und herabfallenden Autos aus. Die angegebene Überlebensrate liegt bei 0,01 %."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Warum es",
           "accent": "Spaß macht",
           "items": [
-            "Zieht mit „nur noch ein Run“",
-            "Schnelle Bewegung und Chaos",
-            "Gut solo oder mit Freunden",
-            "Starkes TMNT-Thema"
+            "Zwei gespeicherte Leaderboards — beste Rundenzeit und meiste Bot-Kills.",
+            "Fahr die Ramp mit Hoverboard, Tier oder Auto hinauf.",
+            "Bekämpfe TMNT-Gegner und kämpfe an der Seite von Splinter und den Turtles.",
+            "Sammle Pizzen, weich herabfallenden Autos aus und schlag die 0,01 % Überlebensrate."
           ]
         }
       ],

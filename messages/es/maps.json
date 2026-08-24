@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Mapas Tortugas Ninja",
       "eyebrow": "Tortugas Ninja / Supervivencia",
-      "intro": "Una experiencia de supervivencia a alta velocidad donde los jugadores suben por una rampa enorme esquivando peligros y sobreviviendo el mayor tiempo posible.",
-      "schemaGenre": "Supervivencia",
-      "schemaDescription": "Experiencia de supervivencia en rampa a alta velocidad en Fortnite, creada con UEFN por NLDEVS.",
+      "intro": "Un deathrun de las Tortugas Ninja por una rampa gigante: monta hoverboards, animales y coches, esquiva el tráfico que cae y mira hasta dónde llegas con una tasa de supervivencia del 0,01 %.",
+      "schemaGenre": "Deathrun / Supervivencia / Juego de fiesta",
+      "schemaDescription": "Mapa de deathrun y supervivencia con temática Tortugas Ninja creado con UEFN por NLDEVS, con hoverboards, animales y coches por la rampa, tablas de clasificación guardadas de mejor vuelta y de bajas de bots, pizzas coleccionables y una tasa de supervivencia del 0,01 %.",
       "stats": [
         {
           "label": "Jugadores",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Modo",
-          "value": "Supervivencia en mega rampa"
+          "value": "Deathrun / supervivencia"
         },
         {
           "label": "Estado",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Ideal para",
-          "value": "Caos y movimiento"
+          "value": "Partidas con amigos"
         },
         {
           "label": "Dificultad",
@@ -362,7 +362,7 @@
           "title": "Descripción del",
           "accent": "gameplay",
           "paragraphs": [
-            "TMNT Mega Ramp Survival es una experiencia de supervivencia a alta velocidad donde los jugadores suben por una rampa enorme esquivando peligros y sobreviviendo el mayor tiempo posible."
+            "TMNT Mega Ramp Survival es un deathrun por una rampa gigante. Sube montando hoverboards, animales y coches, enfréntate a los enemigos de las Tortugas y pelea junto a Splinter y los Turtles, recoge pizzas por el camino y esquiva obstáculos mortales y coches que caen. La tasa de supervivencia anunciada es del 0,01 %."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Por qué es",
           "accent": "divertido",
           "items": [
-            "Rejugabilidad inmediata de “una partida más”",
-            "Movimiento a alta velocidad y caos",
-            "Genial solo o con amigos",
-            "Temática de las Tortugas Ninja bien marcada"
+            "Dos tablas de clasificación guardadas: mejor vuelta y más bajas de bots.",
+            "Sube la rampa en hoverboard, montando animales o en coche.",
+            "Enfréntate a los enemigos de las Tortugas y pelea junto a Splinter y los Turtles.",
+            "Recoge pizzas, esquiva los coches que caen y supera una tasa de supervivencia del 0,01 %."
           ]
         }
       ],

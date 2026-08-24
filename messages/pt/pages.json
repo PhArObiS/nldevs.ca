@@ -41,9 +41,9 @@
       "ogDescription": "Sobrevivência royale contra 99 bots com heróis desbloqueáveis, chefes, estatísticas salvas e ação Tilted x Star Wars."
     },
     "tmnt-mega-ramp-survival": {
-      "title": "Código do mapa TMNT Mega Ramp Survival ({code})",
-      "description": "Jogue TMNT Mega Ramp Survival no Fortnite. Código do mapa {code}. Gameplay de sobrevivência em alta velocidade criado com UEFN pela NLDEVS.",
-      "ogDescription": "Sobrevivência em mega rampa de alta velocidade com clima de Tartarugas Ninja, criada com UEFN pela NLDEVS."
+      "title": "Código do mapa TMNT Mega Ramp Survival Deathrun ({code})",
+      "description": "Jogue TMNT Mega Ramp Survival no Fortnite. Código do mapa {code}. Um deathrun das Tartarugas Ninja com hoverboards, animais e carros na rampa, tabelas de líderes salvas, pizzas para coletar e taxa de sobrevivência de 0,01%.",
+      "ogDescription": "Deathrun das Tartarugas Ninja numa mega rampa — hoverboards, tabelas salvas, pizzas e 0,01% de sobrevivência."
     },
     "tmnt-city": {
       "title": "Código do mapa TMNT City ({code})",
@@ -245,7 +245,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Sobrevivência em mega rampa de alta velocidade com tema das Tartarugas Ninja. Desvie do caos e sobreviva até o fim.",
+        "tmnt-mega-ramp-survival": "Deathrun das Tartarugas Ninja numa mega rampa. Hoverboards, tabelas salvas, pizzas e 0,01% de sobrevivência.",
         "tmnt-city": "Experiência urbana com tema das Tartarugas Ninja criada no UEFN — explore, lute e relaxe com os amigos."
       },
       "modeOverrides": {
@@ -496,7 +496,7 @@
         }
       ],
       "notes": {
-        "tmnt-mega-ramp-survival": "Runs de sobrevivência acelerados com ciclos de gameplay repetíveis. Ótimo se você prefere jogar ativamente enquanto sobe de nível.",
+        "tmnt-mega-ramp-survival": "Voltas rápidas de deathrun com ciclos repetíveis. Ótimo se você prefere jogar ativo enquanto sobe de nível.",
         "kpop-demon-hunters": "Gun game todos contra todos com renascimentos constantes. Bom para XP enquanto luta.",
         "rvb-players-vs-guards": "Objetivos em equipe e sessões mais longas. Bom para um XP constante jogando rodadas no estilo PvP.",
         "tmnt-city": "Rotas de exploração e combate com ciclos de XP consistentes.",

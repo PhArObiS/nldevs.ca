@@ -327,9 +327,9 @@
     "tmnt-mega-ramp-survival": {
       "breadcrumbParent": "Cartes Tortues Ninja",
       "eyebrow": "Tortues Ninja / Survie",
-      "intro": "Une expérience de survie à haute vitesse où les joueurs remontent une méga-rampe en évitant les obstacles et en survivant le plus longtemps possible.",
-      "schemaGenre": "Survie",
-      "schemaDescription": "Expérience Fortnite de survie sur méga-rampe à haute vitesse créée avec UEFN par NLDEVS.",
+      "intro": "Un deathrun Tortues Ninja sur une rampe géante — chevauchez hoverboards, animaux et voitures, esquivez le trafic qui tombe, et voyez jusqu'où vous allez face à un taux de survie de 0,01 %.",
+      "schemaGenre": "Deathrun / Survie / Jeu de fête",
+      "schemaDescription": "Carte de deathrun et de survie sur thème Tortues Ninja créée avec UEFN par NLDEVS, avec hoverboards, animaux et voitures sur la rampe, classements sauvegardés de meilleur temps au tour et de kills de bots, pizzas à collecter et un taux de survie de 0,01 %.",
       "stats": [
         {
           "label": "Joueurs",
@@ -337,7 +337,7 @@
         },
         {
           "label": "Mode",
-          "value": "Survie sur méga-rampe"
+          "value": "Deathrun / survie"
         },
         {
           "label": "Statut",
@@ -349,7 +349,7 @@
         },
         {
           "label": "Idéal pour",
-          "value": "Chaos et mouvement"
+          "value": "Les parties entre amis"
         },
         {
           "label": "Difficulté",
@@ -362,7 +362,7 @@
           "title": "Description du",
           "accent": "gameplay",
           "paragraphs": [
-            "TMNT Mega Ramp Survival est une expérience de survie à haute vitesse où les joueurs remontent une méga-rampe en évitant les obstacles et en survivant le plus longtemps possible."
+            "TMNT Mega Ramp Survival est un deathrun sur une rampe géante. Montez au sommet en hoverboard, à dos d'animal ou en voiture, affrontez les ennemis TMNT et combattez aux côtés de Splinter et des Tortues, ramassez des pizzas en chemin et esquivez les obstacles mortels et les voitures qui tombent. Le taux de survie annoncé est de 0,01 %."
           ]
         },
         {
@@ -383,10 +383,10 @@
           "title": "Pourquoi c'est",
           "accent": "fun",
           "items": [
-            "Une rejouabilité « encore un run » immédiate",
-            "Du mouvement à haute vitesse et du chaos",
-            "Excellent en solo comme entre amis",
-            "Un thème Tortues Ninja bien marqué"
+            "Deux classements sauvegardés — meilleur temps au tour et plus de kills de bots.",
+            "Montez la rampe en hoverboard, à dos d'animal ou en voiture.",
+            "Affrontez les ennemis TMNT et combattez avec Splinter et les Tortues.",
+            "Ramassez des pizzas, esquivez les voitures qui tombent et battez un taux de survie de 0,01 %."
           ]
         }
       ],
