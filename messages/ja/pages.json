@@ -11,8 +11,8 @@
       "ogDescription": "NLDEVSのタートルズ系Fortniteマップとマップコード — UEFN製。"
     },
     "squid-game-fortnite-maps": {
-      "title": "イカゲーム系Fortnite最強マップとマップコード",
-      "description": "NLDEVSのイカゲーム系Fortniteマップとマップコード。99 Bots Squid Royale Boss、Sidekick Siege 99 Bots、RvB Squid Minigameなど。",
+      "title": "Fortnite最強イカゲームマップとマップコード",
+      "description": "NLDEVSのFortniteイカゲーム系マップとマップコード。99 Bots Squid Royale Boss、Sidekick Siege 99 Bots、RvB Squid Minigameなど。",
       "ogDescription": "NLDEVSのイカゲーム系Fortniteマップとマップコード。99ボットサバイバル、ボス戦、サイドキック、赤vs青のカオス。"
     },
     "fortnite-gun-game-maps": {
@@ -262,7 +262,7 @@
     "squidGame": {
       "breadcrumb": "イカゲームマップ",
       "eyebrow": "脱落サバイバル",
-      "title": "イカゲーム系<accent>Fortnite最強マップ</accent>",
+      "title": "Fortnite最強<accent>イカゲームマップ</accent>",
       "description": "イカゲーム風ミニゲーム、99ボットサバイバル、サイドキック、ボス戦、赤vs青のカオス。すべてUEFN製。各マップに島コードとプレイタイプを掲載。",
       "schemaName": "イカゲーム系Fortnite最強マップとマップコード",
       "schemaDescription": "NLDEVSがUEFNで制作したイカゲーム風Fortniteマップとマップコードのまとめ。99ボットサバイバル、ボス戦、サイドキック、赤vs青のマップを収録。",
