@@ -781,6 +781,110 @@
         "RvB Squid Minigame"
       ]
     },
+    "new-fortnite-map": {
+      "pageTitle": "Nowa mapa Fortnite",
+      "breadcrumbParent": "Mapy 99 Bots",
+      "eyebrow": "Najnowsza premiera",
+      "intro": "Nowa mapa Fortnite od NLDEVS to Sidekick Siege 99 Bots, kod wyspy {code}. Ta strona śledzi wyspę wydaną najpóźniej, więc zawsze wskazuje aktualną premierę zamiast się starzeć.",
+      "schemaGenre": "Nowa mapa Fortnite",
+      "schemaDescription": "Nowa mapa Fortnite od NLDEVS — obecnie Sidekick Siege 99 Bots — z kodem wyspy, statusem premiery i opisem tego, jak gra się w aktualne wydanie.",
+      "stats": [
+        {
+          "label": "Gracze",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Survival 99 Bots"
+        },
+        {
+          "label": "Status",
+          "value": "Dostępna"
+        },
+        {
+          "label": "Premiera",
+          "value": "Sierpień 2026"
+        },
+        {
+          "label": "Najlepsze do",
+          "value": "Sprawdzenia nowości"
+        },
+        {
+          "label": "Poziom trudności",
+          "value": "Średni"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Co liczy się jako",
+          "accent": "nowa mapa Fortnite",
+          "paragraphs": [
+            "Mapa Fortnite jest nowa, kiedy wyspa właśnie się ukazała albo kiedy duża aktualizacja zmienia sposób gry. Odkrywaj pokazuje mnóstwo wysp, ale rzadko widać, które naprawdę są świeże — po to jest ta strona.",
+            "To nie archiwum: trzyma jedną wyspę, najnowszą premierę NLDEVS. Kiedy wychodzi nowsza mapa, strona przełącza się na nią, więc kod tutaj to zawsze ten, od którego warto zacząć."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Aktualna",
+          "accent": "premiera",
+          "items": [
+            "🆕 Sidekick Siege 99 Bots — najnowsza wyspa NLDEVS.",
+            "🔢 Kod wyspy 5577-7953-8449, gotowy do wklejenia w Odkrywaj.",
+            "👥 Gra się solo albo w maksymalnie 5 osób.",
+            "💾 Rangi i loadouty przechodzą między sesjami, więc pierwsze wejście już się liczy.",
+            "🔁 Zrobiona pod powtarzanie, nie pod jedno spojrzenie."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "card",
+          "title": "Zagraj w",
+          "accent": "najnowszą mapę",
+          "heading": "Kod wyspy 5577-7953-8449",
+          "body": "Otwórz Fortnite, wejdź w „Szukaj / Odkrywaj”, wklej 5577-7953-8449 i zeskocz. Jeśli w międzyczasie ukazała się nowsza wyspa NLDEVS, ta strona pokaże już tamten kod."
+        },
+        {
+          "type": "list",
+          "title": "Dlaczego zacząć od",
+          "accent": "najnowszej",
+          "items": [
+            "🎯 Nowe wyspy są zwykle najbardziej aktywne: więcej graczy, szybsze mecze.",
+            "🛠️ Świeże premiery dostają poprawki najszybciej, więc feedback naprawdę działa.",
+            "📌 Jeden kod do sprawdzenia zamiast przewijania Odkrywaj w poszukiwaniu czegoś aktualnego.",
+            "🔗 Pełna strona mapy poniżej opisuje wszystko, co ta wyspa oferuje."
+          ]
+        }
+      ],
+      "gallery": [
+        "Podgląd nowej mapy Fortnite od NLDEVS",
+        "Zrzut ekranu z najnowszej mapy Fortnite",
+        "Zrzut ekranu najnowszej premiery NLDEVS"
+      ],
+      "faqs": [
+        {
+          "q": "Jaka jest nowa mapa Fortnite od NLDEVS?",
+          "a": "Sidekick Siege 99 Bots, kod wyspy 5577-7953-8449. Ta strona zawsze pokazuje wyspę NLDEVS wydaną najpóźniej."
+        },
+        {
+          "q": "Jak często wychodzą nowe mapy Fortnite?",
+          "a": "To zależy od wielkości wyspy. Większe mapy zajmują więcej czasu, a istniejące dostają aktualizacje pomiędzy premierami — więc zaglądaj tu zamiast czekać na stały termin."
+        },
+        {
+          "q": "Jak zagrać w najnowszą mapę Fortnite?",
+          "a": "Otwórz Fortnite, wejdź w „Szukaj” lub „Odkrywaj”, wpisz kod wyspy w formacie ####-####-#### i dołącz do wyspy."
+        }
+      ],
+      "similarLabels": [
+        "Mapy 99 Bots",
+        "Mapy Squid Game",
+        "Najlepsze mapy XP"
+      ],
+      "fullDetailTitle": "Pełne",
+      "fullDetailAccent": "szczegóły mapy",
+      "fullDetailLabel": "Sidekick Siege 99 Bots — pełna strona"
+    },
     "99-bots-zombies-royale": {
       "breadcrumbParent": "Mapy 99 Bots",
       "eyebrow": "Survival horror / 99 Bots",

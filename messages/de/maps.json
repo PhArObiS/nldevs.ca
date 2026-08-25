@@ -781,6 +781,110 @@
         "RvB Squid Minigame"
       ]
     },
+    "new-fortnite-map": {
+      "pageTitle": "Neue Fortnite Map",
+      "breadcrumbParent": "99 Bots Maps",
+      "eyebrow": "Neuester Release",
+      "intro": "Die neue Fortnite Map von NLDEVS ist Sidekick Siege 99 Bots, Inselcode {code}. Diese Seite folgt der zuletzt erschienenen Insel und zeigt damit immer den aktuellen Release, statt zu veralten.",
+      "schemaGenre": "Neue Fortnite Map",
+      "schemaDescription": "Die neue Fortnite Map von NLDEVS — aktuell Sidekick Siege 99 Bots — mit Inselcode, Release-Status und dem, wie sich der aktuelle Release spielt.",
+      "stats": [
+        {
+          "label": "Spieler",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "99 Bots Survival"
+        },
+        {
+          "label": "Status",
+          "value": "Live"
+        },
+        {
+          "label": "Release",
+          "value": "August 2026"
+        },
+        {
+          "label": "Ideal für",
+          "value": "Das Neueste testen"
+        },
+        {
+          "label": "Schwierigkeit",
+          "value": "Mittel"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Was als",
+          "accent": "neue Fortnite Map zählt",
+          "paragraphs": [
+            "Eine Fortnite Map gilt als neu, wenn die Insel gerade veröffentlicht wurde oder ein großes Update ändert, wie sie sich spielt. Entdecken zeigt viele Inseln, macht aber selten deutlich, welche davon wirklich aktuell sind — genau dafür ist diese Seite da.",
+            "Kein Archiv: hier steht immer nur eine Insel, der neueste NLDEVS-Release. Erscheint eine neuere Map, wechselt die Seite dorthin — der Code hier ist also immer der, den man zuerst ausprobieren sollte."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Der aktuelle",
+          "accent": "Release",
+          "items": [
+            "🆕 Sidekick Siege 99 Bots — die neueste NLDEVS-Insel.",
+            "🔢 Inselcode 5577-7953-8449, direkt zum Einfügen in Entdecken.",
+            "👥 Läuft solo oder mit bis zu 5 Spielern.",
+            "💾 Ränge und Loadouts bleiben zwischen Sessions erhalten, der erste Run zählt also schon.",
+            "🔁 Für wiederholte Runs gebaut, nicht für einen kurzen Blick."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "card",
+          "title": "Die neueste",
+          "accent": "Map spielen",
+          "heading": "Inselcode 5577-7953-8449",
+          "body": "Fortnite öffnen, zu Suchen / Entdecken gehen, 5577-7953-8449 einfügen und abspringen. Ist inzwischen eine neuere NLDEVS-Insel erschienen, zeigt diese Seite bereits deren Code."
+        },
+        {
+          "type": "list",
+          "title": "Warum mit dem",
+          "accent": "Neuesten anfangen",
+          "items": [
+            "🎯 Neue Inseln sind meist am aktivsten: mehr Spieler, schnellere Matches.",
+            "🛠️ Frische Releases werden am schnellsten gepatcht, Feedback kommt also wirklich an.",
+            "📌 Ein Code zum Nachsehen statt Entdecken nach etwas Aktuellem zu durchsuchen.",
+            "🔗 Die vollständige Map-Seite unten geht auf alles ein, was diese Insel kann."
+          ]
+        }
+      ],
+      "gallery": [
+        "Vorschau der neuen Fortnite Map von NLDEVS",
+        "Gameplay-Screenshot der neuesten Fortnite Map",
+        "Screenshot des neuesten NLDEVS-Releases"
+      ],
+      "faqs": [
+        {
+          "q": "Was ist die neue Fortnite Map von NLDEVS?",
+          "a": "Sidekick Siege 99 Bots, Inselcode 5577-7953-8449. Diese Seite zeigt immer die zuletzt erschienene NLDEVS-Insel."
+        },
+        {
+          "q": "Wie oft erscheint eine neue Fortnite Map?",
+          "a": "Das hängt von der Größe der Insel ab. Größere Maps brauchen länger, und bestehende Maps bekommen zwischen den Releases Updates — schau also wieder rein, statt auf einen festen Rhythmus zu warten."
+        },
+        {
+          "q": "Wie spiele ich die neueste Fortnite Map?",
+          "a": "Fortnite öffnen, zu Suchen oder Entdecken gehen, den Inselcode im Format ####-####-#### eingeben, dann die Insel auswählen und spielen."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Maps",
+        "Squid Game Maps",
+        "Beste XP-Maps"
+      ],
+      "fullDetailTitle": "Alle",
+      "fullDetailAccent": "Map-Details",
+      "fullDetailLabel": "Sidekick Siege 99 Bots — vollständige Seite"
+    },
     "99-bots-zombies-royale": {
       "breadcrumbParent": "99 Bots Maps",
       "eyebrow": "Survival Horror / 99 Bots",

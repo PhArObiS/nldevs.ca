@@ -781,6 +781,110 @@
         "RvB Squid Minigame"
       ]
     },
+    "new-fortnite-map": {
+      "pageTitle": "New Fortnite Map",
+      "breadcrumbParent": "99 Bots Maps",
+      "eyebrow": "Newest release",
+      "intro": "The newest NLDEVS Fortnite map is Sidekick Siege 99 Bots, island code {code}. This page tracks whichever island shipped most recently, so it stays pointed at the current release instead of going stale.",
+      "schemaGenre": "New Fortnite Map",
+      "schemaDescription": "The newest Fortnite map from NLDEVS — currently Sidekick Siege 99 Bots — with island code, release status, and what the current release plays like.",
+      "stats": [
+        {
+          "label": "Players",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "99 Bots survival"
+        },
+        {
+          "label": "Status",
+          "value": "Live"
+        },
+        {
+          "label": "Released",
+          "value": "August 2026"
+        },
+        {
+          "label": "Best for",
+          "value": "Trying the newest"
+        },
+        {
+          "label": "Difficulty",
+          "value": "Medium"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "What counts as a",
+          "accent": "new Fortnite map",
+          "paragraphs": [
+            "A Fortnite map counts as new when the island has just been published, or when a big update changes how it plays. Discover surfaces plenty of islands but rarely makes it obvious which ones are actually recent, which is what this page is for.",
+            "Rather than an archive, it holds a single island: the most recent NLDEVS release. When a newer map ships, this page moves to it, so the code here is always the one worth trying first."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "The current",
+          "accent": "release",
+          "items": [
+            "🆕 Sidekick Siege 99 Bots — the most recent NLDEVS island.",
+            "🔢 Island code 5577-7953-8449, ready to paste into Discover.",
+            "👥 Runs solo or with up to 5 players.",
+            "💾 Ranks and loadouts carry between sessions, so a first run still counts.",
+            "🔁 Built for repeat runs rather than a one-off look."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "card",
+          "title": "Play the",
+          "accent": "newest map",
+          "heading": "Island code 5577-7953-8449",
+          "body": "Open Fortnite, go to Search / Discover, paste 5577-7953-8449, and drop in. If a newer NLDEVS island has shipped since, this page will already show that code instead."
+        },
+        {
+          "type": "list",
+          "title": "Why start with",
+          "accent": "the newest",
+          "items": [
+            "🎯 New islands are usually the most active — more players, quicker matches.",
+            "🛠️ Recent releases get patched fastest, so feedback actually lands.",
+            "📌 One code to check instead of scrolling Discover for something current.",
+            "🔗 The full map page below covers everything this island does in depth."
+          ]
+        }
+      ],
+      "gallery": [
+        "The newest NLDEVS Fortnite map preview",
+        "Newest Fortnite map gameplay screenshot",
+        "Latest NLDEVS island release screenshot"
+      ],
+      "faqs": [
+        {
+          "q": "What is the new Fortnite map from NLDEVS?",
+          "a": "Sidekick Siege 99 Bots, island code 5577-7953-8449. This page always shows whichever NLDEVS island released most recently."
+        },
+        {
+          "q": "How often does a new Fortnite map release?",
+          "a": "It varies with the size of the island. Larger builds take longer, and existing maps get updates between releases — so check back rather than waiting on a fixed schedule."
+        },
+        {
+          "q": "How do I play the newest Fortnite map?",
+          "a": "Open Fortnite, go to Search or Discover, enter the island code in ####-####-#### format, then select the island and play."
+        }
+      ],
+      "similarLabels": [
+        "99 Bots Maps",
+        "Squid Game Maps",
+        "Best XP Maps"
+      ],
+      "fullDetailTitle": "Full map",
+      "fullDetailAccent": "details",
+      "fullDetailLabel": "Sidekick Siege 99 Bots — full page"
+    },
     "99-bots-zombies-royale": {
       "breadcrumbParent": "99 Bots Maps",
       "eyebrow": "Survival Horror / 99 Bots",

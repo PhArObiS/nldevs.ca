@@ -80,6 +80,24 @@ type Props = {
   similarHrefs: AppPathname[];
   /** Extra schema.org fields that differ per map. */
   schemaExtras?: Record<string, unknown>;
+  /**
+   * Catalog namespace under `mapPages` to read copy from. Defaults to `mapId`.
+   *
+   * Set this when a second URL features the same island from a different
+   * angle — /fortnite-new-map covers whichever map shipped most recently, and
+   * would otherwise render byte-identical copy to that map's own page, which
+   * Google would treat as duplicate content and drop one of.
+   */
+  contentKey?: string;
+  /**
+   * Href for the island's canonical page, rendered as a link out when set.
+   *
+   * Note: the H1 is the island name unless the catalog namespace defines
+   * `pageTitle`, which an alternate-angle page uses to lead with its own
+   * keyword. That lives in the catalog rather than in a prop so it stays
+   * translated — a literal here would print English on all eight locales.
+   */
+  fullDetailHref?: AppPathname;
 };
 
 /**
@@ -94,10 +112,12 @@ export default function MapDetailPage({
   parentHref,
   similarHrefs,
   schemaExtras = {},
+  contentKey,
+  fullDetailHref,
 }: Props) {
   const map = MAPS[mapId];
   const locale = useLocale() as Locale;
-  const t = useTranslations(`mapPages.${mapId}`);
+  const t = useTranslations(`mapPages.${contentKey ?? mapId}`);
   const tc = useTranslations("common");
   const tf = useTranslations("footer");
 
@@ -109,6 +129,8 @@ export default function MapDetailPage({
   const faqs = rawArray<{ q: string; a: string }>(t, "faqs");
   const stats = rawArray<{ label: string; value: string }>(t, "stats");
   const galleryAlts = rawArray<string>(t, "gallery");
+  // Localised H1 for alternate-angle pages; falls back to the island name.
+  const headline = t.has("pageTitle") ? t("pageTitle") : map.title;
   const similarLabels = rawArray<string>(t, "similarLabels");
 
   const url = absoluteUrl(map.href ?? "/", locale);
@@ -165,10 +187,10 @@ export default function MapDetailPage({
         crumbs={[
           { label: tc("home"), href: "/" },
           { label: t("breadcrumbParent"), href: parentHref },
-          { label: map.title },
+          { label: headline },
         ]}
         eyebrow={t("eyebrow")}
-        title={map.title}
+        title={headline}
         code={map.code}
         image={map.image}
         stats={stats}
@@ -183,6 +205,14 @@ export default function MapDetailPage({
       />
 
       <PageSections sections={sectionsAfter} />
+
+      {/* Alternate-angle pages point at the island's canonical page so the
+          link equity and the reader both end up somewhere deeper. */}
+      {fullDetailHref && (
+        <ContentSection title={t("fullDetailTitle")} accent={t("fullDetailAccent")}>
+          <PillLinks links={[{ href: fullDetailHref, label: t("fullDetailLabel") }]} />
+        </ContentSection>
+      )}
 
       <ContentSection title={tc("similarMaps")} accent={tc("similarMapsAccent")}>
         <PillLinks links={similarLinks} />

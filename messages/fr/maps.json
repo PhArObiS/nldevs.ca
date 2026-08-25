@@ -781,6 +781,110 @@
         "RvB Squid Minigame"
       ]
     },
+    "new-fortnite-map": {
+      "pageTitle": "Nouvelle carte Fortnite",
+      "breadcrumbParent": "Cartes 99 Bots",
+      "eyebrow": "Dernière sortie",
+      "intro": "La nouvelle carte Fortnite de NLDEVS est Sidekick Siege 99 Bots, code d'île {code}. Cette page suit l'île sortie le plus récemment : elle reste donc braquée sur la sortie du moment au lieu de vieillir.",
+      "schemaGenre": "Nouvelle carte Fortnite",
+      "schemaDescription": "La nouvelle carte Fortnite de NLDEVS — actuellement Sidekick Siege 99 Bots — avec code d'île, statut de sortie et ce que donne la sortie du moment.",
+      "stats": [
+        {
+          "label": "Joueurs",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Survie 99 Bots"
+        },
+        {
+          "label": "Statut",
+          "value": "En ligne"
+        },
+        {
+          "label": "Sortie",
+          "value": "Août 2026"
+        },
+        {
+          "label": "Idéal pour",
+          "value": "Tester la dernière"
+        },
+        {
+          "label": "Difficulté",
+          "value": "Moyenne"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "Ce qui compte comme une",
+          "accent": "nouvelle carte Fortnite",
+          "paragraphs": [
+            "Une carte Fortnite est nouvelle quand l'île vient d'être publiée, ou quand une grosse mise à jour change sa façon de se jouer. Découvrir propose beaucoup d'îles mais indique rarement lesquelles sont vraiment récentes : c'est à ça que sert cette page.",
+            "Ce n'est pas une archive : elle ne garde qu'une seule île, la dernière sortie NLDEVS. Quand une carte plus récente arrive, la page bascule dessus, donc le code affiché ici est toujours celui à essayer en premier."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "La sortie",
+          "accent": "du moment",
+          "items": [
+            "🆕 Sidekick Siege 99 Bots — l'île NLDEVS la plus récente.",
+            "🔢 Code d'île 5577-7953-8449, prêt à coller dans Découvrir.",
+            "👥 Jouable en solo ou jusqu'à 5 joueurs.",
+            "💾 Rangs et équipements se conservent entre les sessions : un premier run compte déjà.",
+            "🔁 Pensée pour être rejouée, pas pour un simple coup d'œil."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "card",
+          "title": "Jouer à la",
+          "accent": "dernière carte",
+          "heading": "Code d'île 5577-7953-8449",
+          "body": "Ouvrez Fortnite, allez dans Rechercher / Découvrir, collez 5577-7953-8449 et lancez-vous. Si une île NLDEVS plus récente est sortie entre-temps, cette page affichera déjà ce code-là."
+        },
+        {
+          "type": "list",
+          "title": "Pourquoi commencer par",
+          "accent": "la plus récente",
+          "items": [
+            "🎯 Les nouvelles îles sont souvent les plus actives : plus de joueurs, parties plus rapides.",
+            "🛠️ Les sorties récentes sont corrigées le plus vite, donc les retours servent vraiment.",
+            "📌 Un seul code à vérifier plutôt que de fouiller Découvrir.",
+            "🔗 La page complète ci-dessous détaille tout ce que fait cette île."
+          ]
+        }
+      ],
+      "gallery": [
+        "Aperçu de la nouvelle carte Fortnite de NLDEVS",
+        "Capture de gameplay de la dernière carte Fortnite",
+        "Capture de la dernière île sortie chez NLDEVS"
+      ],
+      "faqs": [
+        {
+          "q": "Quelle est la nouvelle carte Fortnite de NLDEVS ?",
+          "a": "Sidekick Siege 99 Bots, code d'île 5577-7953-8449. Cette page affiche toujours l'île NLDEVS sortie le plus récemment."
+        },
+        {
+          "q": "À quelle fréquence sort une nouvelle carte Fortnite ?",
+          "a": "Cela dépend de la taille de l'île. Les grosses cartes prennent plus de temps, et les cartes existantes reçoivent des mises à jour entre deux sorties — repassez plutôt que d'attendre un rythme fixe."
+        },
+        {
+          "q": "Comment jouer à la dernière carte Fortnite ?",
+          "a": "Ouvrez Fortnite, allez dans Rechercher ou Découvrir, entrez le code d'île au format ####-####-####, puis sélectionnez l'île et jouez."
+        }
+      ],
+      "similarLabels": [
+        "Cartes 99 Bots",
+        "Cartes Squid Game",
+        "Meilleures cartes XP"
+      ],
+      "fullDetailTitle": "Détails",
+      "fullDetailAccent": "complets",
+      "fullDetailLabel": "Sidekick Siege 99 Bots — page complète"
+    },
     "99-bots-zombies-royale": {
       "breadcrumbParent": "Cartes 99 Bots",
       "eyebrow": "Survival horror / 99 Bots",

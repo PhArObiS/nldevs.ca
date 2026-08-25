@@ -781,6 +781,110 @@
         "RvB Squid Minigame"
       ]
     },
+    "new-fortnite-map": {
+      "pageTitle": "Novo mapa do Fortnite",
+      "breadcrumbParent": "Mapas 99 Bots",
+      "eyebrow": "Lançamento mais recente",
+      "intro": "O novo mapa do Fortnite da NLDEVS é Sidekick Siege 99 Bots, código de ilha {code}. Esta página acompanha a ilha lançada há menos tempo, então continua apontando para o lançamento atual em vez de ficar desatualizada.",
+      "schemaGenre": "Novo mapa do Fortnite",
+      "schemaDescription": "O novo mapa do Fortnite da NLDEVS — atualmente Sidekick Siege 99 Bots — com código de ilha, status de lançamento e como o lançamento atual se joga.",
+      "stats": [
+        {
+          "label": "Jogadores",
+          "value": "1-5"
+        },
+        {
+          "label": "Mode",
+          "value": "Sobrevivência 99 Bots"
+        },
+        {
+          "label": "Status",
+          "value": "Disponível"
+        },
+        {
+          "label": "Lançamento",
+          "value": "Agosto de 2026"
+        },
+        {
+          "label": "Ideal para",
+          "value": "Testar o mais novo"
+        },
+        {
+          "label": "Dificuldade",
+          "value": "Média"
+        }
+      ],
+      "sections": [
+        {
+          "type": "prose",
+          "title": "O que conta como",
+          "accent": "novo mapa do Fortnite",
+          "paragraphs": [
+            "Um mapa do Fortnite é novo quando a ilha acabou de ser publicada ou quando uma grande atualização muda como ela se joga. O Descobrir mostra muitas ilhas, mas raramente deixa claro quais são realmente recentes — é para isso que esta página existe.",
+            "Não é um arquivo: ela mantém uma única ilha, o lançamento mais recente da NLDEVS. Quando um mapa mais novo sai, a página passa para ele, então o código aqui é sempre o que vale testar primeiro."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "O lançamento",
+          "accent": "atual",
+          "items": [
+            "🆕 Sidekick Siege 99 Bots — a ilha mais recente da NLDEVS.",
+            "🔢 Código de ilha 5577-7953-8449, pronto para colar no Descobrir.",
+            "👥 Dá para jogar solo ou com até 5 jogadores.",
+            "💾 Ranques e loadouts seguem entre sessões, então a primeira partida já conta.",
+            "🔁 Feita para repetir, não para uma olhada rápida."
+          ]
+        }
+      ],
+      "sectionsAfter": [
+        {
+          "type": "card",
+          "title": "Jogar o",
+          "accent": "mapa mais novo",
+          "heading": "Código de ilha 5577-7953-8449",
+          "body": "Abra o Fortnite, vá em Buscar / Descobrir, cole 5577-7953-8449 e entre. Se uma ilha mais nova da NLDEVS tiver saído nesse meio-tempo, esta página já vai mostrar esse código."
+        },
+        {
+          "type": "list",
+          "title": "Por que começar pelo",
+          "accent": "mais novo",
+          "items": [
+            "🎯 Ilhas novas costumam estar mais movimentadas: mais gente, partidas mais rápidas.",
+            "🛠️ Lançamentos recentes recebem correções mais rápido, então o feedback realmente chega.",
+            "📌 Um código para conferir em vez de rolar o Descobrir atrás de algo atual.",
+            "🔗 A página completa abaixo detalha tudo o que esta ilha faz."
+          ]
+        }
+      ],
+      "gallery": [
+        "Prévia do novo mapa do Fortnite da NLDEVS",
+        "Captura de tela do mapa mais recente do Fortnite",
+        "Captura do lançamento mais recente da NLDEVS"
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o novo mapa do Fortnite da NLDEVS?",
+          "a": "Sidekick Siege 99 Bots, código de ilha 5577-7953-8449. Esta página sempre mostra a ilha da NLDEVS lançada há menos tempo."
+        },
+        {
+          "q": "Com que frequência sai um novo mapa do Fortnite?",
+          "a": "Depende do tamanho da ilha. Mapas maiores levam mais tempo, e os mapas existentes recebem atualizações entre lançamentos — então volte aqui em vez de esperar uma data fixa."
+        },
+        {
+          "q": "Como jogar o mapa mais novo do Fortnite?",
+          "a": "Abra o Fortnite, vá em Buscar ou Descobrir, digite o código de ilha no formato ####-####-#### e entre na ilha."
+        }
+      ],
+      "similarLabels": [
+        "Mapas 99 Bots",
+        "Mapas Round 6",
+        "Melhores mapas de XP"
+      ],
+      "fullDetailTitle": "Detalhes",
+      "fullDetailAccent": "completos",
+      "fullDetailLabel": "Sidekick Siege 99 Bots — página completa"
+    },
     "99-bots-zombies-royale": {
       "breadcrumbParent": "Mapas 99 Bots",
       "eyebrow": "Survival horror / 99 Bots",
