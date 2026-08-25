@@ -27,6 +27,23 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Google can discover generated image metadata variants such as
+      // `/CityTMNT.jpg-0`. The real public assets live at `/CityTMNT.jpg`;
+      // redirect the crawled variants so they resolve to the image instead of
+      // being treated as broken server responses in Search Console.
+      {
+        source:
+          "/:image(CityTMNT\\.jpg|TycoonSidekicks\\.jpg)-:variant(\\d+)",
+        destination: "/:image",
+        permanent: true,
+      },
+      // The generated OG image is locale-scoped (`/en/opengraph-image`), but
+      // some crawlers request the bare metadata route with Next's cache query.
+      {
+        source: "/opengraph-image",
+        destination: "/en/opengraph-image",
+        permanent: true,
+      },
       // Winterfest Demon Hunters was renamed to KPop Demon Hunters on Epic —
       // same island code (6101-7751-8665), new theme. Every locale had its own
       // winterfest slug, so each needs its own redirect. The English path is
