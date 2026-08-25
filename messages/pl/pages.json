@@ -25,6 +25,11 @@
       "description": "Najlepsze mapy XP Fortnite i kody wysp do efektywnego levelowania. Lista NLDEVS z krótkimi opisami.",
       "ogDescription": "Przeglądaj mapy XP w Fortnite i kody map, żeby levelować efektywnie. Zestawienie NLDEVS."
     },
+    "fortnite-new-map": {
+      "title": "Nowa mapa Fortnite: kody najnowszych map NLDEVS",
+      "description": "Zagraj w nową mapę Fortnite od NLDEVS: Sidekick Siege 99 Bots. Najnowsze kody wysp, szczegóły rozgrywki, aktualizacje i inne mapy Fortnite Kreatywnego.",
+      "ogDescription": "Nowa mapa Fortnite od NLDEVS — najnowsze kody wysp i ostatnie premiery."
+    },
     "star-wars-tycoon-sidekick-legends": {
       "title": "Star Wars Tycoon Sidekick Legends wkrótce ({code})",
       "description": "Star Wars Tycoon Sidekick Legends wkrótce w Fortnite. Kod mapy {code}. Sidekicki, bohaterowie, nowe sekcje, pracownicy, rebirth leaderboard i auto-save.",
@@ -107,6 +112,94 @@
     }
   },
   "hubs": {
+    "newMap": {
+      "breadcrumb": "Nowe mapy",
+      "eyebrow": "Najnowsza premiera NLDEVS",
+      "title": "Nowa <accent>mapa Fortnite</accent>",
+      "description": "Szukasz nowej mapy Fortnite? Zacznij od Sidekick Siege 99 Bots, najnowszej premiery NLDEVS, a potem sprawdź inne niedawno zaktualizowane mapy Fortnite Kreatywnego.",
+      "schemaName": "Nowe mapy Fortnite od NLDEVS",
+      "schemaDescription": "Lista najnowszych map Fortnite i kodów wysp wydanych przez NLDEVS, z najświeższymi premierami na górze.",
+      "listName": "Nowe mapy Fortnite",
+      "genre": "Nowa mapa Fortnite",
+      "codesTitle": "Kody nowych map",
+      "codesAccent": "Fortnite",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "latest-new-fortnite-map",
+          "title": "Czym jest",
+          "accent": "nowa mapa Fortnite?",
+          "paragraphs": [
+            "Nowa mapa Fortnite to wyspa z trybu Kreatywnego lub UEFN, która właśnie się ukazała albo dostała dużą aktualizację. Ta strona zbiera najnowsze premiery NLDEVS, od najświeższej, razem z kodem wyspy.",
+            "Nowe mapy zmieniają się szybko: wyspa może zostać zaktualizowana, przemianowana albo zastąpiona z sezonu na sezon. Dodaj tę stronę do zakładek zamiast zapamiętywać jeden kod."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Wskazówki do",
+          "accent": "nowych map",
+          "items": [
+            "Wpisz kod wyspy dokładnie w formacie ####-####-####.",
+            "Dodaj mapę do ulubionych po graniu — łatwiej wrócić po aktualizacji.",
+            "Nowe wyspy często dostają poprawki w pierwszym tygodniu; zajrzyj ponownie, jeśli coś działa niestabilnie.",
+            "Graj w paczce: większość świeżych premier jest robiona pod grupy."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "Jak",
+          "accent": "grać",
+          "items": [
+            "Otwórz Fortnite → „Szukaj / Odkrywaj”.",
+            "Wpisz kod wyspy wybranej mapy.",
+            "Dołącz do wyspy i realizuj cele w grze.",
+            "Wróć na tę stronę po kolejną premierę NLDEVS."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Jaka jest nowa mapa Fortnite od NLDEVS?",
+          "a": "Najnowsza premiera to Sidekick Siege 99 Bots. Ta strona zawsze pokazuje najnowszą mapę NLDEVS na górze, razem z kodem wyspy."
+        },
+        {
+          "q": "Jak często pojawiają się nowe mapy?",
+          "a": "To zależy od wielkości wyspy. Większe mapy zajmują więcej czasu, ale istniejące mapy dostają aktualizacje pomiędzy premierami."
+        },
+        {
+          "q": "Jak zagrać w nową mapę Fortnite?",
+          "a": "Otwórz Fortnite, wejdź w „Szukaj/Odkrywaj”, wpisz kod wyspy (####-####-####) i dołącz do wyspy."
+        },
+        {
+          "q": "Czy te nowe mapy dają XP?",
+          "a": "Niektóre wyspy dają, zależnie od kalibracji Fortnite i ustawień mapy. Stawki zmieniają się po aktualizacjach, więc traktuj XP jako bonus."
+        }
+      ],
+      "notes": {
+        "sidekick-siege-99-bots": "Najnowsza premiera: survival z 99 botami prowadzony przez sidekicki, z walkami z bossami, zapisem loadoutów, rangami, tabelami wyników i obsługą do 5 graczy.",
+        "99-bots-zombies-royale": "Nowy survival z zombie w otwartym świecie: 99 botów, nowe bronie, jazda na zwierzętach, zapis statystyk, rangi i tabele wyników.",
+        "kpop-demon-hunters": "Niedawno wydany gun game każdy na każdego z nieskończoną progresją broni, botami, wydarzeniem z bossem i zapisem statystyk.",
+        "rvb-players-vs-guards": "Świeża wyspa Czerwoni kontra Niebiescy w formacie gracze kontra strażnicy: cele, Tank Wars, supermoce i zapisywane rangi.",
+        "star-wars-tycoon-sidekick-legends": "Wkrótce: Star Wars Tycoon z odblokowywaniem sidekicków i bohaterów, nowymi sekcjami, pracownikami, wspinaczką w tabeli rebirth, autozapisem i obsługą do 4 graczy.",
+        "star-wars-mega-rvb": "PvP Star Wars Czerwoni kontra Niebiescy z własnymi broniami, pojazdami, osiągnięciami, muzyką i awansem aż do Unreal."
+      },
+      "modeOverrides": {
+        "sidekick-siege-99-bots": "Najnowsze / 99 Bots",
+        "99-bots-zombies-royale": "Nowe / 99 Bots",
+        "kpop-demon-hunters": "Świeże / Gun Game",
+        "rvb-players-vs-guards": "Świeże / Czerwoni kontra Niebiescy",
+        "star-wars-tycoon-sidekick-legends": "Wkrótce / Tycoon",
+        "star-wars-mega-rvb": "Świeże / Czerwoni kontra Niebiescy"
+      },
+      "relatedLabels": [
+        "Mapy 99 Bots",
+        "Mapy Squid Game",
+        "Mapy Gun Game",
+        "Mapy XP"
+      ]
+    },
     "starWars": {
       "breadcrumb": "Mapy Star Wars",
       "eyebrow": "Dawno temu w odległej galaktyce",

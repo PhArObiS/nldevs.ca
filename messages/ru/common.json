@@ -97,7 +97,8 @@
     "confirm": "Подтвердить",
     "confirmEmail": "Подтвердить email",
     "greeting": "Привет, {name}",
-    "defaultPlayerName": "Игрок"
+    "defaultPlayerName": "Игрок",
+    "newMap": "Новое"
   },
   "footer": {
     "tagline": "Студия UEFN, которая создает карты Fortnite с высокой реиграбельностью: gun game, тематические приключения и режимы с прогрессией.",
@@ -113,7 +114,8 @@
     "contact": "Контакты",
     "copyright": "© {year} NLDEVS. Не связано с Epic Games.",
     "bots99Maps": "Карты 99 Bots",
-    "redVsBlueMaps": "Карты «Красные против синих»"
+    "redVsBlueMaps": "Карты «Красные против синих»",
+    "newMapHub": "Новые карты"
   },
   "hero": {
     "eyebrow": "Игровая студия UEFN",

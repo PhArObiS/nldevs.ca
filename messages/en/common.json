@@ -97,7 +97,8 @@
     "confirm": "Confirm",
     "confirmEmail": "Confirm email",
     "greeting": "Hi, {name}",
-    "defaultPlayerName": "Player"
+    "defaultPlayerName": "Player",
+    "newMap": "New"
   },
   "footer": {
     "tagline": "A UEFN game studio building replayable Fortnite experiences — gun games, themed adventures, and progression maps.",
@@ -113,7 +114,8 @@
     "contact": "Contact",
     "copyright": "© {year} NLDEVS. Not affiliated with Epic Games.",
     "bots99Maps": "99 Bots Maps",
-    "redVsBlueMaps": "Red vs Blue Maps"
+    "redVsBlueMaps": "Red vs Blue Maps",
+    "newMapHub": "New Maps"
   },
   "hero": {
     "eyebrow": "UEFN Game Studio",

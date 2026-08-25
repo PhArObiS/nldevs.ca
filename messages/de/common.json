@@ -97,7 +97,8 @@
     "confirm": "Bestätigen",
     "confirmEmail": "E-Mail bestätigen",
     "greeting": "Hi, {name}",
-    "defaultPlayerName": "Spieler"
+    "defaultPlayerName": "Spieler",
+    "newMap": "Neu"
   },
   "footer": {
     "tagline": "Ein UEFN-Studio, das Fortnite-Maps mit hohem Wiederspielwert baut: Gun Games, thematische Abenteuer und Maps mit Progression.",
@@ -113,7 +114,8 @@
     "contact": "Kontakt",
     "copyright": "© {year} NLDEVS. Nicht mit Epic Games verbunden.",
     "bots99Maps": "99 Bots Maps",
-    "redVsBlueMaps": "Rot-gegen-Blau-Maps"
+    "redVsBlueMaps": "Rot-gegen-Blau-Maps",
+    "newMapHub": "Neue Maps"
   },
   "hero": {
     "eyebrow": "UEFN Game Studio",

@@ -178,6 +178,14 @@ export const FEATURED_MAP_IDS: MapId[] = [
  * curated list rather than a theme.
  */
 export const HUB_MAP_IDS: Record<string, MapId[]> = {
+  newMap: [
+    "sidekick-siege-99-bots",
+    "99-bots-zombies-royale",
+    "kpop-demon-hunters",
+    "rvb-players-vs-guards",
+    "star-wars-tycoon-sidekick-legends",
+    "star-wars-mega-rvb",
+  ],
   starWars: [
     "star-wars-tycoon-sidekick-legends",
     "star-wars-mega-rvb",

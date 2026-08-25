@@ -97,7 +97,8 @@
     "confirm": "確認",
     "confirmEmail": "メールを確認",
     "greeting": "やあ、{name}",
-    "defaultPlayerName": "プレイヤー"
+    "defaultPlayerName": "プレイヤー",
+    "newMap": "新着"
   },
   "footer": {
     "tagline": "何度も遊べるFortniteマップを作るUEFNスタジオ。ガンゲーム、テーマ系アドベンチャー、育成型モードなど。",
@@ -113,7 +114,8 @@
     "contact": "お問い合わせ",
     "copyright": "© {year} NLDEVS. Epic Gamesとは関係ありません。",
     "bots99Maps": "99 Botsマップ",
-    "redVsBlueMaps": "赤 vs 青マップ"
+    "redVsBlueMaps": "赤 vs 青マップ",
+    "newMapHub": "新着マップ"
   },
   "hero": {
     "eyebrow": "UEFNゲームスタジオ",

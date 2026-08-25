@@ -25,6 +25,11 @@
       "description": "Best Fortnite XP maps and map codes to help you level up efficiently. Curated by NLDEVS with quick summaries and updated picks.",
       "ogDescription": "Browse Fortnite XP maps and map codes to level up efficiently. Curated by NLDEVS."
     },
+    "fortnite-new-map": {
+      "title": "New Fortnite Map: Sidekick Siege Island Code",
+      "description": "Play the latest new Fortnite map from NLDEVS: Sidekick Siege 99 Bots. Get the newest island code, gameplay details, map updates, and more new Fortnite Creative maps.",
+      "ogDescription": "Sidekick Siege 99 Bots is the latest new Fortnite map from NLDEVS, with island code and recent Creative map updates."
+    },
     "star-wars-tycoon-sidekick-legends": {
       "title": "Star Wars Tycoon Sidekick Legends Coming Soon ({code})",
       "description": "Star Wars Tycoon Sidekick Legends is coming soon to Fortnite. Map code {code}. Unlock Sidekicks and Heroes, build new sections, hire workers, climb the Rebirth leaderboard, and save progress automatically.",
@@ -107,6 +112,94 @@
     }
   },
   "hubs": {
+    "newMap": {
+      "breadcrumb": "Fortnite New Map",
+      "eyebrow": "Latest NLDEVS launch",
+      "title": "New <accent>Fortnite map</accent>",
+      "description": "Looking for a new Fortnite map to play? Start with Sidekick Siege 99 Bots, the latest NLDEVS launch, then browse more recently updated Fortnite Creative maps.",
+      "schemaName": "New Fortnite Maps by NLDEVS",
+      "schemaDescription": "A curated page for Sidekick Siege 99 Bots, the latest new Fortnite map from NLDEVS, with island code, gameplay details, and recent Fortnite Creative map updates.",
+      "listName": "New Fortnite Maps",
+      "genre": "New Fortnite Map",
+      "codesTitle": "New Fortnite map",
+      "codesAccent": "codes",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "latest-new-fortnite-map",
+          "title": "What is a",
+          "accent": "new Fortnite map?",
+          "paragraphs": [
+            "Sidekick Siege 99 Bots is the latest NLDEVS Fortnite map launch. This page puts that new island first, then keeps a short list of recently updated Creative and UEFN maps worth trying next.",
+            "Use it when you want a new Fortnite map without digging through Discover. Each card includes the island code, mode, launch status, and a quick note on what the map is built for."
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "Why play",
+          "accent": "Sidekick Siege",
+          "items": [
+            "Start here if you want the newest NLDEVS island code.",
+            "Play sidekick-led 99 bots survival with boss battles, saved loadouts, ranks, and leaderboards.",
+            "Bring friends where supported; the map is built for repeat PvE runs and progression.",
+            "Favorite the island so you can return quickly after map updates."
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "How to",
+          "accent": "play",
+          "items": [
+            "Open Fortnite Search or Discover.",
+            "Enter the island code exactly in the ####-####-#### format.",
+            "Select Sidekick Siege 99 Bots and start the match.",
+            "Check back here for the next new Fortnite map update."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the latest new Fortnite map by NLDEVS?",
+          "a": "The latest NLDEVS launch is Sidekick Siege 99 Bots. It is listed first on this page with its island code and gameplay details."
+        },
+        {
+          "q": "What is the Sidekick Siege 99 Bots map code?",
+          "a": "The Sidekick Siege 99 Bots island code is 5577-7953-8449."
+        },
+        {
+          "q": "How do I enter a new Fortnite map code?",
+          "a": "Open Fortnite, go to Search or Discover, enter the island code in the ####-####-#### format, then select the island to play."
+        },
+        {
+          "q": "Where can I find more Fortnite map codes?",
+          "a": "Use the related pages below for 99 Bots, Squid Game, Gun Game, XP, Star Wars, Red vs Blue, and TMNT map lists."
+        }
+      ],
+      "notes": {
+        "sidekick-siege-99-bots": "Latest launch: sidekick-led 99 bots survival with boss battles, saved loadouts, ranks, leaderboards, and up to 5 players.",
+        "99-bots-zombies-royale": "New open-world zombie survival with 99 bots, new weapons, wildlife riding, saved stats, ranks, and leaderboards.",
+        "kpop-demon-hunters": "Recently launched free-for-all gun game with infinite weapon progression, bots, a boss event, and saved stats.",
+        "rvb-players-vs-guards": "Recent Red vs Blue players-versus-guards island with objectives, Tank Wars, superpowers, and saved ranks.",
+        "star-wars-tycoon-sidekick-legends": "Coming soon: Star Wars Tycoon with Sidekick and Hero unlocks, new sections, workers, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+        "star-wars-mega-rvb": "Star Wars Red vs Blue PvP with custom weapons, vehicles, achievements, music, and ranking up to Unreal."
+      },
+      "modeOverrides": {
+        "sidekick-siege-99-bots": "Newest / 99 Bots",
+        "99-bots-zombies-royale": "New / 99 Bots",
+        "kpop-demon-hunters": "Recent / Gun Game",
+        "rvb-players-vs-guards": "Recent / Red vs Blue",
+        "star-wars-tycoon-sidekick-legends": "Coming Soon / Tycoon",
+        "star-wars-mega-rvb": "Recent / Red vs Blue"
+      },
+      "relatedLabels": [
+        "99 Bots Maps",
+        "Squid Game Maps",
+        "Gun Game Maps",
+        "XP Maps"
+      ]
+    },
     "starWars": {
       "breadcrumb": "Star Wars Maps",
       "eyebrow": "A galaxy far, far away",

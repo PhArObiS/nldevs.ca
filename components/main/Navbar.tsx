@@ -25,6 +25,9 @@ type NavItem = {
 
 const NAV: NavItem[] = [
   { href: "/", labelKey: "home" },
+  // Sits first so the newest island is one click from anywhere. Kept as a
+  // single short word in every locale so it cannot push the row to wrap.
+  { href: "/fortnite-new-map", labelKey: "newMap" },
   {
     href: "/star-wars-fortnite-maps",
     labelKey: "starWars",
@@ -66,7 +69,7 @@ const FEATURED_SUBLINKS: { href: AppPathname; label: string }[] = [
     href: "/star-wars-tycoon-sidekick-legends",
     label: "Star Wars Tycoon Sidekick Legends",
   },
-  { href: "/kpop-demon-hunters", label: "Winterfest Demon Hunters" },
+  { href: "/kpop-demon-hunters", label: "KPop Demon Hunters Gun Game" },
 ];
 
 function isExternalHref(href: string) {

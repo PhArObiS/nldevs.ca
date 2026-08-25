@@ -97,7 +97,8 @@
     "confirm": "Potwierdź",
     "confirmEmail": "Potwierdź email",
     "greeting": "Cześć, {name}",
-    "defaultPlayerName": "Gracz"
+    "defaultPlayerName": "Gracz",
+    "newMap": "Nowe"
   },
   "footer": {
     "tagline": "Studio UEFN tworzące regrywalne mapy Fortnite: gun game, przygody tematyczne i tryby z progresją.",
@@ -113,7 +114,8 @@
     "contact": "Kontakt",
     "copyright": "© {year} NLDEVS. Brak powiązania z Epic Games.",
     "bots99Maps": "Mapy 99 Bots",
-    "redVsBlueMaps": "Mapy Czerwoni kontra Niebiescy"
+    "redVsBlueMaps": "Mapy Czerwoni kontra Niebiescy",
+    "newMapHub": "Nowe mapy"
   },
   "hero": {
     "eyebrow": "Studio gier UEFN",

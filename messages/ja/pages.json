@@ -25,6 +25,11 @@
       "description": "効率よくレベルを上げるためのFortnite最強XPマップとマップコード。NLDEVSが短いメモ付きで厳選。",
       "ogDescription": "効率よくレベルを上げるためのFortnite XPマップとマップコード。NLDEVS厳選。"
     },
+    "fortnite-new-map": {
+      "title": "Fortnite新着マップ：NLDEVS最新マップのコード",
+      "description": "NLDEVSのFortnite新着マップ、Sidekick Siege 99 Botsをプレイ。最新の島コード、ゲームプレイの詳細、アップデート情報、その他のクリエイティブマップも。",
+      "ogDescription": "NLDEVSのFortnite新着マップ — 最新の島コードとリリース情報。"
+    },
     "star-wars-tycoon-sidekick-legends": {
       "title": "Star Wars Tycoon Sidekick Legends 近日公開（{code}）",
       "description": "Star Wars Tycoon Sidekick LegendsがFortniteに近日登場。マップコード {code}。サイドキックとヒーローの解放、新エリアの建設、ワーカーの雇用、リバースランキングの上昇、進行状況のオートセーブ。",
@@ -107,6 +112,94 @@
     }
   },
   "hubs": {
+    "newMap": {
+      "breadcrumb": "新着マップ",
+      "eyebrow": "NLDEVS最新リリース",
+      "title": "Fortnite<accent>新着マップ</accent>",
+      "description": "新しいFortniteマップを探している？まずはNLDEVS最新リリースのSidekick Siege 99 Botsから。そのあと、最近アップデートされた他のクリエイティブマップもチェックしてみて。",
+      "schemaName": "NLDEVSのFortnite新着マップ",
+      "schemaDescription": "NLDEVSがリリースした最新のFortniteマップと島コードのまとめ。新しいものから順に掲載。",
+      "listName": "Fortnite新着マップ",
+      "genre": "Fortnite新着マップ",
+      "codesTitle": "新着マップの",
+      "codesAccent": "コード",
+      "introSections": [
+        {
+          "type": "prose",
+          "id": "latest-new-fortnite-map",
+          "title": "Fortniteの",
+          "accent": "新着マップとは？",
+          "paragraphs": [
+            "Fortniteの新着マップとは、公開されたばかり、または大きなアップデートが入ったクリエイティブ／UEFNの島のこと。このページではNLDEVSの最新リリースを新しい順に、島コード付きでまとめている。",
+            "新着マップの入れ替わりは早い。シーズンごとに島が更新されたり、名前が変わったり、置き換わったりする。コードをひとつ覚えるより、このページをブックマークしておこう。"
+          ]
+        }
+      ],
+      "tipSections": [
+        {
+          "type": "list",
+          "title": "新着マップの",
+          "accent": "コツ",
+          "items": [
+            "島コードは ####-####-#### の形式で正確に入力する。",
+            "遊んだらお気に入りに入れておくと、アップデート後も戻りやすい。",
+            "新しい島は最初の週に修正が入ることが多い。動きが不安定ならもう一度見に来てみて。",
+            "みんなで遊ぼう。最近のリリースはほとんどがパーティ向けに作られている。"
+          ]
+        },
+        {
+          "type": "orderedList",
+          "title": "遊び",
+          "accent": "方",
+          "items": [
+            "Fortniteを開いて「検索／発見」へ。",
+            "遊びたいマップの島コードを入力する。",
+            "島に参加して、ゲーム内の目標に沿って進める。",
+            "次のNLDEVSリリースはまたこのページで。"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "NLDEVSのFortnite新着マップは？",
+          "a": "最新リリースはSidekick Siege 99 Bots。このページでは常にNLDEVSの最新マップを島コード付きで一番上に載せている。"
+        },
+        {
+          "q": "新しいマップはどのくらいの頻度で出る？",
+          "a": "島の規模による。大きなマップほど時間がかかるけれど、リリースの合間に既存マップのアップデートも入る。"
+        },
+        {
+          "q": "Fortniteの新着マップはどうやって遊ぶ？",
+          "a": "Fortniteを開いて「検索／発見」へ。島コード（####-####-####）を入力して島に参加する。"
+        },
+        {
+          "q": "この新着マップでXPはもらえる？",
+          "a": "島によってはもらえる。Fortniteの調整とマップの設定次第で、アップデート後に変わることもあるからおまけくらいに考えておこう。"
+        }
+      ],
+      "notes": {
+        "sidekick-siege-99-bots": "最新リリース：サイドキック中心の99ボットサバイバル。ボス戦、ロードアウト保存、ランク、リーダーボード、最大5人プレイに対応。",
+        "99-bots-zombies-royale": "新作のオープンワールド・ゾンビサバイバル。99ボット、新武器、動物ライド、ステータス保存、ランク、リーダーボード付き。",
+        "kpop-demon-hunters": "最近公開されたFFA（全員対戦）ガンゲーム。無限の武器進行、ボット、ボスイベント、ステータス保存に対応。",
+        "rvb-players-vs-guards": "最近追加された赤vs青のプレイヤーvsガードの島。目標、Tank Wars、スーパーパワー、ランク保存付き。",
+        "star-wars-tycoon-sidekick-legends": "近日公開：サイドキックとヒーローの解放、新エリア、ワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイに対応したStar Wars Tycoon。",
+        "star-wars-mega-rvb": "Star Warsの赤vs青PvP。カスタム武器、乗り物、実績、BGM、Unrealまでのランク上げ。"
+      },
+      "modeOverrides": {
+        "sidekick-siege-99-bots": "最新 / 99 Bots",
+        "99-bots-zombies-royale": "新着 / 99 Bots",
+        "kpop-demon-hunters": "最近 / ガンゲーム",
+        "rvb-players-vs-guards": "最近 / 赤 vs 青",
+        "star-wars-tycoon-sidekick-legends": "近日公開 / Tycoon",
+        "star-wars-mega-rvb": "最近 / 赤 vs 青"
+      },
+      "relatedLabels": [
+        "99 Botsマップ",
+        "イカゲームマップ",
+        "ガンゲームマップ",
+        "XPマップ"
+      ]
+    },
     "starWars": {
       "breadcrumb": "Star Warsマップ",
       "eyebrow": "遠い昔、はるか彼方の銀河系で",

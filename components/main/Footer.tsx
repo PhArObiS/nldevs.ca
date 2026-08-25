@@ -17,6 +17,7 @@ const footerNav: FooterColumn[] = [
   {
     headingKey: "maps",
     links: [
+      { href: "/fortnite-new-map", labelKey: "newMapHub" },
       { href: "/star-wars-fortnite-maps", labelKey: "starWarsMaps" },
       { href: "/tmnt-fortnite-maps", labelKey: "tmntMaps" },
       { href: "/squid-game-fortnite-maps", labelKey: "squidGameMaps" },

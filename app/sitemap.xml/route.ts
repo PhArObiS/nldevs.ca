@@ -29,6 +29,7 @@ const HUB_ROUTES: AppPathname[] = [
   "/best-fortnite-xp-maps",
   "/fortnite-99-bots-maps",
   "/fortnite-red-vs-blue-maps",
+  "/fortnite-new-map",
   "/playtest-squad",
   "/uefn-contracts",
   "/privacy",

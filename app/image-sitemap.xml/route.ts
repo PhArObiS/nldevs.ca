@@ -64,6 +64,14 @@ const ENTRIES: Entry[] = [
     ],
   },
   {
+    page: "/fortnite-new-map",
+    images: [
+      { mapId: "sidekick-siege-99-bots", kind: "map" },
+      { mapId: "99-bots-zombies-royale", kind: "map" },
+      { mapId: "kpop-demon-hunters", kind: "map" },
+    ],
+  },
+  {
     page: "/star-wars-tycoon-sidekick-legends",
     images: [{ mapId: "star-wars-tycoon-sidekick-legends", kind: "islandCode" }],
   },

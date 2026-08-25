@@ -97,7 +97,8 @@
     "confirm": "Confirmar",
     "confirmEmail": "Confirmar e-mail",
     "greeting": "Olá, {name}",
-    "defaultPlayerName": "Jogador"
+    "defaultPlayerName": "Jogador",
+    "newMap": "Novo"
   },
   "footer": {
     "tagline": "Um estúdio de jogos UEFN que cria experiências rejogáveis no Fortnite — gun games, aventuras temáticas e mapas de progressão.",
@@ -113,7 +114,8 @@
     "contact": "Contato",
     "copyright": "© {year} NLDEVS. Não afiliado à Epic Games.",
     "bots99Maps": "Mapas 99 Bots",
-    "redVsBlueMaps": "Mapas Vermelho vs Azul"
+    "redVsBlueMaps": "Mapas Vermelho vs Azul",
+    "newMapHub": "Mapas novos"
   },
   "hero": {
     "eyebrow": "Estúdio de jogos UEFN",

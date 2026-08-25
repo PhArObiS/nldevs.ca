@@ -144,6 +144,16 @@ export const pathnames = {
     de: "/fortnite-rot-gegen-blau-maps",
     ja: "/fortnite-aka-vs-ao-map",
   },
+  "/fortnite-new-map": {
+    en: "/fortnite-new-map",
+    fr: "/nouvelle-carte-fortnite",
+    pt: "/novo-mapa-fortnite",
+    es: "/nuevo-mapa-fortnite",
+    ru: "/novaya-karta-fortnite",
+    pl: "/nowa-mapa-fortnite",
+    de: "/neue-fortnite-map",
+    ja: "/fortnite-new-map",
+  },
 
   // ---- Map detail pages --------------------------------------------------
   "/star-wars-tycoon-sidekick-legends": {
