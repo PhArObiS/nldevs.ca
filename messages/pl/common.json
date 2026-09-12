@@ -45,7 +45,10 @@
     "changeLanguage": "Zmień język",
     "breadcrumb": "Nawigacja",
     "galleryTitle": "Galeria <accent>screenów</accent>",
-    "galleryFallbackAlt": "{title} — zrzut ekranu {index}"
+    "galleryFallbackAlt": "{title} — zrzut ekranu {index}",
+    "trailerTitle": "Zwiastun",
+    "trailerAccent": "rozgrywki",
+    "trailerSchemaName": "Oficjalny zwiastun"
   },
   "status": {
     "live": "Dostępna",

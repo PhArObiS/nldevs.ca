@@ -45,7 +45,10 @@
     "changeLanguage": "Changer de langue",
     "breadcrumb": "Fil d'Ariane",
     "galleryTitle": "Galerie de <accent>captures d'écran</accent>",
-    "galleryFallbackAlt": "Capture d'écran {index} de {title}"
+    "galleryFallbackAlt": "Capture d'écran {index} de {title}",
+    "trailerTitle": "Bande-annonce du",
+    "trailerAccent": "gameplay",
+    "trailerSchemaName": "Bande-annonce officielle"
   },
   "status": {
     "live": "Disponible",

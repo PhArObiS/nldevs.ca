@@ -69,7 +69,12 @@ const FEATURED_COPY: Record<string, { notes: string; category: string }> = {
   },
 };
 
-const FEATURED_GAMEPLAY_VIDEO_ID = "";
+/**
+ * The spotlight plays whichever trailer the featured map carries, so a new
+ * trailer is a one-line change in the map catalog instead of a literal that
+ * has to be kept in sync here.
+ */
+const SPOTLIGHT_MAP_ID = "star-wars-tycoon-sidekick-legends" as const;
 
 export default function Home({
   params: { locale },
@@ -232,10 +237,10 @@ function HomeContent({ locale }: { locale: Locale }) {
 
         <Reveal className="mt-12">
           <GameplayVideo
-            title={MAPS["star-wars-tycoon-sidekick-legends"].title}
+            title={MAPS[SPOTLIGHT_MAP_ID].title}
             description={t("spotlightMapDescription")}
-            poster="/TycoonSidekicks.jpg"
-            youtubeId={FEATURED_GAMEPLAY_VIDEO_ID || undefined}
+            poster={MAPS[SPOTLIGHT_MAP_ID].image}
+            youtubeId={MAPS[SPOTLIGHT_MAP_ID].trailer?.id}
             ctaHref="/star-wars-tycoon-sidekick-legends"
             ctaLabel={tc("viewMap")}
           />

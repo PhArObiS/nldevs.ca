@@ -138,6 +138,21 @@ export async function GET() {
 
   for (const locale of locales) {
     const t = await getTranslations({ locale, namespace: "imageSitemap" });
+    const tc = await getTranslations({ locale, namespace: "common" });
+
+    // Gallery alts live in each map's own catalog namespace, so they are
+    // collected up front and the entry loop below stays a plain lookup.
+    const galleryAlts: Partial<Record<MapId, string[]>> = {};
+    for (const mapId of Object.keys(MAPS) as MapId[]) {
+      if (!MAPS[mapId].gallery?.length) continue;
+      const tm = await getTranslations({
+        locale,
+        namespace: `mapPages.${mapId}`,
+      });
+      if (!tm.has("gallery")) continue;
+      const raw = tm.raw("gallery");
+      if (Array.isArray(raw)) galleryAlts[mapId] = raw as string[];
+    }
 
     // Homepage / logo
     blocks.push(
@@ -156,13 +171,35 @@ export async function GET() {
       const images = entry.images
         .map(({ mapId, kind }) => {
           const map = MAPS[mapId];
+          const block = (loc: string, title: string) =>
+            [
+              "  <image:image>",
+              `    <image:loc>${escapeXml(imageUrl(loc))}</image:loc>`,
+              `    <image:title>${escapeXml(title)}</image:title>`,
+              "  </image:image>",
+            ].join("\n");
+
+          // Screenshots ride along only on the island's own detail page —
+          // the page that actually displays them. Listing them under every
+          // hub that features the map would claim the same asset for several
+          // URLs, which is what Google treats as a duplicate-image signal.
+          const screenshots =
+            entry.page === map.href
+              ? (map.gallery ?? []).filter((src) => src !== map.image)
+              : [];
+
           return [
-            "  <image:image>",
-            `    <image:loc>${escapeXml(imageUrl(map.image))}</image:loc>`,
-            `    <image:title>${escapeXml(
-              t(kind, { title: map.title })
-            )}</image:title>`,
-            "  </image:image>",
+            block(map.image, t(kind, { title: map.title })),
+            ...screenshots.map((src, i) =>
+              // Each shot is titled with its own gallery alt text, so the
+              // sitemap says what is actually in the image rather than
+              // repeating one generic caption four times.
+              block(
+                src,
+                galleryAlts[mapId]?.[i] ||
+                  tc("gameplayScreenshot", { title: map.title })
+              )
+            ),
           ].join("\n");
         })
         .join("\n");

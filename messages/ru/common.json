@@ -45,7 +45,10 @@
     "changeLanguage": "Сменить язык",
     "breadcrumb": "Навигация",
     "galleryTitle": "Галерея <accent>скриншотов</accent>",
-    "galleryFallbackAlt": "{title} — скриншот {index}"
+    "galleryFallbackAlt": "{title} — скриншот {index}",
+    "trailerTitle": "Трейлер",
+    "trailerAccent": "геймплея",
+    "trailerSchemaName": "Официальный трейлер"
   },
   "status": {
     "live": "Доступно",

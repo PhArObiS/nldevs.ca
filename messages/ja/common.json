@@ -45,7 +45,10 @@
     "changeLanguage": "言語を変更",
     "breadcrumb": "パンくずリスト",
     "galleryTitle": "スクショ<accent>ギャラリー</accent>",
-    "galleryFallbackAlt": "{title} スクショ {index}"
+    "galleryFallbackAlt": "{title} スクショ {index}",
+    "trailerTitle": "ゲームプレイ",
+    "trailerAccent": "トレーラー",
+    "trailerSchemaName": "公式トレーラー"
   },
   "status": {
     "live": "公開中",

@@ -45,7 +45,10 @@
     "changeLanguage": "Mudar idioma",
     "breadcrumb": "Trilha de navegação",
     "galleryTitle": "Galeria de <accent>capturas de tela</accent>",
-    "galleryFallbackAlt": "Captura de tela {index} de {title}"
+    "galleryFallbackAlt": "Captura de tela {index} de {title}",
+    "trailerTitle": "Trailer de",
+    "trailerAccent": "gameplay",
+    "trailerSchemaName": "Trailer oficial"
   },
   "status": {
     "live": "Disponível",

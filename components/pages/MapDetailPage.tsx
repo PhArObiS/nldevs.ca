@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import JsonLd from "@/components/JsonLd";
 import MapDetailHeader from "@/components/ui/MapDetailHeader";
 import MapGallery from "@/components/ui/MapGallery";
+import GameplayVideo from "@/components/ui/GameplayVideo";
 import ContentSection from "@/components/ui/ContentSection";
 import { BackToTop, FaqList, PillLinks } from "@/components/ui/InfoCard";
 import {
@@ -129,6 +130,16 @@ export default function MapDetailPage({
   const faqs = rawArray<{ q: string; a: string }>(t, "faqs");
   const stats = rawArray<{ label: string; value: string }>(t, "stats");
   const galleryAlts = rawArray<string>(t, "gallery");
+  // A map with its own screenshots shows them; one without still gets a
+  // gallery built from the cover image, as every page did before real shots
+  // existed. Alts pair by index and MapGallery fills any gap from `title`.
+  const gallerySources = map.gallery?.length
+    ? map.gallery
+    : galleryAlts.map(() => map.image);
+  const galleryImages = gallerySources.map((src, i) => ({
+    src,
+    alt: galleryAlts[i] ?? "",
+  }));
   // Localised H1 for alternate-angle pages; falls back to the island name.
   const headline = t.has("pageTitle") ? t("pageTitle") : map.title;
   const similarLabels = rawArray<string>(t, "similarLabels");
@@ -164,6 +175,28 @@ export default function MapDetailPage({
       { "@type": "PropertyValue", name: tc("islandCode"), value: map.code },
     ],
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
+    // `trailer` is the schema.org-sanctioned way to attach a video to the
+    // game itself, so the clip is credited to this page rather than competing
+    // with it as a separate result. The thumbnail points at YouTube's own
+    // still rather than the site's cover art: Google checks that the
+    // thumbnail belongs to the video it is being told about.
+    ...(map.trailer
+      ? {
+          trailer: {
+            "@type": "VideoObject",
+            name: `${map.title} — ${tc("trailerSchemaName")}`,
+            description: t("schemaDescription"),
+            thumbnailUrl: `https://i.ytimg.com/vi/${map.trailer.id}/maxresdefault.jpg`,
+            embedUrl: `https://www.youtube-nocookie.com/embed/${map.trailer.id}`,
+            url: `https://www.youtube.com/watch?v=${map.trailer.id}`,
+            uploadDate: map.trailer.uploadDate,
+            inLanguage: LOCALE_META[locale].hreflang,
+            ...(map.trailer.duration
+              ? { duration: map.trailer.duration }
+              : {}),
+          },
+        }
+      : {}),
     ...schemaExtras,
   };
 
@@ -199,10 +232,18 @@ export default function MapDetailPage({
 
       <PageSections sections={sections} />
 
-      <MapGallery
-        title={map.title}
-        images={galleryAlts.map((alt) => ({ src: map.image, alt }))}
-      />
+      {map.trailer && (
+        <ContentSection title={tc("trailerTitle")} accent={tc("trailerAccent")}>
+          <GameplayVideo
+            title={map.title}
+            description={t("schemaDescription")}
+            poster={map.image}
+            youtubeId={map.trailer.id}
+          />
+        </ContentSection>
+      )}
+
+      <MapGallery title={map.title} images={galleryImages} />
 
       <PageSections sections={sectionsAfter} />
 

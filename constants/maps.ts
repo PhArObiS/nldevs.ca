@@ -30,12 +30,41 @@ export type MapId =
 /** Message keys under the `status` / `modes` namespaces. */
 export type MapStatus = "live" | "testing" | "comingSoon";
 
+/**
+ * A map's YouTube trailer.
+ *
+ * `uploadDate` and `duration` exist because Google requires the first and
+ * recommends the second for video rich results, and neither can be derived
+ * from the id — they are read off the video itself and recorded here rather
+ * than approximated, since a wrong uploadDate makes Google drop the
+ * VideoObject entirely.
+ */
+export type MapTrailer = {
+  /** YouTube video id, as it appears after `watch?v=`. */
+  id: string;
+  /** ISO 8601 timestamp the video went public. */
+  uploadDate: string;
+  /** ISO 8601 duration, e.g. `PT1M48S` for 1:48. */
+  duration?: string;
+};
+
 export type MapEntry = {
   id: MapId;
   /** In-game island name — see note above on why this is not translated. */
   title: string;
   code: string;
   image: string;
+  /**
+   * Screenshot gallery in display order. Maps without their own shots omit
+   * this and the detail page falls back to repeating `image`, which is what
+   * every page did before any real screenshots existed.
+   */
+  gallery?: string[];
+  /**
+   * The island's YouTube trailer. When set, the detail page renders the embed
+   * and declares it to search engines as the game's `trailer`.
+   */
+  trailer?: MapTrailer;
   /** Detail page, when one exists. Cards without it render unlinked. */
   href?: AppPathname;
   status: MapStatus;
@@ -51,6 +80,17 @@ export const MAPS: Record<MapId, MapEntry> = {
     title: "Star Wars Tycoon Sidekick Legends",
     code: "3205-2388-4588",
     image: "/TycoonSidekicks.jpg",
+    gallery: [
+      "/StarWarsTycoonSidekickLegendsTown.jpg",
+      "/StarWarsTycoonSidekickLegendsPlot.jpg",
+      "/StarWarsTycoonSidekickLegendsWreck.jpg",
+      "/StarWarsTycoonSidekickLegendsTwinSuns.jpg",
+    ],
+    trailer: {
+      id: "PmRTHna6f_Q",
+      uploadDate: "2026-09-11T23:52:50-07:00",
+      duration: "PT1M48S",
+    },
     href: "/star-wars-tycoon-sidekick-legends",
     status: "comingSoon",
     mode: "tycoon",

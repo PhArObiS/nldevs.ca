@@ -45,7 +45,10 @@
     "changeLanguage": "Change language",
     "breadcrumb": "Breadcrumb",
     "galleryTitle": "Screenshot <accent>gallery</accent>",
-    "galleryFallbackAlt": "{title} screenshot {index}"
+    "galleryFallbackAlt": "{title} screenshot {index}",
+    "trailerTitle": "Gameplay",
+    "trailerAccent": "trailer",
+    "trailerSchemaName": "Official trailer"
   },
   "status": {
     "live": "Live",

@@ -45,7 +45,10 @@
     "changeLanguage": "Sprache wechseln",
     "breadcrumb": "Navigationspfad",
     "galleryTitle": "Screenshot-<accent>Galerie</accent>",
-    "galleryFallbackAlt": "{title} Screenshot {index}"
+    "galleryFallbackAlt": "{title} Screenshot {index}",
+    "trailerTitle": "Offizieller",
+    "trailerAccent": "Trailer",
+    "trailerSchemaName": "Offizieller Trailer"
   },
   "status": {
     "live": "Live",
