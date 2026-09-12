@@ -328,5 +328,10 @@ export const routing = defineRouting({
   localePrefix: "as-needed",
   // Respect Accept-Language on first visit, then remember the choice.
   localeDetection: true,
+  // Canonical/hreflang links are emitted in the HTML metadata and sitemap.
+  // Disabling next-intl's additional HTTP Link header avoids duplicating
+  // those signals with an origin inferred from the reverse proxy (which can
+  // otherwise advertise internal http:// URLs on an HTTPS response).
+  alternateLinks: false,
   pathnames,
 });

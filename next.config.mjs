@@ -2,6 +2,20 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
+// Search Console discovered numbered variants of these real public images
+// (for example, `/CityTMNT.jpg-0`). Keep this allowlist tied to assets that
+// actually exist so arbitrary missing filenames continue to return 404.
+const crawledImageVariantPattern = [
+  "CityTMNT\\.jpg",
+  "TycoonSidekicks\\.jpg",
+  "KpopDemonHuntersGunGame\\.png",
+  "Zombies99BotsRoyale\\.png",
+  "RedVsBlueSquidMinigame\\.jpg",
+  "StarWarsMegaRvB\\.png",
+  "MegaRampSurvival\\.jpeg",
+  "RedVsBluePlayersVsGuards\\.jpeg",
+].join("|");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /**
@@ -32,8 +46,7 @@ const nextConfig = {
       // redirect the crawled variants so they resolve to the image instead of
       // being treated as broken server responses in Search Console.
       {
-        source:
-          "/:image(CityTMNT\\.jpg|TycoonSidekicks\\.jpg)-:variant(\\d+)",
+        source: `/:image(${crawledImageVariantPattern})-:variant(\\d+)`,
         destination: "/:image",
         permanent: true,
       },

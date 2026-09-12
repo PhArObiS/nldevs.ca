@@ -1,7 +1,27 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  // The public site uses www as its canonical host. The HTML already declares
+  // that canonical, but serving the apex host with a 200 leaves Google to
+  // consolidate two copies. Redirect it before locale routing instead.
+  const forwardedHost = request.headers.get("x-forwarded-host");
+  const requestHost = forwardedHost ?? request.headers.get("host") ?? "";
+  const hostname = requestHost.split(":", 1)[0].toLowerCase();
+
+  if (hostname === "nldevs.ca") {
+    const canonicalUrl = request.nextUrl.clone();
+    canonicalUrl.protocol = "https:";
+    canonicalUrl.hostname = "www.nldevs.ca";
+    canonicalUrl.port = "";
+    return NextResponse.redirect(canonicalUrl, 308);
+  }
+
+  return intlMiddleware(request);
+}
 
 export const config = {
   /**
