@@ -31,9 +31,9 @@
       "ogDescription": "NLDEVSのFortnite新着マップ — 最新の島コードとリリース情報。"
     },
     "star-wars-tycoon-sidekick-legends": {
-      "title": "Star Wars Tycoon Sidekick Legends 近日公開（{code}）",
-      "description": "Star Wars Tycoon Sidekick LegendsがFortniteに近日登場。マップコード {code}。サイドキックとヒーローの解放、新エリアの建設、ワーカーの雇用、リバースランキングの上昇、進行状況のオートセーブ。",
-      "ogDescription": "Star Wars Tycoon Sidekick LegendsがFortniteに近日登場。サイドキックとヒーローを解放し、ワーカーを雇い、リバースランキングを駆け上がろう。"
+      "title": "Star Wars Tycoon Sidekick Legends 9月19日公開（{code}）",
+      "description": "Star Wars Tycoon Sidekick LegendsがFortniteに2026年9月19日（土）登場。マップコード {code}。サイドキックとヒーローの解放、新エリアの建設、ワーカーの雇用、リバースランキングの上昇、進行状況のオートセーブ。",
+      "ogDescription": "Star Wars Tycoon Sidekick LegendsがFortniteに2026年9月19日登場。サイドキックとヒーローを解放し、ワーカーを雇い、リバースランキングを駆け上がろう。"
     },
     "star-wars-mega-rvb": {
       "title": "Star Wars Mega RvB マップコード（{code}）",
@@ -155,7 +155,7 @@
         },
         {
           "q": "Star Wars Tycoon Sidekick Legendsの島コードは？",
-          "a": "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。"
+          "a": "Star Wars Tycoon Sidekick Legendsの島コードは 3205-2388-4588。2026年9月19日（土）の公開日から遊べる。"
         },
         {
           "q": "PvPに一番向いているStar Warsマップは？",
@@ -167,12 +167,12 @@
         }
       ],
       "notes": {
-        "star-wars-tycoon-sidekick-legends": "近日公開: サイドキックとヒーローの解放、新エリアとアップグレード、生産を上げるワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えたStar Wars Tycoon。",
+        "star-wars-tycoon-sidekick-legends": "2026年9月19日公開: サイドキックとヒーローの解放、新エリアとアップグレード、生産を上げるワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えたStar Wars Tycoon。",
         "star-wars-mega-rvb": "Star Wars武器、カスタム武器、乗り物、実績、BGM、Unrealまでのランク上げがある赤vs青のPvP。",
         "star-wars-tilted-99-bots-royale": "99ボットのオープンワールドPvEサバイバル。ボス戦、解放できるヒーロー、ステータスとロードアウトの保存、Star Wars風のTiltedアクション。"
       },
       "modeOverrides": {
-        "star-wars-tycoon-sidekick-legends": "近日公開 / Tycoon",
+        "star-wars-tycoon-sidekick-legends": "9月19日公開 / Tycoon",
         "star-wars-mega-rvb": "チームデスマッチ",
         "star-wars-tilted-99-bots-royale": "Bot Royale"
       },

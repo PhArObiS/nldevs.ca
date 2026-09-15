@@ -174,6 +174,10 @@ export default function MapDetailPage({
     additionalProperty: [
       { "@type": "PropertyValue", name: tc("islandCode"), value: map.code },
     ],
+    // An announced island declares its launch day even before it is live, so
+    // the date can surface next to the result rather than only inside the
+    // page copy. Omitted for maps that have simply always been playable.
+    ...(map.releaseDate ? { datePublished: map.releaseDate } : {}),
     publisher: { "@type": "Organization", name: "NLDEVS", url: SITE_URL },
     // `trailer` is the schema.org-sanctioned way to attach a video to the
     // game itself, so the clip is credited to this page rather than competing

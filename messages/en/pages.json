@@ -31,9 +31,9 @@
       "ogDescription": "Sidekick Siege 99 Bots is the latest new Fortnite map from NLDEVS, with island code and recent Creative map updates."
     },
     "star-wars-tycoon-sidekick-legends": {
-      "title": "Star Wars Tycoon Sidekick Legends Coming Soon ({code})",
-      "description": "Star Wars Tycoon Sidekick Legends is coming soon to Fortnite. Map code {code}. Unlock Sidekicks and Heroes, build new sections, hire workers, climb the Rebirth leaderboard, and save progress automatically.",
-      "ogDescription": "Star Wars Tycoon Sidekick Legends is coming soon to Fortnite. Unlock Sidekicks and Heroes, hire workers, and climb the Rebirth leaderboard."
+      "title": "Star Wars Tycoon Sidekick Legends Launches Sept 19 ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends launches on Fortnite Saturday, September 19, 2026. Map code {code}. Unlock Sidekicks and Heroes, build new sections, hire workers, climb the Rebirth leaderboard, and save progress automatically.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends launches September 19, 2026 on Fortnite. Unlock Sidekicks and Heroes, hire workers, and climb the Rebirth leaderboard."
     },
     "star-wars-mega-rvb": {
       "title": "Star Wars Mega RvB Map Code ({code})",
@@ -155,7 +155,7 @@
         },
         {
           "q": "What is the Star Wars Tycoon Sidekick Legends island code?",
-          "a": "Star Wars Tycoon Sidekick Legends is coming soon. The announced island code is 3205-2388-4588."
+          "a": "The Star Wars Tycoon Sidekick Legends island code is 3205-2388-4588, playable from its launch on Saturday, September 19, 2026."
         },
         {
           "q": "Which Star Wars Fortnite map is best for PvP?",
@@ -167,12 +167,12 @@
         }
       ],
       "notes": {
-        "star-wars-tycoon-sidekick-legends": "Coming soon: Star Wars Tycoon with Sidekick and Hero unlocks, new sections and upgrades, workers that boost production, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
+        "star-wars-tycoon-sidekick-legends": "Launching September 19, 2026: Star Wars Tycoon with Sidekick and Hero unlocks, new sections and upgrades, workers that boost production, rebirth leaderboard climbing, auto-saving progress, and up to 4 players.",
         "star-wars-mega-rvb": "Red vs Blue PvP with Star Wars weapons, custom weapons, vehicles, achievements, music, and ranking up to Unreal.",
         "star-wars-tilted-99-bots-royale": "Open-world PvE survival with 99 bots, boss battles, unlockable heroes, saved stats and loadouts, and Star Wars-themed Tilted action."
       },
       "modeOverrides": {
-        "star-wars-tycoon-sidekick-legends": "Coming Soon / Tycoon",
+        "star-wars-tycoon-sidekick-legends": "Sept 19 Launch / Tycoon",
         "star-wars-mega-rvb": "Team Deathmatch",
         "star-wars-tilted-99-bots-royale": "Bot Royale"
       },

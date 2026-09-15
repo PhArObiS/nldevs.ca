@@ -67,6 +67,15 @@ export type MapEntry = {
   trailer?: MapTrailer;
   /** Detail page, when one exists. Cards without it render unlinked. */
   href?: AppPathname;
+  /**
+   * Announced launch day, as an ISO `YYYY-MM-DD` date.
+   *
+   * Set on a map with a confirmed date that is not playable yet: the detail
+   * page declares it as the game's `datePublished`, so search engines can
+   * show the release date instead of an undated "coming soon". The catalog
+   * copy names the same day in each locale — change both together.
+   */
+  releaseDate?: string;
   status: MapStatus;
   /** Message key under `modes`. */
   mode: string;
@@ -92,9 +101,10 @@ export const MAPS: Record<MapId, MapEntry> = {
       duration: "PT1M48S",
     },
     href: "/star-wars-tycoon-sidekick-legends",
+    releaseDate: "2026-09-19",
     status: "comingSoon",
     mode: "tycoon",
-    updated: "2026-08",
+    updated: "2026-09",
   },
   "star-wars-mega-rvb": {
     id: "star-wars-mega-rvb",

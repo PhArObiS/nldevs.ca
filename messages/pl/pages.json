@@ -31,9 +31,9 @@
       "ogDescription": "Nowa mapa Fortnite od NLDEVS — najnowsze kody wysp i ostatnie premiery."
     },
     "star-wars-tycoon-sidekick-legends": {
-      "title": "Star Wars Tycoon Sidekick Legends wkrótce ({code})",
-      "description": "Star Wars Tycoon Sidekick Legends wkrótce w Fortnite. Kod mapy {code}. Sidekicki, bohaterowie, nowe sekcje, pracownicy, rebirth leaderboard i auto-save.",
-      "ogDescription": "Star Wars Tycoon Sidekick Legends wkrótce w Fortnite. Odblokowuj sidekicki i bohaterów, zatrudniaj pracowników i wspinaj się w tabeli Rebirth."
+      "title": "Star Wars Tycoon Sidekick Legends: premiera 19 września ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends debiutuje w Fortnite w sobotę 19 września 2026. Kod mapy {code}. Sidekicki, bohaterowie, nowe sekcje, pracownicy, rebirth leaderboard i auto-save.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends debiutuje w Fortnite 19 września 2026. Odblokowuj sidekicki i bohaterów, zatrudniaj pracowników i wspinaj się w tabeli Rebirth."
     },
     "star-wars-mega-rvb": {
       "title": "Kod mapy Star Wars Mega RvB ({code})",
@@ -155,7 +155,7 @@
         },
         {
           "q": "Jaki jest kod wyspy Star Wars Tycoon Sidekick Legends?",
-          "a": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588."
+          "a": "Kod wyspy Star Wars Tycoon Sidekick Legends to 3205-2388-4588; zagrasz na niej od premiery w sobotę 19 września 2026."
         },
         {
           "q": "Która mapa Fortnite Star Wars jest najlepsza do PvP?",
@@ -167,12 +167,12 @@
         }
       ],
       "notes": {
-        "star-wars-tycoon-sidekick-legends": "Wkrótce: Star Wars Tycoon z odblokowywaniem sidekicków i bohaterów, nowymi sekcjami i ulepszeniami, pracownikami zwiększającymi produkcję, wspinaczką w tabeli rebirth, autozapisem i obsługą do 4 graczy.",
+        "star-wars-tycoon-sidekick-legends": "Premiera 19 września 2026: Star Wars Tycoon z odblokowywaniem sidekicków i bohaterów, nowymi sekcjami i ulepszeniami, pracownikami zwiększającymi produkcję, wspinaczką w tabeli rebirth, autozapisem i obsługą do 4 graczy.",
         "star-wars-mega-rvb": "PvP Czerwoni kontra Niebiescy z bronią Star Wars, własnymi broniami, pojazdami, osiągnięciami, muzyką i awansem aż do rangi Unreal.",
         "star-wars-tilted-99-bots-royale": "Survival PvE w otwartym świecie z 99 botami: walki z bossami, odblokowywani bohaterowie, zapis statystyk i loadoutów oraz akcja w Tilted w klimacie Star Wars."
       },
       "modeOverrides": {
-        "star-wars-tycoon-sidekick-legends": "Wkrótce / Tycoon",
+        "star-wars-tycoon-sidekick-legends": "Premiera 19 września / Tycoon",
         "star-wars-mega-rvb": "Deathmatch drużynowy",
         "star-wars-tilted-99-bots-royale": "Bot Royale"
       },

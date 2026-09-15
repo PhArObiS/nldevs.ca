@@ -2,10 +2,10 @@
   "mapPages": {
     "star-wars-tycoon-sidekick-legends": {
       "breadcrumbParent": "Mapy Star Wars",
-      "eyebrow": "WKRÓTCE / Star Wars Tycoon",
-      "intro": "Wkrótce od NLDEVS: nowy tryb Star Wars Tycoon z ogłoszonym kodem wyspy {code}, odblokowywaniem sidekicków i bohaterów, nowymi sekcjami tycoon, pracownikami, wspinaczką w tabeli Rebirth, autozapisem i obsługą do 4 graczy.",
+      "eyebrow": "PREMIERA 19 WRZEŚNIA / Star Wars Tycoon",
+      "intro": "Premiera w sobotę 19 września 2026 od NLDEVS: nowy tryb Star Wars Tycoon z kodem wyspy {code}, odblokowywaniem sidekicków i bohaterów, nowymi sekcjami tycoon, pracownikami, wspinaczką w tabeli Rebirth, autozapisem i obsługą do 4 graczy.",
       "schemaGenre": "Star Wars Tycoon",
-      "schemaDescription": "Star Wars Tycoon Sidekick Legends to mapa Fortnite w klimacie Star Wars Tycoon od NLDEVS, która ukaże się wkrótce: odblokowywanie sidekicków i bohaterów, nowe sekcje, pracownicy, zwiększanie produkcji, progresja w tabeli Rebirth, autozapis i do 4 graczy.",
+      "schemaDescription": "Star Wars Tycoon Sidekick Legends to mapa Fortnite w klimacie Star Wars Tycoon od NLDEVS, której premiera odbędzie się w sobotę 19 września 2026: odblokowywanie sidekicków i bohaterów, nowe sekcje, pracownicy, zwiększanie produkcji, progresja w tabeli Rebirth, autozapis i do 4 graczy.",
       "stats": [
         {
           "label": "Gracze",
@@ -16,8 +16,8 @@
           "value": "Progresja tycoon"
         },
         {
-          "label": "Status",
-          "value": "Wkrótce"
+          "label": "Premiera",
+          "value": "19 września 2026"
         },
         {
           "label": "Postępy",
@@ -37,8 +37,8 @@
           "type": "card",
           "title": "Status",
           "accent": "premiery",
-          "heading": "WKRÓTCE",
-          "body": "Star Wars Tycoon Sidekick Legends jeszcze się nie ukazała. Strona jest gotowa na premierę z ogłoszonym kodem wyspy 3205-2388-4588; zaglądaj tutaj po status dostępności, gdy zatwierdzenie Epic zostanie zakończone."
+          "heading": "PREMIERA 19 WRZEŚNIA 2026",
+          "body": "Star Wars Tycoon Sidekick Legends ukaże się w sobotę 19 września 2026 z kodem wyspy 3205-2388-4588. Dodaj tę stronę do zakładek i wskocz na wyspę w dniu premiery — do tego czasu kod jest ogłoszony, ale jeszcze nie działa."
         },
         {
           "type": "list",
@@ -61,8 +61,8 @@
           "title": "Status",
           "accent": "kodu wyspy",
           "paragraphs": [
-            "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588; gdy mapa zostanie zatwierdzona i wejdzie na serwery, gracze będą mogli wpisać go w „Szukaj / Odkrywaj”, żeby zagrać w nową mapę Star Wars Tycoon od NLDEVS z odblokowywaniem sidekicków i bohaterów, pracownikami, zwiększaniem produkcji, rebirthami i zapisem postępów.",
-            "Dodaj tę stronę do zakładek, żeby śledzić kod wyspy Star Wars Tycoon Sidekick Legends, informacje o premierze i szczegóły rozgrywki."
+            "Star Wars Tycoon Sidekick Legends ukaże się w sobotę 19 września 2026. Kod wyspy to 3205-2388-4588; od dnia premiery gracze będą mogli wpisać go w „Szukaj / Odkrywaj”, żeby zagrać w nową mapę Star Wars Tycoon od NLDEVS z odblokowywaniem sidekicków i bohaterów, pracownikami, zwiększaniem produkcji, rebirthami i zapisem postępów.",
+            "Dodaj tę stronę do zakładek, żeby śledzić kod wyspy Star Wars Tycoon Sidekick Legends, premierę 19 września 2026 i szczegóły rozgrywki."
           ]
         },
         {
@@ -70,7 +70,7 @@
           "title": "Jak",
           "accent": "grać",
           "heading": "Kod wyspy 3205-2388-4588",
-          "body": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Gdy wejdzie na serwery, otwórz Fortnite, wejdź w „Szukaj / Odkrywaj”, wpisz 3205-2388-4588 i dołącz do wyspy."
+          "body": "Star Wars Tycoon Sidekick Legends ukaże się w sobotę 19 września 2026. Od dnia premiery otwórz Fortnite, wejdź w „Szukaj / Odkrywaj”, wpisz 3205-2388-4588 i dołącz do wyspy."
         },
         {
           "type": "prose",
@@ -100,8 +100,12 @@
       ],
       "faqs": [
         {
+          "q": "Kiedy premiera Star Wars Tycoon Sidekick Legends?",
+          "a": "Star Wars Tycoon Sidekick Legends ukaże się w sobotę 19 września 2026, na kodzie wyspy 3205-2388-4588."
+        },
+        {
           "q": "Jaki jest kod wyspy Star Wars Tycoon Sidekick Legends?",
-          "a": "Star Wars Tycoon Sidekick Legends ukaże się wkrótce. Ogłoszony kod wyspy to 3205-2388-4588."
+          "a": "Kod wyspy Star Wars Tycoon Sidekick Legends to 3205-2388-4588; zagrasz na niej od premiery w sobotę 19 września 2026."
         },
         {
           "q": "Czy Star Wars Tycoon Sidekick Legends zapisuje postępy?",

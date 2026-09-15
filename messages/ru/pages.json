@@ -31,9 +31,9 @@
       "ogDescription": "Новая карта Fortnite от NLDEVS — свежие коды островов и последние релизы."
     },
     "star-wars-tycoon-sidekick-legends": {
-      "title": "Star Wars Tycoon Sidekick Legends скоро ({code})",
-      "description": "Star Wars Tycoon Sidekick Legends скоро выйдет в Fortnite. Код карты {code}. Sidekicks, герои, новые секции, рабочие, rebirth-лидерборд и автосохранение.",
-      "ogDescription": "Star Wars Tycoon Sidekick Legends скоро выйдет в Fortnite. Открывайте сайдкиков и героев, нанимайте рабочих и поднимайтесь в таблице Rebirth."
+      "title": "Star Wars Tycoon Sidekick Legends — релиз 19 сентября ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends выходит в Fortnite в субботу, 19 сентября 2026 года. Код карты {code}. Sidekicks, герои, новые секции, рабочие, rebirth-лидерборд и автосохранение.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends выходит в Fortnite 19 сентября 2026 года. Открывайте сайдкиков и героев, нанимайте рабочих и поднимайтесь в таблице Rebirth."
     },
     "star-wars-mega-rvb": {
       "title": "Код карты Star Wars Mega RvB ({code})",
@@ -155,7 +155,7 @@
         },
         {
           "q": "Какой код острова у Star Wars Tycoon Sidekick Legends?",
-          "a": "Star Wars Tycoon Sidekick Legends скоро выйдет. Объявленный код острова — 3205-2388-4588."
+          "a": "Код острова Star Wars Tycoon Sidekick Legends — 3205-2388-4588; играть можно с релиза в субботу, 19 сентября 2026 года."
         },
         {
           "q": "Какая карта Fortnite Star Wars лучше всего подходит для PvP?",
@@ -167,12 +167,12 @@
         }
       ],
       "notes": {
-        "star-wars-tycoon-sidekick-legends": "Скоро: Star Wars Tycoon с открытием сайдкиков и героев, новыми секциями и улучшениями, рабочими для роста производства, подъёмом в таблице rebirth, автосохранением и поддержкой до 4 игроков.",
+        "star-wars-tycoon-sidekick-legends": "Релиз 19 сентября 2026 года: Star Wars Tycoon с открытием сайдкиков и героев, новыми секциями и улучшениями, рабочими для роста производства, подъёмом в таблице rebirth, автосохранением и поддержкой до 4 игроков.",
         "star-wars-mega-rvb": "PvP Красные против синих с оружием Star Wars, кастомным оружием, транспортом, достижениями, музыкой и прокачкой до ранга Unreal.",
         "star-wars-tilted-99-bots-royale": "PvE-выживание в открытом мире с 99 ботами: бои с боссами, открываемые герои, сохранение статистики и лоадаутов, экшен в Tilted со стилем Star Wars."
       },
       "modeOverrides": {
-        "star-wars-tycoon-sidekick-legends": "Скоро / Tycoon",
+        "star-wars-tycoon-sidekick-legends": "Релиз 19 сентября / Tycoon",
         "star-wars-mega-rvb": "Командный бой",
         "star-wars-tilted-99-bots-royale": "Bot Royale"
       },

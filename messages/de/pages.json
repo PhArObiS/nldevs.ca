@@ -31,9 +31,9 @@
       "ogDescription": "Die neue Fortnite Map von NLDEVS — aktuelle Inselcodes und die letzten Releases."
     },
     "star-wars-tycoon-sidekick-legends": {
-      "title": "Star Wars Tycoon Sidekick Legends bald verfügbar ({code})",
-      "description": "Star Wars Tycoon Sidekick Legends kommt bald zu Fortnite. Map-Code {code}. Sidekicks und Helden freischalten, neue Bereiche bauen, Arbeiter anheuern, im Rebirth-Leaderboard aufsteigen und Fortschritt automatisch speichern.",
-      "ogDescription": "Star Wars Tycoon Sidekick Legends kommt bald zu Fortnite. Sidekicks und Helden freischalten, Arbeiter anheuern und im Rebirth-Leaderboard aufsteigen."
+      "title": "Star Wars Tycoon Sidekick Legends: Release 19. Sept. ({code})",
+      "description": "Star Wars Tycoon Sidekick Legends erscheint am Samstag, 19. September 2026, für Fortnite. Map-Code {code}. Sidekicks und Helden freischalten, neue Bereiche bauen, Arbeiter anheuern, im Rebirth-Leaderboard aufsteigen und Fortschritt automatisch speichern.",
+      "ogDescription": "Star Wars Tycoon Sidekick Legends erscheint am 19. September 2026 für Fortnite. Sidekicks und Helden freischalten, Arbeiter anheuern und im Rebirth-Leaderboard aufsteigen."
     },
     "star-wars-mega-rvb": {
       "title": "Star Wars Mega RvB Map-Code ({code})",
@@ -155,7 +155,7 @@
         },
         {
           "q": "Wie lautet der Inselcode von Star Wars Tycoon Sidekick Legends?",
-          "a": "Star Wars Tycoon Sidekick Legends erscheint bald. Der angekündigte Inselcode ist 3205-2388-4588."
+          "a": "Der Inselcode von Star Wars Tycoon Sidekick Legends ist 3205-2388-4588 — spielbar ab dem Release am Samstag, 19. September 2026."
         },
         {
           "q": "Welche Star Wars Fortnite Map eignet sich am besten für PvP?",
@@ -167,12 +167,12 @@
         }
       ],
       "notes": {
-        "star-wars-tycoon-sidekick-legends": "Bald: Star Wars Tycoon mit Sidekicks und Helden zum Freischalten, neuen Bereichen und Upgrades, Arbeitern für mehr Produktion, Aufstieg im Rebirth-Leaderboard, automatischem Speichern und bis zu 4 Spielern.",
+        "star-wars-tycoon-sidekick-legends": "Release am 19. September 2026: Star-Wars-Tycoon mit Sidekicks und Helden zum Freischalten, neuen Bereichen und Upgrades, Arbeitern für mehr Produktion, Aufstieg im Rebirth-Leaderboard, automatischem Speichern und bis zu 4 Spielern.",
         "star-wars-mega-rvb": "Rot-gegen-Blau-PvP mit Star-Wars-Waffen, eigenen Waffen, Fahrzeugen, Erfolgen, Musik und Aufstieg bis Unreal.",
         "star-wars-tilted-99-bots-royale": "Open-World-PvE-Survival mit 99 Bots, Bosskämpfen, freischaltbaren Helden, gespeicherten Stats und Loadouts sowie Tilted-Action im Star-Wars-Stil."
       },
       "modeOverrides": {
-        "star-wars-tycoon-sidekick-legends": "Bald / Tycoon",
+        "star-wars-tycoon-sidekick-legends": "Release 19. Sept. / Tycoon",
         "star-wars-mega-rvb": "Team-Deathmatch",
         "star-wars-tilted-99-bots-royale": "Bot Royale"
       },

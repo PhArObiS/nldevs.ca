@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git status *)"
+      "Bash(git status *)",
+      "Bash(node \"C:/Users/NEELY/AppData/Local/Temp/claude/f--nldevs-ca/23d461f9-8220-4b38-a2ab-4710683ccc49/scratchpad/sweep.mjs\")"
     ]
   }
 }

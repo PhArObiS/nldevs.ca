@@ -2,10 +2,10 @@
   "mapPages": {
     "star-wars-tycoon-sidekick-legends": {
       "breadcrumbParent": "Star Warsマップ",
-      "eyebrow": "近日公開 / Star Wars Tycoon",
-      "intro": "NLDEVSから近日公開: 発表済みの島コード {code}、サイドキックとヒーローの解放、新しいTycoonエリア、ワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えた新作Star Wars Tycoon。",
+      "eyebrow": "9月19日公開 / Star Wars Tycoon",
+      "intro": "NLDEVSから2026年9月19日（土）公開: 島コード {code}、サイドキックとヒーローの解放、新しいTycoonエリア、ワーカー、リバースランキングの上昇、オートセーブ、最大4人プレイを備えた新作Star Wars Tycoon。",
       "schemaGenre": "Star Wars Tycoon",
-      "schemaDescription": "Star Wars Tycoon Sidekick LegendsはNLDEVSが近日公開するFortniteのStar Wars Tycoonマップ。サイドキックとヒーローの解放、新エリア、ワーカー、生産アップ、リバースランキングの育成、オートセーブ、最大4人プレイに対応。",
+      "schemaDescription": "Star Wars Tycoon Sidekick LegendsはNLDEVSが2026年9月19日（土）に公開するFortniteのStar Wars Tycoonマップ。サイドキックとヒーローの解放、新エリア、ワーカー、生産アップ、リバースランキングの育成、オートセーブ、最大4人プレイに対応。",
       "stats": [
         {
           "label": "プレイヤー",
@@ -16,8 +16,8 @@
           "value": "Tycoon育成"
         },
         {
-          "label": "ステータス",
-          "value": "近日公開"
+          "label": "公開日",
+          "value": "2026年9月19日"
         },
         {
           "label": "進行状況",
@@ -37,8 +37,8 @@
           "type": "card",
           "title": "公開",
           "accent": "ステータス",
-          "heading": "近日公開",
-          "body": "Star Wars Tycoon Sidekick Legendsはまだ公開されていない。発表済みの島コード 3205-2388-4588 でページは準備済み。Epicの承認が終わったら、ここで公開状況を確認してほしい。"
+          "heading": "2026年9月19日公開",
+          "body": "Star Wars Tycoon Sidekick Legendsは2026年9月19日（土）公開。島コードは 3205-2388-4588。このページをブックマークして、公開日に遊びに来てほしい。それまではコードは発表済みだが、まだプレイできない。"
         },
         {
           "type": "list",
@@ -61,8 +61,8 @@
           "title": "島コードの",
           "accent": "状況",
           "paragraphs": [
-            "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。承認が下りて公開されたら、「検索／発見」で入力してNLDEVSの新作Star Wars Tycoonマップを遊べる。サイドキックとヒーローの解放、ワーカー、生産アップ、リバース、進行状況の保存に対応。",
-            "Star Wars Tycoon Sidekick Legendsの島コード、公開情報、ゲームプレイの詳細はこのページをブックマークしておこう。"
+            "Star Wars Tycoon Sidekick Legendsは2026年9月19日（土）公開。島コードは 3205-2388-4588。公開日からは「検索／発見」で入力してNLDEVSの新作Star Wars Tycoonマップを遊べる。サイドキックとヒーローの解放、ワーカー、生産アップ、リバース、進行状況の保存に対応。",
+            "Star Wars Tycoon Sidekick Legendsの島コード、2026年9月19日の公開情報、ゲームプレイの詳細はこのページをブックマークしておこう。"
           ]
         },
         {
@@ -70,7 +70,7 @@
           "title": "遊び",
           "accent": "方",
           "heading": "島コード 3205-2388-4588",
-          "body": "Star Wars Tycoon Sidekick Legendsは近日公開。公開されたらFortniteを開いて「検索／発見」へ、3205-2388-4588 を入力して島に参加しよう。"
+          "body": "Star Wars Tycoon Sidekick Legendsは2026年9月19日（土）公開。公開日になったらFortniteを開いて「検索／発見」へ、3205-2388-4588 を入力して島に参加しよう。"
         },
         {
           "type": "prose",
@@ -100,8 +100,12 @@
       ],
       "faqs": [
         {
+          "q": "Star Wars Tycoon Sidekick Legendsの公開日は？",
+          "a": "Star Wars Tycoon Sidekick Legendsは2026年9月19日（土）公開。島コードは 3205-2388-4588。"
+        },
+        {
           "q": "Star Wars Tycoon Sidekick Legendsの島コードは？",
-          "a": "Star Wars Tycoon Sidekick Legendsは近日公開。発表済みの島コードは 3205-2388-4588。"
+          "a": "Star Wars Tycoon Sidekick Legendsの島コードは 3205-2388-4588。2026年9月19日（土）の公開日から遊べる。"
         },
         {
           "q": "進行状況は保存される？",

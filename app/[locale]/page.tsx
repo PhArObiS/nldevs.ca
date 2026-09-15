@@ -140,6 +140,9 @@ function HomeContent({ locale }: { locale: Locale }) {
               ? absoluteUrl(m.href, locale)
               : `${absoluteUrl("/", locale)}#${mapAnchor(m.code)}`,
             image: `${SITE_URL}${m.image}`,
+            // Matches the map's own page, so the launch date does not differ
+            // between the two places the island is described.
+            ...(m.releaseDate ? { datePublished: m.releaseDate } : {}),
             publisher: {
               "@type": "Organization",
               name: "NLDEVS",

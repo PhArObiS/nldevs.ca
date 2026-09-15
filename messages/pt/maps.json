@@ -2,10 +2,10 @@
   "mapPages": {
     "star-wars-tycoon-sidekick-legends": {
       "breadcrumbParent": "Mapas Star Wars",
-      "eyebrow": "EM BREVE / Star Wars Tycoon",
-      "intro": "Em breve pela NLDEVS: uma nova experiência Star Wars Tycoon com o código de ilha anunciado {code}, desbloqueio de sidekicks e heróis, novas seções, trabalhadores, ranking de Rebirth, salvamento automático e até 4 jogadores.",
+      "eyebrow": "LANÇA EM 19 DE SET. / Star Wars Tycoon",
+      "intro": "Lançamento no sábado, 19 de setembro de 2026, pela NLDEVS: uma nova experiência Star Wars Tycoon com o código de ilha {code}, desbloqueio de sidekicks e heróis, novas seções, trabalhadores, ranking de Rebirth, salvamento automático e até 4 jogadores.",
       "schemaGenre": "Star Wars Tycoon",
-      "schemaDescription": "Star Wars Tycoon Sidekick Legends é um mapa Star Wars Tycoon do Fortnite que chega em breve pela NLDEVS, com desbloqueio de sidekicks e heróis, novas seções, trabalhadores, aumento de produção, progressão no ranking de Rebirth, salvamento automático e até 4 jogadores.",
+      "schemaDescription": "Star Wars Tycoon Sidekick Legends é um mapa Star Wars Tycoon do Fortnite da NLDEVS que chega no sábado, 19 de setembro de 2026, com desbloqueio de sidekicks e heróis, novas seções, trabalhadores, aumento de produção, progressão no ranking de Rebirth, salvamento automático e até 4 jogadores.",
       "stats": [
         {
           "label": "Jogadores",
@@ -16,8 +16,8 @@
           "value": "Progressão tycoon"
         },
         {
-          "label": "Status",
-          "value": "Em breve"
+          "label": "Lançamento",
+          "value": "19 de set. de 2026"
         },
         {
           "label": "Progresso",
@@ -37,8 +37,8 @@
           "type": "card",
           "title": "Status do",
           "accent": "lançamento",
-          "heading": "EM BREVE",
-          "body": "Star Wars Tycoon Sidekick Legends ainda não foi lançado. A página está pronta para o lançamento com o código de ilha anunciado 3205-2388-4588; volte aqui para conferir o status de disponibilidade quando a aprovação da Epic for concluída."
+          "heading": "LANÇAMENTO EM 19 DE SETEMBRO DE 2026",
+          "body": "Star Wars Tycoon Sidekick Legends chega no sábado, 19 de setembro de 2026, com o código de ilha 3205-2388-4588. Salve esta página e entre no dia do lançamento; até lá, o código já foi anunciado, mas ainda não é jogável."
         },
         {
           "type": "list",
@@ -61,8 +61,8 @@
           "title": "Status do",
           "accent": "código de ilha",
           "paragraphs": [
-            "Star Wars Tycoon Sidekick Legends chega em breve. O código de ilha anunciado é 3205-2388-4588; assim que o mapa for aprovado e entrar no ar, os jogadores poderão digitá-lo em Buscar / Descobrir para jogar o novo mapa Star Wars Tycoon da NLDEVS, com desbloqueio de sidekicks e heróis, trabalhadores, aumento de produção, rebirths e progressão salva.",
-            "Salve esta página para acompanhar o código de ilha de Star Wars Tycoon Sidekick Legends, as notas de lançamento e os detalhes de gameplay."
+            "Star Wars Tycoon Sidekick Legends chega no sábado, 19 de setembro de 2026. O código de ilha é 3205-2388-4588; a partir do lançamento, os jogadores poderão digitá-lo em Buscar / Descobrir para jogar o novo mapa Star Wars Tycoon da NLDEVS, com desbloqueio de sidekicks e heróis, trabalhadores, aumento de produção, rebirths e progressão salva.",
+            "Salve esta página para acompanhar o código de ilha de Star Wars Tycoon Sidekick Legends, o lançamento de 19 de setembro de 2026 e os detalhes de gameplay."
           ]
         },
         {
@@ -70,7 +70,7 @@
           "title": "Como",
           "accent": "jogar",
           "heading": "Código de ilha 3205-2388-4588",
-          "body": "Star Wars Tycoon Sidekick Legends chega em breve. Quando entrar no ar, abra o Fortnite, vá em Buscar / Descobrir, digite 3205-2388-4588 e entre na ilha."
+          "body": "Star Wars Tycoon Sidekick Legends chega no sábado, 19 de setembro de 2026. A partir do lançamento, abra o Fortnite, vá em Buscar / Descobrir, digite 3205-2388-4588 e entre na ilha."
         },
         {
           "type": "prose",
@@ -100,8 +100,12 @@
       ],
       "faqs": [
         {
+          "q": "Quando Star Wars Tycoon Sidekick Legends será lançado?",
+          "a": "Star Wars Tycoon Sidekick Legends será lançado no sábado, 19 de setembro de 2026, no código de ilha 3205-2388-4588."
+        },
+        {
           "q": "Qual é o código de ilha de Star Wars Tycoon Sidekick Legends?",
-          "a": "Star Wars Tycoon Sidekick Legends chega em breve. O código de ilha anunciado é 3205-2388-4588."
+          "a": "O código de ilha de Star Wars Tycoon Sidekick Legends é 3205-2388-4588, jogável a partir do lançamento no sábado, 19 de setembro de 2026."
         },
         {
           "q": "Star Wars Tycoon Sidekick Legends salva o progresso?",
